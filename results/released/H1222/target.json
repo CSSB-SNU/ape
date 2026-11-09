@@ -1,0 +1,215 @@
+{
+ "target": "H1222",
+ "target_set": "casp16",
+ "case": "case_2e3a2a",
+ "task": "gather",
+ "gather_mode": "batched",
+ "num_launchers": 3,
+ "policy": {
+  "evidence_cutoff": "2024-06-04",
+  "no_cutoff": false,
+  "gated": true,
+  "web_search": false,
+  "shell_network": true,
+  "gate_tools": [
+   "research",
+   "fetch",
+   "rcsb",
+   "patent",
+   "paper"
+  ]
+ },
+ "unscored": false,
+ "evidence_cutoff": "2024-06-04",
+ "target_release_date": "2024-06-04",
+ "retrieval_policy": "gated",
+ "antigen_chains": [
+  "A"
+ ],
+ "antibody_files": {
+  "antibody.pdb": [
+   "B",
+   "C"
+  ]
+ },
+ "antibody_chain_types": {
+  "antibody.pdb": {
+   "B": "heavy",
+   "C": "light"
+  }
+ },
+ "input_structure": "structures/H1222.pdb",
+ "input_structure_sha256": null,
+ "briefing_source": null,
+ "briefing_sha256": null,
+ "recognized_complex": {
+  "organize": null,
+  "judge": false
+ },
+ "recognition_note": "The supplied antigen was identified independently from its sequence and the dated local literature as the central conserved domain of human RSV G, and pre-cutoff complexes of several other anti-G antibodies were recognized. Exact VH/VL and CDR searches recorded by the launcher sessions did not identify the supplied Fab. I therefore did not recognize the target antibody-complex pair or read a published epitope for this binder; all published maps used below are explicitly other-antibody precedents.",
+ "what_separated_them": "No candidate had a line about this binder: every published epitope was for another antibody. What remained was a broad Tier B prior over three neighboring RSV G surfaces. Independent calculations on the supplied separate structures provided the modest separation: C1 was most compact and had the only favorable coarse charge complementarity; C3 was more coverable than C2; C2's close 3G12 precedent was discounted because it is conformation-sensitive and binder-specific only to 3G12. Accessibility alone was nearly identical and was not used to rank them.",
+ "not_pooled": [],
+ "provenance": {
+  "unverified_source_policy_fields": [
+   "gated",
+   "web_search",
+   "shell_network",
+   "gate_tools"
+  ],
+  "assembled_case_dir": "gpt-5.6-high/gather_refine/post_refactor/released_structure_20261030/casp16/H1222/case_2e3a2a_G_rep2",
+  "organize_case_dir": "gpt-5.6-high/gather_refine/post_refactor/released_structure_20261030/casp16/H1222/case_2e3a2a_GR_rep1",
+  "organize_status": "ok",
+  "judge_case_dir": "gpt-5.6-high/gather_refine/post_refactor/released_structure_20261030/casp16/H1222/case_2e3a2a_GJ_rep2",
+  "judge_status": "ok",
+  "packet": "gpt-5.6-high/gather/packets/case_2e3a2a/packet",
+  "manifest": "gpt-5.6-high/gather/packets/case_2e3a2a/manifest.json"
+ },
+ "truth_file": "data/truth/casp16/H1222.epitope.json",
+ "truth": {
+  "n_residues": 22,
+  "usable": "yes",
+  "chains": {
+   "A": [
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    29,
+    31,
+    33
+   ]
+  },
+  "anchor_note": "the numbering frame only; the epitope is defined on the native and carried here by antigen sequence alignment, so which pooled model this is does not affect the label"
+ },
+ "oracle": {
+  "metric": "f1",
+  "epitope_definition": "whole_antibody",
+  "truth_file": "data/truth/casp16/H1222.epitope.json",
+  "rank1": {
+   "pocket": "C1",
+   "confidence": 0.44,
+   "precision": 0.6667,
+   "recall": 0.5455,
+   "f1": 0.6,
+   "n_pred": 18,
+   "n_true": 22,
+   "n_hit": 12
+  },
+  "best": {
+   "pocket": "C2",
+   "judge_rank": 3,
+   "confidence": 0.25,
+   "precision": 0.9474,
+   "recall": 0.8182,
+   "f1": 0.878,
+   "n_pred": 19,
+   "n_true": 22,
+   "n_hit": 18
+  },
+  "note": "the best pocket the answer already contains. Rank 1 is the answer as delivered, so the gap is what the judge's ordering cost."
+ },
+ "pockets": [
+  {
+   "id": "C1",
+   "judge_rank": 1,
+   "name": "The disulfide-stabilized receptor-binding face of a viral attachment...",
+   "confidence": 0.44,
+   "mapping_basis": "side",
+   "n_residues": 18,
+   "score": {
+    "precision": 0.6667,
+    "recall": 0.5455,
+    "f1": 0.6,
+    "n_pred": 18,
+    "n_true": 22,
+    "n_hit": 12
+   },
+   "chain_pairs": [
+    {
+     "antibody_chain": "B",
+     "antigen_chain": "A",
+     "n_residues": 14
+    },
+    {
+     "antibody_chain": "C",
+     "antigen_chain": "A",
+     "n_residues": 11
+    }
+   ],
+   "file": "pocket.C1.json"
+  },
+  {
+   "id": "C3",
+   "judge_rank": 2,
+   "name": "The conserved hydrophobic-aromatic N face at the junction between a...",
+   "confidence": 0.31,
+   "mapping_basis": "side",
+   "n_residues": 15,
+   "score": {
+    "precision": 0.9333,
+    "recall": 0.6364,
+    "f1": 0.7568,
+    "n_pred": 15,
+    "n_true": 22,
+    "n_hit": 14
+   },
+   "chain_pairs": [
+    {
+     "antibody_chain": "B",
+     "antigen_chain": "A",
+     "n_residues": 13
+    },
+    {
+     "antibody_chain": "C",
+     "antigen_chain": "A",
+     "n_residues": 4
+    }
+   ],
+   "file": "pocket.C3.json"
+  },
+  {
+   "id": "C2",
+   "judge_rank": 3,
+   "name": "A conserved conformational face that joins the exposed aromatic...",
+   "confidence": 0.25,
+   "mapping_basis": "side",
+   "n_residues": 19,
+   "score": {
+    "precision": 0.9474,
+    "recall": 0.8182,
+    "f1": 0.878,
+    "n_pred": 19,
+    "n_true": 22,
+    "n_hit": 18
+   },
+   "chain_pairs": [
+    {
+     "antibody_chain": "B",
+     "antigen_chain": "A",
+     "n_residues": 14
+    },
+    {
+     "antibody_chain": "C",
+     "antigen_chain": "A",
+     "n_residues": 11
+    }
+   ],
+   "file": "pocket.C2.json"
+  }
+ ]
+}

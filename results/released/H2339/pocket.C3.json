@@ -1,0 +1,348 @@
+{
+ "task": "gather",
+ "gather_mode": "batched",
+ "num_launchers": 3,
+ "policy": {
+  "evidence_cutoff": "2026-05-15",
+  "no_cutoff": false,
+  "gated": true,
+  "web_search": false,
+  "shell_network": true,
+  "gate_tools": [
+   "research",
+   "fetch",
+   "rcsb",
+   "patent",
+   "paper"
+  ]
+ },
+ "unscored": false,
+ "target": "H2339",
+ "target_set": "casp17",
+ "case": "case_5886c7",
+ "evidence_cutoff": "2026-05-15",
+ "target_release_date": "2026-05-15",
+ "retrieval_policy": "gated",
+ "input_structure": "structures/H2339.pdb",
+ "input_structure_sha256": null,
+ "briefing_source": null,
+ "briefing_sha256": null,
+ "antigen_chains": [
+  "C",
+  "D"
+ ],
+ "antibody_files": {
+  "antibody.pdb": [
+   "A",
+   "B"
+  ]
+ },
+ "antibody_chain_types": {
+  "antibody.pdb": {
+   "A": "unknown",
+   "B": "unknown"
+  }
+ },
+ "truth_file": "data/truth/casp17/H2339.epitope.json",
+ "stage": "gatherer",
+ "pocket": {
+  "id": "C3",
+  "judge_rank": 7,
+  "name": "The contact-defined core of the high-molecular-weight-kininogen...",
+  "confidence": 0.01,
+  "p_rests_on_holds": 0.015,
+  "why_this_rank": "It is the contact-faithful version of the same real Apple-2 ligand pocket as C1, but the exact antibody is reported not to bind apple domains; the two overlapping candidates split only residual error mass.",
+  "rests_on": "The exact-binder catalytic-domain localization is wrong despite the matched sequence claim.",
+  "where_the_mass_goes_if_it_fails": "C4, C7, and C5.",
+  "what_it_is": "The contact-defined core of the high-molecular-weight-kininogen DFP-peptide pocket on the second apple domain, including its accessible antibody rim.",
+  "why_one_candidate": "not pooled with anything: no other patch is both within 12 A (half centroid distance, half contact-graph hops) and coverable by one paratope of this antibody's reach, 17.2 A",
+  "from_patches": [
+   "P3"
+  ]
+ },
+ "note": "`confidence` on the pocket is over pockets and sums to about 1 across them. Inside an interface it is per residue in [0, 1] and sums to nothing. No residue is cut at a threshold: the whole vector is the answer.",
+ "mapping_basis": "side",
+ "checks": {
+  "unrecognised_sides": []
+ },
+ "chain_pairs": [
+  {
+   "antibody_chain": "A",
+   "antigen_chain": "C",
+   "n_residues": 21
+  },
+  {
+   "antibody_chain": "B",
+   "antigen_chain": "C",
+   "n_residues": 21
+  }
+ ],
+ "antibodies": [
+  {
+   "antibody": "antibody.pdb",
+   "chains": {
+    "A": "unknown",
+    "B": "unknown"
+   },
+   "binding_mode": null,
+   "n_residues_scored": 21,
+   "interfaces": [
+    {
+     "antibody_chain": "A",
+     "antibody_chain_type": "unknown",
+     "antigen_chain": "C",
+     "n_residues": 21,
+     "residue_confidence": {
+      "101": 0.2,
+      "103": 0.88,
+      "104": 0.4,
+      "105": 0.7,
+      "106": 0.92,
+      "107": 0.94,
+      "108": 0.45,
+      "109": 0.82,
+      "127": 0.3,
+      "132": 0.22,
+      "134": 0.24,
+      "136": 0.79,
+      "137": 0.72,
+      "138": 0.66,
+      "140": 0.64,
+      "143": 0.95,
+      "146": 0.82,
+      "148": 0.87,
+      "151": 0.4,
+      "163": 0.86,
+      "166": 0.15
+     },
+     "residue_side": {
+      "101": "heavy",
+      "103": "heavy",
+      "104": "heavy",
+      "105": "heavy",
+      "106": "both",
+      "107": "both",
+      "108": "light",
+      "109": "light",
+      "127": "light",
+      "132": "heavy",
+      "134": "heavy",
+      "136": "both",
+      "137": "both",
+      "138": "heavy",
+      "140": "both",
+      "143": "both",
+      "146": "both",
+      "148": "both",
+      "151": "light",
+      "163": "both",
+      "166": "light"
+     },
+     "max_confidence": 0.95,
+     "mean_confidence": 0.6157,
+     "precision_vs_truth": 0.0,
+     "n_in_truth": 0
+    },
+    {
+     "antibody_chain": "B",
+     "antibody_chain_type": "unknown",
+     "antigen_chain": "C",
+     "n_residues": 21,
+     "residue_confidence": {
+      "101": 0.2,
+      "103": 0.88,
+      "104": 0.4,
+      "105": 0.7,
+      "106": 0.92,
+      "107": 0.94,
+      "108": 0.45,
+      "109": 0.82,
+      "127": 0.3,
+      "132": 0.22,
+      "134": 0.24,
+      "136": 0.79,
+      "137": 0.72,
+      "138": 0.66,
+      "140": 0.64,
+      "143": 0.95,
+      "146": 0.82,
+      "148": 0.87,
+      "151": 0.4,
+      "163": 0.86,
+      "166": 0.15
+     },
+     "residue_side": {
+      "101": "heavy",
+      "103": "heavy",
+      "104": "heavy",
+      "105": "heavy",
+      "106": "both",
+      "107": "both",
+      "108": "light",
+      "109": "light",
+      "127": "light",
+      "132": "heavy",
+      "134": "heavy",
+      "136": "both",
+      "137": "both",
+      "138": "heavy",
+      "140": "both",
+      "143": "both",
+      "146": "both",
+      "148": "both",
+      "151": "light",
+      "163": "both",
+      "166": "light"
+     },
+     "max_confidence": 0.95,
+     "mean_confidence": 0.6157,
+     "precision_vs_truth": 0.0,
+     "n_in_truth": 0
+    }
+   ]
+  }
+ ],
+ "paratope": {
+  "dominant_cdrs": [
+   "H3",
+   "H2",
+   "L3"
+  ],
+  "paratope_residues": [
+   "A:27",
+   "A:28",
+   "A:30",
+   "A:31",
+   "A:32",
+   "A:53",
+   "A:54",
+   "A:56",
+   "A:57",
+   "A:58",
+   "A:99",
+   "A:100",
+   "A:101",
+   "A:102",
+   "A:103",
+   "A:106",
+   "A:107",
+   "B:27",
+   "B:28",
+   "B:30",
+   "B:31",
+   "B:32",
+   "B:50",
+   "B:52",
+   "B:91",
+   "B:92",
+   "B:93",
+   "B:94",
+   "B:95",
+   "B:96",
+   "B:97"
+  ],
+  "heavy_light_split": "Heavy supplies about 65% over C:101-C:140 and the hydrophobic pocket floor. Light supplies about 35% over C:108-C:109/C:127/C:151 and the C:163/C:166 edge. Both chains meet on C:106-C:107, C:136-C:137, C:140/C:143/C:146/C:148 and C:163.",
+  "binding_mode_union": "single-chain"
+ },
+ "residues": [
+  "C:101",
+  "C:103",
+  "C:104",
+  "C:105",
+  "C:106",
+  "C:107",
+  "C:108",
+  "C:109",
+  "C:127",
+  "C:132",
+  "C:134",
+  "C:136",
+  "C:137",
+  "C:138",
+  "C:140",
+  "C:143",
+  "C:146",
+  "C:148",
+  "C:151",
+  "C:163",
+  "C:166"
+ ],
+ "n_residues": 21,
+ "patches": [
+  {
+   "id": "P3",
+   "name": "Apple-2 DFP/kininogen-recognition face",
+   "n_residues": 21,
+   "residues": [
+    "C:101",
+    "C:103",
+    "C:104",
+    "C:105",
+    "C:106",
+    "C:107",
+    "C:108",
+    "C:109",
+    "C:127",
+    "C:132",
+    "C:133",
+    "C:134",
+    "C:138",
+    "C:140",
+    "C:143",
+    "C:146",
+    "C:148",
+    "C:150",
+    "C:151",
+    "C:163",
+    "C:166"
+   ],
+   "n_kept_by_advocate": 19,
+   "n_dropped_by_advocate": 2
+  }
+ ],
+ "pooling_provenance": {
+  "n_shared_at_pooling": 21,
+  "n_disputed_at_pooling": 0,
+  "note": "counts only, describing how the organizer grouped the phase-1 patches. The organizer's own candidate residue list is deliberately absent: the answer is the advocate's footprint, in `residues` and in `antibodies[].interfaces[]`."
+ },
+ "evidence": {
+  "advocate": {
+   "n_findings": 4,
+   "n_supports": 3,
+   "n_weakens": 1,
+   "weakest_point": "The functional pocket is real and antibody-accessible, but the exact-antibody patent explicitly places REGN7508 on a different domain; the supporting pocket structures contain peptide, not REGN7508.",
+   "note": "the advocate reports claim/source/date/bearing and is not asked whether a source is about this binder"
+  },
+  "judge": {
+   "tier_a_support": 1,
+   "n_support_lines": 4,
+   "verdict": "excluded",
+   "note": "Tier A -- a source about this binder itself -- is the judge's adjudication, in assessment[].support[]. It exists nowhere in the advocate's own answer."
+  }
+ },
+ "provenance": {
+  "unverified_source_policy_fields": [
+   "gated",
+   "web_search",
+   "shell_network",
+   "gate_tools"
+  ],
+  "assembled_case_dir": "gpt-5.6-high/gather_refine/post_refactor/released_structure_20261030/casp17/H2339/case_5886c7_G_rep3",
+  "organize_case_dir": "gpt-5.6-high/gather_refine/post_refactor/released_structure_20261030/casp17/H2339/case_5886c7_GR_rep1",
+  "organize_status": "ok",
+  "judge_case_dir": "gpt-5.6-high/gather_refine/post_refactor/released_structure_20261030/casp17/H2339/case_5886c7_GJ_rep3",
+  "judge_status": "ok",
+  "packet": "gpt-5.6-high/gather/packets/case_5886c7/packet",
+  "manifest": "gpt-5.6-high/gather/packets/case_5886c7/manifest.json",
+  "advocate_case_dir": "gpt-5.6-high/gather_refine/post_refactor/released_structure_20261030/casp17/H2339/case_5886c7_GR_rep1",
+  "advocate_status": "ok"
+ },
+ "score": {
+  "precision": 0.0,
+  "recall": 0.0,
+  "f1": 0.0,
+  "n_pred": 21,
+  "n_true": 22,
+  "n_hit": 0
+ }
+}

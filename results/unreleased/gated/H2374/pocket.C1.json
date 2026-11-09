@@ -1,0 +1,240 @@
+{
+ "task": "gather",
+ "gather_mode": "batched",
+ "num_launchers": 3,
+ "policy": {
+  "evidence_cutoff": "2026-06-22",
+  "no_cutoff": false,
+  "gated": true,
+  "web_search": false,
+  "shell_network": true,
+  "gate_tools": [
+   "research",
+   "fetch",
+   "rcsb",
+   "patent",
+   "paper"
+  ]
+ },
+ "unscored": true,
+ "target": "H2374",
+ "target_set": "casp17",
+ "case": "case_6a7664",
+ "evidence_cutoff": "2026-06-22",
+ "target_release_date": "2026-06-22",
+ "retrieval_policy": "gated",
+ "input_structure": "data/staged_casp17_no_native/H2374.pdb",
+ "input_structure_sha256": "cce06a976275bf0894b0dae47679691f93a74bbcd1b28cd9b17fe6bfe49200de",
+ "briefing_source": "data/briefing/casp17/H2374/search_results.json",
+ "briefing_sha256": "6da47e89d19b7042483ab1c9442ed32a899f59c40f45416b4c36e0ae0c6c84d7",
+ "antigen_chains": [
+  "C"
+ ],
+ "antibody_files": {
+  "antibody.pdb": [
+   "A",
+   "B"
+  ]
+ },
+ "antibody_chain_types": {
+  "antibody.pdb": {
+   "A": "heavy",
+   "B": "light"
+  }
+ },
+ "stage": "gatherer",
+ "pocket": {
+  "id": "C1",
+  "judge_rank": 7,
+  "name": "The flexible, proline-rich C-terminal ectodomain tail: a continuous...",
+  "confidence": 0.06,
+  "p_rests_on_holds": 0.15,
+  "why_this_rank": "The tail is a genuine, highly exposed continuous antigenic site, but no HAB13 peptide evidence exists and the patent phenotype is not the clearest match to the advocated post-attachment/spread mechanism.",
+  "rests_on": "HAB13 is a linear-tail antibody whose strong neutralization does not require the reported spread-inhibition phenotype.",
+  "where_the_mass_goes_if_it_fails": "C7 or C4.",
+  "what_it_is": "The flexible, proline-rich C-terminal ectodomain tail: a continuous antigenic site within the glycoprotein's profusion region.",
+  "why_one_candidate": "not pooled with anything: no other patch is both within 12 A (half centroid distance, half contact-graph hops) and coverable by one paratope of this antibody's reach, 17.3 A",
+  "from_patches": [
+   "P1"
+  ]
+ },
+ "note": "`confidence` on the pocket is over pockets and sums to about 1 across them. Inside an interface it is per residue in [0, 1] and sums to nothing. No residue is cut at a threshold: the whole vector is the answer.",
+ "mapping_basis": "side",
+ "checks": {
+  "unrecognised_sides": []
+ },
+ "chain_pairs": [
+  {
+   "antibody_chain": "A",
+   "antigen_chain": "C",
+   "n_residues": 5
+  },
+  {
+   "antibody_chain": "B",
+   "antigen_chain": "C",
+   "n_residues": 7
+  }
+ ],
+ "antibodies": [
+  {
+   "antibody": "antibody.pdb",
+   "chains": {
+    "A": "heavy",
+    "B": "light"
+   },
+   "binding_mode": null,
+   "n_residues_scored": 9,
+   "interfaces": [
+    {
+     "antibody_chain": "A",
+     "antibody_chain_type": "heavy",
+     "antigen_chain": "C",
+     "n_residues": 5,
+     "residue_confidence": {
+      "268": 0.72,
+      "269": 0.82,
+      "270": 0.9,
+      "271": 0.84,
+      "273": 0.94
+     },
+     "residue_side": {
+      "268": "heavy",
+      "269": "heavy",
+      "270": "both",
+      "271": "both",
+      "273": "both"
+     },
+     "max_confidence": 0.94,
+     "mean_confidence": 0.844
+    },
+    {
+     "antibody_chain": "B",
+     "antibody_chain_type": "light",
+     "antigen_chain": "C",
+     "n_residues": 7,
+     "residue_confidence": {
+      "267": 0.48,
+      "270": 0.9,
+      "271": 0.84,
+      "272": 0.75,
+      "273": 0.94,
+      "274": 0.62,
+      "275": 0.48
+     },
+     "residue_side": {
+      "267": "light",
+      "270": "both",
+      "271": "both",
+      "272": "light",
+      "273": "both",
+      "274": "light",
+      "275": "light"
+     },
+     "max_confidence": 0.94,
+     "mean_confidence": 0.7157
+    }
+   ]
+  }
+ ],
+ "paratope": {
+  "dominant_cdrs": [
+   "A:H3",
+   "B:L1",
+   "B:L3"
+  ],
+  "paratope_residues": [
+   "A:103",
+   "A:104",
+   "A:105",
+   "A:106",
+   "A:107",
+   "A:109",
+   "A:110",
+   "A:114",
+   "A:115",
+   "B:27",
+   "B:31",
+   "B:32",
+   "B:33",
+   "B:35",
+   "B:36",
+   "B:98",
+   "B:100",
+   "B:102"
+  ],
+  "heavy_light_split": "H3 supplies the larger hydrophobic/proline-binding centre over C:268-C:273; L1/L3 form the smaller basic rim over C:267 and C:271-C:275, with C:270/C:271/C:273 at the seam.",
+  "binding_mode_union": "single-chain"
+ },
+ "residues": [
+  "C:267",
+  "C:268",
+  "C:269",
+  "C:270",
+  "C:271",
+  "C:272",
+  "C:273",
+  "C:274",
+  "C:275"
+ ],
+ "n_residues": 9,
+ "patches": [
+  {
+   "id": "P1",
+   "name": "C-terminal continuous antigenic site II",
+   "n_residues": 12,
+   "residues": [
+    "C:264",
+    "C:265",
+    "C:266",
+    "C:267",
+    "C:268",
+    "C:269",
+    "C:270",
+    "C:271",
+    "C:272",
+    "C:273",
+    "C:274",
+    "C:275"
+   ],
+   "n_kept_by_advocate": 9,
+   "n_dropped_by_advocate": 3
+  }
+ ],
+ "pooling_provenance": {
+  "n_shared_at_pooling": 12,
+  "n_disputed_at_pooling": 0,
+  "note": "counts only, describing how the organizer grouped the phase-1 patches. The organizer's own candidate residue list is deliberately absent: the answer is the advocate's footprint, in `residues` and in `antibodies[].interfaces[]`."
+ },
+ "evidence": {
+  "advocate": {
+   "n_findings": 5,
+   "n_supports": 4,
+   "n_weakens": 1,
+   "weakest_point": "The site is flexible and construct-terminal, and HAB13's absence from the patent's cell-to-cell-spread-inhibitor subset cuts against the most specific profusion-tail mechanism.",
+   "note": "the advocate reports claim/source/date/bearing and is not asked whether a source is about this binder"
+  },
+  "judge": {
+   "tier_a_support": 1,
+   "n_support_lines": 4,
+   "verdict": "unlikely",
+   "note": "Tier A -- a source about this binder itself -- is the judge's adjudication, in assessment[].support[]. It exists nowhere in the advocate's own answer."
+  }
+ },
+ "provenance": {
+  "unverified_source_policy_fields": [
+   "gated",
+   "web_search",
+   "shell_network",
+   "gate_tools"
+  ],
+  "assembled_case_dir": "gpt-5.6-high/gather_refine/post_refactor/unreleased_20261029/gated/casp17/H2374/case_6a7664_G_rep5",
+  "organize_case_dir": "gpt-5.6-high/gather_refine/post_refactor/unreleased_20261029/gated/casp17/H2374/case_6a7664_GR_rep5",
+  "organize_status": "ok",
+  "judge_case_dir": "gpt-5.6-high/gather_refine/post_refactor/unreleased_20261029/gated/casp17/H2374/case_6a7664_GJ_rep5",
+  "judge_status": "ok",
+  "packet": "gpt-5.6-high/gather/packets/case_6a7664/packet",
+  "manifest": "gpt-5.6-high/gather/packets/case_6a7664/manifest.json",
+  "advocate_case_dir": "gpt-5.6-high/gather_refine/post_refactor/unreleased_20261029/gated/casp17/H2374/case_6a7664_GR_rep5",
+  "advocate_status": "ok"
+ }
+}

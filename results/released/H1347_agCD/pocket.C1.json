@@ -1,0 +1,345 @@
+{
+ "task": "gather",
+ "gather_mode": "batched",
+ "num_launchers": 3,
+ "policy": {
+  "evidence_cutoff": "2026-05-21",
+  "no_cutoff": false,
+  "gated": true,
+  "web_search": false,
+  "shell_network": true,
+  "gate_tools": [
+   "research",
+   "fetch",
+   "rcsb",
+   "patent",
+   "paper"
+  ]
+ },
+ "unscored": false,
+ "target": "H1347_agCD",
+ "target_set": "casp17",
+ "case": "case_0f54aa",
+ "evidence_cutoff": "2026-05-21",
+ "target_release_date": "2026-05-21",
+ "retrieval_policy": "gated",
+ "input_structure": "structures/H1347_agCD.pdb",
+ "input_structure_sha256": null,
+ "briefing_source": null,
+ "briefing_sha256": null,
+ "antigen_chains": [
+  "C",
+  "D"
+ ],
+ "antibody_files": {
+  "antibody.1.pdb": [
+   "A"
+  ],
+  "antibody.2.pdb": [
+   "B"
+  ]
+ },
+ "antibody_chain_types": {
+  "antibody.1.pdb": {
+   "A": "heavy"
+  },
+  "antibody.2.pdb": {
+   "B": "light"
+  }
+ },
+ "truth_file": "data/truth/casp17/H1347_agCD.epitope.json",
+ "stage": "gatherer",
+ "pocket": {
+  "id": "C1",
+  "judge_rank": 2,
+  "name": "The clone-specific antigen-combining apex of the BCMB69 Fv: a...",
+  "confidence": 0.17,
+  "p_rests_on_holds": 0.3,
+  "why_this_rank": "A broader clone-specific CDR apex is a strong generic idiotype prior and fits the BCMB69 anti-idiotype assay statement, but its inherited boundary is overbroad and unmeasurable in the anomalous supplied assembly.",
+  "rests_on": "A/B are paratope-directed and recognize a broader native CDR apex rather than the exact BCMA contact panel or a single-chain subpatch.",
+  "where_the_mass_goes_if_it_fails": "C2, C4, or C3",
+  "what_it_is": "The clone-specific antigen-combining apex of the BCMB69 Fv: a CDR3-centered idiotope with selected VH H1/H2 and VL L1/L2 rims.",
+  "why_one_candidate": "not pooled with anything: no other patch is both within 12 A (half centroid distance, half contact-graph hops) and coverable by one paratope of this antibody's reach, 13.2 A",
+  "from_patches": [
+   "P1"
+  ]
+ },
+ "note": "`confidence` on the pocket is over pockets and sums to about 1 across them. Inside an interface it is per residue in [0, 1] and sums to nothing. No residue is cut at a threshold: the whole vector is the answer.",
+ "mapping_basis": "per_antibody",
+ "checks": {
+  "unrecognised_sides": []
+ },
+ "chain_pairs": [
+  {
+   "antibody_chain": "A",
+   "antigen_chain": "C",
+   "n_residues": 6
+  },
+  {
+   "antibody_chain": "A",
+   "antigen_chain": "D",
+   "n_residues": 4
+  },
+  {
+   "antibody_chain": "B",
+   "antigen_chain": "C",
+   "n_residues": 5
+  },
+  {
+   "antibody_chain": "B",
+   "antigen_chain": "D",
+   "n_residues": 4
+  }
+ ],
+ "antibodies": [
+  {
+   "antibody": "antibody.1.pdb",
+   "chains": {
+    "A": "heavy"
+   },
+   "binding_mode": "straddling",
+   "n_residues_scored": 10,
+   "interfaces": [
+    {
+     "antibody_chain": "A",
+     "antibody_chain_type": "heavy",
+     "antigen_chain": "C",
+     "n_residues": 6,
+     "residue_confidence": {
+      "101": 0.72,
+      "103": 0.86,
+      "104": 0.88,
+      "107": 0.9,
+      "109": 0.84,
+      "110": 0.91
+     },
+     "residue_side": {
+      "101": "heavy",
+      "103": "heavy",
+      "104": "heavy",
+      "107": "heavy",
+      "109": "heavy",
+      "110": "heavy"
+     },
+     "max_confidence": 0.91,
+     "mean_confidence": 0.8517,
+     "precision_vs_truth": 0.0,
+     "n_in_truth": 0
+    },
+    {
+     "antibody_chain": "A",
+     "antibody_chain_type": "heavy",
+     "antigen_chain": "D",
+     "n_residues": 4,
+     "residue_confidence": {
+      "90": 0.88,
+      "95": 0.84,
+      "96": 0.78,
+      "97": 0.76
+     },
+     "residue_side": {
+      "90": "heavy",
+      "95": "heavy",
+      "96": "heavy",
+      "97": "heavy"
+     },
+     "max_confidence": 0.88,
+     "mean_confidence": 0.815,
+     "precision_vs_truth": 0.0,
+     "n_in_truth": 0
+    }
+   ]
+  },
+  {
+   "antibody": "antibody.2.pdb",
+   "chains": {
+    "B": "light"
+   },
+   "binding_mode": "straddling",
+   "n_residues_scored": 9,
+   "interfaces": [
+    {
+     "antibody_chain": "B",
+     "antibody_chain_type": "light",
+     "antigen_chain": "C",
+     "n_residues": 5,
+     "residue_confidence": {
+      "34": 0.66,
+      "103": 0.8,
+      "104": 0.84,
+      "107": 0.83,
+      "110": 0.87
+     },
+     "residue_side": {
+      "34": "light",
+      "103": "light",
+      "104": "light",
+      "107": "light",
+      "110": "light"
+     },
+     "max_confidence": 0.87,
+     "mean_confidence": 0.8,
+     "precision_vs_truth": 0.0,
+     "n_in_truth": 0
+    },
+    {
+     "antibody_chain": "B",
+     "antibody_chain_type": "light",
+     "antigen_chain": "D",
+     "n_residues": 4,
+     "residue_confidence": {
+      "90": 0.86,
+      "93": 0.76,
+      "95": 0.88,
+      "97": 0.79
+     },
+     "residue_side": {
+      "90": "light",
+      "93": "light",
+      "95": "light",
+      "97": "light"
+     },
+     "max_confidence": 0.88,
+     "mean_confidence": 0.8225,
+     "precision_vs_truth": 0.0,
+     "n_in_truth": 0
+    }
+   ]
+  }
+ ],
+ "paratope": {
+  "dominant_cdrs": [
+   "A:H3",
+   "A:H1",
+   "B:L3",
+   "B:L1"
+  ],
+  "paratope_residues": [
+   "A:27",
+   "A:29",
+   "A:32",
+   "A:51",
+   "A:54",
+   "A:57",
+   "A:97",
+   "A:100",
+   "A:101",
+   "A:103",
+   "A:105",
+   "B:29",
+   "B:32",
+   "B:50",
+   "B:51",
+   "B:52",
+   "B:89",
+   "B:91",
+   "B:92",
+   "B:94",
+   "B:96"
+  ],
+  "heavy_light_split": "The files are separate one-chain binders: antibody.1 contributes heavy-side contacts and antibody.2 light-side contacts. Their biological-Fv footprints overlap centrally, but the supplied C/D union is not coverable.",
+  "binding_mode_union": null
+ },
+ "residues": [
+  "C:101",
+  "C:103",
+  "C:104",
+  "C:107",
+  "C:109",
+  "C:110",
+  "C:34",
+  "D:90",
+  "D:93",
+  "D:95",
+  "D:96",
+  "D:97"
+ ],
+ "n_residues": 12,
+ "patches": [
+  {
+   "id": "P1",
+   "name": "BCMB69 CDR3-centered antigen-binding idiotope",
+   "n_residues": 31,
+   "residues": [
+    "C:100",
+    "C:101",
+    "C:103",
+    "C:104",
+    "C:107",
+    "C:108",
+    "C:109",
+    "C:110",
+    "C:31",
+    "C:33",
+    "C:34",
+    "C:55",
+    "C:56",
+    "C:59",
+    "C:60",
+    "C:99",
+    "D:29",
+    "D:31",
+    "D:33",
+    "D:49",
+    "D:50",
+    "D:51",
+    "D:52",
+    "D:90",
+    "D:92",
+    "D:93",
+    "D:94",
+    "D:95",
+    "D:96",
+    "D:97",
+    "D:99"
+   ],
+   "n_kept_by_advocate": 12,
+   "n_dropped_by_advocate": 19
+  }
+ ],
+ "pooling_provenance": {
+  "n_shared_at_pooling": 31,
+  "n_disputed_at_pooling": 0,
+  "note": "counts only, describing how the organizer grouped the phase-1 patches. The organizer's own candidate residue list is deliberately absent: the answer is the advocate's footprint, in `residues` and in `antibodies[].interfaces[]`."
+ },
+ "evidence": {
+  "advocate": {
+   "n_findings": 4,
+   "n_supports": 3,
+   "n_weakens": 1,
+   "weakest_point": "The proposed footprints span 60.96 Å in the supplied structure, far beyond A’s 23.73 Å and B’s 21.60 Å CDR spans. The case relies on the independently established biological BCMB69 Fv pairing rather than the supplied C/D placement.",
+   "note": "the advocate reports claim/source/date/bearing and is not asked whether a source is about this binder"
+  },
+  "judge": {
+   "tier_a_support": 0,
+   "n_support_lines": 4,
+   "verdict": "live",
+   "note": "Tier A -- a source about this binder itself -- is the judge's adjudication, in assessment[].support[]. It exists nowhere in the advocate's own answer."
+  }
+ },
+ "provenance": {
+  "unverified_source_policy_fields": [
+   "gated",
+   "web_search",
+   "shell_network",
+   "gate_tools"
+  ],
+  "assembled_case_dir": "gpt-5.6-high/gather_refine/post_refactor/released_structure_20261030/casp17/H1347_agCD/case_0f54aa_G_rep2",
+  "organize_case_dir": "gpt-5.6-high/gather_refine/post_refactor/released_structure_20261030/casp17/H1347_agCD/case_0f54aa_GR_rep1",
+  "organize_status": "ok",
+  "judge_case_dir": "gpt-5.6-high/gather_refine/post_refactor/released_structure_20261030/casp17/H1347_agCD/case_0f54aa_GJ_rep2",
+  "judge_status": "ok",
+  "packet": "gpt-5.6-high/gather/packets/case_0f54aa/packet",
+  "manifest": "gpt-5.6-high/gather/packets/case_0f54aa/manifest.json",
+  "advocate_case_dir": "gpt-5.6-high/gather_refine/post_refactor/released_structure_20261030/casp17/H1347_agCD/case_0f54aa_GR_rep1",
+  "advocate_status": "ok"
+ },
+ "score": {
+  "precision": 0.0,
+  "recall": 0.0,
+  "f1": 0.0,
+  "n_pred": 12,
+  "n_true": 22,
+  "n_hit": 0
+ }
+}

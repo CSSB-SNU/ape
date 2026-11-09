@@ -1,0 +1,296 @@
+{
+ "task": "gather",
+ "gather_mode": "batched",
+ "num_launchers": 3,
+ "policy": {
+  "evidence_cutoff": "2026-05-27",
+  "no_cutoff": false,
+  "gated": true,
+  "web_search": false,
+  "shell_network": true,
+  "gate_tools": [
+   "research",
+   "fetch",
+   "rcsb",
+   "patent",
+   "paper"
+  ]
+ },
+ "unscored": true,
+ "target": "H2335",
+ "target_set": "casp17",
+ "case": "case_d48c74",
+ "evidence_cutoff": "2026-05-27",
+ "target_release_date": "2026-05-27",
+ "retrieval_policy": "gated",
+ "input_structure": "data/staged_casp17_no_native/H2335.pdb",
+ "input_structure_sha256": "f216450f2774ea363d9dfeeb1e478d506d906f539f384bf370d4b65ff32c11bb",
+ "briefing_source": "data/briefing/casp17/H2335/search_results.json",
+ "briefing_sha256": "b0dea935f69c91b0e53c3c91d2fd212f5956d760276c3166d7c198ef62ac5bc6",
+ "antigen_chains": [
+  "A",
+  "B",
+  "C"
+ ],
+ "antibody_files": {
+  "antibody.pdb": [
+   "D",
+   "E"
+  ]
+ },
+ "antibody_chain_types": {
+  "antibody.pdb": {
+   "D": "light",
+   "E": "heavy"
+  }
+ },
+ "stage": "gatherer",
+ "pocket": {
+  "id": "C4",
+  "judge_rank": 9,
+  "name": "A receptor-facing composite seam where a basic gO ridge approaches...",
+  "confidence": 0.04,
+  "p_rests_on_holds": 0.2,
+  "why_this_rank": "Functionally interesting seam, but central residues are assembly-buried and exact-junction antibody precedent is absent.",
+  "rests_on": "Enough of the occluded seam is accessible to an oblique Fab.",
+  "where_the_mass_goes_if_it_fails": "C1.",
+  "what_it_is": "A receptor-facing composite seam where a basic gO ridge approaches the exposed edge of gL: a two-subunit junction in the membrane-distal attachment module rather than a buried assembly core.",
+  "why_one_candidate": "not pooled with anything: no other patch is both within 12 A (half centroid distance, half contact-graph hops) and coverable by one paratope of this antibody's reach, 17.4 A",
+  "from_patches": [
+   "P2"
+  ]
+ },
+ "note": "`confidence` on the pocket is over pockets and sums to about 1 across them. Inside an interface it is per residue in [0, 1] and sums to nothing. No residue is cut at a threshold: the whole vector is the answer.",
+ "mapping_basis": "side",
+ "checks": {
+  "unrecognised_sides": []
+ },
+ "chain_pairs": [
+  {
+   "antibody_chain": "D",
+   "antigen_chain": "A",
+   "n_residues": 3
+  },
+  {
+   "antibody_chain": "D",
+   "antigen_chain": "C",
+   "n_residues": 5
+  },
+  {
+   "antibody_chain": "E",
+   "antigen_chain": "A",
+   "n_residues": 8
+  },
+  {
+   "antibody_chain": "E",
+   "antigen_chain": "C",
+   "n_residues": 2
+  }
+ ],
+ "antibodies": [
+  {
+   "antibody": "antibody.pdb",
+   "chains": {
+    "D": "light",
+    "E": "heavy"
+   },
+   "binding_mode": null,
+   "n_residues_scored": 13,
+   "interfaces": [
+    {
+     "antibody_chain": "D",
+     "antibody_chain_type": "light",
+     "antigen_chain": "A",
+     "n_residues": 3,
+     "residue_confidence": {
+      "165": 0.7,
+      "167": 0.62,
+      "168": 0.82
+     },
+     "residue_side": {
+      "165": "both",
+      "167": "both",
+      "168": "both"
+     },
+     "max_confidence": 0.82,
+     "mean_confidence": 0.7133
+    },
+    {
+     "antibody_chain": "D",
+     "antibody_chain_type": "light",
+     "antigen_chain": "C",
+     "n_residues": 5,
+     "residue_confidence": {
+      "62": 0.3,
+      "63": 0.28,
+      "64": 0.68,
+      "65": 0.18,
+      "67": 0.76
+     },
+     "residue_side": {
+      "62": "light",
+      "63": "light",
+      "64": "both",
+      "65": "light",
+      "67": "both"
+     },
+     "max_confidence": 0.76,
+     "mean_confidence": 0.44
+    },
+    {
+     "antibody_chain": "E",
+     "antibody_chain_type": "heavy",
+     "antigen_chain": "A",
+     "n_residues": 8,
+     "residue_confidence": {
+      "94": 0.58,
+      "95": 0.86,
+      "96": 0.74,
+      "120": 0.46,
+      "121": 0.34,
+      "165": 0.7,
+      "167": 0.62,
+      "168": 0.82
+     },
+     "residue_side": {
+      "94": "heavy",
+      "95": "heavy",
+      "96": "heavy",
+      "120": "heavy",
+      "121": "heavy",
+      "165": "both",
+      "167": "both",
+      "168": "both"
+     },
+     "max_confidence": 0.86,
+     "mean_confidence": 0.64
+    },
+    {
+     "antibody_chain": "E",
+     "antibody_chain_type": "heavy",
+     "antigen_chain": "C",
+     "n_residues": 2,
+     "residue_confidence": {
+      "64": 0.68,
+      "67": 0.76
+     },
+     "residue_side": {
+      "64": "both",
+      "67": "both"
+     },
+     "max_confidence": 0.76,
+     "mean_confidence": 0.72
+    }
+   ]
+  }
+ ],
+ "paratope": {
+  "dominant_cdrs": [
+   "H3:H2",
+   "L3:H3"
+  ],
+  "paratope_residues": [
+   "E:31",
+   "E:32",
+   "E:33",
+   "E:54",
+   "E:57",
+   "E:58",
+   "E:98",
+   "E:100",
+   "E:101",
+   "E:105",
+   "E:106",
+   "E:108",
+   "E:111",
+   "D:27",
+   "D:28",
+   "D:32",
+   "D:89",
+   "D:91",
+   "D:92",
+   "D:94",
+   "D:96"
+  ],
+  "heavy_light_split": "Roughly 60:40 heavy:light. Heavy loops occupy the gO ridge; L3/L1 cover gL; A:165/A:168/C:64/C:67 form the both-chain seam.",
+  "binding_mode_union": "straddling"
+ },
+ "residues": [
+  "A:120",
+  "A:121",
+  "A:165",
+  "A:167",
+  "A:168",
+  "A:94",
+  "A:95",
+  "A:96",
+  "C:62",
+  "C:63",
+  "C:64",
+  "C:65",
+  "C:67"
+ ],
+ "n_residues": 13,
+ "patches": [
+  {
+   "id": "P2",
+   "name": "gO-gL receptor-junction site (TGFBR3-like core)",
+   "n_residues": 14,
+   "residues": [
+    "A:120",
+    "A:165",
+    "A:167",
+    "A:168",
+    "A:92",
+    "A:93",
+    "A:94",
+    "A:95",
+    "A:96",
+    "C:62",
+    "C:63",
+    "C:64",
+    "C:65",
+    "C:67"
+   ],
+   "n_kept_by_advocate": 12,
+   "n_dropped_by_advocate": 2
+  }
+ ],
+ "pooling_provenance": {
+  "n_shared_at_pooling": 14,
+  "n_disputed_at_pooling": 0,
+  "note": "counts only, describing how the organizer grouped the phase-1 patches. The organizer's own candidate residue list is deliberately absent: the answer is the advocate's footprint, in `residues` and in `antibodies[].interfaces[]`."
+ },
+ "evidence": {
+  "advocate": {
+   "n_findings": 6,
+   "n_supports": 5,
+   "n_weakens": 1,
+   "weakest_point": "The original surface is wider than this paratope and its central gO-gL contacts are partly occluded. The advocacy depends on an oblique approach to a narrow exposed seam; without such access the epitope is unavailable.",
+   "note": "the advocate reports claim/source/date/bearing and is not asked whether a source is about this binder"
+  },
+  "judge": {
+   "tier_a_support": 0,
+   "n_support_lines": 3,
+   "verdict": "unlikely",
+   "note": "Tier A -- a source about this binder itself -- is the judge's adjudication, in assessment[].support[]. It exists nowhere in the advocate's own answer."
+  }
+ },
+ "provenance": {
+  "unverified_source_policy_fields": [
+   "gated",
+   "web_search",
+   "shell_network",
+   "gate_tools"
+  ],
+  "assembled_case_dir": "gpt-5.6-high/gather_refine/post_refactor/unreleased_20261029/gated/casp17/H2335/case_d48c74_G_rep1",
+  "organize_case_dir": "gpt-5.6-high/gather_refine/post_refactor/unreleased_20261029/gated/casp17/H2335/case_d48c74_GR_rep1",
+  "organize_status": "ok",
+  "judge_case_dir": "gpt-5.6-high/gather_refine/post_refactor/unreleased_20261029/gated/casp17/H2335/case_d48c74_GJ_rep1",
+  "judge_status": "ok",
+  "packet": "gpt-5.6-high/gather/packets/case_d48c74/packet",
+  "manifest": "gpt-5.6-high/gather/packets/case_d48c74/manifest.json",
+  "advocate_case_dir": "gpt-5.6-high/gather_refine/post_refactor/unreleased_20261029/gated/casp17/H2335/case_d48c74_GR_rep1",
+  "advocate_status": "ok"
+ }
+}

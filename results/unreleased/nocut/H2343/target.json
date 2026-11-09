@@ -1,0 +1,231 @@
+{
+ "target": "H2343",
+ "target_set": "casp17",
+ "case": "case_f1b810",
+ "task": "gather",
+ "gather_mode": "batched",
+ "num_launchers": 3,
+ "policy": {
+  "evidence_cutoff": null,
+  "no_cutoff": true,
+  "gated": false,
+  "web_search": true,
+  "shell_network": true,
+  "gate_tools": []
+ },
+ "unscored": true,
+ "evidence_cutoff": null,
+ "target_release_date": "2026-06-01",
+ "retrieval_policy": "no-cutoff",
+ "antigen_chains": [
+  "C"
+ ],
+ "antibody_files": {
+  "antibody.pdb": [
+   "A",
+   "B"
+  ]
+ },
+ "antibody_chain_types": {
+  "antibody.pdb": {
+   "A": "unknown",
+   "B": "unknown"
+  }
+ },
+ "input_structure": "data/staged_casp17_no_native/H2343.pdb",
+ "input_structure_sha256": "3c70ae6e0bdda9d0a1014d29975873fe008fbe5bd9aebb5949da78b06aeabf11",
+ "briefing_source": "data/briefing/casp17_nocutoff/H2343/search_results.json",
+ "briefing_sha256": "6b66efca006e54eee3aa1b9a3ad4f04da4207f25dccedfbc9f13d1ef0c954955",
+ "recognized_complex": {
+  "organize": null,
+  "judge": true
+ },
+ "recognition_note": "The exact supplied 21-residue HCDR3 matches CBH-4G in Ogishi et al. Supplementary Dataset 1 (Scientific Reports, 2016-07-12). I confirmed the row and sequence on 2026-10-29. No native CBH-4G-E2 complex was found or inspected; no full published paired VH/VL sequence was found, so recognition rests on the exact long HCDR3 plus antigen context.",
+ "what_separated_them": "Tier A was available: exact-HCDR3 recognition makes CBH-4G's conformational domain-A/non-neutralizing phenotype relevant, separating the back-face candidates from receptor-face candidates. The CBH-4G-specific Y632NS affinity loss transfers exactly to C:225 but supports both overlapping C4 and C8. Candidate-neutral geometry then separated them: C4 is a compact connected patch centered on C:225 (12/17 residues within 10 Å, no internal sequon), whereas C8 is 31.39 Å wide, only 3/10 residues are within 10 Å, and it includes a buried residue and a sequon. Generic accessibility and chemistry did not decide the order.",
+ "not_pooled": [],
+ "provenance": {
+  "unverified_source_policy_fields": [
+   "gated",
+   "web_search",
+   "shell_network",
+   "gate_tools"
+  ],
+  "assembled_case_dir": "gpt-5.6-high/gather_refine/post_refactor/unreleased_20261029/nocut/casp17/H2343/case_f1b810_G_rep1",
+  "organize_case_dir": "gpt-5.6-high/gather_refine/post_refactor/unreleased_20261029/nocut/casp17/H2343/case_f1b810_GR_rep1",
+  "organize_status": "ok",
+  "judge_case_dir": "gpt-5.6-high/gather_refine/post_refactor/unreleased_20261029/nocut/casp17/H2343/case_f1b810_GJ_rep1",
+  "judge_status": "ok",
+  "packet": "gpt-5.6-high/nocut/gather/packets/case_f1b810/packet",
+  "manifest": "gpt-5.6-high/nocut/gather/packets/case_f1b810/manifest.json"
+ },
+ "pockets": [
+  {
+   "id": "C4",
+   "judge_rank": 1,
+   "name": "The conformational antigenic-domain-A patch on the non-neutralizing...",
+   "confidence": 0.76,
+   "mapping_basis": "side",
+   "n_residues": 17,
+   "chain_pairs": [
+    {
+     "antibody_chain": "A",
+     "antigen_chain": "C",
+     "n_residues": 17
+    },
+    {
+     "antibody_chain": "B",
+     "antigen_chain": "C",
+     "n_residues": 17
+    }
+   ],
+   "file": "pocket.C4.json"
+  },
+  {
+   "id": "C8",
+   "judge_rank": 2,
+   "name": "The glycan-bearing beta7/post-VR3 back-layer lobe of HCV E2 antigenic...",
+   "confidence": 0.12,
+   "mapping_basis": "side",
+   "n_residues": 10,
+   "chain_pairs": [
+    {
+     "antibody_chain": "A",
+     "antigen_chain": "C",
+     "n_residues": 10
+    },
+    {
+     "antibody_chain": "B",
+     "antigen_chain": "C",
+     "n_residues": 10
+    }
+   ],
+   "file": "pocket.C8.json"
+  },
+  {
+   "id": "C1",
+   "judge_rank": 3,
+   "name": "The glycan-adjacent beta8/C-terminal rim of the HCV E2...",
+   "confidence": 0.05,
+   "mapping_basis": "side",
+   "n_residues": 10,
+   "chain_pairs": [
+    {
+     "antibody_chain": "A",
+     "antigen_chain": "C",
+     "n_residues": 10
+    },
+    {
+     "antibody_chain": "B",
+     "antigen_chain": "C",
+     "n_residues": 10
+    }
+   ],
+   "file": "pocket.C1.json"
+  },
+  {
+   "id": "C6",
+   "judge_rank": 4,
+   "name": "The glycan-edged exposed rim of the pVR3/domain-A lobe adjacent to...",
+   "confidence": 0.035,
+   "mapping_basis": "side",
+   "n_residues": 14,
+   "chain_pairs": [
+    {
+     "antibody_chain": "A",
+     "antigen_chain": "C",
+     "n_residues": 14
+    },
+    {
+     "antibody_chain": "B",
+     "antigen_chain": "C",
+     "n_residues": 14
+    }
+   ],
+   "file": "pocket.C6.json"
+  },
+  {
+   "id": "C7",
+   "judge_rank": 5,
+   "name": "The AR3-like hydrophobic cleft on the HCV E2 neutralizing face...",
+   "confidence": 0.012,
+   "mapping_basis": "side",
+   "n_residues": 12,
+   "chain_pairs": [
+    {
+     "antibody_chain": "A",
+     "antigen_chain": "C",
+     "n_residues": 12
+    },
+    {
+     "antibody_chain": "B",
+     "antigen_chain": "C",
+     "n_residues": 12
+    }
+   ],
+   "file": "pocket.C7.json"
+  },
+  {
+   "id": "C3",
+   "judge_rank": 6,
+   "name": "The HCV E2 front-layer receptor face immediately downstream of AS412...",
+   "confidence": 0.01,
+   "mapping_basis": "side",
+   "n_residues": 15,
+   "chain_pairs": [
+    {
+     "antibody_chain": "A",
+     "antigen_chain": "C",
+     "n_residues": 15
+    },
+    {
+     "antibody_chain": "B",
+     "antigen_chain": "C",
+     "n_residues": 15
+    }
+   ],
+   "file": "pocket.C3.json"
+  },
+  {
+   "id": "C2",
+   "judge_rank": 7,
+   "name": "A composite rim of the HCV E2 CD81 receptor-binding site where the...",
+   "confidence": 0.008,
+   "mapping_basis": "side",
+   "n_residues": 14,
+   "chain_pairs": [
+    {
+     "antibody_chain": "A",
+     "antigen_chain": "C",
+     "n_residues": 14
+    },
+    {
+     "antibody_chain": "B",
+     "antigen_chain": "C",
+     "n_residues": 14
+    }
+   ],
+   "file": "pocket.C2.json"
+  },
+  {
+   "id": "C5",
+   "judge_rank": 8,
+   "name": "The flexible N-terminal AS412/epitope-I flap of HCV E2, a conserved...",
+   "confidence": 0.005,
+   "mapping_basis": "side",
+   "n_residues": 12,
+   "chain_pairs": [
+    {
+     "antibody_chain": "A",
+     "antigen_chain": "C",
+     "n_residues": 12
+    },
+    {
+     "antibody_chain": "B",
+     "antigen_chain": "C",
+     "n_residues": 12
+    }
+   ],
+   "file": "pocket.C5.json"
+  }
+ ]
+}

@@ -1,0 +1,311 @@
+{
+ "task": "gather",
+ "gather_mode": "batched",
+ "num_launchers": 3,
+ "policy": {
+  "evidence_cutoff": "2026-06-03",
+  "no_cutoff": false,
+  "gated": true,
+  "web_search": false,
+  "shell_network": true,
+  "gate_tools": [
+   "research",
+   "fetch",
+   "rcsb",
+   "patent",
+   "paper"
+  ]
+ },
+ "unscored": true,
+ "target": "H2344",
+ "target_set": "casp17",
+ "case": "case_679778",
+ "evidence_cutoff": "2026-06-03",
+ "target_release_date": "2026-06-03",
+ "retrieval_policy": "gated",
+ "input_structure": "data/staged_casp17_no_native/H2344.pdb",
+ "input_structure_sha256": "18733617ed7c4b96b45ff3352f72763afcd6932570e14f1956abaeff946190b8",
+ "briefing_source": "data/briefing/casp17/H2344/search_results.json",
+ "briefing_sha256": "e01658771c612bd446896a8f683ccea6f403b94ecf685db0566f7e4ef7b38f51",
+ "antigen_chains": [
+  "C"
+ ],
+ "antibody_files": {
+  "antibody.pdb": [
+   "A",
+   "B"
+  ]
+ },
+ "antibody_chain_types": {
+  "antibody.pdb": {
+   "A": "unknown",
+   "B": "unknown"
+  }
+ },
+ "stage": "gatherer",
+ "pocket": {
+  "id": "C5",
+  "judge_rank": 7,
+  "name": "The mobile N-terminal receptor hairpin and return arm of gD: the...",
+  "confidence": 0.09,
+  "p_rests_on_holds": 0.25,
+  "why_this_rank": "The broad hairpin is accessible and other human antibodies bind its core, but its full C:7-C:32 span and dual-receptor consequence are less supported than C6's compact determinant.",
+  "rests_on": "The supplied Fab contacts both arms of the extended hairpin rather than only the compact C6 turn.",
+  "where_the_mass_goes_if_it_fails": "C6.",
+  "what_it_is": "The mobile N-terminal receptor hairpin and return arm of gD: the HVEM-binding 7-22 segment continuing into the 24-29 rim that also approaches the shared HVEM/nectin receptor face.",
+  "why_one_candidate": "not pooled with anything: no other patch is both within 12 A (half centroid distance, half contact-graph hops) and coverable by one paratope of this antibody's reach, 18.1 A",
+  "from_patches": [
+   "P6"
+  ]
+ },
+ "note": "`confidence` on the pocket is over pockets and sums to about 1 across them. Inside an interface it is per residue in [0, 1] and sums to nothing. No residue is cut at a threshold: the whole vector is the answer.",
+ "mapping_basis": "side",
+ "checks": {
+  "unrecognised_sides": []
+ },
+ "chain_pairs": [
+  {
+   "antibody_chain": "A",
+   "antigen_chain": "C",
+   "n_residues": 18
+  },
+  {
+   "antibody_chain": "B",
+   "antigen_chain": "C",
+   "n_residues": 18
+  }
+ ],
+ "antibodies": [
+  {
+   "antibody": "antibody.pdb",
+   "chains": {
+    "A": "unknown",
+    "B": "unknown"
+   },
+   "binding_mode": null,
+   "n_residues_scored": 18,
+   "interfaces": [
+    {
+     "antibody_chain": "A",
+     "antibody_chain_type": "unknown",
+     "antigen_chain": "C",
+     "n_residues": 18,
+     "residue_confidence": {
+      "10": 0.5,
+      "11": 0.6,
+      "12": 0.58,
+      "13": 0.88,
+      "14": 0.93,
+      "15": 0.92,
+      "16": 0.95,
+      "17": 0.88,
+      "18": 0.82,
+      "19": 0.6,
+      "20": 0.77,
+      "21": 0.86,
+      "22": 0.83,
+      "24": 0.6,
+      "26": 0.55,
+      "27": 0.64,
+      "28": 0.5,
+      "29": 0.4
+     },
+     "residue_side": {
+      "10": "heavy",
+      "11": "heavy",
+      "12": "both",
+      "13": "both",
+      "14": "both",
+      "15": "both",
+      "16": "both",
+      "17": "light",
+      "18": "light",
+      "19": "light",
+      "20": "light",
+      "21": "light",
+      "22": "light",
+      "24": "light",
+      "26": "heavy",
+      "27": "heavy",
+      "28": "heavy",
+      "29": "heavy"
+     },
+     "max_confidence": 0.95,
+     "mean_confidence": 0.7117
+    },
+    {
+     "antibody_chain": "B",
+     "antibody_chain_type": "unknown",
+     "antigen_chain": "C",
+     "n_residues": 18,
+     "residue_confidence": {
+      "10": 0.5,
+      "11": 0.6,
+      "12": 0.58,
+      "13": 0.88,
+      "14": 0.93,
+      "15": 0.92,
+      "16": 0.95,
+      "17": 0.88,
+      "18": 0.82,
+      "19": 0.6,
+      "20": 0.77,
+      "21": 0.86,
+      "22": 0.83,
+      "24": 0.6,
+      "26": 0.55,
+      "27": 0.64,
+      "28": 0.5,
+      "29": 0.4
+     },
+     "residue_side": {
+      "10": "heavy",
+      "11": "heavy",
+      "12": "both",
+      "13": "both",
+      "14": "both",
+      "15": "both",
+      "16": "both",
+      "17": "light",
+      "18": "light",
+      "19": "light",
+      "20": "light",
+      "21": "light",
+      "22": "light",
+      "24": "light",
+      "26": "heavy",
+      "27": "heavy",
+      "28": "heavy",
+      "29": "heavy"
+     },
+     "max_confidence": 0.95,
+     "mean_confidence": 0.7117
+    }
+   ]
+  }
+ ],
+ "paratope": {
+  "dominant_cdrs": [
+   "H3peripheryheavy3to1lightmanycontactsinvolvingbothchainsWouldbeabout753A25heavy3AlightwithH3andH2atcenterC4:H1",
+   "H2andH3heavyL1andL2lightH3dominantparatoperesiduesincludeH3loopresiduesheavyLightloopscontributetolateraledgeHeavyfractionabout70to30H:L1"
+  ],
+  "paratope_residues": [
+   "A:30",
+   "A:31",
+   "A:32",
+   "A:55",
+   "A:101",
+   "A:103",
+   "A:104",
+   "A:105",
+   "A:106",
+   "A:108",
+   "B:27",
+   "B:28",
+   "B:30",
+   "B:31",
+   "B:33",
+   "B:53",
+   "B:94",
+   "B:95",
+   "B:96"
+  ],
+  "heavy_light_split": "About 65:35 heavy:light. H3/H1 grip the 10-16 turn and 26-29 rim; L1/L3 follow the 17-24 return arm. Both chains converge on C:12-C:16.",
+  "binding_mode_union": "single-chain"
+ },
+ "residues": [
+  "C:10",
+  "C:11",
+  "C:12",
+  "C:13",
+  "C:14",
+  "C:15",
+  "C:16",
+  "C:17",
+  "C:18",
+  "C:19",
+  "C:20",
+  "C:21",
+  "C:22",
+  "C:24",
+  "C:26",
+  "C:27",
+  "C:28",
+  "C:29"
+ ],
+ "n_residues": 18,
+ "patches": [
+  {
+   "id": "P6",
+   "name": "HVEM-associated N-terminal hairpin/loop",
+   "n_residues": 26,
+   "residues": [
+    "C:10",
+    "C:11",
+    "C:12",
+    "C:13",
+    "C:14",
+    "C:15",
+    "C:16",
+    "C:17",
+    "C:18",
+    "C:19",
+    "C:20",
+    "C:21",
+    "C:22",
+    "C:23",
+    "C:24",
+    "C:25",
+    "C:26",
+    "C:27",
+    "C:28",
+    "C:29",
+    "C:30",
+    "C:31",
+    "C:32",
+    "C:7",
+    "C:8",
+    "C:9"
+   ],
+   "n_kept_by_advocate": 18,
+   "n_dropped_by_advocate": 8
+  }
+ ],
+ "pooling_provenance": {
+  "n_shared_at_pooling": 26,
+  "n_disputed_at_pooling": 0,
+  "note": "counts only, describing how the organizer grouped the phase-1 patches. The organizer's own candidate residue list is deliberately absent: the answer is the advocate's footprint, in `residues` and in `antibodies[].interfaces[]`."
+ },
+ "evidence": {
+  "advocate": {
+   "n_findings": 5,
+   "n_supports": 5,
+   "n_weakens": 0,
+   "weakest_point": "The human-antibody evidence comes from sequence-distinct CH41/CH42/CH43-class binders. Moreover, this mobile segment can yield receptor-pathway-selective antibodies, so the proposed broad dual-rim consequence may overstate what a footprint centered on the hairpin actually blocks.",
+   "note": "the advocate reports claim/source/date/bearing and is not asked whether a source is about this binder"
+  },
+  "judge": {
+   "tier_a_support": 0,
+   "n_support_lines": 4,
+   "verdict": "live",
+   "note": "Tier A -- a source about this binder itself -- is the judge's adjudication, in assessment[].support[]. It exists nowhere in the advocate's own answer."
+  }
+ },
+ "provenance": {
+  "unverified_source_policy_fields": [
+   "gated",
+   "web_search",
+   "shell_network",
+   "gate_tools"
+  ],
+  "assembled_case_dir": "gpt-5.6-high/gather_refine/post_refactor/unreleased_20261029/gated/casp17/H2344/case_679778_G_rep3",
+  "organize_case_dir": "gpt-5.6-high/gather_refine/post_refactor/unreleased_20261029/gated/casp17/H2344/case_679778_GR_rep3",
+  "organize_status": "ok",
+  "judge_case_dir": "gpt-5.6-high/gather_refine/post_refactor/unreleased_20261029/gated/casp17/H2344/case_679778_GJ_rep3",
+  "judge_status": "ok",
+  "packet": "gpt-5.6-high/gather/packets/case_679778/packet",
+  "manifest": "gpt-5.6-high/gather/packets/case_679778/manifest.json",
+  "advocate_case_dir": "gpt-5.6-high/gather_refine/post_refactor/unreleased_20261029/gated/casp17/H2344/case_679778_GR_rep3",
+  "advocate_status": "ok"
+ }
+}

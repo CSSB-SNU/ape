@@ -1,0 +1,285 @@
+{
+ "task": "gather",
+ "gather_mode": "batched",
+ "num_launchers": 3,
+ "policy": {
+  "evidence_cutoff": null,
+  "no_cutoff": true,
+  "gated": false,
+  "web_search": true,
+  "shell_network": true,
+  "gate_tools": []
+ },
+ "unscored": true,
+ "target": "H2348",
+ "target_set": "casp17",
+ "case": "case_4ade9a",
+ "evidence_cutoff": null,
+ "target_release_date": "2026-06-05",
+ "retrieval_policy": "no-cutoff",
+ "input_structure": "data/staged_casp17_no_native/H2348.pdb",
+ "input_structure_sha256": "ce3adf48ca6a518ad9b1c0b7ee6fd0899f7d12f01d7aa968c11b92ad459c41e7",
+ "briefing_source": "data/briefing/casp17_nocutoff/H2348/search_results.json",
+ "briefing_sha256": "764bf0cb501957b0a6bbb2036c672dc856ac4be1b5e0aed11fd8847f842bf759",
+ "antigen_chains": [
+  "A"
+ ],
+ "antibody_files": {
+  "antibody.pdb": [
+   "B",
+   "C"
+  ]
+ },
+ "antibody_chain_types": {
+  "antibody.pdb": {
+   "B": "unknown",
+   "C": "unknown"
+  }
+ },
+ "stage": "gatherer",
+ "pocket": {
+  "id": "C7",
+  "judge_rank": 7,
+  "name": "The D3 receptor-receptor component of composite site II: the...",
+  "confidence": 0.06,
+  "p_rests_on_holds": 0.18,
+  "why_this_rank": "C7 is functional and approachable, but has no antibody precedent, no aromatic anchor, and same-sign bulk charge relative to exposed CDRs.",
+  "rests_on": "An acidic, aromatic-free face can nevertheless form a high-affinity interface with this also-acidic paratope.",
+  "where_the_mass_goes_if_it_fails": "C2",
+  "what_it_is": "The D3 receptor-receptor component of composite site II: the cytokine-binding-module face contacting a cognate alpha receptor after cytokine capture, with an upper E212/E213/K219 lobe folded beside an E253/D254-S257/R259-Q265 lower lobe.",
+  "why_one_candidate": "not pooled with anything: no other patch is both within 12 A (half centroid distance, half contact-graph hops) and coverable by one paratope of this antibody's reach, 17.5 A",
+  "from_patches": [
+   "P9"
+  ]
+ },
+ "note": "`confidence` on the pocket is over pockets and sums to about 1 across them. Inside an interface it is per residue in [0, 1] and sums to nothing. No residue is cut at a threshold: the whole vector is the answer.",
+ "mapping_basis": "side",
+ "checks": {
+  "unrecognised_sides": []
+ },
+ "chain_pairs": [
+  {
+   "antibody_chain": "B",
+   "antigen_chain": "A",
+   "n_residues": 15
+  },
+  {
+   "antibody_chain": "C",
+   "antigen_chain": "A",
+   "n_residues": 15
+  }
+ ],
+ "antibodies": [
+  {
+   "antibody": "antibody.pdb",
+   "chains": {
+    "B": "unknown",
+    "C": "unknown"
+   },
+   "binding_mode": null,
+   "n_residues_scored": 15,
+   "interfaces": [
+    {
+     "antibody_chain": "B",
+     "antibody_chain_type": "unknown",
+     "antigen_chain": "A",
+     "n_residues": 15,
+     "residue_confidence": {
+      "211": 0.29,
+      "212": 0.83,
+      "213": 0.86,
+      "214": 0.69,
+      "219": 0.79,
+      "253": 0.87,
+      "254": 0.78,
+      "257": 0.73,
+      "258": 0.65,
+      "259": 0.8,
+      "260": 0.63,
+      "261": 0.62,
+      "263": 0.72,
+      "265": 0.85,
+      "266": 0.73
+     },
+     "residue_side": {
+      "211": "light",
+      "212": "light",
+      "213": "light",
+      "214": "both",
+      "219": "both",
+      "253": "heavy",
+      "254": "heavy",
+      "257": "heavy",
+      "258": "heavy",
+      "259": "heavy",
+      "260": "heavy",
+      "261": "both",
+      "263": "both",
+      "265": "both",
+      "266": "light"
+     },
+     "max_confidence": 0.87,
+     "mean_confidence": 0.7227
+    },
+    {
+     "antibody_chain": "C",
+     "antibody_chain_type": "unknown",
+     "antigen_chain": "A",
+     "n_residues": 15,
+     "residue_confidence": {
+      "211": 0.29,
+      "212": 0.83,
+      "213": 0.86,
+      "214": 0.69,
+      "219": 0.79,
+      "253": 0.87,
+      "254": 0.78,
+      "257": 0.73,
+      "258": 0.65,
+      "259": 0.8,
+      "260": 0.63,
+      "261": 0.62,
+      "263": 0.72,
+      "265": 0.85,
+      "266": 0.73
+     },
+     "residue_side": {
+      "211": "light",
+      "212": "light",
+      "213": "light",
+      "214": "both",
+      "219": "both",
+      "253": "heavy",
+      "254": "heavy",
+      "257": "heavy",
+      "258": "heavy",
+      "259": "heavy",
+      "260": "heavy",
+      "261": "both",
+      "263": "both",
+      "265": "both",
+      "266": "light"
+     },
+     "max_confidence": 0.87,
+     "mean_confidence": 0.7227
+    }
+   ]
+  }
+ ],
+ "paratope": {
+  "dominant_cdrs": [
+   "H2:H3",
+   "H3:H2",
+   "L1:L3",
+   "L3:L1"
+  ],
+  "paratope_residues": [
+   "B:31",
+   "B:32",
+   "B:33",
+   "B:54",
+   "B:56",
+   "B:57",
+   "B:58",
+   "B:98",
+   "B:99",
+   "B:101",
+   "B:102",
+   "B:105",
+   "C:27",
+   "C:28",
+   "C:30",
+   "C:31",
+   "C:32",
+   "C:52",
+   "C:91",
+   "C:92",
+   "C:93",
+   "C:94",
+   "C:95"
+  ],
+  "heavy_light_split": "Heavy contributes about 55-60% over E253/D254 and S257-T258-R259-S260. Light covers E212/E213/L214 and Q265/D266; A:214, A:219, A:261, A:263, and A:265 form the seam.",
+  "binding_mode_union": "single-chain"
+ },
+ "residues": [
+  "A:211",
+  "A:212",
+  "A:213",
+  "A:214",
+  "A:219",
+  "A:253",
+  "A:254",
+  "A:257",
+  "A:258",
+  "A:259",
+  "A:260",
+  "A:261",
+  "A:263",
+  "A:265",
+  "A:266"
+ ],
+ "n_residues": 15,
+ "patches": [
+  {
+   "id": "P9",
+   "name": "D3 alpha-receptor-facing functional face",
+   "n_residues": 15,
+   "residues": [
+    "A:211",
+    "A:212",
+    "A:214",
+    "A:217",
+    "A:219",
+    "A:253",
+    "A:254",
+    "A:257",
+    "A:258",
+    "A:259",
+    "A:261",
+    "A:262",
+    "A:263",
+    "A:265",
+    "A:266"
+   ],
+   "n_kept_by_advocate": 13,
+   "n_dropped_by_advocate": 2
+  }
+ ],
+ "pooling_provenance": {
+  "n_shared_at_pooling": 15,
+  "n_disputed_at_pooling": 0,
+  "note": "counts only, describing how the organizer grouped the phase-1 patches. The organizer's own candidate residue list is deliberately absent: the answer is the advocate's footprint, in `residues` and in `antibodies[].interfaces[]`."
+ },
+ "evidence": {
+  "advocate": {
+   "n_findings": 5,
+   "n_supports": 4,
+   "n_weakens": 1,
+   "weakest_point": "This broad, mostly polar receptor-receptor face lacks a compelling exposed aromatic hotspot, and parts become occluded after alpha-receptor binding. No antibody was found mapped to the gp130 side of this interface, so native contact alone does not establish a strong antibody epitope.",
+   "note": "the advocate reports claim/source/date/bearing and is not asked whether a source is about this binder"
+  },
+  "judge": {
+   "tier_a_support": 1,
+   "n_support_lines": 4,
+   "verdict": "unlikely",
+   "note": "Tier A -- a source about this binder itself -- is the judge's adjudication, in assessment[].support[]. It exists nowhere in the advocate's own answer."
+  }
+ },
+ "provenance": {
+  "unverified_source_policy_fields": [
+   "gated",
+   "web_search",
+   "shell_network",
+   "gate_tools"
+  ],
+  "assembled_case_dir": "gpt-5.6-high/gather_refine/post_refactor/unreleased_20261029/nocut/casp17/H2348/case_4ade9a_G_rep1",
+  "organize_case_dir": "gpt-5.6-high/gather_refine/post_refactor/unreleased_20261029/nocut/casp17/H2348/case_4ade9a_GR_rep1",
+  "organize_status": "ok",
+  "judge_case_dir": "gpt-5.6-high/gather_refine/post_refactor/unreleased_20261029/nocut/casp17/H2348/case_4ade9a_GJ_rep1",
+  "judge_status": "ok",
+  "packet": "gpt-5.6-high/nocut/gather/packets/case_4ade9a/packet",
+  "manifest": "gpt-5.6-high/nocut/gather/packets/case_4ade9a/manifest.json",
+  "advocate_case_dir": "gpt-5.6-high/gather_refine/post_refactor/unreleased_20261029/nocut/casp17/H2348/case_4ade9a_GR_rep1",
+  "advocate_status": "ok"
+ }
+}

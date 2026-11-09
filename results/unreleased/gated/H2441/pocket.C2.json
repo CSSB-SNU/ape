@@ -1,0 +1,227 @@
+{
+ "task": "gather",
+ "gather_mode": "batched",
+ "num_launchers": 3,
+ "policy": {
+  "evidence_cutoff": "2026-07-31",
+  "no_cutoff": false,
+  "gated": true,
+  "web_search": false,
+  "shell_network": true,
+  "gate_tools": [
+   "research",
+   "fetch",
+   "rcsb",
+   "patent",
+   "paper"
+  ]
+ },
+ "unscored": true,
+ "target": "H2441",
+ "target_set": "casp17",
+ "case": "case_253bc2",
+ "evidence_cutoff": "2026-07-31",
+ "target_release_date": "2026-07-31",
+ "retrieval_policy": "gated",
+ "input_structure": "data/staged_casp17_no_native/H2441.pdb",
+ "input_structure_sha256": "37e38c82b5192825be5d1ed9d412076bf5a8fb5ddade49d20c5ae532bead12ae",
+ "briefing_source": "data/briefing/casp17/H2441/search_results.json",
+ "briefing_sha256": "5827c87d5386d58165199f41b0dc2d6859022ecaa626ad84eae73bd0a67053e2",
+ "antigen_chains": [
+  "A"
+ ],
+ "antibody_files": {
+  "antibody.pdb": [
+   "B"
+  ]
+ },
+ "antibody_chain_types": {
+  "antibody.pdb": {
+   "B": "unknown"
+  }
+ },
+ "stage": "gatherer",
+ "pocket": {
+  "id": "C2",
+  "judge_rank": 6,
+  "name": "A compact distal polar terrace on the solvent-exposed back of one...",
+  "confidence": 0.06,
+  "p_rests_on_holds": 0.22,
+  "why_this_rank": "Compact and exposed but acidic, functionally unnamed, and supported mainly by a homolog analogy.",
+  "rests_on": "Hydrogen bonding overcomes the absent basic countercontact and the VIM precedent applies here.",
+  "where_the_mass_goes_if_it_fails": "C7",
+  "what_it_is": "A compact distal polar terrace on the solvent-exposed back of one alpha-beta half of the metallo-beta-lactamase sandwich, opposite the zinc groove.",
+  "why_one_candidate": "not pooled with anything: no other patch is both within 12 A (half centroid distance, half contact-graph hops) and coverable by one paratope of this antibody's reach, 12.9 A",
+  "from_patches": [
+   "P2"
+  ]
+ },
+ "note": "`confidence` on the pocket is over pockets and sums to about 1 across them. Inside an interface it is per residue in [0, 1] and sums to nothing. No residue is cut at a threshold: the whole vector is the answer.",
+ "mapping_basis": "side",
+ "checks": {
+  "unrecognised_sides": []
+ },
+ "chain_pairs": [
+  {
+   "antibody_chain": "B",
+   "antigen_chain": "A",
+   "n_residues": 13
+  }
+ ],
+ "antibodies": [
+  {
+   "antibody": "antibody.pdb",
+   "chains": {
+    "B": "unknown"
+   },
+   "binding_mode": null,
+   "n_residues_scored": 13,
+   "interfaces": [
+    {
+     "antibody_chain": "B",
+     "antibody_chain_type": "unknown",
+     "antigen_chain": "A",
+     "n_residues": 13,
+     "residue_confidence": {
+      "67": 0.4,
+      "68": 0.72,
+      "69": 0.92,
+      "72": 0.47,
+      "73": 0.42,
+      "76": 0.78,
+      "103": 0.88,
+      "106": 0.66,
+      "107": 0.78,
+      "108": 0.72,
+      "109": 0.68,
+      "128": 0.38,
+      "131": 0.42
+     },
+     "residue_side": {
+      "67": "heavy",
+      "68": "heavy",
+      "69": "heavy",
+      "72": "heavy",
+      "73": "heavy",
+      "76": "heavy",
+      "103": "heavy",
+      "106": "heavy",
+      "107": "heavy",
+      "108": "heavy",
+      "109": "heavy",
+      "128": "heavy",
+      "131": "heavy"
+     },
+     "max_confidence": 0.92,
+     "mean_confidence": 0.6331
+    }
+   ]
+  }
+ ],
+ "paratope": {
+  "dominant_cdrs": [
+   "H3s:H3",
+   "H1s:H1",
+   "H2s:H2"
+  ],
+  "paratope_residues": [
+   "B:27",
+   "B:29",
+   "B:30",
+   "B:52",
+   "B:54",
+   "B:55",
+   "B:56",
+   "B:58",
+   "B:98",
+   "B:100",
+   "B:102",
+   "B:105",
+   "B:108",
+   "B:111",
+   "B:113",
+   "B:116",
+   "B:117"
+  ],
+  "heavy_light_split": "All contacts are heavy-side; H3 covers the compact centre and H1/H2 provide neutral polar contacts.",
+  "binding_mode_union": "single-chain"
+ },
+ "residues": [
+  "A:103",
+  "A:106",
+  "A:107",
+  "A:108",
+  "A:109",
+  "A:128",
+  "A:131",
+  "A:67",
+  "A:68",
+  "A:69",
+  "A:72",
+  "A:73",
+  "A:76"
+ ],
+ "n_residues": 13,
+ "patches": [
+  {
+   "id": "P2",
+   "name": "Distal polar face around A:69/A:103/A:106",
+   "n_residues": 14,
+   "residues": [
+    "A:100",
+    "A:103",
+    "A:104",
+    "A:106",
+    "A:107",
+    "A:108",
+    "A:109",
+    "A:128",
+    "A:67",
+    "A:68",
+    "A:69",
+    "A:72",
+    "A:73",
+    "A:76"
+   ],
+   "n_kept_by_advocate": 12,
+   "n_dropped_by_advocate": 2
+  }
+ ],
+ "pooling_provenance": {
+  "n_shared_at_pooling": 14,
+  "n_disputed_at_pooling": 0,
+  "note": "counts only, describing how the organizer grouped the phase-1 patches. The organizer's own candidate residue list is deliberately absent: the answer is the advocate's footprint, in `residues` and in `antibodies[].interfaces[]`."
+ },
+ "evidence": {
+  "advocate": {
+   "n_findings": 4,
+   "n_supports": 4,
+   "n_weakens": 0,
+   "weakest_point": "The surface is acidic, while the exposed Nb17 paratope is nearly neutral and hydrophobic; the allosteric precedent comes from a VIM homologue.",
+   "note": "the advocate reports claim/source/date/bearing and is not asked whether a source is about this binder"
+  },
+  "judge": {
+   "tier_a_support": 1,
+   "n_support_lines": 4,
+   "verdict": "unlikely",
+   "note": "Tier A -- a source about this binder itself -- is the judge's adjudication, in assessment[].support[]. It exists nowhere in the advocate's own answer."
+  }
+ },
+ "provenance": {
+  "unverified_source_policy_fields": [
+   "gated",
+   "web_search",
+   "shell_network",
+   "gate_tools"
+  ],
+  "assembled_case_dir": "gpt-5.6-high/gather_refine/post_refactor/unreleased_20261029/gated/casp17/H2441/case_253bc2_G_rep1",
+  "organize_case_dir": "gpt-5.6-high/gather_refine/post_refactor/unreleased_20261029/gated/casp17/H2441/case_253bc2_GR_rep1",
+  "organize_status": "ok",
+  "judge_case_dir": "gpt-5.6-high/gather_refine/post_refactor/unreleased_20261029/gated/casp17/H2441/case_253bc2_GJ_rep1",
+  "judge_status": "ok",
+  "packet": "gpt-5.6-high/gather/packets/case_253bc2/packet",
+  "manifest": "gpt-5.6-high/gather/packets/case_253bc2/manifest.json",
+  "advocate_case_dir": "gpt-5.6-high/gather_refine/post_refactor/unreleased_20261029/gated/casp17/H2441/case_253bc2_GR_rep1",
+  "advocate_status": "ok"
+ }
+}

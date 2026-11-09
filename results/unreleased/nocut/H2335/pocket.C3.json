@@ -1,0 +1,283 @@
+{
+ "task": "gather",
+ "gather_mode": "batched",
+ "num_launchers": 3,
+ "policy": {
+  "evidence_cutoff": null,
+  "no_cutoff": true,
+  "gated": false,
+  "web_search": true,
+  "shell_network": true,
+  "gate_tools": []
+ },
+ "unscored": true,
+ "target": "H2335",
+ "target_set": "casp17",
+ "case": "case_d48c74",
+ "evidence_cutoff": null,
+ "target_release_date": "2026-05-27",
+ "retrieval_policy": "no-cutoff",
+ "input_structure": "data/staged_casp17_no_native/H2335.pdb",
+ "input_structure_sha256": "f216450f2774ea363d9dfeeb1e478d506d906f539f384bf370d4b65ff32c11bb",
+ "briefing_source": "data/briefing/casp17_nocutoff/H2335/search_results.json",
+ "briefing_sha256": "4c6eb598fb307223a9315af31439ba34c45b16345678bd0c3aeed39bcafa9e64",
+ "antigen_chains": [
+  "A",
+  "B",
+  "C"
+ ],
+ "antibody_files": {
+  "antibody.pdb": [
+   "D",
+   "E"
+  ]
+ },
+ "antibody_chain_types": {
+  "antibody.pdb": {
+   "D": "light",
+   "E": "heavy"
+  }
+ },
+ "stage": "gatherer",
+ "pocket": {
+  "id": "C3",
+  "judge_rank": 2,
+  "name": "The exposed gH DII/DIII kink, joining an aromatic/charged lobe near...",
+  "confidence": 0.15,
+  "p_rests_on_holds": 0.21,
+  "why_this_rank": "Uniformly exposed, compact central kink with 13H11 precedent; its boundary is more coherent than C7's while remaining query-unmapped.",
+  "rests_on": "A different central-kink antibody can use this local subset of the broader 13H11 region.",
+  "where_the_mass_goes_if_it_fails": "C7, then C6",
+  "what_it_is": "The exposed gH DII/DIII kink, joining an aromatic/charged lobe near B:194-B:222 to an adjacent polar lip near B:259-B:267—the central neutralizing region typified by 13H11.",
+  "why_one_candidate": "not pooled with anything: no other patch is both within 12 A (half centroid distance, half contact-graph hops) and coverable by one paratope of this antibody's reach, 17.4 A",
+  "from_patches": [
+   "P2"
+  ]
+ },
+ "note": "`confidence` on the pocket is over pockets and sums to about 1 across them. Inside an interface it is per residue in [0, 1] and sums to nothing. No residue is cut at a threshold: the whole vector is the answer.",
+ "mapping_basis": "side",
+ "checks": {
+  "unrecognised_sides": []
+ },
+ "chain_pairs": [
+  {
+   "antibody_chain": "D",
+   "antigen_chain": "B",
+   "n_residues": 14
+  },
+  {
+   "antibody_chain": "E",
+   "antigen_chain": "B",
+   "n_residues": 12
+  }
+ ],
+ "antibodies": [
+  {
+   "antibody": "antibody.pdb",
+   "chains": {
+    "D": "light",
+    "E": "heavy"
+   },
+   "binding_mode": null,
+   "n_residues_scored": 18,
+   "interfaces": [
+    {
+     "antibody_chain": "D",
+     "antibody_chain_type": "light",
+     "antigen_chain": "B",
+     "n_residues": 14,
+     "residue_confidence": {
+      "179": 0.38,
+      "196": 0.82,
+      "198": 0.92,
+      "199": 0.86,
+      "201": 0.76,
+      "218": 0.82,
+      "220": 0.94,
+      "221": 0.58,
+      "222": 0.42,
+      "259": 0.38,
+      "261": 0.88,
+      "264": 0.72,
+      "265": 0.86,
+      "267": 0.52
+     },
+     "residue_side": {
+      "179": "light",
+      "196": "both",
+      "198": "both",
+      "199": "both",
+      "201": "both",
+      "218": "both",
+      "220": "both",
+      "221": "light",
+      "222": "light",
+      "259": "light",
+      "261": "both",
+      "264": "light",
+      "265": "both",
+      "267": "light"
+     },
+     "max_confidence": 0.94,
+     "mean_confidence": 0.7043
+    },
+    {
+     "antibody_chain": "E",
+     "antibody_chain_type": "heavy",
+     "antigen_chain": "B",
+     "n_residues": 12,
+     "residue_confidence": {
+      "194": 0.76,
+      "196": 0.82,
+      "197": 0.68,
+      "198": 0.92,
+      "199": 0.86,
+      "200": 0.9,
+      "201": 0.76,
+      "203": 0.54,
+      "218": 0.82,
+      "220": 0.94,
+      "261": 0.88,
+      "265": 0.86
+     },
+     "residue_side": {
+      "194": "heavy",
+      "196": "both",
+      "197": "heavy",
+      "198": "both",
+      "199": "both",
+      "200": "heavy",
+      "201": "both",
+      "203": "heavy",
+      "218": "both",
+      "220": "both",
+      "261": "both",
+      "265": "both"
+     },
+     "max_confidence": 0.94,
+     "mean_confidence": 0.8117
+    }
+   ]
+  }
+ ],
+ "paratope": {
+  "dominant_cdrs": [
+   "E:H3",
+   "E:H2",
+   "D:L1",
+   "D:L3"
+  ],
+  "paratope_residues": [
+   "E:31",
+   "E:32",
+   "E:33",
+   "E:53",
+   "E:54",
+   "E:56",
+   "E:57",
+   "E:58",
+   "E:98",
+   "E:100",
+   "E:103",
+   "E:105",
+   "E:106",
+   "E:111",
+   "D:27",
+   "D:28",
+   "D:30",
+   "D:32",
+   "D:92",
+   "D:94",
+   "D:95",
+   "D:96"
+  ],
+  "heavy_light_split": "About 62:38 heavy:light. H3/H2 cover B:194-B:203; light R28/L3 cover B:218/B:220/B:261 and B:264-B:267; both converge on the central anchors.",
+  "binding_mode_union": "single-chain"
+ },
+ "residues": [
+  "B:179",
+  "B:194",
+  "B:196",
+  "B:197",
+  "B:198",
+  "B:199",
+  "B:200",
+  "B:201",
+  "B:203",
+  "B:218",
+  "B:220",
+  "B:221",
+  "B:222",
+  "B:259",
+  "B:261",
+  "B:264",
+  "B:265",
+  "B:267"
+ ],
+ "n_residues": 18,
+ "patches": [
+  {
+   "id": "P2",
+   "name": "gH DII/DIII conserved neutralizing hotspot",
+   "n_residues": 17,
+   "residues": [
+    "B:179",
+    "B:194",
+    "B:197",
+    "B:198",
+    "B:199",
+    "B:200",
+    "B:201",
+    "B:203",
+    "B:218",
+    "B:220",
+    "B:221",
+    "B:222",
+    "B:259",
+    "B:261",
+    "B:264",
+    "B:265",
+    "B:267"
+   ],
+   "n_kept_by_advocate": 17,
+   "n_dropped_by_advocate": 0
+  }
+ ],
+ "pooling_provenance": {
+  "n_shared_at_pooling": 17,
+  "n_disputed_at_pooling": 0,
+  "note": "counts only, describing how the organizer grouped the phase-1 patches. The organizer's own candidate residue list is deliberately absent: the answer is the advocate's footprint, in `residues` and in `antibodies[].interfaces[]`."
+ },
+ "evidence": {
+  "advocate": {
+   "n_findings": 3,
+   "n_supports": 2,
+   "n_weakens": 0,
+   "weakest_point": "The published 13H11 footprint is broader and its orientation need not match this H3-dominant query. Literature validates the surface class, not this exact boundary.",
+   "note": "the advocate reports claim/source/date/bearing and is not asked whether a source is about this binder"
+  },
+  "judge": {
+   "tier_a_support": 0,
+   "n_support_lines": 3,
+   "verdict": "live",
+   "note": "Tier A -- a source about this binder itself -- is the judge's adjudication, in assessment[].support[]. It exists nowhere in the advocate's own answer."
+  }
+ },
+ "provenance": {
+  "unverified_source_policy_fields": [
+   "gated",
+   "web_search",
+   "shell_network",
+   "gate_tools"
+  ],
+  "assembled_case_dir": "gpt-5.6-high/gather_refine/post_refactor/unreleased_20261029/nocut/casp17/H2335/case_d48c74_G_rep1",
+  "organize_case_dir": "gpt-5.6-high/gather_refine/post_refactor/unreleased_20261029/nocut/casp17/H2335/case_d48c74_GR_rep1",
+  "organize_status": "ok",
+  "judge_case_dir": "gpt-5.6-high/gather_refine/post_refactor/unreleased_20261029/nocut/casp17/H2335/case_d48c74_GJ_rep1",
+  "judge_status": "ok",
+  "packet": "gpt-5.6-high/nocut/gather/packets/case_d48c74/packet",
+  "manifest": "gpt-5.6-high/nocut/gather/packets/case_d48c74/manifest.json",
+  "advocate_case_dir": "gpt-5.6-high/gather_refine/post_refactor/unreleased_20261029/nocut/casp17/H2335/case_d48c74_GR_rep1",
+  "advocate_status": "ok"
+ }
+}

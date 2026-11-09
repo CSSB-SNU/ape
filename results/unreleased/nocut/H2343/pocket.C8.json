@@ -1,0 +1,263 @@
+{
+ "task": "gather",
+ "gather_mode": "batched",
+ "num_launchers": 3,
+ "policy": {
+  "evidence_cutoff": null,
+  "no_cutoff": true,
+  "gated": false,
+  "web_search": true,
+  "shell_network": true,
+  "gate_tools": []
+ },
+ "unscored": true,
+ "target": "H2343",
+ "target_set": "casp17",
+ "case": "case_f1b810",
+ "evidence_cutoff": null,
+ "target_release_date": "2026-06-01",
+ "retrieval_policy": "no-cutoff",
+ "input_structure": "data/staged_casp17_no_native/H2343.pdb",
+ "input_structure_sha256": "3c70ae6e0bdda9d0a1014d29975873fe008fbe5bd9aebb5949da78b06aeabf11",
+ "briefing_source": "data/briefing/casp17_nocutoff/H2343/search_results.json",
+ "briefing_sha256": "6b66efca006e54eee3aa1b9a3ad4f04da4207f25dccedfbc9f13d1ef0c954955",
+ "antigen_chains": [
+  "C"
+ ],
+ "antibody_files": {
+  "antibody.pdb": [
+   "A",
+   "B"
+  ]
+ },
+ "antibody_chain_types": {
+  "antibody.pdb": {
+   "A": "unknown",
+   "B": "unknown"
+  }
+ },
+ "stage": "gatherer",
+ "pocket": {
+  "id": "C8",
+  "judge_rank": 2,
+  "name": "The glycan-bearing beta7/post-VR3 back-layer lobe of HCV E2 antigenic...",
+  "confidence": 0.12,
+  "p_rests_on_holds": 0.22,
+  "why_this_rank": "It shares the exact C:225 anchor and domain-A face, but its elongated, partly buried/glycan-risk footprint is less centered on the only residue-level Tier-A perturbation.",
+  "rests_on": "CBH-4G approaches Y632 from along the C8 beta7/post-VR3 lobe rather than the compact C4 neighborhood.",
+  "where_the_mass_goes_if_it_fails": "C4.",
+  "what_it_is": "The glycan-bearing beta7/post-VR3 back-layer lobe of HCV E2 antigenic domain A, at the junction between the pVR3 rim and C-terminal non-neutralizing face.",
+  "why_one_candidate": "not pooled with anything: no other patch is both within 12 A (half centroid distance, half contact-graph hops) and coverable by one paratope of this antibody's reach, 17.0 A",
+  "from_patches": [
+   "P9"
+  ]
+ },
+ "note": "`confidence` on the pocket is over pockets and sums to about 1 across them. Inside an interface it is per residue in [0, 1] and sums to nothing. No residue is cut at a threshold: the whole vector is the answer.",
+ "mapping_basis": "side",
+ "checks": {
+  "unrecognised_sides": []
+ },
+ "chain_pairs": [
+  {
+   "antibody_chain": "A",
+   "antigen_chain": "C",
+   "n_residues": 10
+  },
+  {
+   "antibody_chain": "B",
+   "antigen_chain": "C",
+   "n_residues": 10
+  }
+ ],
+ "antibodies": [
+  {
+   "antibody": "antibody.pdb",
+   "chains": {
+    "A": "unknown",
+    "B": "unknown"
+   },
+   "binding_mode": null,
+   "n_residues_scored": 10,
+   "interfaces": [
+    {
+     "antibody_chain": "A",
+     "antibody_chain_type": "unknown",
+     "antigen_chain": "C",
+     "n_residues": 10,
+     "residue_confidence": {
+      "215": 0.46,
+      "216": 0.24,
+      "217": 0.22,
+      "218": 0.66,
+      "219": 0.82,
+      "220": 0.5,
+      "221": 0.86,
+      "222": 0.05,
+      "223": 0.64,
+      "225": 0.76
+     },
+     "residue_side": {
+      "215": "light",
+      "216": "light",
+      "217": "light",
+      "218": "light",
+      "219": "both",
+      "220": "heavy",
+      "221": "both",
+      "222": "heavy",
+      "223": "heavy",
+      "225": "heavy"
+     },
+     "max_confidence": 0.86,
+     "mean_confidence": 0.521
+    },
+    {
+     "antibody_chain": "B",
+     "antibody_chain_type": "unknown",
+     "antigen_chain": "C",
+     "n_residues": 10,
+     "residue_confidence": {
+      "215": 0.46,
+      "216": 0.24,
+      "217": 0.22,
+      "218": 0.66,
+      "219": 0.82,
+      "220": 0.5,
+      "221": 0.86,
+      "222": 0.05,
+      "223": 0.64,
+      "225": 0.76
+     },
+     "residue_side": {
+      "215": "light",
+      "216": "light",
+      "217": "light",
+      "218": "light",
+      "219": "both",
+      "220": "heavy",
+      "221": "both",
+      "222": "heavy",
+      "223": "heavy",
+      "225": "heavy"
+     },
+     "max_confidence": 0.86,
+     "mean_confidence": 0.521
+    }
+   ]
+  }
+ ],
+ "paratope": {
+  "dominant_cdrs": [
+   "H3:H2",
+   "L1:L3"
+  ],
+  "paratope_residues": [
+   "A:54",
+   "A:55",
+   "A:56",
+   "A:58",
+   "A:104",
+   "A:105",
+   "A:106",
+   "A:107",
+   "A:108",
+   "A:109",
+   "A:110",
+   "A:111",
+   "A:113",
+   "A:116",
+   "B:27",
+   "B:30",
+   "B:31",
+   "B:32",
+   "B:93",
+   "B:94",
+   "B:97"
+  ],
+  "heavy_light_split": "Heavy-dominant, approximately 65:35; H3/H2 cover the Ile/Phe/Tyr shoulder, L1/L3 approach the glycan-proximal rim, and C:219/C:221 form the seam.",
+  "binding_mode_union": "single-chain"
+ },
+ "residues": [
+  "C:215",
+  "C:216",
+  "C:217",
+  "C:218",
+  "C:219",
+  "C:220",
+  "C:221",
+  "C:222",
+  "C:223",
+  "C:225"
+ ],
+ "n_residues": 10,
+ "patches": [
+  {
+   "id": "P9",
+   "name": "CBH-4G antigenic-domain-A bipartite pVR3/back-layer footprint",
+   "n_residues": 22,
+   "residues": [
+    "C:168",
+    "C:169",
+    "C:170",
+    "C:171",
+    "C:172",
+    "C:173",
+    "C:175",
+    "C:179",
+    "C:180",
+    "C:181",
+    "C:191",
+    "C:192",
+    "C:194",
+    "C:195",
+    "C:215",
+    "C:216",
+    "C:217",
+    "C:218",
+    "C:219",
+    "C:220",
+    "C:221",
+    "C:223"
+   ],
+   "n_kept_by_advocate": 8,
+   "n_dropped_by_advocate": 14
+  }
+ ],
+ "pooling_provenance": {
+  "n_shared_at_pooling": 22,
+  "n_disputed_at_pooling": 0,
+  "note": "counts only, describing how the organizer grouped the phase-1 patches. The organizer's own candidate residue list is deliberately absent: the answer is the advocate's footprint, in `residues` and in `antibodies[].interfaces[]`."
+ },
+ "evidence": {
+  "advocate": {
+   "n_findings": 5,
+   "n_supports": 3,
+   "n_weakens": 1,
+   "weakest_point": "The original bipartite footprint is too wide for one paratope and partly rests on a corrected numbering error. Narrowing it makes it coverable but leaves the original C:168–C:170 lobe unproven as a direct contact.",
+   "note": "the advocate reports claim/source/date/bearing and is not asked whether a source is about this binder"
+  },
+  "judge": {
+   "tier_a_support": 5,
+   "n_support_lines": 7,
+   "verdict": "live",
+   "note": "Tier A -- a source about this binder itself -- is the judge's adjudication, in assessment[].support[]. It exists nowhere in the advocate's own answer."
+  }
+ },
+ "provenance": {
+  "unverified_source_policy_fields": [
+   "gated",
+   "web_search",
+   "shell_network",
+   "gate_tools"
+  ],
+  "assembled_case_dir": "gpt-5.6-high/gather_refine/post_refactor/unreleased_20261029/nocut/casp17/H2343/case_f1b810_G_rep1",
+  "organize_case_dir": "gpt-5.6-high/gather_refine/post_refactor/unreleased_20261029/nocut/casp17/H2343/case_f1b810_GR_rep1",
+  "organize_status": "ok",
+  "judge_case_dir": "gpt-5.6-high/gather_refine/post_refactor/unreleased_20261029/nocut/casp17/H2343/case_f1b810_GJ_rep1",
+  "judge_status": "ok",
+  "packet": "gpt-5.6-high/nocut/gather/packets/case_f1b810/packet",
+  "manifest": "gpt-5.6-high/nocut/gather/packets/case_f1b810/manifest.json",
+  "advocate_case_dir": "gpt-5.6-high/gather_refine/post_refactor/unreleased_20261029/nocut/casp17/H2343/case_f1b810_GR_rep1",
+  "advocate_status": "ok"
+ }
+}

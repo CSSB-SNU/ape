@@ -1,0 +1,237 @@
+{
+ "target": "H2344",
+ "target_set": "casp17",
+ "case": "case_679778",
+ "task": "gather",
+ "gather_mode": "batched",
+ "num_launchers": 3,
+ "policy": {
+  "evidence_cutoff": "2026-06-03",
+  "no_cutoff": false,
+  "gated": true,
+  "web_search": false,
+  "shell_network": true,
+  "gate_tools": [
+   "research",
+   "fetch",
+   "rcsb",
+   "patent",
+   "paper"
+  ]
+ },
+ "unscored": true,
+ "evidence_cutoff": "2026-06-03",
+ "target_release_date": "2026-06-03",
+ "retrieval_policy": "gated",
+ "antigen_chains": [
+  "C"
+ ],
+ "antibody_files": {
+  "antibody.pdb": [
+   "A",
+   "B"
+  ]
+ },
+ "antibody_chain_types": {
+  "antibody.pdb": {
+   "A": "unknown",
+   "B": "unknown"
+  }
+ },
+ "input_structure": "data/staged_casp17_no_native/H2344.pdb",
+ "input_structure_sha256": "18733617ed7c4b96b45ff3352f72763afcd6932570e14f1956abaeff946190b8",
+ "briefing_source": "data/briefing/casp17/H2344/search_results.json",
+ "briefing_sha256": "e01658771c612bd446896a8f683ccea6f403b94ecf685db0566f7e4ef7b38f51",
+ "recognized_complex": {
+  "organize": null,
+  "judge": false
+ },
+ "recognition_note": "The antigen was identified from the supplied pre-cutoff annotation as HSV-2 strain 333 glycoprotein D. I also recognized pre-cutoff solved complexes of this exact antigen surface with different binders: E317 (paper first public 2013-09-20; PDB 3W9E released 2013-10-02), Nb14 and Nb32 (paper first public 2025-05-06; PDB entries released 2025-05-28). None is the supplied antibody: in particular, the supplied and E317 H3s have only 16.7% identity over aligned IMGT H3 positions. Exact CDR searches in the launcher record and a cutoff-gated search attempted here did not identify the supplied antibody, so the supplied complex itself is not recognized.",
+ "what_separated_them": "No candidate had Tier A evidence about this binder, so this remains a broad prior over surfaces. The narrow separation came from comparative calculations on every supplied footprint: connectivity, native-context accessibility risk, exact footprint extent versus the 39.29 A supplied paratope span, and coarse actual-paratope chemistry. I treated C2/C4/C8 as nested drawings of one receptor-groove family rather than counting their repeated E317 evidence three times; C5/C6 and C1/C7 likewise share surface priors. The receptor family received the largest cluster mass because three independent binders validate it, but the measured E317 transfer is weak (44.4% all-CDR identity, 16.7% H3), preventing concentration. C8 narrowly leads as the connected broad drawing; C3 is nearly tied because its cleft best matches the protruding H3 at a coarse level.",
+ "not_pooled": [],
+ "provenance": {
+  "unverified_source_policy_fields": [
+   "gated",
+   "web_search",
+   "shell_network",
+   "gate_tools"
+  ],
+  "assembled_case_dir": "gpt-5.6-high/gather_refine/post_refactor/unreleased_20261029/gated/casp17/H2344/case_679778_G_rep3",
+  "organize_case_dir": "gpt-5.6-high/gather_refine/post_refactor/unreleased_20261029/gated/casp17/H2344/case_679778_GR_rep3",
+  "organize_status": "ok",
+  "judge_case_dir": "gpt-5.6-high/gather_refine/post_refactor/unreleased_20261029/gated/casp17/H2344/case_679778_GJ_rep3",
+  "judge_status": "ok",
+  "packet": "gpt-5.6-high/gather/packets/case_679778/packet",
+  "manifest": "gpt-5.6-high/gather/packets/case_679778/manifest.json"
+ },
+ "pockets": [
+  {
+   "id": "C8",
+   "judge_rank": 1,
+   "name": "The shared nectin-1/core receptor groove of the gD Ig-like domain...",
+   "confidence": 0.18,
+   "mapping_basis": "side",
+   "n_residues": 19,
+   "chain_pairs": [
+    {
+     "antibody_chain": "A",
+     "antigen_chain": "C",
+     "n_residues": 19
+    },
+    {
+     "antibody_chain": "B",
+     "antigen_chain": "C",
+     "n_residues": 19
+    }
+   ],
+   "file": "pocket.C8.json"
+  },
+  {
+   "id": "C3",
+   "judge_rank": 2,
+   "name": "The N-to-A-prime interloop lateral cleft on the outside of the gD...",
+   "confidence": 0.17,
+   "mapping_basis": "side",
+   "n_residues": 17,
+   "chain_pairs": [
+    {
+     "antibody_chain": "A",
+     "antigen_chain": "C",
+     "n_residues": 17
+    },
+    {
+     "antibody_chain": "B",
+     "antigen_chain": "C",
+     "n_residues": 17
+    }
+   ],
+   "file": "pocket.C3.json"
+  },
+  {
+   "id": "C1",
+   "judge_rank": 3,
+   "name": "The seam where the mobile C-terminal ectodomain latch folds back onto...",
+   "confidence": 0.14,
+   "mapping_basis": "side",
+   "n_residues": 15,
+   "chain_pairs": [
+    {
+     "antibody_chain": "A",
+     "antigen_chain": "C",
+     "n_residues": 15
+    },
+    {
+     "antibody_chain": "B",
+     "antigen_chain": "C",
+     "n_residues": 15
+    }
+   ],
+   "file": "pocket.C1.json"
+  },
+  {
+   "id": "C2",
+   "judge_rank": 4,
+   "name": "The conserved receptor-overlap groove on the upper Ig-like core...",
+   "confidence": 0.13,
+   "mapping_basis": "side",
+   "n_residues": 15,
+   "chain_pairs": [
+    {
+     "antibody_chain": "A",
+     "antigen_chain": "C",
+     "n_residues": 15
+    },
+    {
+     "antibody_chain": "B",
+     "antigen_chain": "C",
+     "n_residues": 15
+    }
+   ],
+   "file": "pocket.C2.json"
+  },
+  {
+   "id": "C6",
+   "judge_rank": 5,
+   "name": "The short N-terminal peptide turn that forms the HVEM-facing tip of...",
+   "confidence": 0.11,
+   "mapping_basis": "side",
+   "n_residues": 14,
+   "chain_pairs": [
+    {
+     "antibody_chain": "A",
+     "antigen_chain": "C",
+     "n_residues": 14
+    },
+    {
+     "antibody_chain": "B",
+     "antigen_chain": "C",
+     "n_residues": 14
+    }
+   ],
+   "file": "pocket.C6.json"
+  },
+  {
+   "id": "C7",
+   "judge_rank": 6,
+   "name": "The exposed distal ectodomain extension or profusion latch of gD...",
+   "confidence": 0.1,
+   "mapping_basis": "side",
+   "n_residues": 18,
+   "chain_pairs": [
+    {
+     "antibody_chain": "A",
+     "antigen_chain": "C",
+     "n_residues": 18
+    },
+    {
+     "antibody_chain": "B",
+     "antigen_chain": "C",
+     "n_residues": 18
+    }
+   ],
+   "file": "pocket.C7.json"
+  },
+  {
+   "id": "C5",
+   "judge_rank": 7,
+   "name": "The mobile N-terminal receptor hairpin and return arm of gD: the...",
+   "confidence": 0.09,
+   "mapping_basis": "side",
+   "n_residues": 18,
+   "chain_pairs": [
+    {
+     "antibody_chain": "A",
+     "antigen_chain": "C",
+     "n_residues": 18
+    },
+    {
+     "antibody_chain": "B",
+     "antigen_chain": "C",
+     "n_residues": 18
+    }
+   ],
+   "file": "pocket.C5.json"
+  },
+  {
+   "id": "C4",
+   "judge_rank": 8,
+   "name": "The full E317-like receptor-overlap face: the upper Ig-core groove...",
+   "confidence": 0.08,
+   "mapping_basis": "side",
+   "n_residues": 20,
+   "chain_pairs": [
+    {
+     "antibody_chain": "A",
+     "antigen_chain": "C",
+     "n_residues": 20
+    },
+    {
+     "antibody_chain": "B",
+     "antigen_chain": "C",
+     "n_residues": 20
+    }
+   ],
+   "file": "pocket.C4.json"
+  }
+ ]
+}

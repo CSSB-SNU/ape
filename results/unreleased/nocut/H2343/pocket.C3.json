@@ -1,0 +1,291 @@
+{
+ "task": "gather",
+ "gather_mode": "batched",
+ "num_launchers": 3,
+ "policy": {
+  "evidence_cutoff": null,
+  "no_cutoff": true,
+  "gated": false,
+  "web_search": true,
+  "shell_network": true,
+  "gate_tools": []
+ },
+ "unscored": true,
+ "target": "H2343",
+ "target_set": "casp17",
+ "case": "case_f1b810",
+ "evidence_cutoff": null,
+ "target_release_date": "2026-06-01",
+ "retrieval_policy": "no-cutoff",
+ "input_structure": "data/staged_casp17_no_native/H2343.pdb",
+ "input_structure_sha256": "3c70ae6e0bdda9d0a1014d29975873fe008fbe5bd9aebb5949da78b06aeabf11",
+ "briefing_source": "data/briefing/casp17_nocutoff/H2343/search_results.json",
+ "briefing_sha256": "6b66efca006e54eee3aa1b9a3ad4f04da4207f25dccedfbc9f13d1ef0c954955",
+ "antigen_chains": [
+  "C"
+ ],
+ "antibody_files": {
+  "antibody.pdb": [
+   "A",
+   "B"
+  ]
+ },
+ "antibody_chain_types": {
+  "antibody.pdb": {
+   "A": "unknown",
+   "B": "unknown"
+  }
+ },
+ "stage": "gatherer",
+ "pocket": {
+  "id": "C3",
+  "judge_rank": 6,
+  "name": "The HCV E2 front-layer receptor face immediately downstream of AS412...",
+  "confidence": 0.01,
+  "p_rests_on_holds": 0.035,
+  "why_this_rank": "It is a compact exposed AR3-adjacent ridge but has only Tier-B precedent and required removal of a detached lobe.",
+  "rests_on": "CBH-4G behaves unlike its published domain-A phenotype and instead uses its long H3/hydrophobic H2 on the front layer.",
+  "where_the_mass_goes_if_it_fails": "C4.",
+  "what_it_is": "The HCV E2 front-layer receptor face immediately downstream of AS412, spanning a glycan-adjacent polar ridge and exposed Phe/Tyr shoulder.",
+  "why_one_candidate": "not pooled with anything: no other patch is both within 12 A (half centroid distance, half contact-graph hops) and coverable by one paratope of this antibody's reach, 17.0 A",
+  "from_patches": [
+   "P3"
+  ]
+ },
+ "note": "`confidence` on the pocket is over pockets and sums to about 1 across them. Inside an interface it is per residue in [0, 1] and sums to nothing. No residue is cut at a threshold: the whole vector is the answer.",
+ "mapping_basis": "side",
+ "checks": {
+  "unrecognised_sides": []
+ },
+ "chain_pairs": [
+  {
+   "antibody_chain": "A",
+   "antigen_chain": "C",
+   "n_residues": 15
+  },
+  {
+   "antibody_chain": "B",
+   "antigen_chain": "C",
+   "n_residues": 15
+  }
+ ],
+ "antibodies": [
+  {
+   "antibody": "antibody.pdb",
+   "chains": {
+    "A": "unknown",
+    "B": "unknown"
+   },
+   "binding_mode": null,
+   "n_residues_scored": 15,
+   "interfaces": [
+    {
+     "antibody_chain": "A",
+     "antibody_chain_type": "unknown",
+     "antigen_chain": "C",
+     "n_residues": 15,
+     "residue_confidence": {
+      "16": 0.48,
+      "17": 0.38,
+      "18": 0.5,
+      "19": 0.24,
+      "20": 0.58,
+      "21": 0.72,
+      "22": 0.76,
+      "23": 0.82,
+      "24": 0.68,
+      "25": 0.55,
+      "27": 0.52,
+      "28": 0.66,
+      "31": 0.88,
+      "32": 0.9,
+      "33": 0.62
+     },
+     "residue_side": {
+      "16": "heavy",
+      "17": "light",
+      "18": "heavy",
+      "19": "heavy",
+      "20": "light",
+      "21": "light",
+      "22": "both",
+      "23": "both",
+      "24": "light",
+      "25": "light",
+      "27": "heavy",
+      "28": "both",
+      "31": "heavy",
+      "32": "heavy",
+      "33": "light"
+     },
+     "max_confidence": 0.9,
+     "mean_confidence": 0.6193
+    },
+    {
+     "antibody_chain": "B",
+     "antibody_chain_type": "unknown",
+     "antigen_chain": "C",
+     "n_residues": 15,
+     "residue_confidence": {
+      "16": 0.48,
+      "17": 0.38,
+      "18": 0.5,
+      "19": 0.24,
+      "20": 0.58,
+      "21": 0.72,
+      "22": 0.76,
+      "23": 0.82,
+      "24": 0.68,
+      "25": 0.55,
+      "27": 0.52,
+      "28": 0.66,
+      "31": 0.88,
+      "32": 0.9,
+      "33": 0.62
+     },
+     "residue_side": {
+      "16": "heavy",
+      "17": "light",
+      "18": "heavy",
+      "19": "heavy",
+      "20": "light",
+      "21": "light",
+      "22": "both",
+      "23": "both",
+      "24": "light",
+      "25": "light",
+      "27": "heavy",
+      "28": "both",
+      "31": "heavy",
+      "32": "heavy",
+      "33": "light"
+     },
+     "max_confidence": 0.9,
+     "mean_confidence": 0.6193
+    }
+   ]
+  }
+ ],
+ "paratope": {
+  "dominant_cdrs": [
+   "H3:H2",
+   "L1:L3"
+  ],
+  "paratope_residues": [
+   "A:28",
+   "A:30",
+   "A:31",
+   "A:54",
+   "A:55",
+   "A:56",
+   "A:57",
+   "A:58",
+   "A:102",
+   "A:104",
+   "A:105",
+   "A:106",
+   "A:107",
+   "A:108",
+   "A:109",
+   "A:110",
+   "A:111",
+   "A:113",
+   "A:116",
+   "B:27",
+   "B:28",
+   "B:30",
+   "B:31",
+   "B:32",
+   "B:52",
+   "B:93",
+   "B:94",
+   "B:95",
+   "B:97"
+  ],
+  "heavy_light_split": "Heavy-dominant, approximately 72:28; H3/H2 cover the hydrophobic shoulder and L1/L3 cover the polar crest.",
+  "binding_mode_union": "single-chain"
+ },
+ "residues": [
+  "C:16",
+  "C:17",
+  "C:18",
+  "C:19",
+  "C:20",
+  "C:21",
+  "C:22",
+  "C:23",
+  "C:24",
+  "C:25",
+  "C:27",
+  "C:28",
+  "C:31",
+  "C:32",
+  "C:33"
+ ],
+ "n_residues": 15,
+ "patches": [
+  {
+   "id": "P3",
+   "name": "AS412/front-layer CD81-facing surface",
+   "n_residues": 17,
+   "residues": [
+    "C:10",
+    "C:11",
+    "C:16",
+    "C:17",
+    "C:18",
+    "C:19",
+    "C:20",
+    "C:21",
+    "C:22",
+    "C:23",
+    "C:24",
+    "C:25",
+    "C:27",
+    "C:28",
+    "C:31",
+    "C:8",
+    "C:9"
+   ],
+   "n_kept_by_advocate": 13,
+   "n_dropped_by_advocate": 4
+  }
+ ],
+ "pooling_provenance": {
+  "n_shared_at_pooling": 17,
+  "n_disputed_at_pooling": 0,
+  "note": "counts only, describing how the organizer grouped the phase-1 patches. The organizer's own candidate residue list is deliberately absent: the answer is the advocate's footprint, in `residues` and in `antibodies[].interfaces[]`."
+ },
+ "evidence": {
+  "advocate": {
+   "n_findings": 4,
+   "n_supports": 3,
+   "n_weakens": 1,
+   "weakest_point": "CBH-4G's known non-neutralizing domain-A identity and failure to block E2–CD81 place it on another face. The original patch was also overdrawn and its AS412 tip had to be removed.",
+   "note": "the advocate reports claim/source/date/bearing and is not asked whether a source is about this binder"
+  },
+  "judge": {
+   "tier_a_support": 0,
+   "n_support_lines": 3,
+   "verdict": "excluded",
+   "note": "Tier A -- a source about this binder itself -- is the judge's adjudication, in assessment[].support[]. It exists nowhere in the advocate's own answer."
+  }
+ },
+ "provenance": {
+  "unverified_source_policy_fields": [
+   "gated",
+   "web_search",
+   "shell_network",
+   "gate_tools"
+  ],
+  "assembled_case_dir": "gpt-5.6-high/gather_refine/post_refactor/unreleased_20261029/nocut/casp17/H2343/case_f1b810_G_rep1",
+  "organize_case_dir": "gpt-5.6-high/gather_refine/post_refactor/unreleased_20261029/nocut/casp17/H2343/case_f1b810_GR_rep1",
+  "organize_status": "ok",
+  "judge_case_dir": "gpt-5.6-high/gather_refine/post_refactor/unreleased_20261029/nocut/casp17/H2343/case_f1b810_GJ_rep1",
+  "judge_status": "ok",
+  "packet": "gpt-5.6-high/nocut/gather/packets/case_f1b810/packet",
+  "manifest": "gpt-5.6-high/nocut/gather/packets/case_f1b810/manifest.json",
+  "advocate_case_dir": "gpt-5.6-high/gather_refine/post_refactor/unreleased_20261029/nocut/casp17/H2343/case_f1b810_GR_rep1",
+  "advocate_status": "ok"
+ }
+}

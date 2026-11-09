@@ -1,0 +1,308 @@
+{
+ "task": "gather",
+ "gather_mode": "batched",
+ "num_launchers": 3,
+ "policy": {
+  "evidence_cutoff": null,
+  "no_cutoff": true,
+  "gated": false,
+  "web_search": true,
+  "shell_network": true,
+  "gate_tools": []
+ },
+ "unscored": true,
+ "target": "H2349",
+ "target_set": "casp17",
+ "case": "case_e333d6",
+ "evidence_cutoff": null,
+ "target_release_date": "2026-06-05",
+ "retrieval_policy": "no-cutoff",
+ "input_structure": "data/staged_casp17_no_native/H2349.pdb",
+ "input_structure_sha256": "ed3bcb0b0799f7f8db3a7695ea1da3ddce30d9c2312cdd2e5d844f6e396bdd86",
+ "briefing_source": "data/briefing/casp17_nocutoff/H2349/search_results.json",
+ "briefing_sha256": "b7744ba9eed23f884929670e84213478fdfebc3fc94cf39cec30b7cf355ba753",
+ "antigen_chains": [
+  "A"
+ ],
+ "antibody_files": {
+  "antibody.pdb": [
+   "B",
+   "C"
+  ]
+ },
+ "antibody_chain_types": {
+  "antibody.pdb": {
+   "B": "unknown",
+   "C": "unknown"
+  }
+ },
+ "stage": "gatherer",
+ "pocket": {
+  "id": "C2",
+  "judge_rank": 1,
+  "name": "The compact aromatic hotspot on the D2 half of the cytokine-binding...",
+  "confidence": 0.22,
+  "p_rests_on_holds": 0.48,
+  "why_this_rank": "C2 has the cleanest compact/near-planar geometry, strong aromatic/polar compatibility, no glycan-proximity flag, and independent residue-level antibody precedent on the same D2 face. The lead remains small because all precedent concerns other binders.",
+  "rests_on": "Compact aromatic D2 chemistry is a genuinely better match to the supplied paratope than the other exposed surfaces, rather than just a well-studied functional hotspot.",
+  "where_the_mass_goes_if_it_fails": "Primarily C1, then C4 and C3.",
+  "what_it_is": "The compact aromatic hotspot on the D2 half of the cytokine-binding homology region, centered on the site-II loops rather than the broader D2-D3 elbow.",
+  "why_one_candidate": "not pooled with anything: no other patch is both within 12 A (half centroid distance, half contact-graph hops) and coverable by one paratope of this antibody's reach, 17.9 A",
+  "from_patches": [
+   "P2"
+  ]
+ },
+ "note": "`confidence` on the pocket is over pockets and sums to about 1 across them. Inside an interface it is per residue in [0, 1] and sums to nothing. No residue is cut at a threshold: the whole vector is the answer.",
+ "mapping_basis": "side",
+ "checks": {
+  "unrecognised_sides": []
+ },
+ "chain_pairs": [
+  {
+   "antibody_chain": "B",
+   "antigen_chain": "A",
+   "n_residues": 20
+  },
+  {
+   "antibody_chain": "C",
+   "antigen_chain": "A",
+   "n_residues": 20
+  }
+ ],
+ "antibodies": [
+  {
+   "antibody": "antibody.pdb",
+   "chains": {
+    "B": "unknown",
+    "C": "unknown"
+   },
+   "binding_mode": null,
+   "n_residues_scored": 20,
+   "interfaces": [
+    {
+     "antibody_chain": "B",
+     "antibody_chain_type": "unknown",
+     "antigen_chain": "A",
+     "n_residues": 20,
+     "residue_confidence": {
+      "117": 0.45,
+      "118": 0.58,
+      "119": 0.46,
+      "141": 0.3,
+      "142": 0.9,
+      "143": 0.52,
+      "144": 0.66,
+      "145": 0.78,
+      "146": 0.92,
+      "147": 0.84,
+      "148": 0.63,
+      "163": 0.55,
+      "164": 0.42,
+      "165": 0.74,
+      "166": 0.66,
+      "167": 0.76,
+      "168": 0.9,
+      "169": 0.96,
+      "170": 0.72,
+      "171": 0.62
+     },
+     "residue_side": {
+      "117": "light",
+      "118": "light",
+      "119": "light",
+      "141": "light",
+      "142": "heavy",
+      "143": "heavy",
+      "144": "heavy",
+      "145": "both",
+      "146": "both",
+      "147": "heavy",
+      "148": "both",
+      "163": "light",
+      "164": "both",
+      "165": "both",
+      "166": "both",
+      "167": "both",
+      "168": "heavy",
+      "169": "heavy",
+      "170": "heavy",
+      "171": "light"
+     },
+     "max_confidence": 0.96,
+     "mean_confidence": 0.6685
+    },
+    {
+     "antibody_chain": "C",
+     "antibody_chain_type": "unknown",
+     "antigen_chain": "A",
+     "n_residues": 20,
+     "residue_confidence": {
+      "117": 0.45,
+      "118": 0.58,
+      "119": 0.46,
+      "141": 0.3,
+      "142": 0.9,
+      "143": 0.52,
+      "144": 0.66,
+      "145": 0.78,
+      "146": 0.92,
+      "147": 0.84,
+      "148": 0.63,
+      "163": 0.55,
+      "164": 0.42,
+      "165": 0.74,
+      "166": 0.66,
+      "167": 0.76,
+      "168": 0.9,
+      "169": 0.96,
+      "170": 0.72,
+      "171": 0.62
+     },
+     "residue_side": {
+      "117": "light",
+      "118": "light",
+      "119": "light",
+      "141": "light",
+      "142": "heavy",
+      "143": "heavy",
+      "144": "heavy",
+      "145": "both",
+      "146": "both",
+      "147": "heavy",
+      "148": "both",
+      "163": "light",
+      "164": "both",
+      "165": "both",
+      "166": "both",
+      "167": "both",
+      "168": "heavy",
+      "169": "heavy",
+      "170": "heavy",
+      "171": "light"
+     },
+     "max_confidence": 0.96,
+     "mean_confidence": 0.6685
+    }
+   ]
+  }
+ ],
+ "paratope": {
+  "dominant_cdrs": [
+   "H3:H3",
+   "H2:H2",
+   "L3:L3"
+  ],
+  "paratope_residues": [
+   "B:52",
+   "B:55",
+   "B:57",
+   "B:100",
+   "B:101",
+   "B:102",
+   "B:103",
+   "B:106",
+   "B:107",
+   "C:27",
+   "C:28",
+   "C:31",
+   "C:52",
+   "C:92",
+   "C:93",
+   "C:94"
+  ],
+  "heavy_light_split": "Heavy chain dominates W142/F147/Y168/F169 and K146; light covers A:117-A:119 and the A:163-A:171 polar edge. The chains overlap at A:145/A:146/A:148/A:165-A:167.",
+  "binding_mode_union": "single-chain"
+ },
+ "residues": [
+  "A:117",
+  "A:118",
+  "A:119",
+  "A:141",
+  "A:142",
+  "A:143",
+  "A:144",
+  "A:145",
+  "A:146",
+  "A:147",
+  "A:148",
+  "A:163",
+  "A:164",
+  "A:165",
+  "A:166",
+  "A:167",
+  "A:168",
+  "A:169",
+  "A:170",
+  "A:171"
+ ],
+ "n_residues": 20,
+ "patches": [
+  {
+   "id": "P2",
+   "name": "D2 site-II aromatic hotspot",
+   "n_residues": 21,
+   "residues": [
+    "A:117",
+    "A:118",
+    "A:119",
+    "A:141",
+    "A:142",
+    "A:143",
+    "A:144",
+    "A:145",
+    "A:146",
+    "A:147",
+    "A:148",
+    "A:149",
+    "A:163",
+    "A:164",
+    "A:165",
+    "A:166",
+    "A:167",
+    "A:168",
+    "A:169",
+    "A:170",
+    "A:171"
+   ],
+   "n_kept_by_advocate": 20,
+   "n_dropped_by_advocate": 1
+  }
+ ],
+ "pooling_provenance": {
+  "n_shared_at_pooling": 21,
+  "n_disputed_at_pooling": 0,
+  "note": "counts only, describing how the organizer grouped the phase-1 patches. The organizer's own candidate residue list is deliberately absent: the answer is the advocate's footprint, in `residues` and in `antibodies[].interfaces[]`."
+ },
+ "evidence": {
+  "advocate": {
+   "n_findings": 4,
+   "n_supports": 3,
+   "n_weakens": 1,
+   "weakest_point": "The Fab's established target is lysozyme. Also, A:147 and A:164 have low isolated accessibility, so the case depends on exposed aromatic edges and backbone contacts.",
+   "note": "the advocate reports claim/source/date/bearing and is not asked whether a source is about this binder"
+  },
+  "judge": {
+   "tier_a_support": 0,
+   "n_support_lines": 4,
+   "verdict": "leading",
+   "note": "Tier A -- a source about this binder itself -- is the judge's adjudication, in assessment[].support[]. It exists nowhere in the advocate's own answer."
+  }
+ },
+ "provenance": {
+  "unverified_source_policy_fields": [
+   "gated",
+   "web_search",
+   "shell_network",
+   "gate_tools"
+  ],
+  "assembled_case_dir": "gpt-5.6-high/gather_refine/post_refactor/unreleased_20261029/nocut/casp17/H2349/case_e333d6_G_rep1",
+  "organize_case_dir": "gpt-5.6-high/gather_refine/post_refactor/unreleased_20261029/nocut/casp17/H2349/case_e333d6_GR_rep1",
+  "organize_status": "ok",
+  "judge_case_dir": "gpt-5.6-high/gather_refine/post_refactor/unreleased_20261029/nocut/casp17/H2349/case_e333d6_GJ_rep1",
+  "judge_status": "ok",
+  "packet": "gpt-5.6-high/nocut/gather/packets/case_e333d6/packet",
+  "manifest": "gpt-5.6-high/nocut/gather/packets/case_e333d6/manifest.json",
+  "advocate_case_dir": "gpt-5.6-high/gather_refine/post_refactor/unreleased_20261029/nocut/casp17/H2349/case_e333d6_GR_rep1",
+  "advocate_status": "ok"
+ }
+}

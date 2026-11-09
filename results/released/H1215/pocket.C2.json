@@ -1,0 +1,323 @@
+{
+ "task": "gather",
+ "gather_mode": "batched",
+ "num_launchers": 3,
+ "policy": {
+  "evidence_cutoff": "2024-05-21",
+  "no_cutoff": false,
+  "gated": true,
+  "web_search": false,
+  "shell_network": true,
+  "gate_tools": [
+   "research",
+   "fetch",
+   "rcsb",
+   "patent",
+   "paper"
+  ]
+ },
+ "unscored": false,
+ "target": "H1215",
+ "target_set": "casp16",
+ "case": "case_f91454",
+ "evidence_cutoff": "2024-05-21",
+ "target_release_date": "2024-05-21",
+ "retrieval_policy": "gated",
+ "input_structure": "structures/H1215.pdb",
+ "input_structure_sha256": null,
+ "briefing_source": null,
+ "briefing_sha256": null,
+ "antigen_chains": [
+  "B"
+ ],
+ "antibody_files": {
+  "antibody.pdb": [
+   "A"
+  ]
+ },
+ "antibody_chain_types": {
+  "antibody.pdb": {
+   "A": "heavy"
+  }
+ },
+ "truth_file": "data/truth/casp16/H1215.epitope.json",
+ "stage": "gatherer",
+ "pocket": {
+  "id": "C2",
+  "judge_rank": 8,
+  "name": "A broad upper-lateral loop field centered on the 192-201 surface...",
+  "confidence": 0.08,
+  "p_rests_on_holds": 0.24,
+  "why_this_rank": "C2 is the most uniformly exposed footprint and remains plausible, but it has no exposed aromatic anchor, its evidence is mainly repeated computational selection, and mCherry precedent does not localize this mNeonGreen VHH.",
+  "rests_on": "The hydrophobic 194-201 shelf supplies sufficient specificity without a distinctive aromatic or experimental anchor.",
+  "where_the_mass_goes_if_it_fails": "C5 and C8",
+  "what_it_is": "A broad upper-lateral loop field centered on the 192-201 surface shelf and continuous with the 156-161 and 81-92 edges of the fluorescent-protein barrel.",
+  "why_one_candidate": "geometry pooled 3 patches (P10, P2, P8): P10+P8 at 2.24 A, union radius 13.52 A; P10+P2+P8 at 3.62 A, union radius 15.94 A. Every union fits inside this antibody's paratope reach of 16.5 A. No session judged these to be the same surface.",
+  "from_patches": [
+   "P10",
+   "P2",
+   "P8"
+  ]
+ },
+ "note": "`confidence` on the pocket is over pockets and sums to about 1 across them. Inside an interface it is per residue in [0, 1] and sums to nothing. No residue is cut at a threshold: the whole vector is the answer.",
+ "mapping_basis": "side",
+ "checks": {
+  "unrecognised_sides": []
+ },
+ "chain_pairs": [
+  {
+   "antibody_chain": "A",
+   "antigen_chain": "B",
+   "n_residues": 20
+  }
+ ],
+ "antibodies": [
+  {
+   "antibody": "antibody.pdb",
+   "chains": {
+    "A": "heavy"
+   },
+   "binding_mode": null,
+   "n_residues_scored": 20,
+   "interfaces": [
+    {
+     "antibody_chain": "A",
+     "antibody_chain_type": "heavy",
+     "antigen_chain": "B",
+     "n_residues": 20,
+     "residue_confidence": {
+      "81": 0.38,
+      "88": 0.2,
+      "92": 0.42,
+      "156": 0.35,
+      "158": 0.6,
+      "159": 0.55,
+      "160": 0.72,
+      "161": 0.65,
+      "188": 0.35,
+      "190": 0.45,
+      "191": 0.58,
+      "192": 0.78,
+      "194": 0.82,
+      "195": 0.86,
+      "196": 0.9,
+      "198": 0.72,
+      "199": 0.9,
+      "200": 0.78,
+      "201": 0.62,
+      "202": 0.4
+     },
+     "residue_side": {
+      "81": "heavy",
+      "88": "heavy",
+      "92": "heavy",
+      "156": "heavy",
+      "158": "heavy",
+      "159": "heavy",
+      "160": "heavy",
+      "161": "heavy",
+      "188": "heavy",
+      "190": "heavy",
+      "191": "heavy",
+      "192": "heavy",
+      "194": "heavy",
+      "195": "heavy",
+      "196": "heavy",
+      "198": "heavy",
+      "199": "heavy",
+      "200": "heavy",
+      "201": "heavy",
+      "202": "heavy"
+     },
+     "max_confidence": 0.9,
+     "mean_confidence": 0.6015,
+     "precision_vs_truth": 0.0,
+     "n_in_truth": 0
+    }
+   ]
+  }
+ ],
+ "paratope": {
+  "dominant_cdrs": [
+   "H3:H2",
+   "H3:H1"
+  ],
+  "paratope_residues": [
+   "A:29",
+   "A:30",
+   "A:32",
+   "A:33",
+   "A:55",
+   "A:56",
+   "A:58",
+   "A:59",
+   "A:60",
+   "A:102",
+   "A:104",
+   "A:107",
+   "A:108",
+   "A:110",
+   "A:111",
+   "A:112",
+   "A:113",
+   "A:116",
+   "A:117",
+   "A:119",
+   "A:120"
+  ],
+  "heavy_light_split": "VHH-only: H3 covers 192-201; H2/H1 reach the 156-161 and 81-92 flanks.",
+  "binding_mode_union": "single-chain"
+ },
+ "residues": [
+  "B:156",
+  "B:158",
+  "B:159",
+  "B:160",
+  "B:161",
+  "B:188",
+  "B:190",
+  "B:191",
+  "B:192",
+  "B:194",
+  "B:195",
+  "B:196",
+  "B:198",
+  "B:199",
+  "B:200",
+  "B:201",
+  "B:202",
+  "B:81",
+  "B:88",
+  "B:92"
+ ],
+ "n_residues": 20,
+ "patches": [
+  {
+   "id": "P10",
+   "name": "Opposite lateral barrel face centered on 194-199",
+   "n_residues": 17,
+   "residues": [
+    "B:160",
+    "B:161",
+    "B:191",
+    "B:192",
+    "B:194",
+    "B:195",
+    "B:196",
+    "B:198",
+    "B:199",
+    "B:200",
+    "B:201",
+    "B:81",
+    "B:82",
+    "B:83",
+    "B:88",
+    "B:91",
+    "B:92"
+   ],
+   "n_kept_by_advocate": 14,
+   "n_dropped_by_advocate": 3
+  },
+  {
+   "id": "P2",
+   "name": "hydrophobic-polar side shelf around 154-202",
+   "n_residues": 15,
+   "residues": [
+    "B:154",
+    "B:156",
+    "B:158",
+    "B:166",
+    "B:194",
+    "B:195",
+    "B:196",
+    "B:198",
+    "B:199",
+    "B:200",
+    "B:201",
+    "B:202",
+    "B:228",
+    "B:80",
+    "B:81"
+   ],
+   "n_kept_by_advocate": 11,
+   "n_dropped_by_advocate": 4
+  },
+  {
+   "id": "P8",
+   "name": "Upper lateral 158-201 loop field",
+   "n_residues": 23,
+   "residues": [
+    "B:156",
+    "B:158",
+    "B:159",
+    "B:160",
+    "B:161",
+    "B:162",
+    "B:164",
+    "B:188",
+    "B:190",
+    "B:191",
+    "B:192",
+    "B:194",
+    "B:195",
+    "B:196",
+    "B:197",
+    "B:198",
+    "B:199",
+    "B:200",
+    "B:201",
+    "B:202",
+    "B:88",
+    "B:92",
+    "B:94"
+   ],
+   "n_kept_by_advocate": 19,
+   "n_dropped_by_advocate": 4
+  }
+ ],
+ "pooling_provenance": {
+  "n_shared_at_pooling": 7,
+  "n_disputed_at_pooling": 24,
+  "note": "counts only, describing how the organizer grouped the phase-1 patches. The organizer's own candidate residue list is deliberately absent: the answer is the advocate's footprint, in `residues` and in `antibodies[].interfaces[]`."
+ },
+ "evidence": {
+  "advocate": {
+   "n_findings": 4,
+   "n_supports": 4,
+   "n_weakens": 0,
+   "weakest_point": "The face is convex and lacks a distinctive exposed aromatic hot spot; the pooled neighborhood also required narrowing around 194-201.",
+   "note": "the advocate reports claim/source/date/bearing and is not asked whether a source is about this binder"
+  },
+  "judge": {
+   "tier_a_support": 0,
+   "n_support_lines": 3,
+   "verdict": "live",
+   "note": "Tier A -- a source about this binder itself -- is the judge's adjudication, in assessment[].support[]. It exists nowhere in the advocate's own answer."
+  }
+ },
+ "provenance": {
+  "unverified_source_policy_fields": [
+   "gated",
+   "web_search",
+   "shell_network",
+   "gate_tools"
+  ],
+  "assembled_case_dir": "gpt-5.6-high/gather_refine/post_refactor/released_structure_20261030/casp16/H1215/case_f91454_G_rep2",
+  "organize_case_dir": "gpt-5.6-high/gather_refine/post_refactor/released_structure_20261030/casp16/H1215/case_f91454_GR_rep1",
+  "organize_status": "ok",
+  "judge_case_dir": "gpt-5.6-high/gather_refine/post_refactor/released_structure_20261030/casp16/H1215/case_f91454_GJ_rep2",
+  "judge_status": "ok",
+  "packet": "gpt-5.6-high/gather/packets/case_f91454/packet",
+  "manifest": "gpt-5.6-high/gather/packets/case_f91454/manifest.json",
+  "advocate_case_dir": "gpt-5.6-high/gather_refine/post_refactor/released_structure_20261030/casp16/H1215/case_f91454_GR_rep1",
+  "advocate_status": "ok"
+ },
+ "score": {
+  "precision": 0.0,
+  "recall": 0.0,
+  "f1": 0.0,
+  "n_pred": 20,
+  "n_true": 22,
+  "n_hit": 0
+ }
+}

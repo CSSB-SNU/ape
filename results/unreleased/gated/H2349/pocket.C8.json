@@ -1,0 +1,332 @@
+{
+ "task": "gather",
+ "gather_mode": "batched",
+ "num_launchers": 3,
+ "policy": {
+  "evidence_cutoff": "2026-06-05",
+  "no_cutoff": false,
+  "gated": true,
+  "web_search": false,
+  "shell_network": true,
+  "gate_tools": [
+   "research",
+   "fetch",
+   "rcsb",
+   "patent",
+   "paper"
+  ]
+ },
+ "unscored": true,
+ "target": "H2349",
+ "target_set": "casp17",
+ "case": "case_e333d6",
+ "evidence_cutoff": "2026-06-05",
+ "target_release_date": "2026-06-05",
+ "retrieval_policy": "gated",
+ "input_structure": "data/staged_casp17_no_native/H2349.pdb",
+ "input_structure_sha256": "ed3bcb0b0799f7f8db3a7695ea1da3ddce30d9c2312cdd2e5d844f6e396bdd86",
+ "briefing_source": "data/briefing/casp17/H2349/search_results.json",
+ "briefing_sha256": "6aab33c7c98904b5652d2b15ee1575cd366219e364eafe5cb61256cd5814ad57",
+ "antigen_chains": [
+  "A"
+ ],
+ "antibody_files": {
+  "antibody.pdb": [
+   "B",
+   "C"
+  ]
+ },
+ "antibody_chain_types": {
+  "antibody.pdb": {
+   "B": "unknown",
+   "C": "unknown"
+  }
+ },
+ "stage": "gatherer",
+ "pocket": {
+  "id": "C8",
+  "judge_rank": 4,
+  "name": "A distinct lateral basic face of gp130 D3 centered on K219, K228...",
+  "confidence": 0.08,
+  "p_rests_on_holds": 0.15,
+  "why_this_rank": "It is a viable, charge-complementary D3 face with antibody precedent, but that precedent is mainly the different antibody B-P8 and is domain-level.",
+  "rests_on": "The supplied acidic/aromatic paratope selects lateral basic D3 despite more distal B-S12 placement.",
+  "where_the_mass_goes_if_it_fails": "C4, then C1/C3.",
+  "what_it_is": "A distinct lateral basic face of gp130 D3 centered on K219, K228, R259, and R278 below the D2 ligand hotspot.",
+  "why_one_candidate": "not pooled with anything: no other patch is both within 12 A (half centroid distance, half contact-graph hops) and coverable by one paratope of this antibody's reach, 17.9 A",
+  "from_patches": [
+   "P8"
+  ]
+ },
+ "note": "`confidence` on the pocket is over pockets and sums to about 1 across them. Inside an interface it is per residue in [0, 1] and sums to nothing. No residue is cut at a threshold: the whole vector is the answer.",
+ "mapping_basis": "side",
+ "checks": {
+  "unrecognised_sides": []
+ },
+ "chain_pairs": [
+  {
+   "antibody_chain": "B",
+   "antigen_chain": "A",
+   "n_residues": 22
+  },
+  {
+   "antibody_chain": "C",
+   "antigen_chain": "A",
+   "n_residues": 22
+  }
+ ],
+ "antibodies": [
+  {
+   "antibody": "antibody.pdb",
+   "chains": {
+    "B": "unknown",
+    "C": "unknown"
+   },
+   "binding_mode": null,
+   "n_residues_scored": 22,
+   "interfaces": [
+    {
+     "antibody_chain": "B",
+     "antibody_chain_type": "unknown",
+     "antigen_chain": "A",
+     "n_residues": 22,
+     "residue_confidence": {
+      "202": 0.48,
+      "204": 0.61,
+      "205": 0.31,
+      "207": 0.54,
+      "209": 0.73,
+      "219": 0.87,
+      "221": 0.55,
+      "223": 0.58,
+      "226": 0.7,
+      "228": 0.92,
+      "229": 0.82,
+      "232": 0.72,
+      "253": 0.52,
+      "254": 0.6,
+      "256": 0.61,
+      "257": 0.64,
+      "258": 0.72,
+      "259": 0.94,
+      "260": 0.84,
+      "261": 0.66,
+      "263": 0.54,
+      "278": 0.68
+     },
+     "residue_side": {
+      "202": "light",
+      "204": "light",
+      "205": "light",
+      "207": "light",
+      "209": "heavy",
+      "219": "heavy",
+      "221": "light",
+      "223": "light",
+      "226": "both",
+      "228": "both",
+      "229": "both",
+      "232": "heavy",
+      "253": "light",
+      "254": "light",
+      "256": "light",
+      "257": "both",
+      "258": "both",
+      "259": "heavy",
+      "260": "both",
+      "261": "both",
+      "263": "light",
+      "278": "heavy"
+     },
+     "max_confidence": 0.94,
+     "mean_confidence": 0.6627
+    },
+    {
+     "antibody_chain": "C",
+     "antibody_chain_type": "unknown",
+     "antigen_chain": "A",
+     "n_residues": 22,
+     "residue_confidence": {
+      "202": 0.48,
+      "204": 0.61,
+      "205": 0.31,
+      "207": 0.54,
+      "209": 0.73,
+      "219": 0.87,
+      "221": 0.55,
+      "223": 0.58,
+      "226": 0.7,
+      "228": 0.92,
+      "229": 0.82,
+      "232": 0.72,
+      "253": 0.52,
+      "254": 0.6,
+      "256": 0.61,
+      "257": 0.64,
+      "258": 0.72,
+      "259": 0.94,
+      "260": 0.84,
+      "261": 0.66,
+      "263": 0.54,
+      "278": 0.68
+     },
+     "residue_side": {
+      "202": "light",
+      "204": "light",
+      "205": "light",
+      "207": "light",
+      "209": "heavy",
+      "219": "heavy",
+      "221": "light",
+      "223": "light",
+      "226": "both",
+      "228": "both",
+      "229": "both",
+      "232": "heavy",
+      "253": "light",
+      "254": "light",
+      "256": "light",
+      "257": "both",
+      "258": "both",
+      "259": "heavy",
+      "260": "both",
+      "261": "both",
+      "263": "light",
+      "278": "heavy"
+     },
+     "max_confidence": 0.94,
+     "mean_confidence": 0.6627
+    }
+   ]
+  }
+ ],
+ "paratope": {
+  "dominant_cdrs": [
+   "H3:H2",
+   "L3:L1"
+  ],
+  "paratope_residues": [
+   "B:26",
+   "B:28",
+   "B:31",
+   "B:32",
+   "B:33",
+   "B:52",
+   "B:54",
+   "B:55",
+   "B:56",
+   "B:57",
+   "B:58",
+   "B:100",
+   "B:101",
+   "B:102",
+   "B:103",
+   "B:106",
+   "B:107",
+   "C:27",
+   "C:28",
+   "C:30",
+   "C:31",
+   "C:52",
+   "C:92",
+   "C:93",
+   "C:94"
+  ],
+  "heavy_light_split": "Heavy dominates I209/K219/K228/I232/R259/R278; both chains meet over S226/K228/S229 and S257-T258-R259-S260-S261; light covers the glycan-adjacent and E253/D254 rims.",
+  "binding_mode_union": "single-chain"
+ },
+ "residues": [
+  "A:202",
+  "A:204",
+  "A:205",
+  "A:207",
+  "A:209",
+  "A:219",
+  "A:221",
+  "A:223",
+  "A:226",
+  "A:228",
+  "A:229",
+  "A:232",
+  "A:253",
+  "A:254",
+  "A:256",
+  "A:257",
+  "A:258",
+  "A:259",
+  "A:260",
+  "A:261",
+  "A:263",
+  "A:278"
+ ],
+ "n_residues": 22,
+ "patches": [
+  {
+   "id": "P8",
+   "name": "D3 lateral basic face",
+   "n_residues": 21,
+   "residues": [
+    "A:202",
+    "A:204",
+    "A:205",
+    "A:207",
+    "A:209",
+    "A:219",
+    "A:221",
+    "A:223",
+    "A:226",
+    "A:228",
+    "A:229",
+    "A:232",
+    "A:254",
+    "A:256",
+    "A:257",
+    "A:258",
+    "A:259",
+    "A:260",
+    "A:261",
+    "A:263",
+    "A:278"
+   ],
+   "n_kept_by_advocate": 21,
+   "n_dropped_by_advocate": 0
+  }
+ ],
+ "pooling_provenance": {
+  "n_shared_at_pooling": 21,
+  "n_disputed_at_pooling": 0,
+  "note": "counts only, describing how the organizer grouped the phase-1 patches. The organizer's own candidate residue list is deliberately absent: the answer is the advocate's footprint, in `residues` and in `antibodies[].interfaces[]`."
+ },
+ "evidence": {
+  "advocate": {
+   "n_findings": 5,
+   "n_supports": 4,
+   "n_weakens": 0,
+   "weakest_point": "The D3 claim is domain-level and partly based on a different antibody, B-P8; the A:205 glycan clips one rim, while the WSXWS evidence can favor D2.",
+   "note": "the advocate reports claim/source/date/bearing and is not asked whether a source is about this binder"
+  },
+  "judge": {
+   "tier_a_support": 0,
+   "n_support_lines": 5,
+   "verdict": "live",
+   "note": "Tier A -- a source about this binder itself -- is the judge's adjudication, in assessment[].support[]. It exists nowhere in the advocate's own answer."
+  }
+ },
+ "provenance": {
+  "unverified_source_policy_fields": [
+   "gated",
+   "web_search",
+   "shell_network",
+   "gate_tools"
+  ],
+  "assembled_case_dir": "gpt-5.6-high/gather_refine/post_refactor/unreleased_20261029/gated/casp17/H2349/case_e333d6_G_rep1",
+  "organize_case_dir": "gpt-5.6-high/gather_refine/post_refactor/unreleased_20261029/gated/casp17/H2349/case_e333d6_GR_rep1",
+  "organize_status": "ok",
+  "judge_case_dir": "gpt-5.6-high/gather_refine/post_refactor/unreleased_20261029/gated/casp17/H2349/case_e333d6_GJ_rep1",
+  "judge_status": "ok",
+  "packet": "gpt-5.6-high/gather/packets/case_e333d6/packet",
+  "manifest": "gpt-5.6-high/gather/packets/case_e333d6/manifest.json",
+  "advocate_case_dir": "gpt-5.6-high/gather_refine/post_refactor/unreleased_20261029/gated/casp17/H2349/case_e333d6_GR_rep1",
+  "advocate_status": "ok"
+ }
+}

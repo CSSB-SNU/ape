@@ -1,0 +1,383 @@
+{
+ "task": "gather",
+ "gather_mode": "batched",
+ "num_launchers": 3,
+ "policy": {
+  "evidence_cutoff": "2024-06-23",
+  "no_cutoff": false,
+  "gated": true,
+  "web_search": false,
+  "shell_network": true,
+  "gate_tools": [
+   "research",
+   "fetch",
+   "rcsb",
+   "patent",
+   "paper"
+  ]
+ },
+ "unscored": false,
+ "target": "H1244",
+ "target_set": "casp16",
+ "case": "case_4a7bba",
+ "evidence_cutoff": "2024-06-23",
+ "target_release_date": "2024-06-23",
+ "retrieval_policy": "gated",
+ "input_structure": "structures/H1244.pdb",
+ "input_structure_sha256": null,
+ "briefing_source": null,
+ "briefing_sha256": null,
+ "antigen_chains": [
+  "A",
+  "B",
+  "C",
+  "D"
+ ],
+ "antibody_files": {
+  "antibody.1.pdb": [
+   "E"
+  ],
+  "antibody.2.pdb": [
+   "F"
+  ]
+ },
+ "antibody_chain_types": {
+  "antibody.1.pdb": {
+   "E": "heavy"
+  },
+  "antibody.2.pdb": {
+   "F": "heavy"
+  }
+ },
+ "truth_file": "data/truth/casp16/H1244.epitope.json",
+ "stage": "gatherer",
+ "pocket": {
+  "id": "C5",
+  "judge_rank": 8,
+  "name": "A distal two-chain charged groove on the antiparallel coiled-coil...",
+  "confidence": 0.045,
+  "p_rests_on_holds": 0.12,
+  "why_this_rank": "Only generic coiled-coil precedent supports its weak, acid-rich chemistry.",
+  "rests_on": "Designed-coiled-coil precedent transfers to this different BILBO1 seam.",
+  "where_the_mass_goes_if_it_fails": "C6",
+  "what_it_is": "A distal two-chain charged groove on the antiparallel coiled-coil shaft, made by A/C or B/D around 139–147 and 12–20.",
+  "why_one_candidate": "not pooled with anything: no other patch is both within 12 A (half centroid distance, half contact-graph hops) and coverable by one paratope of this antibody's reach, 14.4 A",
+  "from_patches": [
+   "P5"
+  ]
+ },
+ "note": "`confidence` on the pocket is over pockets and sums to about 1 across them. Inside an interface it is per residue in [0, 1] and sums to nothing. No residue is cut at a threshold: the whole vector is the answer.",
+ "mapping_basis": "per_antibody",
+ "checks": {
+  "unrecognised_sides": []
+ },
+ "chain_pairs": [
+  {
+   "antibody_chain": "E",
+   "antigen_chain": "A",
+   "n_residues": 7
+  },
+  {
+   "antibody_chain": "E",
+   "antigen_chain": "C",
+   "n_residues": 7
+  },
+  {
+   "antibody_chain": "F",
+   "antigen_chain": "B",
+   "n_residues": 7
+  },
+  {
+   "antibody_chain": "F",
+   "antigen_chain": "D",
+   "n_residues": 7
+  }
+ ],
+ "antibodies": [
+  {
+   "antibody": "antibody.1.pdb",
+   "chains": {
+    "E": "heavy"
+   },
+   "binding_mode": "straddling",
+   "n_residues_scored": 14,
+   "interfaces": [
+    {
+     "antibody_chain": "E",
+     "antibody_chain_type": "heavy",
+     "antigen_chain": "A",
+     "n_residues": 7,
+     "residue_confidence": {
+      "139": 0.64,
+      "140": 0.53,
+      "142": 0.38,
+      "143": 0.51,
+      "144": 0.7,
+      "146": 0.88,
+      "147": 0.66
+     },
+     "residue_side": {
+      "139": "heavy",
+      "140": "heavy",
+      "142": "heavy",
+      "143": "heavy",
+      "144": "heavy",
+      "146": "heavy",
+      "147": "heavy"
+     },
+     "max_confidence": 0.88,
+     "mean_confidence": 0.6143,
+     "precision_vs_truth": 0.0,
+     "n_in_truth": 0
+    },
+    {
+     "antibody_chain": "E",
+     "antibody_chain_type": "heavy",
+     "antigen_chain": "C",
+     "n_residues": 7,
+     "residue_confidence": {
+      "12": 0.6,
+      "13": 0.48,
+      "15": 0.49,
+      "16": 0.85,
+      "17": 0.45,
+      "19": 0.72,
+      "20": 0.68
+     },
+     "residue_side": {
+      "12": "heavy",
+      "13": "heavy",
+      "15": "heavy",
+      "16": "heavy",
+      "17": "heavy",
+      "19": "heavy",
+      "20": "heavy"
+     },
+     "max_confidence": 0.85,
+     "mean_confidence": 0.61,
+     "precision_vs_truth": 0.0,
+     "n_in_truth": 0
+    }
+   ]
+  },
+  {
+   "antibody": "antibody.2.pdb",
+   "chains": {
+    "F": "heavy"
+   },
+   "binding_mode": "straddling",
+   "n_residues_scored": 14,
+   "interfaces": [
+    {
+     "antibody_chain": "F",
+     "antibody_chain_type": "heavy",
+     "antigen_chain": "B",
+     "n_residues": 7,
+     "residue_confidence": {
+      "139": 0.64,
+      "140": 0.53,
+      "142": 0.38,
+      "143": 0.51,
+      "144": 0.7,
+      "146": 0.88,
+      "147": 0.66
+     },
+     "residue_side": {
+      "139": "heavy",
+      "140": "heavy",
+      "142": "heavy",
+      "143": "heavy",
+      "144": "heavy",
+      "146": "heavy",
+      "147": "heavy"
+     },
+     "max_confidence": 0.88,
+     "mean_confidence": 0.6143,
+     "precision_vs_truth": 0.0,
+     "n_in_truth": 0
+    },
+    {
+     "antibody_chain": "F",
+     "antibody_chain_type": "heavy",
+     "antigen_chain": "D",
+     "n_residues": 7,
+     "residue_confidence": {
+      "12": 0.6,
+      "13": 0.48,
+      "15": 0.49,
+      "16": 0.85,
+      "17": 0.45,
+      "19": 0.72,
+      "20": 0.68
+     },
+     "residue_side": {
+      "12": "heavy",
+      "13": "heavy",
+      "15": "heavy",
+      "16": "heavy",
+      "17": "heavy",
+      "19": "heavy",
+      "20": "heavy"
+     },
+     "max_confidence": 0.85,
+     "mean_confidence": 0.61,
+     "precision_vs_truth": 0.0,
+     "n_in_truth": 0
+    }
+   ]
+  }
+ ],
+ "paratope": {
+  "dominant_cdrs": [
+   "H3:H1",
+   "H3:H2"
+  ],
+  "paratope_residues": [
+   "E:27",
+   "E:53",
+   "E:102",
+   "E:103",
+   "E:105",
+   "E:108",
+   "E:111",
+   "E:112",
+   "F:27",
+   "F:53",
+   "F:102",
+   "F:103",
+   "F:105",
+   "F:108",
+   "F:111",
+   "F:112"
+  ],
+  "heavy_light_split": "Heavy-only VHH: H3 center and H1/H2 rims; no light chain.",
+  "binding_mode_union": null
+ },
+ "residues": [
+  "A:139",
+  "A:140",
+  "A:142",
+  "A:143",
+  "A:144",
+  "A:146",
+  "A:147",
+  "B:139",
+  "B:140",
+  "B:142",
+  "B:143",
+  "B:144",
+  "B:146",
+  "B:147",
+  "C:12",
+  "C:13",
+  "C:15",
+  "C:16",
+  "C:17",
+  "C:19",
+  "C:20",
+  "D:12",
+  "D:13",
+  "D:15",
+  "D:16",
+  "D:17",
+  "D:19",
+  "D:20"
+ ],
+ "n_residues": 28,
+ "patches": [
+  {
+   "id": "P5",
+   "name": "Distal coiled-coil charged groove",
+   "n_residues": 40,
+   "residues": [
+    "A:139",
+    "A:140",
+    "A:142",
+    "A:143",
+    "A:144",
+    "A:145",
+    "A:146",
+    "A:147",
+    "A:149",
+    "A:150",
+    "A:151",
+    "B:139",
+    "B:140",
+    "B:142",
+    "B:143",
+    "B:144",
+    "B:145",
+    "B:146",
+    "B:147",
+    "B:149",
+    "B:150",
+    "B:151",
+    "C:12",
+    "C:13",
+    "C:15",
+    "C:16",
+    "C:17",
+    "C:19",
+    "C:20",
+    "C:23",
+    "C:24",
+    "D:12",
+    "D:13",
+    "D:15",
+    "D:16",
+    "D:17",
+    "D:19",
+    "D:20",
+    "D:23",
+    "D:24"
+   ],
+   "n_kept_by_advocate": 28,
+   "n_dropped_by_advocate": 12
+  }
+ ],
+ "pooling_provenance": {
+  "n_shared_at_pooling": 40,
+  "n_disputed_at_pooling": 0,
+  "note": "counts only, describing how the organizer grouped the phase-1 patches. The organizer's own candidate residue list is deliberately absent: the answer is the advocate's footprint, in `residues` and in `antibodies[].interfaces[]`."
+ },
+ "evidence": {
+  "advocate": {
+   "n_findings": 2,
+   "n_supports": 2,
+   "n_weakens": 0,
+   "weakest_point": "This chemically repetitive shaft groove lacks a distinctive aromatic anchor, and Western-blot binding argues against an obligatory seam.",
+   "note": "the advocate reports claim/source/date/bearing and is not asked whether a source is about this binder"
+  },
+  "judge": {
+   "tier_a_support": 0,
+   "n_support_lines": 3,
+   "verdict": "unlikely",
+   "note": "Tier A -- a source about this binder itself -- is the judge's adjudication, in assessment[].support[]. It exists nowhere in the advocate's own answer."
+  }
+ },
+ "provenance": {
+  "unverified_source_policy_fields": [
+   "gated",
+   "web_search",
+   "shell_network",
+   "gate_tools"
+  ],
+  "assembled_case_dir": "gpt-5.6-high/gather_refine/post_refactor/released_structure_20261030/casp16/H1244/case_4a7bba_G_rep2",
+  "organize_case_dir": "gpt-5.6-high/gather_refine/post_refactor/released_structure_20261030/casp16/H1244/case_4a7bba_GR_rep1",
+  "organize_status": "ok",
+  "judge_case_dir": "gpt-5.6-high/gather_refine/post_refactor/released_structure_20261030/casp16/H1244/case_4a7bba_GJ_rep2",
+  "judge_status": "ok",
+  "packet": "gpt-5.6-high/gather/packets/case_4a7bba/packet",
+  "manifest": "gpt-5.6-high/gather/packets/case_4a7bba/manifest.json",
+  "advocate_case_dir": "gpt-5.6-high/gather_refine/post_refactor/released_structure_20261030/casp16/H1244/case_4a7bba_GR_rep1",
+  "advocate_status": "ok"
+ },
+ "score": {
+  "precision": 0.0,
+  "recall": 0.0,
+  "f1": 0.0,
+  "n_pred": 28,
+  "n_true": 38,
+  "n_hit": 0
+ }
+}

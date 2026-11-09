@@ -1,0 +1,285 @@
+{
+ "task": "gather",
+ "gather_mode": "batched",
+ "num_launchers": 3,
+ "policy": {
+  "evidence_cutoff": "2026-06-05",
+  "no_cutoff": false,
+  "gated": true,
+  "web_search": false,
+  "shell_network": true,
+  "gate_tools": [
+   "research",
+   "fetch",
+   "rcsb",
+   "patent",
+   "paper"
+  ]
+ },
+ "unscored": true,
+ "target": "H2348",
+ "target_set": "casp17",
+ "case": "case_4ade9a",
+ "evidence_cutoff": "2026-06-05",
+ "target_release_date": "2026-06-05",
+ "retrieval_policy": "gated",
+ "input_structure": "data/staged_casp17_no_native/H2348.pdb",
+ "input_structure_sha256": "ce3adf48ca6a518ad9b1c0b7ee6fd0899f7d12f01d7aa968c11b92ad459c41e7",
+ "briefing_source": "data/briefing/casp17/H2348/search_results.json",
+ "briefing_sha256": "4d17b3e4689d4bdb8848154699de80e2748b0d365b2fba62f69b2f96cbbee826",
+ "antigen_chains": [
+  "A"
+ ],
+ "antibody_files": {
+  "antibody.pdb": [
+   "B",
+   "C"
+  ]
+ },
+ "antibody_chain_types": {
+  "antibody.pdb": {
+   "B": "heavy",
+   "C": "light"
+  }
+ },
+ "stage": "gatherer",
+ "pocket": {
+  "id": "C2",
+  "judge_rank": 6,
+  "name": "A compact outward non-ligand face on membrane-proximal FNIII domain...",
+  "confidence": 0.09,
+  "p_rests_on_holds": 0.18,
+  "why_this_rank": "C2 is the cleanest compact, glycan-clear surface, but it is a non-ligand face supported only by D5-level function and unresolved FNIII antibody precedent.",
+  "rests_on": "The clone recognizes a structurally innocuous-looking D5 face and binding that face is biologically selectable.",
+  "where_the_mass_goes_if_it_fails": "C9 within D5, otherwise C6.",
+  "what_it_is": "A compact outward non-ligand face on membrane-proximal FNIII domain D5, centered on A:R425/A:E426/A:S427 and closed by the A:454–456 and A:479–486 loops.",
+  "why_one_candidate": "not pooled with anything: no other patch is both within 12 A (half centroid distance, half contact-graph hops) and coverable by one paratope of this antibody's reach, 17.5 A",
+  "from_patches": [
+   "P10"
+  ]
+ },
+ "note": "`confidence` on the pocket is over pockets and sums to about 1 across them. Inside an interface it is per residue in [0, 1] and sums to nothing. No residue is cut at a threshold: the whole vector is the answer.",
+ "mapping_basis": "side",
+ "checks": {
+  "unrecognised_sides": []
+ },
+ "chain_pairs": [
+  {
+   "antibody_chain": "B",
+   "antigen_chain": "A",
+   "n_residues": 9
+  },
+  {
+   "antibody_chain": "C",
+   "antigen_chain": "A",
+   "n_residues": 16
+  }
+ ],
+ "antibodies": [
+  {
+   "antibody": "antibody.pdb",
+   "chains": {
+    "B": "heavy",
+    "C": "light"
+   },
+   "binding_mode": null,
+   "n_residues_scored": 20,
+   "interfaces": [
+    {
+     "antibody_chain": "B",
+     "antibody_chain_type": "heavy",
+     "antigen_chain": "A",
+     "n_residues": 9,
+     "residue_confidence": {
+      "406": 0.7,
+      "407": 0.73,
+      "425": 0.96,
+      "426": 0.86,
+      "427": 0.91,
+      "429": 0.84,
+      "456": 0.72,
+      "480": 0.59,
+      "486": 0.53
+     },
+     "residue_side": {
+      "406": "heavy",
+      "407": "both",
+      "425": "both",
+      "426": "both",
+      "427": "both",
+      "429": "heavy",
+      "456": "heavy",
+      "480": "both",
+      "486": "heavy"
+     },
+     "max_confidence": 0.96,
+     "mean_confidence": 0.76
+    },
+    {
+     "antibody_chain": "C",
+     "antibody_chain_type": "light",
+     "antigen_chain": "A",
+     "n_residues": 16,
+     "residue_confidence": {
+      "402": 0.55,
+      "403": 0.61,
+      "404": 0.44,
+      "407": 0.73,
+      "422": 0.58,
+      "423": 0.58,
+      "425": 0.96,
+      "426": 0.86,
+      "427": 0.91,
+      "452": 0.5,
+      "454": 0.65,
+      "455": 0.41,
+      "479": 0.57,
+      "480": 0.59,
+      "484": 0.31,
+      "485": 0.41
+     },
+     "residue_side": {
+      "402": "light",
+      "403": "light",
+      "404": "light",
+      "407": "both",
+      "422": "light",
+      "423": "light",
+      "425": "both",
+      "426": "both",
+      "427": "both",
+      "452": "light",
+      "454": "light",
+      "455": "light",
+      "479": "light",
+      "480": "both",
+      "484": "light",
+      "485": "light"
+     },
+     "max_confidence": 0.96,
+     "mean_confidence": 0.6038
+    }
+   ]
+  }
+ ],
+ "paratope": {
+  "dominant_cdrs": [
+   "H3aa:H3",
+   "H2aa:H2",
+   "L1aa:L1",
+   "L3aa:L3"
+  ],
+  "paratope_residues": [
+   "B:31",
+   "B:33",
+   "B:54",
+   "B:56",
+   "B:57",
+   "B:58",
+   "B:99",
+   "B:101",
+   "B:102",
+   "B:105",
+   "C:27",
+   "C:28",
+   "C:30",
+   "C:31",
+   "C:32",
+   "C:52",
+   "C:92",
+   "C:93",
+   "C:94",
+   "C:95",
+   "C:96"
+  ],
+  "heavy_light_split": "Approximately 60:40 heavy:light; H3/H2 dominate R425/E426/S427/K429, while L1/L3 cover the T402–T423 and T454–E486 rim.",
+  "binding_mode_union": "single-chain"
+ },
+ "residues": [
+  "A:402",
+  "A:403",
+  "A:404",
+  "A:406",
+  "A:407",
+  "A:422",
+  "A:423",
+  "A:425",
+  "A:426",
+  "A:427",
+  "A:429",
+  "A:452",
+  "A:454",
+  "A:455",
+  "A:456",
+  "A:479",
+  "A:480",
+  "A:484",
+  "A:485",
+  "A:486"
+ ],
+ "n_residues": 20,
+ "patches": [
+  {
+   "id": "P10",
+   "name": "Membrane-proximal D5 non-ligand face around Arg425",
+   "n_residues": 16,
+   "residues": [
+    "A:402",
+    "A:403",
+    "A:404",
+    "A:406",
+    "A:407",
+    "A:422",
+    "A:423",
+    "A:425",
+    "A:426",
+    "A:427",
+    "A:429",
+    "A:454",
+    "A:455",
+    "A:456",
+    "A:479",
+    "A:484"
+   ],
+   "n_kept_by_advocate": 16,
+   "n_dropped_by_advocate": 0
+  }
+ ],
+ "pooling_provenance": {
+  "n_shared_at_pooling": 16,
+  "n_disputed_at_pooling": 0,
+  "note": "counts only, describing how the organizer grouped the phase-1 patches. The organizer's own candidate residue list is deliberately absent: the answer is the advocate's footprint, in `residues` and in `antibodies[].interfaces[]`."
+ },
+ "evidence": {
+  "advocate": {
+   "n_findings": 4,
+   "n_supports": 3,
+   "n_weakens": 0,
+   "weakest_point": "This is not a known ligand interface; an antibody could bind the exposed face yet have little functional effect.",
+   "note": "the advocate reports claim/source/date/bearing and is not asked whether a source is about this binder"
+  },
+  "judge": {
+   "tier_a_support": 1,
+   "n_support_lines": 4,
+   "verdict": "live",
+   "note": "Tier A -- a source about this binder itself -- is the judge's adjudication, in assessment[].support[]. It exists nowhere in the advocate's own answer."
+  }
+ },
+ "provenance": {
+  "unverified_source_policy_fields": [
+   "gated",
+   "web_search",
+   "shell_network",
+   "gate_tools"
+  ],
+  "assembled_case_dir": "gpt-5.6-high/gather_refine/post_refactor/unreleased_20261029/gated/casp17/H2348/case_4ade9a_G_rep1",
+  "organize_case_dir": "gpt-5.6-high/gather_refine/post_refactor/unreleased_20261029/gated/casp17/H2348/case_4ade9a_GR_rep1",
+  "organize_status": "ok",
+  "judge_case_dir": "gpt-5.6-high/gather_refine/post_refactor/unreleased_20261029/gated/casp17/H2348/case_4ade9a_GJ_rep1",
+  "judge_status": "ok",
+  "packet": "gpt-5.6-high/gather/packets/case_4ade9a/packet",
+  "manifest": "gpt-5.6-high/gather/packets/case_4ade9a/manifest.json",
+  "advocate_case_dir": "gpt-5.6-high/gather_refine/post_refactor/unreleased_20261029/gated/casp17/H2348/case_4ade9a_GR_rep1",
+  "advocate_status": "ok"
+ }
+}

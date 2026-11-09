@@ -1,0 +1,334 @@
+{
+ "task": "gather",
+ "gather_mode": "batched",
+ "num_launchers": 3,
+ "policy": {
+  "evidence_cutoff": "2024-06-13",
+  "no_cutoff": false,
+  "gated": true,
+  "web_search": false,
+  "shell_network": true,
+  "gate_tools": [
+   "research",
+   "fetch",
+   "rcsb",
+   "patent",
+   "paper"
+  ]
+ },
+ "unscored": false,
+ "target": "H1232",
+ "target_set": "casp16",
+ "case": "case_d99ff5",
+ "evidence_cutoff": "2024-06-13",
+ "target_release_date": "2024-06-13",
+ "retrieval_policy": "gated",
+ "input_structure": "structures/H1232.pdb",
+ "input_structure_sha256": null,
+ "briefing_source": null,
+ "briefing_sha256": null,
+ "antigen_chains": [
+  "A",
+  "B"
+ ],
+ "antibody_files": {
+  "antibody.1.pdb": [
+   "C"
+  ],
+  "antibody.2.pdb": [
+   "D"
+  ]
+ },
+ "antibody_chain_types": {
+  "antibody.1.pdb": {
+   "C": "mixed"
+  },
+  "antibody.2.pdb": {
+   "D": "mixed"
+  }
+ },
+ "truth_file": "data/truth/casp16/H1232.epitope.json",
+ "stage": "gatherer",
+ "pocket": {
+  "id": "C2",
+  "judge_rank": 2,
+  "name": "A compact tertiary epitope on one spike protomer: the exposed tip and...",
+  "confidence": 0.27,
+  "p_rests_on_holds": 0.45,
+  "why_this_rank": "It contains the exact escape pair in a compact, accessible loop and requires the least footprint extrapolation, but the assembled dimer occludes its 141-142 continuation and provides exposed partner surface immediately beside D136.",
+  "rests_on": "4B6 can clamp loop 3 without making meaningful contacts to the adjacent protomer.",
+  "where_the_mass_goes_if_it_fails": "C1",
+  "what_it_is": "A compact tertiary epitope on one spike protomer: the exposed tip and shoulders of loop 3.",
+  "why_one_candidate": "not pooled with anything: no other patch is both within 12 A (half centroid distance, half contact-graph hops) and coverable by one paratope of this antibody's reach, 16.8 A",
+  "from_patches": [
+   "P2"
+  ]
+ },
+ "note": "`confidence` on the pocket is over pockets and sums to about 1 across them. Inside an interface it is per residue in [0, 1] and sums to nothing. No residue is cut at a threshold: the whole vector is the answer.",
+ "mapping_basis": "per_antibody",
+ "checks": {
+  "unrecognised_sides": []
+ },
+ "chain_pairs": [
+  {
+   "antibody_chain": "C",
+   "antigen_chain": "A",
+   "n_residues": 10
+  },
+  {
+   "antibody_chain": "D",
+   "antigen_chain": "B",
+   "n_residues": 10
+  }
+ ],
+ "antibodies": [
+  {
+   "antibody": "antibody.1.pdb",
+   "chains": {
+    "C": "mixed"
+   },
+   "binding_mode": "single-chain",
+   "n_residues_scored": 10,
+   "interfaces": [
+    {
+     "antibody_chain": "C",
+     "antibody_chain_type": "mixed",
+     "antigen_chain": "A",
+     "n_residues": 10,
+     "residue_confidence": {
+      "133": 0.58,
+      "134": 0.44,
+      "135": 0.77,
+      "136": 0.98,
+      "137": 0.99,
+      "138": 0.87,
+      "139": 0.83,
+      "140": 0.64,
+      "141": 0.24,
+      "142": 0.36
+     },
+     "residue_side": {
+      "133": "heavy",
+      "134": "heavy",
+      "135": "both",
+      "136": "both",
+      "137": "both",
+      "138": "heavy",
+      "139": "heavy",
+      "140": "both",
+      "141": "light",
+      "142": "light"
+     },
+     "max_confidence": 0.99,
+     "mean_confidence": 0.67,
+     "precision_vs_truth": 0.9,
+     "n_in_truth": 9
+    }
+   ]
+  },
+  {
+   "antibody": "antibody.2.pdb",
+   "chains": {
+    "D": "mixed"
+   },
+   "binding_mode": "single-chain",
+   "n_residues_scored": 10,
+   "interfaces": [
+    {
+     "antibody_chain": "D",
+     "antibody_chain_type": "mixed",
+     "antigen_chain": "B",
+     "n_residues": 10,
+     "residue_confidence": {
+      "133": 0.58,
+      "134": 0.44,
+      "135": 0.77,
+      "136": 0.98,
+      "137": 0.99,
+      "138": 0.87,
+      "139": 0.83,
+      "140": 0.64,
+      "141": 0.24,
+      "142": 0.36
+     },
+     "residue_side": {
+      "133": "heavy",
+      "134": "heavy",
+      "135": "both",
+      "136": "both",
+      "137": "both",
+      "138": "heavy",
+      "139": "heavy",
+      "140": "both",
+      "141": "light",
+      "142": "light"
+     },
+     "max_confidence": 0.99,
+     "mean_confidence": 0.67,
+     "precision_vs_truth": 0.9,
+     "n_in_truth": 9
+    }
+   ]
+  }
+ ],
+ "paratope": {
+  "dominant_cdrs": [
+   "H3L3modeledasindividualCDRs:H3",
+   "L3H2modeledasindividualCDRs:L3",
+   "H2modeledasindividualCDRs:H2"
+  ],
+  "paratope_residues": [
+   "C:52",
+   "C:54",
+   "C:56",
+   "C:57",
+   "C:97",
+   "C:98",
+   "C:99",
+   "C:100",
+   "C:101",
+   "C:102",
+   "C:103",
+   "C:104",
+   "C:105",
+   "C:106",
+   "C:162",
+   "C:163",
+   "C:165",
+   "C:166",
+   "C:167",
+   "C:226",
+   "C:227",
+   "C:228",
+   "C:229",
+   "C:230",
+   "C:231",
+   "D:52",
+   "D:54",
+   "D:56",
+   "D:57",
+   "D:97",
+   "D:98",
+   "D:99",
+   "D:100",
+   "D:101",
+   "D:102",
+   "D:103",
+   "D:104",
+   "D:105",
+   "D:106",
+   "D:162",
+   "D:163",
+   "D:165",
+   "D:166",
+   "D:167",
+   "D:226",
+   "D:227",
+   "D:228",
+   "D:229",
+   "D:230",
+   "D:231"
+  ],
+  "heavy_light_split": "H3/H2 cover 133-139; L3/L1 close over 140-142, with both chains converging on 135-137 and 140.",
+  "binding_mode_union": null
+ },
+ "residues": [
+  "A:133",
+  "A:134",
+  "A:135",
+  "A:136",
+  "A:137",
+  "A:138",
+  "A:139",
+  "A:140",
+  "A:141",
+  "A:142",
+  "B:133",
+  "B:134",
+  "B:135",
+  "B:136",
+  "B:137",
+  "B:138",
+  "B:139",
+  "B:140",
+  "B:141",
+  "B:142"
+ ],
+ "n_residues": 20,
+ "patches": [
+  {
+   "id": "P2",
+   "name": "Compact single-protomer loop-3 clamp",
+   "n_residues": 20,
+   "residues": [
+    "A:133",
+    "A:134",
+    "A:135",
+    "A:136",
+    "A:137",
+    "A:138",
+    "A:139",
+    "A:140",
+    "A:141",
+    "A:142",
+    "B:133",
+    "B:134",
+    "B:135",
+    "B:136",
+    "B:137",
+    "B:138",
+    "B:139",
+    "B:140",
+    "B:141",
+    "B:142"
+   ],
+   "n_kept_by_advocate": 20,
+   "n_dropped_by_advocate": 0
+  }
+ ],
+ "pooling_provenance": {
+  "n_shared_at_pooling": 20,
+  "n_disputed_at_pooling": 0,
+  "note": "counts only, describing how the organizer grouped the phase-1 patches. The organizer's own candidate residue list is deliberately absent: the answer is the advocate's footprint, in `residues` and in `antibodies[].interfaces[]`."
+ },
+ "evidence": {
+  "advocate": {
+   "n_findings": 4,
+   "n_supports": 3,
+   "n_weakens": 1,
+   "weakest_point": "The loop is built into the seam and several residues are dimer-occluded; escape does not prove a single-chain topology.",
+   "note": "the advocate reports claim/source/date/bearing and is not asked whether a source is about this binder"
+  },
+  "judge": {
+   "tier_a_support": 2,
+   "n_support_lines": 4,
+   "verdict": "live",
+   "note": "Tier A -- a source about this binder itself -- is the judge's adjudication, in assessment[].support[]. It exists nowhere in the advocate's own answer."
+  }
+ },
+ "provenance": {
+  "unverified_source_policy_fields": [
+   "gated",
+   "web_search",
+   "shell_network",
+   "gate_tools"
+  ],
+  "assembled_case_dir": "gpt-5.6-high/gather_refine/post_refactor/released_structure_20261030/casp16/H1232/case_d99ff5_G_rep2",
+  "organize_case_dir": "gpt-5.6-high/gather_refine/post_refactor/released_structure_20261030/casp16/H1232/case_d99ff5_GR_rep1",
+  "organize_status": "ok",
+  "judge_case_dir": "gpt-5.6-high/gather_refine/post_refactor/released_structure_20261030/casp16/H1232/case_d99ff5_GJ_rep2",
+  "judge_status": "ok",
+  "packet": "gpt-5.6-high/gather/packets/case_d99ff5/packet",
+  "manifest": "gpt-5.6-high/gather/packets/case_d99ff5/manifest.json",
+  "advocate_case_dir": "gpt-5.6-high/gather_refine/post_refactor/released_structure_20261030/casp16/H1232/case_d99ff5_GR_rep1",
+  "advocate_status": "ok"
+ },
+ "score": {
+  "precision": 0.9,
+  "recall": 0.4737,
+  "f1": 0.6207,
+  "n_pred": 20,
+  "n_true": 38,
+  "n_hit": 18
+ }
+}

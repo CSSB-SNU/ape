@@ -1,0 +1,251 @@
+{
+ "task": "gather",
+ "gather_mode": "batched",
+ "num_launchers": 3,
+ "policy": {
+  "evidence_cutoff": null,
+  "no_cutoff": true,
+  "gated": false,
+  "web_search": true,
+  "shell_network": true,
+  "gate_tools": []
+ },
+ "unscored": true,
+ "target": "H2312",
+ "target_set": "casp17",
+ "case": "case_3a23b5",
+ "evidence_cutoff": null,
+ "target_release_date": "2026-05-13",
+ "retrieval_policy": "no-cutoff",
+ "input_structure": "data/staged_casp17_no_native/H2312.pdb",
+ "input_structure_sha256": "3ba79066f0aa7015920828a3678d94af5f532471fde42bb38b00795e45f94b8b",
+ "briefing_source": "data/briefing/casp17_nocutoff/H2312/search_results.json",
+ "briefing_sha256": "2b8c71697fd0cc7175a5631c137526c8209032f024f0df47a726889d5e5bdf88",
+ "antigen_chains": [
+  "A",
+  "B"
+ ],
+ "antibody_files": {
+  "antibody.pdb": [
+   "C"
+  ]
+ },
+ "antibody_chain_types": {
+  "antibody.pdb": {
+   "C": "heavy"
+  }
+ },
+ "stage": "gatherer",
+ "pocket": {
+  "id": "C1",
+  "judge_rank": 1,
+  "name": "The solvent-open oligosaccharide-acceptor channel of the active...",
+  "confidence": 0.18,
+  "p_rests_on_holds": 0.62,
+  "why_this_rank": "Best combined gross shape, exposure, and plausible chemistry; ligand-site evidence is real but shared with C5/C8.",
+  "rests_on": "The compact acceptor-channel footprint is accessible and its pose-free fit reflects a realizable VHH contact.",
+  "where_the_mass_goes_if_it_fails": "C5, then C4",
+  "what_it_is": "The solvent-open oligosaccharide-acceptor channel of the active C-terminal GT-A domain of EXT2: the E522/W523 ridge, K588/K590 wall, and H606–E609 rim that cradle the growing heparan-sulfate chain.",
+  "why_one_candidate": "not pooled with anything: no other patch is both within 12 A (half centroid distance, half contact-graph hops) and coverable by one paratope of this antibody's reach, 13.6 A",
+  "from_patches": [
+   "P1"
+  ]
+ },
+ "note": "`confidence` on the pocket is over pockets and sums to about 1 across them. Inside an interface it is per residue in [0, 1] and sums to nothing. No residue is cut at a threshold: the whole vector is the answer.",
+ "mapping_basis": "side",
+ "checks": {
+  "unrecognised_sides": []
+ },
+ "chain_pairs": [
+  {
+   "antibody_chain": "C",
+   "antigen_chain": "B",
+   "n_residues": 20
+  }
+ ],
+ "antibodies": [
+  {
+   "antibody": "antibody.pdb",
+   "chains": {
+    "C": "heavy"
+   },
+   "binding_mode": null,
+   "n_residues_scored": 20,
+   "interfaces": [
+    {
+     "antibody_chain": "C",
+     "antibody_chain_type": "heavy",
+     "antigen_chain": "B",
+     "n_residues": 20,
+     "residue_confidence": {
+      "519": 0.36,
+      "520": 0.62,
+      "521": 0.82,
+      "522": 0.94,
+      "523": 0.95,
+      "524": 0.68,
+      "587": 0.66,
+      "588": 0.91,
+      "590": 0.82,
+      "598": 0.35,
+      "600": 0.57,
+      "601": 0.59,
+      "602": 0.78,
+      "603": 0.72,
+      "604": 0.83,
+      "605": 0.69,
+      "606": 0.84,
+      "607": 0.79,
+      "608": 0.61,
+      "609": 0.67
+     },
+     "residue_side": {
+      "519": "heavy",
+      "520": "heavy",
+      "521": "heavy",
+      "522": "heavy",
+      "523": "heavy",
+      "524": "heavy",
+      "587": "heavy",
+      "588": "heavy",
+      "590": "heavy",
+      "598": "heavy",
+      "600": "heavy",
+      "601": "heavy",
+      "602": "heavy",
+      "603": "heavy",
+      "604": "heavy",
+      "605": "heavy",
+      "606": "heavy",
+      "607": "heavy",
+      "608": "heavy",
+      "609": "heavy"
+     },
+     "max_confidence": 0.95,
+     "mean_confidence": 0.71
+    }
+   ]
+  }
+ ],
+ "paratope": {
+  "dominant_cdrs": [
+   "H3H2H1select:H3",
+   "H2H1select:H2",
+   "H1select:H1"
+  ],
+  "paratope_residues": [
+   "C:28",
+   "C:30",
+   "C:31",
+   "C:32",
+   "C:53",
+   "C:54",
+   "C:56",
+   "C:57",
+   "C:100",
+   "C:101",
+   "C:102",
+   "C:103",
+   "C:105",
+   "C:107",
+   "C:108",
+   "C:109",
+   "C:110",
+   "C:113",
+   "C:114"
+  ],
+  "heavy_light_split": "Heavy 100%, light 0%. H3 occupies the channel center; H2 and H1 support the rims. The footprint spans 24.72 Å Cα.",
+  "binding_mode_union": "single-chain"
+ },
+ "residues": [
+  "B:519",
+  "B:520",
+  "B:521",
+  "B:522",
+  "B:523",
+  "B:524",
+  "B:587",
+  "B:588",
+  "B:590",
+  "B:598",
+  "B:600",
+  "B:601",
+  "B:602",
+  "B:603",
+  "B:604",
+  "B:605",
+  "B:606",
+  "B:607",
+  "B:608",
+  "B:609"
+ ],
+ "n_residues": 20,
+ "patches": [
+  {
+   "id": "P1",
+   "name": "EXT2 C-terminal GlcNAc-transferase acceptor groove",
+   "n_residues": 20,
+   "residues": [
+    "B:520",
+    "B:521",
+    "B:522",
+    "B:523",
+    "B:524",
+    "B:587",
+    "B:588",
+    "B:590",
+    "B:592",
+    "B:598",
+    "B:600",
+    "B:601",
+    "B:602",
+    "B:603",
+    "B:604",
+    "B:605",
+    "B:606",
+    "B:607",
+    "B:608",
+    "B:609"
+   ],
+   "n_kept_by_advocate": 19,
+   "n_dropped_by_advocate": 1
+  }
+ ],
+ "pooling_provenance": {
+  "n_shared_at_pooling": 20,
+  "n_disputed_at_pooling": 0,
+  "note": "counts only, describing how the organizer grouped the phase-1 patches. The organizer's own candidate residue list is deliberately absent: the answer is the advocate's footprint, in `residues` and in `antibodies[].interfaces[]`."
+ },
+ "evidence": {
+  "advocate": {
+   "n_findings": 4,
+   "n_supports": 3,
+   "n_weakens": 0,
+   "weakest_point": "No exact VHH identity or epitope map links the binder to this otherwise compelling functional groove; B:523/B:524 also have constrained approach geometry near EXT1.",
+   "note": "the advocate reports claim/source/date/bearing and is not asked whether a source is about this binder"
+  },
+  "judge": {
+   "tier_a_support": 0,
+   "n_support_lines": 4,
+   "verdict": "leading",
+   "note": "Tier A -- a source about this binder itself -- is the judge's adjudication, in assessment[].support[]. It exists nowhere in the advocate's own answer."
+  }
+ },
+ "provenance": {
+  "unverified_source_policy_fields": [
+   "gated",
+   "web_search",
+   "shell_network",
+   "gate_tools"
+  ],
+  "assembled_case_dir": "gpt-5.6-high/gather_refine/post_refactor/unreleased_20261029/nocut/casp17/H2312/case_3a23b5_G_rep1",
+  "organize_case_dir": "gpt-5.6-high/gather_refine/post_refactor/unreleased_20261029/nocut/casp17/H2312/case_3a23b5_GR_rep1",
+  "organize_status": "ok",
+  "judge_case_dir": "gpt-5.6-high/gather_refine/post_refactor/unreleased_20261029/nocut/casp17/H2312/case_3a23b5_GJ_rep1",
+  "judge_status": "ok",
+  "packet": "gpt-5.6-high/nocut/gather/packets/case_3a23b5/packet",
+  "manifest": "gpt-5.6-high/nocut/gather/packets/case_3a23b5/manifest.json",
+  "advocate_case_dir": "gpt-5.6-high/gather_refine/post_refactor/unreleased_20261029/nocut/casp17/H2312/case_3a23b5_GR_rep1",
+  "advocate_status": "ok"
+ }
+}

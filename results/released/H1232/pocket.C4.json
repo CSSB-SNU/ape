@@ -1,0 +1,350 @@
+{
+ "task": "gather",
+ "gather_mode": "batched",
+ "num_launchers": 3,
+ "policy": {
+  "evidence_cutoff": "2024-06-13",
+  "no_cutoff": false,
+  "gated": true,
+  "web_search": false,
+  "shell_network": true,
+  "gate_tools": [
+   "research",
+   "fetch",
+   "rcsb",
+   "patent",
+   "paper"
+  ]
+ },
+ "unscored": false,
+ "target": "H1232",
+ "target_set": "casp16",
+ "case": "case_d99ff5",
+ "evidence_cutoff": "2024-06-13",
+ "target_release_date": "2024-06-13",
+ "retrieval_policy": "gated",
+ "input_structure": "structures/H1232.pdb",
+ "input_structure_sha256": null,
+ "briefing_source": null,
+ "briefing_sha256": null,
+ "antigen_chains": [
+  "A",
+  "B"
+ ],
+ "antibody_files": {
+  "antibody.1.pdb": [
+   "C"
+  ],
+  "antibody.2.pdb": [
+   "D"
+  ]
+ },
+ "antibody_chain_types": {
+  "antibody.1.pdb": {
+   "C": "mixed"
+  },
+  "antibody.2.pdb": {
+   "D": "mixed"
+  }
+ },
+ "truth_file": "data/truth/casp16/H1232.epitope.json",
+ "stage": "gatherer",
+ "pocket": {
+  "id": "C4",
+  "judge_rank": 6,
+  "name": "An exposed monomer-contained lateral terrace built from the 72-79...",
+  "confidence": 0.008,
+  "p_rests_on_holds": 0.02,
+  "why_this_rank": "C4 is exposed and geometrically coherent, but no line localizes 4B6 there and its exact escape pair lies elsewhere.",
+  "rests_on": "D136/N137 escape is remote/allosteric and favorable surface geometry, rather than the escape vicinity, identifies the true site.",
+  "where_the_mass_goes_if_it_fails": "C1 and C2",
+  "what_it_is": "An exposed monomer-contained lateral terrace built from the 72-79 turn and adjacent 88-93 and 116-118 shoulders.",
+  "why_one_candidate": "not pooled with anything: no other patch is both within 12 A (half centroid distance, half contact-graph hops) and coverable by one paratope of this antibody's reach, 16.8 A",
+  "from_patches": [
+   "P4"
+  ]
+ },
+ "note": "`confidence` on the pocket is over pockets and sums to about 1 across them. Inside an interface it is per residue in [0, 1] and sums to nothing. No residue is cut at a threshold: the whole vector is the answer.",
+ "mapping_basis": "per_antibody",
+ "checks": {
+  "unrecognised_sides": []
+ },
+ "chain_pairs": [
+  {
+   "antibody_chain": "C",
+   "antigen_chain": "A",
+   "n_residues": 12
+  },
+  {
+   "antibody_chain": "D",
+   "antigen_chain": "B",
+   "n_residues": 12
+  }
+ ],
+ "antibodies": [
+  {
+   "antibody": "antibody.1.pdb",
+   "chains": {
+    "C": "mixed"
+   },
+   "binding_mode": "single-chain",
+   "n_residues_scored": 12,
+   "interfaces": [
+    {
+     "antibody_chain": "C",
+     "antibody_chain_type": "mixed",
+     "antigen_chain": "A",
+     "n_residues": 12,
+     "residue_confidence": {
+      "72": 0.82,
+      "73": 0.91,
+      "75": 0.87,
+      "76": 0.73,
+      "78": 0.78,
+      "79": 0.66,
+      "88": 0.72,
+      "89": 0.52,
+      "91": 0.42,
+      "93": 0.59,
+      "116": 0.48,
+      "118": 0.69
+     },
+     "residue_side": {
+      "72": "heavy",
+      "73": "both",
+      "75": "both",
+      "76": "heavy",
+      "78": "both",
+      "79": "both",
+      "88": "light",
+      "89": "light",
+      "91": "light",
+      "93": "light",
+      "116": "light",
+      "118": "light"
+     },
+     "max_confidence": 0.91,
+     "mean_confidence": 0.6825,
+     "precision_vs_truth": 0.0,
+     "n_in_truth": 0
+    }
+   ]
+  },
+  {
+   "antibody": "antibody.2.pdb",
+   "chains": {
+    "D": "mixed"
+   },
+   "binding_mode": "single-chain",
+   "n_residues_scored": 12,
+   "interfaces": [
+    {
+     "antibody_chain": "D",
+     "antibody_chain_type": "mixed",
+     "antigen_chain": "B",
+     "n_residues": 12,
+     "residue_confidence": {
+      "72": 0.82,
+      "73": 0.91,
+      "75": 0.87,
+      "76": 0.73,
+      "78": 0.78,
+      "79": 0.66,
+      "88": 0.72,
+      "89": 0.52,
+      "91": 0.42,
+      "93": 0.59,
+      "116": 0.48,
+      "118": 0.69
+     },
+     "residue_side": {
+      "72": "heavy",
+      "73": "both",
+      "75": "both",
+      "76": "heavy",
+      "78": "both",
+      "79": "both",
+      "88": "light",
+      "89": "light",
+      "91": "light",
+      "93": "light",
+      "116": "light",
+      "118": "light"
+     },
+     "max_confidence": 0.91,
+     "mean_confidence": 0.6825,
+     "precision_vs_truth": 0.0,
+     "n_in_truth": 0
+    }
+   ]
+  }
+ ],
+ "paratope": {
+  "dominant_cdrs": [
+   "H3H2L3modeledasindividualCDRs:H3",
+   "H2L3modeledasindividualCDRs:H2",
+   "L3modeledasindividualCDRs:L3"
+  ],
+  "paratope_residues": [
+   "C:30",
+   "C:31",
+   "C:32",
+   "C:52",
+   "C:54",
+   "C:56",
+   "C:57",
+   "C:98",
+   "C:99",
+   "C:100",
+   "C:101",
+   "C:102",
+   "C:103",
+   "C:105",
+   "C:106",
+   "C:162",
+   "C:163",
+   "C:165",
+   "C:166",
+   "C:167",
+   "C:226",
+   "C:227",
+   "C:228",
+   "C:229",
+   "C:231",
+   "D:30",
+   "D:31",
+   "D:32",
+   "D:52",
+   "D:54",
+   "D:56",
+   "D:57",
+   "D:98",
+   "D:99",
+   "D:100",
+   "D:101",
+   "D:102",
+   "D:103",
+   "D:105",
+   "D:106",
+   "D:162",
+   "D:163",
+   "D:165",
+   "D:166",
+   "D:167",
+   "D:226",
+   "D:227",
+   "D:228",
+   "D:229",
+   "D:231"
+  ],
+  "heavy_light_split": "Heavy covers 72-79; light extends across 88-93 to 116/118; both converge on 73/75/78/79.",
+  "binding_mode_union": null
+ },
+ "residues": [
+  "A:116",
+  "A:118",
+  "A:72",
+  "A:73",
+  "A:75",
+  "A:76",
+  "A:78",
+  "A:79",
+  "A:88",
+  "A:89",
+  "A:91",
+  "A:93",
+  "B:116",
+  "B:118",
+  "B:72",
+  "B:73",
+  "B:75",
+  "B:76",
+  "B:78",
+  "B:79",
+  "B:88",
+  "B:89",
+  "B:91",
+  "B:93"
+ ],
+ "n_residues": 24,
+ "patches": [
+  {
+   "id": "P4",
+   "name": "Loop-1-avoiding lateral patch around capsid residue 504",
+   "n_residues": 24,
+   "residues": [
+    "A:116",
+    "A:118",
+    "A:72",
+    "A:73",
+    "A:75",
+    "A:76",
+    "A:78",
+    "A:79",
+    "A:88",
+    "A:89",
+    "A:91",
+    "A:93",
+    "B:116",
+    "B:118",
+    "B:72",
+    "B:73",
+    "B:75",
+    "B:76",
+    "B:78",
+    "B:79",
+    "B:88",
+    "B:89",
+    "B:91",
+    "B:93"
+   ],
+   "n_kept_by_advocate": 24,
+   "n_dropped_by_advocate": 0
+  }
+ ],
+ "pooling_provenance": {
+  "n_shared_at_pooling": 24,
+  "n_disputed_at_pooling": 0,
+  "note": "counts only, describing how the organizer grouped the phase-1 patches. The organizer's own candidate residue list is deliberately absent: the answer is the advocate's footprint, in `residues` and in `antibodies[].interfaces[]`."
+ },
+ "evidence": {
+  "advocate": {
+   "n_findings": 4,
+   "n_supports": 2,
+   "n_weakens": 2,
+   "weakest_point": "Exact-antibody escape is elsewhere and no 4B6-specific evidence links this face.",
+   "note": "the advocate reports claim/source/date/bearing and is not asked whether a source is about this binder"
+  },
+  "judge": {
+   "tier_a_support": 0,
+   "n_support_lines": 2,
+   "verdict": "unlikely",
+   "note": "Tier A -- a source about this binder itself -- is the judge's adjudication, in assessment[].support[]. It exists nowhere in the advocate's own answer."
+  }
+ },
+ "provenance": {
+  "unverified_source_policy_fields": [
+   "gated",
+   "web_search",
+   "shell_network",
+   "gate_tools"
+  ],
+  "assembled_case_dir": "gpt-5.6-high/gather_refine/post_refactor/released_structure_20261030/casp16/H1232/case_d99ff5_G_rep2",
+  "organize_case_dir": "gpt-5.6-high/gather_refine/post_refactor/released_structure_20261030/casp16/H1232/case_d99ff5_GR_rep1",
+  "organize_status": "ok",
+  "judge_case_dir": "gpt-5.6-high/gather_refine/post_refactor/released_structure_20261030/casp16/H1232/case_d99ff5_GJ_rep2",
+  "judge_status": "ok",
+  "packet": "gpt-5.6-high/gather/packets/case_d99ff5/packet",
+  "manifest": "gpt-5.6-high/gather/packets/case_d99ff5/manifest.json",
+  "advocate_case_dir": "gpt-5.6-high/gather_refine/post_refactor/released_structure_20261030/casp16/H1232/case_d99ff5_GR_rep1",
+  "advocate_status": "ok"
+ },
+ "score": {
+  "precision": 0.0,
+  "recall": 0.0,
+  "f1": 0.0,
+  "n_pred": 24,
+  "n_true": 38,
+  "n_hit": 0
+ }
+}

@@ -1,0 +1,327 @@
+{
+ "task": "gather",
+ "gather_mode": "batched",
+ "num_launchers": 3,
+ "policy": {
+  "evidence_cutoff": "2026-05-20",
+  "no_cutoff": false,
+  "gated": true,
+  "web_search": false,
+  "shell_network": true,
+  "gate_tools": [
+   "research",
+   "fetch",
+   "rcsb",
+   "patent",
+   "paper"
+  ]
+ },
+ "unscored": false,
+ "target": "H2321",
+ "target_set": "casp17",
+ "case": "case_6e4153",
+ "evidence_cutoff": "2026-05-20",
+ "target_release_date": "2026-05-20",
+ "retrieval_policy": "gated",
+ "input_structure": "structures/H2321.pdb",
+ "input_structure_sha256": null,
+ "briefing_source": null,
+ "briefing_sha256": null,
+ "antigen_chains": [
+  "A",
+  "D"
+ ],
+ "antibody_files": {
+  "antibody.1.pdb": [
+   "B",
+   "F"
+  ],
+  "antibody.2.pdb": [
+   "C",
+   "E"
+  ]
+ },
+ "antibody_chain_types": {
+  "antibody.1.pdb": {
+   "B": "unknown",
+   "F": "unknown"
+  },
+  "antibody.2.pdb": {
+   "C": "unknown",
+   "E": "unknown"
+  }
+ },
+ "truth_file": "data/truth/casp17/H2321.epitope.json",
+ "stage": "gatherer",
+ "pocket": {
+  "id": "C6",
+  "judge_rank": 6,
+  "name": "A compact, single-protomer protruding top loop centred on...",
+  "confidence": 0.007,
+  "p_rests_on_holds": 0.02,
+  "why_this_rank": "The knob is structurally plausible, but its direct escape precedent belongs to 7C8.",
+  "rests_on": "The clone attribution or P137 assignment is wrong.",
+  "where_the_mass_goes_if_it_fails": "C3",
+  "what_it_is": "A compact, single-protomer protruding top loop centred on Q136/P137/H138, with the folded N223 edge: the most solvent-exposed knob among these neighbourhoods [computed: analyze_refinement.py, 17.20 Å CA diameter].",
+  "why_one_candidate": "not pooled with anything: no other patch is both within 12 A (half centroid distance, half contact-graph hops) and coverable by one paratope of this antibody's reach, 18.1 A",
+  "from_patches": [
+   "P6"
+  ]
+ },
+ "note": "`confidence` on the pocket is over pockets and sums to about 1 across them. Inside an interface it is per residue in [0, 1] and sums to nothing. No residue is cut at a threshold: the whole vector is the answer.",
+ "mapping_basis": "per_antibody",
+ "checks": {
+  "unrecognised_sides": []
+ },
+ "chain_pairs": [
+  {
+   "antibody_chain": "B",
+   "antigen_chain": "A",
+   "n_residues": 5
+  },
+  {
+   "antibody_chain": "F",
+   "antigen_chain": "A",
+   "n_residues": 5
+  },
+  {
+   "antibody_chain": "C",
+   "antigen_chain": "D",
+   "n_residues": 5
+  },
+  {
+   "antibody_chain": "E",
+   "antigen_chain": "D",
+   "n_residues": 5
+  }
+ ],
+ "antibodies": [
+  {
+   "antibody": "antibody.1.pdb",
+   "chains": {
+    "B": "unknown",
+    "F": "unknown"
+   },
+   "binding_mode": "single-chain",
+   "n_residues_scored": 5,
+   "interfaces": [
+    {
+     "antibody_chain": "B",
+     "antibody_chain_type": "unknown",
+     "antigen_chain": "A",
+     "n_residues": 5,
+     "residue_confidence": {
+      "133": 0.6,
+      "136": 0.88,
+      "137": 0.98,
+      "138": 0.94,
+      "139": 0.7
+     },
+     "residue_side": {
+      "133": "light",
+      "136": "both",
+      "137": "heavy",
+      "138": "heavy",
+      "139": "both"
+     },
+     "max_confidence": 0.98,
+     "mean_confidence": 0.82,
+     "precision_vs_truth": 0.0,
+     "n_in_truth": 0
+    },
+    {
+     "antibody_chain": "F",
+     "antibody_chain_type": "unknown",
+     "antigen_chain": "A",
+     "n_residues": 5,
+     "residue_confidence": {
+      "133": 0.6,
+      "136": 0.88,
+      "137": 0.98,
+      "138": 0.94,
+      "139": 0.7
+     },
+     "residue_side": {
+      "133": "light",
+      "136": "both",
+      "137": "heavy",
+      "138": "heavy",
+      "139": "both"
+     },
+     "max_confidence": 0.98,
+     "mean_confidence": 0.82,
+     "precision_vs_truth": 0.0,
+     "n_in_truth": 0
+    }
+   ]
+  },
+  {
+   "antibody": "antibody.2.pdb",
+   "chains": {
+    "C": "unknown",
+    "E": "unknown"
+   },
+   "binding_mode": "single-chain",
+   "n_residues_scored": 5,
+   "interfaces": [
+    {
+     "antibody_chain": "C",
+     "antibody_chain_type": "unknown",
+     "antigen_chain": "D",
+     "n_residues": 5,
+     "residue_confidence": {
+      "133": 0.6,
+      "136": 0.88,
+      "137": 0.98,
+      "138": 0.94,
+      "139": 0.7
+     },
+     "residue_side": {
+      "133": "light",
+      "136": "both",
+      "137": "heavy",
+      "138": "heavy",
+      "139": "both"
+     },
+     "max_confidence": 0.98,
+     "mean_confidence": 0.82,
+     "precision_vs_truth": 0.0,
+     "n_in_truth": 0
+    },
+    {
+     "antibody_chain": "E",
+     "antibody_chain_type": "unknown",
+     "antigen_chain": "D",
+     "n_residues": 5,
+     "residue_confidence": {
+      "133": 0.6,
+      "136": 0.88,
+      "137": 0.98,
+      "138": 0.94,
+      "139": 0.7
+     },
+     "residue_side": {
+      "133": "light",
+      "136": "both",
+      "137": "heavy",
+      "138": "heavy",
+      "139": "both"
+     },
+     "max_confidence": 0.98,
+     "mean_confidence": 0.82,
+     "precision_vs_truth": 0.0,
+     "n_in_truth": 0
+    }
+   ]
+  }
+ ],
+ "paratope": {
+  "dominant_cdrs": [
+   "H3:H1",
+   "L3:L1"
+  ],
+  "paratope_residues": [
+   "B:101",
+   "B:104",
+   "F:92",
+   "F:93",
+   "E:101",
+   "E:104",
+   "C:92",
+   "C:93"
+  ],
+  "heavy_light_split": "H3-dominant cap over Q136/P137/H138/Q139; light loops support the 131–134/N223 side.",
+  "binding_mode_union": null
+ },
+ "residues": [
+  "A:133",
+  "A:136",
+  "A:137",
+  "A:138",
+  "A:139",
+  "D:133",
+  "D:136",
+  "D:137",
+  "D:138",
+  "D:139"
+ ],
+ "n_residues": 10,
+ "patches": [
+  {
+   "id": "P6",
+   "name": "7C8-like exposed P137/H138 top loop",
+   "n_residues": 22,
+   "residues": [
+    "A:131",
+    "A:133",
+    "A:134",
+    "A:135",
+    "A:136",
+    "A:137",
+    "A:138",
+    "A:139",
+    "A:140",
+    "A:141",
+    "A:223",
+    "D:131",
+    "D:133",
+    "D:134",
+    "D:135",
+    "D:136",
+    "D:137",
+    "D:138",
+    "D:139",
+    "D:140",
+    "D:141",
+    "D:223"
+   ],
+   "n_kept_by_advocate": 10,
+   "n_dropped_by_advocate": 12
+  }
+ ],
+ "pooling_provenance": {
+  "n_shared_at_pooling": 22,
+  "n_disputed_at_pooling": 0,
+  "note": "counts only, describing how the organizer grouped the phase-1 patches. The organizer's own candidate residue list is deliberately absent: the answer is the advocate's footprint, in `residues` and in `antibodies[].interfaces[]`."
+ },
+ "evidence": {
+  "advocate": {
+   "n_findings": 1,
+   "n_supports": 0,
+   "n_weakens": 1,
+   "weakest_point": "The surface is exceptionally plausible for an antibody, but the available experiment assigns its central escape residue to 7C8, while exact sequences identify the supplied antibody as 2A2.",
+   "note": "the advocate reports claim/source/date/bearing and is not asked whether a source is about this binder"
+  },
+  "judge": {
+   "tier_a_support": 0,
+   "n_support_lines": 5,
+   "verdict": "unlikely",
+   "note": "Tier A -- a source about this binder itself -- is the judge's adjudication, in assessment[].support[]. It exists nowhere in the advocate's own answer."
+  }
+ },
+ "provenance": {
+  "unverified_source_policy_fields": [
+   "gated",
+   "web_search",
+   "shell_network",
+   "gate_tools"
+  ],
+  "assembled_case_dir": "gpt-5.6-high/gather_refine/post_refactor/released_structure_20261030/casp17/H2321/case_6e4153_G_rep2",
+  "organize_case_dir": "gpt-5.6-high/gather_refine/post_refactor/released_structure_20261030/casp17/H2321/case_6e4153_GR_rep1",
+  "organize_status": "ok",
+  "judge_case_dir": "gpt-5.6-high/gather_refine/post_refactor/released_structure_20261030/casp17/H2321/case_6e4153_GJ_rep2",
+  "judge_status": "ok",
+  "packet": "gpt-5.6-high/gather/packets/case_6e4153/packet",
+  "manifest": "gpt-5.6-high/gather/packets/case_6e4153/manifest.json",
+  "advocate_case_dir": "gpt-5.6-high/gather_refine/post_refactor/released_structure_20261030/casp17/H2321/case_6e4153_GR_rep1",
+  "advocate_status": "ok"
+ },
+ "score": {
+  "precision": 0.0,
+  "recall": 0.0,
+  "f1": 0.0,
+  "n_pred": 10,
+  "n_true": 70,
+  "n_hit": 0
+ }
+}

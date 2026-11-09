@@ -1,0 +1,301 @@
+{
+ "task": "gather",
+ "gather_mode": "batched",
+ "num_launchers": 3,
+ "policy": {
+  "evidence_cutoff": "2026-06-12",
+  "no_cutoff": false,
+  "gated": true,
+  "web_search": false,
+  "shell_network": true,
+  "gate_tools": [
+   "research",
+   "fetch",
+   "rcsb",
+   "patent",
+   "paper"
+  ]
+ },
+ "unscored": true,
+ "target": "H2362",
+ "target_set": "casp17",
+ "case": "case_259152",
+ "evidence_cutoff": "2026-06-12",
+ "target_release_date": "2026-06-12",
+ "retrieval_policy": "gated",
+ "input_structure": "data/staged_casp17_no_native/H2362.pdb",
+ "input_structure_sha256": "54e187b986e4696f87e1dd7dd4cd6cd943754471a337aa57a0577c6172827a73",
+ "briefing_source": "data/briefing/casp17/H2362/search_results.json",
+ "briefing_sha256": "b0140a751ca600dc0d1ce7f02d3095b3776329fd300b1010c950088508d8f896",
+ "antigen_chains": [
+  "A",
+  "B",
+  "C",
+  "D",
+  "E"
+ ],
+ "antibody_files": {
+  "antibody.pdb": [
+   "F",
+   "G"
+  ]
+ },
+ "antibody_chain_types": {
+  "antibody.pdb": {
+   "F": "light",
+   "G": "heavy"
+  }
+ },
+ "stage": "gatherer",
+ "pocket": {
+  "id": "C4",
+  "judge_rank": 6,
+  "name": "The N-terminal outer face of the UL130 chemokine-like domain...",
+  "confidence": 0.08,
+  "p_rests_on_holds": 0.18,
+  "why_this_rank": "Geometry and polar/basic chemistry are plausible, but only coarse cross-link precedent and no established consequence support the face.",
+  "rests_on": "The coarse site-4 proximity reflects direct access to this UL130 face.",
+  "where_the_mass_goes_if_it_fails": "C5",
+  "what_it_is": "The N-terminal outer face of the UL130 chemokine-like domain, centered on its exposed loop/turn cluster.",
+  "why_one_candidate": "not pooled with anything: no other patch is both within 12 A (half centroid distance, half contact-graph hops) and coverable by one paratope of this antibody's reach, 17.6 A",
+  "from_patches": [
+   "P2"
+  ]
+ },
+ "note": "`confidence` on the pocket is over pockets and sums to about 1 across them. Inside an interface it is per residue in [0, 1] and sums to nothing. No residue is cut at a threshold: the whole vector is the answer.",
+ "mapping_basis": "side",
+ "checks": {
+  "unrecognised_sides": []
+ },
+ "chain_pairs": [
+  {
+   "antibody_chain": "F",
+   "antigen_chain": "C",
+   "n_residues": 13
+  },
+  {
+   "antibody_chain": "G",
+   "antigen_chain": "C",
+   "n_residues": 10
+  }
+ ],
+ "antibodies": [
+  {
+   "antibody": "antibody.pdb",
+   "chains": {
+    "F": "light",
+    "G": "heavy"
+   },
+   "binding_mode": null,
+   "n_residues_scored": 18,
+   "interfaces": [
+    {
+     "antibody_chain": "F",
+     "antibody_chain_type": "light",
+     "antigen_chain": "C",
+     "n_residues": 13,
+     "residue_confidence": {
+      "20": 0.85,
+      "21": 0.45,
+      "22": 0.8,
+      "23": 0.9,
+      "24": 0.65,
+      "25": 0.6,
+      "26": 0.6,
+      "29": 0.3,
+      "50": 0.4,
+      "51": 0.45,
+      "53": 0.5,
+      "56": 0.4,
+      "57": 0.45
+     },
+     "residue_side": {
+      "20": "both",
+      "21": "both",
+      "22": "both",
+      "23": "both",
+      "24": "both",
+      "25": "light",
+      "26": "light",
+      "29": "light",
+      "50": "light",
+      "51": "light",
+      "53": "light",
+      "56": "light",
+      "57": "light"
+     },
+     "max_confidence": 0.9,
+     "mean_confidence": 0.5654
+    },
+    {
+     "antibody_chain": "G",
+     "antibody_chain_type": "heavy",
+     "antigen_chain": "C",
+     "n_residues": 10,
+     "residue_confidence": {
+      "12": 0.4,
+      "13": 0.5,
+      "15": 0.65,
+      "18": 0.8,
+      "19": 0.65,
+      "20": 0.85,
+      "21": 0.45,
+      "22": 0.8,
+      "23": 0.9,
+      "24": 0.65
+     },
+     "residue_side": {
+      "12": "heavy",
+      "13": "heavy",
+      "15": "heavy",
+      "18": "heavy",
+      "19": "heavy",
+      "20": "both",
+      "21": "both",
+      "22": "both",
+      "23": "both",
+      "24": "both"
+     },
+     "max_confidence": 0.9,
+     "mean_confidence": 0.665
+    }
+   ]
+  }
+ ],
+ "paratope": {
+  "dominant_cdrs": [
+   "G:H2",
+   "G:H3",
+   "G:H1",
+   "F:L1"
+  ],
+  "paratope_residues": [
+   "G:26",
+   "G:27",
+   "G:28",
+   "G:30",
+   "G:31",
+   "G:32",
+   "G:33",
+   "G:34",
+   "G:35",
+   "G:54",
+   "G:55",
+   "G:56",
+   "G:57",
+   "G:58",
+   "G:59",
+   "G:99",
+   "G:101",
+   "G:102",
+   "G:103",
+   "G:104",
+   "G:105",
+   "G:106",
+   "G:107",
+   "G:108",
+   "G:110",
+   "G:111",
+   "F:27",
+   "F:28",
+   "F:30",
+   "F:31",
+   "F:32",
+   "F:50",
+   "F:52",
+   "F:92",
+   "F:93",
+   "F:94",
+   "F:97"
+  ],
+  "heavy_light_split": "Approximately 65:35 heavy:light. Heavy CDRs cover C:12-24; light CDRs reach C:25-29 and C:50-57.",
+  "binding_mode_union": "single-chain"
+ },
+ "residues": [
+  "C:12",
+  "C:13",
+  "C:15",
+  "C:18",
+  "C:19",
+  "C:20",
+  "C:21",
+  "C:22",
+  "C:23",
+  "C:24",
+  "C:25",
+  "C:26",
+  "C:29",
+  "C:50",
+  "C:51",
+  "C:53",
+  "C:56",
+  "C:57"
+ ],
+ "n_residues": 18,
+ "patches": [
+  {
+   "id": "P2",
+   "name": "UL130 N-terminal outer face",
+   "n_residues": 18,
+   "residues": [
+    "C:13",
+    "C:15",
+    "C:17",
+    "C:18",
+    "C:19",
+    "C:20",
+    "C:21",
+    "C:22",
+    "C:23",
+    "C:24",
+    "C:25",
+    "C:26",
+    "C:29",
+    "C:30",
+    "C:32",
+    "C:50",
+    "C:53",
+    "C:57"
+   ],
+   "n_kept_by_advocate": 15,
+   "n_dropped_by_advocate": 3
+  }
+ ],
+ "pooling_provenance": {
+  "n_shared_at_pooling": 18,
+  "n_disputed_at_pooling": 0,
+  "note": "counts only, describing how the organizer grouped the phase-1 patches. The organizer's own candidate residue list is deliberately absent: the answer is the advocate's footprint, in `residues` and in `antibodies[].interfaces[]`."
+ },
+ "evidence": {
+  "advocate": {
+   "n_findings": 4,
+   "n_supports": 2,
+   "n_weakens": 1,
+   "weakest_point": "The literature also describes the UL130 N-terminus as comparatively buried, and the nearby C:60 glycan limits the C:50-57 extension.",
+   "note": "the advocate reports claim/source/date/bearing and is not asked whether a source is about this binder"
+  },
+  "judge": {
+   "tier_a_support": 0,
+   "n_support_lines": 4,
+   "verdict": "live",
+   "note": "Tier A -- a source about this binder itself -- is the judge's adjudication, in assessment[].support[]. It exists nowhere in the advocate's own answer."
+  }
+ },
+ "provenance": {
+  "unverified_source_policy_fields": [
+   "gated",
+   "web_search",
+   "shell_network",
+   "gate_tools"
+  ],
+  "assembled_case_dir": "gpt-5.6-high/gather_refine/post_refactor/unreleased_20261029/gated/casp17/H2362/case_259152_G_rep1",
+  "organize_case_dir": "gpt-5.6-high/gather_refine/post_refactor/unreleased_20261029/gated/casp17/H2362/case_259152_GR_rep1",
+  "organize_status": "ok",
+  "judge_case_dir": "gpt-5.6-high/gather_refine/post_refactor/unreleased_20261029/gated/casp17/H2362/case_259152_GJ_rep1",
+  "judge_status": "ok",
+  "packet": "gpt-5.6-high/gather/packets/case_259152/packet",
+  "manifest": "gpt-5.6-high/gather/packets/case_259152/manifest.json",
+  "advocate_case_dir": "gpt-5.6-high/gather_refine/post_refactor/unreleased_20261029/gated/casp17/H2362/case_259152_GR_rep1",
+  "advocate_status": "ok"
+ }
+}

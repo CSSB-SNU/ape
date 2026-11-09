@@ -1,0 +1,348 @@
+{
+ "task": "gather",
+ "gather_mode": "batched",
+ "num_launchers": 3,
+ "policy": {
+  "evidence_cutoff": null,
+  "no_cutoff": true,
+  "gated": false,
+  "web_search": true,
+  "shell_network": true,
+  "gate_tools": []
+ },
+ "unscored": true,
+ "target": "H2362",
+ "target_set": "casp17",
+ "case": "case_259152",
+ "evidence_cutoff": null,
+ "target_release_date": "2026-06-12",
+ "retrieval_policy": "no-cutoff",
+ "input_structure": "data/staged_casp17_no_native/H2362.pdb",
+ "input_structure_sha256": "54e187b986e4696f87e1dd7dd4cd6cd943754471a337aa57a0577c6172827a73",
+ "briefing_source": "data/briefing/casp17_nocutoff/H2362/search_results.json",
+ "briefing_sha256": "51b08b3d656ebb7b7f7f0d284f291dc2a93f171a10cc488b650ef2ac8d2249c3",
+ "antigen_chains": [
+  "A",
+  "B",
+  "C",
+  "D",
+  "E"
+ ],
+ "antibody_files": {
+  "antibody.pdb": [
+   "F",
+   "G"
+  ]
+ },
+ "antibody_chain_types": {
+  "antibody.pdb": {
+   "F": "light",
+   "G": "heavy"
+  }
+ },
+ "stage": "gatherer",
+ "pocket": {
+  "id": "C7",
+  "judge_rank": 8,
+  "name": "A charged-aromatic crest along the exposed UL130/UL131A seam on the...",
+  "confidence": 0.05,
+  "p_rests_on_holds": 0.3,
+  "why_this_rank": "Its chemistry and size are plausible, but no cited antibody or receptor maps the exact ridge, C:93 is likely glycosylated, and the residue graph is sparse.",
+  "rests_on": "The C7 ridge is a coherent unreported antibody surface rather than a collection of exposed neighbors.",
+  "where_the_mass_goes_if_it_fails": "C10 or C4",
+  "what_it_is": "A charged-aromatic crest along the exposed UL130/UL131A seam on the side of the pentamer-specific head, distinct from the glycan-bearing outer UL130 rim.",
+  "why_one_candidate": "not pooled with anything: no other patch is both within 12 A (half centroid distance, half contact-graph hops) and coverable by one paratope of this antibody's reach, 17.6 A",
+  "from_patches": [
+   "P6"
+  ]
+ },
+ "note": "`confidence` on the pocket is over pockets and sums to about 1 across them. Inside an interface it is per residue in [0, 1] and sums to nothing. No residue is cut at a threshold: the whole vector is the answer.",
+ "mapping_basis": "side",
+ "checks": {
+  "unrecognised_sides": []
+ },
+ "chain_pairs": [
+  {
+   "antibody_chain": "F",
+   "antigen_chain": "C",
+   "n_residues": 11
+  },
+  {
+   "antibody_chain": "F",
+   "antigen_chain": "D",
+   "n_residues": 4
+  },
+  {
+   "antibody_chain": "G",
+   "antigen_chain": "C",
+   "n_residues": 11
+  },
+  {
+   "antibody_chain": "G",
+   "antigen_chain": "D",
+   "n_residues": 1
+  }
+ ],
+ "antibodies": [
+  {
+   "antibody": "antibody.pdb",
+   "chains": {
+    "F": "light",
+    "G": "heavy"
+   },
+   "binding_mode": null,
+   "n_residues_scored": 20,
+   "interfaces": [
+    {
+     "antibody_chain": "F",
+     "antibody_chain_type": "light",
+     "antigen_chain": "C",
+     "n_residues": 11,
+     "residue_confidence": {
+      "47": 0.7,
+      "69": 0.87,
+      "70": 0.69,
+      "71": 0.63,
+      "78": 0.45,
+      "80": 0.67,
+      "83": 0.57,
+      "84": 0.52,
+      "87": 0.64,
+      "90": 0.62,
+      "92": 0.48
+     },
+     "residue_side": {
+      "47": "both",
+      "69": "both",
+      "70": "both",
+      "71": "both",
+      "78": "light",
+      "80": "light",
+      "83": "light",
+      "84": "light",
+      "87": "both",
+      "90": "both",
+      "92": "light"
+     },
+     "max_confidence": 0.87,
+     "mean_confidence": 0.6218
+    },
+    {
+     "antibody_chain": "F",
+     "antibody_chain_type": "light",
+     "antigen_chain": "D",
+     "n_residues": 4,
+     "residue_confidence": {
+      "49": 0.36,
+      "52": 0.74,
+      "54": 0.62,
+      "57": 0.43
+     },
+     "residue_side": {
+      "49": "light",
+      "52": "both",
+      "54": "light",
+      "57": "light"
+     },
+     "max_confidence": 0.74,
+     "mean_confidence": 0.5375
+    },
+    {
+     "antibody_chain": "G",
+     "antibody_chain_type": "heavy",
+     "antigen_chain": "C",
+     "n_residues": 11,
+     "residue_confidence": {
+      "42": 0.42,
+      "47": 0.7,
+      "49": 0.78,
+      "50": 0.55,
+      "51": 0.61,
+      "67": 0.72,
+      "69": 0.87,
+      "70": 0.69,
+      "71": 0.63,
+      "87": 0.64,
+      "90": 0.62
+     },
+     "residue_side": {
+      "42": "heavy",
+      "47": "both",
+      "49": "heavy",
+      "50": "heavy",
+      "51": "heavy",
+      "67": "heavy",
+      "69": "both",
+      "70": "both",
+      "71": "both",
+      "87": "both",
+      "90": "both"
+     },
+     "max_confidence": 0.87,
+     "mean_confidence": 0.6573
+    },
+    {
+     "antibody_chain": "G",
+     "antibody_chain_type": "heavy",
+     "antigen_chain": "D",
+     "n_residues": 1,
+     "residue_confidence": {
+      "52": 0.74
+     },
+     "residue_side": {
+      "52": "both"
+     },
+     "max_confidence": 0.74,
+     "mean_confidence": 0.74
+    }
+   ]
+  }
+ ],
+ "paratope": {
+  "dominant_cdrs": [
+   "G:H3",
+   "G:H1",
+   "G:H2",
+   "F:L3"
+  ],
+  "paratope_residues": [
+   "G:28",
+   "G:30",
+   "G:31",
+   "G:32",
+   "G:33",
+   "G:34",
+   "G:35",
+   "G:54",
+   "G:55",
+   "G:56",
+   "G:57",
+   "G:58",
+   "G:59",
+   "G:99",
+   "G:101",
+   "G:102",
+   "G:103",
+   "G:104",
+   "G:105",
+   "G:106",
+   "G:107",
+   "G:108",
+   "G:110",
+   "G:111",
+   "F:27",
+   "F:28",
+   "F:30",
+   "F:31",
+   "F:32",
+   "F:50",
+   "F:52",
+   "F:91",
+   "F:92",
+   "F:93",
+   "F:94",
+   "F:97"
+  ],
+  "heavy_light_split": "Heavy contributes about 60% on C:42-71; light covers C:78-92 and D:49-57. Both chains meet at C:47/C:69-71/C:87/C:90 and D:52.",
+  "binding_mode_union": "straddling"
+ },
+ "residues": [
+  "C:42",
+  "C:47",
+  "C:49",
+  "C:50",
+  "C:51",
+  "C:67",
+  "C:69",
+  "C:70",
+  "C:71",
+  "C:78",
+  "C:80",
+  "C:83",
+  "C:84",
+  "C:87",
+  "C:90",
+  "C:92",
+  "D:49",
+  "D:52",
+  "D:54",
+  "D:57"
+ ],
+ "n_residues": 20,
+ "patches": [
+  {
+   "id": "P6",
+   "name": "UL130/UL131A charged-aromatic apex ridge",
+   "n_residues": 28,
+   "residues": [
+    "C:40",
+    "C:42",
+    "C:44",
+    "C:47",
+    "C:49",
+    "C:50",
+    "C:51",
+    "C:64",
+    "C:67",
+    "C:69",
+    "C:70",
+    "C:71",
+    "C:73",
+    "C:77",
+    "C:78",
+    "C:79",
+    "C:80",
+    "C:81",
+    "C:83",
+    "C:84",
+    "C:87",
+    "C:90",
+    "C:92",
+    "C:93",
+    "D:49",
+    "D:52",
+    "D:54",
+    "D:57"
+   ],
+   "n_kept_by_advocate": 20,
+   "n_dropped_by_advocate": 8
+  }
+ ],
+ "pooling_provenance": {
+  "n_shared_at_pooling": 28,
+  "n_disputed_at_pooling": 0,
+  "note": "counts only, describing how the organizer grouped the phase-1 patches. The organizer's own candidate residue list is deliberately absent: the answer is the advocate's footprint, in `residues` and in `antibodies[].interfaces[]`."
+ },
+ "evidence": {
+  "advocate": {
+   "n_findings": 4,
+   "n_supports": 3,
+   "n_weakens": 0,
+   "weakest_point": "No experimentally established receptor or neutralization mechanism was found for this exact seam; exposure and chemistry alone cannot show that occupancy has a biological consequence.",
+   "note": "the advocate reports claim/source/date/bearing and is not asked whether a source is about this binder"
+  },
+  "judge": {
+   "tier_a_support": 0,
+   "n_support_lines": 4,
+   "verdict": "unlikely",
+   "note": "Tier A -- a source about this binder itself -- is the judge's adjudication, in assessment[].support[]. It exists nowhere in the advocate's own answer."
+  }
+ },
+ "provenance": {
+  "unverified_source_policy_fields": [
+   "gated",
+   "web_search",
+   "shell_network",
+   "gate_tools"
+  ],
+  "assembled_case_dir": "gpt-5.6-high/gather_refine/post_refactor/unreleased_20261029/nocut/casp17/H2362/case_259152_G_rep1",
+  "organize_case_dir": "gpt-5.6-high/gather_refine/post_refactor/unreleased_20261029/nocut/casp17/H2362/case_259152_GR_rep1",
+  "organize_status": "ok",
+  "judge_case_dir": "gpt-5.6-high/gather_refine/post_refactor/unreleased_20261029/nocut/casp17/H2362/case_259152_GJ_rep1",
+  "judge_status": "ok",
+  "packet": "gpt-5.6-high/nocut/gather/packets/case_259152/packet",
+  "manifest": "gpt-5.6-high/nocut/gather/packets/case_259152/manifest.json",
+  "advocate_case_dir": "gpt-5.6-high/gather_refine/post_refactor/unreleased_20261029/nocut/casp17/H2362/case_259152_GR_rep1",
+  "advocate_status": "ok"
+ }
+}

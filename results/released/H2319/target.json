@@ -1,0 +1,544 @@
+{
+ "target": "H2319",
+ "target_set": "casp17",
+ "case": "case_5816d5",
+ "task": "gather",
+ "gather_mode": "batched",
+ "num_launchers": 3,
+ "policy": {
+  "evidence_cutoff": "2026-05-19",
+  "no_cutoff": false,
+  "gated": true,
+  "web_search": false,
+  "shell_network": true,
+  "gate_tools": [
+   "research",
+   "fetch",
+   "rcsb",
+   "patent",
+   "paper"
+  ]
+ },
+ "unscored": false,
+ "evidence_cutoff": "2026-05-19",
+ "target_release_date": "2026-05-19",
+ "retrieval_policy": "gated",
+ "antigen_chains": [
+  "A",
+  "D"
+ ],
+ "antibody_files": {
+  "antibody.1.pdb": [
+   "B",
+   "F"
+  ],
+  "antibody.2.pdb": [
+   "C",
+   "E"
+  ]
+ },
+ "antibody_chain_types": {
+  "antibody.1.pdb": {
+   "B": "heavy",
+   "F": "light"
+  },
+  "antibody.2.pdb": {
+   "C": "light",
+   "E": "heavy"
+  }
+ },
+ "input_structure": "structures/H2319.pdb",
+ "input_structure_sha256": null,
+ "briefing_source": null,
+ "briefing_sha256": null,
+ "recognized_complex": {
+  "organize": null,
+  "judge": true
+ },
+ "recognition_note": "The supplied VH/VL pair is HAstV-VA1 neutralizing mAb 7C8. The bridge is the exact variable sequences in WO2023056473A1 (2023-04-06) and the explicit 7C8 label in US20240391980A1 (2024-11-28); Ricemeyer et al. (2024-06-25) maps 7C8 escape P543L to supplied P137. No solved 7C8 complex was read.",
+ "what_separated_them": "Tier A exists here: exact sequence identification connects the supplied binder to 7C8, and 7C8 escape localizes it to P137. That concentrates 0.91 on the overlapping C5/C7 neighborhood. Nothing pre-cutoff separates their boundaries, so the modest C5 edge comes only from an independent structural comparison: C5 is tighter around P137 and more exposed on average. Generic exposure, function and antibody precedent did not decide the order among the remaining surfaces.",
+ "not_pooled": [],
+ "provenance": {
+  "unverified_source_policy_fields": [
+   "gated",
+   "web_search",
+   "shell_network",
+   "gate_tools"
+  ],
+  "assembled_case_dir": "gpt-5.6-high/gather_refine/post_refactor/released_structure_20261030/casp17/H2319/case_5816d5_G_rep2",
+  "organize_case_dir": "gpt-5.6-high/gather_refine/post_refactor/released_structure_20261030/casp17/H2319/case_5816d5_GR_rep1",
+  "organize_status": "ok",
+  "judge_case_dir": "gpt-5.6-high/gather_refine/post_refactor/released_structure_20261030/casp17/H2319/case_5816d5_GJ_rep2",
+  "judge_status": "ok",
+  "packet": "gpt-5.6-high/gather/packets/case_5816d5/packet",
+  "manifest": "gpt-5.6-high/gather/packets/case_5816d5/manifest.json"
+ },
+ "truth_file": "data/truth/casp17/H2319.epitope.json",
+ "truth": {
+  "n_residues": 26,
+  "usable": "yes",
+  "chains": {
+   "A": [
+    66,
+    134,
+    135,
+    136,
+    137,
+    138,
+    139,
+    140,
+    223,
+    232,
+    233,
+    235,
+    236
+   ],
+   "D": [
+    66,
+    134,
+    135,
+    136,
+    137,
+    138,
+    139,
+    140,
+    223,
+    232,
+    233,
+    235,
+    236
+   ]
+  },
+  "anchor_note": "the numbering frame only; the epitope is defined on the native and carried here by antigen sequence alignment, so which pooled model this is does not affect the label"
+ },
+ "oracle": {
+  "metric": "f1",
+  "epitope_definition": "whole_antibody",
+  "truth_file": "data/truth/casp17/H2319.epitope.json",
+  "rank1": {
+   "pocket": "C5",
+   "confidence": 0.5,
+   "precision": 0.7692,
+   "recall": 0.7692,
+   "f1": 0.7692,
+   "n_pred": 26,
+   "n_true": 26,
+   "n_hit": 20
+  },
+  "best": {
+   "pocket": "C5",
+   "judge_rank": 1,
+   "confidence": 0.5,
+   "precision": 0.7692,
+   "recall": 0.7692,
+   "f1": 0.7692,
+   "n_pred": 26,
+   "n_true": 26,
+   "n_hit": 20
+  },
+  "note": "the best pocket the answer already contains. Rank 1 is the answer as delivered, so the gap is what the judge's ordering cost."
+ },
+ "pockets": [
+  {
+   "id": "C5",
+   "judge_rank": 1,
+   "name": "The 7C8 escape-loop epitope on each protomer: the 133-140 ridge...",
+   "confidence": 0.5,
+   "mapping_basis": "per_antibody",
+   "n_residues": 26,
+   "score": {
+    "precision": 0.7692,
+    "recall": 0.7692,
+    "f1": 0.7692,
+    "n_pred": 26,
+    "n_true": 26,
+    "n_hit": 20
+   },
+   "chain_pairs": [
+    {
+     "antibody_chain": "B",
+     "antigen_chain": "A",
+     "n_residues": 9
+    },
+    {
+     "antibody_chain": "F",
+     "antigen_chain": "A",
+     "n_residues": 7
+    },
+    {
+     "antibody_chain": "C",
+     "antigen_chain": "D",
+     "n_residues": 7
+    },
+    {
+     "antibody_chain": "E",
+     "antigen_chain": "D",
+     "n_residues": 9
+    }
+   ],
+   "file": "pocket.C5.json"
+  },
+  {
+   "id": "C7",
+   "judge_rank": 2,
+   "name": "A shallow two-loop lateral face joining the 134-140 escape ridge to...",
+   "confidence": 0.41,
+   "mapping_basis": "per_antibody",
+   "n_residues": 26,
+   "score": {
+    "precision": 0.7692,
+    "recall": 0.7692,
+    "f1": 0.7692,
+    "n_pred": 26,
+    "n_true": 26,
+    "n_hit": 20
+   },
+   "chain_pairs": [
+    {
+     "antibody_chain": "B",
+     "antigen_chain": "A",
+     "n_residues": 8
+    },
+    {
+     "antibody_chain": "F",
+     "antigen_chain": "A",
+     "n_residues": 8
+    },
+    {
+     "antibody_chain": "C",
+     "antigen_chain": "D",
+     "n_residues": 8
+    },
+    {
+     "antibody_chain": "E",
+     "antigen_chain": "D",
+     "n_residues": 8
+    }
+   ],
+   "file": "pocket.C7.json"
+  },
+  {
+   "id": "C8",
+   "judge_rank": 3,
+   "name": "An acidic lateral site where the 156-161 loop centred on E158 meets...",
+   "confidence": 0.022,
+   "mapping_basis": "per_antibody",
+   "n_residues": 22,
+   "score": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0,
+    "n_pred": 22,
+    "n_true": 26,
+    "n_hit": 0
+   },
+   "chain_pairs": [
+    {
+     "antibody_chain": "B",
+     "antigen_chain": "A",
+     "n_residues": 7
+    },
+    {
+     "antibody_chain": "F",
+     "antigen_chain": "A",
+     "n_residues": 7
+    },
+    {
+     "antibody_chain": "C",
+     "antigen_chain": "D",
+     "n_residues": 7
+    },
+    {
+     "antibody_chain": "E",
+     "antigen_chain": "D",
+     "n_residues": 7
+    }
+   ],
+   "file": "pocket.C8.json"
+  },
+  {
+   "id": "C6",
+   "judge_rank": 4,
+   "name": "A dimer-edge antigenic site centred on the 205/209 loop, supported by...",
+   "confidence": 0.018,
+   "mapping_basis": "per_antibody",
+   "n_residues": 28,
+   "score": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0,
+    "n_pred": 28,
+    "n_true": 26,
+    "n_hit": 0
+   },
+   "chain_pairs": [
+    {
+     "antibody_chain": "B",
+     "antigen_chain": "A",
+     "n_residues": 9
+    },
+    {
+     "antibody_chain": "F",
+     "antigen_chain": "A",
+     "n_residues": 8
+    },
+    {
+     "antibody_chain": "F",
+     "antigen_chain": "D",
+     "n_residues": 2
+    },
+    {
+     "antibody_chain": "C",
+     "antigen_chain": "A",
+     "n_residues": 2
+    },
+    {
+     "antibody_chain": "C",
+     "antigen_chain": "D",
+     "n_residues": 8
+    },
+    {
+     "antibody_chain": "E",
+     "antigen_chain": "D",
+     "n_residues": 9
+    }
+   ],
+   "file": "pocket.C6.json"
+  },
+  {
+   "id": "C2",
+   "judge_rank": 5,
+   "name": "An upper lateral single-protomer terrace where the 43-49 ridge meets...",
+   "confidence": 0.013,
+   "mapping_basis": "per_antibody",
+   "n_residues": 26,
+   "score": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0,
+    "n_pred": 26,
+    "n_true": 26,
+    "n_hit": 0
+   },
+   "chain_pairs": [
+    {
+     "antibody_chain": "B",
+     "antigen_chain": "A",
+     "n_residues": 8
+    },
+    {
+     "antibody_chain": "F",
+     "antigen_chain": "A",
+     "n_residues": 8
+    },
+    {
+     "antibody_chain": "C",
+     "antigen_chain": "D",
+     "n_residues": 8
+    },
+    {
+     "antibody_chain": "E",
+     "antigen_chain": "D",
+     "n_residues": 8
+    }
+   ],
+   "file": "pocket.C2.json"
+  },
+  {
+   "id": "C9",
+   "judge_rank": 6,
+   "name": "A highly exposed upper lateral terrace formed by the Tyr41-Pro50...",
+   "confidence": 0.012,
+   "mapping_basis": "per_antibody",
+   "n_residues": 20,
+   "score": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0,
+    "n_pred": 20,
+    "n_true": 26,
+    "n_hit": 0
+   },
+   "chain_pairs": [
+    {
+     "antibody_chain": "B",
+     "antigen_chain": "A",
+     "n_residues": 7
+    },
+    {
+     "antibody_chain": "F",
+     "antigen_chain": "A",
+     "n_residues": 5
+    },
+    {
+     "antibody_chain": "C",
+     "antigen_chain": "D",
+     "n_residues": 5
+    },
+    {
+     "antibody_chain": "E",
+     "antigen_chain": "D",
+     "n_residues": 7
+    }
+   ],
+   "file": "pocket.C9.json"
+  },
+  {
+   "id": "C4",
+   "judge_rank": 7,
+   "name": "A basic lower-lateral shoulder combining the 114-117, 150-156 and...",
+   "confidence": 0.01,
+   "mapping_basis": "per_antibody",
+   "n_residues": 20,
+   "score": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0,
+    "n_pred": 20,
+    "n_true": 26,
+    "n_hit": 0
+   },
+   "chain_pairs": [
+    {
+     "antibody_chain": "B",
+     "antigen_chain": "A",
+     "n_residues": 8
+    },
+    {
+     "antibody_chain": "F",
+     "antigen_chain": "A",
+     "n_residues": 6
+    },
+    {
+     "antibody_chain": "C",
+     "antigen_chain": "D",
+     "n_residues": 6
+    },
+    {
+     "antibody_chain": "E",
+     "antigen_chain": "D",
+     "n_residues": 8
+    }
+   ],
+   "file": "pocket.C4.json"
+  },
+  {
+   "id": "C1",
+   "judge_rank": 8,
+   "name": "The distal shoulder of the intertwined beta12-beta14 loops at the...",
+   "confidence": 0.008,
+   "mapping_basis": "per_antibody",
+   "n_residues": 28,
+   "score": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0,
+    "n_pred": 28,
+    "n_true": 26,
+    "n_hit": 0
+   },
+   "chain_pairs": [
+    {
+     "antibody_chain": "B",
+     "antigen_chain": "A",
+     "n_residues": 9
+    },
+    {
+     "antibody_chain": "B",
+     "antigen_chain": "D",
+     "n_residues": 1
+    },
+    {
+     "antibody_chain": "F",
+     "antigen_chain": "A",
+     "n_residues": 3
+    },
+    {
+     "antibody_chain": "F",
+     "antigen_chain": "D",
+     "n_residues": 4
+    },
+    {
+     "antibody_chain": "C",
+     "antigen_chain": "A",
+     "n_residues": 4
+    },
+    {
+     "antibody_chain": "C",
+     "antigen_chain": "D",
+     "n_residues": 3
+    },
+    {
+     "antibody_chain": "E",
+     "antigen_chain": "A",
+     "n_residues": 1
+    },
+    {
+     "antibody_chain": "E",
+     "antigen_chain": "D",
+     "n_residues": 9
+    }
+   ],
+   "file": "pocket.C1.json"
+  },
+  {
+   "id": "C3",
+   "judge_rank": 9,
+   "name": "The narrow distal quaternary cap made by residues 173-180 of one...",
+   "confidence": 0.007,
+   "mapping_basis": "per_antibody",
+   "n_residues": 22,
+   "score": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0,
+    "n_pred": 22,
+    "n_true": 26,
+    "n_hit": 0
+   },
+   "chain_pairs": [
+    {
+     "antibody_chain": "B",
+     "antigen_chain": "A",
+     "n_residues": 8
+    },
+    {
+     "antibody_chain": "B",
+     "antigen_chain": "D",
+     "n_residues": 1
+    },
+    {
+     "antibody_chain": "F",
+     "antigen_chain": "A",
+     "n_residues": 2
+    },
+    {
+     "antibody_chain": "F",
+     "antigen_chain": "D",
+     "n_residues": 3
+    },
+    {
+     "antibody_chain": "C",
+     "antigen_chain": "A",
+     "n_residues": 3
+    },
+    {
+     "antibody_chain": "C",
+     "antigen_chain": "D",
+     "n_residues": 2
+    },
+    {
+     "antibody_chain": "E",
+     "antigen_chain": "A",
+     "n_residues": 1
+    },
+    {
+     "antibody_chain": "E",
+     "antigen_chain": "D",
+     "n_residues": 8
+    }
+   ],
+   "file": "pocket.C3.json"
+  }
+ ]
+}

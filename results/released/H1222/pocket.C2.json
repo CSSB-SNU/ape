@@ -1,0 +1,305 @@
+{
+ "task": "gather",
+ "gather_mode": "batched",
+ "num_launchers": 3,
+ "policy": {
+  "evidence_cutoff": "2024-06-04",
+  "no_cutoff": false,
+  "gated": true,
+  "web_search": false,
+  "shell_network": true,
+  "gate_tools": [
+   "research",
+   "fetch",
+   "rcsb",
+   "patent",
+   "paper"
+  ]
+ },
+ "unscored": false,
+ "target": "H1222",
+ "target_set": "casp16",
+ "case": "case_2e3a2a",
+ "evidence_cutoff": "2024-06-04",
+ "target_release_date": "2024-06-04",
+ "retrieval_policy": "gated",
+ "input_structure": "structures/H1222.pdb",
+ "input_structure_sha256": null,
+ "briefing_source": null,
+ "briefing_sha256": null,
+ "antigen_chains": [
+  "A"
+ ],
+ "antibody_files": {
+  "antibody.pdb": [
+   "B",
+   "C"
+  ]
+ },
+ "antibody_chain_types": {
+  "antibody.pdb": {
+   "B": "heavy",
+   "C": "light"
+  }
+ },
+ "truth_file": "data/truth/casp16/H1222.epitope.json",
+ "stage": "gatherer",
+ "pocket": {
+  "id": "C2",
+  "judge_rank": 3,
+  "name": "A conserved conformational face that joins the exposed aromatic...",
+  "confidence": 0.25,
+  "p_rests_on_holds": 0.42,
+  "why_this_rank": "C2 has the closest other-antibody topological precedent, but it is the widest footprint, slightly exceeds the stated radius when exposed side chains define the edge, and depends most strongly on transferring a conformation-sensitive 3G12 mode to a sequence-distinct Fab.",
+  "rests_on": "The supplied Fab can realize the flexible-flank, heavy-biased broad mode despite using essentially the full paratope reach.",
+  "where_the_mass_goes_if_it_fails": "C3",
+  "what_it_is": "A conserved conformational face that joins the exposed aromatic N-terminal flank of a small viral attachment domain to the near shoulder of its disulfide-pinned loop; folding makes the HFEVF-rich strand and the serine/asparagine noose shoulder one continuous antibody-facing surface.",
+  "why_one_candidate": "not pooled with anything: no other patch is both within 12 A (half centroid distance, half contact-graph hops) and coverable by one paratope of this antibody's reach, 17.0 A",
+  "from_patches": [
+   "P2"
+  ]
+ },
+ "note": "`confidence` on the pocket is over pockets and sums to about 1 across them. Inside an interface it is per residue in [0, 1] and sums to nothing. No residue is cut at a threshold: the whole vector is the answer.",
+ "mapping_basis": "side",
+ "checks": {
+  "unrecognised_sides": []
+ },
+ "chain_pairs": [
+  {
+   "antibody_chain": "B",
+   "antigen_chain": "A",
+   "n_residues": 14
+  },
+  {
+   "antibody_chain": "C",
+   "antigen_chain": "A",
+   "n_residues": 11
+  }
+ ],
+ "antibodies": [
+  {
+   "antibody": "antibody.pdb",
+   "chains": {
+    "B": "heavy",
+    "C": "light"
+   },
+   "binding_mode": null,
+   "n_residues_scored": 19,
+   "interfaces": [
+    {
+     "antibody_chain": "B",
+     "antibody_chain_type": "heavy",
+     "antigen_chain": "A",
+     "n_residues": 14,
+     "residue_confidence": {
+      "7": 0.82,
+      "8": 0.7,
+      "9": 0.95,
+      "10": 0.79,
+      "11": 0.92,
+      "12": 0.84,
+      "13": 0.83,
+      "14": 0.64,
+      "15": 0.58,
+      "16": 0.43,
+      "17": 0.13,
+      "18": 0.77,
+      "19": 0.84,
+      "20": 0.08
+     },
+     "residue_side": {
+      "7": "heavy",
+      "8": "heavy",
+      "9": "heavy",
+      "10": "heavy",
+      "11": "heavy",
+      "12": "heavy",
+      "13": "heavy",
+      "14": "heavy",
+      "15": "both",
+      "16": "both",
+      "17": "both",
+      "18": "both",
+      "19": "both",
+      "20": "both"
+     },
+     "max_confidence": 0.95,
+     "mean_confidence": 0.6657,
+     "precision_vs_truth": 0.9286,
+     "n_in_truth": 13
+    },
+    {
+     "antibody_chain": "C",
+     "antibody_chain_type": "light",
+     "antigen_chain": "A",
+     "n_residues": 11,
+     "residue_confidence": {
+      "15": 0.58,
+      "16": 0.43,
+      "17": 0.13,
+      "18": 0.77,
+      "19": 0.84,
+      "20": 0.08,
+      "21": 0.73,
+      "22": 0.76,
+      "23": 0.49,
+      "26": 0.12,
+      "33": 0.24
+     },
+     "residue_side": {
+      "15": "both",
+      "16": "both",
+      "17": "both",
+      "18": "both",
+      "19": "both",
+      "20": "both",
+      "21": "light",
+      "22": "light",
+      "23": "light",
+      "26": "light",
+      "33": "light"
+     },
+     "max_confidence": 0.84,
+     "mean_confidence": 0.47,
+     "precision_vs_truth": 0.9091,
+     "n_in_truth": 10
+    }
+   ]
+  }
+ ],
+ "paratope": {
+  "dominant_cdrs": [
+   "H2S3:H1",
+   "L3S3:H3"
+  ],
+  "paratope_residues": [
+   "B:28",
+   "B:30",
+   "B:31",
+   "B:32",
+   "B:52",
+   "B:54",
+   "B:55",
+   "B:56",
+   "B:57",
+   "B:58",
+   "B:101",
+   "B:102",
+   "B:103",
+   "B:104",
+   "B:109",
+   "C:26",
+   "C:27",
+   "C:31",
+   "C:32",
+   "C:33",
+   "C:34",
+   "C:95",
+   "C:96",
+   "C:97",
+   "C:99"
+  ],
+  "heavy_light_split": "Strongly heavy-biased, about 70:30. H2/H3 and H1 cover A:7-A:19, with both chains meeting at A:15-A:20; L1/L3 close over the A:21-A:23/A:26/A:33 polar and folded-back rim.",
+  "binding_mode_union": "single-chain"
+ },
+ "residues": [
+  "A:10",
+  "A:11",
+  "A:12",
+  "A:13",
+  "A:14",
+  "A:15",
+  "A:16",
+  "A:17",
+  "A:18",
+  "A:19",
+  "A:20",
+  "A:21",
+  "A:22",
+  "A:23",
+  "A:26",
+  "A:33",
+  "A:7",
+  "A:8",
+  "A:9"
+ ],
+ "n_residues": 19,
+ "patches": [
+  {
+   "id": "P2",
+   "name": "Conserved N-flank/noose-shoulder face (3G12-like site)",
+   "n_residues": 22,
+   "residues": [
+    "A:10",
+    "A:11",
+    "A:12",
+    "A:13",
+    "A:14",
+    "A:15",
+    "A:16",
+    "A:17",
+    "A:18",
+    "A:19",
+    "A:20",
+    "A:21",
+    "A:22",
+    "A:23",
+    "A:26",
+    "A:33",
+    "A:4",
+    "A:5",
+    "A:6",
+    "A:7",
+    "A:8",
+    "A:9"
+   ],
+   "n_kept_by_advocate": 19,
+   "n_dropped_by_advocate": 3
+  }
+ ],
+ "pooling_provenance": {
+  "n_shared_at_pooling": 22,
+  "n_disputed_at_pooling": 0,
+  "note": "counts only, describing how the organizer grouped the phase-1 patches. The organizer's own candidate residue list is deliberately absent: the answer is the advocate's footprint, in `residues` and in `antibodies[].interfaces[]`."
+ },
+ "evidence": {
+  "advocate": {
+   "n_findings": 6,
+   "n_supports": 5,
+   "n_weakens": 1,
+   "weakest_point": "The strongest support is a sequence-distinct 3G12 analogue whose binding requires a particular flexible-flank conformation. This Fab has different CDRs and a 14-residue, only partly exposed H3; the 28.05-A footprint uses much of its reach. The isolated antigen prediction may therefore display a flank/shoulder conformation that the biological ensemble does not populate for this antibody, and no target-specific experiment distinguishes this broad face from the adjacent noose crest.",
+   "note": "the advocate reports claim/source/date/bearing and is not asked whether a source is about this binder"
+  },
+  "judge": {
+   "tier_a_support": 0,
+   "n_support_lines": 7,
+   "verdict": "live",
+   "note": "Tier A -- a source about this binder itself -- is the judge's adjudication, in assessment[].support[]. It exists nowhere in the advocate's own answer."
+  }
+ },
+ "provenance": {
+  "unverified_source_policy_fields": [
+   "gated",
+   "web_search",
+   "shell_network",
+   "gate_tools"
+  ],
+  "assembled_case_dir": "gpt-5.6-high/gather_refine/post_refactor/released_structure_20261030/casp16/H1222/case_2e3a2a_G_rep2",
+  "organize_case_dir": "gpt-5.6-high/gather_refine/post_refactor/released_structure_20261030/casp16/H1222/case_2e3a2a_GR_rep1",
+  "organize_status": "ok",
+  "judge_case_dir": "gpt-5.6-high/gather_refine/post_refactor/released_structure_20261030/casp16/H1222/case_2e3a2a_GJ_rep2",
+  "judge_status": "ok",
+  "packet": "gpt-5.6-high/gather/packets/case_2e3a2a/packet",
+  "manifest": "gpt-5.6-high/gather/packets/case_2e3a2a/manifest.json",
+  "advocate_case_dir": "gpt-5.6-high/gather_refine/post_refactor/released_structure_20261030/casp16/H1222/case_2e3a2a_GR_rep1",
+  "advocate_status": "ok"
+ },
+ "score": {
+  "precision": 0.9474,
+  "recall": 0.8182,
+  "f1": 0.878,
+  "n_pred": 19,
+  "n_true": 22,
+  "n_hit": 18
+ }
+}

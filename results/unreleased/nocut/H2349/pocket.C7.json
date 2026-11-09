@@ -1,0 +1,337 @@
+{
+ "task": "gather",
+ "gather_mode": "batched",
+ "num_launchers": 3,
+ "policy": {
+  "evidence_cutoff": null,
+  "no_cutoff": true,
+  "gated": false,
+  "web_search": true,
+  "shell_network": true,
+  "gate_tools": []
+ },
+ "unscored": true,
+ "target": "H2349",
+ "target_set": "casp17",
+ "case": "case_e333d6",
+ "evidence_cutoff": null,
+ "target_release_date": "2026-06-05",
+ "retrieval_policy": "no-cutoff",
+ "input_structure": "data/staged_casp17_no_native/H2349.pdb",
+ "input_structure_sha256": "ed3bcb0b0799f7f8db3a7695ea1da3ddce30d9c2312cdd2e5d844f6e396bdd86",
+ "briefing_source": "data/briefing/casp17_nocutoff/H2349/search_results.json",
+ "briefing_sha256": "b7744ba9eed23f884929670e84213478fdfebc3fc94cf39cec30b7cf355ba753",
+ "antigen_chains": [
+  "A"
+ ],
+ "antibody_files": {
+  "antibody.pdb": [
+   "B",
+   "C"
+  ]
+ },
+ "antibody_chain_types": {
+  "antibody.pdb": {
+   "B": "unknown",
+   "C": "unknown"
+  }
+ },
+ "stage": "gatherer",
+ "pocket": {
+  "id": "C7",
+  "judge_rank": 6,
+  "name": "The broad aromatic crown of D1, extending from Y35/F36/H37 through...",
+  "confidence": 0.11,
+  "p_rests_on_holds": 0.28,
+  "why_this_rank": "C7 is the most exposed/aromatic D1 rendering, but it widens beyond the mapped Fab core, contains isolated A:8 and approaches the A:61 glycan region. It therefore shares D1-family mass without receiving a breadth bonus.",
+  "rests_on": "The added A:49-A:51 shoulder is part of one simultaneous interface and is not sterically excluded by the A:61 glycan.",
+  "where_the_mass_goes_if_it_fails": "C3 and C4.",
+  "what_it_is": "The broad aromatic crown of D1, extending from Y35/F36/H37 through the Y42/H49/F50 shoulder to the F86-Q92 site-III loop.",
+  "why_one_candidate": "not pooled with anything: no other patch is both within 12 A (half centroid distance, half contact-graph hops) and coverable by one paratope of this antibody's reach, 17.9 A",
+  "from_patches": [
+   "P8"
+  ]
+ },
+ "note": "`confidence` on the pocket is over pockets and sums to about 1 across them. Inside an interface it is per residue in [0, 1] and sums to nothing. No residue is cut at a threshold: the whole vector is the answer.",
+ "mapping_basis": "side",
+ "checks": {
+  "unrecognised_sides": []
+ },
+ "chain_pairs": [
+  {
+   "antibody_chain": "B",
+   "antigen_chain": "A",
+   "n_residues": 24
+  },
+  {
+   "antibody_chain": "C",
+   "antigen_chain": "A",
+   "n_residues": 24
+  }
+ ],
+ "antibodies": [
+  {
+   "antibody": "antibody.pdb",
+   "chains": {
+    "B": "unknown",
+    "C": "unknown"
+   },
+   "binding_mode": null,
+   "n_residues_scored": 24,
+   "interfaces": [
+    {
+     "antibody_chain": "B",
+     "antibody_chain_type": "unknown",
+     "antigen_chain": "A",
+     "n_residues": 24,
+     "residue_confidence": {
+      "1": 0.32,
+      "2": 0.42,
+      "3": 0.35,
+      "4": 0.28,
+      "5": 0.25,
+      "8": 0.42,
+      "34": 0.55,
+      "35": 0.88,
+      "36": 0.68,
+      "37": 0.82,
+      "41": 0.48,
+      "42": 0.72,
+      "49": 0.7,
+      "50": 0.82,
+      "51": 0.56,
+      "84": 0.35,
+      "86": 0.93,
+      "87": 0.78,
+      "88": 0.86,
+      "89": 0.76,
+      "90": 0.58,
+      "91": 0.82,
+      "92": 0.72,
+      "95": 0.38
+     },
+     "residue_side": {
+      "1": "heavy",
+      "2": "heavy",
+      "3": "heavy",
+      "4": "heavy",
+      "5": "heavy",
+      "8": "heavy",
+      "34": "both",
+      "35": "both",
+      "36": "both",
+      "37": "both",
+      "41": "both",
+      "42": "both",
+      "49": "heavy",
+      "50": "heavy",
+      "51": "heavy",
+      "84": "light",
+      "86": "both",
+      "87": "both",
+      "88": "both",
+      "89": "both",
+      "90": "light",
+      "91": "light",
+      "92": "light",
+      "95": "light"
+     },
+     "max_confidence": 0.93,
+     "mean_confidence": 0.6012
+    },
+    {
+     "antibody_chain": "C",
+     "antibody_chain_type": "unknown",
+     "antigen_chain": "A",
+     "n_residues": 24,
+     "residue_confidence": {
+      "1": 0.32,
+      "2": 0.42,
+      "3": 0.35,
+      "4": 0.28,
+      "5": 0.25,
+      "8": 0.42,
+      "34": 0.55,
+      "35": 0.88,
+      "36": 0.68,
+      "37": 0.82,
+      "41": 0.48,
+      "42": 0.72,
+      "49": 0.7,
+      "50": 0.82,
+      "51": 0.56,
+      "84": 0.35,
+      "86": 0.93,
+      "87": 0.78,
+      "88": 0.86,
+      "89": 0.76,
+      "90": 0.58,
+      "91": 0.82,
+      "92": 0.72,
+      "95": 0.38
+     },
+     "residue_side": {
+      "1": "heavy",
+      "2": "heavy",
+      "3": "heavy",
+      "4": "heavy",
+      "5": "heavy",
+      "8": "heavy",
+      "34": "both",
+      "35": "both",
+      "36": "both",
+      "37": "both",
+      "41": "both",
+      "42": "both",
+      "49": "heavy",
+      "50": "heavy",
+      "51": "heavy",
+      "84": "light",
+      "86": "both",
+      "87": "both",
+      "88": "both",
+      "89": "both",
+      "90": "light",
+      "91": "light",
+      "92": "light",
+      "95": "light"
+     },
+     "max_confidence": 0.93,
+     "mean_confidence": 0.6012
+    }
+   ]
+  }
+ ],
+ "paratope": {
+  "dominant_cdrs": [
+   "H3:H3",
+   "L3:L3",
+   "H2:H2"
+  ],
+  "paratope_residues": [
+   "B:27",
+   "B:28",
+   "B:31",
+   "B:32",
+   "B:52",
+   "B:55",
+   "B:57",
+   "B:100",
+   "B:101",
+   "B:102",
+   "B:103",
+   "B:107",
+   "C:27",
+   "C:28",
+   "C:31",
+   "C:52",
+   "C:92",
+   "C:93",
+   "C:94",
+   "C:96"
+  ],
+  "heavy_light_split": "Heavy covers the optional N terminus and Y35-to-F50 shoulder; light covers A:84-A:95. H3/L3 share A:34-A:42 and A:86-A:89, leaving a larger heavy lobe.",
+  "binding_mode_union": "single-chain"
+ },
+ "residues": [
+  "A:1",
+  "A:2",
+  "A:3",
+  "A:34",
+  "A:35",
+  "A:36",
+  "A:37",
+  "A:4",
+  "A:41",
+  "A:42",
+  "A:49",
+  "A:5",
+  "A:50",
+  "A:51",
+  "A:8",
+  "A:84",
+  "A:86",
+  "A:87",
+  "A:88",
+  "A:89",
+  "A:90",
+  "A:91",
+  "A:92",
+  "A:95"
+ ],
+ "n_residues": 24,
+ "patches": [
+  {
+   "id": "P8",
+   "name": "D1 distal tip / cytokine site-III face",
+   "n_residues": 26,
+   "residues": [
+    "A:1",
+    "A:2",
+    "A:29",
+    "A:3",
+    "A:31",
+    "A:34",
+    "A:35",
+    "A:36",
+    "A:37",
+    "A:4",
+    "A:41",
+    "A:42",
+    "A:49",
+    "A:5",
+    "A:50",
+    "A:51",
+    "A:8",
+    "A:84",
+    "A:86",
+    "A:87",
+    "A:88",
+    "A:89",
+    "A:90",
+    "A:91",
+    "A:92",
+    "A:95"
+   ],
+   "n_kept_by_advocate": 24,
+   "n_dropped_by_advocate": 2
+  }
+ ],
+ "pooling_provenance": {
+  "n_shared_at_pooling": 26,
+  "n_disputed_at_pooling": 0,
+  "note": "counts only, describing how the organizer grouped the phase-1 patches. The organizer's own candidate residue list is deliberately absent: the answer is the advocate's footprint, in `residues` and in `antibodies[].interfaces[]`."
+ },
+ "evidence": {
+  "advocate": {
+   "n_findings": 4,
+   "n_supports": 3,
+   "n_weakens": 1,
+   "weakest_point": "The exact Fab is anti-lysozyme. This is the widest D1 rendering, and its added A:49/A:50 shoulder is geometrically coverable but lacks direct mapped-antibody support.",
+   "note": "the advocate reports claim/source/date/bearing and is not asked whether a source is about this binder"
+  },
+  "judge": {
+   "tier_a_support": 0,
+   "n_support_lines": 4,
+   "verdict": "live",
+   "note": "Tier A -- a source about this binder itself -- is the judge's adjudication, in assessment[].support[]. It exists nowhere in the advocate's own answer."
+  }
+ },
+ "provenance": {
+  "unverified_source_policy_fields": [
+   "gated",
+   "web_search",
+   "shell_network",
+   "gate_tools"
+  ],
+  "assembled_case_dir": "gpt-5.6-high/gather_refine/post_refactor/unreleased_20261029/nocut/casp17/H2349/case_e333d6_G_rep1",
+  "organize_case_dir": "gpt-5.6-high/gather_refine/post_refactor/unreleased_20261029/nocut/casp17/H2349/case_e333d6_GR_rep1",
+  "organize_status": "ok",
+  "judge_case_dir": "gpt-5.6-high/gather_refine/post_refactor/unreleased_20261029/nocut/casp17/H2349/case_e333d6_GJ_rep1",
+  "judge_status": "ok",
+  "packet": "gpt-5.6-high/nocut/gather/packets/case_e333d6/packet",
+  "manifest": "gpt-5.6-high/nocut/gather/packets/case_e333d6/manifest.json",
+  "advocate_case_dir": "gpt-5.6-high/gather_refine/post_refactor/unreleased_20261029/nocut/casp17/H2349/case_e333d6_GR_rep1",
+  "advocate_status": "ok"
+ }
+}

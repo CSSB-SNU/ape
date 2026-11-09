@@ -1,0 +1,14 @@
+{
+  "case_id": "case_253bc2",
+  "cutoff": "2026-07-31",
+  "task": "gather",
+  "n_patches": 9,
+  "antibody_files": [
+    "antibody.pdb"
+  ],
+  "sessions": [
+    "a",
+    "b",
+    "c"
+  ]
+}

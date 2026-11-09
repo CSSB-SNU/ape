@@ -1,0 +1,326 @@
+{
+ "task": "gather",
+ "gather_mode": "batched",
+ "num_launchers": 3,
+ "policy": {
+  "evidence_cutoff": "2026-06-03",
+  "no_cutoff": false,
+  "gated": true,
+  "web_search": false,
+  "shell_network": true,
+  "gate_tools": [
+   "research",
+   "fetch",
+   "rcsb",
+   "patent",
+   "paper"
+  ]
+ },
+ "unscored": true,
+ "target": "H2344",
+ "target_set": "casp17",
+ "case": "case_679778",
+ "evidence_cutoff": "2026-06-03",
+ "target_release_date": "2026-06-03",
+ "retrieval_policy": "gated",
+ "input_structure": "data/staged_casp17_no_native/H2344.pdb",
+ "input_structure_sha256": "18733617ed7c4b96b45ff3352f72763afcd6932570e14f1956abaeff946190b8",
+ "briefing_source": "data/briefing/casp17/H2344/search_results.json",
+ "briefing_sha256": "e01658771c612bd446896a8f683ccea6f403b94ecf685db0566f7e4ef7b38f51",
+ "antigen_chains": [
+  "C"
+ ],
+ "antibody_files": {
+  "antibody.pdb": [
+   "A",
+   "B"
+  ]
+ },
+ "antibody_chain_types": {
+  "antibody.pdb": {
+   "A": "unknown",
+   "B": "unknown"
+  }
+ },
+ "stage": "gatherer",
+ "pocket": {
+  "id": "C4",
+  "judge_rank": 8,
+  "name": "The full E317-like receptor-overlap face: the upper Ig-core groove...",
+  "confidence": 0.08,
+  "p_rests_on_holds": 0.2,
+  "why_this_rank": "It is a broad, partly occluded expansion of the same receptor surface as C2/C8. The E317 precedent supports the family but not C4's extra rim, and C8 is the more coherent drawing.",
+  "rests_on": "The supplied antibody uses the full 29-residue E317-like expansion, including weakly supported added rim residues.",
+  "where_the_mass_goes_if_it_fails": "C8 and C2.",
+  "what_it_is": "The full E317-like receptor-overlap face: the upper Ig-core groove around C:221-C:224 plus the N-terminal 26-39, 132-140, 215-220 and 231-238 rims covered by a conventional Fab.",
+  "why_one_candidate": "not pooled with anything: no other patch is both within 12 A (half centroid distance, half contact-graph hops) and coverable by one paratope of this antibody's reach, 18.1 A",
+  "from_patches": [
+   "P5"
+  ]
+ },
+ "note": "`confidence` on the pocket is over pockets and sums to about 1 across them. Inside an interface it is per residue in [0, 1] and sums to nothing. No residue is cut at a threshold: the whole vector is the answer.",
+ "mapping_basis": "side",
+ "checks": {
+  "unrecognised_sides": []
+ },
+ "chain_pairs": [
+  {
+   "antibody_chain": "A",
+   "antigen_chain": "C",
+   "n_residues": 20
+  },
+  {
+   "antibody_chain": "B",
+   "antigen_chain": "C",
+   "n_residues": 20
+  }
+ ],
+ "antibodies": [
+  {
+   "antibody": "antibody.pdb",
+   "chains": {
+    "A": "unknown",
+    "B": "unknown"
+   },
+   "binding_mode": null,
+   "n_residues_scored": 20,
+   "interfaces": [
+    {
+     "antibody_chain": "A",
+     "antibody_chain_type": "unknown",
+     "antigen_chain": "C",
+     "n_residues": 20,
+     "residue_confidence": {
+      "26": 0.5,
+      "27": 0.75,
+      "28": 0.62,
+      "29": 0.48,
+      "38": 0.92,
+      "39": 0.55,
+      "132": 0.5,
+      "139": 0.68,
+      "140": 0.72,
+      "215": 0.84,
+      "218": 0.45,
+      "220": 0.6,
+      "221": 0.84,
+      "222": 0.98,
+      "223": 0.96,
+      "224": 0.52,
+      "227": 0.48,
+      "231": 0.51,
+      "235": 0.7,
+      "238": 0.65
+     },
+     "residue_side": {
+      "26": "heavy",
+      "27": "heavy",
+      "28": "heavy",
+      "29": "heavy",
+      "38": "both",
+      "39": "light",
+      "132": "heavy",
+      "139": "heavy",
+      "140": "heavy",
+      "215": "light",
+      "218": "light",
+      "220": "heavy",
+      "221": "heavy",
+      "222": "both",
+      "223": "both",
+      "224": "heavy",
+      "227": "heavy",
+      "231": "heavy",
+      "235": "heavy",
+      "238": "heavy"
+     },
+     "max_confidence": 0.98,
+     "mean_confidence": 0.6625
+    },
+    {
+     "antibody_chain": "B",
+     "antibody_chain_type": "unknown",
+     "antigen_chain": "C",
+     "n_residues": 20,
+     "residue_confidence": {
+      "26": 0.5,
+      "27": 0.75,
+      "28": 0.62,
+      "29": 0.48,
+      "38": 0.92,
+      "39": 0.55,
+      "132": 0.5,
+      "139": 0.68,
+      "140": 0.72,
+      "215": 0.84,
+      "218": 0.45,
+      "220": 0.6,
+      "221": 0.84,
+      "222": 0.98,
+      "223": 0.96,
+      "224": 0.52,
+      "227": 0.48,
+      "231": 0.51,
+      "235": 0.7,
+      "238": 0.65
+     },
+     "residue_side": {
+      "26": "heavy",
+      "27": "heavy",
+      "28": "heavy",
+      "29": "heavy",
+      "38": "both",
+      "39": "light",
+      "132": "heavy",
+      "139": "heavy",
+      "140": "heavy",
+      "215": "light",
+      "218": "light",
+      "220": "heavy",
+      "221": "heavy",
+      "222": "both",
+      "223": "both",
+      "224": "heavy",
+      "227": "heavy",
+      "231": "heavy",
+      "235": "heavy",
+      "238": "heavy"
+     },
+     "max_confidence": 0.98,
+     "mean_confidence": 0.6625
+    }
+   ]
+  }
+ ],
+ "paratope": {
+  "dominant_cdrs": [
+   "H3peripheryheavy3to1lightmanycontactsinvolvingbothchainsWouldbeabout753A25heavy3AlightwithH3andH2atcenterC4:H1",
+   "H2andH3heavyL1andL2lightH3dominantparatoperesiduesincludeH3loopresiduesheavyLightloopscontributetolateraledgeHeavyfractionabout70to30H:L1"
+  ],
+  "paratope_residues": [
+   "A:30",
+   "A:31",
+   "A:32",
+   "A:54",
+   "A:55",
+   "A:57",
+   "A:101",
+   "A:103",
+   "A:104",
+   "A:105",
+   "A:106",
+   "A:107",
+   "A:108",
+   "A:113",
+   "B:27",
+   "B:28",
+   "B:32",
+   "B:33",
+   "B:53",
+   "B:94",
+   "B:95"
+  ],
+  "heavy_light_split": "About 75:25 heavy:light, consistent with the homolog but not copied atom-for-atom. Heavy loops cover the PRFI/core and N-terminal rim; light loops support C:38/C:39/C:215/C:218.",
+  "binding_mode_union": "single-chain"
+ },
+ "residues": [
+  "C:132",
+  "C:139",
+  "C:140",
+  "C:215",
+  "C:218",
+  "C:220",
+  "C:221",
+  "C:222",
+  "C:223",
+  "C:224",
+  "C:227",
+  "C:231",
+  "C:235",
+  "C:238",
+  "C:26",
+  "C:27",
+  "C:28",
+  "C:29",
+  "C:38",
+  "C:39"
+ ],
+ "n_residues": 20,
+ "patches": [
+  {
+   "id": "P5",
+   "name": "Receptor-overlap/E317-like alpha3 face",
+   "n_residues": 29,
+   "residues": [
+    "C:132",
+    "C:134",
+    "C:139",
+    "C:140",
+    "C:193",
+    "C:196",
+    "C:215",
+    "C:216",
+    "C:218",
+    "C:220",
+    "C:221",
+    "C:222",
+    "C:223",
+    "C:224",
+    "C:227",
+    "C:231",
+    "C:234",
+    "C:235",
+    "C:238",
+    "C:239",
+    "C:25",
+    "C:26",
+    "C:27",
+    "C:28",
+    "C:29",
+    "C:30",
+    "C:36",
+    "C:38",
+    "C:39"
+   ],
+   "n_kept_by_advocate": 20,
+   "n_dropped_by_advocate": 9
+  }
+ ],
+ "pooling_provenance": {
+  "n_shared_at_pooling": 29,
+  "n_disputed_at_pooling": 0,
+  "note": "counts only, describing how the organizer grouped the phase-1 patches. The organizer's own candidate residue list is deliberately absent: the answer is the advocate's footprint, in `residues` and in `antibodies[].interfaces[]`."
+ },
+ "evidence": {
+  "advocate": {
+   "n_findings": 6,
+   "n_supports": 3,
+   "n_weakens": 1,
+   "weakest_point": "This is the most explicit homolog transfer, but the homolog's dominant H3 is not the supplied H3. Framework similarity and shared H1/H2 chemistry do not guarantee epitope conservation when the central loop has changed.",
+   "note": "the advocate reports claim/source/date/bearing and is not asked whether a source is about this binder"
+  },
+  "judge": {
+   "tier_a_support": 0,
+   "n_support_lines": 3,
+   "verdict": "unlikely",
+   "note": "Tier A -- a source about this binder itself -- is the judge's adjudication, in assessment[].support[]. It exists nowhere in the advocate's own answer."
+  }
+ },
+ "provenance": {
+  "unverified_source_policy_fields": [
+   "gated",
+   "web_search",
+   "shell_network",
+   "gate_tools"
+  ],
+  "assembled_case_dir": "gpt-5.6-high/gather_refine/post_refactor/unreleased_20261029/gated/casp17/H2344/case_679778_G_rep3",
+  "organize_case_dir": "gpt-5.6-high/gather_refine/post_refactor/unreleased_20261029/gated/casp17/H2344/case_679778_GR_rep3",
+  "organize_status": "ok",
+  "judge_case_dir": "gpt-5.6-high/gather_refine/post_refactor/unreleased_20261029/gated/casp17/H2344/case_679778_GJ_rep3",
+  "judge_status": "ok",
+  "packet": "gpt-5.6-high/gather/packets/case_679778/packet",
+  "manifest": "gpt-5.6-high/gather/packets/case_679778/manifest.json",
+  "advocate_case_dir": "gpt-5.6-high/gather_refine/post_refactor/unreleased_20261029/gated/casp17/H2344/case_679778_GR_rep3",
+  "advocate_status": "ok"
+ }
+}

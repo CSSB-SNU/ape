@@ -1,0 +1,443 @@
+{
+ "task": "gather",
+ "gather_mode": "batched",
+ "num_launchers": 3,
+ "policy": {
+  "evidence_cutoff": "2024-06-06",
+  "no_cutoff": false,
+  "gated": true,
+  "web_search": false,
+  "shell_network": true,
+  "gate_tools": [
+   "research",
+   "fetch",
+   "rcsb",
+   "patent",
+   "paper"
+  ]
+ },
+ "unscored": false,
+ "target": "H1225",
+ "target_set": "casp16",
+ "case": "case_db141c",
+ "evidence_cutoff": "2024-06-06",
+ "target_release_date": "2024-06-06",
+ "retrieval_policy": "gated",
+ "input_structure": "structures/H1225.pdb",
+ "input_structure_sha256": null,
+ "briefing_source": null,
+ "briefing_sha256": null,
+ "antigen_chains": [
+  "A"
+ ],
+ "antibody_files": {
+  "antibody.pdb": [
+   "B",
+   "C"
+  ]
+ },
+ "antibody_chain_types": {
+  "antibody.pdb": {
+   "B": "unknown",
+   "C": "unknown"
+  }
+ },
+ "truth_file": "data/truth/casp16/H1225.epitope.json",
+ "stage": "gatherer",
+ "pocket": {
+  "id": "C2",
+  "judge_rank": 3,
+  "name": "The receptor-facing cystine-noose/CX3C surface of the RSV-G central...",
+  "confidence": 0.06,
+  "p_rests_on_holds": 0.12,
+  "why_this_rank": "C2 is a real functional antibody site and matches the supplied antigen conformation well, but its localization comes from 2D10 and receptor biology; most of its defended center lies beyond the exact 1G1 patent interval.",
+  "rests_on": "The patent interval is too coarse to exclude a distal 2D10-like mode and 1G1 independently adopts that noose-face approach.",
+  "where_the_mass_goes_if_it_fails": "C3",
+  "what_it_is": "The receptor-facing cystine-noose/CX3C surface of the RSV-G central conserved domain: the exposed polar loop A:21-A:25 and hydrophobic CX3C face A:27-A:29, ending at basic A:31-A:32. Disulfides A:17-A:30 and A:20-A:26 shape this surface, but their cysteine side chains are mostly buried rather than energetic anchors.",
+  "why_one_candidate": "geometry pooled 6 patches (P2, P3, P4, P5, P6, P8): P4+P6 at 0.11 A, union radius 9.32 A; P3+P5 at 0.53 A, union radius 15.32 A; P3+P5+P8 at 0.56 A, union radius 15.74 A; P2+P4+P6 at 1.35 A, union radius 14.3 A; P2+P3+P4+P5+P6+P8 at 4.72 A, union radius 16.75 A. Every union fits inside this antibody's paratope reach of 16.9 A. No session judged these to be the same surface.",
+  "from_patches": [
+   "P2",
+   "P3",
+   "P4",
+   "P5",
+   "P6",
+   "P8"
+  ]
+ },
+ "note": "`confidence` on the pocket is over pockets and sums to about 1 across them. Inside an interface it is per residue in [0, 1] and sums to nothing. No residue is cut at a threshold: the whole vector is the answer.",
+ "mapping_basis": "side",
+ "checks": {
+  "unrecognised_sides": []
+ },
+ "chain_pairs": [
+  {
+   "antibody_chain": "B",
+   "antigen_chain": "A",
+   "n_residues": 12
+  },
+  {
+   "antibody_chain": "C",
+   "antigen_chain": "A",
+   "n_residues": 12
+  }
+ ],
+ "antibodies": [
+  {
+   "antibody": "antibody.pdb",
+   "chains": {
+    "B": "unknown",
+    "C": "unknown"
+   },
+   "binding_mode": null,
+   "n_residues_scored": 12,
+   "interfaces": [
+    {
+     "antibody_chain": "B",
+     "antibody_chain_type": "unknown",
+     "antigen_chain": "A",
+     "n_residues": 12,
+     "residue_confidence": {
+      "17": 0.4,
+      "21": 0.72,
+      "22": 0.88,
+      "23": 0.76,
+      "24": 0.84,
+      "25": 0.86,
+      "27": 0.96,
+      "28": 0.82,
+      "29": 0.93,
+      "30": 0.25,
+      "31": 0.52,
+      "32": 0.88
+     },
+     "residue_side": {
+      "17": "heavy",
+      "21": "heavy",
+      "22": "both",
+      "23": "light",
+      "24": "both",
+      "25": "heavy",
+      "27": "both",
+      "28": "heavy",
+      "29": "heavy",
+      "30": "heavy",
+      "31": "heavy",
+      "32": "heavy"
+     },
+     "max_confidence": 0.96,
+     "mean_confidence": 0.735,
+     "precision_vs_truth": 0.25,
+     "n_in_truth": 3
+    },
+    {
+     "antibody_chain": "C",
+     "antibody_chain_type": "unknown",
+     "antigen_chain": "A",
+     "n_residues": 12,
+     "residue_confidence": {
+      "17": 0.4,
+      "21": 0.72,
+      "22": 0.88,
+      "23": 0.76,
+      "24": 0.84,
+      "25": 0.86,
+      "27": 0.96,
+      "28": 0.82,
+      "29": 0.93,
+      "30": 0.25,
+      "31": 0.52,
+      "32": 0.88
+     },
+     "residue_side": {
+      "17": "heavy",
+      "21": "heavy",
+      "22": "both",
+      "23": "light",
+      "24": "both",
+      "25": "heavy",
+      "27": "both",
+      "28": "heavy",
+      "29": "heavy",
+      "30": "heavy",
+      "31": "heavy",
+      "32": "heavy"
+     },
+     "max_confidence": 0.96,
+     "mean_confidence": 0.735,
+     "precision_vs_truth": 0.25,
+     "n_in_truth": 3
+    }
+   ]
+  }
+ ],
+ "paratope": {
+  "dominant_cdrs": [
+   "H3:H2",
+   "H3:L3"
+  ],
+  "paratope_residues": [
+   "B:27",
+   "B:32",
+   "B:54",
+   "B:55",
+   "B:56",
+   "B:57",
+   "B:100",
+   "B:101",
+   "B:102",
+   "B:103",
+   "B:104",
+   "B:105",
+   "B:106",
+   "B:107",
+   "B:108",
+   "B:112",
+   "B:113",
+   "C:29",
+   "C:30",
+   "C:31",
+   "C:51",
+   "C:91",
+   "C:92",
+   "C:93",
+   "C:95"
+  ],
+  "heavy_light_split": "Approximately 80:20 heavy:light. H3/H2 cover A:17/A:21-A:22/A:24-A:32; L1/L3 form a smaller polar shelf at A:22-A:24 and A:27, with both-chain overlap at A:22/A:24/A:27.",
+  "binding_mode_union": "single-chain"
+ },
+ "residues": [
+  "A:17",
+  "A:21",
+  "A:22",
+  "A:23",
+  "A:24",
+  "A:25",
+  "A:27",
+  "A:28",
+  "A:29",
+  "A:30",
+  "A:31",
+  "A:32"
+ ],
+ "n_residues": 12,
+ "patches": [
+  {
+   "id": "P2",
+   "name": "CX3C cystine-noose/Trp27 face",
+   "n_residues": 18,
+   "residues": [
+    "A:17",
+    "A:18",
+    "A:19",
+    "A:20",
+    "A:21",
+    "A:22",
+    "A:23",
+    "A:24",
+    "A:25",
+    "A:26",
+    "A:27",
+    "A:28",
+    "A:29",
+    "A:30",
+    "A:31",
+    "A:32",
+    "A:33",
+    "A:34"
+   ],
+   "n_kept_by_advocate": 12,
+   "n_dropped_by_advocate": 6
+  },
+  {
+   "id": "P3",
+   "name": "Bipartite conserved-flank face around the cystine noose",
+   "n_residues": 24,
+   "residues": [
+    "A:10",
+    "A:11",
+    "A:12",
+    "A:13",
+    "A:14",
+    "A:15",
+    "A:18",
+    "A:19",
+    "A:29",
+    "A:30",
+    "A:31",
+    "A:32",
+    "A:33",
+    "A:34",
+    "A:35",
+    "A:36",
+    "A:37",
+    "A:38",
+    "A:39",
+    "A:40",
+    "A:6",
+    "A:7",
+    "A:8",
+    "A:9"
+   ],
+   "n_kept_by_advocate": 4,
+   "n_dropped_by_advocate": 20
+  },
+  {
+   "id": "P4",
+   "name": "CX3C/cystine-noose face",
+   "n_residues": 18,
+   "residues": [
+    "A:15",
+    "A:16",
+    "A:17",
+    "A:18",
+    "A:19",
+    "A:20",
+    "A:21",
+    "A:22",
+    "A:23",
+    "A:24",
+    "A:25",
+    "A:26",
+    "A:27",
+    "A:28",
+    "A:29",
+    "A:30",
+    "A:31",
+    "A:32"
+   ],
+   "n_kept_by_advocate": 12,
+   "n_dropped_by_advocate": 6
+  },
+  {
+   "id": "P5",
+   "name": "Folded conserved-strand/C-terminal-return face",
+   "n_residues": 21,
+   "residues": [
+    "A:10",
+    "A:11",
+    "A:12",
+    "A:13",
+    "A:14",
+    "A:15",
+    "A:16",
+    "A:17",
+    "A:18",
+    "A:19",
+    "A:33",
+    "A:34",
+    "A:35",
+    "A:36",
+    "A:37",
+    "A:38",
+    "A:39",
+    "A:40",
+    "A:7",
+    "A:8",
+    "A:9"
+   ],
+   "n_kept_by_advocate": 1,
+   "n_dropped_by_advocate": 20
+  },
+  {
+   "id": "P6",
+   "name": "2D10-like cystine-noose/CX3C face",
+   "n_residues": 16,
+   "residues": [
+    "A:17",
+    "A:18",
+    "A:19",
+    "A:20",
+    "A:21",
+    "A:22",
+    "A:23",
+    "A:24",
+    "A:25",
+    "A:26",
+    "A:27",
+    "A:28",
+    "A:29",
+    "A:30",
+    "A:31",
+    "A:32"
+   ],
+   "n_kept_by_advocate": 12,
+   "n_dropped_by_advocate": 4
+  },
+  {
+   "id": "P8",
+   "name": "CB017.5-like conserved N/C-flank clasp",
+   "n_residues": 22,
+   "residues": [
+    "A:10",
+    "A:11",
+    "A:12",
+    "A:13",
+    "A:14",
+    "A:15",
+    "A:16",
+    "A:17",
+    "A:18",
+    "A:19",
+    "A:20",
+    "A:32",
+    "A:33",
+    "A:34",
+    "A:35",
+    "A:36",
+    "A:37",
+    "A:38",
+    "A:39",
+    "A:40",
+    "A:8",
+    "A:9"
+   ],
+   "n_kept_by_advocate": 2,
+   "n_dropped_by_advocate": 20
+  }
+ ],
+ "pooling_provenance": {
+  "n_shared_at_pooling": 2,
+  "n_disputed_at_pooling": 33,
+  "note": "counts only, describing how the organizer grouped the phase-1 patches. The organizer's own candidate residue list is deliberately absent: the answer is the advocate's footprint, in `residues` and in `antibodies[].interfaces[]`."
+ },
+ "evidence": {
+  "advocate": {
+   "n_findings": 8,
+   "n_supports": 6,
+   "n_weakens": 1,
+   "weakest_point": "The exact-antibody patent claims named 1G1 within native G160-176, local A:4-A:20, while this refined center lies mainly at A:21-A:32. The claim is coarse and broader than later structural footprints for 2D10, but no target-specific residue map answers this contrary evidence; moreover, the C2 neighbourhood spans opposite approach faces that one paratope could not all occupy.",
+   "note": "the advocate reports claim/source/date/bearing and is not asked whether a source is about this binder"
+  },
+  "judge": {
+   "tier_a_support": 1,
+   "n_support_lines": 5,
+   "verdict": "unlikely",
+   "note": "Tier A -- a source about this binder itself -- is the judge's adjudication, in assessment[].support[]. It exists nowhere in the advocate's own answer."
+  }
+ },
+ "provenance": {
+  "unverified_source_policy_fields": [
+   "gated",
+   "web_search",
+   "shell_network",
+   "gate_tools"
+  ],
+  "assembled_case_dir": "gpt-5.6-high/gather_refine/post_refactor/released_structure_20261030/casp16/H1225/case_db141c_G_rep2",
+  "organize_case_dir": "gpt-5.6-high/gather_refine/post_refactor/released_structure_20261030/casp16/H1225/case_db141c_GR_rep1",
+  "organize_status": "ok",
+  "judge_case_dir": "gpt-5.6-high/gather_refine/post_refactor/released_structure_20261030/casp16/H1225/case_db141c_GJ_rep2",
+  "judge_status": "ok",
+  "packet": "gpt-5.6-high/gather/packets/case_db141c/packet",
+  "manifest": "gpt-5.6-high/gather/packets/case_db141c/manifest.json",
+  "advocate_case_dir": "gpt-5.6-high/gather_refine/post_refactor/released_structure_20261030/casp16/H1225/case_db141c_GR_rep1",
+  "advocate_status": "ok"
+ },
+ "score": {
+  "precision": 0.25,
+  "recall": 0.1765,
+  "f1": 0.2069,
+  "n_pred": 12,
+  "n_true": 17,
+  "n_hit": 3
+ }
+}

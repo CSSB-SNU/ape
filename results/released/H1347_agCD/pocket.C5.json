@@ -1,0 +1,295 @@
+{
+ "task": "gather",
+ "gather_mode": "batched",
+ "num_launchers": 3,
+ "policy": {
+  "evidence_cutoff": "2026-05-21",
+  "no_cutoff": false,
+  "gated": true,
+  "web_search": false,
+  "shell_network": true,
+  "gate_tools": [
+   "research",
+   "fetch",
+   "rcsb",
+   "patent",
+   "paper"
+  ]
+ },
+ "unscored": false,
+ "target": "H1347_agCD",
+ "target_set": "casp17",
+ "case": "case_0f54aa",
+ "evidence_cutoff": "2026-05-21",
+ "target_release_date": "2026-05-21",
+ "retrieval_policy": "gated",
+ "input_structure": "structures/H1347_agCD.pdb",
+ "input_structure_sha256": null,
+ "briefing_source": null,
+ "briefing_sha256": null,
+ "antigen_chains": [
+  "C",
+  "D"
+ ],
+ "antibody_files": {
+  "antibody.1.pdb": [
+   "A"
+  ],
+  "antibody.2.pdb": [
+   "B"
+  ]
+ },
+ "antibody_chain_types": {
+  "antibody.1.pdb": {
+   "A": "heavy"
+  },
+  "antibody.2.pdb": {
+   "B": "light"
+  }
+ },
+ "truth_file": "data/truth/casp17/H1347_agCD.epitope.json",
+ "stage": "gatherer",
+ "pocket": {
+  "id": "C5",
+  "judge_rank": 7,
+  "name": "An oblique variable-domain idiotope on the CDR1/CDR2 shelves: C-chain...",
+  "confidence": 0.07,
+  "p_rests_on_holds": 0.14,
+  "why_this_rank": "The two lateral shelves are individually plausible, but both the directional assignment and the claimed competition consequence are weak.",
+  "rests_on": "A and B split onto the nominated lateral shelves in the stated direction.",
+  "where_the_mass_goes_if_it_fails": "C7 or the apex candidates C2/C4",
+  "what_it_is": "An oblique variable-domain idiotope on the CDR1/CDR2 shelves: C-chain H1/H2 for A and D-chain L1/L2 for B.",
+  "why_one_candidate": "not pooled with anything: no other patch is both within 12 A (half centroid distance, half contact-graph hops) and coverable by one paratope of this antibody's reach, 13.2 A",
+  "from_patches": [
+   "P5"
+  ]
+ },
+ "note": "`confidence` on the pocket is over pockets and sums to about 1 across them. Inside an interface it is per residue in [0, 1] and sums to nothing. No residue is cut at a threshold: the whole vector is the answer.",
+ "mapping_basis": "per_antibody",
+ "checks": {
+  "unrecognised_sides": []
+ },
+ "chain_pairs": [
+  {
+   "antibody_chain": "A",
+   "antigen_chain": "C",
+   "n_residues": 8
+  },
+  {
+   "antibody_chain": "B",
+   "antigen_chain": "D",
+   "n_residues": 9
+  }
+ ],
+ "antibodies": [
+  {
+   "antibody": "antibody.1.pdb",
+   "chains": {
+    "A": "heavy"
+   },
+   "binding_mode": "single-chain",
+   "n_residues_scored": 8,
+   "interfaces": [
+    {
+     "antibody_chain": "A",
+     "antibody_chain_type": "heavy",
+     "antigen_chain": "C",
+     "n_residues": 8,
+     "residue_confidence": {
+      "30": 0.62,
+      "31": 0.68,
+      "33": 0.72,
+      "34": 0.83,
+      "55": 0.86,
+      "56": 0.78,
+      "57": 0.5,
+      "59": 0.58
+     },
+     "residue_side": {
+      "30": "heavy",
+      "31": "heavy",
+      "33": "heavy",
+      "34": "heavy",
+      "55": "heavy",
+      "56": "heavy",
+      "57": "heavy",
+      "59": "heavy"
+     },
+     "max_confidence": 0.86,
+     "mean_confidence": 0.6963,
+     "precision_vs_truth": 0.0,
+     "n_in_truth": 0
+    }
+   ]
+  },
+  {
+   "antibody": "antibody.2.pdb",
+   "chains": {
+    "B": "light"
+   },
+   "binding_mode": "single-chain",
+   "n_residues_scored": 9,
+   "interfaces": [
+    {
+     "antibody_chain": "B",
+     "antibody_chain_type": "light",
+     "antigen_chain": "D",
+     "n_residues": 9,
+     "residue_confidence": {
+      "30": 0.58,
+      "31": 0.65,
+      "35": 0.72,
+      "48": 0.9,
+      "49": 0.84,
+      "51": 0.76,
+      "52": 0.81,
+      "53": 0.85,
+      "55": 0.72
+     },
+     "residue_side": {
+      "30": "light",
+      "31": "light",
+      "35": "light",
+      "48": "light",
+      "49": "light",
+      "51": "light",
+      "52": "light",
+      "53": "light",
+      "55": "light"
+     },
+     "max_confidence": 0.9,
+     "mean_confidence": 0.7589,
+     "precision_vs_truth": 0.0,
+     "n_in_truth": 0
+    }
+   ]
+  }
+ ],
+ "paratope": {
+  "dominant_cdrs": [
+   "A:H1",
+   "A:H2",
+   "B:L1",
+   "B:L3"
+  ],
+  "paratope_residues": [
+   "A:27",
+   "A:29",
+   "A:32",
+   "A:51",
+   "A:54",
+   "A:57",
+   "A:58",
+   "B:27",
+   "B:29",
+   "B:32",
+   "B:50",
+   "B:51",
+   "B:89",
+   "B:91",
+   "B:94"
+  ],
+  "heavy_light_split": "The pooled location is resolved into two independent single-chain footprints: A on C H1/H2 and B on D L1/L2. They do not overlap.",
+  "binding_mode_union": null
+ },
+ "residues": [
+  "C:30",
+  "C:31",
+  "C:33",
+  "C:34",
+  "C:55",
+  "C:56",
+  "C:57",
+  "C:59",
+  "D:30",
+  "D:31",
+  "D:35",
+  "D:48",
+  "D:49",
+  "D:51",
+  "D:52",
+  "D:53",
+  "D:55"
+ ],
+ "n_residues": 17,
+ "patches": [
+  {
+   "id": "P5",
+   "name": "Oblique lateral variable-domain idiotope",
+   "n_residues": 24,
+   "residues": [
+    "C:30",
+    "C:31",
+    "C:33",
+    "C:34",
+    "C:55",
+    "C:56",
+    "C:57",
+    "C:59",
+    "C:60",
+    "C:61",
+    "C:62",
+    "D:28",
+    "D:29",
+    "D:30",
+    "D:31",
+    "D:33",
+    "D:35",
+    "D:48",
+    "D:49",
+    "D:50",
+    "D:51",
+    "D:52",
+    "D:53",
+    "D:55"
+   ],
+   "n_kept_by_advocate": 17,
+   "n_dropped_by_advocate": 7
+  }
+ ],
+ "pooling_provenance": {
+  "n_shared_at_pooling": 24,
+  "n_disputed_at_pooling": 0,
+  "note": "counts only, describing how the organizer grouped the phase-1 patches. The organizer's own candidate residue list is deliberately absent: the answer is the advocate's footprint, in `residues` and in `antibodies[].interfaces[]`."
+ },
+ "evidence": {
+  "advocate": {
+   "n_findings": 4,
+   "n_supports": 4,
+   "n_weakens": 0,
+   "weakest_point": "The lateral faces are exposed and have precedent, but the largest known functional contacts lie at the omitted H3/L3 apex. A lateral binder may therefore be noncompetitive.",
+   "note": "the advocate reports claim/source/date/bearing and is not asked whether a source is about this binder"
+  },
+  "judge": {
+   "tier_a_support": 0,
+   "n_support_lines": 4,
+   "verdict": "live",
+   "note": "Tier A -- a source about this binder itself -- is the judge's adjudication, in assessment[].support[]. It exists nowhere in the advocate's own answer."
+  }
+ },
+ "provenance": {
+  "unverified_source_policy_fields": [
+   "gated",
+   "web_search",
+   "shell_network",
+   "gate_tools"
+  ],
+  "assembled_case_dir": "gpt-5.6-high/gather_refine/post_refactor/released_structure_20261030/casp17/H1347_agCD/case_0f54aa_G_rep2",
+  "organize_case_dir": "gpt-5.6-high/gather_refine/post_refactor/released_structure_20261030/casp17/H1347_agCD/case_0f54aa_GR_rep1",
+  "organize_status": "ok",
+  "judge_case_dir": "gpt-5.6-high/gather_refine/post_refactor/released_structure_20261030/casp17/H1347_agCD/case_0f54aa_GJ_rep2",
+  "judge_status": "ok",
+  "packet": "gpt-5.6-high/gather/packets/case_0f54aa/packet",
+  "manifest": "gpt-5.6-high/gather/packets/case_0f54aa/manifest.json",
+  "advocate_case_dir": "gpt-5.6-high/gather_refine/post_refactor/released_structure_20261030/casp17/H1347_agCD/case_0f54aa_GR_rep1",
+  "advocate_status": "ok"
+ },
+ "score": {
+  "precision": 0.0,
+  "recall": 0.0,
+  "f1": 0.0,
+  "n_pred": 17,
+  "n_true": 22,
+  "n_hit": 0
+ }
+}

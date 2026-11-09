@@ -1,0 +1,290 @@
+{
+ "task": "gather",
+ "gather_mode": "batched",
+ "num_launchers": 3,
+ "policy": {
+  "evidence_cutoff": "2026-06-22",
+  "no_cutoff": false,
+  "gated": true,
+  "web_search": false,
+  "shell_network": true,
+  "gate_tools": [
+   "research",
+   "fetch",
+   "rcsb",
+   "patent",
+   "paper"
+  ]
+ },
+ "unscored": true,
+ "target": "H2374",
+ "target_set": "casp17",
+ "case": "case_6a7664",
+ "evidence_cutoff": "2026-06-22",
+ "target_release_date": "2026-06-22",
+ "retrieval_policy": "gated",
+ "input_structure": "data/staged_casp17_no_native/H2374.pdb",
+ "input_structure_sha256": "cce06a976275bf0894b0dae47679691f93a74bbcd1b28cd9b17fe6bfe49200de",
+ "briefing_source": "data/briefing/casp17/H2374/search_results.json",
+ "briefing_sha256": "6da47e89d19b7042483ab1c9442ed32a899f59c40f45416b4c36e0ae0c6c84d7",
+ "antigen_chains": [
+  "C"
+ ],
+ "antibody_files": {
+  "antibody.pdb": [
+   "A",
+   "B"
+  ]
+ },
+ "antibody_chain_types": {
+  "antibody.pdb": {
+   "A": "heavy",
+   "B": "light"
+  }
+ },
+ "stage": "gatherer",
+ "pocket": {
+  "id": "C2",
+  "judge_rank": 8,
+  "name": "A discontinuous, proline-rich lateral face on the gD core and...",
+  "confidence": 0.05,
+  "p_rests_on_holds": 0.12,
+  "why_this_rank": "The face is geometrically viable, but its best specific antibody precedent is HSV-2-specific while HAB13 is cross-type, and several inherited positions are poorly exposed.",
+  "rests_on": "HAB13 uses a conserved, shifted subset of the otherwise type-specific MC2-like face.",
+  "where_the_mass_goes_if_it_fails": "C7, the stronger type-common lateral-face candidate.",
+  "what_it_is": "A discontinuous, proline-rich lateral face on the gD core and alpha3/C-terminal ridge, adjacent to but distinct from the receptor-binding face and implicated in transmitting the fusion trigger.",
+  "why_one_candidate": "geometry pooled 2 patches (P2, P5): P2+P5 at 2.52 A, union radius 16.2 A. Every union fits inside this antibody's paratope reach of 17.3 A. No session judged these to be the same surface.",
+  "from_patches": [
+   "P2",
+   "P5"
+  ]
+ },
+ "note": "`confidence` on the pocket is over pockets and sums to about 1 across them. Inside an interface it is per residue in [0, 1] and sums to nothing. No residue is cut at a threshold: the whole vector is the answer.",
+ "mapping_basis": "side",
+ "checks": {
+  "unrecognised_sides": []
+ },
+ "chain_pairs": [
+  {
+   "antibody_chain": "A",
+   "antigen_chain": "C",
+   "n_residues": 12
+  },
+  {
+   "antibody_chain": "B",
+   "antigen_chain": "C",
+   "n_residues": 7
+  }
+ ],
+ "antibodies": [
+  {
+   "antibody": "antibody.pdb",
+   "chains": {
+    "A": "heavy",
+    "B": "light"
+   },
+   "binding_mode": null,
+   "n_residues_scored": 14,
+   "interfaces": [
+    {
+     "antibody_chain": "A",
+     "antibody_chain_type": "heavy",
+     "antigen_chain": "C",
+     "n_residues": 12,
+     "residue_confidence": {
+      "67": 0.7,
+      "237": 0.38,
+      "239": 0.44,
+      "240": 0.52,
+      "241": 0.62,
+      "242": 0.87,
+      "243": 0.72,
+      "244": 0.85,
+      "245": 0.91,
+      "246": 0.92,
+      "247": 0.78,
+      "248": 0.89
+     },
+     "residue_side": {
+      "67": "both",
+      "237": "heavy",
+      "239": "heavy",
+      "240": "heavy",
+      "241": "heavy",
+      "242": "heavy",
+      "243": "both",
+      "244": "heavy",
+      "245": "both",
+      "246": "both",
+      "247": "heavy",
+      "248": "both"
+     },
+     "max_confidence": 0.92,
+     "mean_confidence": 0.7167
+    },
+    {
+     "antibody_chain": "B",
+     "antibody_chain_type": "light",
+     "antigen_chain": "C",
+     "n_residues": 7,
+     "residue_confidence": {
+      "64": 0.78,
+      "67": 0.7,
+      "243": 0.72,
+      "245": 0.91,
+      "246": 0.92,
+      "248": 0.89,
+      "249": 0.61
+     },
+     "residue_side": {
+      "64": "light",
+      "67": "both",
+      "243": "both",
+      "245": "both",
+      "246": "both",
+      "248": "both",
+      "249": "light"
+     },
+     "max_confidence": 0.92,
+     "mean_confidence": 0.79
+    }
+   ]
+  }
+ ],
+ "paratope": {
+  "dominant_cdrs": [
+   "A:H3",
+   "A:H2",
+   "B:L1"
+  ],
+  "paratope_residues": [
+   "A:32",
+   "A:33",
+   "A:54",
+   "A:55",
+   "A:56",
+   "A:103",
+   "A:104",
+   "A:105",
+   "A:106",
+   "A:109",
+   "A:110",
+   "A:114",
+   "A:115",
+   "B:27",
+   "B:31",
+   "B:32",
+   "B:33",
+   "B:35",
+   "B:36",
+   "B:98",
+   "B:102"
+  ],
+  "heavy_light_split": "H3/H2 dominate the 237-248 ridge; the long light L1 reaches the 64/67 loop and C:249 edge. C:67/C:243/C:245/C:246/C:248 form the seam rather than an even split.",
+  "binding_mode_union": "single-chain"
+ },
+ "residues": [
+  "C:237",
+  "C:239",
+  "C:240",
+  "C:241",
+  "C:242",
+  "C:243",
+  "C:244",
+  "C:245",
+  "C:246",
+  "C:247",
+  "C:248",
+  "C:249",
+  "C:64",
+  "C:67"
+ ],
+ "n_residues": 14,
+ "patches": [
+  {
+   "id": "P2",
+   "name": "MC2-like lateral Pro-rich face",
+   "n_residues": 13,
+   "residues": [
+    "C:242",
+    "C:243",
+    "C:244",
+    "C:245",
+    "C:246",
+    "C:247",
+    "C:248",
+    "C:249",
+    "C:64",
+    "C:65",
+    "C:66",
+    "C:67",
+    "C:68"
+   ],
+   "n_kept_by_advocate": 10,
+   "n_dropped_by_advocate": 3
+  },
+  {
+   "id": "P5",
+   "name": "Group-XVII/pro-fusion lateral patch",
+   "n_residues": 17,
+   "residues": [
+    "C:234",
+    "C:235",
+    "C:236",
+    "C:237",
+    "C:238",
+    "C:239",
+    "C:240",
+    "C:241",
+    "C:242",
+    "C:243",
+    "C:244",
+    "C:245",
+    "C:246",
+    "C:247",
+    "C:248",
+    "C:249",
+    "C:250"
+   ],
+   "n_kept_by_advocate": 12,
+   "n_dropped_by_advocate": 5
+  }
+ ],
+ "pooling_provenance": {
+  "n_shared_at_pooling": 8,
+  "n_disputed_at_pooling": 14,
+  "note": "counts only, describing how the organizer grouped the phase-1 patches. The organizer's own candidate residue list is deliberately absent: the answer is the advocate's footprint, in `residues` and in `antibodies[].interfaces[]`."
+ },
+ "evidence": {
+  "advocate": {
+   "n_findings": 5,
+   "n_supports": 3,
+   "n_weakens": 1,
+   "weakest_point": "The best-mapped analogue on this face is HSV-2-specific, while HAB13 binds both type-1 and type-2 gD; the case therefore requires HAB13 to use a broader or shifted type-common version of the lateral surface.",
+   "note": "the advocate reports claim/source/date/bearing and is not asked whether a source is about this binder"
+  },
+  "judge": {
+   "tier_a_support": 1,
+   "n_support_lines": 3,
+   "verdict": "unlikely",
+   "note": "Tier A -- a source about this binder itself -- is the judge's adjudication, in assessment[].support[]. It exists nowhere in the advocate's own answer."
+  }
+ },
+ "provenance": {
+  "unverified_source_policy_fields": [
+   "gated",
+   "web_search",
+   "shell_network",
+   "gate_tools"
+  ],
+  "assembled_case_dir": "gpt-5.6-high/gather_refine/post_refactor/unreleased_20261029/gated/casp17/H2374/case_6a7664_G_rep5",
+  "organize_case_dir": "gpt-5.6-high/gather_refine/post_refactor/unreleased_20261029/gated/casp17/H2374/case_6a7664_GR_rep5",
+  "organize_status": "ok",
+  "judge_case_dir": "gpt-5.6-high/gather_refine/post_refactor/unreleased_20261029/gated/casp17/H2374/case_6a7664_GJ_rep5",
+  "judge_status": "ok",
+  "packet": "gpt-5.6-high/gather/packets/case_6a7664/packet",
+  "manifest": "gpt-5.6-high/gather/packets/case_6a7664/manifest.json",
+  "advocate_case_dir": "gpt-5.6-high/gather_refine/post_refactor/unreleased_20261029/gated/casp17/H2374/case_6a7664_GR_rep5",
+  "advocate_status": "ok"
+ }
+}

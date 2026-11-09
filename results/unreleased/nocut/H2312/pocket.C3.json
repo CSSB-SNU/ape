@@ -1,0 +1,265 @@
+{
+ "task": "gather",
+ "gather_mode": "batched",
+ "num_launchers": 3,
+ "policy": {
+  "evidence_cutoff": null,
+  "no_cutoff": true,
+  "gated": false,
+  "web_search": true,
+  "shell_network": true,
+  "gate_tools": []
+ },
+ "unscored": true,
+ "target": "H2312",
+ "target_set": "casp17",
+ "case": "case_3a23b5",
+ "evidence_cutoff": null,
+ "target_release_date": "2026-05-13",
+ "retrieval_policy": "no-cutoff",
+ "input_structure": "data/staged_casp17_no_native/H2312.pdb",
+ "input_structure_sha256": "3ba79066f0aa7015920828a3678d94af5f532471fde42bb38b00795e45f94b8b",
+ "briefing_source": "data/briefing/casp17_nocutoff/H2312/search_results.json",
+ "briefing_sha256": "2b8c71697fd0cc7175a5631c137526c8209032f024f0df47a726889d5e5bdf88",
+ "antigen_chains": [
+  "A",
+  "B"
+ ],
+ "antibody_files": {
+  "antibody.pdb": [
+   "C"
+  ]
+ },
+ "antibody_chain_types": {
+  "antibody.pdb": {
+   "C": "heavy"
+  }
+ },
+ "stage": "gatherer",
+ "pocket": {
+  "id": "C3",
+  "judge_rank": 5,
+  "name": "A quaternary rim at the junction of the EXT1 N-terminal pseudo-GT-A...",
+  "confidence": 0.09,
+  "p_rests_on_holds": 0.5,
+  "why_this_rank": "A real VHH-sized quaternary seam without glycan conflict; weaker chemistry and no binder-specific or functional line.",
+  "rests_on": "The external heterodimer rim is presented in the relevant conformation and is not one of many equivalent seams.",
+  "where_the_mass_goes_if_it_fails": "C4",
+  "what_it_is": "A quaternary rim at the junction of the EXT1 N-terminal pseudo-GT-A region and EXT2 N-terminal pseudo-GT-B scaffold, formed by A:26–A:35 facing B:303–B:316.",
+  "why_one_candidate": "not pooled with anything: no other patch is both within 12 A (half centroid distance, half contact-graph hops) and coverable by one paratope of this antibody's reach, 13.6 A",
+  "from_patches": [
+   "P2"
+  ]
+ },
+ "note": "`confidence` on the pocket is over pockets and sums to about 1 across them. Inside an interface it is per residue in [0, 1] and sums to nothing. No residue is cut at a threshold: the whole vector is the answer.",
+ "mapping_basis": "side",
+ "checks": {
+  "unrecognised_sides": []
+ },
+ "chain_pairs": [
+  {
+   "antibody_chain": "C",
+   "antigen_chain": "A",
+   "n_residues": 9
+  },
+  {
+   "antibody_chain": "C",
+   "antigen_chain": "B",
+   "n_residues": 11
+  }
+ ],
+ "antibodies": [
+  {
+   "antibody": "antibody.pdb",
+   "chains": {
+    "C": "heavy"
+   },
+   "binding_mode": null,
+   "n_residues_scored": 20,
+   "interfaces": [
+    {
+     "antibody_chain": "C",
+     "antibody_chain_type": "heavy",
+     "antigen_chain": "A",
+     "n_residues": 9,
+     "residue_confidence": {
+      "26": 0.78,
+      "27": 0.7,
+      "28": 0.55,
+      "30": 0.88,
+      "31": 0.82,
+      "32": 0.62,
+      "33": 0.45,
+      "34": 0.42,
+      "35": 0.42
+     },
+     "residue_side": {
+      "26": "heavy",
+      "27": "heavy",
+      "28": "heavy",
+      "30": "heavy",
+      "31": "heavy",
+      "32": "heavy",
+      "33": "heavy",
+      "34": "heavy",
+      "35": "heavy"
+     },
+     "max_confidence": 0.88,
+     "mean_confidence": 0.6267
+    },
+    {
+     "antibody_chain": "C",
+     "antibody_chain_type": "heavy",
+     "antigen_chain": "B",
+     "n_residues": 11,
+     "residue_confidence": {
+      "303": 0.6,
+      "304": 0.51,
+      "305": 0.9,
+      "306": 0.78,
+      "308": 0.7,
+      "309": 0.86,
+      "311": 0.48,
+      "312": 0.62,
+      "313": 0.52,
+      "315": 0.5,
+      "316": 0.47
+     },
+     "residue_side": {
+      "303": "heavy",
+      "304": "heavy",
+      "305": "heavy",
+      "306": "heavy",
+      "308": "heavy",
+      "309": "heavy",
+      "311": "heavy",
+      "312": "heavy",
+      "313": "heavy",
+      "315": "heavy",
+      "316": "heavy"
+     },
+     "max_confidence": 0.9,
+     "mean_confidence": 0.6309
+    }
+   ]
+  }
+ ],
+ "paratope": {
+  "dominant_cdrs": [
+   "H3H2H1select:H3",
+   "H2H1select:H2",
+   "H1select:H1"
+  ],
+  "paratope_residues": [
+   "C:28",
+   "C:30",
+   "C:31",
+   "C:32",
+   "C:53",
+   "C:54",
+   "C:56",
+   "C:57",
+   "C:58",
+   "C:100",
+   "C:101",
+   "C:102",
+   "C:103",
+   "C:105",
+   "C:107",
+   "C:108",
+   "C:109",
+   "C:110",
+   "C:113",
+   "C:114"
+  ],
+  "heavy_light_split": "Heavy 100%, light 0%. H3 bridges the cross-chain center; H1/H2 extend onto opposite rims.",
+  "binding_mode_union": "straddling"
+ },
+ "residues": [
+  "A:26",
+  "A:27",
+  "A:28",
+  "A:30",
+  "A:31",
+  "A:32",
+  "A:33",
+  "A:34",
+  "A:35",
+  "B:303",
+  "B:304",
+  "B:305",
+  "B:306",
+  "B:308",
+  "B:309",
+  "B:311",
+  "B:312",
+  "B:313",
+  "B:315",
+  "B:316"
+ ],
+ "n_residues": 20,
+ "patches": [
+  {
+   "id": "P2",
+   "name": "EXT1 shifted N-terminal loop at the EXT1-EXT2 rim",
+   "n_residues": 16,
+   "residues": [
+    "A:26",
+    "A:27",
+    "A:28",
+    "A:30",
+    "A:31",
+    "A:32",
+    "A:35",
+    "B:303",
+    "B:305",
+    "B:306",
+    "B:308",
+    "B:309",
+    "B:312",
+    "B:313",
+    "B:315",
+    "B:316"
+   ],
+   "n_kept_by_advocate": 16,
+   "n_dropped_by_advocate": 0
+  }
+ ],
+ "pooling_provenance": {
+  "n_shared_at_pooling": 16,
+  "n_disputed_at_pooling": 0,
+  "note": "counts only, describing how the organizer grouped the phase-1 patches. The organizer's own candidate residue list is deliberately absent: the answer is the advocate's footprint, in `residues` and in `antibodies[].interfaces[]`."
+ },
+ "evidence": {
+  "advocate": {
+   "n_findings": 4,
+   "n_supports": 3,
+   "n_weakens": 1,
+   "weakest_point": "The clamp has no demonstrated ligand overlap or functional role; even genuine binding here may be biologically silent.",
+   "note": "the advocate reports claim/source/date/bearing and is not asked whether a source is about this binder"
+  },
+  "judge": {
+   "tier_a_support": 0,
+   "n_support_lines": 4,
+   "verdict": "live",
+   "note": "Tier A -- a source about this binder itself -- is the judge's adjudication, in assessment[].support[]. It exists nowhere in the advocate's own answer."
+  }
+ },
+ "provenance": {
+  "unverified_source_policy_fields": [
+   "gated",
+   "web_search",
+   "shell_network",
+   "gate_tools"
+  ],
+  "assembled_case_dir": "gpt-5.6-high/gather_refine/post_refactor/unreleased_20261029/nocut/casp17/H2312/case_3a23b5_G_rep1",
+  "organize_case_dir": "gpt-5.6-high/gather_refine/post_refactor/unreleased_20261029/nocut/casp17/H2312/case_3a23b5_GR_rep1",
+  "organize_status": "ok",
+  "judge_case_dir": "gpt-5.6-high/gather_refine/post_refactor/unreleased_20261029/nocut/casp17/H2312/case_3a23b5_GJ_rep1",
+  "judge_status": "ok",
+  "packet": "gpt-5.6-high/nocut/gather/packets/case_3a23b5/packet",
+  "manifest": "gpt-5.6-high/nocut/gather/packets/case_3a23b5/manifest.json",
+  "advocate_case_dir": "gpt-5.6-high/gather_refine/post_refactor/unreleased_20261029/nocut/casp17/H2312/case_3a23b5_GR_rep1",
+  "advocate_status": "ok"
+ }
+}

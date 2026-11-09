@@ -1,0 +1,255 @@
+{
+ "task": "gather",
+ "gather_mode": "batched",
+ "num_launchers": 3,
+ "policy": {
+  "evidence_cutoff": "2026-07-31",
+  "no_cutoff": false,
+  "gated": true,
+  "web_search": false,
+  "shell_network": true,
+  "gate_tools": [
+   "research",
+   "fetch",
+   "rcsb",
+   "patent",
+   "paper"
+  ]
+ },
+ "unscored": true,
+ "target": "H2441",
+ "target_set": "casp17",
+ "case": "case_253bc2",
+ "evidence_cutoff": "2026-07-31",
+ "target_release_date": "2026-07-31",
+ "retrieval_policy": "gated",
+ "input_structure": "data/staged_casp17_no_native/H2441.pdb",
+ "input_structure_sha256": "37e38c82b5192825be5d1ed9d412076bf5a8fb5ddade49d20c5ae532bead12ae",
+ "briefing_source": "data/briefing/casp17/H2441/search_results.json",
+ "briefing_sha256": "5827c87d5386d58165199f41b0dc2d6859022ecaa626ad84eae73bd0a67053e2",
+ "antigen_chains": [
+  "A"
+ ],
+ "antibody_files": {
+  "antibody.pdb": [
+   "B"
+  ]
+ },
+ "antibody_chain_types": {
+  "antibody.pdb": {
+   "B": "unknown"
+  }
+ },
+ "stage": "gatherer",
+ "pocket": {
+  "id": "C8",
+  "judge_rank": 4,
+  "name": "The broad active-site mouth bridging exposed L3, the H120/L6-side...",
+  "confidence": 0.15,
+  "p_rests_on_holds": 0.35,
+  "why_this_rank": "Highly exposed, coverable active-mouth alternative, below C6 because it is less hydrophobic and more acidic.",
+  "rests_on": "The broad mouth remains accessible with substrate bound and its acidic rim permits Nb17 binding.",
+  "where_the_mass_goes_if_it_fails": "C6",
+  "what_it_is": "The broad active-site mouth bridging exposed L3, the H120/L6-side flank, and the solvent-facing L10 wall above the zinc centre.",
+  "why_one_candidate": "not pooled with anything: no other patch is both within 12 A (half centroid distance, half contact-graph hops) and coverable by one paratope of this antibody's reach, 12.9 A",
+  "from_patches": [
+   "P8"
+  ]
+ },
+ "note": "`confidence` on the pocket is over pockets and sums to about 1 across them. Inside an interface it is per residue in [0, 1] and sums to nothing. No residue is cut at a threshold: the whole vector is the answer.",
+ "mapping_basis": "side",
+ "checks": {
+  "unrecognised_sides": []
+ },
+ "chain_pairs": [
+  {
+   "antibody_chain": "B",
+   "antigen_chain": "A",
+   "n_residues": 20
+  }
+ ],
+ "antibodies": [
+  {
+   "antibody": "antibody.pdb",
+   "chains": {
+    "B": "unknown"
+   },
+   "binding_mode": null,
+   "n_residues_scored": 20,
+   "interfaces": [
+    {
+     "antibody_chain": "B",
+     "antibody_chain_type": "unknown",
+     "antigen_chain": "A",
+     "n_residues": 20,
+     "residue_confidence": {
+      "38": 0.42,
+      "39": 0.86,
+      "40": 0.9,
+      "41": 0.91,
+      "42": 0.88,
+      "43": 0.96,
+      "44": 0.58,
+      "45": 0.76,
+      "46": 0.42,
+      "95": 0.45,
+      "96": 0.87,
+      "125": 0.78,
+      "126": 0.55,
+      "192": 0.82,
+      "193": 0.93,
+      "194": 0.8,
+      "195": 0.76,
+      "196": 0.86,
+      "197": 0.4,
+      "223": 0.46
+     },
+     "residue_side": {
+      "38": "heavy",
+      "39": "heavy",
+      "40": "heavy",
+      "41": "heavy",
+      "42": "heavy",
+      "43": "heavy",
+      "44": "heavy",
+      "45": "heavy",
+      "46": "heavy",
+      "95": "heavy",
+      "96": "heavy",
+      "125": "heavy",
+      "126": "heavy",
+      "192": "heavy",
+      "193": "heavy",
+      "194": "heavy",
+      "195": "heavy",
+      "196": "heavy",
+      "197": "heavy",
+      "223": "heavy"
+     },
+     "max_confidence": 0.96,
+     "mean_confidence": 0.7185
+    }
+   ]
+  }
+ ],
+ "paratope": {
+  "dominant_cdrs": [
+   "H3s:H3",
+   "H1s:H1",
+   "H2s:H2"
+  ],
+  "paratope_residues": [
+   "B:27",
+   "B:29",
+   "B:31",
+   "B:52",
+   "B:55",
+   "B:58",
+   "B:100",
+   "B:102",
+   "B:104",
+   "B:105",
+   "B:106",
+   "B:107",
+   "B:108",
+   "B:111",
+   "B:113",
+   "B:116",
+   "B:117"
+  ],
+  "heavy_light_split": "All contacts are heavy-side; H3 occupies the groove centre and H1/H2 shoulder opposing rims.",
+  "binding_mode_union": "single-chain"
+ },
+ "residues": [
+  "A:125",
+  "A:126",
+  "A:192",
+  "A:193",
+  "A:194",
+  "A:195",
+  "A:196",
+  "A:197",
+  "A:223",
+  "A:38",
+  "A:39",
+  "A:40",
+  "A:41",
+  "A:42",
+  "A:43",
+  "A:44",
+  "A:45",
+  "A:46",
+  "A:95",
+  "A:96"
+ ],
+ "n_residues": 20,
+ "patches": [
+  {
+   "id": "P8",
+   "name": "Active-site mouth bridging L3 and L10",
+   "n_residues": 21,
+   "residues": [
+    "A:125",
+    "A:126",
+    "A:192",
+    "A:193",
+    "A:194",
+    "A:195",
+    "A:196",
+    "A:202",
+    "A:223",
+    "A:39",
+    "A:40",
+    "A:41",
+    "A:42",
+    "A:43",
+    "A:44",
+    "A:45",
+    "A:46",
+    "A:95",
+    "A:96",
+    "A:97",
+    "A:98"
+   ],
+   "n_kept_by_advocate": 18,
+   "n_dropped_by_advocate": 3
+  }
+ ],
+ "pooling_provenance": {
+  "n_shared_at_pooling": 21,
+  "n_disputed_at_pooling": 0,
+  "note": "counts only, describing how the organizer grouped the phase-1 patches. The organizer's own candidate residue list is deliberately absent: the answer is the advocate's footprint, in `residues` and in `antibodies[].interfaces[]`."
+ },
+ "evidence": {
+  "advocate": {
+   "n_findings": 4,
+   "n_supports": 3,
+   "n_weakens": 0,
+   "weakest_point": "Uncompetitive kinetics do not prove mouth occupation; the adjacent enzyme-substrate-state clamp is coherent but unobserved.",
+   "note": "the advocate reports claim/source/date/bearing and is not asked whether a source is about this binder"
+  },
+  "judge": {
+   "tier_a_support": 1,
+   "n_support_lines": 4,
+   "verdict": "live",
+   "note": "Tier A -- a source about this binder itself -- is the judge's adjudication, in assessment[].support[]. It exists nowhere in the advocate's own answer."
+  }
+ },
+ "provenance": {
+  "unverified_source_policy_fields": [
+   "gated",
+   "web_search",
+   "shell_network",
+   "gate_tools"
+  ],
+  "assembled_case_dir": "gpt-5.6-high/gather_refine/post_refactor/unreleased_20261029/gated/casp17/H2441/case_253bc2_G_rep1",
+  "organize_case_dir": "gpt-5.6-high/gather_refine/post_refactor/unreleased_20261029/gated/casp17/H2441/case_253bc2_GR_rep1",
+  "organize_status": "ok",
+  "judge_case_dir": "gpt-5.6-high/gather_refine/post_refactor/unreleased_20261029/gated/casp17/H2441/case_253bc2_GJ_rep1",
+  "judge_status": "ok",
+  "packet": "gpt-5.6-high/gather/packets/case_253bc2/packet",
+  "manifest": "gpt-5.6-high/gather/packets/case_253bc2/manifest.json",
+  "advocate_case_dir": "gpt-5.6-high/gather_refine/post_refactor/unreleased_20261029/gated/casp17/H2441/case_253bc2_GR_rep1",
+  "advocate_status": "ok"
+ }
+}

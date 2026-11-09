@@ -1,0 +1,357 @@
+{
+ "task": "gather",
+ "gather_mode": "batched",
+ "num_launchers": 3,
+ "policy": {
+  "evidence_cutoff": null,
+  "no_cutoff": true,
+  "gated": false,
+  "web_search": true,
+  "shell_network": true,
+  "gate_tools": []
+ },
+ "unscored": true,
+ "target": "H2349",
+ "target_set": "casp17",
+ "case": "case_e333d6",
+ "evidence_cutoff": null,
+ "target_release_date": "2026-06-05",
+ "retrieval_policy": "no-cutoff",
+ "input_structure": "data/staged_casp17_no_native/H2349.pdb",
+ "input_structure_sha256": "ed3bcb0b0799f7f8db3a7695ea1da3ddce30d9c2312cdd2e5d844f6e396bdd86",
+ "briefing_source": "data/briefing/casp17_nocutoff/H2349/search_results.json",
+ "briefing_sha256": "b7744ba9eed23f884929670e84213478fdfebc3fc94cf39cec30b7cf355ba753",
+ "antigen_chains": [
+  "A"
+ ],
+ "antibody_files": {
+  "antibody.pdb": [
+   "B",
+   "C"
+  ]
+ },
+ "antibody_chain_types": {
+  "antibody.pdb": {
+   "B": "unknown",
+   "C": "unknown"
+  }
+ },
+ "stage": "gatherer",
+ "pocket": {
+  "id": "C1",
+  "judge_rank": 2,
+  "name": "The ligand-facing elbow of the two-domain cytokine-binding homology...",
+  "confidence": 0.16,
+  "p_rests_on_holds": 0.35,
+  "why_this_rank": "C1 is coherent, glycan-distant and offers the strongest gross charge complementarity, while D2/D2-D3 is independently antibody-bindable. Its broader D3 rim is less supported than C2's compact core.",
+  "rests_on": "The true interface extends beyond the compact D2 hotspot onto C1's D3ward rim.",
+  "where_the_mass_goes_if_it_fails": "C2 takes most of the D2-family mass.",
+  "what_it_is": "The ligand-facing elbow of the two-domain cytokine-binding homology region, running from the D2 aromatic/EF-loop platform across the D2-D3 junction onto the proximal D3 rim.",
+  "why_one_candidate": "geometry pooled 2 patches (P1, P7): P1+P7 at 2.51 A, union radius 16.72 A. Every union fits inside this antibody's paratope reach of 17.9 A. No session judged these to be the same surface.",
+  "from_patches": [
+   "P1",
+   "P7"
+  ]
+ },
+ "note": "`confidence` on the pocket is over pockets and sums to about 1 across them. Inside an interface it is per residue in [0, 1] and sums to nothing. No residue is cut at a threshold: the whole vector is the answer.",
+ "mapping_basis": "side",
+ "checks": {
+  "unrecognised_sides": []
+ },
+ "chain_pairs": [
+  {
+   "antibody_chain": "B",
+   "antigen_chain": "A",
+   "n_residues": 23
+  },
+  {
+   "antibody_chain": "C",
+   "antigen_chain": "A",
+   "n_residues": 23
+  }
+ ],
+ "antibodies": [
+  {
+   "antibody": "antibody.pdb",
+   "chains": {
+    "B": "unknown",
+    "C": "unknown"
+   },
+   "binding_mode": null,
+   "n_residues_scored": 23,
+   "interfaces": [
+    {
+     "antibody_chain": "B",
+     "antibody_chain_type": "unknown",
+     "antigen_chain": "A",
+     "n_residues": 23,
+     "residue_confidence": {
+      "118": 0.62,
+      "119": 0.48,
+      "141": 0.32,
+      "142": 0.82,
+      "143": 0.48,
+      "145": 0.67,
+      "146": 0.84,
+      "163": 0.52,
+      "165": 0.78,
+      "166": 0.64,
+      "167": 0.78,
+      "168": 0.89,
+      "169": 0.95,
+      "170": 0.76,
+      "171": 0.72,
+      "173": 0.42,
+      "191": 0.52,
+      "196": 0.68,
+      "197": 0.66,
+      "199": 0.38,
+      "228": 0.56,
+      "229": 0.63,
+      "230": 0.48
+     },
+     "residue_side": {
+      "118": "heavy",
+      "119": "heavy",
+      "141": "light",
+      "142": "both",
+      "143": "light",
+      "145": "both",
+      "146": "both",
+      "163": "light",
+      "165": "both",
+      "166": "both",
+      "167": "both",
+      "168": "both",
+      "169": "both",
+      "170": "both",
+      "171": "both",
+      "173": "light",
+      "191": "light",
+      "196": "heavy",
+      "197": "heavy",
+      "199": "heavy",
+      "228": "heavy",
+      "229": "heavy",
+      "230": "heavy"
+     },
+     "max_confidence": 0.95,
+     "mean_confidence": 0.6348
+    },
+    {
+     "antibody_chain": "C",
+     "antibody_chain_type": "unknown",
+     "antigen_chain": "A",
+     "n_residues": 23,
+     "residue_confidence": {
+      "118": 0.62,
+      "119": 0.48,
+      "141": 0.32,
+      "142": 0.82,
+      "143": 0.48,
+      "145": 0.67,
+      "146": 0.84,
+      "163": 0.52,
+      "165": 0.78,
+      "166": 0.64,
+      "167": 0.78,
+      "168": 0.89,
+      "169": 0.95,
+      "170": 0.76,
+      "171": 0.72,
+      "173": 0.42,
+      "191": 0.52,
+      "196": 0.68,
+      "197": 0.66,
+      "199": 0.38,
+      "228": 0.56,
+      "229": 0.63,
+      "230": 0.48
+     },
+     "residue_side": {
+      "118": "heavy",
+      "119": "heavy",
+      "141": "light",
+      "142": "both",
+      "143": "light",
+      "145": "both",
+      "146": "both",
+      "163": "light",
+      "165": "both",
+      "166": "both",
+      "167": "both",
+      "168": "both",
+      "169": "both",
+      "170": "both",
+      "171": "both",
+      "173": "light",
+      "191": "light",
+      "196": "heavy",
+      "197": "heavy",
+      "199": "heavy",
+      "228": "heavy",
+      "229": "heavy",
+      "230": "heavy"
+     },
+     "max_confidence": 0.95,
+     "mean_confidence": 0.6348
+    }
+   ]
+  }
+ ],
+ "paratope": {
+  "dominant_cdrs": [
+   "H3:H3",
+   "H2:H2",
+   "L3:L3"
+  ],
+  "paratope_residues": [
+   "B:52",
+   "B:55",
+   "B:57",
+   "B:100",
+   "B:101",
+   "B:102",
+   "B:103",
+   "B:106",
+   "B:107",
+   "C:27",
+   "C:28",
+   "C:31",
+   "C:52",
+   "C:92",
+   "C:93",
+   "C:94"
+  ],
+  "heavy_light_split": "Heavy-chain dominant: H3/H2 cover the basic/aromatic center and D3ward shoulder; L3/L1 cover the polar A:141-A:173 flank. Both chains converge on A:142/A:145-A:171.",
+  "binding_mode_union": "single-chain"
+ },
+ "residues": [
+  "A:118",
+  "A:119",
+  "A:141",
+  "A:142",
+  "A:143",
+  "A:145",
+  "A:146",
+  "A:163",
+  "A:165",
+  "A:166",
+  "A:167",
+  "A:168",
+  "A:169",
+  "A:170",
+  "A:171",
+  "A:173",
+  "A:191",
+  "A:196",
+  "A:197",
+  "A:199",
+  "A:228",
+  "A:229",
+  "A:230"
+ ],
+ "n_residues": 23,
+ "patches": [
+  {
+   "id": "P1",
+   "name": "Basic/aromatic gp130 site-II face at the D2-D3 elbow",
+   "n_residues": 27,
+   "residues": [
+    "A:115",
+    "A:118",
+    "A:119",
+    "A:121",
+    "A:139",
+    "A:141",
+    "A:142",
+    "A:145",
+    "A:146",
+    "A:161",
+    "A:163",
+    "A:165",
+    "A:166",
+    "A:167",
+    "A:168",
+    "A:169",
+    "A:170",
+    "A:171",
+    "A:173",
+    "A:191",
+    "A:196",
+    "A:197",
+    "A:199",
+    "A:226",
+    "A:228",
+    "A:229",
+    "A:230"
+   ],
+   "n_kept_by_advocate": 22,
+   "n_dropped_by_advocate": 5
+  },
+  {
+   "id": "P7",
+   "name": "D2-D3 cytokine-binding face centered on the Y190/F191-equivalent EF loop",
+   "n_residues": 18,
+   "residues": [
+    "A:143",
+    "A:144",
+    "A:165",
+    "A:167",
+    "A:168",
+    "A:169",
+    "A:170",
+    "A:171",
+    "A:173",
+    "A:191",
+    "A:196",
+    "A:197",
+    "A:228",
+    "A:229",
+    "A:230",
+    "A:232",
+    "A:285",
+    "A:286"
+   ],
+   "n_kept_by_advocate": 14,
+   "n_dropped_by_advocate": 4
+  }
+ ],
+ "pooling_provenance": {
+  "n_shared_at_pooling": 13,
+  "n_disputed_at_pooling": 19,
+  "note": "counts only, describing how the organizer grouped the phase-1 patches. The organizer's own candidate residue list is deliberately absent: the answer is the advocate's footprint, in `residues` and in `antibodies[].interfaces[]`."
+ },
+ "evidence": {
+  "advocate": {
+   "n_findings": 4,
+   "n_supports": 3,
+   "n_weakens": 1,
+   "weakest_point": "The exact Fab is experimentally anti-lysozyme. Even accepting the asserted cross-target binding, this footprint joins a well-supported D2 core to a less directly supported D3 rim and may be broader than the real interface.",
+   "note": "the advocate reports claim/source/date/bearing and is not asked whether a source is about this binder"
+  },
+  "judge": {
+   "tier_a_support": 0,
+   "n_support_lines": 4,
+   "verdict": "live",
+   "note": "Tier A -- a source about this binder itself -- is the judge's adjudication, in assessment[].support[]. It exists nowhere in the advocate's own answer."
+  }
+ },
+ "provenance": {
+  "unverified_source_policy_fields": [
+   "gated",
+   "web_search",
+   "shell_network",
+   "gate_tools"
+  ],
+  "assembled_case_dir": "gpt-5.6-high/gather_refine/post_refactor/unreleased_20261029/nocut/casp17/H2349/case_e333d6_G_rep1",
+  "organize_case_dir": "gpt-5.6-high/gather_refine/post_refactor/unreleased_20261029/nocut/casp17/H2349/case_e333d6_GR_rep1",
+  "organize_status": "ok",
+  "judge_case_dir": "gpt-5.6-high/gather_refine/post_refactor/unreleased_20261029/nocut/casp17/H2349/case_e333d6_GJ_rep1",
+  "judge_status": "ok",
+  "packet": "gpt-5.6-high/nocut/gather/packets/case_e333d6/packet",
+  "manifest": "gpt-5.6-high/nocut/gather/packets/case_e333d6/manifest.json",
+  "advocate_case_dir": "gpt-5.6-high/gather_refine/post_refactor/unreleased_20261029/nocut/casp17/H2349/case_e333d6_GR_rep1",
+  "advocate_status": "ok"
+ }
+}

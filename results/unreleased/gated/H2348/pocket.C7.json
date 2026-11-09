@@ -1,0 +1,272 @@
+{
+ "task": "gather",
+ "gather_mode": "batched",
+ "num_launchers": 3,
+ "policy": {
+  "evidence_cutoff": "2026-06-05",
+  "no_cutoff": false,
+  "gated": true,
+  "web_search": false,
+  "shell_network": true,
+  "gate_tools": [
+   "research",
+   "fetch",
+   "rcsb",
+   "patent",
+   "paper"
+  ]
+ },
+ "unscored": true,
+ "target": "H2348",
+ "target_set": "casp17",
+ "case": "case_4ade9a",
+ "evidence_cutoff": "2026-06-05",
+ "target_release_date": "2026-06-05",
+ "retrieval_policy": "gated",
+ "input_structure": "data/staged_casp17_no_native/H2348.pdb",
+ "input_structure_sha256": "ce3adf48ca6a518ad9b1c0b7ee6fd0899f7d12f01d7aa968c11b92ad459c41e7",
+ "briefing_source": "data/briefing/casp17/H2348/search_results.json",
+ "briefing_sha256": "4d17b3e4689d4bdb8848154699de80e2748b0d365b2fba62f69b2f96cbbee826",
+ "antigen_chains": [
+  "A"
+ ],
+ "antibody_files": {
+  "antibody.pdb": [
+   "B",
+   "C"
+  ]
+ },
+ "antibody_chain_types": {
+  "antibody.pdb": {
+   "B": "heavy",
+   "C": "light"
+  }
+ },
+ "stage": "gatherer",
+ "pocket": {
+  "id": "C7",
+  "judge_rank": 8,
+  "name": "The convex bend-proximal D4 face centered on the exposed...",
+  "confidence": 0.06,
+  "p_rests_on_holds": 0.14,
+  "why_this_rank": "C7 inherits D4 precedent and is geometrically coherent, but the three-sequon neighborhood is the strongest accessibility concern among the candidates and the bend-lock mechanism is unproven.",
+  "rests_on": "The A:357/A:361/A:368 glycan cluster leaves this bend-proximal face accessible to the Fab.",
+  "where_the_mass_goes_if_it_fails": "C6.",
+  "what_it_is": "The convex bend-proximal D4 face centered on the exposed H318-Q320-Y322 cap and extending along A:313–326 and A:363–371 toward the D4–D5 turn.",
+  "why_one_candidate": "not pooled with anything: no other patch is both within 12 A (half centroid distance, half contact-graph hops) and coverable by one paratope of this antibody's reach, 17.5 A",
+  "from_patches": [
+   "P4"
+  ]
+ },
+ "note": "`confidence` on the pocket is over pockets and sums to about 1 across them. Inside an interface it is per residue in [0, 1] and sums to nothing. No residue is cut at a threshold: the whole vector is the answer.",
+ "mapping_basis": "side",
+ "checks": {
+  "unrecognised_sides": []
+ },
+ "chain_pairs": [
+  {
+   "antibody_chain": "B",
+   "antigen_chain": "A",
+   "n_residues": 10
+  },
+  {
+   "antibody_chain": "C",
+   "antigen_chain": "A",
+   "n_residues": 11
+  }
+ ],
+ "antibodies": [
+  {
+   "antibody": "antibody.pdb",
+   "chains": {
+    "B": "heavy",
+    "C": "light"
+   },
+   "binding_mode": null,
+   "n_residues_scored": 16,
+   "interfaces": [
+    {
+     "antibody_chain": "B",
+     "antibody_chain_type": "heavy",
+     "antigen_chain": "A",
+     "n_residues": 10,
+     "residue_confidence": {
+      "318": 0.94,
+      "319": 0.82,
+      "320": 0.96,
+      "321": 0.64,
+      "322": 0.92,
+      "363": 0.43,
+      "364": 0.67,
+      "366": 0.58,
+      "368": 0.18,
+      "371": 0.29
+     },
+     "residue_side": {
+      "318": "both",
+      "319": "both",
+      "320": "both",
+      "321": "both",
+      "322": "both",
+      "363": "heavy",
+      "364": "heavy",
+      "366": "heavy",
+      "368": "heavy",
+      "371": "heavy"
+     },
+     "max_confidence": 0.96,
+     "mean_confidence": 0.643
+    },
+    {
+     "antibody_chain": "C",
+     "antibody_chain_type": "light",
+     "antigen_chain": "A",
+     "n_residues": 11,
+     "residue_confidence": {
+      "313": 0.46,
+      "314": 0.54,
+      "315": 0.58,
+      "316": 0.74,
+      "318": 0.94,
+      "319": 0.82,
+      "320": 0.96,
+      "321": 0.64,
+      "322": 0.92,
+      "324": 0.43,
+      "326": 0.4
+     },
+     "residue_side": {
+      "313": "light",
+      "314": "light",
+      "315": "light",
+      "316": "light",
+      "318": "both",
+      "319": "both",
+      "320": "both",
+      "321": "both",
+      "322": "both",
+      "324": "light",
+      "326": "light"
+     },
+     "max_confidence": 0.96,
+     "mean_confidence": 0.6755
+    }
+   ]
+  }
+ ],
+ "paratope": {
+  "dominant_cdrs": [
+   "H3aa:H3",
+   "H2aa:H2",
+   "H1aa:H1",
+   "L1aa:L1"
+  ],
+  "paratope_residues": [
+   "B:31",
+   "B:32",
+   "B:33",
+   "B:54",
+   "B:56",
+   "B:57",
+   "B:58",
+   "B:101",
+   "B:102",
+   "C:27",
+   "C:28",
+   "C:30",
+   "C:31",
+   "C:32",
+   "C:52",
+   "C:92",
+   "C:93",
+   "C:94",
+   "C:95",
+   "C:96"
+  ],
+  "heavy_light_split": "Approximately 60:40 heavy:light; both chains meet on H318/Q320/Y322, light loops cover A:313–326, and the heavy edge extends toward A:363–371.",
+  "binding_mode_union": "single-chain"
+ },
+ "residues": [
+  "A:313",
+  "A:314",
+  "A:315",
+  "A:316",
+  "A:318",
+  "A:319",
+  "A:320",
+  "A:321",
+  "A:322",
+  "A:324",
+  "A:326",
+  "A:363",
+  "A:364",
+  "A:366",
+  "A:368",
+  "A:371"
+ ],
+ "n_residues": 16,
+ "patches": [
+  {
+   "id": "P4",
+   "name": "D4 convex bend-proximal face",
+   "n_residues": 16,
+   "residues": [
+    "A:313",
+    "A:314",
+    "A:315",
+    "A:316",
+    "A:317",
+    "A:318",
+    "A:319",
+    "A:320",
+    "A:321",
+    "A:322",
+    "A:326",
+    "A:363",
+    "A:364",
+    "A:366",
+    "A:368",
+    "A:371"
+   ],
+   "n_kept_by_advocate": 15,
+   "n_dropped_by_advocate": 1
+  }
+ ],
+ "pooling_provenance": {
+  "n_shared_at_pooling": 16,
+  "n_disputed_at_pooling": 0,
+  "note": "counts only, describing how the organizer grouped the phase-1 patches. The organizer's own candidate residue list is deliberately absent: the answer is the advocate's footprint, in `residues` and in `antibodies[].interfaces[]`."
+ },
+ "evidence": {
+  "advocate": {
+   "n_findings": 5,
+   "n_supports": 3,
+   "n_weakens": 2,
+   "weakest_point": "The footprint approaches the paratope long-axis limit and terminates beside a three-sequon glycan cluster.",
+   "note": "the advocate reports claim/source/date/bearing and is not asked whether a source is about this binder"
+  },
+  "judge": {
+   "tier_a_support": 0,
+   "n_support_lines": 3,
+   "verdict": "unlikely",
+   "note": "Tier A -- a source about this binder itself -- is the judge's adjudication, in assessment[].support[]. It exists nowhere in the advocate's own answer."
+  }
+ },
+ "provenance": {
+  "unverified_source_policy_fields": [
+   "gated",
+   "web_search",
+   "shell_network",
+   "gate_tools"
+  ],
+  "assembled_case_dir": "gpt-5.6-high/gather_refine/post_refactor/unreleased_20261029/gated/casp17/H2348/case_4ade9a_G_rep1",
+  "organize_case_dir": "gpt-5.6-high/gather_refine/post_refactor/unreleased_20261029/gated/casp17/H2348/case_4ade9a_GR_rep1",
+  "organize_status": "ok",
+  "judge_case_dir": "gpt-5.6-high/gather_refine/post_refactor/unreleased_20261029/gated/casp17/H2348/case_4ade9a_GJ_rep1",
+  "judge_status": "ok",
+  "packet": "gpt-5.6-high/gather/packets/case_4ade9a/packet",
+  "manifest": "gpt-5.6-high/gather/packets/case_4ade9a/manifest.json",
+  "advocate_case_dir": "gpt-5.6-high/gather_refine/post_refactor/unreleased_20261029/gated/casp17/H2348/case_4ade9a_GR_rep1",
+  "advocate_status": "ok"
+ }
+}

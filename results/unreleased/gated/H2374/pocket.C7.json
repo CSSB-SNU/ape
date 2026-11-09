@@ -1,0 +1,265 @@
+{
+ "task": "gather",
+ "gather_mode": "batched",
+ "num_launchers": 3,
+ "policy": {
+  "evidence_cutoff": "2026-06-22",
+  "no_cutoff": false,
+  "gated": true,
+  "web_search": false,
+  "shell_network": true,
+  "gate_tools": [
+   "research",
+   "fetch",
+   "rcsb",
+   "patent",
+   "paper"
+  ]
+ },
+ "unscored": true,
+ "target": "H2374",
+ "target_set": "casp17",
+ "case": "case_6a7664",
+ "evidence_cutoff": "2026-06-22",
+ "target_release_date": "2026-06-22",
+ "retrieval_policy": "gated",
+ "input_structure": "data/staged_casp17_no_native/H2374.pdb",
+ "input_structure_sha256": "cce06a976275bf0894b0dae47679691f93a74bbcd1b28cd9b17fe6bfe49200de",
+ "briefing_source": "data/briefing/casp17/H2374/search_results.json",
+ "briefing_sha256": "6da47e89d19b7042483ab1c9442ed32a899f59c40f45416b4c36e0ae0c6c84d7",
+ "antigen_chains": [
+  "C"
+ ],
+ "antibody_files": {
+  "antibody.pdb": [
+   "A",
+   "B"
+  ]
+ },
+ "antibody_chain_types": {
+  "antibody.pdb": {
+   "A": "heavy",
+   "B": "light"
+  }
+ },
+ "stage": "gatherer",
+ "pocket": {
+  "id": "C7",
+  "judge_rank": 4,
+  "name": "A compact, type-common lateral gD face implicated in direct...",
+  "confidence": 0.12,
+  "p_rests_on_holds": 0.25,
+  "why_this_rank": "It has type-common antibody precedent, favorable compact geometry, and a coherent neutralization mechanism, but no HAB13 localization and a mild mismatch to the reported spread phenotype.",
+  "rests_on": "HAB13 shares the MC5-like post-attachment competition class.",
+  "where_the_mass_goes_if_it_fails": "C4 and C8.",
+  "what_it_is": "A compact, type-common lateral gD face implicated in direct interaction with or activation of gH/gL, represented by the MC5 antigenic site around 54 and 75-79.",
+  "why_one_candidate": "not pooled with anything: no other patch is both within 12 A (half centroid distance, half contact-graph hops) and coverable by one paratope of this antibody's reach, 17.3 A",
+  "from_patches": [
+   "P8"
+  ]
+ },
+ "note": "`confidence` on the pocket is over pockets and sums to about 1 across them. Inside an interface it is per residue in [0, 1] and sums to nothing. No residue is cut at a threshold: the whole vector is the answer.",
+ "mapping_basis": "side",
+ "checks": {
+  "unrecognised_sides": []
+ },
+ "chain_pairs": [
+  {
+   "antibody_chain": "A",
+   "antigen_chain": "C",
+   "n_residues": 10
+  },
+  {
+   "antibody_chain": "B",
+   "antigen_chain": "C",
+   "n_residues": 8
+  }
+ ],
+ "antibodies": [
+  {
+   "antibody": "antibody.pdb",
+   "chains": {
+    "A": "heavy",
+    "B": "light"
+   },
+   "binding_mode": null,
+   "n_residues_scored": 13,
+   "interfaces": [
+    {
+     "antibody_chain": "A",
+     "antibody_chain_type": "heavy",
+     "antigen_chain": "C",
+     "n_residues": 10,
+     "residue_confidence": {
+      "53": 0.72,
+      "54": 0.92,
+      "55": 0.84,
+      "74": 0.79,
+      "75": 0.69,
+      "76": 0.9,
+      "78": 0.62,
+      "79": 0.86,
+      "80": 0.72,
+      "82": 0.54
+     },
+     "residue_side": {
+      "53": "both",
+      "54": "both",
+      "55": "both",
+      "74": "heavy",
+      "75": "both",
+      "76": "both",
+      "78": "heavy",
+      "79": "heavy",
+      "80": "heavy",
+      "82": "heavy"
+     },
+     "max_confidence": 0.92,
+     "mean_confidence": 0.76
+    },
+    {
+     "antibody_chain": "B",
+     "antibody_chain_type": "light",
+     "antigen_chain": "C",
+     "n_residues": 8,
+     "residue_confidence": {
+      "50": 0.61,
+      "51": 0.54,
+      "52": 0.66,
+      "53": 0.72,
+      "54": 0.92,
+      "55": 0.84,
+      "75": 0.69,
+      "76": 0.9
+     },
+     "residue_side": {
+      "50": "light",
+      "51": "light",
+      "52": "light",
+      "53": "both",
+      "54": "both",
+      "55": "both",
+      "75": "both",
+      "76": "both"
+     },
+     "max_confidence": 0.92,
+     "mean_confidence": 0.735
+    }
+   ]
+  }
+ ],
+ "paratope": {
+  "dominant_cdrs": [
+   "A:H3",
+   "A:H2",
+   "B:L1"
+  ],
+  "paratope_residues": [
+   "A:30",
+   "A:32",
+   "A:33",
+   "A:35",
+   "A:54",
+   "A:55",
+   "A:56",
+   "A:58",
+   "A:103",
+   "A:104",
+   "A:105",
+   "A:106",
+   "A:109",
+   "A:110",
+   "A:114",
+   "A:115",
+   "B:27",
+   "B:28",
+   "B:31",
+   "B:32",
+   "B:33",
+   "B:35",
+   "B:36",
+   "B:56",
+   "B:58",
+   "B:98",
+   "B:102"
+  ],
+  "heavy_light_split": "H3/H2 cover the 54/74-82 centre and supply most contacts; L1/L2 cover the 50-55 flank. C:53-C:55 and C:75-C:76 are the seam.",
+  "binding_mode_union": "single-chain"
+ },
+ "residues": [
+  "C:50",
+  "C:51",
+  "C:52",
+  "C:53",
+  "C:54",
+  "C:55",
+  "C:74",
+  "C:75",
+  "C:76",
+  "C:78",
+  "C:79",
+  "C:80",
+  "C:82"
+ ],
+ "n_residues": 13,
+ "patches": [
+  {
+   "id": "P8",
+   "name": "MC5-like gH/gL-interaction face",
+   "n_residues": 12,
+   "residues": [
+    "C:50",
+    "C:52",
+    "C:54",
+    "C:55",
+    "C:74",
+    "C:75",
+    "C:76",
+    "C:77",
+    "C:78",
+    "C:79",
+    "C:80",
+    "C:82"
+   ],
+   "n_kept_by_advocate": 11,
+   "n_dropped_by_advocate": 1
+  }
+ ],
+ "pooling_provenance": {
+  "n_shared_at_pooling": 12,
+  "n_disputed_at_pooling": 0,
+  "note": "counts only, describing how the organizer grouped the phase-1 patches. The organizer's own candidate residue list is deliberately absent: the answer is the advocate's footprint, in `residues` and in `antibodies[].interfaces[]`."
+ },
+ "evidence": {
+  "advocate": {
+   "n_findings": 5,
+   "n_supports": 4,
+   "n_weakens": 1,
+   "weakest_point": "The exact gH/gL-coupling geometry is unresolved, and HAB13's lack of reported cell-to-cell-spread inhibition weakens the functional phenotype expected for this site.",
+   "note": "the advocate reports claim/source/date/bearing and is not asked whether a source is about this binder"
+  },
+  "judge": {
+   "tier_a_support": 1,
+   "n_support_lines": 4,
+   "verdict": "live",
+   "note": "Tier A -- a source about this binder itself -- is the judge's adjudication, in assessment[].support[]. It exists nowhere in the advocate's own answer."
+  }
+ },
+ "provenance": {
+  "unverified_source_policy_fields": [
+   "gated",
+   "web_search",
+   "shell_network",
+   "gate_tools"
+  ],
+  "assembled_case_dir": "gpt-5.6-high/gather_refine/post_refactor/unreleased_20261029/gated/casp17/H2374/case_6a7664_G_rep5",
+  "organize_case_dir": "gpt-5.6-high/gather_refine/post_refactor/unreleased_20261029/gated/casp17/H2374/case_6a7664_GR_rep5",
+  "organize_status": "ok",
+  "judge_case_dir": "gpt-5.6-high/gather_refine/post_refactor/unreleased_20261029/gated/casp17/H2374/case_6a7664_GJ_rep5",
+  "judge_status": "ok",
+  "packet": "gpt-5.6-high/gather/packets/case_6a7664/packet",
+  "manifest": "gpt-5.6-high/gather/packets/case_6a7664/manifest.json",
+  "advocate_case_dir": "gpt-5.6-high/gather_refine/post_refactor/unreleased_20261029/gated/casp17/H2374/case_6a7664_GR_rep5",
+  "advocate_status": "ok"
+ }
+}

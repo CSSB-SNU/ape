@@ -1,0 +1,257 @@
+{
+ "task": "gather",
+ "gather_mode": "batched",
+ "num_launchers": 3,
+ "policy": {
+  "evidence_cutoff": null,
+  "no_cutoff": true,
+  "gated": false,
+  "web_search": true,
+  "shell_network": true,
+  "gate_tools": []
+ },
+ "unscored": true,
+ "target": "H2343",
+ "target_set": "casp17",
+ "case": "case_f1b810",
+ "evidence_cutoff": null,
+ "target_release_date": "2026-06-01",
+ "retrieval_policy": "no-cutoff",
+ "input_structure": "data/staged_casp17_no_native/H2343.pdb",
+ "input_structure_sha256": "3c70ae6e0bdda9d0a1014d29975873fe008fbe5bd9aebb5949da78b06aeabf11",
+ "briefing_source": "data/briefing/casp17_nocutoff/H2343/search_results.json",
+ "briefing_sha256": "6b66efca006e54eee3aa1b9a3ad4f04da4207f25dccedfbc9f13d1ef0c954955",
+ "antigen_chains": [
+  "C"
+ ],
+ "antibody_files": {
+  "antibody.pdb": [
+   "A",
+   "B"
+  ]
+ },
+ "antibody_chain_types": {
+  "antibody.pdb": {
+   "A": "unknown",
+   "B": "unknown"
+  }
+ },
+ "stage": "gatherer",
+ "pocket": {
+  "id": "C1",
+  "judge_rank": 3,
+  "name": "The glycan-adjacent beta8/C-terminal rim of the HCV E2...",
+  "confidence": 0.05,
+  "p_rests_on_holds": 0.1,
+  "why_this_rank": "It is a coherent exposed domain-A/back-face ridge with phenotype-compatible consequences, but it is shifted more than 20 Å from C:225.",
+  "rests_on": "Y632NS can disrupt CBH-4G binding sterically or allosterically even when the direct footprint is on the shifted ridge.",
+  "where_the_mass_goes_if_it_fails": "C4.",
+  "what_it_is": "The glycan-adjacent beta8/C-terminal rim of the HCV E2 non-neutralizing back face, shifted C-terminally from the canonical domain-A aromatic center.",
+  "why_one_candidate": "not pooled with anything: no other patch is both within 12 A (half centroid distance, half contact-graph hops) and coverable by one paratope of this antibody's reach, 17.0 A",
+  "from_patches": [
+   "P1"
+  ]
+ },
+ "note": "`confidence` on the pocket is over pockets and sums to about 1 across them. Inside an interface it is per residue in [0, 1] and sums to nothing. No residue is cut at a threshold: the whole vector is the answer.",
+ "mapping_basis": "side",
+ "checks": {
+  "unrecognised_sides": []
+ },
+ "chain_pairs": [
+  {
+   "antibody_chain": "A",
+   "antigen_chain": "C",
+   "n_residues": 10
+  },
+  {
+   "antibody_chain": "B",
+   "antigen_chain": "C",
+   "n_residues": 10
+  }
+ ],
+ "antibodies": [
+  {
+   "antibody": "antibody.pdb",
+   "chains": {
+    "A": "unknown",
+    "B": "unknown"
+   },
+   "binding_mode": null,
+   "n_residues_scored": 10,
+   "interfaces": [
+    {
+     "antibody_chain": "A",
+     "antibody_chain_type": "unknown",
+     "antigen_chain": "C",
+     "n_residues": 10,
+     "residue_confidence": {
+      "238": 0.2,
+      "240": 0.68,
+      "241": 0.86,
+      "242": 0.76,
+      "243": 0.82,
+      "244": 0.88,
+      "245": 0.24,
+      "246": 0.7,
+      "247": 0.74,
+      "248": 0.64
+     },
+     "residue_side": {
+      "238": "heavy",
+      "240": "heavy",
+      "241": "heavy",
+      "242": "both",
+      "243": "both",
+      "244": "both",
+      "245": "light",
+      "246": "light",
+      "247": "light",
+      "248": "light"
+     },
+     "max_confidence": 0.88,
+     "mean_confidence": 0.652
+    },
+    {
+     "antibody_chain": "B",
+     "antibody_chain_type": "unknown",
+     "antigen_chain": "C",
+     "n_residues": 10,
+     "residue_confidence": {
+      "238": 0.2,
+      "240": 0.68,
+      "241": 0.86,
+      "242": 0.76,
+      "243": 0.82,
+      "244": 0.88,
+      "245": 0.24,
+      "246": 0.7,
+      "247": 0.74,
+      "248": 0.64
+     },
+     "residue_side": {
+      "238": "heavy",
+      "240": "heavy",
+      "241": "heavy",
+      "242": "both",
+      "243": "both",
+      "244": "both",
+      "245": "light",
+      "246": "light",
+      "247": "light",
+      "248": "light"
+     },
+     "max_confidence": 0.88,
+     "mean_confidence": 0.652
+    }
+   ]
+  }
+ ],
+ "paratope": {
+  "dominant_cdrs": [
+   "H3:H2",
+   "L1:L3"
+  ],
+  "paratope_residues": [
+   "A:54",
+   "A:55",
+   "A:56",
+   "A:58",
+   "A:104",
+   "A:105",
+   "A:106",
+   "A:107",
+   "A:108",
+   "A:109",
+   "A:110",
+   "A:111",
+   "A:113",
+   "A:116",
+   "B:27",
+   "B:30",
+   "B:31",
+   "B:32",
+   "B:93",
+   "B:94",
+   "B:97"
+  ],
+  "heavy_light_split": "Heavy-dominant, approximately 70:30; H3 occupies the crest, H2 supports its proximal edge, and L1/L3 close the distal charged lip.",
+  "binding_mode_union": "single-chain"
+ },
+ "residues": [
+  "C:238",
+  "C:240",
+  "C:241",
+  "C:242",
+  "C:243",
+  "C:244",
+  "C:245",
+  "C:246",
+  "C:247",
+  "C:248"
+ ],
+ "n_residues": 10,
+ "patches": [
+  {
+   "id": "P1",
+   "name": "Domain-A/back-layer footprint shifted toward beta-strand 8 and the C-terminal rim",
+   "n_residues": 16,
+   "residues": [
+    "C:225",
+    "C:229",
+    "C:230",
+    "C:231",
+    "C:232",
+    "C:234",
+    "C:238",
+    "C:240",
+    "C:241",
+    "C:242",
+    "C:243",
+    "C:244",
+    "C:246",
+    "C:256",
+    "C:258",
+    "C:260"
+   ],
+   "n_kept_by_advocate": 7,
+   "n_dropped_by_advocate": 9
+  }
+ ],
+ "pooling_provenance": {
+  "n_shared_at_pooling": 16,
+  "n_disputed_at_pooling": 0,
+  "note": "counts only, describing how the organizer grouped the phase-1 patches. The organizer's own candidate residue list is deliberately absent: the answer is the advocate's footprint, in `residues` and in `antibodies[].interfaces[]`."
+ },
+ "evidence": {
+  "advocate": {
+   "n_findings": 4,
+   "n_supports": 3,
+   "n_weakens": 1,
+   "weakest_point": "The C:238 sequon can shield the ridge, and the best CBH-4G-specific perturbation points instead toward the neighboring Y632-equivalent core.",
+   "note": "the advocate reports claim/source/date/bearing and is not asked whether a source is about this binder"
+  },
+  "judge": {
+   "tier_a_support": 2,
+   "n_support_lines": 4,
+   "verdict": "unlikely",
+   "note": "Tier A -- a source about this binder itself -- is the judge's adjudication, in assessment[].support[]. It exists nowhere in the advocate's own answer."
+  }
+ },
+ "provenance": {
+  "unverified_source_policy_fields": [
+   "gated",
+   "web_search",
+   "shell_network",
+   "gate_tools"
+  ],
+  "assembled_case_dir": "gpt-5.6-high/gather_refine/post_refactor/unreleased_20261029/nocut/casp17/H2343/case_f1b810_G_rep1",
+  "organize_case_dir": "gpt-5.6-high/gather_refine/post_refactor/unreleased_20261029/nocut/casp17/H2343/case_f1b810_GR_rep1",
+  "organize_status": "ok",
+  "judge_case_dir": "gpt-5.6-high/gather_refine/post_refactor/unreleased_20261029/nocut/casp17/H2343/case_f1b810_GJ_rep1",
+  "judge_status": "ok",
+  "packet": "gpt-5.6-high/nocut/gather/packets/case_f1b810/packet",
+  "manifest": "gpt-5.6-high/nocut/gather/packets/case_f1b810/manifest.json",
+  "advocate_case_dir": "gpt-5.6-high/gather_refine/post_refactor/unreleased_20261029/nocut/casp17/H2343/case_f1b810_GR_rep1",
+  "advocate_status": "ok"
+ }
+}

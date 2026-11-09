@@ -1,0 +1,300 @@
+{
+ "task": "gather",
+ "gather_mode": "batched",
+ "num_launchers": 3,
+ "policy": {
+  "evidence_cutoff": "2026-05-21",
+  "no_cutoff": false,
+  "gated": true,
+  "web_search": false,
+  "shell_network": true,
+  "gate_tools": [
+   "research",
+   "fetch",
+   "rcsb",
+   "patent",
+   "paper"
+  ]
+ },
+ "unscored": false,
+ "target": "H1347_agCD",
+ "target_set": "casp17",
+ "case": "case_0f54aa",
+ "evidence_cutoff": "2026-05-21",
+ "target_release_date": "2026-05-21",
+ "retrieval_policy": "gated",
+ "input_structure": "structures/H1347_agCD.pdb",
+ "input_structure_sha256": null,
+ "briefing_source": null,
+ "briefing_sha256": null,
+ "antigen_chains": [
+  "C",
+  "D"
+ ],
+ "antibody_files": {
+  "antibody.1.pdb": [
+   "A"
+  ],
+  "antibody.2.pdb": [
+   "B"
+  ]
+ },
+ "antibody_chain_types": {
+  "antibody.1.pdb": {
+   "A": "heavy"
+  },
+  "antibody.2.pdb": {
+   "B": "light"
+  }
+ },
+ "truth_file": "data/truth/casp17/H1347_agCD.epitope.json",
+ "stage": "gatherer",
+ "pocket": {
+  "id": "C4",
+  "judge_rank": 3,
+  "name": "The complete C-chain variable-domain CDR cap: a continuous VH...",
+  "confidence": 0.15,
+  "p_rests_on_holds": 0.25,
+  "why_this_rank": "The whole VH cap is connected, exposed, coverable, and functionally heavy-dominant, but it requires unsupported convergence of two independent binders.",
+  "rests_on": "Both supplied binders converge on the broad VH H1/H2/H3 cap.",
+  "where_the_mass_goes_if_it_fails": "C2, C3, or C7",
+  "what_it_is": "The complete C-chain variable-domain CDR cap: a continuous VH H1/H2/H3 idiotope centered on H3.",
+  "why_one_candidate": "not pooled with anything: no other patch is both within 12 A (half centroid distance, half contact-graph hops) and coverable by one paratope of this antibody's reach, 13.2 A",
+  "from_patches": [
+   "P4"
+  ]
+ },
+ "note": "`confidence` on the pocket is over pockets and sums to about 1 across them. Inside an interface it is per residue in [0, 1] and sums to nothing. No residue is cut at a threshold: the whole vector is the answer.",
+ "mapping_basis": "per_antibody",
+ "checks": {
+  "unrecognised_sides": []
+ },
+ "chain_pairs": [
+  {
+   "antibody_chain": "A",
+   "antigen_chain": "C",
+   "n_residues": 11
+  },
+  {
+   "antibody_chain": "B",
+   "antigen_chain": "C",
+   "n_residues": 11
+  }
+ ],
+ "antibodies": [
+  {
+   "antibody": "antibody.1.pdb",
+   "chains": {
+    "A": "heavy"
+   },
+   "binding_mode": "single-chain",
+   "n_residues_scored": 11,
+   "interfaces": [
+    {
+     "antibody_chain": "A",
+     "antibody_chain_type": "heavy",
+     "antigen_chain": "C",
+     "n_residues": 11,
+     "residue_confidence": {
+      "34": 0.72,
+      "55": 0.68,
+      "56": 0.62,
+      "101": 0.72,
+      "103": 0.86,
+      "104": 0.88,
+      "107": 0.91,
+      "108": 0.83,
+      "109": 0.84,
+      "110": 0.94,
+      "111": 0.74
+     },
+     "residue_side": {
+      "34": "heavy",
+      "55": "heavy",
+      "56": "heavy",
+      "101": "heavy",
+      "103": "heavy",
+      "104": "heavy",
+      "107": "heavy",
+      "108": "heavy",
+      "109": "heavy",
+      "110": "heavy",
+      "111": "heavy"
+     },
+     "max_confidence": 0.94,
+     "mean_confidence": 0.7945,
+     "precision_vs_truth": 0.0,
+     "n_in_truth": 0
+    }
+   ]
+  },
+  {
+   "antibody": "antibody.2.pdb",
+   "chains": {
+    "B": "light"
+   },
+   "binding_mode": "single-chain",
+   "n_residues_scored": 11,
+   "interfaces": [
+    {
+     "antibody_chain": "B",
+     "antibody_chain_type": "light",
+     "antigen_chain": "C",
+     "n_residues": 11,
+     "residue_confidence": {
+      "34": 0.75,
+      "55": 0.6,
+      "56": 0.66,
+      "101": 0.65,
+      "103": 0.82,
+      "104": 0.85,
+      "107": 0.88,
+      "108": 0.82,
+      "109": 0.78,
+      "110": 0.92,
+      "111": 0.72
+     },
+     "residue_side": {
+      "34": "light",
+      "55": "light",
+      "56": "light",
+      "101": "light",
+      "103": "light",
+      "104": "light",
+      "107": "light",
+      "108": "light",
+      "109": "light",
+      "110": "light",
+      "111": "light"
+     },
+     "max_confidence": 0.92,
+     "mean_confidence": 0.7682,
+     "precision_vs_truth": 0.0,
+     "n_in_truth": 0
+    }
+   ]
+  }
+ ],
+ "paratope": {
+  "dominant_cdrs": [
+   "A:H3",
+   "A:H1",
+   "A:H2",
+   "B:L3",
+   "B:L1"
+  ],
+  "paratope_residues": [
+   "A:27",
+   "A:29",
+   "A:32",
+   "A:51",
+   "A:54",
+   "A:57",
+   "A:97",
+   "A:100",
+   "A:101",
+   "A:103",
+   "A:105",
+   "B:29",
+   "B:32",
+   "B:50",
+   "B:51",
+   "B:52",
+   "B:89",
+   "B:91",
+   "B:92",
+   "B:94",
+   "B:96"
+  ],
+  "heavy_light_split": "Both binders occupy antigen chain C. Their highly overlapping 21.19 Å footprints are reachable by both measured one-chain paratopes.",
+  "binding_mode_union": null
+ },
+ "residues": [
+  "C:101",
+  "C:103",
+  "C:104",
+  "C:107",
+  "C:108",
+  "C:109",
+  "C:110",
+  "C:111",
+  "C:34",
+  "C:55",
+  "C:56"
+ ],
+ "n_residues": 11,
+ "patches": [
+  {
+   "id": "P4",
+   "name": "C-chain heavy-variable CDR-cap idiotope",
+   "n_residues": 18,
+   "residues": [
+    "C:101",
+    "C:103",
+    "C:104",
+    "C:106",
+    "C:107",
+    "C:108",
+    "C:109",
+    "C:110",
+    "C:111",
+    "C:28",
+    "C:30",
+    "C:31",
+    "C:34",
+    "C:55",
+    "C:56",
+    "C:57",
+    "C:59",
+    "C:96"
+   ],
+   "n_kept_by_advocate": 11,
+   "n_dropped_by_advocate": 7
+  }
+ ],
+ "pooling_provenance": {
+  "n_shared_at_pooling": 18,
+  "n_disputed_at_pooling": 0,
+  "note": "counts only, describing how the organizer grouped the phase-1 patches. The organizer's own candidate residue list is deliberately absent: the answer is the advocate's footprint, in `residues` and in `antibodies[].interfaces[]`."
+ },
+ "evidence": {
+  "advocate": {
+   "n_findings": 3,
+   "n_supports": 3,
+   "n_weakens": 0,
+   "weakest_point": "The exact functional map contains VL contacts too, and no source shows that both A and B select the whole VH cap rather than a smaller subpatch.",
+   "note": "the advocate reports claim/source/date/bearing and is not asked whether a source is about this binder"
+  },
+  "judge": {
+   "tier_a_support": 0,
+   "n_support_lines": 3,
+   "verdict": "live",
+   "note": "Tier A -- a source about this binder itself -- is the judge's adjudication, in assessment[].support[]. It exists nowhere in the advocate's own answer."
+  }
+ },
+ "provenance": {
+  "unverified_source_policy_fields": [
+   "gated",
+   "web_search",
+   "shell_network",
+   "gate_tools"
+  ],
+  "assembled_case_dir": "gpt-5.6-high/gather_refine/post_refactor/released_structure_20261030/casp17/H1347_agCD/case_0f54aa_G_rep2",
+  "organize_case_dir": "gpt-5.6-high/gather_refine/post_refactor/released_structure_20261030/casp17/H1347_agCD/case_0f54aa_GR_rep1",
+  "organize_status": "ok",
+  "judge_case_dir": "gpt-5.6-high/gather_refine/post_refactor/released_structure_20261030/casp17/H1347_agCD/case_0f54aa_GJ_rep2",
+  "judge_status": "ok",
+  "packet": "gpt-5.6-high/gather/packets/case_0f54aa/packet",
+  "manifest": "gpt-5.6-high/gather/packets/case_0f54aa/manifest.json",
+  "advocate_case_dir": "gpt-5.6-high/gather_refine/post_refactor/released_structure_20261030/casp17/H1347_agCD/case_0f54aa_GR_rep1",
+  "advocate_status": "ok"
+ },
+ "score": {
+  "precision": 0.0,
+  "recall": 0.0,
+  "f1": 0.0,
+  "n_pred": 11,
+  "n_true": 22,
+  "n_hit": 0
+ }
+}

@@ -1,0 +1,391 @@
+{
+ "task": "gather",
+ "gather_mode": "batched",
+ "num_launchers": 3,
+ "policy": {
+  "evidence_cutoff": "2026-06-12",
+  "no_cutoff": false,
+  "gated": true,
+  "web_search": false,
+  "shell_network": true,
+  "gate_tools": [
+   "research",
+   "fetch",
+   "rcsb",
+   "patent",
+   "paper"
+  ]
+ },
+ "unscored": true,
+ "target": "H2362",
+ "target_set": "casp17",
+ "case": "case_259152",
+ "evidence_cutoff": "2026-06-12",
+ "target_release_date": "2026-06-12",
+ "retrieval_policy": "gated",
+ "input_structure": "data/staged_casp17_no_native/H2362.pdb",
+ "input_structure_sha256": "54e187b986e4696f87e1dd7dd4cd6cd943754471a337aa57a0577c6172827a73",
+ "briefing_source": "data/briefing/casp17/H2362/search_results.json",
+ "briefing_sha256": "b0140a751ca600dc0d1ce7f02d3095b3776329fd300b1010c950088508d8f896",
+ "antigen_chains": [
+  "A",
+  "B",
+  "C",
+  "D",
+  "E"
+ ],
+ "antibody_files": {
+  "antibody.pdb": [
+   "F",
+   "G"
+  ]
+ },
+ "antibody_chain_types": {
+  "antibody.pdb": {
+   "F": "light",
+   "G": "heavy"
+  }
+ },
+ "stage": "gatherer",
+ "pocket": {
+  "id": "C3",
+  "judge_rank": 2,
+  "name": "The broad membrane-distal UL128/UL131A ridge, including the...",
+  "confidence": 0.15,
+  "p_rests_on_holds": 0.28,
+  "why_this_rank": "Multiple independent antibody maps validate the ridge and its positive chemistry suits the Fab, but buried seam residues and pooled microfaces prevent a lead.",
+  "rests_on": "This Fab uses one continuous contact mode across the pooled ridge despite the assembly-buried seam.",
+  "where_the_mass_goes_if_it_fails": "C6 and C2",
+  "what_it_is": "The broad membrane-distal UL128/UL131A ridge, including the attachment-proximal B:67/D:9 knob and adjacent shallow B:88/D:24 face.",
+  "why_one_candidate": "geometry pooled 2 patches (P11, P3): P11+P3 at 3.74 A, union radius 16.94 A. Every union fits inside this antibody's paratope reach of 17.6 A. No session judged these to be the same surface.",
+  "from_patches": [
+   "P11",
+   "P3"
+  ]
+ },
+ "note": "`confidence` on the pocket is over pockets and sums to about 1 across them. Inside an interface it is per residue in [0, 1] and sums to nothing. No residue is cut at a threshold: the whole vector is the answer.",
+ "mapping_basis": "side",
+ "checks": {
+  "unrecognised_sides": []
+ },
+ "chain_pairs": [
+  {
+   "antibody_chain": "F",
+   "antigen_chain": "B",
+   "n_residues": 7
+  },
+  {
+   "antibody_chain": "F",
+   "antigen_chain": "D",
+   "n_residues": 12
+  },
+  {
+   "antibody_chain": "G",
+   "antigen_chain": "B",
+   "n_residues": 11
+  },
+  {
+   "antibody_chain": "G",
+   "antigen_chain": "D",
+   "n_residues": 2
+  }
+ ],
+ "antibodies": [
+  {
+   "antibody": "antibody.pdb",
+   "chains": {
+    "F": "light",
+    "G": "heavy"
+   },
+   "binding_mode": null,
+   "n_residues_scored": 23,
+   "interfaces": [
+    {
+     "antibody_chain": "F",
+     "antibody_chain_type": "light",
+     "antigen_chain": "B",
+     "n_residues": 7,
+     "residue_confidence": {
+      "81": 0.72,
+      "83": 0.18,
+      "86": 0.22,
+      "87": 0.2,
+      "88": 0.68,
+      "90": 0.8,
+      "92": 0.7
+     },
+     "residue_side": {
+      "81": "both",
+      "83": "both",
+      "86": "both",
+      "87": "both",
+      "88": "both",
+      "90": "both",
+      "92": "both"
+     },
+     "max_confidence": 0.8,
+     "mean_confidence": 0.5
+    },
+    {
+     "antibody_chain": "F",
+     "antibody_chain_type": "light",
+     "antigen_chain": "D",
+     "n_residues": 12,
+     "residue_confidence": {
+      "3": 0.55,
+      "4": 0.3,
+      "5": 0.7,
+      "6": 0.62,
+      "8": 0.18,
+      "9": 0.88,
+      "10": 0.55,
+      "11": 0.25,
+      "12": 0.6,
+      "13": 0.45,
+      "24": 0.78,
+      "25": 0.55
+     },
+     "residue_side": {
+      "3": "light",
+      "4": "light",
+      "5": "light",
+      "6": "light",
+      "8": "light",
+      "9": "both",
+      "10": "both",
+      "11": "light",
+      "12": "light",
+      "13": "light",
+      "24": "light",
+      "25": "light"
+     },
+     "max_confidence": 0.88,
+     "mean_confidence": 0.5342
+    },
+    {
+     "antibody_chain": "G",
+     "antibody_chain_type": "heavy",
+     "antigen_chain": "B",
+     "n_residues": 11,
+     "residue_confidence": {
+      "65": 0.45,
+      "67": 0.75,
+      "68": 0.35,
+      "70": 0.2,
+      "81": 0.72,
+      "83": 0.18,
+      "86": 0.22,
+      "87": 0.2,
+      "88": 0.68,
+      "90": 0.8,
+      "92": 0.7
+     },
+     "residue_side": {
+      "65": "heavy",
+      "67": "heavy",
+      "68": "heavy",
+      "70": "heavy",
+      "81": "both",
+      "83": "both",
+      "86": "both",
+      "87": "both",
+      "88": "both",
+      "90": "both",
+      "92": "both"
+     },
+     "max_confidence": 0.8,
+     "mean_confidence": 0.4773
+    },
+    {
+     "antibody_chain": "G",
+     "antibody_chain_type": "heavy",
+     "antigen_chain": "D",
+     "n_residues": 2,
+     "residue_confidence": {
+      "9": 0.88,
+      "10": 0.55
+     },
+     "residue_side": {
+      "9": "both",
+      "10": "both"
+     },
+     "max_confidence": 0.88,
+     "mean_confidence": 0.715
+    }
+   ]
+  }
+ ],
+ "paratope": {
+  "dominant_cdrs": [
+   "G:H3",
+   "G:H2",
+   "F:L1",
+   "F:L3"
+  ],
+  "paratope_residues": [
+   "G:26",
+   "G:27",
+   "G:28",
+   "G:30",
+   "G:31",
+   "G:32",
+   "G:33",
+   "G:34",
+   "G:35",
+   "G:54",
+   "G:55",
+   "G:56",
+   "G:57",
+   "G:58",
+   "G:59",
+   "G:99",
+   "G:101",
+   "G:102",
+   "G:103",
+   "G:104",
+   "G:105",
+   "G:106",
+   "G:107",
+   "G:108",
+   "G:110",
+   "G:111",
+   "F:27",
+   "F:28",
+   "F:30",
+   "F:31",
+   "F:32",
+   "F:50",
+   "F:52",
+   "F:92",
+   "F:93",
+   "F:94",
+   "F:97"
+  ],
+  "heavy_light_split": "Approximately 60:40 heavy:light. Heavy CDRs occupy UL128; light CDRs occupy UL131A, crossing at B:81/B:88/D:9/D:10.",
+  "binding_mode_union": "straddling"
+ },
+ "residues": [
+  "B:65",
+  "B:67",
+  "B:68",
+  "B:70",
+  "B:81",
+  "B:83",
+  "B:86",
+  "B:87",
+  "B:88",
+  "B:90",
+  "B:92",
+  "D:10",
+  "D:11",
+  "D:12",
+  "D:13",
+  "D:24",
+  "D:25",
+  "D:3",
+  "D:4",
+  "D:5",
+  "D:6",
+  "D:8",
+  "D:9"
+ ],
+ "n_residues": 23,
+ "patches": [
+  {
+   "id": "P11",
+   "name": "UL128/UL131A membrane-distal junction",
+   "n_residues": 20,
+   "residues": [
+    "B:65",
+    "B:67",
+    "B:68",
+    "B:70",
+    "B:81",
+    "B:83",
+    "B:86",
+    "B:87",
+    "B:88",
+    "D:10",
+    "D:11",
+    "D:12",
+    "D:13",
+    "D:15",
+    "D:3",
+    "D:4",
+    "D:5",
+    "D:6",
+    "D:8",
+    "D:9"
+   ],
+   "n_kept_by_advocate": 19,
+   "n_dropped_by_advocate": 1
+  },
+  {
+   "id": "P3",
+   "name": "UL128-UL131A exposed junction (site-2/5-like)",
+   "n_residues": 21,
+   "residues": [
+    "B:81",
+    "B:83",
+    "B:86",
+    "B:87",
+    "B:88",
+    "B:89",
+    "B:90",
+    "B:91",
+    "B:92",
+    "B:97",
+    "B:99",
+    "D:11",
+    "D:12",
+    "D:2",
+    "D:22",
+    "D:24",
+    "D:25",
+    "D:4",
+    "D:5",
+    "D:8",
+    "D:9"
+   ],
+   "n_kept_by_advocate": 15,
+   "n_dropped_by_advocate": 6
+  }
+ ],
+ "pooling_provenance": {
+  "n_shared_at_pooling": 11,
+  "n_disputed_at_pooling": 19,
+  "note": "counts only, describing how the organizer grouped the phase-1 patches. The organizer's own candidate residue list is deliberately absent: the answer is the advocate's footprint, in `residues` and in `antibodies[].interfaces[]`."
+ },
+ "evidence": {
+  "advocate": {
+   "n_findings": 3,
+   "n_supports": 2,
+   "n_weakens": 1,
+   "weakest_point": "The ridge spans two approach microfaces with different mechanisms, and several intervening residues are assembly-buried; one Fab may not contact both ends as strongly as drawn.",
+   "note": "the advocate reports claim/source/date/bearing and is not asked whether a source is about this binder"
+  },
+  "judge": {
+   "tier_a_support": 0,
+   "n_support_lines": 4,
+   "verdict": "live",
+   "note": "Tier A -- a source about this binder itself -- is the judge's adjudication, in assessment[].support[]. It exists nowhere in the advocate's own answer."
+  }
+ },
+ "provenance": {
+  "unverified_source_policy_fields": [
+   "gated",
+   "web_search",
+   "shell_network",
+   "gate_tools"
+  ],
+  "assembled_case_dir": "gpt-5.6-high/gather_refine/post_refactor/unreleased_20261029/gated/casp17/H2362/case_259152_G_rep1",
+  "organize_case_dir": "gpt-5.6-high/gather_refine/post_refactor/unreleased_20261029/gated/casp17/H2362/case_259152_GR_rep1",
+  "organize_status": "ok",
+  "judge_case_dir": "gpt-5.6-high/gather_refine/post_refactor/unreleased_20261029/gated/casp17/H2362/case_259152_GJ_rep1",
+  "judge_status": "ok",
+  "packet": "gpt-5.6-high/gather/packets/case_259152/packet",
+  "manifest": "gpt-5.6-high/gather/packets/case_259152/manifest.json",
+  "advocate_case_dir": "gpt-5.6-high/gather_refine/post_refactor/unreleased_20261029/gated/casp17/H2362/case_259152_GR_rep1",
+  "advocate_status": "ok"
+ }
+}

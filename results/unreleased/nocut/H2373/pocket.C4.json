@@ -1,0 +1,276 @@
+{
+ "task": "gather",
+ "gather_mode": "batched",
+ "num_launchers": 3,
+ "policy": {
+  "evidence_cutoff": null,
+  "no_cutoff": true,
+  "gated": false,
+  "web_search": true,
+  "shell_network": true,
+  "gate_tools": []
+ },
+ "unscored": true,
+ "target": "H2373",
+ "target_set": "casp17",
+ "case": "case_0a097a",
+ "evidence_cutoff": null,
+ "target_release_date": "2026-06-22",
+ "retrieval_policy": "no-cutoff",
+ "input_structure": "data/staged_casp17_no_native/H2373.pdb",
+ "input_structure_sha256": "6de101bc89c71ca02e9619508c2a03a96a523de97b34239d24f30aae6c792209",
+ "briefing_source": "data/briefing/casp17_nocutoff/H2373/search_results.json",
+ "briefing_sha256": "17237e993183a0c45c34a649ddd0e77ee2b537117226e6ee1aee035399333a3c",
+ "antigen_chains": [
+  "C"
+ ],
+ "antibody_files": {
+  "antibody.pdb": [
+   "A",
+   "B"
+  ]
+ },
+ "antibody_chain_types": {
+  "antibody.pdb": {
+   "A": "unknown",
+   "B": "unknown"
+  }
+ },
+ "stage": "gatherer",
+ "pocket": {
+  "id": "C4",
+  "judge_rank": 5,
+  "name": "The flexible C-terminal ectodomain/profusion segment of gD, narrowed...",
+  "confidence": 0.11,
+  "p_rests_on_holds": 0.25,
+  "why_this_rank": "C4 is demonstrably antibody-bindable and therefore not excluded, but native glycan/membrane context is missing and its strongly acidic, nonaromatic surface is the weakest chemistry match to HAB194. Same-site nonneutralization weakens only the advocate's claimed consequence, not the epitope possibility.",
+  "rests_on": "The native glycosylated tail remains accessible to HAB194 and a subset of its CDRs can accommodate the acidic linear peptide.",
+  "where_the_mass_goes_if_it_fails": "C5, then C2",
+  "what_it_is": "The flexible C-terminal ectodomain/profusion segment of gD, narrowed to the exposed 262–272 linear antigenic region that links the folded receptor-binding core to the membrane-proximal continuation and is displaced during receptor-triggering.",
+  "why_one_candidate": "not pooled with anything: no other patch is both within 12 A (half centroid distance, half contact-graph hops) and coverable by one paratope of this antibody's reach, 17.7 A",
+  "from_patches": [
+   "P7"
+  ]
+ },
+ "note": "`confidence` on the pocket is over pockets and sums to about 1 across them. Inside an interface it is per residue in [0, 1] and sums to nothing. No residue is cut at a threshold: the whole vector is the answer.",
+ "mapping_basis": "side",
+ "checks": {
+  "unrecognised_sides": []
+ },
+ "chain_pairs": [
+  {
+   "antibody_chain": "A",
+   "antigen_chain": "C",
+   "n_residues": 11
+  },
+  {
+   "antibody_chain": "B",
+   "antigen_chain": "C",
+   "n_residues": 11
+  }
+ ],
+ "antibodies": [
+  {
+   "antibody": "antibody.pdb",
+   "chains": {
+    "A": "unknown",
+    "B": "unknown"
+   },
+   "binding_mode": null,
+   "n_residues_scored": 11,
+   "interfaces": [
+    {
+     "antibody_chain": "A",
+     "antibody_chain_type": "unknown",
+     "antigen_chain": "C",
+     "n_residues": 11,
+     "residue_confidence": {
+      "262": 0.3,
+      "263": 0.5,
+      "264": 0.58,
+      "265": 0.7,
+      "266": 0.84,
+      "267": 0.77,
+      "268": 0.86,
+      "269": 0.88,
+      "270": 0.86,
+      "271": 0.6,
+      "272": 0.4
+     },
+     "residue_side": {
+      "262": "light",
+      "263": "light",
+      "264": "light",
+      "265": "both",
+      "266": "both",
+      "267": "both",
+      "268": "both",
+      "269": "heavy",
+      "270": "heavy",
+      "271": "heavy",
+      "272": "heavy"
+     },
+     "max_confidence": 0.88,
+     "mean_confidence": 0.6627
+    },
+    {
+     "antibody_chain": "B",
+     "antibody_chain_type": "unknown",
+     "antigen_chain": "C",
+     "n_residues": 11,
+     "residue_confidence": {
+      "262": 0.3,
+      "263": 0.5,
+      "264": 0.58,
+      "265": 0.7,
+      "266": 0.84,
+      "267": 0.77,
+      "268": 0.86,
+      "269": 0.88,
+      "270": 0.86,
+      "271": 0.6,
+      "272": 0.4
+     },
+     "residue_side": {
+      "262": "light",
+      "263": "light",
+      "264": "light",
+      "265": "both",
+      "266": "both",
+      "267": "both",
+      "268": "both",
+      "269": "heavy",
+      "270": "heavy",
+      "271": "heavy",
+      "272": "heavy"
+     },
+     "max_confidence": 0.88,
+     "mean_confidence": 0.6627
+    }
+   ]
+  }
+ ],
+ "paratope": {
+  "dominant_cdrs": [
+   "H3:H2",
+   "L3:L1"
+  ],
+  "paratope_residues": [
+   "A:27",
+   "A:28",
+   "A:30",
+   "A:31",
+   "A:32",
+   "A:53",
+   "A:54",
+   "A:56",
+   "A:57",
+   "A:58",
+   "A:98",
+   "A:100",
+   "A:101",
+   "A:102",
+   "A:103",
+   "A:104",
+   "A:105",
+   "A:106",
+   "A:107",
+   "A:109",
+   "A:110",
+   "B:26",
+   "B:30",
+   "B:31",
+   "B:32",
+   "B:33",
+   "B:34",
+   "B:53",
+   "B:54",
+   "B:93",
+   "B:95",
+   "B:96",
+   "B:97",
+   "B:98",
+   "B:100"
+  ],
+  "heavy_light_split": "Approximately 65:35 heavy:light along the extended peptide. L1/L3 take the glycan-adjacent C:262–264 edge, both chains converge over C:265–268, and H3/H2 cover the Leu268–Asp272 half.",
+  "binding_mode_union": "single-chain"
+ },
+ "residues": [
+  "C:262",
+  "C:263",
+  "C:264",
+  "C:265",
+  "C:266",
+  "C:267",
+  "C:268",
+  "C:269",
+  "C:270",
+  "C:271",
+  "C:272"
+ ],
+ "n_residues": 11,
+ "patches": [
+  {
+   "id": "P7",
+   "name": "Membrane-proximal linear/disordered ectodomain tail",
+   "n_residues": 16,
+   "residues": [
+    "C:259",
+    "C:260",
+    "C:261",
+    "C:262",
+    "C:263",
+    "C:264",
+    "C:265",
+    "C:266",
+    "C:267",
+    "C:268",
+    "C:269",
+    "C:270",
+    "C:271",
+    "C:272",
+    "C:273",
+    "C:274"
+   ],
+   "n_kept_by_advocate": 11,
+   "n_dropped_by_advocate": 5
+  }
+ ],
+ "pooling_provenance": {
+  "n_shared_at_pooling": 16,
+  "n_disputed_at_pooling": 0,
+  "note": "counts only, describing how the organizer grouped the phase-1 patches. The organizer's own candidate residue list is deliberately absent: the answer is the advocate's footprint, in `residues` and in `antibodies[].interfaces[]`."
+ },
+ "evidence": {
+  "advocate": {
+   "n_findings": 5,
+   "n_supports": 3,
+   "n_weakens": 2,
+   "weakest_point": "The strongest available functional evidence cuts against the premise: known monoclonals to the same 262–272 linear epitope bind but do not neutralize. In addition, the native C:262 N-glycan and membrane-proximal context are absent from the supplied isolated structure, so high calculated exposure may overstate virion accessibility.",
+   "note": "the advocate reports claim/source/date/bearing and is not asked whether a source is about this binder"
+  },
+  "judge": {
+   "tier_a_support": 0,
+   "n_support_lines": 6,
+   "verdict": "unlikely",
+   "note": "Tier A -- a source about this binder itself -- is the judge's adjudication, in assessment[].support[]. It exists nowhere in the advocate's own answer."
+  }
+ },
+ "provenance": {
+  "unverified_source_policy_fields": [
+   "gated",
+   "web_search",
+   "shell_network",
+   "gate_tools"
+  ],
+  "assembled_case_dir": "gpt-5.6-high/gather_refine/post_refactor/unreleased_20261029/nocut/casp17/H2373/case_0a097a_G_rep5",
+  "organize_case_dir": "gpt-5.6-high/gather_refine/post_refactor/unreleased_20261029/nocut/casp17/H2373/case_0a097a_GR_rep4",
+  "organize_status": "ok",
+  "judge_case_dir": "gpt-5.6-high/gather_refine/post_refactor/unreleased_20261029/nocut/casp17/H2373/case_0a097a_GJ_rep5",
+  "judge_status": "ok",
+  "packet": "gpt-5.6-high/nocut/gather/packets/case_0a097a/packet",
+  "manifest": "gpt-5.6-high/nocut/gather/packets/case_0a097a/manifest.json",
+  "advocate_case_dir": "gpt-5.6-high/gather_refine/post_refactor/unreleased_20261029/nocut/casp17/H2373/case_0a097a_GR_rep4",
+  "advocate_status": "ok"
+ }
+}

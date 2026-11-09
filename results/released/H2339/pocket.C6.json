@@ -1,0 +1,358 @@
+{
+ "task": "gather",
+ "gather_mode": "batched",
+ "num_launchers": 3,
+ "policy": {
+  "evidence_cutoff": "2026-05-15",
+  "no_cutoff": false,
+  "gated": true,
+  "web_search": false,
+  "shell_network": true,
+  "gate_tools": [
+   "research",
+   "fetch",
+   "rcsb",
+   "patent",
+   "paper"
+  ]
+ },
+ "unscored": false,
+ "target": "H2339",
+ "target_set": "casp17",
+ "case": "case_5886c7",
+ "evidence_cutoff": "2026-05-15",
+ "target_release_date": "2026-05-15",
+ "retrieval_policy": "gated",
+ "input_structure": "structures/H2339.pdb",
+ "input_structure_sha256": null,
+ "briefing_source": null,
+ "briefing_sha256": null,
+ "antigen_chains": [
+  "C",
+  "D"
+ ],
+ "antibody_files": {
+  "antibody.pdb": [
+   "A",
+   "B"
+  ]
+ },
+ "antibody_chain_types": {
+  "antibody.pdb": {
+   "A": "unknown",
+   "B": "unknown"
+  }
+ },
+ "truth_file": "data/truth/casp17/H2339.epitope.json",
+ "stage": "gatherer",
+ "pocket": {
+  "id": "C6",
+  "judge_rank": 4,
+  "name": "The factor-XI activation-cleavage junction: the C-terminal activation...",
+  "confidence": 0.05,
+  "p_rests_on_holds": 0.08,
+  "why_this_rank": "Its activation-blocking consequence matches the exact functional bias, but the inherited two-chain footprint is largely assembly-buried and contradicts isolated catalytic-domain binding.",
+  "rests_on": "The buried composite junction nevertheless becomes accessible in a relevant state and its apple-chain contacts are not essential.",
+  "where_the_mass_goes_if_it_fails": "C5, the most compatible surviving indirect-mechanism candidate.",
+  "what_it_is": "The factor-XI activation-cleavage junction: the C-terminal activation loop of the apple chain, the new N terminus of the catalytic chain, and the adjacent D:104-D:110 protease loop.",
+  "why_one_candidate": "not pooled with anything: no other patch is both within 12 A (half centroid distance, half contact-graph hops) and coverable by one paratope of this antibody's reach, 17.2 A",
+  "from_patches": [
+   "P6"
+  ]
+ },
+ "note": "`confidence` on the pocket is over pockets and sums to about 1 across them. Inside an interface it is per residue in [0, 1] and sums to nothing. No residue is cut at a threshold: the whole vector is the answer.",
+ "mapping_basis": "side",
+ "checks": {
+  "unrecognised_sides": []
+ },
+ "chain_pairs": [
+  {
+   "antibody_chain": "A",
+   "antigen_chain": "C",
+   "n_residues": 6
+  },
+  {
+   "antibody_chain": "A",
+   "antigen_chain": "D",
+   "n_residues": 10
+  },
+  {
+   "antibody_chain": "B",
+   "antigen_chain": "C",
+   "n_residues": 6
+  },
+  {
+   "antibody_chain": "B",
+   "antigen_chain": "D",
+   "n_residues": 10
+  }
+ ],
+ "antibodies": [
+  {
+   "antibody": "antibody.pdb",
+   "chains": {
+    "A": "unknown",
+    "B": "unknown"
+   },
+   "binding_mode": null,
+   "n_residues_scored": 16,
+   "interfaces": [
+    {
+     "antibody_chain": "A",
+     "antibody_chain_type": "unknown",
+     "antigen_chain": "C",
+     "n_residues": 6,
+     "residue_confidence": {
+      "364": 0.55,
+      "365": 0.88,
+      "366": 0.68,
+      "367": 0.91,
+      "368": 0.86,
+      "369": 0.9
+     },
+     "residue_side": {
+      "364": "light",
+      "365": "heavy",
+      "366": "heavy",
+      "367": "both",
+      "368": "heavy",
+      "369": "both"
+     },
+     "max_confidence": 0.91,
+     "mean_confidence": 0.7967,
+     "precision_vs_truth": 0.0,
+     "n_in_truth": 0
+    },
+    {
+     "antibody_chain": "A",
+     "antibody_chain_type": "unknown",
+     "antigen_chain": "D",
+     "n_residues": 10,
+     "residue_confidence": {
+      "8": 0.7,
+      "9": 0.82,
+      "11": 0.45,
+      "104": 0.55,
+      "105": 0.7,
+      "106": 0.62,
+      "107": 0.44,
+      "108": 0.5,
+      "109": 0.38,
+      "110": 0.4
+     },
+     "residue_side": {
+      "8": "heavy",
+      "9": "both",
+      "11": "light",
+      "104": "light",
+      "105": "heavy",
+      "106": "light",
+      "107": "both",
+      "108": "light",
+      "109": "light",
+      "110": "both"
+     },
+     "max_confidence": 0.82,
+     "mean_confidence": 0.556,
+     "precision_vs_truth": 0.0,
+     "n_in_truth": 0
+    },
+    {
+     "antibody_chain": "B",
+     "antibody_chain_type": "unknown",
+     "antigen_chain": "C",
+     "n_residues": 6,
+     "residue_confidence": {
+      "364": 0.55,
+      "365": 0.88,
+      "366": 0.68,
+      "367": 0.91,
+      "368": 0.86,
+      "369": 0.9
+     },
+     "residue_side": {
+      "364": "light",
+      "365": "heavy",
+      "366": "heavy",
+      "367": "both",
+      "368": "heavy",
+      "369": "both"
+     },
+     "max_confidence": 0.91,
+     "mean_confidence": 0.7967,
+     "precision_vs_truth": 0.0,
+     "n_in_truth": 0
+    },
+    {
+     "antibody_chain": "B",
+     "antibody_chain_type": "unknown",
+     "antigen_chain": "D",
+     "n_residues": 10,
+     "residue_confidence": {
+      "8": 0.7,
+      "9": 0.82,
+      "11": 0.45,
+      "104": 0.55,
+      "105": 0.7,
+      "106": 0.62,
+      "107": 0.44,
+      "108": 0.5,
+      "109": 0.38,
+      "110": 0.4
+     },
+     "residue_side": {
+      "8": "heavy",
+      "9": "both",
+      "11": "light",
+      "104": "light",
+      "105": "heavy",
+      "106": "light",
+      "107": "both",
+      "108": "light",
+      "109": "light",
+      "110": "both"
+     },
+     "max_confidence": 0.82,
+     "mean_confidence": 0.556,
+     "precision_vs_truth": 0.0,
+     "n_in_truth": 0
+    }
+   ]
+  }
+ ],
+ "paratope": {
+  "dominant_cdrs": [
+   "H3",
+   "H2",
+   "L3",
+   "L1"
+  ],
+  "paratope_residues": [
+   "A:27",
+   "A:28",
+   "A:30",
+   "A:31",
+   "A:32",
+   "A:53",
+   "A:54",
+   "A:56",
+   "A:57",
+   "A:58",
+   "A:99",
+   "A:100",
+   "A:101",
+   "A:102",
+   "A:103",
+   "A:106",
+   "A:107",
+   "B:27",
+   "B:28",
+   "B:30",
+   "B:31",
+   "B:32",
+   "B:50",
+   "B:52",
+   "B:91",
+   "B:92",
+   "B:93",
+   "B:94",
+   "B:95",
+   "B:96",
+   "B:97"
+  ],
+  "heavy_light_split": "Heavy contributes about 65%, centring H3 on C:365-C:369/D:8-D:9/D:105. Light contributes about 35% over C:364 and D:11/D:104/D:106-D:109. Both chains meet at C:367/C:369 and D:9/D:107/D:110.",
+  "binding_mode_union": "straddling"
+ },
+ "residues": [
+  "C:364",
+  "C:365",
+  "C:366",
+  "C:367",
+  "C:368",
+  "C:369",
+  "D:104",
+  "D:105",
+  "D:106",
+  "D:107",
+  "D:108",
+  "D:109",
+  "D:11",
+  "D:110",
+  "D:8",
+  "D:9"
+ ],
+ "n_residues": 16,
+ "patches": [
+  {
+   "id": "P6",
+   "name": "Activation-cleavage and C-D chain-junction face",
+   "n_residues": 17,
+   "residues": [
+    "C:361",
+    "C:364",
+    "C:365",
+    "C:366",
+    "C:367",
+    "C:368",
+    "C:369",
+    "D:104",
+    "D:105",
+    "D:106",
+    "D:107",
+    "D:108",
+    "D:109",
+    "D:11",
+    "D:110",
+    "D:8",
+    "D:9"
+   ],
+   "n_kept_by_advocate": 16,
+   "n_dropped_by_advocate": 1
+  }
+ ],
+ "pooling_provenance": {
+  "n_shared_at_pooling": 17,
+  "n_disputed_at_pooling": 0,
+  "note": "counts only, describing how the organizer grouped the phase-1 patches. The organizer's own candidate residue list is deliberately absent: the answer is the advocate's footprint, in `residues` and in `antibodies[].interfaces[]`."
+ },
+ "evidence": {
+  "advocate": {
+   "n_findings": 5,
+   "n_supports": 3,
+   "n_weakens": 1,
+   "weakest_point": "The exact antibody is reported to bind isolated catalytic domain and not an apple domain, while this mode assigns several high-probability contacts to chain C; D:104 glycosylation and assembly burial further constrain the approach.",
+   "note": "the advocate reports claim/source/date/bearing and is not asked whether a source is about this binder"
+  },
+  "judge": {
+   "tier_a_support": 2,
+   "n_support_lines": 4,
+   "verdict": "unlikely",
+   "note": "Tier A -- a source about this binder itself -- is the judge's adjudication, in assessment[].support[]. It exists nowhere in the advocate's own answer."
+  }
+ },
+ "provenance": {
+  "unverified_source_policy_fields": [
+   "gated",
+   "web_search",
+   "shell_network",
+   "gate_tools"
+  ],
+  "assembled_case_dir": "gpt-5.6-high/gather_refine/post_refactor/released_structure_20261030/casp17/H2339/case_5886c7_G_rep3",
+  "organize_case_dir": "gpt-5.6-high/gather_refine/post_refactor/released_structure_20261030/casp17/H2339/case_5886c7_GR_rep1",
+  "organize_status": "ok",
+  "judge_case_dir": "gpt-5.6-high/gather_refine/post_refactor/released_structure_20261030/casp17/H2339/case_5886c7_GJ_rep3",
+  "judge_status": "ok",
+  "packet": "gpt-5.6-high/gather/packets/case_5886c7/packet",
+  "manifest": "gpt-5.6-high/gather/packets/case_5886c7/manifest.json",
+  "advocate_case_dir": "gpt-5.6-high/gather_refine/post_refactor/released_structure_20261030/casp17/H2339/case_5886c7_GR_rep1",
+  "advocate_status": "ok"
+ },
+ "score": {
+  "precision": 0.0,
+  "recall": 0.0,
+  "f1": 0.0,
+  "n_pred": 16,
+  "n_true": 22,
+  "n_hit": 0
+ }
+}

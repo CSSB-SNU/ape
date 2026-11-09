@@ -1,0 +1,337 @@
+{
+ "target": "H1346_agCD",
+ "target_set": "casp17",
+ "case": "case_fed304",
+ "task": "gather",
+ "gather_mode": "batched",
+ "num_launchers": 3,
+ "policy": {
+  "evidence_cutoff": "2026-05-21",
+  "no_cutoff": false,
+  "gated": true,
+  "web_search": false,
+  "shell_network": true,
+  "gate_tools": [
+   "research",
+   "fetch",
+   "rcsb",
+   "patent",
+   "paper"
+  ]
+ },
+ "unscored": false,
+ "evidence_cutoff": "2026-05-21",
+ "target_release_date": "2026-05-21",
+ "retrieval_policy": "gated",
+ "antigen_chains": [
+  "C",
+  "D"
+ ],
+ "antibody_files": {
+  "antibody.pdb": [
+   "A",
+   "B"
+  ]
+ },
+ "antibody_chain_types": {
+  "antibody.pdb": {
+   "A": "heavy",
+   "B": "light"
+  }
+ },
+ "input_structure": "structures/H1346_agCD.pdb",
+ "input_structure_sha256": null,
+ "briefing_source": null,
+ "briefing_sha256": null,
+ "recognized_complex": {
+  "organize": null,
+  "judge": true
+ },
+ "recognition_note": "Exact supplied pre-cutoff sequence evidence identifies antigen C/D as the anti-BCMA Fab arm/common kappa chain of linvoseltamab (REGN5458): WO2020018820, 2020-01-23, and EP4739710A1, 2026-05-13. A 2024-11-14 specimen report used an anti-kappa Fab, but its sequence is undisclosed; A/B itself and its epitope therefore remain unconfirmed.",
+ "what_separated_them": "No candidate has a Tier A line about A/B. The distribution is therefore a contextual prior over surfaces: the same linvoseltamab specimen reportedly used an anti-kappa Fab, moving 0.73 total mass to C1/C4. C1 leads on uniform intact-assembly exposure and a conventional-antibody broad-face prior; C4 gains weaker different-VHH hinge precedent and gross charge complementarity. Structural filters favor C2 among the overlapping C2/C3/C5 apex variants and C6 over C7, but do not overcome the missing binder identity.",
+ "not_pooled": [],
+ "provenance": {
+  "unverified_source_policy_fields": [
+   "gated",
+   "web_search",
+   "shell_network",
+   "gate_tools"
+  ],
+  "assembled_case_dir": "gpt-5.6-high/gather_refine/post_refactor/released_structure_20261030/casp17/H1346_agCD/case_fed304_G_rep2",
+  "organize_case_dir": "gpt-5.6-high/gather_refine/post_refactor/released_structure_20261030/casp17/H1346_agCD/case_fed304_GR_rep1",
+  "organize_status": "ok",
+  "judge_case_dir": "gpt-5.6-high/gather_refine/post_refactor/released_structure_20261030/casp17/H1346_agCD/case_fed304_GJ_rep2",
+  "judge_status": "ok",
+  "packet": "gpt-5.6-high/gather/packets/case_fed304/packet",
+  "manifest": "gpt-5.6-high/gather/packets/case_fed304/manifest.json"
+ },
+ "truth_file": "data/truth/casp17/H1346_agCD.epitope.json",
+ "truth": {
+  "n_residues": 17,
+  "usable": "yes",
+  "chains": {
+   "D": [
+    152,
+    153,
+    154,
+    155,
+    156,
+    157,
+    158,
+    159,
+    183,
+    184,
+    185,
+    186,
+    188,
+    189,
+    190,
+    191,
+    192
+   ]
+  },
+  "anchor_note": "the numbering frame only; the epitope is defined on the native and carried here by antigen sequence alignment, so which pooled model this is does not affect the label"
+ },
+ "oracle": {
+  "metric": "f1",
+  "epitope_definition": "whole_antibody",
+  "truth_file": "data/truth/casp17/H1346_agCD.epitope.json",
+  "rank1": {
+   "pocket": "C1",
+   "confidence": 0.42,
+   "precision": 0.6957,
+   "recall": 0.9412,
+   "f1": 0.8,
+   "n_pred": 23,
+   "n_true": 17,
+   "n_hit": 16
+  },
+  "best": {
+   "pocket": "C1",
+   "judge_rank": 1,
+   "confidence": 0.42,
+   "precision": 0.6957,
+   "recall": 0.9412,
+   "f1": 0.8,
+   "n_pred": 23,
+   "n_true": 17,
+   "n_hit": 16
+  },
+  "note": "the best pocket the answer already contains. Rank 1 is the answer as delivered, so the gap is what the judge's ordering cost."
+ },
+ "pockets": [
+  {
+   "id": "C1",
+   "judge_rank": 1,
+   "name": "The broad solvent-exposed outer plateau of the folded human C-kappa...",
+   "confidence": 0.42,
+   "mapping_basis": "side",
+   "n_residues": 23,
+   "score": {
+    "precision": 0.6957,
+    "recall": 0.9412,
+    "f1": 0.8,
+    "n_pred": 23,
+    "n_true": 17,
+    "n_hit": 16
+   },
+   "chain_pairs": [
+    {
+     "antibody_chain": "A",
+     "antigen_chain": "D",
+     "n_residues": 15
+    },
+    {
+     "antibody_chain": "B",
+     "antigen_chain": "D",
+     "n_residues": 15
+    }
+   ],
+   "file": "pocket.C1.json"
+  },
+  {
+   "id": "C4",
+   "judge_rank": 2,
+   "name": "The V-kappa/C-kappa elbow junction and the spatially adjoining...",
+   "confidence": 0.31,
+   "mapping_basis": "side",
+   "n_residues": 17,
+   "score": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0,
+    "n_pred": 17,
+    "n_true": 17,
+    "n_hit": 0
+   },
+   "chain_pairs": [
+    {
+     "antibody_chain": "A",
+     "antigen_chain": "D",
+     "n_residues": 12
+    },
+    {
+     "antibody_chain": "B",
+     "antigen_chain": "D",
+     "n_residues": 12
+    }
+   ],
+   "file": "pocket.C4.json"
+  },
+  {
+   "id": "C2",
+   "judge_rank": 3,
+   "name": "The functional idiotope spanning the VH/VL combining-site apex of the...",
+   "confidence": 0.12,
+   "mapping_basis": "side",
+   "n_residues": 21,
+   "score": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0,
+    "n_pred": 21,
+    "n_true": 17,
+    "n_hit": 0
+   },
+   "chain_pairs": [
+    {
+     "antibody_chain": "A",
+     "antigen_chain": "C",
+     "n_residues": 8
+    },
+    {
+     "antibody_chain": "A",
+     "antigen_chain": "D",
+     "n_residues": 5
+    },
+    {
+     "antibody_chain": "B",
+     "antigen_chain": "C",
+     "n_residues": 14
+    }
+   ],
+   "file": "pocket.C2.json"
+  },
+  {
+   "id": "C3",
+   "judge_rank": 4,
+   "name": "A single-antigen-chain idiotope on the exposed anti-BCMA VH...",
+   "confidence": 0.06,
+   "mapping_basis": "side",
+   "n_residues": 19,
+   "score": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0,
+    "n_pred": 19,
+    "n_true": 17,
+    "n_hit": 0
+   },
+   "chain_pairs": [
+    {
+     "antibody_chain": "A",
+     "antigen_chain": "C",
+     "n_residues": 10
+    },
+    {
+     "antibody_chain": "B",
+     "antigen_chain": "C",
+     "n_residues": 15
+    }
+   ],
+   "file": "pocket.C3.json"
+  },
+  {
+   "id": "C5",
+   "judge_rank": 5,
+   "name": "The complete anti-BCMA paratope idiotope spanning both antigen...",
+   "confidence": 0.04,
+   "mapping_basis": "side",
+   "n_residues": 26,
+   "score": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0,
+    "n_pred": 26,
+    "n_true": 17,
+    "n_hit": 0
+   },
+   "chain_pairs": [
+    {
+     "antibody_chain": "A",
+     "antigen_chain": "C",
+     "n_residues": 8
+    },
+    {
+     "antibody_chain": "A",
+     "antigen_chain": "D",
+     "n_residues": 8
+    },
+    {
+     "antibody_chain": "B",
+     "antigen_chain": "C",
+     "n_residues": 16
+    }
+   ],
+   "file": "pocket.C5.json"
+  },
+  {
+   "id": "C6",
+   "judge_rank": 6,
+   "name": "A compact single-chain V-kappa idiotope centered on the antigen...",
+   "confidence": 0.03,
+   "mapping_basis": "side",
+   "n_residues": 13,
+   "score": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0,
+    "n_pred": 13,
+    "n_true": 17,
+    "n_hit": 0
+   },
+   "chain_pairs": [
+    {
+     "antibody_chain": "A",
+     "antigen_chain": "D",
+     "n_residues": 9
+    },
+    {
+     "antibody_chain": "B",
+     "antigen_chain": "D",
+     "n_residues": 8
+    }
+   ],
+   "file": "pocket.C6.json"
+  },
+  {
+   "id": "C7",
+   "judge_rank": 7,
+   "name": "The broader solvent-exposed V-kappa combining-face idiotope...",
+   "confidence": 0.02,
+   "mapping_basis": "side",
+   "n_residues": 17,
+   "score": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0,
+    "n_pred": 17,
+    "n_true": 17,
+    "n_hit": 0
+   },
+   "chain_pairs": [
+    {
+     "antibody_chain": "A",
+     "antigen_chain": "D",
+     "n_residues": 9
+    },
+    {
+     "antibody_chain": "B",
+     "antigen_chain": "D",
+     "n_residues": 12
+    }
+   ],
+   "file": "pocket.C7.json"
+  }
+ ]
+}

@@ -1,0 +1,274 @@
+{
+ "target": "H2335",
+ "target_set": "casp17",
+ "case": "case_d48c74",
+ "task": "gather",
+ "gather_mode": "batched",
+ "num_launchers": 3,
+ "policy": {
+  "evidence_cutoff": null,
+  "no_cutoff": true,
+  "gated": false,
+  "web_search": true,
+  "shell_network": true,
+  "gate_tools": []
+ },
+ "unscored": true,
+ "evidence_cutoff": null,
+ "target_release_date": "2026-05-27",
+ "retrieval_policy": "no-cutoff",
+ "antigen_chains": [
+  "A",
+  "B",
+  "C"
+ ],
+ "antibody_files": {
+  "antibody.pdb": [
+   "D",
+   "E"
+  ]
+ },
+ "antibody_chain_types": {
+  "antibody.pdb": {
+   "D": "light",
+   "E": "heavy"
+  }
+ },
+ "input_structure": "data/staged_casp17_no_native/H2335.pdb",
+ "input_structure_sha256": "f216450f2774ea363d9dfeeb1e478d506d906f539f384bf370d4b65ff32c11bb",
+ "briefing_source": "data/briefing/casp17_nocutoff/H2335/search_results.json",
+ "briefing_sha256": "4c6eb598fb307223a9315af31439ba34c45b16345678bd0c3aeed39bcafa9e64",
+ "recognized_complex": {
+  "organize": null,
+  "judge": false
+ },
+ "recognition_note": "On 2026-10-29 I identified the antigen from supplied exact UniProt matches as HCMV Merlin gH/gL/gO and recognized comparator surface classes (MSL-109, 13H11, 3G16, E3K/CS4, F7K/CS2). Exact VH/VL and CDR searches did not identify the supplied antibody, and I did not find a published epitope for this query binder.",
+ "what_separated_them": "No candidate has a Tier A line about this binder. I retained a broad prior and used only modest Tier B separation: antibody precedent, assembly exposure, coverability, glycan/membrane penalties, and duplicate-boundary structure. C1/C5 are one heel class, C3/C7 one central class, and C4/C9 overlap on gO. Query CDR chemistry was broadly compatible with every candidate and was explicitly treated as non-discriminating.",
+ "not_pooled": [],
+ "provenance": {
+  "unverified_source_policy_fields": [
+   "gated",
+   "web_search",
+   "shell_network",
+   "gate_tools"
+  ],
+  "assembled_case_dir": "gpt-5.6-high/gather_refine/post_refactor/unreleased_20261029/nocut/casp17/H2335/case_d48c74_G_rep1",
+  "organize_case_dir": "gpt-5.6-high/gather_refine/post_refactor/unreleased_20261029/nocut/casp17/H2335/case_d48c74_GR_rep1",
+  "organize_status": "ok",
+  "judge_case_dir": "gpt-5.6-high/gather_refine/post_refactor/unreleased_20261029/nocut/casp17/H2335/case_d48c74_GJ_rep1",
+  "judge_status": "ok",
+  "packet": "gpt-5.6-high/nocut/gather/packets/case_d48c74/packet",
+  "manifest": "gpt-5.6-high/nocut/gather/packets/case_d48c74/manifest.json"
+ },
+ "pockets": [
+  {
+   "id": "C1",
+   "judge_rank": 1,
+   "name": "The exposed two-lobed gH heel: the WMPP loop faces a polar/aromatic...",
+   "confidence": 0.16,
+   "mapping_basis": "side",
+   "n_residues": 13,
+   "chain_pairs": [
+    {
+     "antibody_chain": "D",
+     "antigen_chain": "B",
+     "n_residues": 9
+    },
+    {
+     "antibody_chain": "E",
+     "antigen_chain": "B",
+     "n_residues": 8
+    }
+   ],
+   "file": "pocket.C1.json"
+  },
+  {
+   "id": "C3",
+   "judge_rank": 2,
+   "name": "The exposed gH DII/DIII kink, joining an aromatic/charged lobe near...",
+   "confidence": 0.15,
+   "mapping_basis": "side",
+   "n_residues": 18,
+   "chain_pairs": [
+    {
+     "antibody_chain": "D",
+     "antigen_chain": "B",
+     "n_residues": 14
+    },
+    {
+     "antibody_chain": "E",
+     "antigen_chain": "B",
+     "n_residues": 12
+    }
+   ],
+   "file": "pocket.C3.json"
+  },
+  {
+   "id": "C6",
+   "judge_rank": 3,
+   "name": "The membrane-proximal C-terminal gH DIV face recognized by 3G16...",
+   "confidence": 0.14,
+   "mapping_basis": "side",
+   "n_residues": 14,
+   "chain_pairs": [
+    {
+     "antibody_chain": "D",
+     "antigen_chain": "B",
+     "n_residues": 11
+    },
+    {
+     "antibody_chain": "E",
+     "antigen_chain": "B",
+     "n_residues": 9
+    }
+   ],
+   "file": "pocket.C6.json"
+  },
+  {
+   "id": "C5",
+   "judge_rank": 4,
+   "name": "The broader gH DIII/DIV heel hotspot comprising the WMPP loop, an...",
+   "confidence": 0.12,
+   "mapping_basis": "side",
+   "n_residues": 17,
+   "chain_pairs": [
+    {
+     "antibody_chain": "D",
+     "antigen_chain": "B",
+     "n_residues": 10
+    },
+    {
+     "antibody_chain": "E",
+     "antigen_chain": "B",
+     "n_residues": 12
+    }
+   ],
+   "file": "pocket.C5.json"
+  },
+  {
+   "id": "C7",
+   "judge_rank": 5,
+   "name": "The compact charged DII lobe of the central gH kink: an exposed...",
+   "confidence": 0.11,
+   "mapping_basis": "side",
+   "n_residues": 15,
+   "chain_pairs": [
+    {
+     "antibody_chain": "D",
+     "antigen_chain": "B",
+     "n_residues": 10
+    },
+    {
+     "antibody_chain": "E",
+     "antigen_chain": "B",
+     "n_residues": 10
+    }
+   ],
+   "file": "pocket.C7.json"
+  },
+  {
+   "id": "C8",
+   "judge_rank": 6,
+   "name": "The membrane-distal gH-gL composite seam: an exposed rim around gH...",
+   "confidence": 0.1,
+   "mapping_basis": "side",
+   "n_residues": 14,
+   "chain_pairs": [
+    {
+     "antibody_chain": "D",
+     "antigen_chain": "B",
+     "n_residues": 7
+    },
+    {
+     "antibody_chain": "D",
+     "antigen_chain": "C",
+     "n_residues": 6
+    },
+    {
+     "antibody_chain": "E",
+     "antigen_chain": "B",
+     "n_residues": 3
+    },
+    {
+     "antibody_chain": "E",
+     "antigen_chain": "C",
+     "n_residues": 4
+    }
+   ],
+   "file": "pocket.C8.json"
+  },
+  {
+   "id": "C9",
+   "judge_rank": 7,
+   "name": "A two-lobed receptor-adjacent gO surface joining an N-terminal lobe...",
+   "confidence": 0.09,
+   "mapping_basis": "side",
+   "n_residues": 22,
+   "chain_pairs": [
+    {
+     "antibody_chain": "D",
+     "antigen_chain": "A",
+     "n_residues": 4
+    },
+    {
+     "antibody_chain": "E",
+     "antigen_chain": "A",
+     "n_residues": 21
+    }
+   ],
+   "file": "pocket.C9.json"
+  },
+  {
+   "id": "C4",
+   "judge_rank": 8,
+   "name": "A quaternary PDGFR-alpha site-2 rim where the basic gO DI ridge...",
+   "confidence": 0.08,
+   "mapping_basis": "side",
+   "n_residues": 17,
+   "chain_pairs": [
+    {
+     "antibody_chain": "D",
+     "antigen_chain": "A",
+     "n_residues": 4
+    },
+    {
+     "antibody_chain": "D",
+     "antigen_chain": "C",
+     "n_residues": 6
+    },
+    {
+     "antibody_chain": "E",
+     "antigen_chain": "A",
+     "n_residues": 11
+    },
+    {
+     "antibody_chain": "E",
+     "antigen_chain": "C",
+     "n_residues": 2
+    }
+   ],
+   "file": "pocket.C4.json"
+  },
+  {
+   "id": "C2",
+   "judge_rank": 9,
+   "name": "The N-terminal hydrophobic/basic lobe of gO's PDGFR-alpha site-3...",
+   "confidence": 0.05,
+   "mapping_basis": "side",
+   "n_residues": 22,
+   "chain_pairs": [
+    {
+     "antibody_chain": "D",
+     "antigen_chain": "A",
+     "n_residues": 14
+    },
+    {
+     "antibody_chain": "E",
+     "antigen_chain": "A",
+     "n_residues": 15
+    }
+   ],
+   "file": "pocket.C2.json"
+  }
+ ]
+}

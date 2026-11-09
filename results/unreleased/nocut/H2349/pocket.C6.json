@@ -1,0 +1,298 @@
+{
+ "task": "gather",
+ "gather_mode": "batched",
+ "num_launchers": 3,
+ "policy": {
+  "evidence_cutoff": null,
+  "no_cutoff": true,
+  "gated": false,
+  "web_search": true,
+  "shell_network": true,
+  "gate_tools": []
+ },
+ "unscored": true,
+ "target": "H2349",
+ "target_set": "casp17",
+ "case": "case_e333d6",
+ "evidence_cutoff": null,
+ "target_release_date": "2026-06-05",
+ "retrieval_policy": "no-cutoff",
+ "input_structure": "data/staged_casp17_no_native/H2349.pdb",
+ "input_structure_sha256": "ed3bcb0b0799f7f8db3a7695ea1da3ddce30d9c2312cdd2e5d844f6e396bdd86",
+ "briefing_source": "data/briefing/casp17_nocutoff/H2349/search_results.json",
+ "briefing_sha256": "b7744ba9eed23f884929670e84213478fdfebc3fc94cf39cec30b7cf355ba753",
+ "antigen_chains": [
+  "A"
+ ],
+ "antibody_files": {
+  "antibody.pdb": [
+   "B",
+   "C"
+  ]
+ },
+ "antibody_chain_types": {
+  "antibody.pdb": {
+   "B": "unknown",
+   "C": "unknown"
+  }
+ },
+ "stage": "gatherer",
+ "pocket": {
+  "id": "C6",
+  "judge_rank": 7,
+  "name": "A nonglycosylated lateral ridge spanning the C-terminal edge of D3...",
+  "confidence": 0.1,
+  "p_rests_on_holds": 0.45,
+  "why_this_rank": "C6 is a coherent exposed and chemically plausible ridge, but it has no matched antibody precedent, its hinge-locking consequence is speculative, and the absent A:361 glycan may restrict approach. Those are modest disadvantages, not exclusion.",
+  "rests_on": "The A:361 glycan leaves a viable approach and this exposed ridge, rather than the adjacent buried hinge, is the antibody-accessible functional surface.",
+  "where_the_mass_goes_if_it_fails": "C5 first, then C1/C2.",
+  "what_it_is": "A nonglycosylated lateral ridge spanning the C-terminal edge of D3 and adjoining D4 FNIII face at the D3-D4 hinge, outside canonical site II and site III.",
+  "why_one_candidate": "not pooled with anything: no other patch is both within 12 A (half centroid distance, half contact-graph hops) and coverable by one paratope of this antibody's reach, 17.9 A",
+  "from_patches": [
+   "P6"
+  ]
+ },
+ "note": "`confidence` on the pocket is over pockets and sums to about 1 across them. Inside an interface it is per residue in [0, 1] and sums to nothing. No residue is cut at a threshold: the whole vector is the answer.",
+ "mapping_basis": "side",
+ "checks": {
+  "unrecognised_sides": []
+ },
+ "chain_pairs": [
+  {
+   "antibody_chain": "B",
+   "antigen_chain": "A",
+   "n_residues": 18
+  },
+  {
+   "antibody_chain": "C",
+   "antigen_chain": "A",
+   "n_residues": 18
+  }
+ ],
+ "antibodies": [
+  {
+   "antibody": "antibody.pdb",
+   "chains": {
+    "B": "unknown",
+    "C": "unknown"
+   },
+   "binding_mode": null,
+   "n_residues_scored": 18,
+   "interfaces": [
+    {
+     "antibody_chain": "B",
+     "antibody_chain_type": "unknown",
+     "antigen_chain": "A",
+     "n_residues": 18,
+     "residue_confidence": {
+      "302": 0.45,
+      "303": 0.78,
+      "305": 0.58,
+      "306": 0.84,
+      "307": 0.48,
+      "330": 0.55,
+      "331": 0.6,
+      "333": 0.45,
+      "334": 0.78,
+      "335": 0.9,
+      "340": 0.87,
+      "341": 0.55,
+      "342": 0.58,
+      "381": 0.58,
+      "383": 0.72,
+      "384": 0.62,
+      "386": 0.68,
+      "388": 0.48
+     },
+     "residue_side": {
+      "302": "light",
+      "303": "heavy",
+      "305": "both",
+      "306": "heavy",
+      "307": "both",
+      "330": "heavy",
+      "331": "both",
+      "333": "light",
+      "334": "both",
+      "335": "both",
+      "340": "heavy",
+      "341": "both",
+      "342": "light",
+      "381": "heavy",
+      "383": "light",
+      "384": "light",
+      "386": "heavy",
+      "388": "light"
+     },
+     "max_confidence": 0.9,
+     "mean_confidence": 0.6383
+    },
+    {
+     "antibody_chain": "C",
+     "antibody_chain_type": "unknown",
+     "antigen_chain": "A",
+     "n_residues": 18,
+     "residue_confidence": {
+      "302": 0.45,
+      "303": 0.78,
+      "305": 0.58,
+      "306": 0.84,
+      "307": 0.48,
+      "330": 0.55,
+      "331": 0.6,
+      "333": 0.45,
+      "334": 0.78,
+      "335": 0.9,
+      "340": 0.87,
+      "341": 0.55,
+      "342": 0.58,
+      "381": 0.58,
+      "383": 0.72,
+      "384": 0.62,
+      "386": 0.68,
+      "388": 0.48
+     },
+     "residue_side": {
+      "302": "light",
+      "303": "heavy",
+      "305": "both",
+      "306": "heavy",
+      "307": "both",
+      "330": "heavy",
+      "331": "both",
+      "333": "light",
+      "334": "both",
+      "335": "both",
+      "340": "heavy",
+      "341": "both",
+      "342": "light",
+      "381": "heavy",
+      "383": "light",
+      "384": "light",
+      "386": "heavy",
+      "388": "light"
+     },
+     "max_confidence": 0.9,
+     "mean_confidence": 0.6383
+    }
+   ]
+  }
+ ],
+ "paratope": {
+  "dominant_cdrs": [
+   "H3:H3",
+   "H2:H2",
+   "L3:L3"
+  ],
+  "paratope_residues": [
+   "B:52",
+   "B:55",
+   "B:57",
+   "B:100",
+   "B:101",
+   "B:102",
+   "B:103",
+   "B:106",
+   "B:107",
+   "C:27",
+   "C:28",
+   "C:31",
+   "C:52",
+   "C:92",
+   "C:93",
+   "C:94"
+  ],
+  "heavy_light_split": "Heavy dominates the R303/K306/K330/K340/R381/K386 track and centers on F335; light covers the Pro/Leu/Val/Asp rim. Both share the central apex.",
+  "binding_mode_union": "single-chain"
+ },
+ "residues": [
+  "A:302",
+  "A:303",
+  "A:305",
+  "A:306",
+  "A:307",
+  "A:330",
+  "A:331",
+  "A:333",
+  "A:334",
+  "A:335",
+  "A:340",
+  "A:341",
+  "A:342",
+  "A:381",
+  "A:383",
+  "A:384",
+  "A:386",
+  "A:388"
+ ],
+ "n_residues": 18,
+ "patches": [
+  {
+   "id": "P6",
+   "name": "Nonglycosylated D3-D4 lateral ridge",
+   "n_residues": 21,
+   "residues": [
+    "A:298",
+    "A:300",
+    "A:302",
+    "A:303",
+    "A:305",
+    "A:306",
+    "A:307",
+    "A:309",
+    "A:330",
+    "A:331",
+    "A:333",
+    "A:334",
+    "A:335",
+    "A:340",
+    "A:341",
+    "A:342",
+    "A:381",
+    "A:383",
+    "A:384",
+    "A:386",
+    "A:388"
+   ],
+   "n_kept_by_advocate": 18,
+   "n_dropped_by_advocate": 3
+  }
+ ],
+ "pooling_provenance": {
+  "n_shared_at_pooling": 21,
+  "n_disputed_at_pooling": 0,
+  "note": "counts only, describing how the organizer grouped the phase-1 patches. The organizer's own candidate residue list is deliberately absent: the answer is the advocate's footprint, in `residues` and in `antibodies[].interfaces[]`."
+ },
+ "evidence": {
+  "advocate": {
+   "n_findings": 4,
+   "n_supports": 2,
+   "n_weakens": 1,
+   "weakest_point": "Besides the Fab's anti-lysozyme identity, this surface has neither a direct ligand contact nor a family-matched mapped antibody precedent. It could be bindable but biologically inert.",
+   "note": "the advocate reports claim/source/date/bearing and is not asked whether a source is about this binder"
+  },
+  "judge": {
+   "tier_a_support": 0,
+   "n_support_lines": 4,
+   "verdict": "live",
+   "note": "Tier A -- a source about this binder itself -- is the judge's adjudication, in assessment[].support[]. It exists nowhere in the advocate's own answer."
+  }
+ },
+ "provenance": {
+  "unverified_source_policy_fields": [
+   "gated",
+   "web_search",
+   "shell_network",
+   "gate_tools"
+  ],
+  "assembled_case_dir": "gpt-5.6-high/gather_refine/post_refactor/unreleased_20261029/nocut/casp17/H2349/case_e333d6_G_rep1",
+  "organize_case_dir": "gpt-5.6-high/gather_refine/post_refactor/unreleased_20261029/nocut/casp17/H2349/case_e333d6_GR_rep1",
+  "organize_status": "ok",
+  "judge_case_dir": "gpt-5.6-high/gather_refine/post_refactor/unreleased_20261029/nocut/casp17/H2349/case_e333d6_GJ_rep1",
+  "judge_status": "ok",
+  "packet": "gpt-5.6-high/nocut/gather/packets/case_e333d6/packet",
+  "manifest": "gpt-5.6-high/nocut/gather/packets/case_e333d6/manifest.json",
+  "advocate_case_dir": "gpt-5.6-high/gather_refine/post_refactor/unreleased_20261029/nocut/casp17/H2349/case_e333d6_GR_rep1",
+  "advocate_status": "ok"
+ }
+}

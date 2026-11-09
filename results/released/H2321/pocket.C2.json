@@ -1,0 +1,355 @@
+{
+ "task": "gather",
+ "gather_mode": "batched",
+ "num_launchers": 3,
+ "policy": {
+  "evidence_cutoff": "2026-05-20",
+  "no_cutoff": false,
+  "gated": true,
+  "web_search": false,
+  "shell_network": true,
+  "gate_tools": [
+   "research",
+   "fetch",
+   "rcsb",
+   "patent",
+   "paper"
+  ]
+ },
+ "unscored": false,
+ "target": "H2321",
+ "target_set": "casp17",
+ "case": "case_6e4153",
+ "evidence_cutoff": "2026-05-20",
+ "target_release_date": "2026-05-20",
+ "retrieval_policy": "gated",
+ "input_structure": "structures/H2321.pdb",
+ "input_structure_sha256": null,
+ "briefing_source": null,
+ "briefing_sha256": null,
+ "antigen_chains": [
+  "A",
+  "D"
+ ],
+ "antibody_files": {
+  "antibody.1.pdb": [
+   "B",
+   "F"
+  ],
+  "antibody.2.pdb": [
+   "C",
+   "E"
+  ]
+ },
+ "antibody_chain_types": {
+  "antibody.1.pdb": {
+   "B": "unknown",
+   "F": "unknown"
+  },
+  "antibody.2.pdb": {
+   "C": "unknown",
+   "E": "unknown"
+  }
+ },
+ "truth_file": "data/truth/casp17/H2321.epitope.json",
+ "stage": "gatherer",
+ "pocket": {
+  "id": "C2",
+  "judge_rank": 5,
+  "name": "A glycan-free upper-lateral single-protomer face of the spike...",
+  "confidence": 0.01,
+  "p_rests_on_holds": 0.04,
+  "why_this_rank": "It is a valid exposed 3D8 surface but contains neither 2A2 escape anchor.",
+  "rests_on": "Both 2A2 changes are allosteric or clone attribution is wrong.",
+  "where_the_mass_goes_if_it_fails": "C3",
+  "what_it_is": "A glycan-free upper-lateral single-protomer face of the spike beta-barrel, assembled in three dimensions from the 43–50 lip, the 112–115 turn and the acidic 156–163 shoulder, with a 197–199/235–236 rim [computed: analyze_refinement.py].",
+  "why_one_candidate": "not pooled with anything: no other patch is both within 12 A (half centroid distance, half contact-graph hops) and coverable by one paratope of this antibody's reach, 18.1 A",
+  "from_patches": [
+   "P2"
+  ]
+ },
+ "note": "`confidence` on the pocket is over pockets and sums to about 1 across them. Inside an interface it is per residue in [0, 1] and sums to nothing. No residue is cut at a threshold: the whole vector is the answer.",
+ "mapping_basis": "per_antibody",
+ "checks": {
+  "unrecognised_sides": []
+ },
+ "chain_pairs": [
+  {
+   "antibody_chain": "B",
+   "antigen_chain": "A",
+   "n_residues": 6
+  },
+  {
+   "antibody_chain": "F",
+   "antigen_chain": "A",
+   "n_residues": 6
+  },
+  {
+   "antibody_chain": "C",
+   "antigen_chain": "D",
+   "n_residues": 6
+  },
+  {
+   "antibody_chain": "E",
+   "antigen_chain": "D",
+   "n_residues": 6
+  }
+ ],
+ "antibodies": [
+  {
+   "antibody": "antibody.1.pdb",
+   "chains": {
+    "B": "unknown",
+    "F": "unknown"
+   },
+   "binding_mode": "single-chain",
+   "n_residues_scored": 6,
+   "interfaces": [
+    {
+     "antibody_chain": "B",
+     "antibody_chain_type": "unknown",
+     "antigen_chain": "A",
+     "n_residues": 6,
+     "residue_confidence": {
+      "44": 0.63,
+      "112": 0.72,
+      "113": 0.78,
+      "114": 0.7,
+      "158": 0.86,
+      "159": 0.72
+     },
+     "residue_side": {
+      "44": "light",
+      "112": "heavy",
+      "113": "both",
+      "114": "heavy",
+      "158": "both",
+      "159": "heavy"
+     },
+     "max_confidence": 0.86,
+     "mean_confidence": 0.735,
+     "precision_vs_truth": 0.1667,
+     "n_in_truth": 1
+    },
+    {
+     "antibody_chain": "F",
+     "antibody_chain_type": "unknown",
+     "antigen_chain": "A",
+     "n_residues": 6,
+     "residue_confidence": {
+      "44": 0.63,
+      "112": 0.72,
+      "113": 0.78,
+      "114": 0.7,
+      "158": 0.86,
+      "159": 0.72
+     },
+     "residue_side": {
+      "44": "light",
+      "112": "heavy",
+      "113": "both",
+      "114": "heavy",
+      "158": "both",
+      "159": "heavy"
+     },
+     "max_confidence": 0.86,
+     "mean_confidence": 0.735,
+     "precision_vs_truth": 0.1667,
+     "n_in_truth": 1
+    }
+   ]
+  },
+  {
+   "antibody": "antibody.2.pdb",
+   "chains": {
+    "C": "unknown",
+    "E": "unknown"
+   },
+   "binding_mode": "single-chain",
+   "n_residues_scored": 6,
+   "interfaces": [
+    {
+     "antibody_chain": "C",
+     "antibody_chain_type": "unknown",
+     "antigen_chain": "D",
+     "n_residues": 6,
+     "residue_confidence": {
+      "44": 0.63,
+      "112": 0.72,
+      "113": 0.78,
+      "114": 0.7,
+      "158": 0.86,
+      "159": 0.72
+     },
+     "residue_side": {
+      "44": "light",
+      "112": "heavy",
+      "113": "both",
+      "114": "heavy",
+      "158": "both",
+      "159": "heavy"
+     },
+     "max_confidence": 0.86,
+     "mean_confidence": 0.735,
+     "precision_vs_truth": 0.1667,
+     "n_in_truth": 1
+    },
+    {
+     "antibody_chain": "E",
+     "antibody_chain_type": "unknown",
+     "antigen_chain": "D",
+     "n_residues": 6,
+     "residue_confidence": {
+      "44": 0.63,
+      "112": 0.72,
+      "113": 0.78,
+      "114": 0.7,
+      "158": 0.86,
+      "159": 0.72
+     },
+     "residue_side": {
+      "44": "light",
+      "112": "heavy",
+      "113": "both",
+      "114": "heavy",
+      "158": "both",
+      "159": "heavy"
+     },
+     "max_confidence": 0.86,
+     "mean_confidence": 0.735,
+     "precision_vs_truth": 0.1667,
+     "n_in_truth": 1
+    }
+   ]
+  }
+ ],
+ "paratope": {
+  "dominant_cdrs": [
+   "H3:H1",
+   "L3:L1"
+  ],
+  "paratope_residues": [
+   "B:101",
+   "B:104",
+   "F:92",
+   "F:93",
+   "E:101",
+   "E:104",
+   "C:92",
+   "C:93"
+  ],
+  "heavy_light_split": "Heavy chain over the 112–163 acidic/polar centre; light chain over the 43–50 lip and outer rim.",
+  "binding_mode_union": null
+ },
+ "residues": [
+  "A:112",
+  "A:113",
+  "A:114",
+  "A:158",
+  "A:159",
+  "A:44",
+  "D:112",
+  "D:113",
+  "D:114",
+  "D:158",
+  "D:159",
+  "D:44"
+ ],
+ "n_residues": 12,
+ "patches": [
+  {
+   "id": "P2",
+   "name": "Upper-lateral single-protomer acidic/polar face",
+   "n_residues": 40,
+   "residues": [
+    "A:112",
+    "A:113",
+    "A:114",
+    "A:115",
+    "A:156",
+    "A:158",
+    "A:159",
+    "A:161",
+    "A:163",
+    "A:198",
+    "A:199",
+    "A:235",
+    "A:236",
+    "A:41",
+    "A:43",
+    "A:44",
+    "A:46",
+    "A:47",
+    "A:48",
+    "A:52",
+    "D:112",
+    "D:113",
+    "D:114",
+    "D:115",
+    "D:156",
+    "D:158",
+    "D:159",
+    "D:161",
+    "D:163",
+    "D:198",
+    "D:199",
+    "D:235",
+    "D:236",
+    "D:41",
+    "D:43",
+    "D:44",
+    "D:46",
+    "D:47",
+    "D:48",
+    "D:52"
+   ],
+   "n_kept_by_advocate": 12,
+   "n_dropped_by_advocate": 28
+  }
+ ],
+ "pooling_provenance": {
+  "n_shared_at_pooling": 40,
+  "n_disputed_at_pooling": 0,
+  "note": "counts only, describing how the organizer grouped the phase-1 patches. The organizer's own candidate residue list is deliberately absent: the answer is the advocate's footprint, in `residues` and in `antibodies[].interfaces[]`."
+ },
+ "evidence": {
+  "advocate": {
+   "n_findings": 1,
+   "n_supports": 0,
+   "n_weakens": 1,
+   "weakest_point": "Exact 2A2 identification and its S205/R209 escape pair point away from this centre; E158 validates the surface for 3D8, not for 2A2.",
+   "note": "the advocate reports claim/source/date/bearing and is not asked whether a source is about this binder"
+  },
+  "judge": {
+   "tier_a_support": 0,
+   "n_support_lines": 4,
+   "verdict": "unlikely",
+   "note": "Tier A -- a source about this binder itself -- is the judge's adjudication, in assessment[].support[]. It exists nowhere in the advocate's own answer."
+  }
+ },
+ "provenance": {
+  "unverified_source_policy_fields": [
+   "gated",
+   "web_search",
+   "shell_network",
+   "gate_tools"
+  ],
+  "assembled_case_dir": "gpt-5.6-high/gather_refine/post_refactor/released_structure_20261030/casp17/H2321/case_6e4153_G_rep2",
+  "organize_case_dir": "gpt-5.6-high/gather_refine/post_refactor/released_structure_20261030/casp17/H2321/case_6e4153_GR_rep1",
+  "organize_status": "ok",
+  "judge_case_dir": "gpt-5.6-high/gather_refine/post_refactor/released_structure_20261030/casp17/H2321/case_6e4153_GJ_rep2",
+  "judge_status": "ok",
+  "packet": "gpt-5.6-high/gather/packets/case_6e4153/packet",
+  "manifest": "gpt-5.6-high/gather/packets/case_6e4153/manifest.json",
+  "advocate_case_dir": "gpt-5.6-high/gather_refine/post_refactor/released_structure_20261030/casp17/H2321/case_6e4153_GR_rep1",
+  "advocate_status": "ok"
+ },
+ "score": {
+  "precision": 0.1667,
+  "recall": 0.0286,
+  "f1": 0.0488,
+  "n_pred": 12,
+  "n_true": 70,
+  "n_hit": 2
+ }
+}

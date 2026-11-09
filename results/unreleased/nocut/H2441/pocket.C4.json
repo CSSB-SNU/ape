@@ -1,0 +1,227 @@
+{
+ "task": "gather",
+ "gather_mode": "batched",
+ "num_launchers": 3,
+ "policy": {
+  "evidence_cutoff": null,
+  "no_cutoff": true,
+  "gated": false,
+  "web_search": true,
+  "shell_network": true,
+  "gate_tools": []
+ },
+ "unscored": true,
+ "target": "H2441",
+ "target_set": "casp17",
+ "case": "case_253bc2",
+ "evidence_cutoff": null,
+ "target_release_date": "2026-07-31",
+ "retrieval_policy": "no-cutoff",
+ "input_structure": "data/staged_casp17_no_native/H2441.pdb",
+ "input_structure_sha256": "37e38c82b5192825be5d1ed9d412076bf5a8fb5ddade49d20c5ae532bead12ae",
+ "briefing_source": "data/briefing/casp17_nocutoff/H2441/search_results.json",
+ "briefing_sha256": "e71284ba0254f948a2858cd5ce7a2bef005f866757a5fc232612ccdafa9f26ca",
+ "antigen_chains": [
+  "A"
+ ],
+ "antibody_files": {
+  "antibody.pdb": [
+   "B"
+  ]
+ },
+ "antibody_chain_types": {
+  "antibody.pdb": {
+   "B": "unknown"
+  }
+ },
+ "stage": "gatherer",
+ "pocket": {
+  "id": "C4",
+  "judge_rank": 4,
+  "name": "The outer face of mobile L10 and its L9-side buttress",
+  "confidence": 0.1,
+  "p_rests_on_holds": 0.25,
+  "why_this_rank": "A coherent non-occluding face behind functional L10, but without surface-specific precedent and with weaker chemistry.",
+  "rests_on": "Outer-face binding is mechanically coupled enough to trap L10.",
+  "where_the_mass_goes_if_it_fails": "C8 and C5.",
+  "what_it_is": "The outer face of mobile L10 and its L9-side buttress.",
+  "why_one_candidate": "not pooled with anything: no other patch is both within 12 A (half centroid distance, half contact-graph hops) and coverable by one paratope of this antibody's reach, 12.9 A",
+  "from_patches": [
+   "P4"
+  ]
+ },
+ "note": "`confidence` on the pocket is over pockets and sums to about 1 across them. Inside an interface it is per residue in [0, 1] and sums to nothing. No residue is cut at a threshold: the whole vector is the answer.",
+ "mapping_basis": "side",
+ "checks": {
+  "unrecognised_sides": []
+ },
+ "chain_pairs": [
+  {
+   "antibody_chain": "B",
+   "antigen_chain": "A",
+   "n_residues": 16
+  }
+ ],
+ "antibodies": [
+  {
+   "antibody": "antibody.pdb",
+   "chains": {
+    "B": "unknown"
+   },
+   "binding_mode": null,
+   "n_residues_scored": 16,
+   "interfaces": [
+    {
+     "antibody_chain": "B",
+     "antibody_chain_type": "unknown",
+     "antigen_chain": "A",
+     "n_residues": 16,
+     "residue_confidence": {
+      "157": 0.52,
+      "158": 0.25,
+      "160": 0.58,
+      "164": 0.68,
+      "193": 0.65,
+      "194": 0.74,
+      "195": 0.82,
+      "196": 0.88,
+      "197": 0.68,
+      "198": 0.78,
+      "199": 0.8,
+      "200": 0.92,
+      "201": 0.86,
+      "204": 0.65,
+      "207": 0.55,
+      "208": 0.38
+     },
+     "residue_side": {
+      "157": "heavy",
+      "158": "heavy",
+      "160": "heavy",
+      "164": "heavy",
+      "193": "heavy",
+      "194": "heavy",
+      "195": "heavy",
+      "196": "heavy",
+      "197": "heavy",
+      "198": "heavy",
+      "199": "heavy",
+      "200": "heavy",
+      "201": "heavy",
+      "204": "heavy",
+      "207": "heavy",
+      "208": "heavy"
+     },
+     "max_confidence": 0.92,
+     "mean_confidence": 0.6713
+    }
+   ]
+  }
+ ],
+ "paratope": {
+  "dominant_cdrs": [
+   "H3StopinnerthoughtNoMoreJustCloseH3NowH3H2H1IwillputcorrectValuesAfterThisLongOneH3EndNoMoreTextH3FinalIwilltypeJSONsyntaxbelowH3DoneOkayIneedfinishThisCurrentStringcouldEndwithH3andthenquoteIwillDo:H3"
+  ],
+  "paratope_residues": [
+   "B:29",
+   "B:52",
+   "B:55",
+   "B:58",
+   "B:100",
+   "B:102",
+   "B:104",
+   "B:106",
+   "B:107",
+   "B:108",
+   "B:111",
+   "B:113",
+   "B:114",
+   "B:116",
+   "B:117"
+  ],
+  "heavy_light_split": "All contacts are heavy-side; H3 dominates with H2/H1 at the rim.",
+  "binding_mode_union": "single-chain"
+ },
+ "residues": [
+  "A:157",
+  "A:158",
+  "A:160",
+  "A:164",
+  "A:193",
+  "A:194",
+  "A:195",
+  "A:196",
+  "A:197",
+  "A:198",
+  "A:199",
+  "A:200",
+  "A:201",
+  "A:204",
+  "A:207",
+  "A:208"
+ ],
+ "n_residues": 16,
+ "patches": [
+  {
+   "id": "P4",
+   "name": "Outer L10 dynamic/allosteric face",
+   "n_residues": 15,
+   "residues": [
+    "A:157",
+    "A:158",
+    "A:160",
+    "A:164",
+    "A:194",
+    "A:195",
+    "A:196",
+    "A:197",
+    "A:198",
+    "A:199",
+    "A:200",
+    "A:201",
+    "A:204",
+    "A:207",
+    "A:208"
+   ],
+   "n_kept_by_advocate": 15,
+   "n_dropped_by_advocate": 0
+  }
+ ],
+ "pooling_provenance": {
+  "n_shared_at_pooling": 15,
+  "n_disputed_at_pooling": 0,
+  "note": "counts only, describing how the organizer grouped the phase-1 patches. The organizer's own candidate residue list is deliberately absent: the answer is the advocate's footprint, in `residues` and in `antibodies[].interfaces[]`."
+ },
+ "evidence": {
+  "advocate": {
+   "n_findings": 4,
+   "n_supports": 3,
+   "n_weakens": 0,
+   "weakest_point": "The face is open and acid-rich, underusing hydrophobic H3; homolog evidence maps elsewhere.",
+   "note": "the advocate reports claim/source/date/bearing and is not asked whether a source is about this binder"
+  },
+  "judge": {
+   "tier_a_support": 0,
+   "n_support_lines": 4,
+   "verdict": "live",
+   "note": "Tier A -- a source about this binder itself -- is the judge's adjudication, in assessment[].support[]. It exists nowhere in the advocate's own answer."
+  }
+ },
+ "provenance": {
+  "unverified_source_policy_fields": [
+   "gated",
+   "web_search",
+   "shell_network",
+   "gate_tools"
+  ],
+  "assembled_case_dir": "gpt-5.6-high/gather_refine/post_refactor/unreleased_20261029/nocut/casp17/H2441/case_253bc2_G_rep1",
+  "organize_case_dir": "gpt-5.6-high/gather_refine/post_refactor/unreleased_20261029/nocut/casp17/H2441/case_253bc2_GR_rep1",
+  "organize_status": "ok",
+  "judge_case_dir": "gpt-5.6-high/gather_refine/post_refactor/unreleased_20261029/nocut/casp17/H2441/case_253bc2_GJ_rep1",
+  "judge_status": "ok",
+  "packet": "gpt-5.6-high/nocut/gather/packets/case_253bc2/packet",
+  "manifest": "gpt-5.6-high/nocut/gather/packets/case_253bc2/manifest.json",
+  "advocate_case_dir": "gpt-5.6-high/gather_refine/post_refactor/unreleased_20261029/nocut/casp17/H2441/case_253bc2_GR_rep1",
+  "advocate_status": "ok"
+ }
+}

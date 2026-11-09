@@ -1,0 +1,551 @@
+{
+ "task": "gather",
+ "gather_mode": "batched",
+ "num_launchers": 3,
+ "policy": {
+  "evidence_cutoff": "2024-06-16",
+  "no_cutoff": false,
+  "gated": true,
+  "web_search": false,
+  "shell_network": true,
+  "gate_tools": [
+   "research",
+   "fetch",
+   "rcsb",
+   "patent",
+   "paper"
+  ]
+ },
+ "unscored": false,
+ "target": "H1233",
+ "target_set": "casp16",
+ "case": "case_a49017",
+ "evidence_cutoff": "2024-06-16",
+ "target_release_date": "2024-06-16",
+ "retrieval_policy": "gated",
+ "input_structure": "structures/H1233.pdb",
+ "input_structure_sha256": null,
+ "briefing_source": null,
+ "briefing_sha256": null,
+ "antigen_chains": [
+  "A",
+  "B"
+ ],
+ "antibody_files": {
+  "antibody.1.pdb": [
+   "C",
+   "F"
+  ],
+  "antibody.2.pdb": [
+   "D",
+   "E"
+  ]
+ },
+ "antibody_chain_types": {
+  "antibody.1.pdb": {
+   "C": "unknown",
+   "F": "unknown"
+  },
+  "antibody.2.pdb": {
+   "D": "unknown",
+   "E": "unknown"
+  }
+ },
+ "truth_file": "data/truth/casp16/H1233.epitope.json",
+ "stage": "gatherer",
+ "pocket": {
+  "id": "C7",
+  "judge_rank": 6,
+  "name": "The broad top long-loop/dimer-rim face of the capsid spike, spanning...",
+  "confidence": 0.008,
+  "p_rests_on_holds": 0.03,
+  "why_this_rank": "It shares C2's wrong-binder S560 precedent but adds a less-supported seam rim.",
+  "rests_on": "The clone assignment fails and the broad crown boundary is correct.",
+  "where_the_mass_goes_if_it_fails": "C5",
+  "what_it_is": "The broad top long-loop/dimer-rim face of the capsid spike, spanning one protomer's 128–139 crown and the partner's 144–148 ledge. It contains the S560-equivalent escape site and forms a quaternary cap over the monomer contact.",
+  "why_one_candidate": "not pooled with anything: no other patch is both within 12 A (half centroid distance, half contact-graph hops) and coverable by one paratope of this antibody's reach, 17.0 A",
+  "from_patches": [
+   "P7"
+  ]
+ },
+ "note": "`confidence` on the pocket is over pockets and sums to about 1 across them. Inside an interface it is per residue in [0, 1] and sums to nothing. No residue is cut at a threshold: the whole vector is the answer.",
+ "mapping_basis": "per_antibody",
+ "checks": {
+  "unrecognised_sides": []
+ },
+ "chain_pairs": [
+  {
+   "antibody_chain": "C",
+   "antigen_chain": "A",
+   "n_residues": 11
+  },
+  {
+   "antibody_chain": "C",
+   "antigen_chain": "B",
+   "n_residues": 5
+  },
+  {
+   "antibody_chain": "F",
+   "antigen_chain": "A",
+   "n_residues": 11
+  },
+  {
+   "antibody_chain": "F",
+   "antigen_chain": "B",
+   "n_residues": 5
+  },
+  {
+   "antibody_chain": "D",
+   "antigen_chain": "A",
+   "n_residues": 5
+  },
+  {
+   "antibody_chain": "D",
+   "antigen_chain": "B",
+   "n_residues": 11
+  },
+  {
+   "antibody_chain": "E",
+   "antigen_chain": "A",
+   "n_residues": 5
+  },
+  {
+   "antibody_chain": "E",
+   "antigen_chain": "B",
+   "n_residues": 11
+  }
+ ],
+ "antibodies": [
+  {
+   "antibody": "antibody.1.pdb",
+   "chains": {
+    "C": "unknown",
+    "F": "unknown"
+   },
+   "binding_mode": "straddling",
+   "n_residues_scored": 16,
+   "interfaces": [
+    {
+     "antibody_chain": "C",
+     "antibody_chain_type": "unknown",
+     "antigen_chain": "A",
+     "n_residues": 11,
+     "residue_confidence": {
+      "128": 0.36,
+      "130": 0.55,
+      "131": 0.95,
+      "132": 0.48,
+      "133": 0.9,
+      "134": 0.31,
+      "135": 0.84,
+      "136": 0.5,
+      "137": 0.71,
+      "138": 0.2,
+      "139": 0.44
+     },
+     "residue_side": {
+      "128": "heavy",
+      "130": "heavy",
+      "131": "both",
+      "132": "both",
+      "133": "heavy",
+      "134": "heavy",
+      "135": "heavy",
+      "136": "heavy",
+      "137": "heavy",
+      "138": "heavy",
+      "139": "heavy"
+     },
+     "max_confidence": 0.95,
+     "mean_confidence": 0.5673,
+     "precision_vs_truth": 0.0,
+     "n_in_truth": 0
+    },
+    {
+     "antibody_chain": "C",
+     "antibody_chain_type": "unknown",
+     "antigen_chain": "B",
+     "n_residues": 5,
+     "residue_confidence": {
+      "144": 0.42,
+      "145": 0.66,
+      "146": 0.72,
+      "147": 0.83,
+      "148": 0.55
+     },
+     "residue_side": {
+      "144": "light",
+      "145": "light",
+      "146": "light",
+      "147": "both",
+      "148": "light"
+     },
+     "max_confidence": 0.83,
+     "mean_confidence": 0.636,
+     "precision_vs_truth": 0.0,
+     "n_in_truth": 0
+    },
+    {
+     "antibody_chain": "F",
+     "antibody_chain_type": "unknown",
+     "antigen_chain": "A",
+     "n_residues": 11,
+     "residue_confidence": {
+      "128": 0.36,
+      "130": 0.55,
+      "131": 0.95,
+      "132": 0.48,
+      "133": 0.9,
+      "134": 0.31,
+      "135": 0.84,
+      "136": 0.5,
+      "137": 0.71,
+      "138": 0.2,
+      "139": 0.44
+     },
+     "residue_side": {
+      "128": "heavy",
+      "130": "heavy",
+      "131": "both",
+      "132": "both",
+      "133": "heavy",
+      "134": "heavy",
+      "135": "heavy",
+      "136": "heavy",
+      "137": "heavy",
+      "138": "heavy",
+      "139": "heavy"
+     },
+     "max_confidence": 0.95,
+     "mean_confidence": 0.5673,
+     "precision_vs_truth": 0.0,
+     "n_in_truth": 0
+    },
+    {
+     "antibody_chain": "F",
+     "antibody_chain_type": "unknown",
+     "antigen_chain": "B",
+     "n_residues": 5,
+     "residue_confidence": {
+      "144": 0.42,
+      "145": 0.66,
+      "146": 0.72,
+      "147": 0.83,
+      "148": 0.55
+     },
+     "residue_side": {
+      "144": "light",
+      "145": "light",
+      "146": "light",
+      "147": "both",
+      "148": "light"
+     },
+     "max_confidence": 0.83,
+     "mean_confidence": 0.636,
+     "precision_vs_truth": 0.0,
+     "n_in_truth": 0
+    }
+   ]
+  },
+  {
+   "antibody": "antibody.2.pdb",
+   "chains": {
+    "D": "unknown",
+    "E": "unknown"
+   },
+   "binding_mode": "straddling",
+   "n_residues_scored": 16,
+   "interfaces": [
+    {
+     "antibody_chain": "D",
+     "antibody_chain_type": "unknown",
+     "antigen_chain": "A",
+     "n_residues": 5,
+     "residue_confidence": {
+      "144": 0.42,
+      "145": 0.66,
+      "146": 0.72,
+      "147": 0.83,
+      "148": 0.55
+     },
+     "residue_side": {
+      "144": "light",
+      "145": "light",
+      "146": "light",
+      "147": "both",
+      "148": "light"
+     },
+     "max_confidence": 0.83,
+     "mean_confidence": 0.636,
+     "precision_vs_truth": 0.0,
+     "n_in_truth": 0
+    },
+    {
+     "antibody_chain": "D",
+     "antibody_chain_type": "unknown",
+     "antigen_chain": "B",
+     "n_residues": 11,
+     "residue_confidence": {
+      "128": 0.36,
+      "130": 0.55,
+      "131": 0.95,
+      "132": 0.48,
+      "133": 0.9,
+      "134": 0.31,
+      "135": 0.84,
+      "136": 0.5,
+      "137": 0.71,
+      "138": 0.2,
+      "139": 0.44
+     },
+     "residue_side": {
+      "128": "heavy",
+      "130": "heavy",
+      "131": "both",
+      "132": "both",
+      "133": "heavy",
+      "134": "heavy",
+      "135": "heavy",
+      "136": "heavy",
+      "137": "heavy",
+      "138": "heavy",
+      "139": "heavy"
+     },
+     "max_confidence": 0.95,
+     "mean_confidence": 0.5673,
+     "precision_vs_truth": 0.0,
+     "n_in_truth": 0
+    },
+    {
+     "antibody_chain": "E",
+     "antibody_chain_type": "unknown",
+     "antigen_chain": "A",
+     "n_residues": 5,
+     "residue_confidence": {
+      "144": 0.42,
+      "145": 0.66,
+      "146": 0.72,
+      "147": 0.83,
+      "148": 0.55
+     },
+     "residue_side": {
+      "144": "light",
+      "145": "light",
+      "146": "light",
+      "147": "both",
+      "148": "light"
+     },
+     "max_confidence": 0.83,
+     "mean_confidence": 0.636,
+     "precision_vs_truth": 0.0,
+     "n_in_truth": 0
+    },
+    {
+     "antibody_chain": "E",
+     "antibody_chain_type": "unknown",
+     "antigen_chain": "B",
+     "n_residues": 11,
+     "residue_confidence": {
+      "128": 0.36,
+      "130": 0.55,
+      "131": 0.95,
+      "132": 0.48,
+      "133": 0.9,
+      "134": 0.31,
+      "135": 0.84,
+      "136": 0.5,
+      "137": 0.71,
+      "138": 0.2,
+      "139": 0.44
+     },
+     "residue_side": {
+      "128": "heavy",
+      "130": "heavy",
+      "131": "both",
+      "132": "both",
+      "133": "heavy",
+      "134": "heavy",
+      "135": "heavy",
+      "136": "heavy",
+      "137": "heavy",
+      "138": "heavy",
+      "139": "heavy"
+     },
+     "max_confidence": 0.95,
+     "mean_confidence": 0.5673,
+     "precision_vs_truth": 0.0,
+     "n_in_truth": 0
+    }
+   ]
+  }
+ ],
+ "paratope": {
+  "dominant_cdrs": [
+   "H3:H2",
+   "L3:L1"
+  ],
+  "paratope_residues": [
+   "C:27",
+   "C:32",
+   "C:52",
+   "C:53",
+   "C:57",
+   "C:98",
+   "C:100",
+   "C:102",
+   "C:103",
+   "C:104",
+   "C:107",
+   "F:27",
+   "F:33",
+   "F:53",
+   "F:93",
+   "F:94",
+   "F:97",
+   "F:98",
+   "D:27",
+   "D:32",
+   "D:52",
+   "D:53",
+   "D:57",
+   "D:98",
+   "D:100",
+   "D:102",
+   "D:103",
+   "D:104",
+   "D:107",
+   "E:27",
+   "E:33",
+   "E:53",
+   "E:93",
+   "E:94",
+   "E:97",
+   "E:98"
+  ],
+  "heavy_light_split": "Heavy contributes about 70% over 128–139; light L1/L3 covers the partner 144–148 ledge. S131/Y147 form the shared central seam.",
+  "binding_mode_union": null
+ },
+ "residues": [
+  "A:128",
+  "A:130",
+  "A:131",
+  "A:132",
+  "A:133",
+  "A:134",
+  "A:135",
+  "A:136",
+  "A:137",
+  "A:138",
+  "A:139",
+  "A:144",
+  "A:145",
+  "A:146",
+  "A:147",
+  "A:148",
+  "B:128",
+  "B:130",
+  "B:131",
+  "B:132",
+  "B:133",
+  "B:134",
+  "B:135",
+  "B:136",
+  "B:137",
+  "B:138",
+  "B:139",
+  "B:144",
+  "B:145",
+  "B:146",
+  "B:147",
+  "B:148"
+ ],
+ "n_residues": 32,
+ "patches": [
+  {
+   "id": "P7",
+   "name": "Top long-loop/dimer-rim S560 site (3B4-identity alternative)",
+   "n_residues": 32,
+   "residues": [
+    "A:128",
+    "A:130",
+    "A:131",
+    "A:132",
+    "A:133",
+    "A:134",
+    "A:135",
+    "A:136",
+    "A:137",
+    "A:138",
+    "A:139",
+    "A:144",
+    "A:145",
+    "A:146",
+    "A:147",
+    "A:148",
+    "B:128",
+    "B:130",
+    "B:131",
+    "B:132",
+    "B:133",
+    "B:134",
+    "B:135",
+    "B:136",
+    "B:137",
+    "B:138",
+    "B:139",
+    "B:144",
+    "B:145",
+    "B:146",
+    "B:147",
+    "B:148"
+   ],
+   "n_kept_by_advocate": 32,
+   "n_dropped_by_advocate": 0
+  }
+ ],
+ "pooling_provenance": {
+  "n_shared_at_pooling": 32,
+  "n_disputed_at_pooling": 0,
+  "note": "counts only, describing how the organizer grouped the phase-1 patches. The organizer's own candidate residue list is deliberately absent: the answer is the advocate's footprint, in `residues` and in `antibodies[].interfaces[]`."
+ },
+ "evidence": {
+  "advocate": {
+   "n_findings": 6,
+   "n_supports": 5,
+   "n_weakens": 1,
+   "weakest_point": "The exact CDR identification plus selective escape evidence assigns this antibody to 3H4/K75 and assigns the S131 site to 3B4. The broad neighborhood also includes several seam-buried residues that cannot all be direct contacts.",
+   "note": "the advocate reports claim/source/date/bearing and is not asked whether a source is about this binder"
+  },
+  "judge": {
+   "tier_a_support": 0,
+   "n_support_lines": 3,
+   "verdict": "unlikely",
+   "note": "Tier A -- a source about this binder itself -- is the judge's adjudication, in assessment[].support[]. It exists nowhere in the advocate's own answer."
+  }
+ },
+ "provenance": {
+  "unverified_source_policy_fields": [
+   "gated",
+   "web_search",
+   "shell_network",
+   "gate_tools"
+  ],
+  "assembled_case_dir": "gpt-5.6-high/gather_refine/post_refactor/released_structure_20261030/casp16/H1233/case_a49017_G_rep2",
+  "organize_case_dir": "gpt-5.6-high/gather_refine/post_refactor/released_structure_20261030/casp16/H1233/case_a49017_GR_rep1",
+  "organize_status": "ok",
+  "judge_case_dir": "gpt-5.6-high/gather_refine/post_refactor/released_structure_20261030/casp16/H1233/case_a49017_GJ_rep2",
+  "judge_status": "ok",
+  "packet": "gpt-5.6-high/gather/packets/case_a49017/packet",
+  "manifest": "gpt-5.6-high/gather/packets/case_a49017/manifest.json",
+  "advocate_case_dir": "gpt-5.6-high/gather_refine/post_refactor/released_structure_20261030/casp16/H1233/case_a49017_GR_rep1",
+  "advocate_status": "ok"
+ },
+ "score": {
+  "precision": 0.0,
+  "recall": 0.0,
+  "f1": 0.0,
+  "n_pred": 32,
+  "n_true": 44,
+  "n_hit": 0
+ }
+}

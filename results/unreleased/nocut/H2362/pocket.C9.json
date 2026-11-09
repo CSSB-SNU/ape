@@ -1,0 +1,304 @@
+{
+ "task": "gather",
+ "gather_mode": "batched",
+ "num_launchers": 3,
+ "policy": {
+  "evidence_cutoff": null,
+  "no_cutoff": true,
+  "gated": false,
+  "web_search": true,
+  "shell_network": true,
+  "gate_tools": []
+ },
+ "unscored": true,
+ "target": "H2362",
+ "target_set": "casp17",
+ "case": "case_259152",
+ "evidence_cutoff": null,
+ "target_release_date": "2026-06-12",
+ "retrieval_policy": "no-cutoff",
+ "input_structure": "data/staged_casp17_no_native/H2362.pdb",
+ "input_structure_sha256": "54e187b986e4696f87e1dd7dd4cd6cd943754471a337aa57a0577c6172827a73",
+ "briefing_source": "data/briefing/casp17_nocutoff/H2362/search_results.json",
+ "briefing_sha256": "51b08b3d656ebb7b7f7f0d284f291dc2a93f171a10cc488b650ef2ac8d2249c3",
+ "antigen_chains": [
+  "A",
+  "B",
+  "C",
+  "D",
+  "E"
+ ],
+ "antibody_files": {
+  "antibody.pdb": [
+   "F",
+   "G"
+  ]
+ },
+ "antibody_chain_types": {
+  "antibody.pdb": {
+   "F": "light",
+   "G": "heavy"
+  }
+ },
+ "stage": "gatherer",
+ "pocket": {
+  "id": "C9",
+  "judge_rank": 7,
+  "name": "The exposed distal gL-gH scaffold junction immediately below the...",
+  "confidence": 0.07,
+  "p_rests_on_holds": 0.4,
+  "why_this_rank": "The 1-32 complex validates the class and C9 is exposed and coverable, but the E:33 glycan may occlude a central half and the patch offers little aromatic packing.",
+  "rests_on": "The E:33 glycan projects away from enough of the protein surface.",
+  "where_the_mass_goes_if_it_fails": "C1",
+  "what_it_is": "The exposed distal gL-gH scaffold junction immediately below the pentamer-specific UL head, beside the weakly resolved NRP2-a1 approach.",
+  "why_one_candidate": "not pooled with anything: no other patch is both within 12 A (half centroid distance, half contact-graph hops) and coverable by one paratope of this antibody's reach, 17.6 A",
+  "from_patches": [
+   "P8"
+  ]
+ },
+ "note": "`confidence` on the pocket is over pockets and sums to about 1 across them. Inside an interface it is per residue in [0, 1] and sums to nothing. No residue is cut at a threshold: the whole vector is the answer.",
+ "mapping_basis": "side",
+ "checks": {
+  "unrecognised_sides": []
+ },
+ "chain_pairs": [
+  {
+   "antibody_chain": "F",
+   "antigen_chain": "A",
+   "n_residues": 5
+  },
+  {
+   "antibody_chain": "F",
+   "antigen_chain": "E",
+   "n_residues": 4
+  },
+  {
+   "antibody_chain": "G",
+   "antigen_chain": "A",
+   "n_residues": 5
+  },
+  {
+   "antibody_chain": "G",
+   "antigen_chain": "E",
+   "n_residues": 2
+  }
+ ],
+ "antibodies": [
+  {
+   "antibody": "antibody.pdb",
+   "chains": {
+    "F": "light",
+    "G": "heavy"
+   },
+   "binding_mode": null,
+   "n_residues_scored": 13,
+   "interfaces": [
+    {
+     "antibody_chain": "F",
+     "antibody_chain_type": "light",
+     "antigen_chain": "A",
+     "n_residues": 5,
+     "residue_confidence": {
+      "35": 0.9,
+      "45": 0.25,
+      "46": 0.6,
+      "47": 0.45,
+      "48": 0.35
+     },
+     "residue_side": {
+      "35": "both",
+      "45": "light",
+      "46": "light",
+      "47": "light",
+      "48": "light"
+     },
+     "max_confidence": 0.9,
+     "mean_confidence": 0.51
+    },
+    {
+     "antibody_chain": "F",
+     "antibody_chain_type": "light",
+     "antigen_chain": "E",
+     "n_residues": 4,
+     "residue_confidence": {
+      "31": 0.72,
+      "32": 0.58,
+      "33": 0.2,
+      "34": 0.18
+     },
+     "residue_side": {
+      "31": "both",
+      "32": "both",
+      "33": "light",
+      "34": "light"
+     },
+     "max_confidence": 0.72,
+     "mean_confidence": 0.42
+    },
+    {
+     "antibody_chain": "G",
+     "antibody_chain_type": "heavy",
+     "antigen_chain": "A",
+     "n_residues": 5,
+     "residue_confidence": {
+      "33": 0.52,
+      "34": 0.63,
+      "35": 0.9,
+      "37": 0.52,
+      "40": 0.78
+     },
+     "residue_side": {
+      "33": "heavy",
+      "34": "heavy",
+      "35": "both",
+      "37": "heavy",
+      "40": "heavy"
+     },
+     "max_confidence": 0.9,
+     "mean_confidence": 0.67
+    },
+    {
+     "antibody_chain": "G",
+     "antibody_chain_type": "heavy",
+     "antigen_chain": "E",
+     "n_residues": 2,
+     "residue_confidence": {
+      "31": 0.72,
+      "32": 0.58
+     },
+     "residue_side": {
+      "31": "both",
+      "32": "both"
+     },
+     "max_confidence": 0.72,
+     "mean_confidence": 0.65
+    }
+   ]
+  }
+ ],
+ "paratope": {
+  "dominant_cdrs": [
+   "G:H3",
+   "G:H2",
+   "F:L1",
+   "F:L3"
+  ],
+  "paratope_residues": [
+   "G:28",
+   "G:30",
+   "G:31",
+   "G:32",
+   "G:33",
+   "G:34",
+   "G:35",
+   "G:54",
+   "G:55",
+   "G:56",
+   "G:57",
+   "G:58",
+   "G:59",
+   "G:99",
+   "G:101",
+   "G:102",
+   "G:103",
+   "G:104",
+   "G:105",
+   "G:106",
+   "G:107",
+   "G:108",
+   "G:110",
+   "G:111",
+   "F:27",
+   "F:28",
+   "F:30",
+   "F:31",
+   "F:32",
+   "F:50",
+   "F:52",
+   "F:91",
+   "F:92",
+   "F:93",
+   "F:94",
+   "F:97"
+  ],
+  "heavy_light_split": "Heavy contributes about 65% across A:33-40 and the shared E:31-32 center; light covers A:45-48 and the glycan-adjacent E:33-34 rim. Both meet at A:Y35 and E:R31/E32.",
+  "binding_mode_union": "straddling"
+ },
+ "residues": [
+  "A:33",
+  "A:34",
+  "A:35",
+  "A:37",
+  "A:40",
+  "A:45",
+  "A:46",
+  "A:47",
+  "A:48",
+  "E:31",
+  "E:32",
+  "E:33",
+  "E:34"
+ ],
+ "n_residues": 13,
+ "patches": [
+  {
+   "id": "P8",
+   "name": "Distal gL-gH junction below the UL head",
+   "n_residues": 13,
+   "residues": [
+    "A:33",
+    "A:34",
+    "A:35",
+    "A:37",
+    "A:40",
+    "A:45",
+    "A:46",
+    "A:47",
+    "A:48",
+    "E:31",
+    "E:32",
+    "E:33",
+    "E:34"
+   ],
+   "n_kept_by_advocate": 13,
+   "n_dropped_by_advocate": 0
+  }
+ ],
+ "pooling_provenance": {
+  "n_shared_at_pooling": 13,
+  "n_disputed_at_pooling": 0,
+  "note": "counts only, describing how the organizer grouped the phase-1 patches. The organizer's own candidate residue list is deliberately absent: the answer is the advocate's footprint, in `residues` and in `antibodies[].interfaces[]`."
+ },
+ "evidence": {
+  "advocate": {
+   "n_findings": 5,
+   "n_supports": 4,
+   "n_weakens": 0,
+   "weakest_point": "The E:N33 glycan and assembly burial at A:47/A:48/E:31/E:33 narrow the available protein face; if that glycan projects across the seam, the proposed light-chain half may be inaccessible.",
+   "note": "the advocate reports claim/source/date/bearing and is not asked whether a source is about this binder"
+  },
+  "judge": {
+   "tier_a_support": 0,
+   "n_support_lines": 5,
+   "verdict": "live",
+   "note": "Tier A -- a source about this binder itself -- is the judge's adjudication, in assessment[].support[]. It exists nowhere in the advocate's own answer."
+  }
+ },
+ "provenance": {
+  "unverified_source_policy_fields": [
+   "gated",
+   "web_search",
+   "shell_network",
+   "gate_tools"
+  ],
+  "assembled_case_dir": "gpt-5.6-high/gather_refine/post_refactor/unreleased_20261029/nocut/casp17/H2362/case_259152_G_rep1",
+  "organize_case_dir": "gpt-5.6-high/gather_refine/post_refactor/unreleased_20261029/nocut/casp17/H2362/case_259152_GR_rep1",
+  "organize_status": "ok",
+  "judge_case_dir": "gpt-5.6-high/gather_refine/post_refactor/unreleased_20261029/nocut/casp17/H2362/case_259152_GJ_rep1",
+  "judge_status": "ok",
+  "packet": "gpt-5.6-high/nocut/gather/packets/case_259152/packet",
+  "manifest": "gpt-5.6-high/nocut/gather/packets/case_259152/manifest.json",
+  "advocate_case_dir": "gpt-5.6-high/gather_refine/post_refactor/unreleased_20261029/nocut/casp17/H2362/case_259152_GR_rep1",
+  "advocate_status": "ok"
+ }
+}

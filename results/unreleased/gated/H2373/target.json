@@ -1,0 +1,237 @@
+{
+ "target": "H2373",
+ "target_set": "casp17",
+ "case": "case_0a097a",
+ "task": "gather",
+ "gather_mode": "batched",
+ "num_launchers": 3,
+ "policy": {
+  "evidence_cutoff": "2026-06-22",
+  "no_cutoff": false,
+  "gated": true,
+  "web_search": false,
+  "shell_network": true,
+  "gate_tools": [
+   "research",
+   "fetch",
+   "rcsb",
+   "patent",
+   "paper"
+  ]
+ },
+ "unscored": true,
+ "evidence_cutoff": "2026-06-22",
+ "target_release_date": "2026-06-22",
+ "retrieval_policy": "gated",
+ "antigen_chains": [
+  "C"
+ ],
+ "antibody_files": {
+  "antibody.pdb": [
+   "A",
+   "B"
+  ]
+ },
+ "antibody_chain_types": {
+  "antibody.pdb": {
+   "A": "heavy",
+   "B": "light"
+  }
+ },
+ "input_structure": "data/staged_casp17_no_native/H2373.pdb",
+ "input_structure_sha256": "6de101bc89c71ca02e9619508c2a03a96a523de97b34239d24f30aae6c792209",
+ "briefing_source": "data/briefing/casp17/H2373/search_results.json",
+ "briefing_sha256": "9f1f099d612174ec79e4f352ae0a0e16059d8647ee3759d325f3d4d1bb941bb6",
+ "recognized_complex": {
+  "organize": null,
+  "judge": false
+ },
+ "recognition_note": "The antigen was identified from the supplied sequence and pre-cutoff records as HSV-2 strain-333 glycoprotein D, but the target Fab/complex was not identified. E317, DL11, MC2/MC5, site-II antibodies and Nb14 are explicitly different binders. Exact paired-CDR searches produced no target-specific epitope record by the 2026-06-22 cutoff.",
+ "what_separated_them": "No candidate had positive Tier-A evidence about this binder; the one binder-specific line only excludes identity with E317. I therefore treated the eight proposals as four surface families, discounted repeated literature within a family, and split family mass using one common calculation on the shipping footprints. C4 narrowly led through combined receptor/antibody precedent and target-paratope chemistry; C3 gained from exposure, compactness and +2 charge; C2 led the lateral family through the exact Nb14 core; C6 lost on footprint coherence. The resulting distribution is intentionally prior-like and diffuse.",
+ "not_pooled": [],
+ "provenance": {
+  "unverified_source_policy_fields": [
+   "gated",
+   "web_search",
+   "shell_network",
+   "gate_tools"
+  ],
+  "assembled_case_dir": "gpt-5.6-high/gather_refine/post_refactor/unreleased_20261029/gated/casp17/H2373/case_0a097a_G_rep3",
+  "organize_case_dir": "gpt-5.6-high/gather_refine/post_refactor/unreleased_20261029/gated/casp17/H2373/case_0a097a_GR_rep1",
+  "organize_status": "ok",
+  "judge_case_dir": "gpt-5.6-high/gather_refine/post_refactor/unreleased_20261029/gated/casp17/H2373/case_0a097a_GJ_rep3",
+  "judge_status": "ok",
+  "packet": "gpt-5.6-high/gather/packets/case_0a097a/packet",
+  "manifest": "gpt-5.6-high/gather/packets/case_0a097a/manifest.json"
+ },
+ "pockets": [
+  {
+   "id": "C4",
+   "judge_rank": 1,
+   "name": "The composite receptor-binding crown where the N-terminal shoulder...",
+   "confidence": 0.17,
+   "mapping_basis": "side",
+   "n_residues": 16,
+   "chain_pairs": [
+    {
+     "antibody_chain": "A",
+     "antigen_chain": "C",
+     "n_residues": 11
+    },
+    {
+     "antibody_chain": "B",
+     "antigen_chain": "C",
+     "n_residues": 10
+    }
+   ],
+   "file": "pocket.C4.json"
+  },
+  {
+   "id": "C3",
+   "judge_rank": 2,
+   "name": "The solvent-facing basic arc of the mobile N-terminal extension that...",
+   "confidence": 0.16,
+   "mapping_basis": "side",
+   "n_residues": 13,
+   "chain_pairs": [
+    {
+     "antibody_chain": "A",
+     "antigen_chain": "C",
+     "n_residues": 9
+    },
+    {
+     "antibody_chain": "B",
+     "antigen_chain": "C",
+     "n_residues": 9
+    }
+   ],
+   "file": "pocket.C3.json"
+  },
+  {
+   "id": "C7",
+   "judge_rank": 3,
+   "name": "A compact conformational epitope joining Tyr38 and the 132/139/140...",
+   "confidence": 0.14,
+   "mapping_basis": "side",
+   "n_residues": 14,
+   "chain_pairs": [
+    {
+     "antibody_chain": "A",
+     "antigen_chain": "C",
+     "n_residues": 10
+    },
+    {
+     "antibody_chain": "B",
+     "antigen_chain": "C",
+     "n_residues": 9
+    }
+   ],
+   "file": "pocket.C7.json"
+  },
+  {
+   "id": "C2",
+   "judge_rank": 4,
+   "name": "The glycan-free N-to-A-prime interloop on the lateral face of the...",
+   "confidence": 0.13,
+   "mapping_basis": "side",
+   "n_residues": 12,
+   "chain_pairs": [
+    {
+     "antibody_chain": "A",
+     "antigen_chain": "C",
+     "n_residues": 9
+    },
+    {
+     "antibody_chain": "B",
+     "antigen_chain": "C",
+     "n_residues": 7
+    }
+   ],
+   "file": "pocket.C2.json"
+  },
+  {
+   "id": "C8",
+   "judge_rank": 5,
+   "name": "The two-arm N-terminal HVEM hairpin surface: the C:7-C:15 turn and...",
+   "confidence": 0.12,
+   "mapping_basis": "side",
+   "n_residues": 16,
+   "chain_pairs": [
+    {
+     "antibody_chain": "A",
+     "antigen_chain": "C",
+     "n_residues": 10
+    },
+    {
+     "antibody_chain": "B",
+     "antigen_chain": "C",
+     "n_residues": 11
+    }
+   ],
+   "file": "pocket.C8.json"
+  },
+  {
+   "id": "C5",
+   "judge_rank": 6,
+   "name": "A nonglycosylated lateral IgV beta-sandwich face formed by the...",
+   "confidence": 0.11,
+   "mapping_basis": "side",
+   "n_residues": 12,
+   "chain_pairs": [
+    {
+     "antibody_chain": "A",
+     "antigen_chain": "C",
+     "n_residues": 8
+    },
+    {
+     "antibody_chain": "B",
+     "antigen_chain": "C",
+     "n_residues": 7
+    }
+   ],
+   "file": "pocket.C5.json"
+  },
+  {
+   "id": "C1",
+   "judge_rank": 7,
+   "name": "The solvent-exposed end of the C-terminal extension/profusion region...",
+   "confidence": 0.09,
+   "mapping_basis": "side",
+   "n_residues": 12,
+   "chain_pairs": [
+    {
+     "antibody_chain": "A",
+     "antigen_chain": "C",
+     "n_residues": 9
+    },
+    {
+     "antibody_chain": "B",
+     "antigen_chain": "C",
+     "n_residues": 8
+    }
+   ],
+   "file": "pocket.C1.json"
+  },
+  {
+   "id": "C6",
+   "judge_rank": 8,
+   "name": "The major-neutralizing nectin-binding face centered on the...",
+   "confidence": 0.08,
+   "mapping_basis": "side",
+   "n_residues": 13,
+   "chain_pairs": [
+    {
+     "antibody_chain": "A",
+     "antigen_chain": "C",
+     "n_residues": 8
+    },
+    {
+     "antibody_chain": "B",
+     "antigen_chain": "C",
+     "n_residues": 10
+    }
+   ],
+   "file": "pocket.C6.json"
+  }
+ ]
+}

@@ -1,0 +1,300 @@
+{
+ "task": "gather",
+ "gather_mode": "batched",
+ "num_launchers": 3,
+ "policy": {
+  "evidence_cutoff": null,
+  "no_cutoff": true,
+  "gated": false,
+  "web_search": true,
+  "shell_network": true,
+  "gate_tools": []
+ },
+ "unscored": true,
+ "target": "H2344",
+ "target_set": "casp17",
+ "case": "case_679778",
+ "evidence_cutoff": null,
+ "target_release_date": "2026-06-03",
+ "retrieval_policy": "no-cutoff",
+ "input_structure": "data/staged_casp17_no_native/H2344.pdb",
+ "input_structure_sha256": "18733617ed7c4b96b45ff3352f72763afcd6932570e14f1956abaeff946190b8",
+ "briefing_source": "data/briefing/casp17_nocutoff/H2344/search_results.json",
+ "briefing_sha256": "219c979403254eb778aaaf285ed1a338e86cc2322627ca12f3ab91aaa7876e87",
+ "antigen_chains": [
+  "C"
+ ],
+ "antibody_files": {
+  "antibody.pdb": [
+   "A",
+   "B"
+  ]
+ },
+ "antibody_chain_types": {
+  "antibody.pdb": {
+   "A": "unknown",
+   "B": "unknown"
+  }
+ },
+ "stage": "gatherer",
+ "pocket": {
+  "id": "C7",
+  "judge_rank": 5,
+  "name": "The discontinuous MC2-like fusion-activation face on the...",
+  "confidence": 0.09,
+  "p_rests_on_holds": 0.18,
+  "why_this_rank": "C7 matches the broader MC2-associated residue community and includes P246, but several canonical anchors are poorly exposed and its +2 exposed patch is a weaker match to the net-neutral HAB72 paratope.",
+  "rests_on": "HAB72 recognizes the full discontinuous MC2-like face through backbone contacts and state-dependent exposure.",
+  "where_the_mass_goes_if_it_fails": "C4.",
+  "what_it_is": "The discontinuous MC2-like fusion-activation face on the receptor-opposite side of gD: an upper basic ledge around R64/R67, a core turn around 184–186, and the C-terminal H242–T249/P246 ridge. Together these form the full three-segment conformational surface.",
+  "why_one_candidate": "geometry pooled 2 patches (P8, P9): P8+P9 at 2.1 A, union radius 16.61 A. Every union fits inside this antibody's paratope reach of 18.1 A. No session judged these to be the same surface.",
+  "from_patches": [
+   "P8",
+   "P9"
+  ]
+ },
+ "note": "`confidence` on the pocket is over pockets and sums to about 1 across them. Inside an interface it is per residue in [0, 1] and sums to nothing. No residue is cut at a threshold: the whole vector is the answer.",
+ "mapping_basis": "side",
+ "checks": {
+  "unrecognised_sides": []
+ },
+ "chain_pairs": [
+  {
+   "antibody_chain": "A",
+   "antigen_chain": "C",
+   "n_residues": 14
+  },
+  {
+   "antibody_chain": "B",
+   "antigen_chain": "C",
+   "n_residues": 14
+  }
+ ],
+ "antibodies": [
+  {
+   "antibody": "antibody.pdb",
+   "chains": {
+    "A": "unknown",
+    "B": "unknown"
+   },
+   "binding_mode": null,
+   "n_residues_scored": 14,
+   "interfaces": [
+    {
+     "antibody_chain": "A",
+     "antibody_chain_type": "unknown",
+     "antigen_chain": "C",
+     "n_residues": 14,
+     "residue_confidence": {
+      "64": 0.7,
+      "67": 0.74,
+      "184": 0.5,
+      "185": 0.44,
+      "186": 0.6,
+      "240": 0.6,
+      "242": 0.73,
+      "243": 0.87,
+      "244": 0.84,
+      "245": 0.9,
+      "246": 0.99,
+      "247": 0.75,
+      "248": 0.82,
+      "249": 0.58
+     },
+     "residue_side": {
+      "64": "heavy",
+      "67": "heavy",
+      "184": "heavy",
+      "185": "heavy",
+      "186": "both",
+      "240": "heavy",
+      "242": "heavy",
+      "243": "heavy",
+      "244": "both",
+      "245": "both",
+      "246": "light",
+      "247": "light",
+      "248": "light",
+      "249": "light"
+     },
+     "max_confidence": 0.99,
+     "mean_confidence": 0.7186
+    },
+    {
+     "antibody_chain": "B",
+     "antibody_chain_type": "unknown",
+     "antigen_chain": "C",
+     "n_residues": 14,
+     "residue_confidence": {
+      "64": 0.7,
+      "67": 0.74,
+      "184": 0.5,
+      "185": 0.44,
+      "186": 0.6,
+      "240": 0.6,
+      "242": 0.73,
+      "243": 0.87,
+      "244": 0.84,
+      "245": 0.9,
+      "246": 0.99,
+      "247": 0.75,
+      "248": 0.82,
+      "249": 0.58
+     },
+     "residue_side": {
+      "64": "heavy",
+      "67": "heavy",
+      "184": "heavy",
+      "185": "heavy",
+      "186": "both",
+      "240": "heavy",
+      "242": "heavy",
+      "243": "heavy",
+      "244": "both",
+      "245": "both",
+      "246": "light",
+      "247": "light",
+      "248": "light",
+      "249": "light"
+     },
+     "max_confidence": 0.99,
+     "mean_confidence": 0.7186
+    }
+   ]
+  }
+ ],
+ "paratope": {
+  "dominant_cdrs": [
+   "H3:H2",
+   "H1:L1",
+   "L3:H1",
+   "L1:L3"
+  ],
+  "paratope_residues": [
+   "A:30",
+   "A:31",
+   "A:32",
+   "A:54",
+   "A:55",
+   "A:57",
+   "A:100",
+   "A:101",
+   "A:102",
+   "A:103",
+   "A:104",
+   "A:105",
+   "A:106",
+   "A:107",
+   "A:109",
+   "A:112",
+   "A:113",
+   "B:27",
+   "B:28",
+   "B:30",
+   "B:32",
+   "B:33",
+   "B:92",
+   "B:94",
+   "B:95",
+   "B:96",
+   "B:98"
+  ],
+  "heavy_light_split": "Heavy-dominant (~70:30): H3/H2/H1 bridge the 64/67, 184–186 and 240–245 lobes; L1/L3 share K245 and read the P246/Y248/T249 subtype rim.",
+  "binding_mode_union": "single-chain"
+ },
+ "residues": [
+  "C:184",
+  "C:185",
+  "C:186",
+  "C:240",
+  "C:242",
+  "C:243",
+  "C:244",
+  "C:245",
+  "C:246",
+  "C:247",
+  "C:248",
+  "C:249",
+  "C:64",
+  "C:67"
+ ],
+ "n_residues": 14,
+ "patches": [
+  {
+   "id": "P8",
+   "name": "MC2-like subtype-selective gH/gL-control face",
+   "n_residues": 15,
+   "residues": [
+    "C:184",
+    "C:185",
+    "C:186",
+    "C:240",
+    "C:242",
+    "C:243",
+    "C:244",
+    "C:245",
+    "C:246",
+    "C:247",
+    "C:248",
+    "C:249",
+    "C:63",
+    "C:64",
+    "C:67"
+   ],
+   "n_kept_by_advocate": 14,
+   "n_dropped_by_advocate": 1
+  },
+  {
+   "id": "P9",
+   "name": "MC2-like HSV-2-specific fusion face",
+   "n_residues": 6,
+   "residues": [
+    "C:243",
+    "C:245",
+    "C:246",
+    "C:248",
+    "C:64",
+    "C:67"
+   ],
+   "n_kept_by_advocate": 6,
+   "n_dropped_by_advocate": 0
+  }
+ ],
+ "pooling_provenance": {
+  "n_shared_at_pooling": 6,
+  "n_disputed_at_pooling": 9,
+  "note": "counts only, describing how the organizer grouped the phase-1 patches. The organizer's own candidate residue list is deliberately absent: the answer is the advocate's footprint, in `residues` and in `antibodies[].interfaces[]`."
+ },
+ "evidence": {
+  "advocate": {
+   "n_findings": 6,
+   "n_supports": 4,
+   "n_weakens": 1,
+   "weakest_point": "The surface is strongly basic and several canonical anchors are poorly exposed or normally C-terminally occluded, whereas HAB72's paratope is mostly neutral/hydrophobic; the proposed interface relies heavily on one exposed H3 Asp, receptor-state breathing, and backbone/proline contacts.",
+   "note": "the advocate reports claim/source/date/bearing and is not asked whether a source is about this binder"
+  },
+  "judge": {
+   "tier_a_support": 1,
+   "n_support_lines": 5,
+   "verdict": "unlikely",
+   "note": "Tier A -- a source about this binder itself -- is the judge's adjudication, in assessment[].support[]. It exists nowhere in the advocate's own answer."
+  }
+ },
+ "provenance": {
+  "unverified_source_policy_fields": [
+   "gated",
+   "web_search",
+   "shell_network",
+   "gate_tools"
+  ],
+  "assembled_case_dir": "gpt-5.6-high/gather_refine/post_refactor/unreleased_20261029/nocut/casp17/H2344/case_679778_G_rep1",
+  "organize_case_dir": "gpt-5.6-high/gather_refine/post_refactor/unreleased_20261029/nocut/casp17/H2344/case_679778_GR_rep1",
+  "organize_status": "ok",
+  "judge_case_dir": "gpt-5.6-high/gather_refine/post_refactor/unreleased_20261029/nocut/casp17/H2344/case_679778_GJ_rep1",
+  "judge_status": "ok",
+  "packet": "gpt-5.6-high/nocut/gather/packets/case_679778/packet",
+  "manifest": "gpt-5.6-high/nocut/gather/packets/case_679778/manifest.json",
+  "advocate_case_dir": "gpt-5.6-high/gather_refine/post_refactor/unreleased_20261029/nocut/casp17/H2344/case_679778_GR_rep1",
+  "advocate_status": "ok"
+ }
+}

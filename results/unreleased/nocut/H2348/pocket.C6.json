@@ -1,0 +1,345 @@
+{
+ "task": "gather",
+ "gather_mode": "batched",
+ "num_launchers": 3,
+ "policy": {
+  "evidence_cutoff": null,
+  "no_cutoff": true,
+  "gated": false,
+  "web_search": true,
+  "shell_network": true,
+  "gate_tools": []
+ },
+ "unscored": true,
+ "target": "H2348",
+ "target_set": "casp17",
+ "case": "case_4ade9a",
+ "evidence_cutoff": null,
+ "target_release_date": "2026-06-05",
+ "retrieval_policy": "no-cutoff",
+ "input_structure": "data/staged_casp17_no_native/H2348.pdb",
+ "input_structure_sha256": "ce3adf48ca6a518ad9b1c0b7ee6fd0899f7d12f01d7aa968c11b92ad459c41e7",
+ "briefing_source": "data/briefing/casp17_nocutoff/H2348/search_results.json",
+ "briefing_sha256": "764bf0cb501957b0a6bbb2036c672dc856ac4be1b5e0aed11fd8847f842bf759",
+ "antigen_chains": [
+  "A"
+ ],
+ "antibody_files": {
+  "antibody.pdb": [
+   "B",
+   "C"
+  ]
+ },
+ "antibody_chain_types": {
+  "antibody.pdb": {
+   "B": "unknown",
+   "C": "unknown"
+  }
+ },
+ "stage": "gatherer",
+ "pocket": {
+  "id": "C6",
+  "judge_rank": 3,
+  "name": "The glycan-free outer ridge across the acute D4-D5 bend of the...",
+  "confidence": 0.18,
+  "p_rests_on_holds": 0.36,
+  "why_this_rank": "C6 is fully exposed, coverable, chemically mixed, and has the best qualitative charge match to this paratope among substantial footprints, but lacks an exact-ridge precedent or determined consequence.",
+  "rests_on": "Bulk charge and shape compatibility without orientation are informative for this paratope.",
+  "where_the_mass_goes_if_it_fails": "C4 and C2",
+  "what_it_is": "The glycan-free outer ridge across the acute D4-D5 bend of the membrane-proximal signaling leg, formed by the R350-W351-K352 loop, R373 loop, and F399/Q400-to-D480 folded ridge.",
+  "why_one_candidate": "geometry pooled 2 patches (P6, P7): P6+P7 at 4.02 A, union radius 17.22 A. Every union fits inside this antibody's paratope reach of 17.5 A. No session judged these to be the same surface.",
+  "from_patches": [
+   "P6",
+   "P7"
+  ]
+ },
+ "note": "`confidence` on the pocket is over pockets and sums to about 1 across them. Inside an interface it is per residue in [0, 1] and sums to nothing. No residue is cut at a threshold: the whole vector is the answer.",
+ "mapping_basis": "side",
+ "checks": {
+  "unrecognised_sides": []
+ },
+ "chain_pairs": [
+  {
+   "antibody_chain": "B",
+   "antigen_chain": "A",
+   "n_residues": 20
+  },
+  {
+   "antibody_chain": "C",
+   "antigen_chain": "A",
+   "n_residues": 20
+  }
+ ],
+ "antibodies": [
+  {
+   "antibody": "antibody.pdb",
+   "chains": {
+    "B": "unknown",
+    "C": "unknown"
+   },
+   "binding_mode": null,
+   "n_residues_scored": 20,
+   "interfaces": [
+    {
+     "antibody_chain": "B",
+     "antibody_chain_type": "unknown",
+     "antigen_chain": "A",
+     "n_residues": 20,
+     "residue_confidence": {
+      "314": 0.35,
+      "349": 0.4,
+      "350": 0.73,
+      "351": 0.96,
+      "352": 0.89,
+      "353": 0.66,
+      "371": 0.56,
+      "372": 0.63,
+      "373": 0.83,
+      "375": 0.61,
+      "391": 0.32,
+      "397": 0.55,
+      "398": 0.77,
+      "399": 0.87,
+      "400": 0.79,
+      "401": 0.59,
+      "402": 0.56,
+      "429": 0.63,
+      "479": 0.55,
+      "480": 0.56
+     },
+     "residue_side": {
+      "314": "heavy",
+      "349": "heavy",
+      "350": "heavy",
+      "351": "both",
+      "352": "both",
+      "353": "both",
+      "371": "light",
+      "372": "light",
+      "373": "both",
+      "375": "both",
+      "391": "light",
+      "397": "light",
+      "398": "both",
+      "399": "both",
+      "400": "both",
+      "401": "light",
+      "402": "light",
+      "429": "light",
+      "479": "light",
+      "480": "light"
+     },
+     "max_confidence": 0.96,
+     "mean_confidence": 0.6405
+    },
+    {
+     "antibody_chain": "C",
+     "antibody_chain_type": "unknown",
+     "antigen_chain": "A",
+     "n_residues": 20,
+     "residue_confidence": {
+      "314": 0.35,
+      "349": 0.4,
+      "350": 0.73,
+      "351": 0.96,
+      "352": 0.89,
+      "353": 0.66,
+      "371": 0.56,
+      "372": 0.63,
+      "373": 0.83,
+      "375": 0.61,
+      "391": 0.32,
+      "397": 0.55,
+      "398": 0.77,
+      "399": 0.87,
+      "400": 0.79,
+      "401": 0.59,
+      "402": 0.56,
+      "429": 0.63,
+      "479": 0.55,
+      "480": 0.56
+     },
+     "residue_side": {
+      "314": "heavy",
+      "349": "heavy",
+      "350": "heavy",
+      "351": "both",
+      "352": "both",
+      "353": "both",
+      "371": "light",
+      "372": "light",
+      "373": "both",
+      "375": "both",
+      "391": "light",
+      "397": "light",
+      "398": "both",
+      "399": "both",
+      "400": "both",
+      "401": "light",
+      "402": "light",
+      "429": "light",
+      "479": "light",
+      "480": "light"
+     },
+     "max_confidence": 0.96,
+     "mean_confidence": 0.6405
+    }
+   ]
+  }
+ ],
+ "paratope": {
+  "dominant_cdrs": [
+   "H3:H1",
+   "H1:H3",
+   "H2:L3",
+   "L3:H2"
+  ],
+  "paratope_residues": [
+   "B:27",
+   "B:31",
+   "B:32",
+   "B:33",
+   "B:54",
+   "B:56",
+   "B:57",
+   "B:58",
+   "B:98",
+   "B:99",
+   "B:101",
+   "B:102",
+   "B:105",
+   "C:27",
+   "C:28",
+   "C:30",
+   "C:31",
+   "C:32",
+   "C:52",
+   "C:91",
+   "C:92",
+   "C:93",
+   "C:94",
+   "C:95"
+  ],
+  "heavy_light_split": "Heavy contributes about 60% over R350-W351-K352-S353, R373, and F399. Light takes N371/D372 and the D398-Q400/T402/K429/A479/D480 perimeter; W351-K352-S353, R373/L375, and D398-F399-Q400 form the seam.",
+  "binding_mode_union": "single-chain"
+ },
+ "residues": [
+  "A:314",
+  "A:349",
+  "A:350",
+  "A:351",
+  "A:352",
+  "A:353",
+  "A:371",
+  "A:372",
+  "A:373",
+  "A:375",
+  "A:391",
+  "A:397",
+  "A:398",
+  "A:399",
+  "A:400",
+  "A:401",
+  "A:402",
+  "A:429",
+  "A:479",
+  "A:480"
+ ],
+ "n_residues": 20,
+ "patches": [
+  {
+   "id": "P6",
+   "name": "D4 exposed R-W-K-S-H-L loop face",
+   "n_residues": 19,
+   "residues": [
+    "A:322",
+    "A:349",
+    "A:350",
+    "A:351",
+    "A:352",
+    "A:353",
+    "A:354",
+    "A:355",
+    "A:356",
+    "A:357",
+    "A:368",
+    "A:371",
+    "A:372",
+    "A:373",
+    "A:375",
+    "A:377",
+    "A:391",
+    "A:396",
+    "A:397"
+   ],
+   "n_kept_by_advocate": 11,
+   "n_dropped_by_advocate": 8
+  },
+  {
+   "id": "P7",
+   "name": "Glycan-free D4-D5 outer ridge",
+   "n_residues": 20,
+   "residues": [
+    "A:314",
+    "A:349",
+    "A:350",
+    "A:351",
+    "A:352",
+    "A:353",
+    "A:371",
+    "A:372",
+    "A:373",
+    "A:375",
+    "A:391",
+    "A:397",
+    "A:398",
+    "A:399",
+    "A:400",
+    "A:401",
+    "A:402",
+    "A:429",
+    "A:479",
+    "A:480"
+   ],
+   "n_kept_by_advocate": 20,
+   "n_dropped_by_advocate": 0
+  }
+ ],
+ "pooling_provenance": {
+  "n_shared_at_pooling": 11,
+  "n_disputed_at_pooling": 17,
+  "note": "counts only, describing how the organizer grouped the phase-1 patches. The organizer's own candidate residue list is deliberately absent: the answer is the advocate's footprint, in `residues` and in `antibodies[].interfaces[]`."
+ },
+ "evidence": {
+  "advocate": {
+   "n_findings": 4,
+   "n_supports": 4,
+   "n_weakens": 0,
+   "weakest_point": "This ridge has no native-ligand contact or residue-resolved antibody precedent; its consequence is allosteric/cross-linking. A biologically idle exposed ridge can look excellent to structure-only chemistry, and the exact clone has no domain map.",
+   "note": "the advocate reports claim/source/date/bearing and is not asked whether a source is about this binder"
+  },
+  "judge": {
+   "tier_a_support": 1,
+   "n_support_lines": 5,
+   "verdict": "live",
+   "note": "Tier A -- a source about this binder itself -- is the judge's adjudication, in assessment[].support[]. It exists nowhere in the advocate's own answer."
+  }
+ },
+ "provenance": {
+  "unverified_source_policy_fields": [
+   "gated",
+   "web_search",
+   "shell_network",
+   "gate_tools"
+  ],
+  "assembled_case_dir": "gpt-5.6-high/gather_refine/post_refactor/unreleased_20261029/nocut/casp17/H2348/case_4ade9a_G_rep1",
+  "organize_case_dir": "gpt-5.6-high/gather_refine/post_refactor/unreleased_20261029/nocut/casp17/H2348/case_4ade9a_GR_rep1",
+  "organize_status": "ok",
+  "judge_case_dir": "gpt-5.6-high/gather_refine/post_refactor/unreleased_20261029/nocut/casp17/H2348/case_4ade9a_GJ_rep1",
+  "judge_status": "ok",
+  "packet": "gpt-5.6-high/nocut/gather/packets/case_4ade9a/packet",
+  "manifest": "gpt-5.6-high/nocut/gather/packets/case_4ade9a/manifest.json",
+  "advocate_case_dir": "gpt-5.6-high/gather_refine/post_refactor/unreleased_20261029/nocut/casp17/H2348/case_4ade9a_GR_rep1",
+  "advocate_status": "ok"
+ }
+}

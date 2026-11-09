@@ -1,0 +1,301 @@
+{
+ "task": "gather",
+ "gather_mode": "batched",
+ "num_launchers": 3,
+ "policy": {
+  "evidence_cutoff": "2026-05-21",
+  "no_cutoff": false,
+  "gated": true,
+  "web_search": false,
+  "shell_network": true,
+  "gate_tools": [
+   "research",
+   "fetch",
+   "rcsb",
+   "patent",
+   "paper"
+  ]
+ },
+ "unscored": false,
+ "target": "H1346_agCD",
+ "target_set": "casp17",
+ "case": "case_fed304",
+ "evidence_cutoff": "2026-05-21",
+ "target_release_date": "2026-05-21",
+ "retrieval_policy": "gated",
+ "input_structure": "structures/H1346_agCD.pdb",
+ "input_structure_sha256": null,
+ "briefing_source": null,
+ "briefing_sha256": null,
+ "antigen_chains": [
+  "C",
+  "D"
+ ],
+ "antibody_files": {
+  "antibody.pdb": [
+   "A",
+   "B"
+  ]
+ },
+ "antibody_chain_types": {
+  "antibody.pdb": {
+   "A": "heavy",
+   "B": "light"
+  }
+ },
+ "truth_file": "data/truth/casp17/H1346_agCD.epitope.json",
+ "stage": "gatherer",
+ "pocket": {
+  "id": "C4",
+  "judge_rank": 2,
+  "name": "The V-kappa/C-kappa elbow junction and the spatially adjoining...",
+  "confidence": 0.31,
+  "p_rests_on_holds": 0.38,
+  "why_this_rank": "Same anti-kappa domain support, plus hinge precedent and favorable gross charge; held below C1 because the precedent is a different VHH and D:199 is buried.",
+  "rests_on": "A/B is the anti-kappa chaperone and recognizes the hinge/opposite-sheet face.",
+  "where_the_mass_goes_if_it_fails": "C1",
+  "what_it_is": "The V-kappa/C-kappa elbow junction and the spatially adjoining opposite beta-sheet/C-terminal edge of the human kappa constant domain, a sequence-discontinuous but continuous folded surface.",
+  "why_one_candidate": "not pooled with anything: no other patch is both within 12 A (half centroid distance, half contact-graph hops) and coverable by one paratope of this antibody's reach, 16.9 A",
+  "from_patches": [
+   "P4"
+  ]
+ },
+ "note": "`confidence` on the pocket is over pockets and sums to about 1 across them. Inside an interface it is per residue in [0, 1] and sums to nothing. No residue is cut at a threshold: the whole vector is the answer.",
+ "mapping_basis": "side",
+ "checks": {
+  "unrecognised_sides": []
+ },
+ "chain_pairs": [
+  {
+   "antibody_chain": "A",
+   "antigen_chain": "D",
+   "n_residues": 12
+  },
+  {
+   "antibody_chain": "B",
+   "antigen_chain": "D",
+   "n_residues": 12
+  }
+ ],
+ "antibodies": [
+  {
+   "antibody": "antibody.pdb",
+   "chains": {
+    "A": "heavy",
+    "B": "light"
+   },
+   "binding_mode": null,
+   "n_residues_scored": 17,
+   "interfaces": [
+    {
+     "antibody_chain": "A",
+     "antibody_chain_type": "heavy",
+     "antigen_chain": "D",
+     "n_residues": 12,
+     "residue_confidence": {
+      "109": 0.45,
+      "110": 0.82,
+      "111": 0.67,
+      "113": 0.48,
+      "143": 0.7,
+      "144": 0.9,
+      "145": 0.48,
+      "146": 0.8,
+      "198": 0.58,
+      "200": 0.88,
+      "201": 0.62,
+      "203": 0.95
+     },
+     "residue_side": {
+      "109": "heavy",
+      "110": "heavy",
+      "111": "heavy",
+      "113": "heavy",
+      "143": "heavy",
+      "144": "both",
+      "145": "both",
+      "146": "both",
+      "198": "both",
+      "200": "both",
+      "201": "both",
+      "203": "both"
+     },
+     "max_confidence": 0.95,
+     "mean_confidence": 0.6942,
+     "precision_vs_truth": 0.0,
+     "n_in_truth": 0
+    },
+    {
+     "antibody_chain": "B",
+     "antibody_chain_type": "light",
+     "antigen_chain": "D",
+     "n_residues": 12,
+     "residue_confidence": {
+      "144": 0.9,
+      "145": 0.48,
+      "146": 0.8,
+      "198": 0.58,
+      "200": 0.88,
+      "201": 0.62,
+      "203": 0.95,
+      "204": 0.78,
+      "205": 0.82,
+      "206": 0.55,
+      "207": 0.72,
+      "208": 0.42
+     },
+     "residue_side": {
+      "144": "both",
+      "145": "both",
+      "146": "both",
+      "198": "both",
+      "200": "both",
+      "201": "both",
+      "203": "both",
+      "204": "light",
+      "205": "light",
+      "206": "light",
+      "207": "light",
+      "208": "light"
+     },
+     "max_confidence": 0.95,
+     "mean_confidence": 0.7083,
+     "precision_vs_truth": 0.0,
+     "n_in_truth": 0
+    }
+   ]
+  }
+ ],
+ "paratope": {
+  "dominant_cdrs": [
+   "A:H3",
+   "A:H2",
+   "B:L1",
+   "B:L3"
+  ],
+  "paratope_residues": [
+   "A:30",
+   "A:31",
+   "A:53",
+   "A:54",
+   "A:56",
+   "A:100",
+   "A:101",
+   "A:102",
+   "A:103",
+   "A:104",
+   "A:105",
+   "A:106",
+   "A:109",
+   "B:27",
+   "B:28",
+   "B:30",
+   "B:32",
+   "B:52",
+   "B:93",
+   "B:94"
+  ],
+  "heavy_light_split": "Heavy-dominant: A:H3/H2 bridge D:109-D:146 to D:198-D:203; B:L1/L3 close the D:203-D:208 edge. D:144-D:146 and D:198-D:203 are both-chain center contacts.",
+  "binding_mode_union": "single-chain"
+ },
+ "residues": [
+  "D:109",
+  "D:110",
+  "D:111",
+  "D:113",
+  "D:143",
+  "D:144",
+  "D:145",
+  "D:146",
+  "D:198",
+  "D:200",
+  "D:201",
+  "D:203",
+  "D:204",
+  "D:205",
+  "D:206",
+  "D:207",
+  "D:208"
+ ],
+ "n_residues": 17,
+ "patches": [
+  {
+   "id": "P4",
+   "name": "V-kappa/C-kappa hinge and opposite C-terminal face",
+   "n_residues": 24,
+   "residues": [
+    "D:109",
+    "D:110",
+    "D:111",
+    "D:113",
+    "D:142",
+    "D:143",
+    "D:144",
+    "D:145",
+    "D:146",
+    "D:147",
+    "D:162",
+    "D:164",
+    "D:196",
+    "D:198",
+    "D:199",
+    "D:200",
+    "D:201",
+    "D:202",
+    "D:203",
+    "D:204",
+    "D:205",
+    "D:206",
+    "D:207",
+    "D:208"
+   ],
+   "n_kept_by_advocate": 17,
+   "n_dropped_by_advocate": 7
+  }
+ ],
+ "pooling_provenance": {
+  "n_shared_at_pooling": 24,
+  "n_disputed_at_pooling": 0,
+  "note": "counts only, describing how the organizer grouped the phase-1 patches. The organizer's own candidate residue list is deliberately absent: the answer is the advocate's footprint, in `residues` and in `antibodies[].interfaces[]`."
+ },
+ "evidence": {
+  "advocate": {
+   "n_findings": 5,
+   "n_supports": 3,
+   "n_weakens": 1,
+   "weakest_point": "The only residue-level hinge precedent is from a different VHH architecture, not this conventional Fab. C1 is a broader and more uniformly exposed C-kappa plateau, whereas C4 depends on a sequence-discontinuous bridge and has no exact-clone evidence.",
+   "note": "the advocate reports claim/source/date/bearing and is not asked whether a source is about this binder"
+  },
+  "judge": {
+   "tier_a_support": 0,
+   "n_support_lines": 4,
+   "verdict": "leading",
+   "note": "Tier A -- a source about this binder itself -- is the judge's adjudication, in assessment[].support[]. It exists nowhere in the advocate's own answer."
+  }
+ },
+ "provenance": {
+  "unverified_source_policy_fields": [
+   "gated",
+   "web_search",
+   "shell_network",
+   "gate_tools"
+  ],
+  "assembled_case_dir": "gpt-5.6-high/gather_refine/post_refactor/released_structure_20261030/casp17/H1346_agCD/case_fed304_G_rep2",
+  "organize_case_dir": "gpt-5.6-high/gather_refine/post_refactor/released_structure_20261030/casp17/H1346_agCD/case_fed304_GR_rep1",
+  "organize_status": "ok",
+  "judge_case_dir": "gpt-5.6-high/gather_refine/post_refactor/released_structure_20261030/casp17/H1346_agCD/case_fed304_GJ_rep2",
+  "judge_status": "ok",
+  "packet": "gpt-5.6-high/gather/packets/case_fed304/packet",
+  "manifest": "gpt-5.6-high/gather/packets/case_fed304/manifest.json",
+  "advocate_case_dir": "gpt-5.6-high/gather_refine/post_refactor/released_structure_20261030/casp17/H1346_agCD/case_fed304_GR_rep1",
+  "advocate_status": "ok"
+ },
+ "score": {
+  "precision": 0.0,
+  "recall": 0.0,
+  "f1": 0.0,
+  "n_pred": 17,
+  "n_true": 17,
+  "n_hit": 0
+ }
+}

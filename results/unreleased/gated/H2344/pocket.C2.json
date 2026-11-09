@@ -1,0 +1,286 @@
+{
+ "task": "gather",
+ "gather_mode": "batched",
+ "num_launchers": 3,
+ "policy": {
+  "evidence_cutoff": "2026-06-03",
+  "no_cutoff": false,
+  "gated": true,
+  "web_search": false,
+  "shell_network": true,
+  "gate_tools": [
+   "research",
+   "fetch",
+   "rcsb",
+   "patent",
+   "paper"
+  ]
+ },
+ "unscored": true,
+ "target": "H2344",
+ "target_set": "casp17",
+ "case": "case_679778",
+ "evidence_cutoff": "2026-06-03",
+ "target_release_date": "2026-06-03",
+ "retrieval_policy": "gated",
+ "input_structure": "data/staged_casp17_no_native/H2344.pdb",
+ "input_structure_sha256": "18733617ed7c4b96b45ff3352f72763afcd6932570e14f1956abaeff946190b8",
+ "briefing_source": "data/briefing/casp17/H2344/search_results.json",
+ "briefing_sha256": "e01658771c612bd446896a8f683ccea6f403b94ecf685db0566f7e4ef7b38f51",
+ "antigen_chains": [
+  "C"
+ ],
+ "antibody_files": {
+  "antibody.pdb": [
+   "A",
+   "B"
+  ]
+ },
+ "antibody_chain_types": {
+  "antibody.pdb": {
+   "A": "unknown",
+   "B": "unknown"
+  }
+ },
+ "stage": "gatherer",
+ "pocket": {
+  "id": "C2",
+  "judge_rank": 4,
+  "name": "The conserved receptor-overlap groove on the upper Ig-like core...",
+  "confidence": 0.13,
+  "p_rests_on_holds": 0.33,
+  "why_this_rank": "C2 is the exact published E317 direct-contact core, giving precise precedent, but it is precise for the wrong antibody and includes occluded/disconnected contacts in the supplied state.",
+  "rests_on": "The supplied antibody recapitulates E317's direct-contact core despite only 16.7% H3 identity.",
+  "where_the_mass_goes_if_it_fails": "C8 within the same surface family, otherwise C3.",
+  "what_it_is": "The conserved receptor-overlap groove on the upper Ig-like core, centered on the alpha3/PRFI ridge around C:221-C:224 and connected to the C:38/C:132/C:215 wall.",
+  "why_one_candidate": "not pooled with anything: no other patch is both within 12 A (half centroid distance, half contact-graph hops) and coverable by one paratope of this antibody's reach, 18.1 A",
+  "from_patches": [
+   "P3"
+  ]
+ },
+ "note": "`confidence` on the pocket is over pockets and sums to about 1 across them. Inside an interface it is per residue in [0, 1] and sums to nothing. No residue is cut at a threshold: the whole vector is the answer.",
+ "mapping_basis": "side",
+ "checks": {
+  "unrecognised_sides": []
+ },
+ "chain_pairs": [
+  {
+   "antibody_chain": "A",
+   "antigen_chain": "C",
+   "n_residues": 15
+  },
+  {
+   "antibody_chain": "B",
+   "antigen_chain": "C",
+   "n_residues": 15
+  }
+ ],
+ "antibodies": [
+  {
+   "antibody": "antibody.pdb",
+   "chains": {
+    "A": "unknown",
+    "B": "unknown"
+   },
+   "binding_mode": null,
+   "n_residues_scored": 15,
+   "interfaces": [
+    {
+     "antibody_chain": "A",
+     "antibody_chain_type": "unknown",
+     "antigen_chain": "C",
+     "n_residues": 15,
+     "residue_confidence": {
+      "27": 0.72,
+      "38": 0.91,
+      "132": 0.54,
+      "139": 0.65,
+      "140": 0.7,
+      "215": 0.82,
+      "220": 0.56,
+      "221": 0.82,
+      "222": 0.97,
+      "223": 0.96,
+      "224": 0.52,
+      "227": 0.46,
+      "231": 0.48,
+      "235": 0.68,
+      "238": 0.62
+     },
+     "residue_side": {
+      "27": "heavy",
+      "38": "both",
+      "132": "heavy",
+      "139": "heavy",
+      "140": "heavy",
+      "215": "light",
+      "220": "heavy",
+      "221": "heavy",
+      "222": "both",
+      "223": "both",
+      "224": "heavy",
+      "227": "heavy",
+      "231": "heavy",
+      "235": "heavy",
+      "238": "heavy"
+     },
+     "max_confidence": 0.97,
+     "mean_confidence": 0.694
+    },
+    {
+     "antibody_chain": "B",
+     "antibody_chain_type": "unknown",
+     "antigen_chain": "C",
+     "n_residues": 15,
+     "residue_confidence": {
+      "27": 0.72,
+      "38": 0.91,
+      "132": 0.54,
+      "139": 0.65,
+      "140": 0.7,
+      "215": 0.82,
+      "220": 0.56,
+      "221": 0.82,
+      "222": 0.97,
+      "223": 0.96,
+      "224": 0.52,
+      "227": 0.46,
+      "231": 0.48,
+      "235": 0.68,
+      "238": 0.62
+     },
+     "residue_side": {
+      "27": "heavy",
+      "38": "both",
+      "132": "heavy",
+      "139": "heavy",
+      "140": "heavy",
+      "215": "light",
+      "220": "heavy",
+      "221": "heavy",
+      "222": "both",
+      "223": "both",
+      "224": "heavy",
+      "227": "heavy",
+      "231": "heavy",
+      "235": "heavy",
+      "238": "heavy"
+     },
+     "max_confidence": 0.97,
+     "mean_confidence": 0.694
+    }
+   ]
+  }
+ ],
+ "paratope": {
+  "dominant_cdrs": [
+   "H3peripheryheavy3to1lightmanycontactsinvolvingbothchainsWouldbeabout753A25heavy3AlightwithH3andH2atcenterC4:H1",
+   "H2andH3heavyL1andL2lightH3dominantparatoperesiduesincludeH3loopresiduesheavyLightloopscontributetolateraledgeHeavyfractionabout70to30H:L1"
+  ],
+  "paratope_residues": [
+   "A:30",
+   "A:31",
+   "A:32",
+   "A:54",
+   "A:55",
+   "A:57",
+   "A:101",
+   "A:103",
+   "A:104",
+   "A:105",
+   "A:106",
+   "A:107",
+   "A:108",
+   "A:113",
+   "B:27",
+   "B:28",
+   "B:32",
+   "B:33",
+   "B:53",
+   "B:94",
+   "B:95"
+  ],
+  "heavy_light_split": "About 75:25 heavy:light. H3/H2/H1 occupy the C:221-C:238 core; light CDRs support C:38/C:215. Both chains can converge at C:222-C:223.",
+  "binding_mode_union": "single-chain"
+ },
+ "residues": [
+  "C:132",
+  "C:139",
+  "C:140",
+  "C:215",
+  "C:220",
+  "C:221",
+  "C:222",
+  "C:223",
+  "C:224",
+  "C:227",
+  "C:231",
+  "C:235",
+  "C:238",
+  "C:27",
+  "C:38"
+ ],
+ "n_residues": 15,
+ "patches": [
+  {
+   "id": "P3",
+   "name": "Receptor-overlap groove centered on alpha3 residues 221-224",
+   "n_residues": 14,
+   "residues": [
+    "C:132",
+    "C:139",
+    "C:140",
+    "C:215",
+    "C:221",
+    "C:222",
+    "C:223",
+    "C:224",
+    "C:227",
+    "C:231",
+    "C:235",
+    "C:238",
+    "C:27",
+    "C:38"
+   ],
+   "n_kept_by_advocate": 14,
+   "n_dropped_by_advocate": 0
+  }
+ ],
+ "pooling_provenance": {
+  "n_shared_at_pooling": 14,
+  "n_disputed_at_pooling": 0,
+  "note": "counts only, describing how the organizer grouped the phase-1 patches. The organizer's own candidate residue list is deliberately absent: the answer is the advocate's footprint, in `residues` and in `antibodies[].interfaces[]`."
+ },
+ "evidence": {
+  "advocate": {
+   "n_findings": 6,
+   "n_supports": 4,
+   "n_weakens": 1,
+   "weakest_point": "The best residue-level precedent is E317, but the supplied H3 is decisively different. Several transferred direct contacts are buried in the apo model, so this case requires both a receptor-ready gD conformation and a new H3 solution to the same groove.",
+   "note": "the advocate reports claim/source/date/bearing and is not asked whether a source is about this binder"
+  },
+  "judge": {
+   "tier_a_support": 0,
+   "n_support_lines": 5,
+   "verdict": "live",
+   "note": "Tier A -- a source about this binder itself -- is the judge's adjudication, in assessment[].support[]. It exists nowhere in the advocate's own answer."
+  }
+ },
+ "provenance": {
+  "unverified_source_policy_fields": [
+   "gated",
+   "web_search",
+   "shell_network",
+   "gate_tools"
+  ],
+  "assembled_case_dir": "gpt-5.6-high/gather_refine/post_refactor/unreleased_20261029/gated/casp17/H2344/case_679778_G_rep3",
+  "organize_case_dir": "gpt-5.6-high/gather_refine/post_refactor/unreleased_20261029/gated/casp17/H2344/case_679778_GR_rep3",
+  "organize_status": "ok",
+  "judge_case_dir": "gpt-5.6-high/gather_refine/post_refactor/unreleased_20261029/gated/casp17/H2344/case_679778_GJ_rep3",
+  "judge_status": "ok",
+  "packet": "gpt-5.6-high/gather/packets/case_679778/packet",
+  "manifest": "gpt-5.6-high/gather/packets/case_679778/manifest.json",
+  "advocate_case_dir": "gpt-5.6-high/gather_refine/post_refactor/unreleased_20261029/gated/casp17/H2344/case_679778_GR_rep3",
+  "advocate_status": "ok"
+ }
+}

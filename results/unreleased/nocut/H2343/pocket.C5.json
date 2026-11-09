@@ -1,0 +1,280 @@
+{
+ "task": "gather",
+ "gather_mode": "batched",
+ "num_launchers": 3,
+ "policy": {
+  "evidence_cutoff": null,
+  "no_cutoff": true,
+  "gated": false,
+  "web_search": true,
+  "shell_network": true,
+  "gate_tools": []
+ },
+ "unscored": true,
+ "target": "H2343",
+ "target_set": "casp17",
+ "case": "case_f1b810",
+ "evidence_cutoff": null,
+ "target_release_date": "2026-06-01",
+ "retrieval_policy": "no-cutoff",
+ "input_structure": "data/staged_casp17_no_native/H2343.pdb",
+ "input_structure_sha256": "3c70ae6e0bdda9d0a1014d29975873fe008fbe5bd9aebb5949da78b06aeabf11",
+ "briefing_source": "data/briefing/casp17_nocutoff/H2343/search_results.json",
+ "briefing_sha256": "6b66efca006e54eee3aa1b9a3ad4f04da4207f25dccedfbc9f13d1ef0c954955",
+ "antigen_chains": [
+  "C"
+ ],
+ "antibody_files": {
+  "antibody.pdb": [
+   "A",
+   "B"
+  ]
+ },
+ "antibody_chain_types": {
+  "antibody.pdb": {
+   "A": "unknown",
+   "B": "unknown"
+  }
+ },
+ "stage": "gatherer",
+ "pocket": {
+  "id": "C5",
+  "judge_rank": 8,
+  "name": "The flexible N-terminal AS412/epitope-I flap of HCV E2, a conserved...",
+  "confidence": 0.005,
+  "p_rests_on_holds": 0.02,
+  "why_this_rank": "AS412 is compact and antibody-bindable, but a peptide-like neutralizing-site mode is least compatible with conformational non-neutralizing CBH-4G and carries two sequon risks.",
+  "rests_on": "CBH-4G is misidentified or can bind AS412 without the expected receptor/neutralization phenotype.",
+  "where_the_mass_goes_if_it_fails": "C4.",
+  "what_it_is": "The flexible N-terminal AS412/epitope-I flap of HCV E2, a conserved linear receptor-site element that can form a beta-hairpin or extended peptide when antibody-captured.",
+  "why_one_candidate": "not pooled with anything: no other patch is both within 12 A (half centroid distance, half contact-graph hops) and coverable by one paratope of this antibody's reach, 17.0 A",
+  "from_patches": [
+   "P5"
+  ]
+ },
+ "note": "`confidence` on the pocket is over pockets and sums to about 1 across them. Inside an interface it is per residue in [0, 1] and sums to nothing. No residue is cut at a threshold: the whole vector is the answer.",
+ "mapping_basis": "side",
+ "checks": {
+  "unrecognised_sides": []
+ },
+ "chain_pairs": [
+  {
+   "antibody_chain": "A",
+   "antigen_chain": "C",
+   "n_residues": 12
+  },
+  {
+   "antibody_chain": "B",
+   "antigen_chain": "C",
+   "n_residues": 12
+  }
+ ],
+ "antibodies": [
+  {
+   "antibody": "antibody.pdb",
+   "chains": {
+    "A": "unknown",
+    "B": "unknown"
+   },
+   "binding_mode": null,
+   "n_residues_scored": 12,
+   "interfaces": [
+    {
+     "antibody_chain": "A",
+     "antibody_chain_type": "unknown",
+     "antigen_chain": "C",
+     "n_residues": 12,
+     "residue_confidence": {
+      "1": 0.42,
+      "2": 0.64,
+      "3": 0.68,
+      "4": 0.48,
+      "5": 0.62,
+      "6": 0.26,
+      "7": 0.7,
+      "8": 0.75,
+      "9": 0.95,
+      "10": 0.9,
+      "11": 0.86,
+      "12": 0.2
+     },
+     "residue_side": {
+      "1": "light",
+      "2": "light",
+      "3": "light",
+      "4": "light",
+      "5": "light",
+      "6": "light",
+      "7": "both",
+      "8": "both",
+      "9": "both",
+      "10": "heavy",
+      "11": "heavy",
+      "12": "heavy"
+     },
+     "max_confidence": 0.95,
+     "mean_confidence": 0.6217
+    },
+    {
+     "antibody_chain": "B",
+     "antibody_chain_type": "unknown",
+     "antigen_chain": "C",
+     "n_residues": 12,
+     "residue_confidence": {
+      "1": 0.42,
+      "2": 0.64,
+      "3": 0.68,
+      "4": 0.48,
+      "5": 0.62,
+      "6": 0.26,
+      "7": 0.7,
+      "8": 0.75,
+      "9": 0.95,
+      "10": 0.9,
+      "11": 0.86,
+      "12": 0.2
+     },
+     "residue_side": {
+      "1": "light",
+      "2": "light",
+      "3": "light",
+      "4": "light",
+      "5": "light",
+      "6": "light",
+      "7": "both",
+      "8": "both",
+      "9": "both",
+      "10": "heavy",
+      "11": "heavy",
+      "12": "heavy"
+     },
+     "max_confidence": 0.95,
+     "mean_confidence": 0.6217
+    }
+   ]
+  }
+ ],
+ "paratope": {
+  "dominant_cdrs": [
+   "H3:H3",
+   "L1:L3",
+   "H2:H2"
+  ],
+  "paratope_residues": [
+   "A:28",
+   "A:30",
+   "A:31",
+   "A:54",
+   "A:55",
+   "A:56",
+   "A:57",
+   "A:58",
+   "A:102",
+   "A:104",
+   "A:105",
+   "A:106",
+   "A:107",
+   "A:108",
+   "A:109",
+   "A:110",
+   "A:111",
+   "A:113",
+   "A:116",
+   "B:27",
+   "B:28",
+   "B:30",
+   "B:31",
+   "B:32",
+   "B:52",
+   "B:93",
+   "B:94",
+   "B:95",
+   "B:97"
+  ],
+  "heavy_light_split": "Heavy-dominant but relatively balanced, approximately 60:40; light chain captures the N-terminal half and H3/H2 the Trp/His/Ile half.",
+  "binding_mode_union": "single-chain"
+ },
+ "residues": [
+  "C:1",
+  "C:10",
+  "C:11",
+  "C:12",
+  "C:2",
+  "C:3",
+  "C:4",
+  "C:5",
+  "C:6",
+  "C:7",
+  "C:8",
+  "C:9"
+ ],
+ "n_residues": 12,
+ "patches": [
+  {
+   "id": "P5",
+   "name": "AS412/front-layer receptor-binding ridge",
+   "n_residues": 20,
+   "residues": [
+    "C:1",
+    "C:10",
+    "C:11",
+    "C:12",
+    "C:16",
+    "C:17",
+    "C:18",
+    "C:2",
+    "C:20",
+    "C:25",
+    "C:27",
+    "C:3",
+    "C:31",
+    "C:32",
+    "C:4",
+    "C:5",
+    "C:6",
+    "C:7",
+    "C:8",
+    "C:9"
+   ],
+   "n_kept_by_advocate": 12,
+   "n_dropped_by_advocate": 8
+  }
+ ],
+ "pooling_provenance": {
+  "n_shared_at_pooling": 20,
+  "n_disputed_at_pooling": 0,
+  "note": "counts only, describing how the organizer grouped the phase-1 patches. The organizer's own candidate residue list is deliberately absent: the answer is the advocate's footprint, in `residues` and in `antibodies[].interfaces[]`."
+ },
+ "evidence": {
+  "advocate": {
+   "n_findings": 5,
+   "n_supports": 3,
+   "n_weakens": 1,
+   "weakest_point": "The exact antibody phenotype contradicts the expected consequence: CBH-4G is conformational and non-neutralizing and does not block E2–CD81, whereas a central AS412 antibody should usually perturb entry.",
+   "note": "the advocate reports claim/source/date/bearing and is not asked whether a source is about this binder"
+  },
+  "judge": {
+   "tier_a_support": 0,
+   "n_support_lines": 3,
+   "verdict": "excluded",
+   "note": "Tier A -- a source about this binder itself -- is the judge's adjudication, in assessment[].support[]. It exists nowhere in the advocate's own answer."
+  }
+ },
+ "provenance": {
+  "unverified_source_policy_fields": [
+   "gated",
+   "web_search",
+   "shell_network",
+   "gate_tools"
+  ],
+  "assembled_case_dir": "gpt-5.6-high/gather_refine/post_refactor/unreleased_20261029/nocut/casp17/H2343/case_f1b810_G_rep1",
+  "organize_case_dir": "gpt-5.6-high/gather_refine/post_refactor/unreleased_20261029/nocut/casp17/H2343/case_f1b810_GR_rep1",
+  "organize_status": "ok",
+  "judge_case_dir": "gpt-5.6-high/gather_refine/post_refactor/unreleased_20261029/nocut/casp17/H2343/case_f1b810_GJ_rep1",
+  "judge_status": "ok",
+  "packet": "gpt-5.6-high/nocut/gather/packets/case_f1b810/packet",
+  "manifest": "gpt-5.6-high/nocut/gather/packets/case_f1b810/manifest.json",
+  "advocate_case_dir": "gpt-5.6-high/gather_refine/post_refactor/unreleased_20261029/nocut/casp17/H2343/case_f1b810_GR_rep1",
+  "advocate_status": "ok"
+ }
+}

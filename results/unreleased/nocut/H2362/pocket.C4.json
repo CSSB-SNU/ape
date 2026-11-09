@@ -1,0 +1,322 @@
+{
+ "task": "gather",
+ "gather_mode": "batched",
+ "num_launchers": 3,
+ "policy": {
+  "evidence_cutoff": null,
+  "no_cutoff": true,
+  "gated": false,
+  "web_search": true,
+  "shell_network": true,
+  "gate_tools": []
+ },
+ "unscored": true,
+ "target": "H2362",
+ "target_set": "casp17",
+ "case": "case_259152",
+ "evidence_cutoff": null,
+ "target_release_date": "2026-06-12",
+ "retrieval_policy": "no-cutoff",
+ "input_structure": "data/staged_casp17_no_native/H2362.pdb",
+ "input_structure_sha256": "54e187b986e4696f87e1dd7dd4cd6cd943754471a337aa57a0577c6172827a73",
+ "briefing_source": "data/briefing/casp17_nocutoff/H2362/search_results.json",
+ "briefing_sha256": "51b08b3d656ebb7b7f7f0d284f291dc2a93f171a10cc488b650ef2ac8d2249c3",
+ "antigen_chains": [
+  "A",
+  "B",
+  "C",
+  "D",
+  "E"
+ ],
+ "antibody_files": {
+  "antibody.pdb": [
+   "F",
+   "G"
+  ]
+ },
+ "antibody_chain_types": {
+  "antibody.pdb": {
+   "F": "light",
+   "G": "heavy"
+  }
+ },
+ "stage": "gatherer",
+ "pocket": {
+  "id": "C4",
+  "judge_rank": 5,
+  "name": "A narrow exposed crest at the UL128-UL131A junction, centered on the...",
+  "confidence": 0.11,
+  "p_rests_on_holds": 0.5,
+  "why_this_rank": "It is compact, exposed and matches the 2-18/2-25 junction, but may be an over-narrow member of the C2/C6 family.",
+  "rests_on": "C4 represents a distinct narrow binding mode rather than only a subset of C2/C6.",
+  "where_the_mass_goes_if_it_fails": "C6",
+  "what_it_is": "A narrow exposed crest at the UL128-UL131A junction, centered on the mature-chain T94/K27-equivalent ridge rather than on the outer receptor-binding lobe.",
+  "why_one_candidate": "not pooled with anything: no other patch is both within 12 A (half centroid distance, half contact-graph hops) and coverable by one paratope of this antibody's reach, 17.6 A",
+  "from_patches": [
+   "P2"
+  ]
+ },
+ "note": "`confidence` on the pocket is over pockets and sums to about 1 across them. Inside an interface it is per residue in [0, 1] and sums to nothing. No residue is cut at a threshold: the whole vector is the answer.",
+ "mapping_basis": "side",
+ "checks": {
+  "unrecognised_sides": []
+ },
+ "chain_pairs": [
+  {
+   "antibody_chain": "F",
+   "antigen_chain": "B",
+   "n_residues": 8
+  },
+  {
+   "antibody_chain": "F",
+   "antigen_chain": "D",
+   "n_residues": 3
+  },
+  {
+   "antibody_chain": "G",
+   "antigen_chain": "B",
+   "n_residues": 4
+  },
+  {
+   "antibody_chain": "G",
+   "antigen_chain": "D",
+   "n_residues": 7
+  }
+ ],
+ "antibodies": [
+  {
+   "antibody": "antibody.pdb",
+   "chains": {
+    "F": "light",
+    "G": "heavy"
+   },
+   "binding_mode": null,
+   "n_residues_scored": 16,
+   "interfaces": [
+    {
+     "antibody_chain": "F",
+     "antibody_chain_type": "light",
+     "antigen_chain": "B",
+     "n_residues": 8,
+     "residue_confidence": {
+      "60": 0.55,
+      "61": 0.3,
+      "64": 0.72,
+      "65": 0.54,
+      "66": 0.42,
+      "67": 0.91,
+      "68": 0.56,
+      "70": 0.35
+     },
+     "residue_side": {
+      "60": "light",
+      "61": "light",
+      "64": "light",
+      "65": "light",
+      "66": "light",
+      "67": "both",
+      "68": "both",
+      "70": "both"
+     },
+     "max_confidence": 0.91,
+     "mean_confidence": 0.5437
+    },
+    {
+     "antibody_chain": "F",
+     "antibody_chain_type": "light",
+     "antigen_chain": "D",
+     "n_residues": 3,
+     "residue_confidence": {
+      "5": 0.86,
+      "9": 0.94,
+      "10": 0.68
+     },
+     "residue_side": {
+      "5": "both",
+      "9": "both",
+      "10": "both"
+     },
+     "max_confidence": 0.94,
+     "mean_confidence": 0.8267
+    },
+    {
+     "antibody_chain": "G",
+     "antibody_chain_type": "heavy",
+     "antigen_chain": "B",
+     "n_residues": 4,
+     "residue_confidence": {
+      "67": 0.91,
+      "68": 0.56,
+      "70": 0.35,
+      "71": 0.32
+     },
+     "residue_side": {
+      "67": "both",
+      "68": "both",
+      "70": "both",
+      "71": "heavy"
+     },
+     "max_confidence": 0.91,
+     "mean_confidence": 0.535
+    },
+    {
+     "antibody_chain": "G",
+     "antibody_chain_type": "heavy",
+     "antigen_chain": "D",
+     "n_residues": 7,
+     "residue_confidence": {
+      "3": 0.48,
+      "5": 0.86,
+      "6": 0.75,
+      "9": 0.94,
+      "10": 0.68,
+      "13": 0.48,
+      "15": 0.18
+     },
+     "residue_side": {
+      "3": "heavy",
+      "5": "both",
+      "6": "heavy",
+      "9": "both",
+      "10": "both",
+      "13": "heavy",
+      "15": "heavy"
+     },
+     "max_confidence": 0.94,
+     "mean_confidence": 0.6243
+    }
+   ]
+  }
+ ],
+ "paratope": {
+  "dominant_cdrs": [
+   "G:H3",
+   "G:H2",
+   "F:L1",
+   "F:L3"
+  ],
+  "paratope_residues": [
+   "G:28",
+   "G:30",
+   "G:31",
+   "G:32",
+   "G:33",
+   "G:34",
+   "G:35",
+   "G:54",
+   "G:55",
+   "G:56",
+   "G:57",
+   "G:58",
+   "G:59",
+   "G:99",
+   "G:101",
+   "G:102",
+   "G:103",
+   "G:104",
+   "G:105",
+   "G:106",
+   "G:107",
+   "G:108",
+   "G:110",
+   "G:111",
+   "F:27",
+   "F:28",
+   "F:30",
+   "F:31",
+   "F:32",
+   "F:50",
+   "F:52",
+   "F:91",
+   "F:92",
+   "F:93",
+   "F:94",
+   "F:97"
+  ],
+  "heavy_light_split": "Heavy contributes about 60% over D:3-15 and B:Y71; light covers B:60-66. Both meet at B:67-70 and D:E5/K9/N10.",
+  "binding_mode_union": "straddling"
+ },
+ "residues": [
+  "B:60",
+  "B:61",
+  "B:64",
+  "B:65",
+  "B:66",
+  "B:67",
+  "B:68",
+  "B:70",
+  "B:71",
+  "D:10",
+  "D:13",
+  "D:15",
+  "D:3",
+  "D:5",
+  "D:6",
+  "D:9"
+ ],
+ "n_residues": 16,
+ "patches": [
+  {
+   "id": "P2",
+   "name": "UL128-UL131A exposed ridge",
+   "n_residues": 16,
+   "residues": [
+    "B:60",
+    "B:61",
+    "B:64",
+    "B:65",
+    "B:66",
+    "B:67",
+    "B:68",
+    "B:70",
+    "B:71",
+    "D:10",
+    "D:13",
+    "D:15",
+    "D:3",
+    "D:5",
+    "D:6",
+    "D:9"
+   ],
+   "n_kept_by_advocate": 16,
+   "n_dropped_by_advocate": 0
+  }
+ ],
+ "pooling_provenance": {
+  "n_shared_at_pooling": 16,
+  "n_disputed_at_pooling": 0,
+  "note": "counts only, describing how the organizer grouped the phase-1 patches. The organizer's own candidate residue list is deliberately absent: the answer is the advocate's footprint, in `residues` and in `antibodies[].interfaces[]`."
+ },
+ "evidence": {
+  "advocate": {
+   "n_findings": 4,
+   "n_supports": 3,
+   "n_weakens": 0,
+   "weakest_point": "Unlike a direct receptor-overlap argument, the proposed neutralization mechanism is unresolved: the primary paper explicitly leaves secondary-receptor blockade versus fusion-trigger interference open.",
+   "note": "the advocate reports claim/source/date/bearing and is not asked whether a source is about this binder"
+  },
+  "judge": {
+   "tier_a_support": 0,
+   "n_support_lines": 4,
+   "verdict": "live",
+   "note": "Tier A -- a source about this binder itself -- is the judge's adjudication, in assessment[].support[]. It exists nowhere in the advocate's own answer."
+  }
+ },
+ "provenance": {
+  "unverified_source_policy_fields": [
+   "gated",
+   "web_search",
+   "shell_network",
+   "gate_tools"
+  ],
+  "assembled_case_dir": "gpt-5.6-high/gather_refine/post_refactor/unreleased_20261029/nocut/casp17/H2362/case_259152_G_rep1",
+  "organize_case_dir": "gpt-5.6-high/gather_refine/post_refactor/unreleased_20261029/nocut/casp17/H2362/case_259152_GR_rep1",
+  "organize_status": "ok",
+  "judge_case_dir": "gpt-5.6-high/gather_refine/post_refactor/unreleased_20261029/nocut/casp17/H2362/case_259152_GJ_rep1",
+  "judge_status": "ok",
+  "packet": "gpt-5.6-high/nocut/gather/packets/case_259152/packet",
+  "manifest": "gpt-5.6-high/nocut/gather/packets/case_259152/manifest.json",
+  "advocate_case_dir": "gpt-5.6-high/gather_refine/post_refactor/unreleased_20261029/nocut/casp17/H2362/case_259152_GR_rep1",
+  "advocate_status": "ok"
+ }
+}

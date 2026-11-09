@@ -1,0 +1,312 @@
+{
+ "task": "gather",
+ "gather_mode": "batched",
+ "num_launchers": 3,
+ "policy": {
+  "evidence_cutoff": null,
+  "no_cutoff": true,
+  "gated": false,
+  "web_search": true,
+  "shell_network": true,
+  "gate_tools": []
+ },
+ "unscored": true,
+ "target": "H2348",
+ "target_set": "casp17",
+ "case": "case_4ade9a",
+ "evidence_cutoff": null,
+ "target_release_date": "2026-06-05",
+ "retrieval_policy": "no-cutoff",
+ "input_structure": "data/staged_casp17_no_native/H2348.pdb",
+ "input_structure_sha256": "ce3adf48ca6a518ad9b1c0b7ee6fd0899f7d12f01d7aa968c11b92ad459c41e7",
+ "briefing_source": "data/briefing/casp17_nocutoff/H2348/search_results.json",
+ "briefing_sha256": "764bf0cb501957b0a6bbb2036c672dc856ac4be1b5e0aed11fd8847f842bf759",
+ "antigen_chains": [
+  "A"
+ ],
+ "antibody_files": {
+  "antibody.pdb": [
+   "B",
+   "C"
+  ]
+ },
+ "antibody_chain_types": {
+  "antibody.pdb": {
+   "B": "unknown",
+   "C": "unknown"
+  }
+ },
+ "stage": "gatherer",
+ "pocket": {
+  "id": "C3",
+  "judge_rank": 6,
+  "name": "The broad distal cap of the N-terminal Ig-like D1 domain forming the...",
+  "confidence": 0.08,
+  "p_rests_on_holds": 0.22,
+  "why_this_rank": "C3 is a real native interface with suitable chemistry, but is broad, near the effective reach, less single-facing than C4, and redundant with C5.",
+  "rests_on": "The antibody can span the entire broad cap in a glycan-tolerant approach.",
+  "where_the_mass_goes_if_it_fails": "C4 and C5",
+  "what_it_is": "The broad distal cap of the N-terminal Ig-like D1 domain forming the composite site-III face in an IL-11-family signaling assembly, spanning the N-terminal edge, Y35/F36 ridge, and F86-Q95 shoulder (RCSB 8D82).",
+  "why_one_candidate": "not pooled with anything: no other patch is both within 12 A (half centroid distance, half contact-graph hops) and coverable by one paratope of this antibody's reach, 17.5 A",
+  "from_patches": [
+   "P2"
+  ]
+ },
+ "note": "`confidence` on the pocket is over pockets and sums to about 1 across them. Inside an interface it is per residue in [0, 1] and sums to nothing. No residue is cut at a threshold: the whole vector is the answer.",
+ "mapping_basis": "side",
+ "checks": {
+  "unrecognised_sides": []
+ },
+ "chain_pairs": [
+  {
+   "antibody_chain": "B",
+   "antigen_chain": "A",
+   "n_residues": 19
+  },
+  {
+   "antibody_chain": "C",
+   "antigen_chain": "A",
+   "n_residues": 19
+  }
+ ],
+ "antibodies": [
+  {
+   "antibody": "antibody.pdb",
+   "chains": {
+    "B": "unknown",
+    "C": "unknown"
+   },
+   "binding_mode": null,
+   "n_residues_scored": 19,
+   "interfaces": [
+    {
+     "antibody_chain": "B",
+     "antibody_chain_type": "unknown",
+     "antigen_chain": "A",
+     "n_residues": 19,
+     "residue_confidence": {
+      "2": 0.45,
+      "3": 0.58,
+      "4": 0.56,
+      "5": 0.42,
+      "35": 0.88,
+      "36": 0.49,
+      "48": 0.58,
+      "78": 0.65,
+      "80": 0.37,
+      "85": 0.25,
+      "86": 0.9,
+      "88": 0.91,
+      "89": 0.82,
+      "90": 0.73,
+      "91": 0.66,
+      "92": 0.77,
+      "93": 0.56,
+      "94": 0.68,
+      "95": 0.63
+     },
+     "residue_side": {
+      "2": "heavy",
+      "3": "heavy",
+      "4": "heavy",
+      "5": "heavy",
+      "35": "both",
+      "36": "heavy",
+      "48": "light",
+      "78": "light",
+      "80": "light",
+      "85": "light",
+      "86": "both",
+      "88": "both",
+      "89": "both",
+      "90": "both",
+      "91": "light",
+      "92": "both",
+      "93": "light",
+      "94": "both",
+      "95": "light"
+     },
+     "max_confidence": 0.91,
+     "mean_confidence": 0.6258
+    },
+    {
+     "antibody_chain": "C",
+     "antibody_chain_type": "unknown",
+     "antigen_chain": "A",
+     "n_residues": 19,
+     "residue_confidence": {
+      "2": 0.45,
+      "3": 0.58,
+      "4": 0.56,
+      "5": 0.42,
+      "35": 0.88,
+      "36": 0.49,
+      "48": 0.58,
+      "78": 0.65,
+      "80": 0.37,
+      "85": 0.25,
+      "86": 0.9,
+      "88": 0.91,
+      "89": 0.82,
+      "90": 0.73,
+      "91": 0.66,
+      "92": 0.77,
+      "93": 0.56,
+      "94": 0.68,
+      "95": 0.63
+     },
+     "residue_side": {
+      "2": "heavy",
+      "3": "heavy",
+      "4": "heavy",
+      "5": "heavy",
+      "35": "both",
+      "36": "heavy",
+      "48": "light",
+      "78": "light",
+      "80": "light",
+      "85": "light",
+      "86": "both",
+      "88": "both",
+      "89": "both",
+      "90": "both",
+      "91": "light",
+      "92": "both",
+      "93": "light",
+      "94": "both",
+      "95": "light"
+     },
+     "max_confidence": 0.91,
+     "mean_confidence": 0.6258
+    }
+   ]
+  }
+ ],
+ "paratope": {
+  "dominant_cdrs": [
+   "H3:H1",
+   "H1:H3",
+   "L3:L1",
+   "L1:L3"
+  ],
+  "paratope_residues": [
+   "B:27",
+   "B:31",
+   "B:32",
+   "B:33",
+   "B:54",
+   "B:56",
+   "B:57",
+   "B:58",
+   "B:98",
+   "B:99",
+   "B:101",
+   "B:102",
+   "B:105",
+   "C:27",
+   "C:28",
+   "C:30",
+   "C:31",
+   "C:32",
+   "C:52",
+   "C:91",
+   "C:92",
+   "C:93",
+   "C:94",
+   "C:95",
+   "C:96"
+  ],
+  "heavy_light_split": "Heavy occupies the N-terminal/Y35-F36 half and contributes about two thirds of the energetic center. Light covers N48/Q78 and Q88-Y95; Y35, F86, Q88-L90, N92, and Y94 are both-chain contacts.",
+  "binding_mode_union": "single-chain"
+ },
+ "residues": [
+  "A:2",
+  "A:3",
+  "A:35",
+  "A:36",
+  "A:4",
+  "A:48",
+  "A:5",
+  "A:78",
+  "A:80",
+  "A:85",
+  "A:86",
+  "A:88",
+  "A:89",
+  "A:90",
+  "A:91",
+  "A:92",
+  "A:93",
+  "A:94",
+  "A:95"
+ ],
+ "n_residues": 19,
+ "patches": [
+  {
+   "id": "P2",
+   "name": "D1 cytokine site-III face",
+   "n_residues": 20,
+   "residues": [
+    "A:2",
+    "A:3",
+    "A:31",
+    "A:35",
+    "A:36",
+    "A:4",
+    "A:48",
+    "A:5",
+    "A:78",
+    "A:8",
+    "A:80",
+    "A:85",
+    "A:86",
+    "A:88",
+    "A:89",
+    "A:90",
+    "A:91",
+    "A:92",
+    "A:94",
+    "A:95"
+   ],
+   "n_kept_by_advocate": 18,
+   "n_dropped_by_advocate": 2
+  }
+ ],
+ "pooling_provenance": {
+  "n_shared_at_pooling": 20,
+  "n_disputed_at_pooling": 0,
+  "note": "counts only, describing how the organizer grouped the phase-1 patches. The organizer's own candidate residue list is deliberately absent: the answer is the advocate's footprint, in `residues` and in `antibodies[].interfaces[]`."
+ },
+ "evidence": {
+  "advocate": {
+   "n_findings": 4,
+   "n_supports": 3,
+   "n_weakens": 1,
+   "weakest_point": "This broad cap is close to the antibody's effective reach and remains beside the A61 glycan. The native interface is relatively featureless/low affinity, and no exact-antibody map shows that the clone chose the whole functional cap.",
+   "note": "the advocate reports claim/source/date/bearing and is not asked whether a source is about this binder"
+  },
+  "judge": {
+   "tier_a_support": 1,
+   "n_support_lines": 4,
+   "verdict": "unlikely",
+   "note": "Tier A -- a source about this binder itself -- is the judge's adjudication, in assessment[].support[]. It exists nowhere in the advocate's own answer."
+  }
+ },
+ "provenance": {
+  "unverified_source_policy_fields": [
+   "gated",
+   "web_search",
+   "shell_network",
+   "gate_tools"
+  ],
+  "assembled_case_dir": "gpt-5.6-high/gather_refine/post_refactor/unreleased_20261029/nocut/casp17/H2348/case_4ade9a_G_rep1",
+  "organize_case_dir": "gpt-5.6-high/gather_refine/post_refactor/unreleased_20261029/nocut/casp17/H2348/case_4ade9a_GR_rep1",
+  "organize_status": "ok",
+  "judge_case_dir": "gpt-5.6-high/gather_refine/post_refactor/unreleased_20261029/nocut/casp17/H2348/case_4ade9a_GJ_rep1",
+  "judge_status": "ok",
+  "packet": "gpt-5.6-high/nocut/gather/packets/case_4ade9a/packet",
+  "manifest": "gpt-5.6-high/nocut/gather/packets/case_4ade9a/manifest.json",
+  "advocate_case_dir": "gpt-5.6-high/gather_refine/post_refactor/unreleased_20261029/nocut/casp17/H2348/case_4ade9a_GR_rep1",
+  "advocate_status": "ok"
+ }
+}

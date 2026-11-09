@@ -1,0 +1,337 @@
+{
+ "task": "gather",
+ "gather_mode": "batched",
+ "num_launchers": 3,
+ "policy": {
+  "evidence_cutoff": null,
+  "no_cutoff": true,
+  "gated": false,
+  "web_search": true,
+  "shell_network": true,
+  "gate_tools": []
+ },
+ "unscored": true,
+ "target": "H2335",
+ "target_set": "casp17",
+ "case": "case_d48c74",
+ "evidence_cutoff": null,
+ "target_release_date": "2026-05-27",
+ "retrieval_policy": "no-cutoff",
+ "input_structure": "data/staged_casp17_no_native/H2335.pdb",
+ "input_structure_sha256": "f216450f2774ea363d9dfeeb1e478d506d906f539f384bf370d4b65ff32c11bb",
+ "briefing_source": "data/briefing/casp17_nocutoff/H2335/search_results.json",
+ "briefing_sha256": "4c6eb598fb307223a9315af31439ba34c45b16345678bd0c3aeed39bcafa9e64",
+ "antigen_chains": [
+  "A",
+  "B",
+  "C"
+ ],
+ "antibody_files": {
+  "antibody.pdb": [
+   "D",
+   "E"
+  ]
+ },
+ "antibody_chain_types": {
+  "antibody.pdb": {
+   "D": "light",
+   "E": "heavy"
+  }
+ },
+ "stage": "gatherer",
+ "pocket": {
+  "id": "C4",
+  "judge_rank": 8,
+  "name": "A quaternary PDGFR-alpha site-2 rim where the basic gO DI ridge...",
+  "confidence": 0.08,
+  "p_rests_on_holds": 0.12,
+  "why_this_rank": "A real receptor-facing quaternary rim with plausible charge contrast, but its gL half is inferred and several residues are assembly-buried.",
+  "rests_on": "The query is receptor-competitive and uses the inferred gO-gL boundary.",
+  "where_the_mass_goes_if_it_fails": "C9, then C2",
+  "what_it_is": "A quaternary PDGFR-alpha site-2 rim where the basic gO DI ridge A:207/A:211/A:214/A:215 lies beside the acidic/hydrophobic gL rim C:67-C:74.",
+  "why_one_candidate": "geometry pooled 2 patches (P3, P7): P3+P7 at 0.33 A, union radius 15.94 A. Every union fits inside this antibody's paratope reach of 17.4 A. No session judged these to be the same surface.",
+  "from_patches": [
+   "P3",
+   "P7"
+  ]
+ },
+ "note": "`confidence` on the pocket is over pockets and sums to about 1 across them. Inside an interface it is per residue in [0, 1] and sums to nothing. No residue is cut at a threshold: the whole vector is the answer.",
+ "mapping_basis": "side",
+ "checks": {
+  "unrecognised_sides": []
+ },
+ "chain_pairs": [
+  {
+   "antibody_chain": "D",
+   "antigen_chain": "A",
+   "n_residues": 4
+  },
+  {
+   "antibody_chain": "D",
+   "antigen_chain": "C",
+   "n_residues": 6
+  },
+  {
+   "antibody_chain": "E",
+   "antigen_chain": "A",
+   "n_residues": 11
+  },
+  {
+   "antibody_chain": "E",
+   "antigen_chain": "C",
+   "n_residues": 2
+  }
+ ],
+ "antibodies": [
+  {
+   "antibody": "antibody.pdb",
+   "chains": {
+    "D": "light",
+    "E": "heavy"
+   },
+   "binding_mode": null,
+   "n_residues_scored": 17,
+   "interfaces": [
+    {
+     "antibody_chain": "D",
+     "antibody_chain_type": "light",
+     "antigen_chain": "A",
+     "n_residues": 4,
+     "residue_confidence": {
+      "212": 0.72,
+      "213": 0.68,
+      "215": 0.94,
+      "216": 0.58
+     },
+     "residue_side": {
+      "212": "both",
+      "213": "both",
+      "215": "both",
+      "216": "both"
+     },
+     "max_confidence": 0.94,
+     "mean_confidence": 0.73
+    },
+    {
+     "antibody_chain": "D",
+     "antibody_chain_type": "light",
+     "antigen_chain": "C",
+     "n_residues": 6,
+     "residue_confidence": {
+      "67": 0.58,
+      "68": 0.48,
+      "70": 0.84,
+      "72": 0.8,
+      "73": 0.82,
+      "74": 0.35
+     },
+     "residue_side": {
+      "67": "light",
+      "68": "both",
+      "70": "both",
+      "72": "light",
+      "73": "light",
+      "74": "light"
+     },
+     "max_confidence": 0.84,
+     "mean_confidence": 0.645
+    },
+    {
+     "antibody_chain": "E",
+     "antibody_chain_type": "heavy",
+     "antigen_chain": "A",
+     "n_residues": 11,
+     "residue_confidence": {
+      "189": 0.25,
+      "193": 0.25,
+      "207": 0.88,
+      "211": 0.92,
+      "212": 0.72,
+      "213": 0.68,
+      "214": 0.96,
+      "215": 0.94,
+      "216": 0.58,
+      "217": 0.18,
+      "219": 0.16
+     },
+     "residue_side": {
+      "189": "heavy",
+      "193": "heavy",
+      "207": "heavy",
+      "211": "heavy",
+      "212": "both",
+      "213": "both",
+      "214": "heavy",
+      "215": "both",
+      "216": "both",
+      "217": "heavy",
+      "219": "heavy"
+     },
+     "max_confidence": 0.96,
+     "mean_confidence": 0.5927
+    },
+    {
+     "antibody_chain": "E",
+     "antibody_chain_type": "heavy",
+     "antigen_chain": "C",
+     "n_residues": 2,
+     "residue_confidence": {
+      "68": 0.48,
+      "70": 0.84
+     },
+     "residue_side": {
+      "68": "both",
+      "70": "both"
+     },
+     "max_confidence": 0.84,
+     "mean_confidence": 0.66
+    }
+   ]
+  }
+ ],
+ "paratope": {
+  "dominant_cdrs": [
+   "E:H3",
+   "E:H2",
+   "D:L1",
+   "D:L3"
+  ],
+  "paratope_residues": [
+   "E:31",
+   "E:33",
+   "E:53",
+   "E:54",
+   "E:57",
+   "E:58",
+   "E:98",
+   "E:100",
+   "E:103",
+   "E:105",
+   "E:106",
+   "E:111",
+   "D:27",
+   "D:28",
+   "D:30",
+   "D:31",
+   "D:32",
+   "D:92",
+   "D:94",
+   "D:95",
+   "D:96"
+  ],
+  "heavy_light_split": "About 68:32 heavy:light. H3/H2 bind the basic gO ridge; L1/L3 occupy the acidic gL rim; both share A:212-A:216/C:68-C:70.",
+  "binding_mode_union": "straddling"
+ },
+ "residues": [
+  "A:189",
+  "A:193",
+  "A:207",
+  "A:211",
+  "A:212",
+  "A:213",
+  "A:214",
+  "A:215",
+  "A:216",
+  "A:217",
+  "A:219",
+  "C:67",
+  "C:68",
+  "C:70",
+  "C:72",
+  "C:73",
+  "C:74"
+ ],
+ "n_residues": 17,
+ "patches": [
+  {
+   "id": "P3",
+   "name": "gO receptor-facing DI pocket with gL rim",
+   "n_residues": 17,
+   "residues": [
+    "A:189",
+    "A:190",
+    "A:192",
+    "A:193",
+    "A:207",
+    "A:211",
+    "A:212",
+    "A:213",
+    "A:214",
+    "A:215",
+    "A:216",
+    "A:217",
+    "C:68",
+    "C:70",
+    "C:72",
+    "C:73",
+    "C:74"
+   ],
+   "n_kept_by_advocate": 15,
+   "n_dropped_by_advocate": 2
+  },
+  {
+   "id": "P7",
+   "name": "Quaternary gO-gL rim at PDGFR-alpha site 2",
+   "n_residues": 18,
+   "residues": [
+    "A:189",
+    "A:193",
+    "A:200",
+    "A:203",
+    "A:207",
+    "A:211",
+    "A:212",
+    "A:213",
+    "A:214",
+    "A:215",
+    "A:216",
+    "A:217",
+    "A:219",
+    "C:67",
+    "C:68",
+    "C:70",
+    "C:72",
+    "C:73"
+   ],
+   "n_kept_by_advocate": 16,
+   "n_dropped_by_advocate": 2
+  }
+ ],
+ "pooling_provenance": {
+  "n_shared_at_pooling": 14,
+  "n_disputed_at_pooling": 7,
+  "note": "counts only, describing how the organizer grouped the phase-1 patches. The organizer's own candidate residue list is deliberately absent: the answer is the advocate's footprint, in `residues` and in `antibodies[].interfaces[]`."
+ },
+ "evidence": {
+  "advocate": {
+   "n_findings": 3,
+   "n_supports": 2,
+   "n_weakens": 1,
+   "weakest_point": "The strongest biology lies on gO, whereas the gL half is inferred from proximity. Several seam residues are partly buried and two adjacent gO sequons can restrict approach.",
+   "note": "the advocate reports claim/source/date/bearing and is not asked whether a source is about this binder"
+  },
+  "judge": {
+   "tier_a_support": 0,
+   "n_support_lines": 3,
+   "verdict": "live",
+   "note": "Tier A -- a source about this binder itself -- is the judge's adjudication, in assessment[].support[]. It exists nowhere in the advocate's own answer."
+  }
+ },
+ "provenance": {
+  "unverified_source_policy_fields": [
+   "gated",
+   "web_search",
+   "shell_network",
+   "gate_tools"
+  ],
+  "assembled_case_dir": "gpt-5.6-high/gather_refine/post_refactor/unreleased_20261029/nocut/casp17/H2335/case_d48c74_G_rep1",
+  "organize_case_dir": "gpt-5.6-high/gather_refine/post_refactor/unreleased_20261029/nocut/casp17/H2335/case_d48c74_GR_rep1",
+  "organize_status": "ok",
+  "judge_case_dir": "gpt-5.6-high/gather_refine/post_refactor/unreleased_20261029/nocut/casp17/H2335/case_d48c74_GJ_rep1",
+  "judge_status": "ok",
+  "packet": "gpt-5.6-high/nocut/gather/packets/case_d48c74/packet",
+  "manifest": "gpt-5.6-high/nocut/gather/packets/case_d48c74/manifest.json",
+  "advocate_case_dir": "gpt-5.6-high/gather_refine/post_refactor/unreleased_20261029/nocut/casp17/H2335/case_d48c74_GR_rep1",
+  "advocate_status": "ok"
+ }
+}

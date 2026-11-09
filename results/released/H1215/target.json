@@ -1,0 +1,318 @@
+{
+ "target": "H1215",
+ "target_set": "casp16",
+ "case": "case_f91454",
+ "task": "gather",
+ "gather_mode": "batched",
+ "num_launchers": 3,
+ "policy": {
+  "evidence_cutoff": "2024-05-21",
+  "no_cutoff": false,
+  "gated": true,
+  "web_search": false,
+  "shell_network": true,
+  "gate_tools": [
+   "research",
+   "fetch",
+   "rcsb",
+   "patent",
+   "paper"
+  ]
+ },
+ "unscored": false,
+ "evidence_cutoff": "2024-05-21",
+ "target_release_date": "2024-05-21",
+ "retrieval_policy": "gated",
+ "antigen_chains": [
+  "B"
+ ],
+ "antibody_files": {
+  "antibody.pdb": [
+   "A"
+  ]
+ },
+ "antibody_chain_types": {
+  "antibody.pdb": {
+   "A": "heavy"
+  }
+ },
+ "input_structure": "structures/H1215.pdb",
+ "input_structure_sha256": null,
+ "briefing_source": null,
+ "briefing_sha256": null,
+ "recognized_complex": {
+  "organize": null,
+  "judge": false
+ },
+ "recognition_note": "The supplied antigen was identified as mNeonGreen (UniProt A0A1S4NYF2, first public 2017-04-12), and chain A is a VHH by ANARCI. No pre-cutoff source identified this exact VHH–mNeonGreen pair or mapped its epitope. PDB 3K1K (released 2009-12-08) is a different GFP bound to a different, short-H3 enhancer VHH and is only Tier B precedent.",
+ "what_separated_them": "No candidate had Tier A evidence about the supplied binder. The distribution is therefore deliberately broad and is a prior over exposed, one-paratope-sized surfaces. Independent same-basis measurements modestly favored compact, fully exposed patches whose charge and aromatic capacities suit this long mixed-chemistry H3 (C4, C8, C1, C5). C7's apparent documentary advantage was discounted after direct auditing showed only 15.0% side-chain identity over the transferred 3K1K contact positions and an unrelated VHH. Functional-site and generic nanobody precedents did not localize, and all candidates passed whole-paratope reach, so no probability exceeds 0.18.",
+ "not_pooled": [],
+ "provenance": {
+  "unverified_source_policy_fields": [
+   "gated",
+   "web_search",
+   "shell_network",
+   "gate_tools"
+  ],
+  "assembled_case_dir": "gpt-5.6-high/gather_refine/post_refactor/released_structure_20261030/casp16/H1215/case_f91454_G_rep2",
+  "organize_case_dir": "gpt-5.6-high/gather_refine/post_refactor/released_structure_20261030/casp16/H1215/case_f91454_GR_rep1",
+  "organize_status": "ok",
+  "judge_case_dir": "gpt-5.6-high/gather_refine/post_refactor/released_structure_20261030/casp16/H1215/case_f91454_GJ_rep2",
+  "judge_status": "ok",
+  "packet": "gpt-5.6-high/gather/packets/case_f91454/packet",
+  "manifest": "gpt-5.6-high/gather/packets/case_f91454/manifest.json"
+ },
+ "truth_file": "data/truth/casp16/H1215.epitope.json",
+ "truth": {
+  "n_residues": 22,
+  "usable": "yes",
+  "chains": {
+   "B": [
+    22,
+    24,
+    25,
+    26,
+    31,
+    32,
+    33,
+    35,
+    54,
+    55,
+    113,
+    114,
+    115,
+    116,
+    117,
+    119,
+    124,
+    125,
+    126,
+    127,
+    128,
+    130
+   ]
+  },
+  "anchor_note": "the numbering frame only; the epitope is defined on the native and carried here by antigen sequence alignment, so which pooled model this is does not affect the label"
+ },
+ "oracle": {
+  "metric": "f1",
+  "epitope_definition": "whole_antibody",
+  "truth_file": "data/truth/casp16/H1215.epitope.json",
+  "rank1": {
+   "pocket": "C4",
+   "confidence": 0.18,
+   "precision": 0.0,
+   "recall": 0.0,
+   "f1": 0.0,
+   "n_pred": 13,
+   "n_true": 22,
+   "n_hit": 0
+  },
+  "best": {
+   "pocket": "C6",
+   "judge_rank": 5,
+   "confidence": 0.11,
+   "precision": 0.4375,
+   "recall": 0.3182,
+   "f1": 0.3684,
+   "n_pred": 16,
+   "n_true": 22,
+   "n_hit": 7
+  },
+  "note": "the best pocket the answer already contains. Rank 1 is the answer as delivered, so the gap is what the judge's ordering cost."
+ },
+ "pockets": [
+  {
+   "id": "C4",
+   "judge_rank": 1,
+   "name": "A compact top-cap ridge where the 168-180 loop forms a basic crest...",
+   "confidence": 0.18,
+   "mapping_basis": "side",
+   "n_residues": 13,
+   "score": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0,
+    "n_pred": 13,
+    "n_true": 22,
+    "n_hit": 0
+   },
+   "chain_pairs": [
+    {
+     "antibody_chain": "A",
+     "antigen_chain": "B",
+     "n_residues": 13
+    }
+   ],
+   "file": "pocket.C4.json"
+  },
+  {
+   "id": "C8",
+   "judge_rank": 2,
+   "name": "The curved C-terminal barrel seam: the exposed 223-237 strand/loop...",
+   "confidence": 0.16,
+   "mapping_basis": "side",
+   "n_residues": 18,
+   "score": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0,
+    "n_pred": 18,
+    "n_true": 22,
+    "n_hit": 0
+   },
+   "chain_pairs": [
+    {
+     "antibody_chain": "A",
+     "antigen_chain": "B",
+     "n_residues": 18
+    }
+   ],
+   "file": "pocket.C8.json"
+  },
+  {
+   "id": "C1",
+   "judge_rank": 3,
+   "name": "The aromatic lateral seam of the GFP-like beta barrel: a shallow...",
+   "confidence": 0.15,
+   "mapping_basis": "side",
+   "n_residues": 17,
+   "score": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0,
+    "n_pred": 17,
+    "n_true": 22,
+    "n_hit": 0
+   },
+   "chain_pairs": [
+    {
+     "antibody_chain": "A",
+     "antigen_chain": "B",
+     "n_residues": 17
+    }
+   ],
+   "file": "pocket.C1.json"
+  },
+  {
+   "id": "C5",
+   "judge_rank": 4,
+   "name": "A corrugated distal barrel-end cleft formed by the 105-106 acidic...",
+   "confidence": 0.14,
+   "mapping_basis": "side",
+   "n_residues": 18,
+   "score": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0,
+    "n_pred": 18,
+    "n_true": 22,
+    "n_hit": 0
+   },
+   "chain_pairs": [
+    {
+     "antibody_chain": "A",
+     "antigen_chain": "B",
+     "n_residues": 18
+    }
+   ],
+   "file": "pocket.C5.json"
+  },
+  {
+   "id": "C6",
+   "judge_rank": 5,
+   "name": "A flat aromatic-acidic lateral barrel patch centered on the 52-57...",
+   "confidence": 0.11,
+   "mapping_basis": "side",
+   "n_residues": 16,
+   "score": {
+    "precision": 0.4375,
+    "recall": 0.3182,
+    "f1": 0.3684,
+    "n_pred": 16,
+    "n_true": 22,
+    "n_hit": 7
+   },
+   "chain_pairs": [
+    {
+     "antibody_chain": "A",
+     "antigen_chain": "B",
+     "n_residues": 16
+    }
+   ],
+   "file": "pocket.C6.json"
+  },
+  {
+   "id": "C3",
+   "judge_rank": 6,
+   "name": "The flat polar-positive former oligomerization face of a GFP-family...",
+   "confidence": 0.09,
+   "mapping_basis": "side",
+   "n_residues": 16,
+   "score": {
+    "precision": 0.25,
+    "recall": 0.1818,
+    "f1": 0.2105,
+    "n_pred": 16,
+    "n_true": 22,
+    "n_hit": 4
+   },
+   "chain_pairs": [
+    {
+     "antibody_chain": "A",
+     "antigen_chain": "B",
+     "n_residues": 16
+    }
+   ],
+   "file": "pocket.C3.json"
+  },
+  {
+   "id": "C7",
+   "judge_rank": 7,
+   "name": "The barrel edge homologous to the published GFP-enhancer-nanobody...",
+   "confidence": 0.09,
+   "mapping_basis": "side",
+   "n_residues": 20,
+   "score": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0,
+    "n_pred": 20,
+    "n_true": 22,
+    "n_hit": 0
+   },
+   "chain_pairs": [
+    {
+     "antibody_chain": "A",
+     "antigen_chain": "B",
+     "n_residues": 20
+    }
+   ],
+   "file": "pocket.C7.json"
+  },
+  {
+   "id": "C2",
+   "judge_rank": 8,
+   "name": "A broad upper-lateral loop field centered on the 192-201 surface...",
+   "confidence": 0.08,
+   "mapping_basis": "side",
+   "n_residues": 20,
+   "score": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0,
+    "n_pred": 20,
+    "n_true": 22,
+    "n_hit": 0
+   },
+   "chain_pairs": [
+    {
+     "antibody_chain": "A",
+     "antigen_chain": "B",
+     "n_residues": 20
+    }
+   ],
+   "file": "pocket.C2.json"
+  }
+ ]
+}

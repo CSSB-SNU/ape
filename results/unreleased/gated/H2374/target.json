@@ -1,0 +1,237 @@
+{
+ "target": "H2374",
+ "target_set": "casp17",
+ "case": "case_6a7664",
+ "task": "gather",
+ "gather_mode": "batched",
+ "num_launchers": 3,
+ "policy": {
+  "evidence_cutoff": "2026-06-22",
+  "no_cutoff": false,
+  "gated": true,
+  "web_search": false,
+  "shell_network": true,
+  "gate_tools": [
+   "research",
+   "fetch",
+   "rcsb",
+   "patent",
+   "paper"
+  ]
+ },
+ "unscored": true,
+ "evidence_cutoff": "2026-06-22",
+ "target_release_date": "2026-06-22",
+ "retrieval_policy": "gated",
+ "antigen_chains": [
+  "C"
+ ],
+ "antibody_files": {
+  "antibody.pdb": [
+   "A",
+   "B"
+  ]
+ },
+ "antibody_chain_types": {
+  "antibody.pdb": {
+   "A": "heavy",
+   "B": "light"
+  }
+ },
+ "input_structure": "data/staged_casp17_no_native/H2374.pdb",
+ "input_structure_sha256": "cce06a976275bf0894b0dae47679691f93a74bbcd1b28cd9b17fe6bfe49200de",
+ "briefing_source": "data/briefing/casp17/H2374/search_results.json",
+ "briefing_sha256": "6da47e89d19b7042483ab1c9442ed32a899f59c40f45416b4c36e0ae0c6c84d7",
+ "recognized_complex": {
+  "organize": null,
+  "judge": true
+ },
+ "recognition_note": "The supplied six-CDR combination is an exact match to HAB13 in WO2026122589A1, first public 2026-06-11. The patent establishes HAB13 binding to HSV-1 and HSV-2 glycoprotein D, strong HSV-2 neutralization, and ADCC, but it provides no residue map, escape result, competition bin, or solved HAB13 complex. I did not inspect any native/query complex.",
+ "what_separated_them": "No source localizes HAB13: the patent is about this binder but supplies phenotype only, and every residue-level map concerns another antibody or a receptor. The distribution is therefore a Tier-B prior over surfaces. What separated it was the conjunction of phenotype compatibility, conventional-Fab rather than nanobody/receptor precedent, exact handed-footprint accessibility and extent, and a duplicate-surface correction: C3, C4, and C6 are nested drawings of one receptor-overlap face and share 0.59 total probability rather than counting as three independent confirmations. C4 is the most coherent boundary within that group.",
+ "not_pooled": [],
+ "provenance": {
+  "unverified_source_policy_fields": [
+   "gated",
+   "web_search",
+   "shell_network",
+   "gate_tools"
+  ],
+  "assembled_case_dir": "gpt-5.6-high/gather_refine/post_refactor/unreleased_20261029/gated/casp17/H2374/case_6a7664_G_rep5",
+  "organize_case_dir": "gpt-5.6-high/gather_refine/post_refactor/unreleased_20261029/gated/casp17/H2374/case_6a7664_GR_rep5",
+  "organize_status": "ok",
+  "judge_case_dir": "gpt-5.6-high/gather_refine/post_refactor/unreleased_20261029/gated/casp17/H2374/case_6a7664_GJ_rep5",
+  "judge_status": "ok",
+  "packet": "gpt-5.6-high/gather/packets/case_6a7664/packet",
+  "manifest": "gpt-5.6-high/gather/packets/case_6a7664/manifest.json"
+ },
+ "pockets": [
+  {
+   "id": "C4",
+   "judge_rank": 1,
+   "name": "The type-common major neutralizing face of the gD Ig-like core...",
+   "confidence": 0.28,
+   "mapping_basis": "side",
+   "n_residues": 15,
+   "chain_pairs": [
+    {
+     "antibody_chain": "A",
+     "antigen_chain": "C",
+     "n_residues": 11
+    },
+    {
+     "antibody_chain": "B",
+     "antigen_chain": "C",
+     "n_residues": 10
+    }
+   ],
+   "file": "pocket.C4.json"
+  },
+  {
+   "id": "C6",
+   "judge_rank": 2,
+   "name": "The compact hydrophobic/polar hotspot within the conserved...",
+   "confidence": 0.17,
+   "mapping_basis": "side",
+   "n_residues": 13,
+   "chain_pairs": [
+    {
+     "antibody_chain": "A",
+     "antigen_chain": "C",
+     "n_residues": 9
+    },
+    {
+     "antibody_chain": "B",
+     "antigen_chain": "C",
+     "n_residues": 9
+    }
+   ],
+   "file": "pocket.C6.json"
+  },
+  {
+   "id": "C3",
+   "judge_rank": 3,
+   "name": "The broad nectin-1 receptor-binding face of the gD Ig-like core...",
+   "confidence": 0.14,
+   "mapping_basis": "side",
+   "n_residues": 15,
+   "chain_pairs": [
+    {
+     "antibody_chain": "A",
+     "antigen_chain": "C",
+     "n_residues": 11
+    },
+    {
+     "antibody_chain": "B",
+     "antigen_chain": "C",
+     "n_residues": 10
+    }
+   ],
+   "file": "pocket.C3.json"
+  },
+  {
+   "id": "C7",
+   "judge_rank": 4,
+   "name": "A compact, type-common lateral gD face implicated in direct...",
+   "confidence": 0.12,
+   "mapping_basis": "side",
+   "n_residues": 13,
+   "chain_pairs": [
+    {
+     "antibody_chain": "A",
+     "antigen_chain": "C",
+     "n_residues": 10
+    },
+    {
+     "antibody_chain": "B",
+     "antigen_chain": "C",
+     "n_residues": 8
+    }
+   ],
+   "file": "pocket.C7.json"
+  },
+  {
+   "id": "C8",
+   "judge_rank": 5,
+   "name": "The non-receptor-binding N-terminal-to-A-prime interloop groove on...",
+   "confidence": 0.1,
+   "mapping_basis": "side",
+   "n_residues": 20,
+   "chain_pairs": [
+    {
+     "antibody_chain": "A",
+     "antigen_chain": "C",
+     "n_residues": 11
+    },
+    {
+     "antibody_chain": "B",
+     "antigen_chain": "C",
+     "n_residues": 15
+    }
+   ],
+   "file": "pocket.C8.json"
+  },
+  {
+   "id": "C5",
+   "judge_rank": 6,
+   "name": "The mobile N-terminal hairpin that folds around the TNFR-family...",
+   "confidence": 0.08,
+   "mapping_basis": "side",
+   "n_residues": 13,
+   "chain_pairs": [
+    {
+     "antibody_chain": "A",
+     "antigen_chain": "C",
+     "n_residues": 8
+    },
+    {
+     "antibody_chain": "B",
+     "antigen_chain": "C",
+     "n_residues": 9
+    }
+   ],
+   "file": "pocket.C5.json"
+  },
+  {
+   "id": "C1",
+   "judge_rank": 7,
+   "name": "The flexible, proline-rich C-terminal ectodomain tail: a continuous...",
+   "confidence": 0.06,
+   "mapping_basis": "side",
+   "n_residues": 9,
+   "chain_pairs": [
+    {
+     "antibody_chain": "A",
+     "antigen_chain": "C",
+     "n_residues": 5
+    },
+    {
+     "antibody_chain": "B",
+     "antigen_chain": "C",
+     "n_residues": 7
+    }
+   ],
+   "file": "pocket.C1.json"
+  },
+  {
+   "id": "C2",
+   "judge_rank": 8,
+   "name": "A discontinuous, proline-rich lateral face on the gD core and...",
+   "confidence": 0.05,
+   "mapping_basis": "side",
+   "n_residues": 14,
+   "chain_pairs": [
+    {
+     "antibody_chain": "A",
+     "antigen_chain": "C",
+     "n_residues": 12
+    },
+    {
+     "antibody_chain": "B",
+     "antigen_chain": "C",
+     "n_residues": 7
+    }
+   ],
+   "file": "pocket.C2.json"
+  }
+ ]
+}

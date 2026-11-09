@@ -1,0 +1,294 @@
+{
+ "task": "gather",
+ "gather_mode": "batched",
+ "num_launchers": 3,
+ "policy": {
+  "evidence_cutoff": "2026-06-05",
+  "no_cutoff": false,
+  "gated": true,
+  "web_search": false,
+  "shell_network": true,
+  "gate_tools": [
+   "research",
+   "fetch",
+   "rcsb",
+   "patent",
+   "paper"
+  ]
+ },
+ "unscored": true,
+ "target": "H2348",
+ "target_set": "casp17",
+ "case": "case_4ade9a",
+ "evidence_cutoff": "2026-06-05",
+ "target_release_date": "2026-06-05",
+ "retrieval_policy": "gated",
+ "input_structure": "data/staged_casp17_no_native/H2348.pdb",
+ "input_structure_sha256": "ce3adf48ca6a518ad9b1c0b7ee6fd0899f7d12f01d7aa968c11b92ad459c41e7",
+ "briefing_source": "data/briefing/casp17/H2348/search_results.json",
+ "briefing_sha256": "4d17b3e4689d4bdb8848154699de80e2748b0d365b2fba62f69b2f96cbbee826",
+ "antigen_chains": [
+  "A"
+ ],
+ "antibody_files": {
+  "antibody.pdb": [
+   "B",
+   "C"
+  ]
+ },
+ "antibody_chain_types": {
+  "antibody.pdb": {
+   "B": "heavy",
+   "C": "light"
+  }
+ },
+ "stage": "gatherer",
+ "pocket": {
+  "id": "C5",
+  "judge_rank": 5,
+  "name": "A charged/polar D3 shoulder at the site-IIIb/co-receptor side of the...",
+  "confidence": 0.11,
+  "p_rests_on_holds": 0.23,
+  "why_this_rank": "C5 overlaps a real D3 assembly shoulder and is polar and exposed, but has no face-specific antibody precedent, contains a glycan-edge call, and is less chemically distinctive.",
+  "rests_on": "This antibody was selected to occlude the D3 co-receptor shoulder rather than the more recurrent D2 site-2 center.",
+  "where_the_mass_goes_if_it_fails": "C3.",
+  "what_it_is": "A charged/polar D3 shoulder at the site-IIIb/co-receptor side of the cytokine-binding module, centered on E253-D254-S257-T258-R259-S260 and joined to the A:204/A:219/A:223/A:226/A:232 lobe.",
+  "why_one_candidate": "not pooled with anything: no other patch is both within 12 A (half centroid distance, half contact-graph hops) and coverable by one paratope of this antibody's reach, 17.5 A",
+  "from_patches": [
+   "P2"
+  ]
+ },
+ "note": "`confidence` on the pocket is over pockets and sums to about 1 across them. Inside an interface it is per residue in [0, 1] and sums to nothing. No residue is cut at a threshold: the whole vector is the answer.",
+ "mapping_basis": "side",
+ "checks": {
+  "unrecognised_sides": []
+ },
+ "chain_pairs": [
+  {
+   "antibody_chain": "B",
+   "antigen_chain": "A",
+   "n_residues": 12
+  },
+  {
+   "antibody_chain": "C",
+   "antigen_chain": "A",
+   "n_residues": 15
+  }
+ ],
+ "antibodies": [
+  {
+   "antibody": "antibody.pdb",
+   "chains": {
+    "B": "heavy",
+    "C": "light"
+   },
+   "binding_mode": null,
+   "n_residues_scored": 20,
+   "interfaces": [
+    {
+     "antibody_chain": "B",
+     "antibody_chain_type": "heavy",
+     "antigen_chain": "A",
+     "n_residues": 12,
+     "residue_confidence": {
+      "219": 0.61,
+      "232": 0.72,
+      "252": 0.68,
+      "253": 0.92,
+      "254": 0.86,
+      "256": 0.54,
+      "257": 0.8,
+      "258": 0.76,
+      "259": 0.92,
+      "260": 0.84,
+      "278": 0.46,
+      "282": 0.6
+     },
+     "residue_side": {
+      "219": "both",
+      "232": "heavy",
+      "252": "heavy",
+      "253": "both",
+      "254": "both",
+      "256": "heavy",
+      "257": "both",
+      "258": "both",
+      "259": "both",
+      "260": "both",
+      "278": "heavy",
+      "282": "heavy"
+     },
+     "max_confidence": 0.92,
+     "mean_confidence": 0.7258
+    },
+    {
+     "antibody_chain": "C",
+     "antibody_chain_type": "light",
+     "antigen_chain": "A",
+     "n_residues": 15,
+     "residue_confidence": {
+      "204": 0.56,
+      "205": 0.24,
+      "219": 0.61,
+      "221": 0.48,
+      "223": 0.64,
+      "226": 0.62,
+      "253": 0.92,
+      "254": 0.86,
+      "257": 0.8,
+      "258": 0.76,
+      "259": 0.92,
+      "260": 0.84,
+      "261": 0.66,
+      "263": 0.6,
+      "265": 0.78
+     },
+     "residue_side": {
+      "204": "light",
+      "205": "light",
+      "219": "both",
+      "221": "light",
+      "223": "light",
+      "226": "light",
+      "253": "both",
+      "254": "both",
+      "257": "both",
+      "258": "both",
+      "259": "both",
+      "260": "both",
+      "261": "light",
+      "263": "light",
+      "265": "light"
+     },
+     "max_confidence": 0.92,
+     "mean_confidence": 0.686
+    }
+   ]
+  }
+ ],
+ "paratope": {
+  "dominant_cdrs": [
+   "H3aa:H3",
+   "H2aa:H2",
+   "L3aa:L3",
+   "L1aa:L1"
+  ],
+  "paratope_residues": [
+   "B:31",
+   "B:33",
+   "B:54",
+   "B:56",
+   "B:57",
+   "B:58",
+   "B:99",
+   "B:101",
+   "B:102",
+   "B:105",
+   "C:27",
+   "C:28",
+   "C:30",
+   "C:31",
+   "C:32",
+   "C:52",
+   "C:92",
+   "C:93",
+   "C:94",
+   "C:95",
+   "C:96"
+  ],
+  "heavy_light_split": "Approximately 60:40 heavy:light; H3/H2 cover I232/P252/E253/D254/R259/E282, while L1/L3 cover the A:204–226 and S260–Q265 lobes.",
+  "binding_mode_union": "single-chain"
+ },
+ "residues": [
+  "A:204",
+  "A:205",
+  "A:219",
+  "A:221",
+  "A:223",
+  "A:226",
+  "A:232",
+  "A:252",
+  "A:253",
+  "A:254",
+  "A:256",
+  "A:257",
+  "A:258",
+  "A:259",
+  "A:260",
+  "A:261",
+  "A:263",
+  "A:265",
+  "A:278",
+  "A:282"
+ ],
+ "n_residues": 20,
+ "patches": [
+  {
+   "id": "P2",
+   "name": "D3 site-IIIb shoulder centered on Glu253-Arg259",
+   "n_residues": 21,
+   "residues": [
+    "A:204",
+    "A:205",
+    "A:219",
+    "A:221",
+    "A:223",
+    "A:226",
+    "A:232",
+    "A:252",
+    "A:253",
+    "A:254",
+    "A:256",
+    "A:257",
+    "A:258",
+    "A:259",
+    "A:260",
+    "A:261",
+    "A:262",
+    "A:263",
+    "A:265",
+    "A:278",
+    "A:282"
+   ],
+   "n_kept_by_advocate": 20,
+   "n_dropped_by_advocate": 1
+  }
+ ],
+ "pooling_provenance": {
+  "n_shared_at_pooling": 21,
+  "n_disputed_at_pooling": 0,
+  "note": "counts only, describing how the organizer grouped the phase-1 patches. The organizer's own candidate residue list is deliberately absent: the answer is the advocate's footprint, in `residues` and in `antibodies[].interfaces[]`."
+ },
+ "evidence": {
+  "advocate": {
+   "n_findings": 4,
+   "n_supports": 3,
+   "n_weakens": 1,
+   "weakest_point": "The shoulder is a cytokine-complex contact but not a mapped epitope for this sequence, and the A:205 glycan can mask its upper edge.",
+   "note": "the advocate reports claim/source/date/bearing and is not asked whether a source is about this binder"
+  },
+  "judge": {
+   "tier_a_support": 0,
+   "n_support_lines": 3,
+   "verdict": "live",
+   "note": "Tier A -- a source about this binder itself -- is the judge's adjudication, in assessment[].support[]. It exists nowhere in the advocate's own answer."
+  }
+ },
+ "provenance": {
+  "unverified_source_policy_fields": [
+   "gated",
+   "web_search",
+   "shell_network",
+   "gate_tools"
+  ],
+  "assembled_case_dir": "gpt-5.6-high/gather_refine/post_refactor/unreleased_20261029/gated/casp17/H2348/case_4ade9a_G_rep1",
+  "organize_case_dir": "gpt-5.6-high/gather_refine/post_refactor/unreleased_20261029/gated/casp17/H2348/case_4ade9a_GR_rep1",
+  "organize_status": "ok",
+  "judge_case_dir": "gpt-5.6-high/gather_refine/post_refactor/unreleased_20261029/gated/casp17/H2348/case_4ade9a_GJ_rep1",
+  "judge_status": "ok",
+  "packet": "gpt-5.6-high/gather/packets/case_4ade9a/packet",
+  "manifest": "gpt-5.6-high/gather/packets/case_4ade9a/manifest.json",
+  "advocate_case_dir": "gpt-5.6-high/gather_refine/post_refactor/unreleased_20261029/gated/casp17/H2348/case_4ade9a_GR_rep1",
+  "advocate_status": "ok"
+ }
+}

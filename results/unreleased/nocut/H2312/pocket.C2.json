@@ -1,0 +1,242 @@
+{
+ "task": "gather",
+ "gather_mode": "batched",
+ "num_launchers": 3,
+ "policy": {
+  "evidence_cutoff": null,
+  "no_cutoff": true,
+  "gated": false,
+  "web_search": true,
+  "shell_network": true,
+  "gate_tools": []
+ },
+ "unscored": true,
+ "target": "H2312",
+ "target_set": "casp17",
+ "case": "case_3a23b5",
+ "evidence_cutoff": null,
+ "target_release_date": "2026-05-13",
+ "retrieval_policy": "no-cutoff",
+ "input_structure": "data/staged_casp17_no_native/H2312.pdb",
+ "input_structure_sha256": "3ba79066f0aa7015920828a3678d94af5f532471fde42bb38b00795e45f94b8b",
+ "briefing_source": "data/briefing/casp17_nocutoff/H2312/search_results.json",
+ "briefing_sha256": "2b8c71697fd0cc7175a5631c137526c8209032f024f0df47a726889d5e5bdf88",
+ "antigen_chains": [
+  "A",
+  "B"
+ ],
+ "antibody_files": {
+  "antibody.pdb": [
+   "C"
+  ]
+ },
+ "antibody_chain_types": {
+  "antibody.pdb": {
+   "C": "heavy"
+  }
+ },
+ "stage": "gatherer",
+ "pocket": {
+  "id": "C2",
+  "judge_rank": 6,
+  "name": "A mobile, solvent-exposed rim loop on the active EXT1 GT-B cleft...",
+  "confidence": 0.08,
+  "p_rests_on_holds": 0.45,
+  "why_this_rank": "Highly exposed and compact, but same-sign surface charge and unproved allosteric coupling weaken it.",
+  "rests_on": "A small positive mobile loop provides enough orientation-specific contacts for this mixed-charge VHH.",
+  "where_the_mass_goes_if_it_fails": "C9",
+  "what_it_is": "A mobile, solvent-exposed rim loop on the active EXT1 GT-B cleft, centered on the A:219–A:230 hairpin and adjacent A:189–A:194 ledge.",
+  "why_one_candidate": "not pooled with anything: no other patch is both within 12 A (half centroid distance, half contact-graph hops) and coverable by one paratope of this antibody's reach, 13.6 A",
+  "from_patches": [
+   "P10"
+  ]
+ },
+ "note": "`confidence` on the pocket is over pockets and sums to about 1 across them. Inside an interface it is per residue in [0, 1] and sums to nothing. No residue is cut at a threshold: the whole vector is the answer.",
+ "mapping_basis": "side",
+ "checks": {
+  "unrecognised_sides": []
+ },
+ "chain_pairs": [
+  {
+   "antibody_chain": "C",
+   "antigen_chain": "A",
+   "n_residues": 18
+  }
+ ],
+ "antibodies": [
+  {
+   "antibody": "antibody.pdb",
+   "chains": {
+    "C": "heavy"
+   },
+   "binding_mode": null,
+   "n_residues_scored": 18,
+   "interfaces": [
+    {
+     "antibody_chain": "C",
+     "antibody_chain_type": "heavy",
+     "antigen_chain": "A",
+     "n_residues": 18,
+     "residue_confidence": {
+      "189": 0.46,
+      "191": 0.38,
+      "192": 0.32,
+      "193": 0.49,
+      "194": 0.39,
+      "219": 0.66,
+      "220": 0.63,
+      "221": 0.73,
+      "222": 0.92,
+      "223": 0.9,
+      "224": 0.88,
+      "225": 0.86,
+      "226": 0.88,
+      "227": 0.83,
+      "228": 0.68,
+      "229": 0.6,
+      "230": 0.58,
+      "231": 0.34
+     },
+     "residue_side": {
+      "189": "heavy",
+      "191": "heavy",
+      "192": "heavy",
+      "193": "heavy",
+      "194": "heavy",
+      "219": "heavy",
+      "220": "heavy",
+      "221": "heavy",
+      "222": "heavy",
+      "223": "heavy",
+      "224": "heavy",
+      "225": "heavy",
+      "226": "heavy",
+      "227": "heavy",
+      "228": "heavy",
+      "229": "heavy",
+      "230": "heavy",
+      "231": "heavy"
+     },
+     "max_confidence": 0.92,
+     "mean_confidence": 0.6406
+    }
+   ]
+  }
+ ],
+ "paratope": {
+  "dominant_cdrs": [
+   "H3H2H1select:H3",
+   "H2H1select:H2",
+   "H1select:H1"
+  ],
+  "paratope_residues": [
+   "C:28",
+   "C:30",
+   "C:31",
+   "C:32",
+   "C:53",
+   "C:54",
+   "C:56",
+   "C:57",
+   "C:58",
+   "C:100",
+   "C:101",
+   "C:102",
+   "C:103",
+   "C:105",
+   "C:107",
+   "C:108",
+   "C:109",
+   "C:110",
+   "C:113",
+   "C:114"
+  ],
+  "heavy_light_split": "Heavy 100%, light 0%. H3 tracks A:221–A:227; H1/H2 reach the ledges. The refined span is 18.52 Å.",
+  "binding_mode_union": "single-chain"
+ },
+ "residues": [
+  "A:189",
+  "A:191",
+  "A:192",
+  "A:193",
+  "A:194",
+  "A:219",
+  "A:220",
+  "A:221",
+  "A:222",
+  "A:223",
+  "A:224",
+  "A:225",
+  "A:226",
+  "A:227",
+  "A:228",
+  "A:229",
+  "A:230",
+  "A:231"
+ ],
+ "n_residues": 18,
+ "patches": [
+  {
+   "id": "P10",
+   "name": "EXT1 GlcA-transferase flexible rim loop",
+   "n_residues": 16,
+   "residues": [
+    "A:189",
+    "A:191",
+    "A:193",
+    "A:194",
+    "A:219",
+    "A:220",
+    "A:221",
+    "A:222",
+    "A:223",
+    "A:224",
+    "A:225",
+    "A:226",
+    "A:227",
+    "A:228",
+    "A:229",
+    "A:230"
+   ],
+   "n_kept_by_advocate": 16,
+   "n_dropped_by_advocate": 0
+  }
+ ],
+ "pooling_provenance": {
+  "n_shared_at_pooling": 16,
+  "n_disputed_at_pooling": 0,
+  "note": "counts only, describing how the organizer grouped the phase-1 patches. The organizer's own candidate residue list is deliberately absent: the answer is the advocate's footprint, in `residues` and in `antibodies[].interfaces[]`."
+ },
+ "evidence": {
+  "advocate": {
+   "n_findings": 4,
+   "n_supports": 3,
+   "n_weakens": 1,
+   "weakest_point": "The loop is near the cleft but is not a major direct ligand-contact cluster, so the proposed functional effect depends on unproven conformational coupling.",
+   "note": "the advocate reports claim/source/date/bearing and is not asked whether a source is about this binder"
+  },
+  "judge": {
+   "tier_a_support": 0,
+   "n_support_lines": 4,
+   "verdict": "live",
+   "note": "Tier A -- a source about this binder itself -- is the judge's adjudication, in assessment[].support[]. It exists nowhere in the advocate's own answer."
+  }
+ },
+ "provenance": {
+  "unverified_source_policy_fields": [
+   "gated",
+   "web_search",
+   "shell_network",
+   "gate_tools"
+  ],
+  "assembled_case_dir": "gpt-5.6-high/gather_refine/post_refactor/unreleased_20261029/nocut/casp17/H2312/case_3a23b5_G_rep1",
+  "organize_case_dir": "gpt-5.6-high/gather_refine/post_refactor/unreleased_20261029/nocut/casp17/H2312/case_3a23b5_GR_rep1",
+  "organize_status": "ok",
+  "judge_case_dir": "gpt-5.6-high/gather_refine/post_refactor/unreleased_20261029/nocut/casp17/H2312/case_3a23b5_GJ_rep1",
+  "judge_status": "ok",
+  "packet": "gpt-5.6-high/nocut/gather/packets/case_3a23b5/packet",
+  "manifest": "gpt-5.6-high/nocut/gather/packets/case_3a23b5/manifest.json",
+  "advocate_case_dir": "gpt-5.6-high/gather_refine/post_refactor/unreleased_20261029/nocut/casp17/H2312/case_3a23b5_GR_rep1",
+  "advocate_status": "ok"
+ }
+}

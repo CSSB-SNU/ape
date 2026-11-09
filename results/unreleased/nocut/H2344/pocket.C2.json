@@ -1,0 +1,341 @@
+{
+ "task": "gather",
+ "gather_mode": "batched",
+ "num_launchers": 3,
+ "policy": {
+  "evidence_cutoff": null,
+  "no_cutoff": true,
+  "gated": false,
+  "web_search": true,
+  "shell_network": true,
+  "gate_tools": []
+ },
+ "unscored": true,
+ "target": "H2344",
+ "target_set": "casp17",
+ "case": "case_679778",
+ "evidence_cutoff": null,
+ "target_release_date": "2026-06-03",
+ "retrieval_policy": "no-cutoff",
+ "input_structure": "data/staged_casp17_no_native/H2344.pdb",
+ "input_structure_sha256": "18733617ed7c4b96b45ff3352f72763afcd6932570e14f1956abaeff946190b8",
+ "briefing_source": "data/briefing/casp17_nocutoff/H2344/search_results.json",
+ "briefing_sha256": "219c979403254eb778aaaf285ed1a338e86cc2322627ca12f3ab91aaa7876e87",
+ "antigen_chains": [
+  "C"
+ ],
+ "antibody_files": {
+  "antibody.pdb": [
+   "A",
+   "B"
+  ]
+ },
+ "antibody_chain_types": {
+  "antibody.pdb": {
+   "A": "unknown",
+   "B": "unknown"
+  }
+ },
+ "stage": "gatherer",
+ "pocket": {
+  "id": "C2",
+  "judge_rank": 3,
+  "name": "The nectin-1-facing rim of the major gD receptor surface: the...",
+  "confidence": 0.17,
+  "p_rests_on_holds": 0.32,
+  "why_this_rank": "A receptor-blocking face fits HAB72's phenotype, has repeated antibody precedent and exposed type-variable P42/S43, but the exact footprint is broad and no HAB72 receptor or antibody competition exists.",
+  "rests_on": "HAB72 is primarily a receptor-blocking rather than post-receptor neutralizer.",
+  "where_the_mass_goes_if_it_fails": "C3 or C1.",
+  "what_it_is": "The nectin-1-facing rim of the major gD receptor surface: the N-terminal β2 ledge around Y38/P42/S43 opposed to the C-terminal-extension η2/β3 ledge around 211–223 and the mouth of the α3 pocket. It is the MC23/DL11-class receptor-proximal antigenic face.",
+  "why_one_candidate": "geometry pooled 2 patches (P10, P5): P10+P5 at 1.46 A, union radius 17.01 A. Every union fits inside this antibody's paratope reach of 18.1 A. No session judged these to be the same surface.",
+  "from_patches": [
+   "P10",
+   "P5"
+  ]
+ },
+ "note": "`confidence` on the pocket is over pockets and sums to about 1 across them. Inside an interface it is per residue in [0, 1] and sums to nothing. No residue is cut at a threshold: the whole vector is the answer.",
+ "mapping_basis": "side",
+ "checks": {
+  "unrecognised_sides": []
+ },
+ "chain_pairs": [
+  {
+   "antibody_chain": "A",
+   "antigen_chain": "C",
+   "n_residues": 20
+  },
+  {
+   "antibody_chain": "B",
+   "antigen_chain": "C",
+   "n_residues": 20
+  }
+ ],
+ "antibodies": [
+  {
+   "antibody": "antibody.pdb",
+   "chains": {
+    "A": "unknown",
+    "B": "unknown"
+   },
+   "binding_mode": null,
+   "n_residues_scored": 20,
+   "interfaces": [
+    {
+     "antibody_chain": "A",
+     "antibody_chain_type": "unknown",
+     "antigen_chain": "C",
+     "n_residues": 20,
+     "residue_confidence": {
+      "35": 0.52,
+      "36": 0.76,
+      "37": 0.58,
+      "38": 0.95,
+      "39": 0.74,
+      "40": 0.71,
+      "42": 0.68,
+      "43": 0.57,
+      "116": 0.58,
+      "211": 0.58,
+      "213": 0.72,
+      "215": 0.96,
+      "216": 0.9,
+      "217": 0.74,
+      "218": 0.72,
+      "220": 0.77,
+      "221": 0.84,
+      "222": 0.97,
+      "223": 0.93,
+      "226": 0.54
+     },
+     "residue_side": {
+      "35": "light",
+      "36": "heavy",
+      "37": "heavy",
+      "38": "both",
+      "39": "both",
+      "40": "heavy",
+      "42": "light",
+      "43": "light",
+      "116": "heavy",
+      "211": "heavy",
+      "213": "heavy",
+      "215": "both",
+      "216": "heavy",
+      "217": "heavy",
+      "218": "heavy",
+      "220": "heavy",
+      "221": "heavy",
+      "222": "heavy",
+      "223": "heavy",
+      "226": "light"
+     },
+     "max_confidence": 0.97,
+     "mean_confidence": 0.738
+    },
+    {
+     "antibody_chain": "B",
+     "antibody_chain_type": "unknown",
+     "antigen_chain": "C",
+     "n_residues": 20,
+     "residue_confidence": {
+      "35": 0.52,
+      "36": 0.76,
+      "37": 0.58,
+      "38": 0.95,
+      "39": 0.74,
+      "40": 0.71,
+      "42": 0.68,
+      "43": 0.57,
+      "116": 0.58,
+      "211": 0.58,
+      "213": 0.72,
+      "215": 0.96,
+      "216": 0.9,
+      "217": 0.74,
+      "218": 0.72,
+      "220": 0.77,
+      "221": 0.84,
+      "222": 0.97,
+      "223": 0.93,
+      "226": 0.54
+     },
+     "residue_side": {
+      "35": "light",
+      "36": "heavy",
+      "37": "heavy",
+      "38": "both",
+      "39": "both",
+      "40": "heavy",
+      "42": "light",
+      "43": "light",
+      "116": "heavy",
+      "211": "heavy",
+      "213": "heavy",
+      "215": "both",
+      "216": "heavy",
+      "217": "heavy",
+      "218": "heavy",
+      "220": "heavy",
+      "221": "heavy",
+      "222": "heavy",
+      "223": "heavy",
+      "226": "light"
+     },
+     "max_confidence": 0.97,
+     "mean_confidence": 0.738
+    }
+   ]
+  }
+ ],
+ "paratope": {
+  "dominant_cdrs": [
+   "H3:H2",
+   "H1:L1",
+   "L3:H1",
+   "L1:L3"
+  ],
+  "paratope_residues": [
+   "A:30",
+   "A:31",
+   "A:32",
+   "A:54",
+   "A:55",
+   "A:57",
+   "A:100",
+   "A:102",
+   "A:103",
+   "A:104",
+   "A:105",
+   "A:106",
+   "A:109",
+   "A:112",
+   "A:113",
+   "B:27",
+   "B:28",
+   "B:30",
+   "B:31",
+   "B:33",
+   "B:92",
+   "B:94",
+   "B:95",
+   "B:96"
+  ],
+  "heavy_light_split": "Heavy-dominant (~75:25): H3/H2 bridge the 35–40/T116 and 211–223 functional ledges and share Y38/D215; L1/L3 read the 35/42/43 and 226 subtype-variable rim.",
+  "binding_mode_union": "single-chain"
+ },
+ "residues": [
+  "C:116",
+  "C:211",
+  "C:213",
+  "C:215",
+  "C:216",
+  "C:217",
+  "C:218",
+  "C:220",
+  "C:221",
+  "C:222",
+  "C:223",
+  "C:226",
+  "C:35",
+  "C:36",
+  "C:37",
+  "C:38",
+  "C:39",
+  "C:40",
+  "C:42",
+  "C:43"
+ ],
+ "n_residues": 20,
+ "patches": [
+  {
+   "id": "P10",
+   "name": "Major receptor-binding neutralizing face",
+   "n_residues": 20,
+   "residues": [
+    "C:132",
+    "C:134",
+    "C:139",
+    "C:140",
+    "C:213",
+    "C:214",
+    "C:215",
+    "C:216",
+    "C:217",
+    "C:218",
+    "C:220",
+    "C:221",
+    "C:222",
+    "C:223",
+    "C:35",
+    "C:36",
+    "C:37",
+    "C:38",
+    "C:39",
+    "C:40"
+   ],
+   "n_kept_by_advocate": 15,
+   "n_dropped_by_advocate": 5
+  },
+  {
+   "id": "P5",
+   "name": "MC23/nectin-rim receptor face",
+   "n_residues": 15,
+   "residues": [
+    "C:211",
+    "C:213",
+    "C:215",
+    "C:216",
+    "C:217",
+    "C:218",
+    "C:220",
+    "C:221",
+    "C:222",
+    "C:223",
+    "C:226",
+    "C:38",
+    "C:39",
+    "C:42",
+    "C:43"
+   ],
+   "n_kept_by_advocate": 15,
+   "n_dropped_by_advocate": 0
+  }
+ ],
+ "pooling_provenance": {
+  "n_shared_at_pooling": 11,
+  "n_disputed_at_pooling": 13,
+  "note": "counts only, describing how the organizer grouped the phase-1 patches. The organizer's own candidate residue list is deliberately absent: the answer is the advocate's footprint, in `residues` and in `antibodies[].interfaces[]`."
+ },
+ "evidence": {
+  "advocate": {
+   "n_findings": 7,
+   "n_supports": 6,
+   "n_weakens": 1,
+   "weakest_point": "Most of the functional core is conserved between HSV-1 and HSV-2, while HAB72 is listed as gD2-binding; the proposed P42/S43 light-chain rim explains that mismatch only speculatively, with no swap data.",
+   "note": "the advocate reports claim/source/date/bearing and is not asked whether a source is about this binder"
+  },
+  "judge": {
+   "tier_a_support": 1,
+   "n_support_lines": 7,
+   "verdict": "live",
+   "note": "Tier A -- a source about this binder itself -- is the judge's adjudication, in assessment[].support[]. It exists nowhere in the advocate's own answer."
+  }
+ },
+ "provenance": {
+  "unverified_source_policy_fields": [
+   "gated",
+   "web_search",
+   "shell_network",
+   "gate_tools"
+  ],
+  "assembled_case_dir": "gpt-5.6-high/gather_refine/post_refactor/unreleased_20261029/nocut/casp17/H2344/case_679778_G_rep1",
+  "organize_case_dir": "gpt-5.6-high/gather_refine/post_refactor/unreleased_20261029/nocut/casp17/H2344/case_679778_GR_rep1",
+  "organize_status": "ok",
+  "judge_case_dir": "gpt-5.6-high/gather_refine/post_refactor/unreleased_20261029/nocut/casp17/H2344/case_679778_GJ_rep1",
+  "judge_status": "ok",
+  "packet": "gpt-5.6-high/nocut/gather/packets/case_679778/packet",
+  "manifest": "gpt-5.6-high/nocut/gather/packets/case_679778/manifest.json",
+  "advocate_case_dir": "gpt-5.6-high/gather_refine/post_refactor/unreleased_20261029/nocut/casp17/H2344/case_679778_GR_rep1",
+  "advocate_status": "ok"
+ }
+}

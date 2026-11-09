@@ -1,0 +1,387 @@
+{
+ "target": "H1347_agCD",
+ "target_set": "casp17",
+ "case": "case_0f54aa",
+ "task": "gather",
+ "gather_mode": "batched",
+ "num_launchers": 3,
+ "policy": {
+  "evidence_cutoff": "2026-05-21",
+  "no_cutoff": false,
+  "gated": true,
+  "web_search": false,
+  "shell_network": true,
+  "gate_tools": [
+   "research",
+   "fetch",
+   "rcsb",
+   "patent",
+   "paper"
+  ]
+ },
+ "unscored": false,
+ "evidence_cutoff": "2026-05-21",
+ "target_release_date": "2026-05-21",
+ "retrieval_policy": "gated",
+ "antigen_chains": [
+  "C",
+  "D"
+ ],
+ "antibody_files": {
+  "antibody.1.pdb": [
+   "A"
+  ],
+  "antibody.2.pdb": [
+   "B"
+  ]
+ },
+ "antibody_chain_types": {
+  "antibody.1.pdb": {
+   "A": "heavy"
+  },
+  "antibody.2.pdb": {
+   "B": "light"
+  }
+ },
+ "input_structure": "structures/H1347_agCD.pdb",
+ "input_structure_sha256": null,
+ "briefing_source": null,
+ "briefing_sha256": null,
+ "recognized_complex": {
+  "organize": null,
+  "judge": true
+ },
+ "recognition_note": "Exact supplied C/D sequences were identified in the supplied, date-gated launcher record as the VH/VL of the BCMB69 anti-BCMA Fab used in teclistamab; US10072088 (first public 2018-09-11) gives its native BCMA contact map. This recognizes the antigen antibody and its native ligand interface, not either supplied binder A/B or an A/B–BCMB69 complex. No published epitope for A or B was identified.",
+ "what_separated_them": "No candidate has Tier A evidence about supplied binder A or B; the result is therefore a broad prior over surfaces, not a localized call. Exact pre-cutoff sequence evidence establishes that antigen C/D are a native BCMB69 Fab pair, so their anomalous supplied separation discounts but cannot exclude C1/C2. The BCMB69-specific anti-idiotype statement and exact native functional map weakly favor the variable apex, with C2's precise functional panel ahead of C1's broader boundary. Within compact alternatives, native heavy-chain dominance weakly favors C4/C3 over C6; C7 gains plausibility from giving two binders two coverable sites but loses it on an arbitrary direction. Accessibility did not separate the compact candidates, and coarse chemistry was too non-specific to score.",
+ "not_pooled": [],
+ "provenance": {
+  "unverified_source_policy_fields": [
+   "gated",
+   "web_search",
+   "shell_network",
+   "gate_tools"
+  ],
+  "assembled_case_dir": "gpt-5.6-high/gather_refine/post_refactor/released_structure_20261030/casp17/H1347_agCD/case_0f54aa_G_rep2",
+  "organize_case_dir": "gpt-5.6-high/gather_refine/post_refactor/released_structure_20261030/casp17/H1347_agCD/case_0f54aa_GR_rep1",
+  "organize_status": "ok",
+  "judge_case_dir": "gpt-5.6-high/gather_refine/post_refactor/released_structure_20261030/casp17/H1347_agCD/case_0f54aa_GJ_rep2",
+  "judge_status": "ok",
+  "packet": "gpt-5.6-high/gather/packets/case_0f54aa/packet",
+  "manifest": "gpt-5.6-high/gather/packets/case_0f54aa/manifest.json"
+ },
+ "truth_file": "data/truth/casp17/H1347_agCD.epitope.json",
+ "truth": {
+  "n_residues": 22,
+  "usable": "yes",
+  "chains": {
+   "C": [
+    179,
+    180,
+    181
+   ],
+   "D": [
+    151,
+    154,
+    155,
+    156,
+    157,
+    158,
+    159,
+    160,
+    161,
+    162,
+    181,
+    182,
+    183,
+    185,
+    186,
+    189,
+    190,
+    193,
+    196
+   ]
+  },
+  "anchor_note": "the numbering frame only; the epitope is defined on the native and carried here by antigen sequence alignment, so which pooled model this is does not affect the label"
+ },
+ "oracle": {
+  "metric": "f1",
+  "epitope_definition": "whole_antibody",
+  "truth_file": "data/truth/casp17/H1347_agCD.epitope.json",
+  "rank1": {
+   "pocket": "C2",
+   "confidence": 0.23,
+   "precision": 0.0,
+   "recall": 0.0,
+   "f1": 0.0,
+   "n_pred": 10,
+   "n_true": 22,
+   "n_hit": 0
+  },
+  "best": {
+   "pocket": "C2",
+   "judge_rank": 1,
+   "confidence": 0.23,
+   "precision": 0.0,
+   "recall": 0.0,
+   "f1": 0.0,
+   "n_pred": 10,
+   "n_true": 22,
+   "n_hit": 0
+  },
+  "note": "the best pocket the answer already contains. Rank 1 is the answer as delivered, so the gap is what the judge's ordering cost."
+ },
+ "pockets": [
+  {
+   "id": "C2",
+   "judge_rank": 1,
+   "name": "The functional BCMA-contacting paratope: the shallow cavity formed by...",
+   "confidence": 0.23,
+   "mapping_basis": "per_antibody",
+   "n_residues": 10,
+   "score": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0,
+    "n_pred": 10,
+    "n_true": 22,
+    "n_hit": 0
+   },
+   "chain_pairs": [
+    {
+     "antibody_chain": "A",
+     "antigen_chain": "C",
+     "n_residues": 5
+    },
+    {
+     "antibody_chain": "A",
+     "antigen_chain": "D",
+     "n_residues": 4
+    },
+    {
+     "antibody_chain": "B",
+     "antigen_chain": "C",
+     "n_residues": 4
+    },
+    {
+     "antibody_chain": "B",
+     "antigen_chain": "D",
+     "n_residues": 5
+    }
+   ],
+   "file": "pocket.C2.json"
+  },
+  {
+   "id": "C1",
+   "judge_rank": 2,
+   "name": "The clone-specific antigen-combining apex of the BCMB69 Fv: a...",
+   "confidence": 0.17,
+   "mapping_basis": "per_antibody",
+   "n_residues": 12,
+   "score": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0,
+    "n_pred": 12,
+    "n_true": 22,
+    "n_hit": 0
+   },
+   "chain_pairs": [
+    {
+     "antibody_chain": "A",
+     "antigen_chain": "C",
+     "n_residues": 6
+    },
+    {
+     "antibody_chain": "A",
+     "antigen_chain": "D",
+     "n_residues": 4
+    },
+    {
+     "antibody_chain": "B",
+     "antigen_chain": "C",
+     "n_residues": 5
+    },
+    {
+     "antibody_chain": "B",
+     "antigen_chain": "D",
+     "n_residues": 4
+    }
+   ],
+   "file": "pocket.C1.json"
+  },
+  {
+   "id": "C4",
+   "judge_rank": 3,
+   "name": "The complete C-chain variable-domain CDR cap: a continuous VH...",
+   "confidence": 0.15,
+   "mapping_basis": "per_antibody",
+   "n_residues": 11,
+   "score": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0,
+    "n_pred": 11,
+    "n_true": 22,
+    "n_hit": 0
+   },
+   "chain_pairs": [
+    {
+     "antibody_chain": "A",
+     "antigen_chain": "C",
+     "n_residues": 11
+    },
+    {
+     "antibody_chain": "B",
+     "antigen_chain": "C",
+     "n_residues": 11
+    }
+   ],
+   "file": "pocket.C4.json"
+  },
+  {
+   "id": "C3",
+   "judge_rank": 4,
+   "name": "A compact VH functional idiotope centered on the antigen antibody’s...",
+   "confidence": 0.13,
+   "mapping_basis": "per_antibody",
+   "n_residues": 9,
+   "score": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0,
+    "n_pred": 9,
+    "n_true": 22,
+    "n_hit": 0
+   },
+   "chain_pairs": [
+    {
+     "antibody_chain": "A",
+     "antigen_chain": "C",
+     "n_residues": 9
+    },
+    {
+     "antibody_chain": "B",
+     "antigen_chain": "C",
+     "n_residues": 9
+    }
+   ],
+   "file": "pocket.C3.json"
+  },
+  {
+   "id": "C7",
+   "judge_rank": 5,
+   "name": "Two chain-restricted portions of one functional Fv idiotope: A on the...",
+   "confidence": 0.12,
+   "mapping_basis": "per_antibody",
+   "n_residues": 20,
+   "score": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0,
+    "n_pred": 20,
+    "n_true": 22,
+    "n_hit": 0
+   },
+   "chain_pairs": [
+    {
+     "antibody_chain": "A",
+     "antigen_chain": "C",
+     "n_residues": 10
+    },
+    {
+     "antibody_chain": "B",
+     "antigen_chain": "D",
+     "n_residues": 10
+    }
+   ],
+   "file": "pocket.C7.json"
+  },
+  {
+   "id": "C6",
+   "judge_rank": 6,
+   "name": "The antigen antibody’s VL cap, centered on D-chain CDR-L3 W90–V97...",
+   "confidence": 0.08,
+   "mapping_basis": "per_antibody",
+   "n_residues": 9,
+   "score": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0,
+    "n_pred": 9,
+    "n_true": 22,
+    "n_hit": 0
+   },
+   "chain_pairs": [
+    {
+     "antibody_chain": "A",
+     "antigen_chain": "D",
+     "n_residues": 9
+    },
+    {
+     "antibody_chain": "B",
+     "antigen_chain": "D",
+     "n_residues": 9
+    }
+   ],
+   "file": "pocket.C6.json"
+  },
+  {
+   "id": "C5",
+   "judge_rank": 7,
+   "name": "An oblique variable-domain idiotope on the CDR1/CDR2 shelves: C-chain...",
+   "confidence": 0.07,
+   "mapping_basis": "per_antibody",
+   "n_residues": 17,
+   "score": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0,
+    "n_pred": 17,
+    "n_true": 22,
+    "n_hit": 0
+   },
+   "chain_pairs": [
+    {
+     "antibody_chain": "A",
+     "antigen_chain": "C",
+     "n_residues": 8
+    },
+    {
+     "antibody_chain": "B",
+     "antigen_chain": "D",
+     "n_residues": 9
+    }
+   ],
+   "file": "pocket.C5.json"
+  },
+  {
+   "id": "C8",
+   "judge_rank": 8,
+   "name": "The Fab variable/constant elbow and adjacent N-terminal CH1/CL faces...",
+   "confidence": 0.05,
+   "mapping_basis": "per_antibody",
+   "n_residues": 14,
+   "score": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0,
+    "n_pred": 14,
+    "n_true": 22,
+    "n_hit": 0
+   },
+   "chain_pairs": [
+    {
+     "antibody_chain": "A",
+     "antigen_chain": "C",
+     "n_residues": 7
+    },
+    {
+     "antibody_chain": "B",
+     "antigen_chain": "D",
+     "n_residues": 7
+    }
+   ],
+   "file": "pocket.C8.json"
+  }
+ ]
+}

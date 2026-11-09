@@ -1,0 +1,553 @@
+{
+ "target": "H1233",
+ "target_set": "casp16",
+ "case": "case_a49017",
+ "task": "gather",
+ "gather_mode": "batched",
+ "num_launchers": 3,
+ "policy": {
+  "evidence_cutoff": "2024-06-16",
+  "no_cutoff": false,
+  "gated": true,
+  "web_search": false,
+  "shell_network": true,
+  "gate_tools": [
+   "research",
+   "fetch",
+   "rcsb",
+   "patent",
+   "paper"
+  ]
+ },
+ "unscored": false,
+ "evidence_cutoff": "2024-06-16",
+ "target_release_date": "2024-06-16",
+ "retrieval_policy": "gated",
+ "antigen_chains": [
+  "A",
+  "B"
+ ],
+ "antibody_files": {
+  "antibody.1.pdb": [
+   "C",
+   "F"
+  ],
+  "antibody.2.pdb": [
+   "D",
+   "E"
+  ]
+ },
+ "antibody_chain_types": {
+  "antibody.1.pdb": {
+   "C": "unknown",
+   "F": "unknown"
+  },
+  "antibody.2.pdb": {
+   "D": "unknown",
+   "E": "unknown"
+  }
+ },
+ "input_structure": "structures/H1233.pdb",
+ "input_structure_sha256": null,
+ "briefing_source": null,
+ "briefing_sha256": null,
+ "recognized_complex": {
+  "organize": null,
+  "judge": true
+ },
+ "recognition_note": "The exact six supplied CDRs match sequence set 25/29 in WO2023056473A1 (published 2023-04-06), which the ordered clone table and 2D9/3E8 cross-check assign to HAstV mAb 3H4. Moreno-Contreras et al. (first public 2018-10-22) assigns 3H4 escape K504E; the pre-cutoff 5EWO numbering record maps viral K504 to supplied A/B:75. No 3H4-spike complex was found. The same variable-domain sequence is also historically associated with HC19, so recognition rests specifically on the exact astrovirus patent sequence set, its clone ordering, and the stipulated binding pair.",
+ "what_separated_them": "Exact clone identification plus clone-specific K504E escape is the only Tier A localization and assigns 0.95 total probability to the K75 group. Within that group Tier A does not define a boundary: C5 gets a modest compactness/chemistry prior, while C3 and C8 are exact duplicate advocacy footprints and therefore split the broad-boundary mass equally. The remaining candidates are a low-probability allosteric or identity-failure tail supported only by other-antibody precedent.",
+ "not_pooled": [],
+ "provenance": {
+  "unverified_source_policy_fields": [
+   "gated",
+   "web_search",
+   "shell_network",
+   "gate_tools"
+  ],
+  "assembled_case_dir": "gpt-5.6-high/gather_refine/post_refactor/released_structure_20261030/casp16/H1233/case_a49017_G_rep2",
+  "organize_case_dir": "gpt-5.6-high/gather_refine/post_refactor/released_structure_20261030/casp16/H1233/case_a49017_GR_rep1",
+  "organize_status": "ok",
+  "judge_case_dir": "gpt-5.6-high/gather_refine/post_refactor/released_structure_20261030/casp16/H1233/case_a49017_GJ_rep2",
+  "judge_status": "ok",
+  "packet": "gpt-5.6-high/gather/packets/case_a49017/packet",
+  "manifest": "gpt-5.6-high/gather/packets/case_a49017/manifest.json"
+ },
+ "truth_file": "data/truth/casp16/H1233.epitope.json",
+ "truth": {
+  "n_residues": 44,
+  "usable": "yes",
+  "chains": {
+   "A": [
+    3,
+    69,
+    70,
+    71,
+    72,
+    73,
+    74,
+    75,
+    76,
+    77,
+    78,
+    80,
+    85,
+    88,
+    90,
+    113,
+    114,
+    115,
+    116,
+    155,
+    156,
+    158
+   ],
+   "B": [
+    3,
+    69,
+    70,
+    71,
+    72,
+    73,
+    74,
+    75,
+    76,
+    77,
+    78,
+    80,
+    85,
+    88,
+    90,
+    113,
+    114,
+    115,
+    116,
+    155,
+    156,
+    158
+   ]
+  },
+  "anchor_note": "the numbering frame only; the epitope is defined on the native and carried here by antigen sequence alignment, so which pooled model this is does not affect the label"
+ },
+ "oracle": {
+  "metric": "f1",
+  "epitope_definition": "whole_antibody",
+  "truth_file": "data/truth/casp16/H1233.epitope.json",
+  "rank1": {
+   "pocket": "C5",
+   "confidence": 0.42,
+   "precision": 0.5714,
+   "recall": 0.3636,
+   "f1": 0.4444,
+   "n_pred": 28,
+   "n_true": 44,
+   "n_hit": 16
+  },
+  "best": {
+   "pocket": "C3",
+   "judge_rank": 2,
+   "confidence": 0.265,
+   "precision": 0.4545,
+   "recall": 0.4545,
+   "f1": 0.4545,
+   "n_pred": 44,
+   "n_true": 44,
+   "n_hit": 20
+  },
+  "note": "the best pocket the answer already contains. Rank 1 is the answer as delivered, so the gap is what the judge's ordering cost."
+ },
+ "pockets": [
+  {
+   "id": "C5",
+   "judge_rank": 1,
+   "name": "A compact version of the inferior/lateral loop-2 neutralization face...",
+   "confidence": 0.42,
+   "mapping_basis": "per_antibody",
+   "n_residues": 28,
+   "score": {
+    "precision": 0.5714,
+    "recall": 0.3636,
+    "f1": 0.4444,
+    "n_pred": 28,
+    "n_true": 44,
+    "n_hit": 16
+   },
+   "chain_pairs": [
+    {
+     "antibody_chain": "C",
+     "antigen_chain": "A",
+     "n_residues": 14
+    },
+    {
+     "antibody_chain": "F",
+     "antigen_chain": "A",
+     "n_residues": 14
+    },
+    {
+     "antibody_chain": "D",
+     "antigen_chain": "B",
+     "n_residues": 14
+    },
+    {
+     "antibody_chain": "E",
+     "antigen_chain": "B",
+     "n_residues": 14
+    }
+   ],
+   "file": "pocket.C5.json"
+  },
+  {
+   "id": "C3",
+   "judge_rank": 2,
+   "name": "The inferior/lateral loop-2 face of one capsid-spike protomer...",
+   "confidence": 0.265,
+   "mapping_basis": "per_antibody",
+   "n_residues": 44,
+   "score": {
+    "precision": 0.4545,
+    "recall": 0.4545,
+    "f1": 0.4545,
+    "n_pred": 44,
+    "n_true": 44,
+    "n_hit": 20
+   },
+   "chain_pairs": [
+    {
+     "antibody_chain": "C",
+     "antigen_chain": "A",
+     "n_residues": 22
+    },
+    {
+     "antibody_chain": "F",
+     "antigen_chain": "A",
+     "n_residues": 22
+    },
+    {
+     "antibody_chain": "D",
+     "antigen_chain": "B",
+     "n_residues": 22
+    },
+    {
+     "antibody_chain": "E",
+     "antigen_chain": "B",
+     "n_residues": 22
+    }
+   ],
+   "file": "pocket.C3.json"
+  },
+  {
+   "id": "C8",
+   "judge_rank": 3,
+   "name": "The inferior/lateral loop-2 face of one capsid-spike protomer...",
+   "confidence": 0.265,
+   "mapping_basis": "per_antibody",
+   "n_residues": 44,
+   "score": {
+    "precision": 0.4545,
+    "recall": 0.4545,
+    "f1": 0.4545,
+    "n_pred": 44,
+    "n_true": 44,
+    "n_hit": 20
+   },
+   "chain_pairs": [
+    {
+     "antibody_chain": "C",
+     "antigen_chain": "A",
+     "n_residues": 22
+    },
+    {
+     "antibody_chain": "F",
+     "antigen_chain": "A",
+     "n_residues": 22
+    },
+    {
+     "antibody_chain": "D",
+     "antigen_chain": "B",
+     "n_residues": 22
+    },
+    {
+     "antibody_chain": "E",
+     "antigen_chain": "B",
+     "n_residues": 22
+    }
+   ],
+   "file": "pocket.C8.json"
+  },
+  {
+   "id": "C4",
+   "judge_rank": 4,
+   "name": "A compact single-protomer conformational epitope on the spike's...",
+   "confidence": 0.02,
+   "mapping_basis": "per_antibody",
+   "n_residues": 34,
+   "score": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0,
+    "n_pred": 34,
+    "n_true": 44,
+    "n_hit": 0
+   },
+   "chain_pairs": [
+    {
+     "antibody_chain": "C",
+     "antigen_chain": "A",
+     "n_residues": 17
+    },
+    {
+     "antibody_chain": "F",
+     "antigen_chain": "A",
+     "n_residues": 17
+    },
+    {
+     "antibody_chain": "D",
+     "antigen_chain": "B",
+     "n_residues": 17
+    },
+    {
+     "antibody_chain": "E",
+     "antigen_chain": "B",
+     "n_residues": 17
+    }
+   ],
+   "file": "pocket.C4.json"
+  },
+  {
+   "id": "C2",
+   "judge_rank": 5,
+   "name": "The crown of the dimeric capsid spike: a long-loop ridge carrying the...",
+   "confidence": 0.01,
+   "mapping_basis": "per_antibody",
+   "n_residues": 30,
+   "score": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0,
+    "n_pred": 30,
+    "n_true": 44,
+    "n_hit": 0
+   },
+   "chain_pairs": [
+    {
+     "antibody_chain": "C",
+     "antigen_chain": "A",
+     "n_residues": 9
+    },
+    {
+     "antibody_chain": "C",
+     "antigen_chain": "B",
+     "n_residues": 6
+    },
+    {
+     "antibody_chain": "F",
+     "antigen_chain": "A",
+     "n_residues": 9
+    },
+    {
+     "antibody_chain": "F",
+     "antigen_chain": "B",
+     "n_residues": 6
+    },
+    {
+     "antibody_chain": "D",
+     "antigen_chain": "A",
+     "n_residues": 6
+    },
+    {
+     "antibody_chain": "D",
+     "antigen_chain": "B",
+     "n_residues": 9
+    },
+    {
+     "antibody_chain": "E",
+     "antigen_chain": "A",
+     "n_residues": 6
+    },
+    {
+     "antibody_chain": "E",
+     "antigen_chain": "B",
+     "n_residues": 9
+    }
+   ],
+   "file": "pocket.C2.json"
+  },
+  {
+   "id": "C7",
+   "judge_rank": 6,
+   "name": "The broad top long-loop/dimer-rim face of the capsid spike, spanning...",
+   "confidence": 0.008,
+   "mapping_basis": "per_antibody",
+   "n_residues": 32,
+   "score": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0,
+    "n_pred": 32,
+    "n_true": 44,
+    "n_hit": 0
+   },
+   "chain_pairs": [
+    {
+     "antibody_chain": "C",
+     "antigen_chain": "A",
+     "n_residues": 11
+    },
+    {
+     "antibody_chain": "C",
+     "antigen_chain": "B",
+     "n_residues": 5
+    },
+    {
+     "antibody_chain": "F",
+     "antigen_chain": "A",
+     "n_residues": 11
+    },
+    {
+     "antibody_chain": "F",
+     "antigen_chain": "B",
+     "n_residues": 5
+    },
+    {
+     "antibody_chain": "D",
+     "antigen_chain": "A",
+     "n_residues": 5
+    },
+    {
+     "antibody_chain": "D",
+     "antigen_chain": "B",
+     "n_residues": 11
+    },
+    {
+     "antibody_chain": "E",
+     "antigen_chain": "A",
+     "n_residues": 5
+    },
+    {
+     "antibody_chain": "E",
+     "antigen_chain": "B",
+     "n_residues": 11
+    }
+   ],
+   "file": "pocket.C7.json"
+  },
+  {
+   "id": "C1",
+   "judge_rank": 7,
+   "name": "A quaternary capsid-spike epitope that crosses the dimer rim: one...",
+   "confidence": 0.006,
+   "mapping_basis": "per_antibody",
+   "n_residues": 34,
+   "score": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0,
+    "n_pred": 34,
+    "n_true": 44,
+    "n_hit": 0
+   },
+   "chain_pairs": [
+    {
+     "antibody_chain": "C",
+     "antigen_chain": "A",
+     "n_residues": 15
+    },
+    {
+     "antibody_chain": "C",
+     "antigen_chain": "B",
+     "n_residues": 2
+    },
+    {
+     "antibody_chain": "F",
+     "antigen_chain": "A",
+     "n_residues": 15
+    },
+    {
+     "antibody_chain": "F",
+     "antigen_chain": "B",
+     "n_residues": 2
+    },
+    {
+     "antibody_chain": "D",
+     "antigen_chain": "A",
+     "n_residues": 2
+    },
+    {
+     "antibody_chain": "D",
+     "antigen_chain": "B",
+     "n_residues": 15
+    },
+    {
+     "antibody_chain": "E",
+     "antigen_chain": "A",
+     "n_residues": 2
+    },
+    {
+     "antibody_chain": "E",
+     "antigen_chain": "B",
+     "n_residues": 15
+    }
+   ],
+   "file": "pocket.C1.json"
+  },
+  {
+   "id": "C6",
+   "judge_rank": 8,
+   "name": "A PL-2-like composite attachment face on the side of the dimeric...",
+   "confidence": 0.006,
+   "mapping_basis": "per_antibody",
+   "n_residues": 26,
+   "score": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0,
+    "n_pred": 26,
+    "n_true": 44,
+    "n_hit": 0
+   },
+   "chain_pairs": [
+    {
+     "antibody_chain": "C",
+     "antigen_chain": "A",
+     "n_residues": 12
+    },
+    {
+     "antibody_chain": "C",
+     "antigen_chain": "B",
+     "n_residues": 1
+    },
+    {
+     "antibody_chain": "F",
+     "antigen_chain": "A",
+     "n_residues": 12
+    },
+    {
+     "antibody_chain": "F",
+     "antigen_chain": "B",
+     "n_residues": 1
+    },
+    {
+     "antibody_chain": "D",
+     "antigen_chain": "A",
+     "n_residues": 1
+    },
+    {
+     "antibody_chain": "D",
+     "antigen_chain": "B",
+     "n_residues": 12
+    },
+    {
+     "antibody_chain": "E",
+     "antigen_chain": "A",
+     "n_residues": 1
+    },
+    {
+     "antibody_chain": "E",
+     "antigen_chain": "B",
+     "n_residues": 12
+    }
+   ],
+   "file": "pocket.C6.json"
+  }
+ ]
+}

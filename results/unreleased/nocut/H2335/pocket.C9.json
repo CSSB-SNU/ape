@@ -1,0 +1,291 @@
+{
+ "task": "gather",
+ "gather_mode": "batched",
+ "num_launchers": 3,
+ "policy": {
+  "evidence_cutoff": null,
+  "no_cutoff": true,
+  "gated": false,
+  "web_search": true,
+  "shell_network": true,
+  "gate_tools": []
+ },
+ "unscored": true,
+ "target": "H2335",
+ "target_set": "casp17",
+ "case": "case_d48c74",
+ "evidence_cutoff": null,
+ "target_release_date": "2026-05-27",
+ "retrieval_policy": "no-cutoff",
+ "input_structure": "data/staged_casp17_no_native/H2335.pdb",
+ "input_structure_sha256": "f216450f2774ea363d9dfeeb1e478d506d906f539f384bf370d4b65ff32c11bb",
+ "briefing_source": "data/briefing/casp17_nocutoff/H2335/search_results.json",
+ "briefing_sha256": "4c6eb598fb307223a9315af31439ba34c45b16345678bd0c3aeed39bcafa9e64",
+ "antigen_chains": [
+  "A",
+  "B",
+  "C"
+ ],
+ "antibody_files": {
+  "antibody.pdb": [
+   "D",
+   "E"
+  ]
+ },
+ "antibody_chain_types": {
+  "antibody.pdb": {
+   "D": "light",
+   "E": "heavy"
+  }
+ },
+ "stage": "gatherer",
+ "pocket": {
+  "id": "C9",
+  "judge_rank": 7,
+  "name": "A two-lobed receptor-adjacent gO surface joining an N-terminal lobe...",
+  "confidence": 0.09,
+  "p_rests_on_holds": 0.14,
+  "why_this_rank": "Solved F7K/CS2 precedent validates the two-lobed gO class, but reach and six-sequon proximity make it demanding.",
+  "rests_on": "The query can span both glycan-edged lobes within effective reach.",
+  "where_the_mass_goes_if_it_fails": "C4, then C2",
+  "what_it_is": "A two-lobed receptor-adjacent gO surface joining an N-terminal lobe around A:65-A:78 to a DI lobe around A:189-A:219—the local CS2-like anti-gO surface.",
+  "why_one_candidate": "not pooled with anything: no other patch is both within 12 A (half centroid distance, half contact-graph hops) and coverable by one paratope of this antibody's reach, 17.4 A",
+  "from_patches": [
+   "P9"
+  ]
+ },
+ "note": "`confidence` on the pocket is over pockets and sums to about 1 across them. Inside an interface it is per residue in [0, 1] and sums to nothing. No residue is cut at a threshold: the whole vector is the answer.",
+ "mapping_basis": "side",
+ "checks": {
+  "unrecognised_sides": []
+ },
+ "chain_pairs": [
+  {
+   "antibody_chain": "D",
+   "antigen_chain": "A",
+   "n_residues": 4
+  },
+  {
+   "antibody_chain": "E",
+   "antigen_chain": "A",
+   "n_residues": 21
+  }
+ ],
+ "antibodies": [
+  {
+   "antibody": "antibody.pdb",
+   "chains": {
+    "D": "light",
+    "E": "heavy"
+   },
+   "binding_mode": null,
+   "n_residues_scored": 22,
+   "interfaces": [
+    {
+     "antibody_chain": "D",
+     "antibody_chain_type": "light",
+     "antigen_chain": "A",
+     "n_residues": 4,
+     "residue_confidence": {
+      "193": 0.92,
+      "194": 0.12,
+      "196": 0.86,
+      "219": 0.8
+     },
+     "residue_side": {
+      "193": "both",
+      "194": "light",
+      "196": "both",
+      "219": "both"
+     },
+     "max_confidence": 0.92,
+     "mean_confidence": 0.675
+    },
+    {
+     "antibody_chain": "E",
+     "antibody_chain_type": "heavy",
+     "antigen_chain": "A",
+     "n_residues": 21,
+     "residue_confidence": {
+      "65": 0.8,
+      "66": 0.58,
+      "68": 0.9,
+      "69": 0.72,
+      "70": 0.78,
+      "72": 0.42,
+      "76": 0.68,
+      "78": 0.2,
+      "189": 0.45,
+      "190": 0.55,
+      "192": 0.58,
+      "193": 0.92,
+      "196": 0.86,
+      "200": 0.44,
+      "212": 0.3,
+      "213": 0.25,
+      "214": 0.96,
+      "215": 0.94,
+      "216": 0.38,
+      "217": 0.18,
+      "219": 0.8
+     },
+     "residue_side": {
+      "65": "heavy",
+      "66": "heavy",
+      "68": "heavy",
+      "69": "heavy",
+      "70": "heavy",
+      "72": "heavy",
+      "76": "heavy",
+      "78": "heavy",
+      "189": "heavy",
+      "190": "heavy",
+      "192": "heavy",
+      "193": "both",
+      "196": "both",
+      "200": "heavy",
+      "212": "heavy",
+      "213": "heavy",
+      "214": "heavy",
+      "215": "heavy",
+      "216": "heavy",
+      "217": "heavy",
+      "219": "both"
+     },
+     "max_confidence": 0.96,
+     "mean_confidence": 0.6043
+    }
+   ]
+  }
+ ],
+ "paratope": {
+  "dominant_cdrs": [
+   "E:H3",
+   "E:H2",
+   "D:L3"
+  ],
+  "paratope_residues": [
+   "E:53",
+   "E:54",
+   "E:56",
+   "E:57",
+   "E:58",
+   "E:98",
+   "E:100",
+   "E:101",
+   "E:102",
+   "E:103",
+   "E:104",
+   "E:105",
+   "E:106",
+   "E:107",
+   "E:111",
+   "D:27",
+   "D:28",
+   "D:32",
+   "D:92",
+   "D:94",
+   "D:95"
+  ],
+  "heavy_light_split": "About 80:20 heavy:light. H3/H2 cover both lobes and A:214-A:215; L3/L1 brace A:193-A:196; both share A:193/A:196/A:219.",
+  "binding_mode_union": "single-chain"
+ },
+ "residues": [
+  "A:189",
+  "A:190",
+  "A:192",
+  "A:193",
+  "A:194",
+  "A:196",
+  "A:200",
+  "A:212",
+  "A:213",
+  "A:214",
+  "A:215",
+  "A:216",
+  "A:217",
+  "A:219",
+  "A:65",
+  "A:66",
+  "A:68",
+  "A:69",
+  "A:70",
+  "A:72",
+  "A:76",
+  "A:78"
+ ],
+ "n_residues": 22,
+ "patches": [
+  {
+   "id": "P9",
+   "name": "gO two-lobed exposed patch (CS2-like local surface)",
+   "n_residues": 25,
+   "residues": [
+    "A:186",
+    "A:189",
+    "A:190",
+    "A:192",
+    "A:193",
+    "A:194",
+    "A:196",
+    "A:200",
+    "A:212",
+    "A:213",
+    "A:214",
+    "A:215",
+    "A:216",
+    "A:217",
+    "A:218",
+    "A:219",
+    "A:65",
+    "A:66",
+    "A:67",
+    "A:68",
+    "A:69",
+    "A:70",
+    "A:72",
+    "A:76",
+    "A:78"
+   ],
+   "n_kept_by_advocate": 22,
+   "n_dropped_by_advocate": 3
+  }
+ ],
+ "pooling_provenance": {
+  "n_shared_at_pooling": 25,
+  "n_disputed_at_pooling": 0,
+  "note": "counts only, describing how the organizer grouped the phase-1 patches. The organizer's own candidate residue list is deliberately absent: the answer is the advocate's footprint, in `residues` and in `antibodies[].interfaces[]`."
+ },
+ "evidence": {
+  "advocate": {
+   "n_findings": 5,
+   "n_supports": 2,
+   "n_weakens": 1,
+   "weakest_point": "At 34.56 A the footprint is at the reach limit, and three edge sequons can alter the geometry. The homolog proves bindability, not that this query's smaller light contribution spans both glycosylated lobes.",
+   "note": "the advocate reports claim/source/date/bearing and is not asked whether a source is about this binder"
+  },
+  "judge": {
+   "tier_a_support": 0,
+   "n_support_lines": 3,
+   "verdict": "live",
+   "note": "Tier A -- a source about this binder itself -- is the judge's adjudication, in assessment[].support[]. It exists nowhere in the advocate's own answer."
+  }
+ },
+ "provenance": {
+  "unverified_source_policy_fields": [
+   "gated",
+   "web_search",
+   "shell_network",
+   "gate_tools"
+  ],
+  "assembled_case_dir": "gpt-5.6-high/gather_refine/post_refactor/unreleased_20261029/nocut/casp17/H2335/case_d48c74_G_rep1",
+  "organize_case_dir": "gpt-5.6-high/gather_refine/post_refactor/unreleased_20261029/nocut/casp17/H2335/case_d48c74_GR_rep1",
+  "organize_status": "ok",
+  "judge_case_dir": "gpt-5.6-high/gather_refine/post_refactor/unreleased_20261029/nocut/casp17/H2335/case_d48c74_GJ_rep1",
+  "judge_status": "ok",
+  "packet": "gpt-5.6-high/nocut/gather/packets/case_d48c74/packet",
+  "manifest": "gpt-5.6-high/nocut/gather/packets/case_d48c74/manifest.json",
+  "advocate_case_dir": "gpt-5.6-high/gather_refine/post_refactor/unreleased_20261029/nocut/casp17/H2335/case_d48c74_GR_rep1",
+  "advocate_status": "ok"
+ }
+}

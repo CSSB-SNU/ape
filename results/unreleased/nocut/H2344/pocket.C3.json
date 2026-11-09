@@ -1,0 +1,355 @@
+{
+ "task": "gather",
+ "gather_mode": "batched",
+ "num_launchers": 3,
+ "policy": {
+  "evidence_cutoff": null,
+  "no_cutoff": true,
+  "gated": false,
+  "web_search": true,
+  "shell_network": true,
+  "gate_tools": []
+ },
+ "unscored": true,
+ "target": "H2344",
+ "target_set": "casp17",
+ "case": "case_679778",
+ "evidence_cutoff": null,
+ "target_release_date": "2026-06-03",
+ "retrieval_policy": "no-cutoff",
+ "input_structure": "data/staged_casp17_no_native/H2344.pdb",
+ "input_structure_sha256": "18733617ed7c4b96b45ff3352f72763afcd6932570e14f1956abaeff946190b8",
+ "briefing_source": "data/briefing/casp17_nocutoff/H2344/search_results.json",
+ "briefing_sha256": "219c979403254eb778aaaf285ed1a338e86cc2322627ca12f3ab91aaa7876e87",
+ "antigen_chains": [
+  "C"
+ ],
+ "antibody_files": {
+  "antibody.pdb": [
+   "A",
+   "B"
+  ]
+ },
+ "antibody_chain_types": {
+  "antibody.pdb": {
+   "A": "unknown",
+   "B": "unknown"
+  }
+ },
+ "stage": "gatherer",
+ "pocket": {
+  "id": "C3",
+  "judge_rank": 1,
+  "name": "The receptor-opposite MC5-like fusion-activation face of the gD IgV...",
+  "confidence": 0.24,
+  "p_rests_on_holds": 0.42,
+  "why_this_rank": "C3 best combines exact-footprint exposure/connectivity, a coverable mixed-chemistry surface, exposed type-variable C:53/C:72, and conventional-antibody MC5 precedent with a mechanism consistent with HAB72's strong neutralization and spread inhibition.",
+  "rests_on": "HAB72 recognizes the MC5-like activation face despite the absence of direct competition, escape or gH/gL-blockade data.",
+  "where_the_mass_goes_if_it_fails": "Primarily C1, with secondary transfer to C2 and C4.",
+  "what_it_is": "The receptor-opposite MC5-like fusion-activation face of the gD IgV domain: a two-lobed surface joining the 50–56 N-terminal/core ledge to the 72–80 loop, with an outer shelf at 82–83 and 123–124. It is a post-receptor gH/gL-control site rather than the nectin/HVEM-binding face.",
+  "why_one_candidate": "geometry pooled 3 patches (P11, P4, P7): P11+P7 at 0.75 A, union radius 12.74 A; P11+P4+P7 at 2.28 A, union radius 16.42 A. Every union fits inside this antibody's paratope reach of 18.1 A. No session judged these to be the same surface.",
+  "from_patches": [
+   "P11",
+   "P4",
+   "P7"
+  ]
+ },
+ "note": "`confidence` on the pocket is over pockets and sums to about 1 across them. Inside an interface it is per residue in [0, 1] and sums to nothing. No residue is cut at a threshold: the whole vector is the answer.",
+ "mapping_basis": "side",
+ "checks": {
+  "unrecognised_sides": []
+ },
+ "chain_pairs": [
+  {
+   "antibody_chain": "A",
+   "antigen_chain": "C",
+   "n_residues": 19
+  },
+  {
+   "antibody_chain": "B",
+   "antigen_chain": "C",
+   "n_residues": 19
+  }
+ ],
+ "antibodies": [
+  {
+   "antibody": "antibody.pdb",
+   "chains": {
+    "A": "unknown",
+    "B": "unknown"
+   },
+   "binding_mode": null,
+   "n_residues_scored": 19,
+   "interfaces": [
+    {
+     "antibody_chain": "A",
+     "antibody_chain_type": "unknown",
+     "antigen_chain": "C",
+     "n_residues": 19,
+     "residue_confidence": {
+      "50": 0.55,
+      "51": 0.48,
+      "52": 0.58,
+      "53": 0.72,
+      "54": 0.96,
+      "55": 0.78,
+      "56": 0.62,
+      "72": 0.86,
+      "74": 0.75,
+      "75": 0.91,
+      "76": 0.95,
+      "77": 0.7,
+      "78": 0.93,
+      "79": 0.96,
+      "80": 0.74,
+      "82": 0.58,
+      "83": 0.45,
+      "123": 0.36,
+      "124": 0.29
+     },
+     "residue_side": {
+      "50": "heavy",
+      "51": "heavy",
+      "52": "heavy",
+      "53": "heavy",
+      "54": "heavy",
+      "55": "heavy",
+      "56": "heavy",
+      "72": "both",
+      "74": "both",
+      "75": "heavy",
+      "76": "both",
+      "77": "heavy",
+      "78": "both",
+      "79": "both",
+      "80": "light",
+      "82": "light",
+      "83": "light",
+      "123": "light",
+      "124": "light"
+     },
+     "max_confidence": 0.96,
+     "mean_confidence": 0.6932
+    },
+    {
+     "antibody_chain": "B",
+     "antibody_chain_type": "unknown",
+     "antigen_chain": "C",
+     "n_residues": 19,
+     "residue_confidence": {
+      "50": 0.55,
+      "51": 0.48,
+      "52": 0.58,
+      "53": 0.72,
+      "54": 0.96,
+      "55": 0.78,
+      "56": 0.62,
+      "72": 0.86,
+      "74": 0.75,
+      "75": 0.91,
+      "76": 0.95,
+      "77": 0.7,
+      "78": 0.93,
+      "79": 0.96,
+      "80": 0.74,
+      "82": 0.58,
+      "83": 0.45,
+      "123": 0.36,
+      "124": 0.29
+     },
+     "residue_side": {
+      "50": "heavy",
+      "51": "heavy",
+      "52": "heavy",
+      "53": "heavy",
+      "54": "heavy",
+      "55": "heavy",
+      "56": "heavy",
+      "72": "both",
+      "74": "both",
+      "75": "heavy",
+      "76": "both",
+      "77": "heavy",
+      "78": "both",
+      "79": "both",
+      "80": "light",
+      "82": "light",
+      "83": "light",
+      "123": "light",
+      "124": "light"
+     },
+     "max_confidence": 0.96,
+     "mean_confidence": 0.6932
+    }
+   ]
+  }
+ ],
+ "paratope": {
+  "dominant_cdrs": [
+   "H3:H2",
+   "L1:L3"
+  ],
+  "paratope_residues": [
+   "A:30",
+   "A:31",
+   "A:32",
+   "A:54",
+   "A:55",
+   "A:57",
+   "A:100",
+   "A:102",
+   "A:103",
+   "A:104",
+   "A:105",
+   "A:106",
+   "A:108",
+   "A:109",
+   "A:112",
+   "A:113",
+   "B:27",
+   "B:28",
+   "B:30",
+   "B:31",
+   "B:32",
+   "B:33",
+   "B:53",
+   "B:92",
+   "B:94",
+   "B:95",
+   "B:96",
+   "B:98"
+  ],
+  "heavy_light_split": "Heavy-dominant (~70:30): H3/H2 bridge the 50–56 and 72–79 lobes; L1/L3 share H72/E76/P78/Q79 and finish the 80–83/123–124 rim.",
+  "binding_mode_union": "single-chain"
+ },
+ "residues": [
+  "C:123",
+  "C:124",
+  "C:50",
+  "C:51",
+  "C:52",
+  "C:53",
+  "C:54",
+  "C:55",
+  "C:56",
+  "C:72",
+  "C:74",
+  "C:75",
+  "C:76",
+  "C:77",
+  "C:78",
+  "C:79",
+  "C:80",
+  "C:82",
+  "C:83"
+ ],
+ "n_residues": 19,
+ "patches": [
+  {
+   "id": "P11",
+   "name": "MC5-like post-receptor gH/gL activation face",
+   "n_residues": 19,
+   "residues": [
+    "C:123",
+    "C:124",
+    "C:147",
+    "C:51",
+    "C:52",
+    "C:53",
+    "C:54",
+    "C:55",
+    "C:56",
+    "C:72",
+    "C:74",
+    "C:75",
+    "C:76",
+    "C:77",
+    "C:78",
+    "C:79",
+    "C:80",
+    "C:82",
+    "C:83"
+   ],
+   "n_kept_by_advocate": 18,
+   "n_dropped_by_advocate": 1
+  },
+  {
+   "id": "P4",
+   "name": "H72/MC5 gH-gL activation face",
+   "n_residues": 17,
+   "residues": [
+    "C:50",
+    "C:51",
+    "C:52",
+    "C:53",
+    "C:54",
+    "C:55",
+    "C:56",
+    "C:57",
+    "C:58",
+    "C:70",
+    "C:72",
+    "C:74",
+    "C:75",
+    "C:76",
+    "C:78",
+    "C:79",
+    "C:80"
+   ],
+   "n_kept_by_advocate": 14,
+   "n_dropped_by_advocate": 3
+  },
+  {
+   "id": "P7",
+   "name": "MC5-like fusion-activation face",
+   "n_residues": 6,
+   "residues": [
+    "C:54",
+    "C:75",
+    "C:76",
+    "C:77",
+    "C:78",
+    "C:79"
+   ],
+   "n_kept_by_advocate": 6,
+   "n_dropped_by_advocate": 0
+  }
+ ],
+ "pooling_provenance": {
+  "n_shared_at_pooling": 5,
+  "n_disputed_at_pooling": 18,
+  "note": "counts only, describing how the organizer grouped the phase-1 patches. The organizer's own candidate residue list is deliberately absent: the answer is the advocate's footprint, in `residues` and in `antibodies[].interfaces[]`."
+ },
+ "evidence": {
+  "advocate": {
+   "n_findings": 5,
+   "n_supports": 5,
+   "n_weakens": 0,
+   "weakest_point": "The functional MC5 core is compact, but the candidate's 123/124/147 extension is weakly justified and partly glycan-adjacent; I narrowed it by dropping 147 and retaining 123/124 only as low-confidence rim contacts.",
+   "note": "the advocate reports claim/source/date/bearing and is not asked whether a source is about this binder"
+  },
+  "judge": {
+   "tier_a_support": 1,
+   "n_support_lines": 5,
+   "verdict": "leading",
+   "note": "Tier A -- a source about this binder itself -- is the judge's adjudication, in assessment[].support[]. It exists nowhere in the advocate's own answer."
+  }
+ },
+ "provenance": {
+  "unverified_source_policy_fields": [
+   "gated",
+   "web_search",
+   "shell_network",
+   "gate_tools"
+  ],
+  "assembled_case_dir": "gpt-5.6-high/gather_refine/post_refactor/unreleased_20261029/nocut/casp17/H2344/case_679778_G_rep1",
+  "organize_case_dir": "gpt-5.6-high/gather_refine/post_refactor/unreleased_20261029/nocut/casp17/H2344/case_679778_GR_rep1",
+  "organize_status": "ok",
+  "judge_case_dir": "gpt-5.6-high/gather_refine/post_refactor/unreleased_20261029/nocut/casp17/H2344/case_679778_GJ_rep1",
+  "judge_status": "ok",
+  "packet": "gpt-5.6-high/nocut/gather/packets/case_679778/packet",
+  "manifest": "gpt-5.6-high/nocut/gather/packets/case_679778/manifest.json",
+  "advocate_case_dir": "gpt-5.6-high/gather_refine/post_refactor/unreleased_20261029/nocut/casp17/H2344/case_679778_GR_rep1",
+  "advocate_status": "ok"
+ }
+}

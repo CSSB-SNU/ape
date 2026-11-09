@@ -1,0 +1,211 @@
+{
+ "target": "H2441",
+ "target_set": "casp17",
+ "case": "case_253bc2",
+ "task": "gather",
+ "gather_mode": "batched",
+ "num_launchers": 3,
+ "policy": {
+  "evidence_cutoff": "2026-07-31",
+  "no_cutoff": false,
+  "gated": true,
+  "web_search": false,
+  "shell_network": true,
+  "gate_tools": [
+   "research",
+   "fetch",
+   "rcsb",
+   "patent",
+   "paper"
+  ]
+ },
+ "unscored": true,
+ "evidence_cutoff": "2026-07-31",
+ "target_release_date": "2026-07-31",
+ "retrieval_policy": "gated",
+ "antigen_chains": [
+  "A"
+ ],
+ "antibody_files": {
+  "antibody.pdb": [
+   "B"
+  ]
+ },
+ "antibody_chain_types": {
+  "antibody.pdb": {
+   "B": "unknown"
+  }
+ },
+ "input_structure": "data/staged_casp17_no_native/H2441.pdb",
+ "input_structure_sha256": "37e38c82b5192825be5d1ed9d412076bf5a8fb5ddade49d20c5ae532bead12ae",
+ "briefing_source": "data/briefing/casp17/H2441/search_results.json",
+ "briefing_sha256": "5827c87d5386d58165199f41b0dc2d6859022ecaa626ad84eae73bd0a67053e2",
+ "recognized_complex": {
+  "organize": null,
+  "judge": true
+ },
+ "recognition_note": "The antigen is mature NDM-1 and the VHH is Nb17NDM-1. Exact matching of B:1-128, including CDR3 ARGMGMLFSVAEIFSPTNYNY, to Figure 3 of PMC11013165 identified the pair on 2024-03-22. That source reports nanomolar reversible uncompetitive inhibition but no solved complex or residue-level epitope, so recognition does not reveal the answer.",
+ "what_separated_them": "No candidate has binder-specific localization. The nine drawings collapse into four overlapping face families: C1/C3, C2/C4, C5/C7 and C6/C8/C9. Final ordering used advocacy-footprint exposure, extent and chemistry, followed by independent same-antigen antibody precedent and NDM allosteric function. C7 won narrowly; C6 is the best active-mouth alternative. Literature detail alone did not decide the order.",
+ "not_pooled": [],
+ "provenance": {
+  "unverified_source_policy_fields": [
+   "gated",
+   "web_search",
+   "shell_network",
+   "gate_tools"
+  ],
+  "assembled_case_dir": "gpt-5.6-high/gather_refine/post_refactor/unreleased_20261029/gated/casp17/H2441/case_253bc2_G_rep1",
+  "organize_case_dir": "gpt-5.6-high/gather_refine/post_refactor/unreleased_20261029/gated/casp17/H2441/case_253bc2_GR_rep1",
+  "organize_status": "ok",
+  "judge_case_dir": "gpt-5.6-high/gather_refine/post_refactor/unreleased_20261029/gated/casp17/H2441/case_253bc2_GJ_rep1",
+  "judge_status": "ok",
+  "packet": "gpt-5.6-high/gather/packets/case_253bc2/packet",
+  "manifest": "gpt-5.6-high/gather/packets/case_253bc2/manifest.json"
+ },
+ "pockets": [
+  {
+   "id": "C7",
+   "judge_rank": 1,
+   "name": "The exposed alpha3-L8-beta8-equivalent lobe—the aromatic/proline-rich...",
+   "confidence": 0.24,
+   "mapping_basis": "side",
+   "n_residues": 11,
+   "chain_pairs": [
+    {
+     "antibody_chain": "B",
+     "antigen_chain": "A",
+     "n_residues": 11
+    }
+   ],
+   "file": "pocket.C7.json"
+  },
+  {
+   "id": "C6",
+   "judge_rank": 2,
+   "name": "The compact catalytic-groove mouth where hydrophobic flapping loop L3...",
+   "confidence": 0.19,
+   "mapping_basis": "side",
+   "n_residues": 18,
+   "chain_pairs": [
+    {
+     "antibody_chain": "B",
+     "antigen_chain": "A",
+     "n_residues": 18
+    }
+   ],
+   "file": "pocket.C6.json"
+  },
+  {
+   "id": "C5",
+   "judge_rank": 3,
+   "name": "A distal mixed hydrophobic/aromatic lobe joining the NDM-specific...",
+   "confidence": 0.16,
+   "mapping_basis": "side",
+   "n_residues": 16,
+   "chain_pairs": [
+    {
+     "antibody_chain": "B",
+     "antigen_chain": "A",
+     "n_residues": 16
+    }
+   ],
+   "file": "pocket.C5.json"
+  },
+  {
+   "id": "C8",
+   "judge_rank": 4,
+   "name": "The broad active-site mouth bridging exposed L3, the H120/L6-side...",
+   "confidence": 0.15,
+   "mapping_basis": "side",
+   "n_residues": 20,
+   "chain_pairs": [
+    {
+     "antibody_chain": "B",
+     "antigen_chain": "A",
+     "n_residues": 20
+    }
+   ],
+   "file": "pocket.C8.json"
+  },
+  {
+   "id": "C1",
+   "judge_rank": 5,
+   "name": "The membrane-side terminal/L10 exterior of the NDM-family fold, where...",
+   "confidence": 0.08,
+   "mapping_basis": "side",
+   "n_residues": 18,
+   "chain_pairs": [
+    {
+     "antibody_chain": "B",
+     "antigen_chain": "A",
+     "n_residues": 18
+    }
+   ],
+   "file": "pocket.C1.json"
+  },
+  {
+   "id": "C2",
+   "judge_rank": 6,
+   "name": "A compact distal polar terrace on the solvent-exposed back of one...",
+   "confidence": 0.06,
+   "mapping_basis": "side",
+   "n_residues": 13,
+   "chain_pairs": [
+    {
+     "antibody_chain": "B",
+     "antigen_chain": "A",
+     "n_residues": 13
+    }
+   ],
+   "file": "pocket.C2.json"
+  },
+  {
+   "id": "C4",
+   "judge_rank": 7,
+   "name": "The broad solvent-exposed back terrace of the metallo-beta-lactamase...",
+   "confidence": 0.05,
+   "mapping_basis": "side",
+   "n_residues": 16,
+   "chain_pairs": [
+    {
+     "antibody_chain": "B",
+     "antigen_chain": "A",
+     "n_residues": 16
+    }
+   ],
+   "file": "pocket.C4.json"
+  },
+  {
+   "id": "C3",
+   "judge_rank": 8,
+   "name": "The C-terminal basic underside, where outer L10, a distal turn and...",
+   "confidence": 0.04,
+   "mapping_basis": "side",
+   "n_residues": 14,
+   "chain_pairs": [
+    {
+     "antibody_chain": "B",
+     "antigen_chain": "A",
+     "n_residues": 14
+    }
+   ],
+   "file": "pocket.C3.json"
+  },
+  {
+   "id": "C9",
+   "judge_rank": 9,
+   "name": "The full active-site slot: complete exposed L3, shallow zinc-side...",
+   "confidence": 0.03,
+   "mapping_basis": "side",
+   "n_residues": 27,
+   "chain_pairs": [
+    {
+     "antibody_chain": "B",
+     "antigen_chain": "A",
+     "n_residues": 27
+    }
+   ],
+   "file": "pocket.C9.json"
+  }
+ ]
+}

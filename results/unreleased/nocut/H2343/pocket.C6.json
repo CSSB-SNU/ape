@@ -1,0 +1,279 @@
+{
+ "task": "gather",
+ "gather_mode": "batched",
+ "num_launchers": 3,
+ "policy": {
+  "evidence_cutoff": null,
+  "no_cutoff": true,
+  "gated": false,
+  "web_search": true,
+  "shell_network": true,
+  "gate_tools": []
+ },
+ "unscored": true,
+ "target": "H2343",
+ "target_set": "casp17",
+ "case": "case_f1b810",
+ "evidence_cutoff": null,
+ "target_release_date": "2026-06-01",
+ "retrieval_policy": "no-cutoff",
+ "input_structure": "data/staged_casp17_no_native/H2343.pdb",
+ "input_structure_sha256": "3c70ae6e0bdda9d0a1014d29975873fe008fbe5bd9aebb5949da78b06aeabf11",
+ "briefing_source": "data/briefing/casp17_nocutoff/H2343/search_results.json",
+ "briefing_sha256": "6b66efca006e54eee3aa1b9a3ad4f04da4207f25dccedfbc9f13d1ef0c954955",
+ "antigen_chains": [
+  "C"
+ ],
+ "antibody_files": {
+  "antibody.pdb": [
+   "A",
+   "B"
+  ]
+ },
+ "antibody_chain_types": {
+  "antibody.pdb": {
+   "A": "unknown",
+   "B": "unknown"
+  }
+ },
+ "stage": "gatherer",
+ "pocket": {
+  "id": "C6",
+  "judge_rank": 4,
+  "name": "The glycan-edged exposed rim of the pVR3/domain-A lobe adjacent to...",
+  "confidence": 0.035,
+  "p_rests_on_holds": 0.07,
+  "why_this_rank": "The broad domain-A assignment reaches it, but direct contact is inferred from adjacency to a buried determinant and the shipped footprint is fragmented and glycan-risky.",
+  "rests_on": "The buried 581-584 mutational determinant reports this adjacent exposed rim, and its detached footprint pieces are jointly coverable in native E2.",
+  "where_the_mass_goes_if_it_fails": "C4, with a smaller share to C8.",
+  "what_it_is": "The glycan-edged exposed rim of the pVR3/domain-A lobe adjacent to the buried H77 581–584 folding-determinant segment on the HCV E2 back face.",
+  "why_one_candidate": "not pooled with anything: no other patch is both within 12 A (half centroid distance, half contact-graph hops) and coverable by one paratope of this antibody's reach, 17.0 A",
+  "from_patches": [
+   "P6"
+  ]
+ },
+ "note": "`confidence` on the pocket is over pockets and sums to about 1 across them. Inside an interface it is per residue in [0, 1] and sums to nothing. No residue is cut at a threshold: the whole vector is the answer.",
+ "mapping_basis": "side",
+ "checks": {
+  "unrecognised_sides": []
+ },
+ "chain_pairs": [
+  {
+   "antibody_chain": "A",
+   "antigen_chain": "C",
+   "n_residues": 14
+  },
+  {
+   "antibody_chain": "B",
+   "antigen_chain": "C",
+   "n_residues": 14
+  }
+ ],
+ "antibodies": [
+  {
+   "antibody": "antibody.pdb",
+   "chains": {
+    "A": "unknown",
+    "B": "unknown"
+   },
+   "binding_mode": null,
+   "n_residues_scored": 14,
+   "interfaces": [
+    {
+     "antibody_chain": "A",
+     "antibody_chain_type": "unknown",
+     "antigen_chain": "C",
+     "n_residues": 14,
+     "residue_confidence": {
+      "52": 0.42,
+      "55": 0.48,
+      "58": 0.72,
+      "60": 0.52,
+      "62": 0.54,
+      "161": 0.34,
+      "164": 0.68,
+      "165": 0.72,
+      "166": 0.56,
+      "167": 0.24,
+      "168": 0.76,
+      "169": 0.78,
+      "170": 0.7,
+      "179": 0.44
+     },
+     "residue_side": {
+      "52": "light",
+      "55": "light",
+      "58": "heavy",
+      "60": "light",
+      "62": "light",
+      "161": "light",
+      "164": "both",
+      "165": "both",
+      "166": "both",
+      "167": "heavy",
+      "168": "heavy",
+      "169": "heavy",
+      "170": "heavy",
+      "179": "heavy"
+     },
+     "max_confidence": 0.78,
+     "mean_confidence": 0.5643
+    },
+    {
+     "antibody_chain": "B",
+     "antibody_chain_type": "unknown",
+     "antigen_chain": "C",
+     "n_residues": 14,
+     "residue_confidence": {
+      "52": 0.42,
+      "55": 0.48,
+      "58": 0.72,
+      "60": 0.52,
+      "62": 0.54,
+      "161": 0.34,
+      "164": 0.68,
+      "165": 0.72,
+      "166": 0.56,
+      "167": 0.24,
+      "168": 0.76,
+      "169": 0.78,
+      "170": 0.7,
+      "179": 0.44
+     },
+     "residue_side": {
+      "52": "light",
+      "55": "light",
+      "58": "heavy",
+      "60": "light",
+      "62": "light",
+      "161": "light",
+      "164": "both",
+      "165": "both",
+      "166": "both",
+      "167": "heavy",
+      "168": "heavy",
+      "169": "heavy",
+      "170": "heavy",
+      "179": "heavy"
+     },
+     "max_confidence": 0.78,
+     "mean_confidence": 0.5643
+    }
+   ]
+  }
+ ],
+ "paratope": {
+  "dominant_cdrs": [
+   "H3:H2",
+   "L1:L3"
+  ],
+  "paratope_residues": [
+   "A:54",
+   "A:55",
+   "A:56",
+   "A:58",
+   "A:104",
+   "A:105",
+   "A:106",
+   "A:107",
+   "A:108",
+   "A:109",
+   "A:110",
+   "A:111",
+   "A:113",
+   "A:116",
+   "B:27",
+   "B:30",
+   "B:31",
+   "B:32",
+   "B:93",
+   "B:94",
+   "B:97"
+  ],
+  "heavy_light_split": "Heavy-dominant, approximately 70:30; H3/H2 approach the glycan-edged hydrophobic side and L1/L3 cover the charged rim.",
+  "binding_mode_union": "single-chain"
+ },
+ "residues": [
+  "C:161",
+  "C:164",
+  "C:165",
+  "C:166",
+  "C:167",
+  "C:168",
+  "C:169",
+  "C:170",
+  "C:179",
+  "C:52",
+  "C:55",
+  "C:58",
+  "C:60",
+  "C:62"
+ ],
+ "n_residues": 14,
+ "patches": [
+  {
+   "id": "P6",
+   "name": "Domain-A 581-584 lobe and exposed rim",
+   "n_residues": 18,
+   "residues": [
+    "C:161",
+    "C:164",
+    "C:165",
+    "C:166",
+    "C:167",
+    "C:168",
+    "C:169",
+    "C:170",
+    "C:171",
+    "C:172",
+    "C:173",
+    "C:174",
+    "C:175",
+    "C:176",
+    "C:177",
+    "C:180",
+    "C:183",
+    "C:184"
+   ],
+   "n_kept_by_advocate": 8,
+   "n_dropped_by_advocate": 10
+  }
+ ],
+ "pooling_provenance": {
+  "n_shared_at_pooling": 18,
+  "n_disputed_at_pooling": 0,
+  "note": "counts only, describing how the organizer grouped the phase-1 patches. The organizer's own candidate residue list is deliberately absent: the answer is the advocate's footprint, in `residues` and in `antibodies[].interfaces[]`."
+ },
+ "evidence": {
+  "advocate": {
+   "n_findings": 5,
+   "n_supports": 3,
+   "n_weakens": 2,
+   "weakest_point": "The literature-mapped C:174–C:177 segment is buried, while the proposed rim is inferred from adjacency and possible alanine-scan allostery. The C:167 sequon lies in its center.",
+   "note": "the advocate reports claim/source/date/bearing and is not asked whether a source is about this binder"
+  },
+  "judge": {
+   "tier_a_support": 4,
+   "n_support_lines": 6,
+   "verdict": "unlikely",
+   "note": "Tier A -- a source about this binder itself -- is the judge's adjudication, in assessment[].support[]. It exists nowhere in the advocate's own answer."
+  }
+ },
+ "provenance": {
+  "unverified_source_policy_fields": [
+   "gated",
+   "web_search",
+   "shell_network",
+   "gate_tools"
+  ],
+  "assembled_case_dir": "gpt-5.6-high/gather_refine/post_refactor/unreleased_20261029/nocut/casp17/H2343/case_f1b810_G_rep1",
+  "organize_case_dir": "gpt-5.6-high/gather_refine/post_refactor/unreleased_20261029/nocut/casp17/H2343/case_f1b810_GR_rep1",
+  "organize_status": "ok",
+  "judge_case_dir": "gpt-5.6-high/gather_refine/post_refactor/unreleased_20261029/nocut/casp17/H2343/case_f1b810_GJ_rep1",
+  "judge_status": "ok",
+  "packet": "gpt-5.6-high/nocut/gather/packets/case_f1b810/packet",
+  "manifest": "gpt-5.6-high/nocut/gather/packets/case_f1b810/manifest.json",
+  "advocate_case_dir": "gpt-5.6-high/gather_refine/post_refactor/unreleased_20261029/nocut/casp17/H2343/case_f1b810_GR_rep1",
+  "advocate_status": "ok"
+ }
+}

@@ -1,0 +1,288 @@
+{
+ "task": "gather",
+ "gather_mode": "batched",
+ "num_launchers": 3,
+ "policy": {
+  "evidence_cutoff": "2026-06-22",
+  "no_cutoff": false,
+  "gated": true,
+  "web_search": false,
+  "shell_network": true,
+  "gate_tools": [
+   "research",
+   "fetch",
+   "rcsb",
+   "patent",
+   "paper"
+  ]
+ },
+ "unscored": true,
+ "target": "H2373",
+ "target_set": "casp17",
+ "case": "case_0a097a",
+ "evidence_cutoff": "2026-06-22",
+ "target_release_date": "2026-06-22",
+ "retrieval_policy": "gated",
+ "input_structure": "data/staged_casp17_no_native/H2373.pdb",
+ "input_structure_sha256": "6de101bc89c71ca02e9619508c2a03a96a523de97b34239d24f30aae6c792209",
+ "briefing_source": "data/briefing/casp17/H2373/search_results.json",
+ "briefing_sha256": "9f1f099d612174ec79e4f352ae0a0e16059d8647ee3759d325f3d4d1bb941bb6",
+ "antigen_chains": [
+  "C"
+ ],
+ "antibody_files": {
+  "antibody.pdb": [
+   "A",
+   "B"
+  ]
+ },
+ "antibody_chain_types": {
+  "antibody.pdb": {
+   "A": "heavy",
+   "B": "light"
+  }
+ },
+ "stage": "gatherer",
+ "pocket": {
+  "id": "C8",
+  "judge_rank": 5,
+  "name": "The two-arm N-terminal HVEM hairpin surface: the C:7-C:15 turn and...",
+  "confidence": 0.12,
+  "p_rests_on_holds": 0.23,
+  "why_this_rank": "It accurately tracks the two HVEM-binding arms and is compact and exposed, with classical N-terminal antibody precedent. State dependence and chemically nondiscriminating neutrality keep it below C3.",
+  "rests_on": "The two-arm hairpin arrangement is presented to and conformationally captured by the target Fab.",
+  "where_the_mass_goes_if_it_fails": "C3",
+  "what_it_is": "The two-arm N-terminal HVEM hairpin surface: the C:7-C:15 turn and returning C:23-C:32 segment that form the docking element for a TNF-receptor-family entry receptor.",
+  "why_one_candidate": "not pooled with anything: no other patch is both within 12 A (half centroid distance, half contact-graph hops) and coverable by one paratope of this antibody's reach, 17.7 A",
+  "from_patches": [
+   "P9"
+  ]
+ },
+ "note": "`confidence` on the pocket is over pockets and sums to about 1 across them. Inside an interface it is per residue in [0, 1] and sums to nothing. No residue is cut at a threshold: the whole vector is the answer.",
+ "mapping_basis": "side",
+ "checks": {
+  "unrecognised_sides": []
+ },
+ "chain_pairs": [
+  {
+   "antibody_chain": "A",
+   "antigen_chain": "C",
+   "n_residues": 10
+  },
+  {
+   "antibody_chain": "B",
+   "antigen_chain": "C",
+   "n_residues": 11
+  }
+ ],
+ "antibodies": [
+  {
+   "antibody": "antibody.pdb",
+   "chains": {
+    "A": "heavy",
+    "B": "light"
+   },
+   "binding_mode": null,
+   "n_residues_scored": 16,
+   "interfaces": [
+    {
+     "antibody_chain": "A",
+     "antibody_chain_type": "heavy",
+     "antigen_chain": "C",
+     "n_residues": 10,
+     "residue_confidence": {
+      "7": 0.51,
+      "8": 0.57,
+      "9": 0.46,
+      "10": 0.56,
+      "11": 0.71,
+      "13": 0.75,
+      "14": 0.65,
+      "15": 0.77,
+      "24": 0.89,
+      "27": 0.85
+     },
+     "residue_side": {
+      "7": "heavy",
+      "8": "heavy",
+      "9": "heavy",
+      "10": "heavy",
+      "11": "both",
+      "13": "both",
+      "14": "heavy",
+      "15": "both",
+      "24": "both",
+      "27": "both"
+     },
+     "max_confidence": 0.89,
+     "mean_confidence": 0.672
+    },
+    {
+     "antibody_chain": "B",
+     "antibody_chain_type": "light",
+     "antigen_chain": "C",
+     "n_residues": 11,
+     "residue_confidence": {
+      "11": 0.71,
+      "13": 0.75,
+      "15": 0.77,
+      "23": 0.75,
+      "24": 0.89,
+      "26": 0.89,
+      "27": 0.85,
+      "28": 0.76,
+      "29": 0.81,
+      "31": 0.65,
+      "32": 0.72
+     },
+     "residue_side": {
+      "11": "both",
+      "13": "both",
+      "15": "both",
+      "23": "light",
+      "24": "both",
+      "26": "light",
+      "27": "both",
+      "28": "light",
+      "29": "light",
+      "31": "light",
+      "32": "light"
+     },
+     "max_confidence": 0.89,
+     "mean_confidence": 0.7773
+    }
+   ]
+  }
+ ],
+ "paratope": {
+  "dominant_cdrs": [
+   "H3H2L3heavy65light35H3H2C265C271L1L3C270C275bothC268C271C273nativeC264C275peptidetailfragmentlossQ265AE267AP273SretainedfoldingHDXstripbindingretainedafterdeletionreplacementC264C275protectionescapeonlycrownweaktaildynamicmembraneproxN262glycansolubleconstructoverexposedhistoricaldifferentantibodiesmapped264279partabsenttagC2recognizedfalseRECOGncaseglycanfreeNtoAprimeinterloopIgVcore4755102105nonreceptorcouplinggHglcompactmixedNb14validatesP47Q49I55D104N10520250506span25p8RSAp406noNXSbindingpostattachmentgDgHglsecondstepH3hydrophobicLVAWFRYforP47F48I55M102Arg98D104polarH2L3Q49S52N105queriesQ2Q7findingsNb14new2025coreandnonoverlapnewfootprintraw31p7refined25p8reasoningSilenceexactFabcompeteNb14C204etcsideRCands12list47p82H48p78H49p92both50p72L51p57L52p48L54p78both55p95both102p58H103p73H104p98both105p96HparatopesameDominantH3H2L3split70p30confirmpanelcompetitionpreservedreceptorinhibitassociationrefutenormalcoremutdirectreceptoronlyweaknanobodydifferentP47lowRSAnoevidenceC3recfalseNterminalbasicarc13to24then26to29HVEMhairpinexposedessentialmobileRaw37p3narrow26p5meanRSAp546bindingcompeteHVEMlockconformationnectinlessaffectedwhyABbasicR16R18K20vsacidicsD54D99D109B34B94broadfieldqueriesQ3findingsPMID11511370priorPMC3792640priorPMC3182920newgeometryreasoningSilenceexactFabbindhairpinnativevirionstateResidues13p55H14p46H15p68both16p88H18p94H19p76both20p93both21p82both23p72L24p87both26p76L27p71L29p56LdominantH3H2L3split65p35confirmmutdelcompetitionHDXrefutetruncnoeffectreceptorfaceweakstateflexrawnarrowbroadH3C4recfalsecompositecrownwhereNtermIgVcoreCtermmeetnectinridgeHVEMgrooveantibodybindhotspotsmultiple28p3fieldfoot29p9bindingcompeteNectinHVEMpreventtriggerwhyacidicaroH3fitsR222Y38F223queriesQ4Q7findingsE317contactspriorDL11deletionpriorDL11blocksbothnew4MYWcontactpriorgeometryneutralSilenceexactFabblockoneorbothResidues35p44L38p97both39p66L132p82both134p43L139p63L140p72L214p43H215p95both216p74H218p55H220p78H221p93both222p99both223p98H224p48HdominantH3H2L3split70p30confirmhotspotpanelcompetitionHDXrefuteWTmultimutweakotherantibodieslowRSAfootedgeC5recfalselateralIgVbetaface50to57plus72to76and178P50P54I55P74E76noNsequonfoot24p1RSAp406functionalmapsP54R67and547577bindingblockgDfusionactivationnotreceptorwhyprolineisoleucinefitsH1PheH3hydrophobicE76Arg98queriesQ5Q7findingsgeometryreasoningPMC10144430newPMC6258950newPMC3838169newNb14priorSilenceC178roleexactFabResidues50p68L51p57L52p54L53p65both54p89both55p91both56p74H57p58H72p47H74p72H76p83H178p36LdominantH3H1L3split65p35confirmclusterHDXretainedreceptorpostattachrefutenoeffectoccludedremotemapweakmapsotherabsC178unsupportedC6recfalsemajorneutralizingnectinfaceArg222Phe223ridgeantibodybindfunctionalhotspotsDL11bindingblockreceptorHVEMmechanismwhyacidicaroqueriesQ6Q4findingsDL11priorR222NF223InewE317priorgeometrynewsplitcomponentreasoningnotE317neutralSilenceexactrequiresR222P223competitionResidues27p45L35p34L38p95both132p77both214p39L215p94both216p74L217p63L220p81H221p94both222p99both223p98H224p51HdominantH3H2H1split75p25confirmR222F223mutcompetitionHDXrefuteWTpanelnocompetitionweakraw39p3disconnected199201refined30p9marginalallotherabsC7recfalsecompactconformationalepitopeTyr38to132139140to215223227231bindprecedentfoot25p2mechanismcompetenectinobstructHVEMgroovewhyacidicaroqueriesQ4Q7findingsE317priorPMC4248990newE317large83pheavypriorgeometryreasoningSilenceexactshareE317lowexposure227231Residues27p48L38p97both39p56L132p83both139p67L140p74L215p96both220p80H221p93both222p99both223p98H224p47H227p26H231p21HdominantH3H2L3split72p28confirmhotspotscompetitionHDXrefutepreservedweakE317differenthugeinterfaceburiededgesC8recfalseTwoarmNtermHVEMhairpin715and2332bindingbotharmsexposedfoot25p8meanRSAp44mechanismcompeteHVEMlockextensionwhybroadparatopeH3H2firstarmL1L3secondqueriesQ3findingsPMID11511370priorNature2025exactarmsnewPMID16292345neutralgeometryreasoningSilenceexactFabnativeconformationResidues7p51H8p57H9p46H10p56H11p71both13p75both14p65H15p77both23p75L24p89both26p89L27p85both28p76L29p81L31p65L32p72LdominantH3L3H2split60p40confirmdeleteremodelHVEMHDXrefutetruncnoeffectweakmobileorderedreceptorbroadH3notproofProtocolnotes8CandidateindependentfreshANARCIcomputednodockingrecognizedantigennottargetcomplexnotopenedtagexcludedpostcutoffwithheldrootcommandfailurewrapperused25results6unresolvedNeedfinalActualJSONnotthisgarbageImportant:L3",
+   "H2H2L3heavy65light35H3H2C265C271L1L3C270C275bothC268C271C273nativeC264C275peptidetailfragmentlossQ265AE267AP273SretainedfoldingHDXstripbindingretainedafterdeletionreplacementC264C275protectionescapeonlycrownweaktaildynamicmembraneproxN262glycansolubleconstructoverexposedhistoricaldifferentantibodiesmapped264279partabsenttagC2recognizedfalseRECOGncaseglycanfreeNtoAprimeinterloopIgVcore4755102105nonreceptorcouplinggHglcompactmixedNb14validatesP47Q49I55D104N10520250506span25p8RSAp406noNXSbindingpostattachmentgDgHglsecondstepH3hydrophobicLVAWFRYforP47F48I55M102Arg98D104polarH2L3Q49S52N105queriesQ2Q7findingsNb14new2025coreandnonoverlapnewfootprintraw31p7refined25p8reasoningSilenceexactFabcompeteNb14C204etcsideRCands12list47p82H48p78H49p92both50p72L51p57L52p48L54p78both55p95both102p58H103p73H104p98both105p96HparatopesameDominantH3H2L3split70p30confirmpanelcompetitionpreservedreceptorinhibitassociationrefutenormalcoremutdirectreceptoronlyweaknanobodydifferentP47lowRSAnoevidenceC3recfalseNterminalbasicarc13to24then26to29HVEMhairpinexposedessentialmobileRaw37p3narrow26p5meanRSAp546bindingcompeteHVEMlockconformationnectinlessaffectedwhyABbasicR16R18K20vsacidicsD54D99D109B34B94broadfieldqueriesQ3findingsPMID11511370priorPMC3792640priorPMC3182920newgeometryreasoningSilenceexactFabbindhairpinnativevirionstateResidues13p55H14p46H15p68both16p88H18p94H19p76both20p93both21p82both23p72L24p87both26p76L27p71L29p56LdominantH3H2L3split65p35confirmmutdelcompetitionHDXrefutetruncnoeffectreceptorfaceweakstateflexrawnarrowbroadH3C4recfalsecompositecrownwhereNtermIgVcoreCtermmeetnectinridgeHVEMgrooveantibodybindhotspotsmultiple28p3fieldfoot29p9bindingcompeteNectinHVEMpreventtriggerwhyacidicaroH3fitsR222Y38F223queriesQ4Q7findingsE317contactspriorDL11deletionpriorDL11blocksbothnew4MYWcontactpriorgeometryneutralSilenceexactFabblockoneorbothResidues35p44L38p97both39p66L132p82both134p43L139p63L140p72L214p43H215p95both216p74H218p55H220p78H221p93both222p99both223p98H224p48HdominantH3H2L3split70p30confirmhotspotpanelcompetitionHDXrefuteWTmultimutweakotherantibodieslowRSAfootedgeC5recfalselateralIgVbetaface50to57plus72to76and178P50P54I55P74E76noNsequonfoot24p1RSAp406functionalmapsP54R67and547577bindingblockgDfusionactivationnotreceptorwhyprolineisoleucinefitsH1PheH3hydrophobicE76Arg98queriesQ5Q7findingsgeometryreasoningPMC10144430newPMC6258950newPMC3838169newNb14priorSilenceC178roleexactFabResidues50p68L51p57L52p54L53p65both54p89both55p91both56p74H57p58H72p47H74p72H76p83H178p36LdominantH3H1L3split65p35confirmclusterHDXretainedreceptorpostattachrefutenoeffectoccludedremotemapweakmapsotherabsC178unsupportedC6recfalsemajorneutralizingnectinfaceArg222Phe223ridgeantibodybindfunctionalhotspotsDL11bindingblockreceptorHVEMmechanismwhyacidicaroqueriesQ6Q4findingsDL11priorR222NF223InewE317priorgeometrynewsplitcomponentreasoningnotE317neutralSilenceexactrequiresR222P223competitionResidues27p45L35p34L38p95both132p77both214p39L215p94both216p74L217p63L220p81H221p94both222p99both223p98H224p51HdominantH3H2H1split75p25confirmR222F223mutcompetitionHDXrefuteWTpanelnocompetitionweakraw39p3disconnected199201refined30p9marginalallotherabsC7recfalsecompactconformationalepitopeTyr38to132139140to215223227231bindprecedentfoot25p2mechanismcompetenectinobstructHVEMgroovewhyacidicaroqueriesQ4Q7findingsE317priorPMC4248990newE317large83pheavypriorgeometryreasoningSilenceexactshareE317lowexposure227231Residues27p48L38p97both39p56L132p83both139p67L140p74L215p96both220p80H221p93both222p99both223p98H224p47H227p26H231p21HdominantH3H2L3split72p28confirmhotspotscompetitionHDXrefutepreservedweakE317differenthugeinterfaceburiededgesC8recfalseTwoarmNtermHVEMhairpin715and2332bindingbotharmsexposedfoot25p8meanRSAp44mechanismcompeteHVEMlockextensionwhybroadparatopeH3H2firstarmL1L3secondqueriesQ3findingsPMID11511370priorNature2025exactarmsnewPMID16292345neutralgeometryreasoningSilenceexactFabnativeconformationResidues7p51H8p57H9p46H10p56H11p71both13p75both14p65H15p77both23p75L24p89both26p89L27p85both28p76L29p81L31p65L32p72LdominantH3L3H2split60p40confirmdeleteremodelHVEMHDXrefutetruncnoeffectweakmobileorderedreceptorbroadH3notproofProtocolnotes8CandidateindependentfreshANARCIcomputednodockingrecognizedantigennottargetcomplexnotopenedtagexcludedpostcutoffwithheldrootcommandfailurewrapperused25results6unresolvedNeedfinalActualJSONnotthisgarbageImportant:H2"
+  ],
+  "paratope_residues": [
+   "A:27",
+   "A:28",
+   "A:31",
+   "A:32",
+   "A:53",
+   "A:54",
+   "A:56",
+   "A:57",
+   "A:58",
+   "A:98",
+   "A:100",
+   "A:101",
+   "A:102",
+   "A:103",
+   "A:104",
+   "A:106",
+   "A:107",
+   "A:109",
+   "A:110",
+   "B:26",
+   "B:30",
+   "B:31",
+   "B:32",
+   "B:33",
+   "B:34",
+   "B:52",
+   "B:53",
+   "B:54",
+   "B:93",
+   "B:94",
+   "B:95",
+   "B:96",
+   "B:97",
+   "B:98",
+   "B:100"
+  ],
+  "heavy_light_split": "Expected contact share about 60:40 heavy:light. H3/H2 cover C:7-C:15, L1/L3 cover C:23-C:32, and both bridge C:11/C:13/C:15/C:24/C:27.",
+  "binding_mode_union": "single-chain"
+ },
+ "residues": [
+  "C:10",
+  "C:11",
+  "C:13",
+  "C:14",
+  "C:15",
+  "C:23",
+  "C:24",
+  "C:26",
+  "C:27",
+  "C:28",
+  "C:29",
+  "C:31",
+  "C:32",
+  "C:7",
+  "C:8",
+  "C:9"
+ ],
+ "n_residues": 16,
+ "patches": [
+  {
+   "id": "P9",
+   "name": "Flexible N-terminal HVEM hairpin",
+   "n_residues": 19,
+   "residues": [
+    "C:10",
+    "C:11",
+    "C:12",
+    "C:13",
+    "C:14",
+    "C:15",
+    "C:23",
+    "C:24",
+    "C:25",
+    "C:26",
+    "C:27",
+    "C:28",
+    "C:29",
+    "C:30",
+    "C:31",
+    "C:32",
+    "C:7",
+    "C:8",
+    "C:9"
+   ],
+   "n_kept_by_advocate": 16,
+   "n_dropped_by_advocate": 3
+  }
+ ],
+ "pooling_provenance": {
+  "n_shared_at_pooling": 19,
+  "n_disputed_at_pooling": 0,
+  "note": "counts only, describing how the organizer grouped the phase-1 patches. The organizer's own candidate residue list is deliberately absent: the answer is the advocate's footprint, in `residues` and in `antibodies[].interfaces[]`."
+ },
+ "evidence": {
+  "advocate": {
+   "n_findings": 4,
+   "n_supports": 3,
+   "n_weakens": 0,
+   "weakest_point": "The functional hairpin is mobile and becomes ordered on receptor binding, so the supplied arrangement may not be the antibody-presented state. No target-specific evidence shows that this Fab captures it.",
+   "note": "the advocate reports claim/source/date/bearing and is not asked whether a source is about this binder"
+  },
+  "judge": {
+   "tier_a_support": 0,
+   "n_support_lines": 5,
+   "verdict": "live",
+   "note": "Tier A -- a source about this binder itself -- is the judge's adjudication, in assessment[].support[]. It exists nowhere in the advocate's own answer."
+  }
+ },
+ "provenance": {
+  "unverified_source_policy_fields": [
+   "gated",
+   "web_search",
+   "shell_network",
+   "gate_tools"
+  ],
+  "assembled_case_dir": "gpt-5.6-high/gather_refine/post_refactor/unreleased_20261029/gated/casp17/H2373/case_0a097a_G_rep3",
+  "organize_case_dir": "gpt-5.6-high/gather_refine/post_refactor/unreleased_20261029/gated/casp17/H2373/case_0a097a_GR_rep1",
+  "organize_status": "ok",
+  "judge_case_dir": "gpt-5.6-high/gather_refine/post_refactor/unreleased_20261029/gated/casp17/H2373/case_0a097a_GJ_rep3",
+  "judge_status": "ok",
+  "packet": "gpt-5.6-high/gather/packets/case_0a097a/packet",
+  "manifest": "gpt-5.6-high/gather/packets/case_0a097a/manifest.json",
+  "advocate_case_dir": "gpt-5.6-high/gather_refine/post_refactor/unreleased_20261029/gated/casp17/H2373/case_0a097a_GR_rep1",
+  "advocate_status": "ok"
+ }
+}

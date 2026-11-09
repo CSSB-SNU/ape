@@ -1,0 +1,356 @@
+{
+ "task": "gather",
+ "gather_mode": "batched",
+ "num_launchers": 3,
+ "policy": {
+  "evidence_cutoff": "2026-05-14",
+  "no_cutoff": false,
+  "gated": true,
+  "web_search": false,
+  "shell_network": true,
+  "gate_tools": [
+   "research",
+   "fetch",
+   "rcsb",
+   "patent",
+   "paper"
+  ]
+ },
+ "unscored": false,
+ "target": "H2338",
+ "target_set": "casp17",
+ "case": "case_718c80",
+ "evidence_cutoff": "2026-05-14",
+ "target_release_date": "2026-05-14",
+ "retrieval_policy": "gated",
+ "input_structure": "structures/H2338.pdb",
+ "input_structure_sha256": null,
+ "briefing_source": null,
+ "briefing_sha256": null,
+ "antigen_chains": [
+  "C",
+  "D"
+ ],
+ "antibody_files": {
+  "antibody.pdb": [
+   "A",
+   "B"
+  ]
+ },
+ "antibody_chain_types": {
+  "antibody.pdb": {
+   "A": "unknown",
+   "B": "unknown"
+  }
+ },
+ "truth_file": "data/truth/casp17/H2338.epitope.json",
+ "stage": "gatherer",
+ "pocket": {
+  "id": "C3",
+  "judge_rank": 2,
+  "name": "The A2 beta-sheet peptide pocket and adjacent distal polar lobe: a...",
+  "confidence": 0.3,
+  "p_rests_on_holds": 0.38,
+  "why_this_rank": "C3 has the clearest functional surface and plausible H3 anchor, but its evidence maps another ligand and requires the hardest binding mode.",
+  "rests_on": "REGN9933 inserts H3 into the DFP pocket while retaining distal-lobe reach beside the C:108 glycan.",
+  "where_the_mass_goes_if_it_fails": "C2 takes most of the weight.",
+  "what_it_is": "The A2 beta-sheet peptide pocket and adjacent distal polar lobe: a recessed K103/N106/H143/I146/L148 pocket connected across the 148/151/163 rim to the exposed 153-159 shelf.",
+  "why_one_candidate": "geometry pooled 2 patches (P4, P7): P4+P7 at 3.84 A, union radius 15.06 A. Every union fits inside this antibody's paratope reach of 16.9 A. No session judged these to be the same surface.",
+  "from_patches": [
+   "P4",
+   "P7"
+  ]
+ },
+ "note": "`confidence` on the pocket is over pockets and sums to about 1 across them. Inside an interface it is per residue in [0, 1] and sums to nothing. No residue is cut at a threshold: the whole vector is the answer.",
+ "mapping_basis": "side",
+ "checks": {
+  "unrecognised_sides": []
+ },
+ "chain_pairs": [
+  {
+   "antibody_chain": "A",
+   "antigen_chain": "C",
+   "n_residues": 19
+  },
+  {
+   "antibody_chain": "B",
+   "antigen_chain": "C",
+   "n_residues": 19
+  }
+ ],
+ "antibodies": [
+  {
+   "antibody": "antibody.pdb",
+   "chains": {
+    "A": "unknown",
+    "B": "unknown"
+   },
+   "binding_mode": null,
+   "n_residues_scored": 19,
+   "interfaces": [
+    {
+     "antibody_chain": "A",
+     "antibody_chain_type": "unknown",
+     "antigen_chain": "C",
+     "n_residues": 19,
+     "residue_confidence": {
+      "103": 0.91,
+      "105": 0.76,
+      "106": 0.92,
+      "107": 0.74,
+      "108": 0.24,
+      "109": 0.7,
+      "110": 0.34,
+      "132": 0.42,
+      "134": 0.44,
+      "143": 0.86,
+      "146": 0.56,
+      "148": 0.82,
+      "151": 0.52,
+      "153": 0.82,
+      "154": 0.68,
+      "158": 0.67,
+      "159": 0.72,
+      "161": 0.42,
+      "163": 0.76
+     },
+     "residue_side": {
+      "103": "heavy",
+      "105": "heavy",
+      "106": "heavy",
+      "107": "both",
+      "108": "light",
+      "109": "both",
+      "110": "light",
+      "132": "heavy",
+      "134": "heavy",
+      "143": "heavy",
+      "146": "heavy",
+      "148": "both",
+      "151": "both",
+      "153": "light",
+      "154": "light",
+      "158": "light",
+      "159": "light",
+      "161": "light",
+      "163": "both"
+     },
+     "max_confidence": 0.92,
+     "mean_confidence": 0.6474,
+     "precision_vs_truth": 0.3158,
+     "n_in_truth": 6
+    },
+    {
+     "antibody_chain": "B",
+     "antibody_chain_type": "unknown",
+     "antigen_chain": "C",
+     "n_residues": 19,
+     "residue_confidence": {
+      "103": 0.91,
+      "105": 0.76,
+      "106": 0.92,
+      "107": 0.74,
+      "108": 0.24,
+      "109": 0.7,
+      "110": 0.34,
+      "132": 0.42,
+      "134": 0.44,
+      "143": 0.86,
+      "146": 0.56,
+      "148": 0.82,
+      "151": 0.52,
+      "153": 0.82,
+      "154": 0.68,
+      "158": 0.67,
+      "159": 0.72,
+      "161": 0.42,
+      "163": 0.76
+     },
+     "residue_side": {
+      "103": "heavy",
+      "105": "heavy",
+      "106": "heavy",
+      "107": "both",
+      "108": "light",
+      "109": "both",
+      "110": "light",
+      "132": "heavy",
+      "134": "heavy",
+      "143": "heavy",
+      "146": "heavy",
+      "148": "both",
+      "151": "both",
+      "153": "light",
+      "154": "light",
+      "158": "light",
+      "159": "light",
+      "161": "light",
+      "163": "both"
+     },
+     "max_confidence": 0.92,
+     "mean_confidence": 0.6474,
+     "precision_vs_truth": 0.3158,
+     "n_in_truth": 6
+    }
+   ]
+  }
+ ],
+ "paratope": {
+  "dominant_cdrs": [
+   "H3rde3xrde3xrdexL1rde1xrde1xrdexL3rde1xrde1xrdexH2rde2xrde2xrde2xrdexwouldconfirm:H3",
+   "L1rde1xrde1xrdexL3rde1xrde1xrdexH2rde2xrde2xrde2xrdexwouldconfirm:L1",
+   "L3rde1xrde1xrdexH2rde2xrde2xrde2xrdexwouldconfirm:L3",
+   "H2rde2xrde2xrde2xrdexwouldconfirm:H2"
+  ],
+  "paratope_residues": [
+   "A:28",
+   "A:31",
+   "A:32",
+   "A:52",
+   "A:56",
+   "A:57",
+   "A:101",
+   "A:102",
+   "A:103",
+   "A:104",
+   "A:105",
+   "A:106",
+   "A:108",
+   "A:112",
+   "B:27",
+   "B:28",
+   "B:30",
+   "B:31",
+   "B:32",
+   "B:52",
+   "B:92",
+   "B:93",
+   "B:94",
+   "B:95",
+   "B:96"
+  ],
+  "heavy_light_split": "Heavy-dominant pocket engagement: H3 occupies C:103/C:105/C:106/C:132/C:134/C:143/C:146, both chains meet across C:107/C:109/C:148/C:151/C:163, and L1/L3 cover C:108/C:110/C:153-C:161.",
+  "binding_mode_union": "single-chain"
+ },
+ "residues": [
+  "C:103",
+  "C:105",
+  "C:106",
+  "C:107",
+  "C:108",
+  "C:109",
+  "C:110",
+  "C:132",
+  "C:134",
+  "C:143",
+  "C:146",
+  "C:148",
+  "C:151",
+  "C:153",
+  "C:154",
+  "C:158",
+  "C:159",
+  "C:161",
+  "C:163"
+ ],
+ "n_residues": 19,
+ "patches": [
+  {
+   "id": "P4",
+   "name": "A2 DFP-peptide groove and distal 151-159 lobe",
+   "n_residues": 21,
+   "residues": [
+    "C:101",
+    "C:103",
+    "C:104",
+    "C:105",
+    "C:106",
+    "C:107",
+    "C:108",
+    "C:109",
+    "C:110",
+    "C:148",
+    "C:151",
+    "C:152",
+    "C:153",
+    "C:154",
+    "C:155",
+    "C:156",
+    "C:157",
+    "C:158",
+    "C:159",
+    "C:161",
+    "C:163"
+   ],
+   "n_kept_by_advocate": 15,
+   "n_dropped_by_advocate": 6
+  },
+  {
+   "id": "P7",
+   "name": "A2 beta-sheet ligand pocket and rim",
+   "n_residues": 13,
+   "residues": [
+    "C:103",
+    "C:105",
+    "C:106",
+    "C:107",
+    "C:108",
+    "C:132",
+    "C:134",
+    "C:138",
+    "C:142",
+    "C:143",
+    "C:146",
+    "C:148",
+    "C:151"
+   ],
+   "n_kept_by_advocate": 11,
+   "n_dropped_by_advocate": 2
+  }
+ ],
+ "pooling_provenance": {
+  "n_shared_at_pooling": 7,
+  "n_disputed_at_pooling": 20,
+  "note": "counts only, describing how the organizer grouped the phase-1 patches. The organizer's own candidate residue list is deliberately absent: the answer is the advocate's footprint, in `residues` and in `antibodies[].interfaces[]`."
+ },
+ "evidence": {
+  "advocate": {
+   "n_findings": 10,
+   "n_supports": 9,
+   "n_weakens": 1,
+   "weakest_point": "The evidence identifies a ligand pocket, not a REGN9933 epitope. C:108 is glycosylated, several floor residues are recessed, and the pocket-to-lobe span leaves little tolerance for simultaneous H3 penetration and distal light-chain engagement.",
+   "note": "the advocate reports claim/source/date/bearing and is not asked whether a source is about this binder"
+  },
+  "judge": {
+   "tier_a_support": 1,
+   "n_support_lines": 8,
+   "verdict": "live",
+   "note": "Tier A -- a source about this binder itself -- is the judge's adjudication, in assessment[].support[]. It exists nowhere in the advocate's own answer."
+  }
+ },
+ "provenance": {
+  "unverified_source_policy_fields": [
+   "gated",
+   "web_search",
+   "shell_network",
+   "gate_tools"
+  ],
+  "assembled_case_dir": "gpt-5.6-high/gather_refine/post_refactor/released_structure_20261030/casp17/H2338/case_718c80_G_rep2",
+  "organize_case_dir": "gpt-5.6-high/gather_refine/post_refactor/released_structure_20261030/casp17/H2338/case_718c80_GR_rep1",
+  "organize_status": "ok",
+  "judge_case_dir": "gpt-5.6-high/gather_refine/post_refactor/released_structure_20261030/casp17/H2338/case_718c80_GJ_rep2",
+  "judge_status": "ok",
+  "packet": "gpt-5.6-high/gather/packets/case_718c80/packet",
+  "manifest": "gpt-5.6-high/gather/packets/case_718c80/manifest.json",
+  "advocate_case_dir": "gpt-5.6-high/gather_refine/post_refactor/released_structure_20261030/casp17/H2338/case_718c80_GR_rep1",
+  "advocate_status": "ok"
+ },
+ "score": {
+  "precision": 0.3158,
+  "recall": 0.3529,
+  "f1": 0.3333,
+  "n_pred": 19,
+  "n_true": 17,
+  "n_hit": 6
+ }
+}

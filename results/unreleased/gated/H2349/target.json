@@ -1,0 +1,237 @@
+{
+ "target": "H2349",
+ "target_set": "casp17",
+ "case": "case_e333d6",
+ "task": "gather",
+ "gather_mode": "batched",
+ "num_launchers": 3,
+ "policy": {
+  "evidence_cutoff": "2026-06-05",
+  "no_cutoff": false,
+  "gated": true,
+  "web_search": false,
+  "shell_network": true,
+  "gate_tools": [
+   "research",
+   "fetch",
+   "rcsb",
+   "patent",
+   "paper"
+  ]
+ },
+ "unscored": true,
+ "evidence_cutoff": "2026-06-05",
+ "target_release_date": "2026-06-05",
+ "retrieval_policy": "gated",
+ "antigen_chains": [
+  "A"
+ ],
+ "antibody_files": {
+  "antibody.pdb": [
+   "B",
+   "C"
+  ]
+ },
+ "antibody_chain_types": {
+  "antibody.pdb": {
+   "B": "unknown",
+   "C": "unknown"
+  }
+ },
+ "input_structure": "data/staged_casp17_no_native/H2349.pdb",
+ "input_structure_sha256": "ed3bcb0b0799f7f8db3a7695ea1da3ddce30d9c2312cdd2e5d844f6e396bdd86",
+ "briefing_source": "data/briefing/casp17/H2349/search_results.json",
+ "briefing_sha256": "6aab33c7c98904b5652d2b15ee1575cd366219e364eafe5cb61256cd5814ad57",
+ "recognized_complex": {
+  "organize": null,
+  "judge": false
+ },
+ "recognition_note": "The antigen was identified as human IL6ST/gp130. A 2024 paper shows a 4.40-A gp130–B-S12 Fab reconstruction and historical sources map B-S12 regionally, but no dated source links the supplied VH/VL sequences to B-S12, A5, or G7. I therefore did not identify the supplied antibody or promote B-S12 evidence to Tier A.",
+ "what_separated_them": "No candidate had confirmed Tier A evidence about the supplied binder. The order is conditional on dated B-S12 evidence placing a non-sequence-identified Fab regionally at membrane-distal D2/D2-D3, independent geometry favoring compact exposed footprints, and overlap analysis showing that C1/C3/C4 are competing drawings of one broad region rather than independent confirmations. C1 narrowly wins compactness and regional placement; C3/C4 retain substantial mass. Tier B chemistry mainly keeps C4/C8 live and filters C2 rather than localizing by itself.",
+ "not_pooled": [],
+ "provenance": {
+  "unverified_source_policy_fields": [
+   "gated",
+   "web_search",
+   "shell_network",
+   "gate_tools"
+  ],
+  "assembled_case_dir": "gpt-5.6-high/gather_refine/post_refactor/unreleased_20261029/gated/casp17/H2349/case_e333d6_G_rep1",
+  "organize_case_dir": "gpt-5.6-high/gather_refine/post_refactor/unreleased_20261029/gated/casp17/H2349/case_e333d6_GR_rep1",
+  "organize_status": "ok",
+  "judge_case_dir": "gpt-5.6-high/gather_refine/post_refactor/unreleased_20261029/gated/casp17/H2349/case_e333d6_GJ_rep1",
+  "judge_status": "ok",
+  "packet": "gpt-5.6-high/gather/packets/case_e333d6/packet",
+  "manifest": "gpt-5.6-high/gather/packets/case_e333d6/manifest.json"
+ },
+ "pockets": [
+  {
+   "id": "C1",
+   "judge_rank": 1,
+   "name": "The membrane-distal outer face of gp130 D2: an exposed...",
+   "confidence": 0.32,
+   "mapping_basis": "side",
+   "n_residues": 19,
+   "chain_pairs": [
+    {
+     "antibody_chain": "B",
+     "antigen_chain": "A",
+     "n_residues": 19
+    },
+    {
+     "antibody_chain": "C",
+     "antigen_chain": "A",
+     "n_residues": 19
+    }
+   ],
+   "file": "pocket.C1.json"
+  },
+  {
+   "id": "C3",
+   "judge_rank": 2,
+   "name": "The functional gp130 D2 cytokine-binding ridge spanning the...",
+   "confidence": 0.28,
+   "mapping_basis": "side",
+   "n_residues": 25,
+   "chain_pairs": [
+    {
+     "antibody_chain": "B",
+     "antigen_chain": "A",
+     "n_residues": 25
+    },
+    {
+     "antibody_chain": "C",
+     "antigen_chain": "A",
+     "n_residues": 25
+    }
+   ],
+   "file": "pocket.C3.json"
+  },
+  {
+   "id": "C4",
+   "judge_rank": 3,
+   "name": "The lower D2-D3 junction joining the aromatic end of the D2 ligand...",
+   "confidence": 0.19,
+   "mapping_basis": "side",
+   "n_residues": 18,
+   "chain_pairs": [
+    {
+     "antibody_chain": "B",
+     "antigen_chain": "A",
+     "n_residues": 18
+    },
+    {
+     "antibody_chain": "C",
+     "antigen_chain": "A",
+     "n_residues": 18
+    }
+   ],
+   "file": "pocket.C4.json"
+  },
+  {
+   "id": "C8",
+   "judge_rank": 4,
+   "name": "A distinct lateral basic face of gp130 D3 centered on K219, K228...",
+   "confidence": 0.08,
+   "mapping_basis": "side",
+   "n_residues": 22,
+   "chain_pairs": [
+    {
+     "antibody_chain": "B",
+     "antigen_chain": "A",
+     "n_residues": 22
+    },
+    {
+     "antibody_chain": "C",
+     "antigen_chain": "A",
+     "n_residues": 22
+    }
+   ],
+   "file": "pocket.C8.json"
+  },
+  {
+   "id": "C7",
+   "judge_rank": 5,
+   "name": "The exposed apex of gp130 D1 where the free N-terminal strand...",
+   "confidence": 0.045,
+   "mapping_basis": "side",
+   "n_residues": 21,
+   "chain_pairs": [
+    {
+     "antibody_chain": "B",
+     "antigen_chain": "A",
+     "n_residues": 21
+    },
+    {
+     "antibody_chain": "C",
+     "antigen_chain": "A",
+     "n_residues": 21
+    }
+   ],
+   "file": "pocket.C7.json"
+  },
+  {
+   "id": "C6",
+   "judge_rank": 6,
+   "name": "The membrane-distal lateral face of gp130 D1, joining an A:34-A:62...",
+   "confidence": 0.035,
+   "mapping_basis": "side",
+   "n_residues": 22,
+   "chain_pairs": [
+    {
+     "antibody_chain": "B",
+     "antigen_chain": "A",
+     "n_residues": 22
+    },
+    {
+     "antibody_chain": "C",
+     "antigen_chain": "A",
+     "n_residues": 22
+    }
+   ],
+   "file": "pocket.C6.json"
+  },
+  {
+   "id": "C5",
+   "judge_rank": 7,
+   "name": "An outward-facing basic ridge across the gp130 D5-D6 junction, above...",
+   "confidence": 0.025,
+   "mapping_basis": "side",
+   "n_residues": 23,
+   "chain_pairs": [
+    {
+     "antibody_chain": "B",
+     "antigen_chain": "A",
+     "n_residues": 23
+    },
+    {
+     "antibody_chain": "C",
+     "antigen_chain": "A",
+     "n_residues": 23
+    }
+   ],
+   "file": "pocket.C5.json"
+  },
+  {
+   "id": "C2",
+   "judge_rank": 8,
+   "name": "A compact outer face of gp130 D4 centered on a glycosylated turn...",
+   "confidence": 0.025,
+   "mapping_basis": "side",
+   "n_residues": 14,
+   "chain_pairs": [
+    {
+     "antibody_chain": "B",
+     "antigen_chain": "A",
+     "n_residues": 14
+    },
+    {
+     "antibody_chain": "C",
+     "antigen_chain": "A",
+     "n_residues": 14
+    }
+   ],
+   "file": "pocket.C2.json"
+  }
+ ]
+}

@@ -1,0 +1,274 @@
+{
+ "task": "gather",
+ "gather_mode": "batched",
+ "num_launchers": 3,
+ "policy": {
+  "evidence_cutoff": "2026-06-22",
+  "no_cutoff": false,
+  "gated": true,
+  "web_search": false,
+  "shell_network": true,
+  "gate_tools": [
+   "research",
+   "fetch",
+   "rcsb",
+   "patent",
+   "paper"
+  ]
+ },
+ "unscored": true,
+ "target": "H2374",
+ "target_set": "casp17",
+ "case": "case_6a7664",
+ "evidence_cutoff": "2026-06-22",
+ "target_release_date": "2026-06-22",
+ "retrieval_policy": "gated",
+ "input_structure": "data/staged_casp17_no_native/H2374.pdb",
+ "input_structure_sha256": "cce06a976275bf0894b0dae47679691f93a74bbcd1b28cd9b17fe6bfe49200de",
+ "briefing_source": "data/briefing/casp17/H2374/search_results.json",
+ "briefing_sha256": "6da47e89d19b7042483ab1c9442ed32a899f59c40f45416b4c36e0ae0c6c84d7",
+ "antigen_chains": [
+  "C"
+ ],
+ "antibody_files": {
+  "antibody.pdb": [
+   "A",
+   "B"
+  ]
+ },
+ "antibody_chain_types": {
+  "antibody.pdb": {
+   "A": "heavy",
+   "B": "light"
+  }
+ },
+ "stage": "gatherer",
+ "pocket": {
+  "id": "C5",
+  "judge_rank": 6,
+  "name": "The mobile N-terminal hairpin that folds around the TNFR-family...",
+  "confidence": 0.08,
+  "p_rests_on_holds": 0.18,
+  "why_this_rank": "It is exposed and functional but broad, mobile, and supported chiefly by a receptor footprint rather than an antibody footprint; direct binding also explains only the HVEM entry route.",
+  "rests_on": "HAB13 directly recognizes the mobile HVEM hairpin rather than indirectly preventing its formation from the receptor face.",
+  "where_the_mass_goes_if_it_fails": "C4.",
+  "what_it_is": "The mobile N-terminal hairpin that folds around the TNFR-family receptor HVEM during one mode of alphaherpesvirus entry.",
+  "why_one_candidate": "not pooled with anything: no other patch is both within 12 A (half centroid distance, half contact-graph hops) and coverable by one paratope of this antibody's reach, 17.3 A",
+  "from_patches": [
+   "P6"
+  ]
+ },
+ "note": "`confidence` on the pocket is over pockets and sums to about 1 across them. Inside an interface it is per residue in [0, 1] and sums to nothing. No residue is cut at a threshold: the whole vector is the answer.",
+ "mapping_basis": "side",
+ "checks": {
+  "unrecognised_sides": []
+ },
+ "chain_pairs": [
+  {
+   "antibody_chain": "A",
+   "antigen_chain": "C",
+   "n_residues": 8
+  },
+  {
+   "antibody_chain": "B",
+   "antigen_chain": "C",
+   "n_residues": 9
+  }
+ ],
+ "antibodies": [
+  {
+   "antibody": "antibody.pdb",
+   "chains": {
+    "A": "heavy",
+    "B": "light"
+   },
+   "binding_mode": null,
+   "n_residues_scored": 13,
+   "interfaces": [
+    {
+     "antibody_chain": "A",
+     "antibody_chain_type": "heavy",
+     "antigen_chain": "C",
+     "n_residues": 8,
+     "residue_confidence": {
+      "11": 0.8,
+      "24": 0.9,
+      "26": 0.92,
+      "27": 0.94,
+      "28": 0.83,
+      "29": 0.78,
+      "31": 0.58,
+      "32": 0.65
+     },
+     "residue_side": {
+      "11": "both",
+      "24": "both",
+      "26": "both",
+      "27": "both",
+      "28": "heavy",
+      "29": "heavy",
+      "31": "heavy",
+      "32": "heavy"
+     },
+     "max_confidence": 0.94,
+     "mean_confidence": 0.8
+    },
+    {
+     "antibody_chain": "B",
+     "antibody_chain_type": "light",
+     "antigen_chain": "C",
+     "n_residues": 9,
+     "residue_confidence": {
+      "7": 0.58,
+      "8": 0.65,
+      "11": 0.8,
+      "13": 0.82,
+      "14": 0.76,
+      "15": 0.66,
+      "24": 0.9,
+      "26": 0.92,
+      "27": 0.94
+     },
+     "residue_side": {
+      "7": "light",
+      "8": "light",
+      "11": "both",
+      "13": "light",
+      "14": "light",
+      "15": "light",
+      "24": "both",
+      "26": "both",
+      "27": "both"
+     },
+     "max_confidence": 0.94,
+     "mean_confidence": 0.7811
+    }
+   ]
+  }
+ ],
+ "paratope": {
+  "dominant_cdrs": [
+   "A:H3",
+   "B:L1"
+  ],
+  "paratope_residues": [
+   "A:32",
+   "A:33",
+   "A:35",
+   "A:54",
+   "A:55",
+   "A:56",
+   "A:103",
+   "A:104",
+   "A:105",
+   "A:106",
+   "A:107",
+   "A:109",
+   "A:110",
+   "A:114",
+   "A:115",
+   "B:27",
+   "B:28",
+   "B:31",
+   "B:32",
+   "B:33",
+   "B:34",
+   "B:35",
+   "B:36",
+   "B:58",
+   "B:98",
+   "B:102"
+  ],
+  "heavy_light_split": "H3 covers the 24-32 arm; long L1 covers the 7-15 arm. C:11 and C:24/C:26/C:27 form the convergent central zone, so the split is heavy-biased but genuinely two-pronged.",
+  "binding_mode_union": "single-chain"
+ },
+ "residues": [
+  "C:11",
+  "C:13",
+  "C:14",
+  "C:15",
+  "C:24",
+  "C:26",
+  "C:27",
+  "C:28",
+  "C:29",
+  "C:31",
+  "C:32",
+  "C:7",
+  "C:8"
+ ],
+ "n_residues": 13,
+ "patches": [
+  {
+   "id": "P6",
+   "name": "HVEM N-terminal hairpin",
+   "n_residues": 25,
+   "residues": [
+    "C:10",
+    "C:11",
+    "C:12",
+    "C:13",
+    "C:14",
+    "C:15",
+    "C:16",
+    "C:17",
+    "C:18",
+    "C:20",
+    "C:22",
+    "C:24",
+    "C:25",
+    "C:26",
+    "C:27",
+    "C:28",
+    "C:29",
+    "C:30",
+    "C:31",
+    "C:32",
+    "C:33",
+    "C:6",
+    "C:7",
+    "C:8",
+    "C:9"
+   ],
+   "n_kept_by_advocate": 13,
+   "n_dropped_by_advocate": 12
+  }
+ ],
+ "pooling_provenance": {
+  "n_shared_at_pooling": 25,
+  "n_disputed_at_pooling": 0,
+  "note": "counts only, describing how the organizer grouped the phase-1 patches. The organizer's own candidate residue list is deliberately absent: the answer is the advocate's footprint, in `residues` and in `antibodies[].interfaces[]`."
+ },
+ "evidence": {
+  "advocate": {
+   "n_findings": 5,
+   "n_supports": 3,
+   "n_weakens": 1,
+   "weakest_point": "The mobile hairpin pays a conformational-entropy cost and direct conventional-Fab precedent was not found; moreover, receptor-face antibodies can block HVEM indirectly by preventing hairpin formation.",
+   "note": "the advocate reports claim/source/date/bearing and is not asked whether a source is about this binder"
+  },
+  "judge": {
+   "tier_a_support": 1,
+   "n_support_lines": 4,
+   "verdict": "unlikely",
+   "note": "Tier A -- a source about this binder itself -- is the judge's adjudication, in assessment[].support[]. It exists nowhere in the advocate's own answer."
+  }
+ },
+ "provenance": {
+  "unverified_source_policy_fields": [
+   "gated",
+   "web_search",
+   "shell_network",
+   "gate_tools"
+  ],
+  "assembled_case_dir": "gpt-5.6-high/gather_refine/post_refactor/unreleased_20261029/gated/casp17/H2374/case_6a7664_G_rep5",
+  "organize_case_dir": "gpt-5.6-high/gather_refine/post_refactor/unreleased_20261029/gated/casp17/H2374/case_6a7664_GR_rep5",
+  "organize_status": "ok",
+  "judge_case_dir": "gpt-5.6-high/gather_refine/post_refactor/unreleased_20261029/gated/casp17/H2374/case_6a7664_GJ_rep5",
+  "judge_status": "ok",
+  "packet": "gpt-5.6-high/gather/packets/case_6a7664/packet",
+  "manifest": "gpt-5.6-high/gather/packets/case_6a7664/manifest.json",
+  "advocate_case_dir": "gpt-5.6-high/gather_refine/post_refactor/unreleased_20261029/gated/casp17/H2374/case_6a7664_GR_rep5",
+  "advocate_status": "ok"
+ }
+}

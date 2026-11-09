@@ -1,0 +1,332 @@
+{
+ "task": "gather",
+ "gather_mode": "batched",
+ "num_launchers": 3,
+ "policy": {
+  "evidence_cutoff": "2026-05-21",
+  "no_cutoff": false,
+  "gated": true,
+  "web_search": false,
+  "shell_network": true,
+  "gate_tools": [
+   "research",
+   "fetch",
+   "rcsb",
+   "patent",
+   "paper"
+  ]
+ },
+ "unscored": false,
+ "target": "H1346_agCD",
+ "target_set": "casp17",
+ "case": "case_fed304",
+ "evidence_cutoff": "2026-05-21",
+ "target_release_date": "2026-05-21",
+ "retrieval_policy": "gated",
+ "input_structure": "structures/H1346_agCD.pdb",
+ "input_structure_sha256": null,
+ "briefing_source": null,
+ "briefing_sha256": null,
+ "antigen_chains": [
+  "C",
+  "D"
+ ],
+ "antibody_files": {
+  "antibody.pdb": [
+   "A",
+   "B"
+  ]
+ },
+ "antibody_chain_types": {
+  "antibody.pdb": {
+   "A": "heavy",
+   "B": "light"
+  }
+ },
+ "truth_file": "data/truth/casp17/H1346_agCD.epitope.json",
+ "stage": "gatherer",
+ "pocket": {
+  "id": "C3",
+  "judge_rank": 4,
+  "name": "A single-antigen-chain idiotope on the exposed anti-BCMA VH...",
+  "confidence": 0.06,
+  "p_rests_on_holds": 0.15,
+  "why_this_rank": "VH restriction fits common-light arm specificity, but there is no binder map and the inherited footprint contains poorly exposed residues.",
+  "rests_on": "The binder is anti-idiotypic and recognizes VH without requiring VL contacts.",
+  "where_the_mass_goes_if_it_fails": "C2",
+  "what_it_is": "A single-antigen-chain idiotope on the exposed anti-BCMA VH combining-site face, centered on the unusually long, cystine-stapled C:H3 knob and its C:H2/H1 flank.",
+  "why_one_candidate": "geometry pooled 2 patches (P3, P7): P3+P7 at 0.84 A, union radius 16.85 A. Every union fits inside this antibody's paratope reach of 16.9 A. No session judged these to be the same surface.",
+  "from_patches": [
+   "P3",
+   "P7"
+  ]
+ },
+ "note": "`confidence` on the pocket is over pockets and sums to about 1 across them. Inside an interface it is per residue in [0, 1] and sums to nothing. No residue is cut at a threshold: the whole vector is the answer.",
+ "mapping_basis": "side",
+ "checks": {
+  "unrecognised_sides": []
+ },
+ "chain_pairs": [
+  {
+   "antibody_chain": "A",
+   "antigen_chain": "C",
+   "n_residues": 10
+  },
+  {
+   "antibody_chain": "B",
+   "antigen_chain": "C",
+   "n_residues": 15
+  }
+ ],
+ "antibodies": [
+  {
+   "antibody": "antibody.pdb",
+   "chains": {
+    "A": "heavy",
+    "B": "light"
+   },
+   "binding_mode": null,
+   "n_residues_scored": 19,
+   "interfaces": [
+    {
+     "antibody_chain": "A",
+     "antibody_chain_type": "heavy",
+     "antigen_chain": "C",
+     "n_residues": 10,
+     "residue_confidence": {
+      "100": 0.65,
+      "101": 0.9,
+      "102": 0.35,
+      "103": 0.94,
+      "104": 0.94,
+      "105": 0.99,
+      "106": 0.98,
+      "107": 0.6,
+      "108": 0.84,
+      "114": 0.12
+     },
+     "residue_side": {
+      "100": "heavy",
+      "101": "both",
+      "102": "heavy",
+      "103": "both",
+      "104": "both",
+      "105": "both",
+      "106": "both",
+      "107": "heavy",
+      "108": "both",
+      "114": "heavy"
+     },
+     "max_confidence": 0.99,
+     "mean_confidence": 0.731,
+     "precision_vs_truth": 0.0,
+     "n_in_truth": 0
+    },
+    {
+     "antibody_chain": "B",
+     "antibody_chain_type": "light",
+     "antigen_chain": "C",
+     "n_residues": 15,
+     "residue_confidence": {
+      "30": 0.38,
+      "31": 0.56,
+      "32": 0.36,
+      "33": 0.3,
+      "53": 0.5,
+      "54": 0.74,
+      "56": 0.68,
+      "57": 0.57,
+      "58": 0.43,
+      "101": 0.9,
+      "103": 0.94,
+      "104": 0.94,
+      "105": 0.99,
+      "106": 0.98,
+      "108": 0.84
+     },
+     "residue_side": {
+      "30": "light",
+      "31": "light",
+      "32": "light",
+      "33": "light",
+      "53": "light",
+      "54": "light",
+      "56": "light",
+      "57": "light",
+      "58": "light",
+      "101": "both",
+      "103": "both",
+      "104": "both",
+      "105": "both",
+      "106": "both",
+      "108": "both"
+     },
+     "max_confidence": 0.99,
+     "mean_confidence": 0.674,
+     "precision_vs_truth": 0.0,
+     "n_in_truth": 0
+    }
+   ]
+  }
+ ],
+ "paratope": {
+  "dominant_cdrs": [
+   "A:H3",
+   "B:L1",
+   "B:L3",
+   "A:H2"
+  ],
+  "paratope_residues": [
+   "A:53",
+   "A:54",
+   "A:56",
+   "A:97",
+   "A:100",
+   "A:101",
+   "A:102",
+   "A:103",
+   "A:104",
+   "A:105",
+   "A:106",
+   "A:109",
+   "B:27",
+   "B:28",
+   "B:30",
+   "B:32",
+   "B:52",
+   "B:93",
+   "B:94"
+  ],
+  "heavy_light_split": "Heavy-dominant, about 60:40: A:H3/H2 cover C:H3, while B:L1/L3 cover the C:H1/H2 flank; C:101 and C:103-C:108 are both-chain center contacts.",
+  "binding_mode_union": "single-chain"
+ },
+ "residues": [
+  "C:100",
+  "C:101",
+  "C:102",
+  "C:103",
+  "C:104",
+  "C:105",
+  "C:106",
+  "C:107",
+  "C:108",
+  "C:114",
+  "C:30",
+  "C:31",
+  "C:32",
+  "C:33",
+  "C:53",
+  "C:54",
+  "C:56",
+  "C:57",
+  "C:58"
+ ],
+ "n_residues": 19,
+ "patches": [
+  {
+   "id": "P3",
+   "name": "heavy-variable-only idiotope on the exposed C:H3/H2 face",
+   "n_residues": 19,
+   "residues": [
+    "C:100",
+    "C:101",
+    "C:103",
+    "C:104",
+    "C:105",
+    "C:106",
+    "C:107",
+    "C:108",
+    "C:114",
+    "C:26",
+    "C:28",
+    "C:30",
+    "C:31",
+    "C:32",
+    "C:53",
+    "C:54",
+    "C:56",
+    "C:57",
+    "C:58"
+   ],
+   "n_kept_by_advocate": 17,
+   "n_dropped_by_advocate": 2
+  },
+  {
+   "id": "P7",
+   "name": "VH-dominant anti-BCMA idiotope",
+   "n_residues": 23,
+   "residues": [
+    "C:100",
+    "C:101",
+    "C:102",
+    "C:103",
+    "C:104",
+    "C:105",
+    "C:106",
+    "C:107",
+    "C:108",
+    "C:109",
+    "C:110",
+    "C:114",
+    "C:30",
+    "C:31",
+    "C:32",
+    "C:33",
+    "C:52",
+    "C:53",
+    "C:54",
+    "C:55",
+    "C:56",
+    "C:57",
+    "C:58"
+   ],
+   "n_kept_by_advocate": 19,
+   "n_dropped_by_advocate": 4
+  }
+ ],
+ "pooling_provenance": {
+  "n_shared_at_pooling": 17,
+  "n_disputed_at_pooling": 8,
+  "note": "counts only, describing how the organizer grouped the phase-1 patches. The organizer's own candidate residue list is deliberately absent: the answer is the advocate's footprint, in `residues` and in `antibodies[].interfaces[]`."
+ },
+ "evidence": {
+  "advocate": {
+   "n_findings": 5,
+   "n_supports": 3,
+   "n_weakens": 1,
+   "weakest_point": "The dated linvoseltamab specimen explicitly used an anti-kappa Fab, which is better explained by a D constant-domain face. Even under an anti-idiotype premise, a real BCMA-mimicking footprint may straddle D:L3 (C2/C5) rather than stop at the VH boundary.",
+   "note": "the advocate reports claim/source/date/bearing and is not asked whether a source is about this binder"
+  },
+  "judge": {
+   "tier_a_support": 0,
+   "n_support_lines": 3,
+   "verdict": "live",
+   "note": "Tier A -- a source about this binder itself -- is the judge's adjudication, in assessment[].support[]. It exists nowhere in the advocate's own answer."
+  }
+ },
+ "provenance": {
+  "unverified_source_policy_fields": [
+   "gated",
+   "web_search",
+   "shell_network",
+   "gate_tools"
+  ],
+  "assembled_case_dir": "gpt-5.6-high/gather_refine/post_refactor/released_structure_20261030/casp17/H1346_agCD/case_fed304_G_rep2",
+  "organize_case_dir": "gpt-5.6-high/gather_refine/post_refactor/released_structure_20261030/casp17/H1346_agCD/case_fed304_GR_rep1",
+  "organize_status": "ok",
+  "judge_case_dir": "gpt-5.6-high/gather_refine/post_refactor/released_structure_20261030/casp17/H1346_agCD/case_fed304_GJ_rep2",
+  "judge_status": "ok",
+  "packet": "gpt-5.6-high/gather/packets/case_fed304/packet",
+  "manifest": "gpt-5.6-high/gather/packets/case_fed304/manifest.json",
+  "advocate_case_dir": "gpt-5.6-high/gather_refine/post_refactor/released_structure_20261030/casp17/H1346_agCD/case_fed304_GR_rep1",
+  "advocate_status": "ok"
+ },
+ "score": {
+  "precision": 0.0,
+  "recall": 0.0,
+  "f1": 0.0,
+  "n_pred": 19,
+  "n_true": 17,
+  "n_hit": 0
+ }
+}

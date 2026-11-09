@@ -1,0 +1,301 @@
+{
+ "task": "gather",
+ "gather_mode": "batched",
+ "num_launchers": 3,
+ "policy": {
+  "evidence_cutoff": null,
+  "no_cutoff": true,
+  "gated": false,
+  "web_search": true,
+  "shell_network": true,
+  "gate_tools": []
+ },
+ "unscored": true,
+ "target": "H2335",
+ "target_set": "casp17",
+ "case": "case_d48c74",
+ "evidence_cutoff": null,
+ "target_release_date": "2026-05-27",
+ "retrieval_policy": "no-cutoff",
+ "input_structure": "data/staged_casp17_no_native/H2335.pdb",
+ "input_structure_sha256": "f216450f2774ea363d9dfeeb1e478d506d906f539f384bf370d4b65ff32c11bb",
+ "briefing_source": "data/briefing/casp17_nocutoff/H2335/search_results.json",
+ "briefing_sha256": "4c6eb598fb307223a9315af31439ba34c45b16345678bd0c3aeed39bcafa9e64",
+ "antigen_chains": [
+  "A",
+  "B",
+  "C"
+ ],
+ "antibody_files": {
+  "antibody.pdb": [
+   "D",
+   "E"
+  ]
+ },
+ "antibody_chain_types": {
+  "antibody.pdb": {
+   "D": "light",
+   "E": "heavy"
+  }
+ },
+ "stage": "gatherer",
+ "pocket": {
+  "id": "C2",
+  "judge_rank": 9,
+  "name": "The N-terminal hydrophobic/basic lobe of gO's PDGFR-alpha site-3...",
+  "confidence": 0.05,
+  "p_rests_on_holds": 0.09,
+  "why_this_rank": "Direct receptor overlap gives a consequence but not antibody precedent; transfer identity is lowest and important residues are poorly exposed or glycan-adjacent.",
+  "rests_on": "The query was selected to block PDGFR-alpha at site 3 and can access the groove rim.",
+  "where_the_mass_goes_if_it_fails": "C9 and C4",
+  "what_it_is": "The N-terminal hydrophobic/basic lobe of gO's PDGFR-alpha site-3 groove, restricted to one Fab-sized part of the receptor surface.",
+  "why_one_candidate": "not pooled with anything: no other patch is both within 12 A (half centroid distance, half contact-graph hops) and coverable by one paratope of this antibody's reach, 17.4 A",
+  "from_patches": [
+   "P10"
+  ]
+ },
+ "note": "`confidence` on the pocket is over pockets and sums to about 1 across them. Inside an interface it is per residue in [0, 1] and sums to nothing. No residue is cut at a threshold: the whole vector is the answer.",
+ "mapping_basis": "side",
+ "checks": {
+  "unrecognised_sides": []
+ },
+ "chain_pairs": [
+  {
+   "antibody_chain": "D",
+   "antigen_chain": "A",
+   "n_residues": 14
+  },
+  {
+   "antibody_chain": "E",
+   "antigen_chain": "A",
+   "n_residues": 15
+  }
+ ],
+ "antibodies": [
+  {
+   "antibody": "antibody.pdb",
+   "chains": {
+    "D": "light",
+    "E": "heavy"
+   },
+   "binding_mode": null,
+   "n_residues_scored": 22,
+   "interfaces": [
+    {
+     "antibody_chain": "D",
+     "antibody_chain_type": "light",
+     "antigen_chain": "A",
+     "n_residues": 14,
+     "residue_confidence": {
+      "62": 0.62,
+      "63": 0.74,
+      "64": 0.78,
+      "65": 0.66,
+      "66": 0.7,
+      "68": 0.72,
+      "69": 0.55,
+      "70": 0.78,
+      "91": 0.82,
+      "93": 0.8,
+      "96": 0.7,
+      "99": 0.76,
+      "114": 0.38,
+      "116": 0.35
+     },
+     "residue_side": {
+      "62": "light",
+      "63": "both",
+      "64": "light",
+      "65": "light",
+      "66": "both",
+      "68": "light",
+      "69": "light",
+      "70": "both",
+      "91": "both",
+      "93": "both",
+      "96": "both",
+      "99": "both",
+      "114": "light",
+      "116": "light"
+     },
+     "max_confidence": 0.82,
+     "mean_confidence": 0.6686
+    },
+    {
+     "antibody_chain": "E",
+     "antibody_chain_type": "heavy",
+     "antigen_chain": "A",
+     "n_residues": 15,
+     "residue_confidence": {
+      "63": 0.74,
+      "66": 0.7,
+      "70": 0.78,
+      "86": 0.3,
+      "89": 0.28,
+      "90": 0.55,
+      "91": 0.82,
+      "93": 0.8,
+      "94": 0.73,
+      "95": 0.82,
+      "96": 0.7,
+      "98": 0.72,
+      "99": 0.76,
+      "109": 0.48,
+      "110": 0.5
+     },
+     "residue_side": {
+      "63": "both",
+      "66": "both",
+      "70": "both",
+      "86": "heavy",
+      "89": "heavy",
+      "90": "heavy",
+      "91": "both",
+      "93": "both",
+      "94": "heavy",
+      "95": "heavy",
+      "96": "both",
+      "98": "heavy",
+      "99": "both",
+      "109": "heavy",
+      "110": "heavy"
+     },
+     "max_confidence": 0.82,
+     "mean_confidence": 0.6453
+    }
+   ]
+  }
+ ],
+ "paratope": {
+  "dominant_cdrs": [
+   "E:H3",
+   "D:L3",
+   "D:L1",
+   "E:H2"
+  ],
+  "paratope_residues": [
+   "E:28",
+   "E:31",
+   "E:32",
+   "E:33",
+   "E:53",
+   "E:54",
+   "E:56",
+   "E:57",
+   "E:58",
+   "E:100",
+   "E:103",
+   "E:105",
+   "E:106",
+   "E:107",
+   "E:111",
+   "D:27",
+   "D:28",
+   "D:30",
+   "D:32",
+   "D:92",
+   "D:94",
+   "D:96"
+  ],
+  "heavy_light_split": "About 65:35 heavy:light. H3 occupies A:86-A:99, L1/L3 cover A:62-A:70, and both meet over A:63/A:66/A:70/A:91/A:93/A:96/A:99.",
+  "binding_mode_union": "single-chain"
+ },
+ "residues": [
+  "A:109",
+  "A:110",
+  "A:114",
+  "A:116",
+  "A:62",
+  "A:63",
+  "A:64",
+  "A:65",
+  "A:66",
+  "A:68",
+  "A:69",
+  "A:70",
+  "A:86",
+  "A:89",
+  "A:90",
+  "A:91",
+  "A:93",
+  "A:94",
+  "A:95",
+  "A:96",
+  "A:98",
+  "A:99"
+ ],
+ "n_residues": 22,
+ "patches": [
+  {
+   "id": "P10",
+   "name": "gO N-terminal hydrophobic PDGFR-alpha site-3 groove",
+   "n_residues": 25,
+   "residues": [
+    "A:100",
+    "A:109",
+    "A:110",
+    "A:114",
+    "A:116",
+    "A:62",
+    "A:63",
+    "A:64",
+    "A:65",
+    "A:66",
+    "A:68",
+    "A:69",
+    "A:70",
+    "A:86",
+    "A:88",
+    "A:89",
+    "A:90",
+    "A:91",
+    "A:92",
+    "A:93",
+    "A:94",
+    "A:95",
+    "A:96",
+    "A:98",
+    "A:99"
+   ],
+   "n_kept_by_advocate": 22,
+   "n_dropped_by_advocate": 3
+  }
+ ],
+ "pooling_provenance": {
+  "n_shared_at_pooling": 25,
+  "n_disputed_at_pooling": 0,
+  "note": "counts only, describing how the organizer grouped the phase-1 patches. The organizer's own candidate residue list is deliberately absent: the answer is the advocate's footprint, in `residues` and in `antibodies[].interfaces[]`."
+ },
+ "evidence": {
+  "advocate": {
+   "n_findings": 4,
+   "n_supports": 3,
+   "n_weakens": 1,
+   "weakest_point": "Several attractive hydrophobes are poorly exposed in the apo assembly, and A:88/A:100 are inaccessible. The case depends on the exposed rim and steric blockade, not a deeply accessible aromatic pocket.",
+   "note": "the advocate reports claim/source/date/bearing and is not asked whether a source is about this binder"
+  },
+  "judge": {
+   "tier_a_support": 0,
+   "n_support_lines": 3,
+   "verdict": "unlikely",
+   "note": "Tier A -- a source about this binder itself -- is the judge's adjudication, in assessment[].support[]. It exists nowhere in the advocate's own answer."
+  }
+ },
+ "provenance": {
+  "unverified_source_policy_fields": [
+   "gated",
+   "web_search",
+   "shell_network",
+   "gate_tools"
+  ],
+  "assembled_case_dir": "gpt-5.6-high/gather_refine/post_refactor/unreleased_20261029/nocut/casp17/H2335/case_d48c74_G_rep1",
+  "organize_case_dir": "gpt-5.6-high/gather_refine/post_refactor/unreleased_20261029/nocut/casp17/H2335/case_d48c74_GR_rep1",
+  "organize_status": "ok",
+  "judge_case_dir": "gpt-5.6-high/gather_refine/post_refactor/unreleased_20261029/nocut/casp17/H2335/case_d48c74_GJ_rep1",
+  "judge_status": "ok",
+  "packet": "gpt-5.6-high/nocut/gather/packets/case_d48c74/packet",
+  "manifest": "gpt-5.6-high/nocut/gather/packets/case_d48c74/manifest.json",
+  "advocate_case_dir": "gpt-5.6-high/gather_refine/post_refactor/unreleased_20261029/nocut/casp17/H2335/case_d48c74_GR_rep1",
+  "advocate_status": "ok"
+ }
+}

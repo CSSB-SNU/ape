@@ -1,0 +1,352 @@
+{
+ "target": "H2339",
+ "target_set": "casp17",
+ "case": "case_5886c7",
+ "task": "gather",
+ "gather_mode": "batched",
+ "num_launchers": 3,
+ "policy": {
+  "evidence_cutoff": "2026-05-15",
+  "no_cutoff": false,
+  "gated": true,
+  "web_search": false,
+  "shell_network": true,
+  "gate_tools": [
+   "research",
+   "fetch",
+   "rcsb",
+   "patent",
+   "paper"
+  ]
+ },
+ "unscored": false,
+ "evidence_cutoff": "2026-05-15",
+ "target_release_date": "2026-05-15",
+ "retrieval_policy": "gated",
+ "antigen_chains": [
+  "C",
+  "D"
+ ],
+ "antibody_files": {
+  "antibody.pdb": [
+   "A",
+   "B"
+  ]
+ },
+ "antibody_chain_types": {
+  "antibody.pdb": {
+   "A": "unknown",
+   "B": "unknown"
+  }
+ },
+ "input_structure": "structures/H2339.pdb",
+ "input_structure_sha256": null,
+ "briefing_source": null,
+ "briefing_sha256": null,
+ "recognized_complex": {
+  "organize": null,
+  "judge": true
+ },
+ "recognition_note": "The supplied heavy- and light-chain variable sequences exactly identify REGN7508 in US20240190996A1, first public 2024-06-13, and antigen chains C/D are human factor XI. The patent localizes this binder to the factor-XI catalytic domain and states that the disclosed antibodies do not bind an apple domain. I did not access a REGN7508 complex or residue-level map.",
+ "what_separated_them": "Tier A identified REGN7508 and localized it only to the factor-XI catalytic domain; no evidence about this binder separated C4, C5, and C7 at face level. Among those, the ordering is a deliberately broad Tier B prior: same-antigen antibody precedent and state recognition, independently recomputed paratope reach/charge, native glycan/accessibility, species side-chain clashes, and agreement with REGN7508's activation-biased functional phenotype. C1/C3 were the same Apple-2 face drawn twice and split only residual model-error mass.",
+ "not_pooled": [],
+ "provenance": {
+  "unverified_source_policy_fields": [
+   "gated",
+   "web_search",
+   "shell_network",
+   "gate_tools"
+  ],
+  "assembled_case_dir": "gpt-5.6-high/gather_refine/post_refactor/released_structure_20261030/casp17/H2339/case_5886c7_G_rep3",
+  "organize_case_dir": "gpt-5.6-high/gather_refine/post_refactor/released_structure_20261030/casp17/H2339/case_5886c7_GR_rep1",
+  "organize_status": "ok",
+  "judge_case_dir": "gpt-5.6-high/gather_refine/post_refactor/released_structure_20261030/casp17/H2339/case_5886c7_GJ_rep3",
+  "judge_status": "ok",
+  "packet": "gpt-5.6-high/gather/packets/case_5886c7/packet",
+  "manifest": "gpt-5.6-high/gather/packets/case_5886c7/manifest.json"
+ },
+ "truth_file": "data/truth/casp17/H2339.epitope.json",
+ "truth": {
+  "n_residues": 22,
+  "usable": "yes",
+  "chains": {
+   "D": [
+    84,
+    86,
+    87,
+    88,
+    89,
+    90,
+    92,
+    156,
+    159,
+    160,
+    161,
+    162,
+    163,
+    164,
+    165,
+    166,
+    168,
+    169,
+    170,
+    208,
+    210,
+    217
+   ]
+  },
+  "anchor_note": "the numbering frame only; the epitope is defined on the native and carried here by antigen sequence alignment, so which pooled model this is does not affect the label"
+ },
+ "oracle": {
+  "metric": "f1",
+  "epitope_definition": "whole_antibody",
+  "truth_file": "data/truth/casp17/H2339.epitope.json",
+  "rank1": {
+   "pocket": "C4",
+   "confidence": 0.44,
+   "precision": 0.2941,
+   "recall": 0.2273,
+   "f1": 0.2564,
+   "n_pred": 17,
+   "n_true": 22,
+   "n_hit": 5
+  },
+  "best": {
+   "pocket": "C4",
+   "judge_rank": 1,
+   "confidence": 0.44,
+   "precision": 0.2941,
+   "recall": 0.2273,
+   "f1": 0.2564,
+   "n_pred": 17,
+   "n_true": 22,
+   "n_hit": 5
+  },
+  "note": "the best pocket the answer already contains. Rank 1 is the answer as delivered, so the gap is what the judge's ordering cost."
+ },
+ "pockets": [
+  {
+   "id": "C4",
+   "judge_rank": 1,
+   "name": "The broad active-cleft face of the factor-XI trypsin-like domain...",
+   "confidence": 0.44,
+   "mapping_basis": "side",
+   "n_residues": 17,
+   "score": {
+    "precision": 0.2941,
+    "recall": 0.2273,
+    "f1": 0.2564,
+    "n_pred": 17,
+    "n_true": 22,
+    "n_hit": 5
+   },
+   "chain_pairs": [
+    {
+     "antibody_chain": "A",
+     "antigen_chain": "D",
+     "n_residues": 17
+    },
+    {
+     "antibody_chain": "B",
+     "antigen_chain": "D",
+     "n_residues": 17
+    }
+   ],
+   "file": "pocket.C4.json"
+  },
+  {
+   "id": "C7",
+   "judge_rank": 2,
+   "name": "The allosteric 37/60/140-loop face of the trypsin-like catalytic...",
+   "confidence": 0.25,
+   "mapping_basis": "side",
+   "n_residues": 19,
+   "score": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0,
+    "n_pred": 19,
+    "n_true": 22,
+    "n_hit": 0
+   },
+   "chain_pairs": [
+    {
+     "antibody_chain": "A",
+     "antigen_chain": "D",
+     "n_residues": 19
+    },
+    {
+     "antibody_chain": "B",
+     "antigen_chain": "D",
+     "n_residues": 19
+    }
+   ],
+   "file": "pocket.C7.json"
+  },
+  {
+   "id": "C5",
+   "judge_rank": 3,
+   "name": "The glycan-bearing 60-loop/99-loop side of the trypsin-like protease...",
+   "confidence": 0.22,
+   "mapping_basis": "side",
+   "n_residues": 14,
+   "score": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0,
+    "n_pred": 14,
+    "n_true": 22,
+    "n_hit": 0
+   },
+   "chain_pairs": [
+    {
+     "antibody_chain": "A",
+     "antigen_chain": "D",
+     "n_residues": 14
+    },
+    {
+     "antibody_chain": "B",
+     "antigen_chain": "D",
+     "n_residues": 14
+    }
+   ],
+   "file": "pocket.C5.json"
+  },
+  {
+   "id": "C6",
+   "judge_rank": 4,
+   "name": "The factor-XI activation-cleavage junction: the C-terminal activation...",
+   "confidence": 0.05,
+   "mapping_basis": "side",
+   "n_residues": 16,
+   "score": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0,
+    "n_pred": 16,
+    "n_true": 22,
+    "n_hit": 0
+   },
+   "chain_pairs": [
+    {
+     "antibody_chain": "A",
+     "antigen_chain": "C",
+     "n_residues": 6
+    },
+    {
+     "antibody_chain": "A",
+     "antigen_chain": "D",
+     "n_residues": 10
+    },
+    {
+     "antibody_chain": "B",
+     "antigen_chain": "C",
+     "n_residues": 6
+    },
+    {
+     "antibody_chain": "B",
+     "antigen_chain": "D",
+     "n_residues": 10
+    }
+   ],
+   "file": "pocket.C6.json"
+  },
+  {
+   "id": "C2",
+   "judge_rank": 5,
+   "name": "The solvent-exposed rim of the interface between Apple-2 and the...",
+   "confidence": 0.02,
+   "mapping_basis": "side",
+   "n_residues": 11,
+   "score": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0,
+    "n_pred": 11,
+    "n_true": 22,
+    "n_hit": 0
+   },
+   "chain_pairs": [
+    {
+     "antibody_chain": "A",
+     "antigen_chain": "C",
+     "n_residues": 5
+    },
+    {
+     "antibody_chain": "A",
+     "antigen_chain": "D",
+     "n_residues": 6
+    },
+    {
+     "antibody_chain": "B",
+     "antigen_chain": "C",
+     "n_residues": 5
+    },
+    {
+     "antibody_chain": "B",
+     "antigen_chain": "D",
+     "n_residues": 6
+    }
+   ],
+   "file": "pocket.C2.json"
+  },
+  {
+   "id": "C1",
+   "judge_rank": 6,
+   "name": "The high-molecular-weight-kininogen DFP-motif groove and broad...",
+   "confidence": 0.01,
+   "mapping_basis": "side",
+   "n_residues": 23,
+   "score": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0,
+    "n_pred": 23,
+    "n_true": 22,
+    "n_hit": 0
+   },
+   "chain_pairs": [
+    {
+     "antibody_chain": "A",
+     "antigen_chain": "C",
+     "n_residues": 23
+    },
+    {
+     "antibody_chain": "B",
+     "antigen_chain": "C",
+     "n_residues": 23
+    }
+   ],
+   "file": "pocket.C1.json"
+  },
+  {
+   "id": "C3",
+   "judge_rank": 7,
+   "name": "The contact-defined core of the high-molecular-weight-kininogen...",
+   "confidence": 0.01,
+   "mapping_basis": "side",
+   "n_residues": 21,
+   "score": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0,
+    "n_pred": 21,
+    "n_true": 22,
+    "n_hit": 0
+   },
+   "chain_pairs": [
+    {
+     "antibody_chain": "A",
+     "antigen_chain": "C",
+     "n_residues": 21
+    },
+    {
+     "antibody_chain": "B",
+     "antigen_chain": "C",
+     "n_residues": 21
+    }
+   ],
+   "file": "pocket.C3.json"
+  }
+ ]
+}

@@ -1,0 +1,436 @@
+{
+ "task": "gather",
+ "gather_mode": "batched",
+ "num_launchers": 3,
+ "policy": {
+  "evidence_cutoff": "2024-06-13",
+  "no_cutoff": false,
+  "gated": true,
+  "web_search": false,
+  "shell_network": true,
+  "gate_tools": [
+   "research",
+   "fetch",
+   "rcsb",
+   "patent",
+   "paper"
+  ]
+ },
+ "unscored": false,
+ "target": "H1232",
+ "target_set": "casp16",
+ "case": "case_d99ff5",
+ "evidence_cutoff": "2024-06-13",
+ "target_release_date": "2024-06-13",
+ "retrieval_policy": "gated",
+ "input_structure": "structures/H1232.pdb",
+ "input_structure_sha256": null,
+ "briefing_source": null,
+ "briefing_sha256": null,
+ "antigen_chains": [
+  "A",
+  "B"
+ ],
+ "antibody_files": {
+  "antibody.1.pdb": [
+   "C"
+  ],
+  "antibody.2.pdb": [
+   "D"
+  ]
+ },
+ "antibody_chain_types": {
+  "antibody.1.pdb": {
+   "C": "mixed"
+  },
+  "antibody.2.pdb": {
+   "D": "mixed"
+  }
+ },
+ "truth_file": "data/truth/casp16/H1232.epitope.json",
+ "stage": "gatherer",
+ "pocket": {
+  "id": "C5",
+  "judge_rank": 4,
+  "name": "The canonical quaternary neutralization face on the spike side: loop...",
+  "confidence": 0.03,
+  "p_rests_on_holds": 0.07,
+  "why_this_rank": "It joins exact escape residues to a documented neutralization face, but the two lines concern different antibodies; the patch is at the reach limit, contains fully buried Y129, and faces the P35 obstruction.",
+  "rests_on": "A shifted 4B6 approach can span the PL-2 islands, accommodate P35, and still use peripheral D136/N137.",
+  "where_the_mass_goes_if_it_fails": "C3 if a broad face remains plausible, otherwise C1/C2",
+  "what_it_is": "The canonical quaternary neutralization face on the spike side: loop 1 and discontinuous strand/turn islands on one protomer, with the light-chain edge crossing to neighboring loop 3.",
+  "why_one_candidate": "not pooled with anything: no other patch is both within 12 A (half centroid distance, half contact-graph hops) and coverable by one paratope of this antibody's reach, 16.8 A",
+  "from_patches": [
+   "P5"
+  ]
+ },
+ "note": "`confidence` on the pocket is over pockets and sums to about 1 across them. Inside an interface it is per residue in [0, 1] and sums to nothing. No residue is cut at a threshold: the whole vector is the answer.",
+ "mapping_basis": "per_antibody",
+ "checks": {
+  "unrecognised_sides": []
+ },
+ "chain_pairs": [
+  {
+   "antibody_chain": "C",
+   "antigen_chain": "A",
+   "n_residues": 14
+  },
+  {
+   "antibody_chain": "C",
+   "antigen_chain": "B",
+   "n_residues": 4
+  },
+  {
+   "antibody_chain": "D",
+   "antigen_chain": "A",
+   "n_residues": 4
+  },
+  {
+   "antibody_chain": "D",
+   "antigen_chain": "B",
+   "n_residues": 14
+  }
+ ],
+ "antibodies": [
+  {
+   "antibody": "antibody.1.pdb",
+   "chains": {
+    "C": "mixed"
+   },
+   "binding_mode": "straddling",
+   "n_residues_scored": 18,
+   "interfaces": [
+    {
+     "antibody_chain": "C",
+     "antibody_chain_type": "mixed",
+     "antigen_chain": "A",
+     "n_residues": 14,
+     "residue_confidence": {
+      "32": 0.95,
+      "33": 0.97,
+      "34": 0.48,
+      "35": 0.74,
+      "36": 0.61,
+      "37": 0.76,
+      "85": 0.96,
+      "86": 0.96,
+      "103": 0.83,
+      "124": 0.96,
+      "126": 0.93,
+      "129": 0.04,
+      "150": 0.7,
+      "153": 0.49
+     },
+     "residue_side": {
+      "32": "both",
+      "33": "heavy",
+      "34": "heavy",
+      "35": "heavy",
+      "36": "heavy",
+      "37": "heavy",
+      "85": "heavy",
+      "86": "heavy",
+      "103": "heavy",
+      "124": "heavy",
+      "126": "heavy",
+      "129": "light",
+      "150": "light",
+      "153": "light"
+     },
+     "max_confidence": 0.97,
+     "mean_confidence": 0.7414,
+     "precision_vs_truth": 0.3571,
+     "n_in_truth": 5
+    },
+    {
+     "antibody_chain": "C",
+     "antibody_chain_type": "mixed",
+     "antigen_chain": "B",
+     "n_residues": 4,
+     "residue_confidence": {
+      "136": 0.58,
+      "137": 0.76,
+      "138": 0.64,
+      "139": 0.9
+     },
+     "residue_side": {
+      "136": "light",
+      "137": "both",
+      "138": "light",
+      "139": "light"
+     },
+     "max_confidence": 0.9,
+     "mean_confidence": 0.72,
+     "precision_vs_truth": 1.0,
+     "n_in_truth": 4
+    }
+   ]
+  },
+  {
+   "antibody": "antibody.2.pdb",
+   "chains": {
+    "D": "mixed"
+   },
+   "binding_mode": "straddling",
+   "n_residues_scored": 18,
+   "interfaces": [
+    {
+     "antibody_chain": "D",
+     "antibody_chain_type": "mixed",
+     "antigen_chain": "A",
+     "n_residues": 4,
+     "residue_confidence": {
+      "136": 0.58,
+      "137": 0.76,
+      "138": 0.64,
+      "139": 0.9
+     },
+     "residue_side": {
+      "136": "light",
+      "137": "both",
+      "138": "light",
+      "139": "light"
+     },
+     "max_confidence": 0.9,
+     "mean_confidence": 0.72,
+     "precision_vs_truth": 1.0,
+     "n_in_truth": 4
+    },
+    {
+     "antibody_chain": "D",
+     "antibody_chain_type": "mixed",
+     "antigen_chain": "B",
+     "n_residues": 14,
+     "residue_confidence": {
+      "32": 0.95,
+      "33": 0.97,
+      "34": 0.48,
+      "35": 0.74,
+      "36": 0.61,
+      "37": 0.76,
+      "85": 0.96,
+      "86": 0.96,
+      "103": 0.83,
+      "124": 0.96,
+      "126": 0.93,
+      "129": 0.04,
+      "150": 0.7,
+      "153": 0.49
+     },
+     "residue_side": {
+      "32": "both",
+      "33": "heavy",
+      "34": "heavy",
+      "35": "heavy",
+      "36": "heavy",
+      "37": "heavy",
+      "85": "heavy",
+      "86": "heavy",
+      "103": "heavy",
+      "124": "heavy",
+      "126": "heavy",
+      "129": "light",
+      "150": "light",
+      "153": "light"
+     },
+     "max_confidence": 0.97,
+     "mean_confidence": 0.7414,
+     "precision_vs_truth": 0.3571,
+     "n_in_truth": 5
+    }
+   ]
+  }
+ ],
+ "paratope": {
+  "dominant_cdrs": [
+   "H3H2L2modeledasindividualCDRs:H3",
+   "H2L2modeledasindividualCDRs:H2",
+   "L2modeledasindividualCDRs:L2"
+  ],
+  "paratope_residues": [
+   "C:30",
+   "C:31",
+   "C:32",
+   "C:52",
+   "C:54",
+   "C:56",
+   "C:57",
+   "C:98",
+   "C:99",
+   "C:100",
+   "C:101",
+   "C:102",
+   "C:103",
+   "C:105",
+   "C:106",
+   "C:162",
+   "C:163",
+   "C:165",
+   "C:166",
+   "C:167",
+   "C:185",
+   "C:187",
+   "C:226",
+   "C:227",
+   "C:228",
+   "C:229",
+   "C:231",
+   "D:30",
+   "D:31",
+   "D:32",
+   "D:52",
+   "D:54",
+   "D:56",
+   "D:57",
+   "D:98",
+   "D:99",
+   "D:100",
+   "D:101",
+   "D:102",
+   "D:103",
+   "D:105",
+   "D:106",
+   "D:162",
+   "D:163",
+   "D:165",
+   "D:166",
+   "D:167",
+   "D:185",
+   "D:187",
+   "D:226",
+   "D:227",
+   "D:228",
+   "D:229",
+   "D:231"
+  ],
+  "heavy_light_split": "Heavy dominates the main protomer; light covers 129/150/153 and neighboring 136-139.",
+  "binding_mode_union": null
+ },
+ "residues": [
+  "A:103",
+  "A:124",
+  "A:126",
+  "A:129",
+  "A:136",
+  "A:137",
+  "A:138",
+  "A:139",
+  "A:150",
+  "A:153",
+  "A:32",
+  "A:33",
+  "A:34",
+  "A:35",
+  "A:36",
+  "A:37",
+  "A:85",
+  "A:86",
+  "B:103",
+  "B:124",
+  "B:126",
+  "B:129",
+  "B:136",
+  "B:137",
+  "B:138",
+  "B:139",
+  "B:150",
+  "B:153",
+  "B:32",
+  "B:33",
+  "B:34",
+  "B:35",
+  "B:36",
+  "B:37",
+  "B:85",
+  "B:86"
+ ],
+ "n_residues": 36,
+ "patches": [
+  {
+   "id": "P5",
+   "name": "Canonical PL-2 quaternary side-face footprint, with Oxford loop accommodation",
+   "n_residues": 32,
+   "residues": [
+    "A:103",
+    "A:124",
+    "A:126",
+    "A:129",
+    "A:136",
+    "A:137",
+    "A:138",
+    "A:139",
+    "A:150",
+    "A:153",
+    "A:32",
+    "A:33",
+    "A:35",
+    "A:37",
+    "A:85",
+    "A:86",
+    "B:103",
+    "B:124",
+    "B:126",
+    "B:129",
+    "B:136",
+    "B:137",
+    "B:138",
+    "B:139",
+    "B:150",
+    "B:153",
+    "B:32",
+    "B:33",
+    "B:35",
+    "B:37",
+    "B:85",
+    "B:86"
+   ],
+   "n_kept_by_advocate": 32,
+   "n_dropped_by_advocate": 0
+  }
+ ],
+ "pooling_provenance": {
+  "n_shared_at_pooling": 32,
+  "n_disputed_at_pooling": 0,
+  "note": "counts only, describing how the organizer grouped the phase-1 patches. The organizer's own candidate residue list is deliberately absent: the answer is the advocate's footprint, in `residues` and in `antibodies[].interfaces[]`."
+ },
+ "evidence": {
+  "advocate": {
+   "n_findings": 5,
+   "n_supports": 2,
+   "n_weakens": 2,
+   "weakest_point": "Exact identity supports 4B6 rather than PL-2, D136/N137 sit at the far edge, P35 blocks canonical PL-2, and local 129 is buried.",
+   "note": "the advocate reports claim/source/date/bearing and is not asked whether a source is about this binder"
+  },
+  "judge": {
+   "tier_a_support": 1,
+   "n_support_lines": 3,
+   "verdict": "unlikely",
+   "note": "Tier A -- a source about this binder itself -- is the judge's adjudication, in assessment[].support[]. It exists nowhere in the advocate's own answer."
+  }
+ },
+ "provenance": {
+  "unverified_source_policy_fields": [
+   "gated",
+   "web_search",
+   "shell_network",
+   "gate_tools"
+  ],
+  "assembled_case_dir": "gpt-5.6-high/gather_refine/post_refactor/released_structure_20261030/casp16/H1232/case_d99ff5_G_rep2",
+  "organize_case_dir": "gpt-5.6-high/gather_refine/post_refactor/released_structure_20261030/casp16/H1232/case_d99ff5_GR_rep1",
+  "organize_status": "ok",
+  "judge_case_dir": "gpt-5.6-high/gather_refine/post_refactor/released_structure_20261030/casp16/H1232/case_d99ff5_GJ_rep2",
+  "judge_status": "ok",
+  "packet": "gpt-5.6-high/gather/packets/case_d99ff5/packet",
+  "manifest": "gpt-5.6-high/gather/packets/case_d99ff5/manifest.json",
+  "advocate_case_dir": "gpt-5.6-high/gather_refine/post_refactor/released_structure_20261030/casp16/H1232/case_d99ff5_GR_rep1",
+  "advocate_status": "ok"
+ },
+ "score": {
+  "precision": 0.5,
+  "recall": 0.4737,
+  "f1": 0.4865,
+  "n_pred": 36,
+  "n_true": 38,
+  "n_hit": 18
+ }
+}

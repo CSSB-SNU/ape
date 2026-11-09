@@ -1,0 +1,211 @@
+{
+ "target": "H2338",
+ "target_set": "casp17",
+ "case": "case_718c80",
+ "task": "gather",
+ "gather_mode": "batched",
+ "num_launchers": 3,
+ "policy": {
+  "evidence_cutoff": "2026-05-14",
+  "no_cutoff": false,
+  "gated": true,
+  "web_search": false,
+  "shell_network": true,
+  "gate_tools": [
+   "research",
+   "fetch",
+   "rcsb",
+   "patent",
+   "paper"
+  ]
+ },
+ "unscored": false,
+ "evidence_cutoff": "2026-05-14",
+ "target_release_date": "2026-05-14",
+ "retrieval_policy": "gated",
+ "antigen_chains": [
+  "C",
+  "D"
+ ],
+ "antibody_files": {
+  "antibody.pdb": [
+   "A",
+   "B"
+  ]
+ },
+ "antibody_chain_types": {
+  "antibody.pdb": {
+   "A": "unknown",
+   "B": "unknown"
+  }
+ },
+ "input_structure": "structures/H2338.pdb",
+ "input_structure_sha256": null,
+ "briefing_source": null,
+ "briefing_sha256": null,
+ "recognized_complex": {
+  "organize": null,
+  "judge": true
+ },
+ "recognition_note": "The exact heavy-chain sequence identifies the antibody as REGN9933/H4H29790P2 in US20230131338A1 (2023-04-27). The patent localizes it to FXI Apple domain A2 and reports bidirectional competition with unmapped A2 binder H4H29801P2, but provides no residue-level map. No native REGN9933 complex was opened or found.",
+ "what_separated_them": "No candidate has face-level Tier A evidence: REGN9933-specific evidence stops at A2, species binding, function, and competition with an unmapped A2 antibody. C2 separated itself through independent Tier-B agreement between exact-antigen other-antibody HDX and the best computed geometry/chemistry. C3's functional-pocket evidence concerns another ligand, while C1's homolog precedent lost discriminatory value after measuring only 50% identity over a broad interval.",
+ "not_pooled": [],
+ "provenance": {
+  "unverified_source_policy_fields": [
+   "gated",
+   "web_search",
+   "shell_network",
+   "gate_tools"
+  ],
+  "assembled_case_dir": "gpt-5.6-high/gather_refine/post_refactor/released_structure_20261030/casp17/H2338/case_718c80_G_rep2",
+  "organize_case_dir": "gpt-5.6-high/gather_refine/post_refactor/released_structure_20261030/casp17/H2338/case_718c80_GR_rep1",
+  "organize_status": "ok",
+  "judge_case_dir": "gpt-5.6-high/gather_refine/post_refactor/released_structure_20261030/casp17/H2338/case_718c80_GJ_rep2",
+  "judge_status": "ok",
+  "packet": "gpt-5.6-high/gather/packets/case_718c80/packet",
+  "manifest": "gpt-5.6-high/gather/packets/case_718c80/manifest.json"
+ },
+ "truth_file": "data/truth/casp17/H2338.epitope.json",
+ "truth": {
+  "n_residues": 17,
+  "usable": "yes",
+  "chains": {
+   "C": [
+    101,
+    109,
+    110,
+    111,
+    132,
+    138,
+    139,
+    140,
+    141,
+    142,
+    143,
+    144,
+    145,
+    146,
+    163,
+    165,
+    166
+   ]
+  },
+  "anchor_note": "the numbering frame only; the epitope is defined on the native and carried here by antigen sequence alignment, so which pooled model this is does not affect the label"
+ },
+ "oracle": {
+  "metric": "f1",
+  "epitope_definition": "whole_antibody",
+  "truth_file": "data/truth/casp17/H2338.epitope.json",
+  "rank1": {
+   "pocket": "C2",
+   "confidence": 0.52,
+   "precision": 0.6471,
+   "recall": 0.6471,
+   "f1": 0.6471,
+   "n_pred": 17,
+   "n_true": 17,
+   "n_hit": 11
+  },
+  "best": {
+   "pocket": "C2",
+   "judge_rank": 1,
+   "confidence": 0.52,
+   "precision": 0.6471,
+   "recall": 0.6471,
+   "f1": 0.6471,
+   "n_pred": 17,
+   "n_true": 17,
+   "n_hit": 11
+  },
+  "note": "the best pocket the answer already contains. Rank 1 is the answer as delivered, so the gap is what the judge's ordering cost."
+ },
+ "pockets": [
+  {
+   "id": "C2",
+   "judge_rank": 1,
+   "name": "The exposed loop-and-ridge face at an Apple-domain peptide-groove...",
+   "confidence": 0.52,
+   "mapping_basis": "side",
+   "n_residues": 17,
+   "score": {
+    "precision": 0.6471,
+    "recall": 0.6471,
+    "f1": 0.6471,
+    "n_pred": 17,
+    "n_true": 17,
+    "n_hit": 11
+   },
+   "chain_pairs": [
+    {
+     "antibody_chain": "A",
+     "antigen_chain": "C",
+     "n_residues": 17
+    },
+    {
+     "antibody_chain": "B",
+     "antigen_chain": "C",
+     "n_residues": 17
+    }
+   ],
+   "file": "pocket.C2.json"
+  },
+  {
+   "id": "C3",
+   "judge_rank": 2,
+   "name": "The A2 beta-sheet peptide pocket and adjacent distal polar lobe: a...",
+   "confidence": 0.3,
+   "mapping_basis": "side",
+   "n_residues": 19,
+   "score": {
+    "precision": 0.3158,
+    "recall": 0.3529,
+    "f1": 0.3333,
+    "n_pred": 19,
+    "n_true": 17,
+    "n_hit": 6
+   },
+   "chain_pairs": [
+    {
+     "antibody_chain": "A",
+     "antigen_chain": "C",
+     "n_residues": 19
+    },
+    {
+     "antibody_chain": "B",
+     "antigen_chain": "C",
+     "n_residues": 19
+    }
+   ],
+   "file": "pocket.C3.json"
+  },
+  {
+   "id": "C1",
+   "judge_rank": 3,
+   "name": "The solvent-exposed outer polar/lateral face of the FXI A2 Apple...",
+   "confidence": 0.18,
+   "mapping_basis": "side",
+   "n_residues": 15,
+   "score": {
+    "precision": 0.1333,
+    "recall": 0.1176,
+    "f1": 0.125,
+    "n_pred": 15,
+    "n_true": 17,
+    "n_hit": 2
+   },
+   "chain_pairs": [
+    {
+     "antibody_chain": "A",
+     "antigen_chain": "C",
+     "n_residues": 15
+    },
+    {
+     "antibody_chain": "B",
+     "antigen_chain": "C",
+     "n_residues": 15
+    }
+   ],
+   "file": "pocket.C1.json"
+  }
+ ]
+}

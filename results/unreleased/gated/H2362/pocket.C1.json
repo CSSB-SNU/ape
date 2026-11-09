@@ -1,0 +1,331 @@
+{
+ "task": "gather",
+ "gather_mode": "batched",
+ "num_launchers": 3,
+ "policy": {
+  "evidence_cutoff": "2026-06-12",
+  "no_cutoff": false,
+  "gated": true,
+  "web_search": false,
+  "shell_network": true,
+  "gate_tools": [
+   "research",
+   "fetch",
+   "rcsb",
+   "patent",
+   "paper"
+  ]
+ },
+ "unscored": true,
+ "target": "H2362",
+ "target_set": "casp17",
+ "case": "case_259152",
+ "evidence_cutoff": "2026-06-12",
+ "target_release_date": "2026-06-12",
+ "retrieval_policy": "gated",
+ "input_structure": "data/staged_casp17_no_native/H2362.pdb",
+ "input_structure_sha256": "54e187b986e4696f87e1dd7dd4cd6cd943754471a337aa57a0577c6172827a73",
+ "briefing_source": "data/briefing/casp17/H2362/search_results.json",
+ "briefing_sha256": "b0140a751ca600dc0d1ce7f02d3095b3776329fd300b1010c950088508d8f896",
+ "antigen_chains": [
+  "A",
+  "B",
+  "C",
+  "D",
+  "E"
+ ],
+ "antibody_files": {
+  "antibody.pdb": [
+   "F",
+   "G"
+  ]
+ },
+ "antibody_chain_types": {
+  "antibody.pdb": {
+   "F": "light",
+   "G": "heavy"
+  }
+ },
+ "stage": "gatherer",
+ "pocket": {
+  "id": "C1",
+  "judge_rank": 9,
+  "name": "The membrane-distal, receptor-proximal quaternary apex where UL128...",
+  "confidence": 0.06,
+  "p_rests_on_holds": 0.12,
+  "why_this_rank": "The apex is strongly validated generically, but the inherited patch exceeds this paratope’s measured span and radius and no 2C12-like identity exists.",
+  "rests_on": "The extreme footprint rim is not required for binding, allowing the remaining apex to fit.",
+  "where_the_mass_goes_if_it_fails": "C3 and C2",
+  "what_it_is": "The membrane-distal, receptor-proximal quaternary apex where UL128 and UL131A meet on the pentamer head.",
+  "why_one_candidate": "not pooled with anything: no other patch is both within 12 A (half centroid distance, half contact-graph hops) and coverable by one paratope of this antibody's reach, 17.6 A",
+  "from_patches": [
+   "P1"
+  ]
+ },
+ "note": "`confidence` on the pocket is over pockets and sums to about 1 across them. Inside an interface it is per residue in [0, 1] and sums to nothing. No residue is cut at a threshold: the whole vector is the answer.",
+ "mapping_basis": "side",
+ "checks": {
+  "unrecognised_sides": []
+ },
+ "chain_pairs": [
+  {
+   "antibody_chain": "F",
+   "antigen_chain": "B",
+   "n_residues": 4
+  },
+  {
+   "antibody_chain": "F",
+   "antigen_chain": "D",
+   "n_residues": 9
+  },
+  {
+   "antibody_chain": "G",
+   "antigen_chain": "B",
+   "n_residues": 7
+  },
+  {
+   "antibody_chain": "G",
+   "antigen_chain": "D",
+   "n_residues": 2
+  }
+ ],
+ "antibodies": [
+  {
+   "antibody": "antibody.pdb",
+   "chains": {
+    "F": "light",
+    "G": "heavy"
+   },
+   "binding_mode": null,
+   "n_residues_scored": 17,
+   "interfaces": [
+    {
+     "antibody_chain": "F",
+     "antibody_chain_type": "light",
+     "antigen_chain": "B",
+     "n_residues": 4,
+     "residue_confidence": {
+      "24": 0.9,
+      "79": 0.45,
+      "81": 0.9,
+      "82": 0.38
+     },
+     "residue_side": {
+      "24": "both",
+      "79": "both",
+      "81": "both",
+      "82": "light"
+     },
+     "max_confidence": 0.9,
+     "mean_confidence": 0.6575
+    },
+    {
+     "antibody_chain": "F",
+     "antibody_chain_type": "light",
+     "antigen_chain": "D",
+     "n_residues": 9,
+     "residue_confidence": {
+      "5": 0.55,
+      "6": 0.78,
+      "7": 0.3,
+      "8": 0.18,
+      "9": 0.88,
+      "10": 0.65,
+      "11": 0.25,
+      "12": 0.58,
+      "13": 0.38
+     },
+     "residue_side": {
+      "5": "light",
+      "6": "both",
+      "7": "light",
+      "8": "light",
+      "9": "both",
+      "10": "light",
+      "11": "light",
+      "12": "light",
+      "13": "light"
+     },
+     "max_confidence": 0.88,
+     "mean_confidence": 0.5056
+    },
+    {
+     "antibody_chain": "G",
+     "antibody_chain_type": "heavy",
+     "antigen_chain": "B",
+     "n_residues": 7,
+     "residue_confidence": {
+      "23": 0.6,
+      "24": 0.9,
+      "25": 0.68,
+      "77": 0.55,
+      "78": 0.4,
+      "79": 0.45,
+      "81": 0.9
+     },
+     "residue_side": {
+      "23": "heavy",
+      "24": "both",
+      "25": "heavy",
+      "77": "heavy",
+      "78": "heavy",
+      "79": "both",
+      "81": "both"
+     },
+     "max_confidence": 0.9,
+     "mean_confidence": 0.64
+    },
+    {
+     "antibody_chain": "G",
+     "antibody_chain_type": "heavy",
+     "antigen_chain": "D",
+     "n_residues": 2,
+     "residue_confidence": {
+      "6": 0.78,
+      "9": 0.88
+     },
+     "residue_side": {
+      "6": "both",
+      "9": "both"
+     },
+     "max_confidence": 0.88,
+     "mean_confidence": 0.83
+    }
+   ]
+  }
+ ],
+ "paratope": {
+  "dominant_cdrs": [
+   "G:H3",
+   "G:H2",
+   "F:L1"
+  ],
+  "paratope_residues": [
+   "G:26",
+   "G:27",
+   "G:28",
+   "G:30",
+   "G:31",
+   "G:32",
+   "G:33",
+   "G:34",
+   "G:35",
+   "G:54",
+   "G:55",
+   "G:56",
+   "G:57",
+   "G:58",
+   "G:59",
+   "G:99",
+   "G:101",
+   "G:102",
+   "G:103",
+   "G:104",
+   "G:105",
+   "G:106",
+   "G:107",
+   "G:108",
+   "G:110",
+   "G:111",
+   "F:27",
+   "F:28",
+   "F:30",
+   "F:31",
+   "F:32",
+   "F:50",
+   "F:52",
+   "F:92",
+   "F:93",
+   "F:94",
+   "F:97"
+  ],
+  "heavy_light_split": "Approximately 65:35 heavy:light. Heavy CDRs cover UL128; light CDRs land on UL131A, with B:R24/B:R81/D:K9 at the crossover.",
+  "binding_mode_union": "straddling"
+ },
+ "residues": [
+  "B:23",
+  "B:24",
+  "B:25",
+  "B:77",
+  "B:78",
+  "B:79",
+  "B:81",
+  "B:82",
+  "D:10",
+  "D:11",
+  "D:12",
+  "D:13",
+  "D:5",
+  "D:6",
+  "D:7",
+  "D:8",
+  "D:9"
+ ],
+ "n_residues": 17,
+ "patches": [
+  {
+   "id": "P1",
+   "name": "UL128-UL131A receptor-proximal apex (2C12/PC0034-like face)",
+   "n_residues": 18,
+   "residues": [
+    "B:23",
+    "B:24",
+    "B:25",
+    "B:77",
+    "B:78",
+    "B:79",
+    "B:81",
+    "B:82",
+    "D:10",
+    "D:11",
+    "D:13",
+    "D:15",
+    "D:3",
+    "D:5",
+    "D:6",
+    "D:7",
+    "D:8",
+    "D:9"
+   ],
+   "n_kept_by_advocate": 16,
+   "n_dropped_by_advocate": 2
+  }
+ ],
+ "pooling_provenance": {
+  "n_shared_at_pooling": 18,
+  "n_disputed_at_pooling": 0,
+  "note": "counts only, describing how the organizer grouped the phase-1 patches. The organizer's own candidate residue list is deliberately absent: the answer is the advocate's footprint, in `residues` and in `antibodies[].interfaces[]`."
+ },
+ "evidence": {
+  "advocate": {
+   "n_findings": 3,
+   "n_supports": 2,
+   "n_weakens": 0,
+   "weakest_point": "The mechanism is borrowed from a well-resolved 2C12-like class, but the supplied Fab is not 2C12; the original 36.8-A boundary also nearly consumed the full paratope span.",
+   "note": "the advocate reports claim/source/date/bearing and is not asked whether a source is about this binder"
+  },
+  "judge": {
+   "tier_a_support": 0,
+   "n_support_lines": 3,
+   "verdict": "unlikely",
+   "note": "Tier A -- a source about this binder itself -- is the judge's adjudication, in assessment[].support[]. It exists nowhere in the advocate's own answer."
+  }
+ },
+ "provenance": {
+  "unverified_source_policy_fields": [
+   "gated",
+   "web_search",
+   "shell_network",
+   "gate_tools"
+  ],
+  "assembled_case_dir": "gpt-5.6-high/gather_refine/post_refactor/unreleased_20261029/gated/casp17/H2362/case_259152_G_rep1",
+  "organize_case_dir": "gpt-5.6-high/gather_refine/post_refactor/unreleased_20261029/gated/casp17/H2362/case_259152_GR_rep1",
+  "organize_status": "ok",
+  "judge_case_dir": "gpt-5.6-high/gather_refine/post_refactor/unreleased_20261029/gated/casp17/H2362/case_259152_GJ_rep1",
+  "judge_status": "ok",
+  "packet": "gpt-5.6-high/gather/packets/case_259152/packet",
+  "manifest": "gpt-5.6-high/gather/packets/case_259152/manifest.json",
+  "advocate_case_dir": "gpt-5.6-high/gather_refine/post_refactor/unreleased_20261029/gated/casp17/H2362/case_259152_GR_rep1",
+  "advocate_status": "ok"
+ }
+}

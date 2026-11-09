@@ -1,0 +1,266 @@
+{
+ "task": "gather",
+ "gather_mode": "batched",
+ "num_launchers": 3,
+ "policy": {
+  "evidence_cutoff": null,
+  "no_cutoff": true,
+  "gated": false,
+  "web_search": true,
+  "shell_network": true,
+  "gate_tools": []
+ },
+ "unscored": true,
+ "target": "H2335",
+ "target_set": "casp17",
+ "case": "case_d48c74",
+ "evidence_cutoff": null,
+ "target_release_date": "2026-05-27",
+ "retrieval_policy": "no-cutoff",
+ "input_structure": "data/staged_casp17_no_native/H2335.pdb",
+ "input_structure_sha256": "f216450f2774ea363d9dfeeb1e478d506d906f539f384bf370d4b65ff32c11bb",
+ "briefing_source": "data/briefing/casp17_nocutoff/H2335/search_results.json",
+ "briefing_sha256": "4c6eb598fb307223a9315af31439ba34c45b16345678bd0c3aeed39bcafa9e64",
+ "antigen_chains": [
+  "A",
+  "B",
+  "C"
+ ],
+ "antibody_files": {
+  "antibody.pdb": [
+   "D",
+   "E"
+  ]
+ },
+ "antibody_chain_types": {
+  "antibody.pdb": {
+   "D": "light",
+   "E": "heavy"
+  }
+ },
+ "stage": "gatherer",
+ "pocket": {
+  "id": "C6",
+  "judge_rank": 3,
+  "name": "The membrane-proximal C-terminal gH DIV face recognized by 3G16...",
+  "confidence": 0.14,
+  "p_rests_on_holds": 0.2,
+  "why_this_rank": "Most compact candidate and directly mapped neutralizing surface class, balanced by membrane/glycan uncertainty and lack of query identity.",
+  "rests_on": "The C-terminal HDX surface is natively accessible to this Fab despite membrane-proximal context.",
+  "where_the_mass_goes_if_it_fails": "C3 and C1",
+  "what_it_is": "The membrane-proximal C-terminal gH DIV face recognized by 3G16, comprising adjacent segments around B:653-B:665 and B:682-B:685.",
+  "why_one_candidate": "not pooled with anything: no other patch is both within 12 A (half centroid distance, half contact-graph hops) and coverable by one paratope of this antibody's reach, 17.4 A",
+  "from_patches": [
+   "P5"
+  ]
+ },
+ "note": "`confidence` on the pocket is over pockets and sums to about 1 across them. Inside an interface it is per residue in [0, 1] and sums to nothing. No residue is cut at a threshold: the whole vector is the answer.",
+ "mapping_basis": "side",
+ "checks": {
+  "unrecognised_sides": []
+ },
+ "chain_pairs": [
+  {
+   "antibody_chain": "D",
+   "antigen_chain": "B",
+   "n_residues": 11
+  },
+  {
+   "antibody_chain": "E",
+   "antigen_chain": "B",
+   "n_residues": 9
+  }
+ ],
+ "antibodies": [
+  {
+   "antibody": "antibody.pdb",
+   "chains": {
+    "D": "light",
+    "E": "heavy"
+   },
+   "binding_mode": null,
+   "n_residues_scored": 14,
+   "interfaces": [
+    {
+     "antibody_chain": "D",
+     "antibody_chain_type": "light",
+     "antigen_chain": "B",
+     "n_residues": 11,
+     "residue_confidence": {
+      "657": 0.68,
+      "658": 0.7,
+      "659": 0.96,
+      "660": 0.65,
+      "661": 0.94,
+      "664": 0.72,
+      "665": 0.68,
+      "682": 0.4,
+      "683": 0.08,
+      "684": 0.3,
+      "685": 0.9
+     },
+     "residue_side": {
+      "657": "both",
+      "658": "both",
+      "659": "both",
+      "660": "both",
+      "661": "both",
+      "664": "light",
+      "665": "light",
+      "682": "light",
+      "683": "light",
+      "684": "light",
+      "685": "both"
+     },
+     "max_confidence": 0.96,
+     "mean_confidence": 0.6373
+    },
+    {
+     "antibody_chain": "E",
+     "antibody_chain_type": "heavy",
+     "antigen_chain": "B",
+     "n_residues": 9,
+     "residue_confidence": {
+      "653": 0.65,
+      "654": 0.8,
+      "656": 0.45,
+      "657": 0.68,
+      "658": 0.7,
+      "659": 0.96,
+      "660": 0.65,
+      "661": 0.94,
+      "685": 0.9
+     },
+     "residue_side": {
+      "653": "heavy",
+      "654": "heavy",
+      "656": "heavy",
+      "657": "both",
+      "658": "both",
+      "659": "both",
+      "660": "both",
+      "661": "both",
+      "685": "both"
+     },
+     "max_confidence": 0.96,
+     "mean_confidence": 0.7478
+    }
+   ]
+  }
+ ],
+ "paratope": {
+  "dominant_cdrs": [
+   "E:H3",
+   "E:H2",
+   "D:L1",
+   "D:L3"
+  ],
+  "paratope_residues": [
+   "E:31",
+   "E:32",
+   "E:33",
+   "E:53",
+   "E:54",
+   "E:57",
+   "E:58",
+   "E:100",
+   "E:103",
+   "E:105",
+   "E:106",
+   "E:111",
+   "D:27",
+   "D:28",
+   "D:32",
+   "D:92",
+   "D:94",
+   "D:95"
+  ],
+  "heavy_light_split": "About 65:35 heavy:light. H3 centers on F654/Y659/E661; H2 supplies Lys to the acidic face; L1/L3 brace V664/S665/E682/D685.",
+  "binding_mode_union": "single-chain"
+ },
+ "residues": [
+  "B:653",
+  "B:654",
+  "B:656",
+  "B:657",
+  "B:658",
+  "B:659",
+  "B:660",
+  "B:661",
+  "B:664",
+  "B:665",
+  "B:682",
+  "B:683",
+  "B:684",
+  "B:685"
+ ],
+ "n_residues": 14,
+ "patches": [
+  {
+   "id": "P5",
+   "name": "gH C-terminal 3G16-like acidic face",
+   "n_residues": 20,
+   "residues": [
+    "B:433",
+    "B:619",
+    "B:621",
+    "B:653",
+    "B:654",
+    "B:656",
+    "B:657",
+    "B:658",
+    "B:659",
+    "B:660",
+    "B:661",
+    "B:664",
+    "B:665",
+    "B:682",
+    "B:685",
+    "B:688",
+    "B:689",
+    "B:690",
+    "B:691",
+    "B:692"
+   ],
+   "n_kept_by_advocate": 12,
+   "n_dropped_by_advocate": 8
+  }
+ ],
+ "pooling_provenance": {
+  "n_shared_at_pooling": 20,
+  "n_disputed_at_pooling": 0,
+  "note": "counts only, describing how the organizer grouped the phase-1 patches. The organizer's own candidate residue list is deliberately absent: the answer is the advocate's footprint, in `residues` and in `antibodies[].interfaces[]`."
+ },
+ "evidence": {
+  "advocate": {
+   "n_findings": 3,
+   "n_supports": 2,
+   "n_weakens": 0,
+   "weakest_point": "The acidic face lies near the membrane and B:677 NGT glycan, restricting approach. The query is not 3G16 and the exact neutralization mechanism remains unresolved.",
+   "note": "the advocate reports claim/source/date/bearing and is not asked whether a source is about this binder"
+  },
+  "judge": {
+   "tier_a_support": 0,
+   "n_support_lines": 3,
+   "verdict": "live",
+   "note": "Tier A -- a source about this binder itself -- is the judge's adjudication, in assessment[].support[]. It exists nowhere in the advocate's own answer."
+  }
+ },
+ "provenance": {
+  "unverified_source_policy_fields": [
+   "gated",
+   "web_search",
+   "shell_network",
+   "gate_tools"
+  ],
+  "assembled_case_dir": "gpt-5.6-high/gather_refine/post_refactor/unreleased_20261029/nocut/casp17/H2335/case_d48c74_G_rep1",
+  "organize_case_dir": "gpt-5.6-high/gather_refine/post_refactor/unreleased_20261029/nocut/casp17/H2335/case_d48c74_GR_rep1",
+  "organize_status": "ok",
+  "judge_case_dir": "gpt-5.6-high/gather_refine/post_refactor/unreleased_20261029/nocut/casp17/H2335/case_d48c74_GJ_rep1",
+  "judge_status": "ok",
+  "packet": "gpt-5.6-high/nocut/gather/packets/case_d48c74/packet",
+  "manifest": "gpt-5.6-high/nocut/gather/packets/case_d48c74/manifest.json",
+  "advocate_case_dir": "gpt-5.6-high/gather_refine/post_refactor/unreleased_20261029/nocut/casp17/H2335/case_d48c74_GR_rep1",
+  "advocate_status": "ok"
+ }
+}

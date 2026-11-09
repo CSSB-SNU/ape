@@ -1,0 +1,288 @@
+{
+ "task": "gather",
+ "gather_mode": "batched",
+ "num_launchers": 3,
+ "policy": {
+  "evidence_cutoff": "2026-06-22",
+  "no_cutoff": false,
+  "gated": true,
+  "web_search": false,
+  "shell_network": true,
+  "gate_tools": [
+   "research",
+   "fetch",
+   "rcsb",
+   "patent",
+   "paper"
+  ]
+ },
+ "unscored": true,
+ "target": "H2374",
+ "target_set": "casp17",
+ "case": "case_6a7664",
+ "evidence_cutoff": "2026-06-22",
+ "target_release_date": "2026-06-22",
+ "retrieval_policy": "gated",
+ "input_structure": "data/staged_casp17_no_native/H2374.pdb",
+ "input_structure_sha256": "cce06a976275bf0894b0dae47679691f93a74bbcd1b28cd9b17fe6bfe49200de",
+ "briefing_source": "data/briefing/casp17/H2374/search_results.json",
+ "briefing_sha256": "6da47e89d19b7042483ab1c9442ed32a899f59c40f45416b4c36e0ae0c6c84d7",
+ "antigen_chains": [
+  "C"
+ ],
+ "antibody_files": {
+  "antibody.pdb": [
+   "A",
+   "B"
+  ]
+ },
+ "antibody_chain_types": {
+  "antibody.pdb": {
+   "A": "heavy",
+   "B": "light"
+  }
+ },
+ "stage": "gatherer",
+ "pocket": {
+  "id": "C3",
+  "judge_rank": 3,
+  "name": "The broad nectin-1 receptor-binding face of the gD Ig-like core...",
+  "confidence": 0.14,
+  "p_rests_on_holds": 0.27,
+  "why_this_rank": "It represents the same biologically favored receptor face but is almost as wide as the full CDR span and has the weakest surface-normal coherence, making the inherited broad footprint less credible than C4 or C6.",
+  "rests_on": "HAB13 truly spans the broad receptor face rather than a nested compact boundary.",
+  "where_the_mass_goes_if_it_fails": "C4 first, then C6.",
+  "what_it_is": "The broad nectin-1 receptor-binding face of the gD Ig-like core, including the N-terminal rim and the alpha3/receptor-contact ridge.",
+  "why_one_candidate": "not pooled with anything: no other patch is both within 12 A (half centroid distance, half contact-graph hops) and coverable by one paratope of this antibody's reach, 17.3 A",
+  "from_patches": [
+   "P3"
+  ]
+ },
+ "note": "`confidence` on the pocket is over pockets and sums to about 1 across them. Inside an interface it is per residue in [0, 1] and sums to nothing. No residue is cut at a threshold: the whole vector is the answer.",
+ "mapping_basis": "side",
+ "checks": {
+  "unrecognised_sides": []
+ },
+ "chain_pairs": [
+  {
+   "antibody_chain": "A",
+   "antigen_chain": "C",
+   "n_residues": 11
+  },
+  {
+   "antibody_chain": "B",
+   "antigen_chain": "C",
+   "n_residues": 10
+  }
+ ],
+ "antibodies": [
+  {
+   "antibody": "antibody.pdb",
+   "chains": {
+    "A": "heavy",
+    "B": "light"
+   },
+   "binding_mode": null,
+   "n_residues_scored": 15,
+   "interfaces": [
+    {
+     "antibody_chain": "A",
+     "antibody_chain_type": "heavy",
+     "antigen_chain": "C",
+     "n_residues": 11,
+     "residue_confidence": {
+      "27": 0.58,
+      "38": 0.88,
+      "215": 0.86,
+      "220": 0.7,
+      "221": 0.86,
+      "222": 0.96,
+      "223": 0.95,
+      "226": 0.55,
+      "227": 0.42,
+      "235": 0.52,
+      "238": 0.56
+     },
+     "residue_side": {
+      "27": "both",
+      "38": "both",
+      "215": "both",
+      "220": "both",
+      "221": "heavy",
+      "222": "both",
+      "223": "both",
+      "226": "heavy",
+      "227": "heavy",
+      "235": "heavy",
+      "238": "heavy"
+     },
+     "max_confidence": 0.96,
+     "mean_confidence": 0.7127
+    },
+    {
+     "antibody_chain": "B",
+     "antibody_chain_type": "light",
+     "antigen_chain": "C",
+     "n_residues": 10,
+     "residue_confidence": {
+      "27": 0.58,
+      "38": 0.88,
+      "39": 0.7,
+      "139": 0.66,
+      "140": 0.62,
+      "215": 0.86,
+      "216": 0.58,
+      "220": 0.7,
+      "222": 0.96,
+      "223": 0.95
+     },
+     "residue_side": {
+      "27": "both",
+      "38": "both",
+      "39": "light",
+      "139": "light",
+      "140": "light",
+      "215": "both",
+      "216": "light",
+      "220": "both",
+      "222": "both",
+      "223": "both"
+     },
+     "max_confidence": 0.96,
+     "mean_confidence": 0.749
+    }
+   ]
+  }
+ ],
+ "paratope": {
+  "dominant_cdrs": [
+   "A:H3",
+   "A:H2",
+   "B:L1"
+  ],
+  "paratope_residues": [
+   "A:30",
+   "A:32",
+   "A:33",
+   "A:35",
+   "A:54",
+   "A:55",
+   "A:56",
+   "A:58",
+   "A:103",
+   "A:104",
+   "A:105",
+   "A:106",
+   "A:107",
+   "A:109",
+   "A:110",
+   "A:114",
+   "A:115",
+   "B:27",
+   "B:28",
+   "B:31",
+   "B:32",
+   "B:33",
+   "B:35",
+   "B:36",
+   "B:58",
+   "B:98",
+   "B:102"
+  ],
+  "heavy_light_split": "The heavy chain supplies the larger 220-238 ridge contact through H3/H2; L1 covers the Y38/H39/D139/S140/D215 rim. C:27/C:38/C:215/C:220/C:222/C:223 lie at chain convergence.",
+  "binding_mode_union": "single-chain"
+ },
+ "residues": [
+  "C:139",
+  "C:140",
+  "C:215",
+  "C:216",
+  "C:220",
+  "C:221",
+  "C:222",
+  "C:223",
+  "C:226",
+  "C:227",
+  "C:235",
+  "C:238",
+  "C:27",
+  "C:38",
+  "C:39"
+ ],
+ "n_residues": 15,
+ "patches": [
+  {
+   "id": "P3",
+   "name": "Nectin/receptor-overlapping alpha3 face",
+   "n_residues": 27,
+   "residues": [
+    "C:132",
+    "C:134",
+    "C:139",
+    "C:140",
+    "C:214",
+    "C:215",
+    "C:216",
+    "C:217",
+    "C:218",
+    "C:220",
+    "C:221",
+    "C:222",
+    "C:223",
+    "C:224",
+    "C:227",
+    "C:23",
+    "C:231",
+    "C:234",
+    "C:235",
+    "C:238",
+    "C:25",
+    "C:26",
+    "C:27",
+    "C:35",
+    "C:36",
+    "C:38",
+    "C:39"
+   ],
+   "n_kept_by_advocate": 14,
+   "n_dropped_by_advocate": 13
+  }
+ ],
+ "pooling_provenance": {
+  "n_shared_at_pooling": 27,
+  "n_disputed_at_pooling": 0,
+  "note": "counts only, describing how the organizer grouped the phase-1 patches. The organizer's own candidate residue list is deliberately absent: the answer is the advocate's footprint, in `residues` and in `antibodies[].interfaces[]`."
+ },
+ "evidence": {
+  "advocate": {
+   "n_findings": 5,
+   "n_supports": 4,
+   "n_weakens": 0,
+   "weakest_point": "The input surface is 37.71 A across and mixes receptor contacts with buried or remote residues; even after narrowing, the 31.88 A footprint is near the broad end and the direct structural precedent belongs to a different antibody.",
+   "note": "the advocate reports claim/source/date/bearing and is not asked whether a source is about this binder"
+  },
+  "judge": {
+   "tier_a_support": 1,
+   "n_support_lines": 4,
+   "verdict": "live",
+   "note": "Tier A -- a source about this binder itself -- is the judge's adjudication, in assessment[].support[]. It exists nowhere in the advocate's own answer."
+  }
+ },
+ "provenance": {
+  "unverified_source_policy_fields": [
+   "gated",
+   "web_search",
+   "shell_network",
+   "gate_tools"
+  ],
+  "assembled_case_dir": "gpt-5.6-high/gather_refine/post_refactor/unreleased_20261029/gated/casp17/H2374/case_6a7664_G_rep5",
+  "organize_case_dir": "gpt-5.6-high/gather_refine/post_refactor/unreleased_20261029/gated/casp17/H2374/case_6a7664_GR_rep5",
+  "organize_status": "ok",
+  "judge_case_dir": "gpt-5.6-high/gather_refine/post_refactor/unreleased_20261029/gated/casp17/H2374/case_6a7664_GJ_rep5",
+  "judge_status": "ok",
+  "packet": "gpt-5.6-high/gather/packets/case_6a7664/packet",
+  "manifest": "gpt-5.6-high/gather/packets/case_6a7664/manifest.json",
+  "advocate_case_dir": "gpt-5.6-high/gather_refine/post_refactor/unreleased_20261029/gated/casp17/H2374/case_6a7664_GR_rep5",
+  "advocate_status": "ok"
+ }
+}

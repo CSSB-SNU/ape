@@ -1,0 +1,333 @@
+{
+ "task": "gather",
+ "gather_mode": "batched",
+ "num_launchers": 3,
+ "policy": {
+  "evidence_cutoff": "2026-06-12",
+  "no_cutoff": false,
+  "gated": true,
+  "web_search": false,
+  "shell_network": true,
+  "gate_tools": [
+   "research",
+   "fetch",
+   "rcsb",
+   "patent",
+   "paper"
+  ]
+ },
+ "unscored": true,
+ "target": "H2362",
+ "target_set": "casp17",
+ "case": "case_259152",
+ "evidence_cutoff": "2026-06-12",
+ "target_release_date": "2026-06-12",
+ "retrieval_policy": "gated",
+ "input_structure": "data/staged_casp17_no_native/H2362.pdb",
+ "input_structure_sha256": "54e187b986e4696f87e1dd7dd4cd6cd943754471a337aa57a0577c6172827a73",
+ "briefing_source": "data/briefing/casp17/H2362/search_results.json",
+ "briefing_sha256": "b0140a751ca600dc0d1ce7f02d3095b3776329fd300b1010c950088508d8f896",
+ "antigen_chains": [
+  "A",
+  "B",
+  "C",
+  "D",
+  "E"
+ ],
+ "antibody_files": {
+  "antibody.pdb": [
+   "F",
+   "G"
+  ]
+ },
+ "antibody_chain_types": {
+  "antibody.pdb": {
+   "F": "light",
+   "G": "heavy"
+  }
+ },
+ "stage": "gatherer",
+ "pocket": {
+  "id": "C8",
+  "judge_rank": 7,
+  "name": "The broad concave lateral face jointly formed by the N- and...",
+  "confidence": 0.08,
+  "p_rests_on_holds": 0.16,
+  "why_this_rank": "A solved antibody proves the face is bindable and functional, but the supplied Fab is not that antibody and the inherited footprint is over-wide with a glycan endpoint.",
+  "rests_on": "A sequence-distinct Fab can converge on a trimmed version of the 7I13 surface despite the inherited boundary.",
+  "where_the_mass_goes_if_it_fails": "C7 and C2",
+  "what_it_is": "The broad concave lateral face jointly formed by the N- and C-terminal lobes of UL128 and the outer face of UL130.",
+  "why_one_candidate": "not pooled with anything: no other patch is both within 12 A (half centroid distance, half contact-graph hops) and coverable by one paratope of this antibody's reach, 17.6 A",
+  "from_patches": [
+   "P7"
+  ]
+ },
+ "note": "`confidence` on the pocket is over pockets and sums to about 1 across them. Inside an interface it is per residue in [0, 1] and sums to nothing. No residue is cut at a threshold: the whole vector is the answer.",
+ "mapping_basis": "side",
+ "checks": {
+  "unrecognised_sides": []
+ },
+ "chain_pairs": [
+  {
+   "antibody_chain": "F",
+   "antigen_chain": "B",
+   "n_residues": 3
+  },
+  {
+   "antibody_chain": "F",
+   "antigen_chain": "C",
+   "n_residues": 8
+  },
+  {
+   "antibody_chain": "G",
+   "antigen_chain": "B",
+   "n_residues": 7
+  },
+  {
+   "antibody_chain": "G",
+   "antigen_chain": "C",
+   "n_residues": 4
+  }
+ ],
+ "antibodies": [
+  {
+   "antibody": "antibody.pdb",
+   "chains": {
+    "F": "light",
+    "G": "heavy"
+   },
+   "binding_mode": null,
+   "n_residues_scored": 17,
+   "interfaces": [
+    {
+     "antibody_chain": "F",
+     "antibody_chain_type": "light",
+     "antigen_chain": "B",
+     "n_residues": 3,
+     "residue_confidence": {
+      "104": 0.65,
+      "107": 0.58,
+      "108": 0.88
+     },
+     "residue_side": {
+      "104": "both",
+      "107": "both",
+      "108": "both"
+     },
+     "max_confidence": 0.88,
+     "mean_confidence": 0.7033
+    },
+    {
+     "antibody_chain": "F",
+     "antibody_chain_type": "light",
+     "antigen_chain": "C",
+     "n_residues": 8,
+     "residue_confidence": {
+      "139": 0.45,
+      "142": 0.55,
+      "143": 0.92,
+      "145": 0.28,
+      "174": 0.42,
+      "175": 0.78,
+      "176": 0.3,
+      "177": 0.55
+     },
+     "residue_side": {
+      "139": "light",
+      "142": "both",
+      "143": "both",
+      "145": "light",
+      "174": "light",
+      "175": "light",
+      "176": "light",
+      "177": "light"
+     },
+     "max_confidence": 0.92,
+     "mean_confidence": 0.5312
+    },
+    {
+     "antibody_chain": "G",
+     "antibody_chain_type": "heavy",
+     "antigen_chain": "B",
+     "n_residues": 7,
+     "residue_confidence": {
+      "17": 0.7,
+      "30": 0.45,
+      "32": 0.78,
+      "33": 0.55,
+      "104": 0.65,
+      "107": 0.58,
+      "108": 0.88
+     },
+     "residue_side": {
+      "17": "heavy",
+      "30": "heavy",
+      "32": "heavy",
+      "33": "heavy",
+      "104": "both",
+      "107": "both",
+      "108": "both"
+     },
+     "max_confidence": 0.88,
+     "mean_confidence": 0.6557
+    },
+    {
+     "antibody_chain": "G",
+     "antibody_chain_type": "heavy",
+     "antigen_chain": "C",
+     "n_residues": 4,
+     "residue_confidence": {
+      "142": 0.55,
+      "143": 0.92,
+      "144": 0.9,
+      "146": 0.62
+     },
+     "residue_side": {
+      "142": "both",
+      "143": "both",
+      "144": "heavy",
+      "146": "heavy"
+     },
+     "max_confidence": 0.92,
+     "mean_confidence": 0.7475
+    }
+   ]
+  }
+ ],
+ "paratope": {
+  "dominant_cdrs": [
+   "G:H3",
+   "G:H2",
+   "G:H1",
+   "F:L1"
+  ],
+  "paratope_residues": [
+   "G:26",
+   "G:27",
+   "G:28",
+   "G:30",
+   "G:31",
+   "G:32",
+   "G:33",
+   "G:34",
+   "G:35",
+   "G:54",
+   "G:55",
+   "G:56",
+   "G:57",
+   "G:58",
+   "G:59",
+   "G:99",
+   "G:101",
+   "G:102",
+   "G:103",
+   "G:104",
+   "G:105",
+   "G:106",
+   "G:107",
+   "G:108",
+   "G:110",
+   "G:111",
+   "F:27",
+   "F:28",
+   "F:30",
+   "F:31",
+   "F:32",
+   "F:50",
+   "F:52",
+   "F:92",
+   "F:93",
+   "F:94",
+   "F:97"
+  ],
+  "heavy_light_split": "Approximately 70:30 heavy:light. Heavy CDRs span UL128 and C:Y144/C:M146; light CDRs cover C:R143 and C:174-177.",
+  "binding_mode_union": "straddling"
+ },
+ "residues": [
+  "B:104",
+  "B:107",
+  "B:108",
+  "B:17",
+  "B:30",
+  "B:32",
+  "B:33",
+  "C:139",
+  "C:142",
+  "C:143",
+  "C:144",
+  "C:145",
+  "C:146",
+  "C:174",
+  "C:175",
+  "C:176",
+  "C:177"
+ ],
+ "n_residues": 17,
+ "patches": [
+  {
+   "id": "P7",
+   "name": "UL128-UL130 lateral concave face (7I13-like receptor-overlap surface)",
+   "n_residues": 19,
+   "residues": [
+    "B:104",
+    "B:107",
+    "B:108",
+    "B:109",
+    "B:110",
+    "B:17",
+    "B:30",
+    "B:32",
+    "B:33",
+    "C:139",
+    "C:142",
+    "C:143",
+    "C:144",
+    "C:145",
+    "C:146",
+    "C:174",
+    "C:175",
+    "C:176",
+    "C:177"
+   ],
+   "n_kept_by_advocate": 17,
+   "n_dropped_by_advocate": 2
+  }
+ ],
+ "pooling_provenance": {
+  "n_shared_at_pooling": 19,
+  "n_disputed_at_pooling": 0,
+  "note": "counts only, describing how the organizer grouped the phase-1 patches. The organizer's own candidate residue list is deliberately absent: the answer is the advocate's footprint, in `residues` and in `antibodies[].interfaces[]`."
+ },
+ "evidence": {
+  "advocate": {
+   "n_findings": 3,
+   "n_supports": 2,
+   "n_weakens": 1,
+   "weakest_point": "This remains the widest refined footprint and asks the Fab to approach near its full span; the C:176 glycan can occlude the light-side endpoint.",
+   "note": "the advocate reports claim/source/date/bearing and is not asked whether a source is about this binder"
+  },
+  "judge": {
+   "tier_a_support": 0,
+   "n_support_lines": 3,
+   "verdict": "live",
+   "note": "Tier A -- a source about this binder itself -- is the judge's adjudication, in assessment[].support[]. It exists nowhere in the advocate's own answer."
+  }
+ },
+ "provenance": {
+  "unverified_source_policy_fields": [
+   "gated",
+   "web_search",
+   "shell_network",
+   "gate_tools"
+  ],
+  "assembled_case_dir": "gpt-5.6-high/gather_refine/post_refactor/unreleased_20261029/gated/casp17/H2362/case_259152_G_rep1",
+  "organize_case_dir": "gpt-5.6-high/gather_refine/post_refactor/unreleased_20261029/gated/casp17/H2362/case_259152_GR_rep1",
+  "organize_status": "ok",
+  "judge_case_dir": "gpt-5.6-high/gather_refine/post_refactor/unreleased_20261029/gated/casp17/H2362/case_259152_GJ_rep1",
+  "judge_status": "ok",
+  "packet": "gpt-5.6-high/gather/packets/case_259152/packet",
+  "manifest": "gpt-5.6-high/gather/packets/case_259152/manifest.json",
+  "advocate_case_dir": "gpt-5.6-high/gather_refine/post_refactor/unreleased_20261029/gated/casp17/H2362/case_259152_GR_rep1",
+  "advocate_status": "ok"
+ }
+}

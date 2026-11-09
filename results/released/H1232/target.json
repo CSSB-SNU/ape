@@ -1,0 +1,394 @@
+{
+ "target": "H1232",
+ "target_set": "casp16",
+ "case": "case_d99ff5",
+ "task": "gather",
+ "gather_mode": "batched",
+ "num_launchers": 3,
+ "policy": {
+  "evidence_cutoff": "2024-06-13",
+  "no_cutoff": false,
+  "gated": true,
+  "web_search": false,
+  "shell_network": true,
+  "gate_tools": [
+   "research",
+   "fetch",
+   "rcsb",
+   "patent",
+   "paper"
+  ]
+ },
+ "unscored": false,
+ "evidence_cutoff": "2024-06-13",
+ "target_release_date": "2024-06-13",
+ "retrieval_policy": "gated",
+ "antigen_chains": [
+  "A",
+  "B"
+ ],
+ "antibody_files": {
+  "antibody.1.pdb": [
+   "C"
+  ],
+  "antibody.2.pdb": [
+   "D"
+  ]
+ },
+ "antibody_chain_types": {
+  "antibody.1.pdb": {
+   "C": "mixed"
+  },
+  "antibody.2.pdb": {
+   "D": "mixed"
+  }
+ },
+ "input_structure": "structures/H1232.pdb",
+ "input_structure_sha256": null,
+ "briefing_source": null,
+ "briefing_sha256": null,
+ "recognized_complex": {
+  "organize": null,
+  "judge": true
+ },
+ "recognition_note": "Pre-cutoff sequence and documentary evidence identifies the antigen as the HAstV2 Oxford-like capsid spike and the supplied scFv as monoclonal antibody 4B6. The decisive link is the exact supplied CDR set in the fifth ordered antibody sequence block (SEQ IDs 33-39) of WO2023056473A1, published 2023-04-06, together with Meyer et al., published 2019-06-24. Espinosa et al., first public 2018-10-22, reports 4B6 escape at capsid D564E/N565D, construct-local D136/N137. Prior launcher sessions opened pre-cutoff 5KOV native-complex metadata but no coordinates or interface answer key; this judging session did not open that entry.",
+ "what_separated_them": "A Tier A line exists: exact 4B6 escape localizes the binder to D136/N137, sharply favoring candidates that contain that vicinity. It does not distinguish C1/C2/C3/C5 by itself. Assembly-aware geometry did: C1 makes D136 central in a fully exposed, connected 20 A patch and follows the exposed partner-protomer surface that shapes D136; C2 is the credible single-protomer alternative; C3/C5 place the exact pair at the edge of a footprint slightly larger than this paratope's maximum CDR C-alpha span. PL-2 evidence was treated only as Tier B precedent, discounted by 82-87% side-chain identity over the candidate surfaces, P35 obstruction, and the fact that it concerns another antibody.",
+ "not_pooled": [],
+ "provenance": {
+  "unverified_source_policy_fields": [
+   "gated",
+   "web_search",
+   "shell_network",
+   "gate_tools"
+  ],
+  "assembled_case_dir": "gpt-5.6-high/gather_refine/post_refactor/released_structure_20261030/casp16/H1232/case_d99ff5_G_rep2",
+  "organize_case_dir": "gpt-5.6-high/gather_refine/post_refactor/released_structure_20261030/casp16/H1232/case_d99ff5_GR_rep1",
+  "organize_status": "ok",
+  "judge_case_dir": "gpt-5.6-high/gather_refine/post_refactor/released_structure_20261030/casp16/H1232/case_d99ff5_GJ_rep2",
+  "judge_status": "ok",
+  "packet": "gpt-5.6-high/gather/packets/case_d99ff5/packet",
+  "manifest": "gpt-5.6-high/gather/packets/case_d99ff5/manifest.json"
+ },
+ "truth_file": "data/truth/casp16/H1232.epitope.json",
+ "truth": {
+  "n_residues": 38,
+  "usable": "yes",
+  "chains": {
+   "A": [
+    27,
+    31,
+    32,
+    33,
+    124,
+    126,
+    133,
+    134,
+    135,
+    136,
+    137,
+    138,
+    139,
+    140,
+    141,
+    148,
+    149,
+    150,
+    152
+   ],
+   "B": [
+    27,
+    31,
+    32,
+    33,
+    124,
+    126,
+    133,
+    134,
+    135,
+    136,
+    137,
+    138,
+    139,
+    140,
+    141,
+    148,
+    149,
+    150,
+    152
+   ]
+  },
+  "anchor_note": "the numbering frame only; the epitope is defined on the native and carried here by antigen sequence alignment, so which pooled model this is does not affect the label"
+ },
+ "oracle": {
+  "metric": "f1",
+  "epitope_definition": "whole_antibody",
+  "truth_file": "data/truth/casp16/H1232.epitope.json",
+  "rank1": {
+   "pocket": "C1",
+   "confidence": 0.62,
+   "precision": 0.8,
+   "recall": 0.6316,
+   "f1": 0.7059,
+   "n_pred": 30,
+   "n_true": 38,
+   "n_hit": 24
+  },
+  "best": {
+   "pocket": "C1",
+   "judge_rank": 1,
+   "confidence": 0.62,
+   "precision": 0.8,
+   "recall": 0.6316,
+   "f1": 0.7059,
+   "n_pred": 30,
+   "n_true": 38,
+   "n_hit": 24
+  },
+  "note": "the best pocket the answer already contains. Rank 1 is the answer as delivered, so the gap is what the judge's ordering cost."
+ },
+ "pockets": [
+  {
+   "id": "C1",
+   "judge_rank": 1,
+   "name": "The apical loop-3 face of the protruding capsid spike, centered on...",
+   "confidence": 0.62,
+   "mapping_basis": "per_antibody",
+   "n_residues": 30,
+   "score": {
+    "precision": 0.8,
+    "recall": 0.6316,
+    "f1": 0.7059,
+    "n_pred": 30,
+    "n_true": 38,
+    "n_hit": 24
+   },
+   "chain_pairs": [
+    {
+     "antibody_chain": "C",
+     "antigen_chain": "A",
+     "n_residues": 8
+    },
+    {
+     "antibody_chain": "C",
+     "antigen_chain": "B",
+     "n_residues": 7
+    },
+    {
+     "antibody_chain": "D",
+     "antigen_chain": "A",
+     "n_residues": 7
+    },
+    {
+     "antibody_chain": "D",
+     "antigen_chain": "B",
+     "n_residues": 8
+    }
+   ],
+   "file": "pocket.C1.json"
+  },
+  {
+   "id": "C2",
+   "judge_rank": 2,
+   "name": "A compact tertiary epitope on one spike protomer: the exposed tip and...",
+   "confidence": 0.27,
+   "mapping_basis": "per_antibody",
+   "n_residues": 20,
+   "score": {
+    "precision": 0.9,
+    "recall": 0.4737,
+    "f1": 0.6207,
+    "n_pred": 20,
+    "n_true": 38,
+    "n_hit": 18
+   },
+   "chain_pairs": [
+    {
+     "antibody_chain": "C",
+     "antigen_chain": "A",
+     "n_residues": 10
+    },
+    {
+     "antibody_chain": "D",
+     "antigen_chain": "B",
+     "n_residues": 10
+    }
+   ],
+   "file": "pocket.C2.json"
+  },
+  {
+   "id": "C3",
+   "judge_rank": 3,
+   "name": "A broad quaternary functional side face: the loop-1 ledge and...",
+   "confidence": 0.05,
+   "mapping_basis": "per_antibody",
+   "n_residues": 34,
+   "score": {
+    "precision": 0.5294,
+    "recall": 0.4737,
+    "f1": 0.5,
+    "n_pred": 34,
+    "n_true": 38,
+    "n_hit": 18
+   },
+   "chain_pairs": [
+    {
+     "antibody_chain": "C",
+     "antigen_chain": "A",
+     "n_residues": 13
+    },
+    {
+     "antibody_chain": "C",
+     "antigen_chain": "B",
+     "n_residues": 4
+    },
+    {
+     "antibody_chain": "D",
+     "antigen_chain": "A",
+     "n_residues": 4
+    },
+    {
+     "antibody_chain": "D",
+     "antigen_chain": "B",
+     "n_residues": 13
+    }
+   ],
+   "file": "pocket.C3.json"
+  },
+  {
+   "id": "C5",
+   "judge_rank": 4,
+   "name": "The canonical quaternary neutralization face on the spike side: loop...",
+   "confidence": 0.03,
+   "mapping_basis": "per_antibody",
+   "n_residues": 36,
+   "score": {
+    "precision": 0.5,
+    "recall": 0.4737,
+    "f1": 0.4865,
+    "n_pred": 36,
+    "n_true": 38,
+    "n_hit": 18
+   },
+   "chain_pairs": [
+    {
+     "antibody_chain": "C",
+     "antigen_chain": "A",
+     "n_residues": 14
+    },
+    {
+     "antibody_chain": "C",
+     "antigen_chain": "B",
+     "n_residues": 4
+    },
+    {
+     "antibody_chain": "D",
+     "antigen_chain": "A",
+     "n_residues": 4
+    },
+    {
+     "antibody_chain": "D",
+     "antigen_chain": "B",
+     "n_residues": 14
+    }
+   ],
+   "file": "pocket.C5.json"
+  },
+  {
+   "id": "C7",
+   "judge_rank": 5,
+   "name": "The discrete PL-2-class quaternary epitope: a main-protomer...",
+   "confidence": 0.015,
+   "mapping_basis": "per_antibody",
+   "n_residues": 30,
+   "score": {
+    "precision": 0.4,
+    "recall": 0.3158,
+    "f1": 0.3529,
+    "n_pred": 30,
+    "n_true": 38,
+    "n_hit": 12
+   },
+   "chain_pairs": [
+    {
+     "antibody_chain": "C",
+     "antigen_chain": "A",
+     "n_residues": 14
+    },
+    {
+     "antibody_chain": "C",
+     "antigen_chain": "B",
+     "n_residues": 1
+    },
+    {
+     "antibody_chain": "D",
+     "antigen_chain": "A",
+     "n_residues": 1
+    },
+    {
+     "antibody_chain": "D",
+     "antigen_chain": "B",
+     "n_residues": 14
+    }
+   ],
+   "file": "pocket.C7.json"
+  },
+  {
+   "id": "C4",
+   "judge_rank": 6,
+   "name": "An exposed monomer-contained lateral terrace built from the 72-79...",
+   "confidence": 0.008,
+   "mapping_basis": "per_antibody",
+   "n_residues": 24,
+   "score": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0,
+    "n_pred": 24,
+    "n_true": 38,
+    "n_hit": 0
+   },
+   "chain_pairs": [
+    {
+     "antibody_chain": "C",
+     "antigen_chain": "A",
+     "n_residues": 12
+    },
+    {
+     "antibody_chain": "D",
+     "antigen_chain": "B",
+     "n_residues": 12
+    }
+   ],
+   "file": "pocket.C4.json"
+  },
+  {
+   "id": "C6",
+   "judge_rank": 7,
+   "name": "A compact monomeric lateral face centered on the exposed 67-79...",
+   "confidence": 0.007,
+   "mapping_basis": "per_antibody",
+   "n_residues": 20,
+   "score": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0,
+    "n_pred": 20,
+    "n_true": 38,
+    "n_hit": 0
+   },
+   "chain_pairs": [
+    {
+     "antibody_chain": "C",
+     "antigen_chain": "A",
+     "n_residues": 10
+    },
+    {
+     "antibody_chain": "D",
+     "antigen_chain": "B",
+     "n_residues": 10
+    }
+   ],
+   "file": "pocket.C6.json"
+  }
+ ]
+}

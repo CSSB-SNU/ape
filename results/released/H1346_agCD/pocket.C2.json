@@ -1,0 +1,352 @@
+{
+ "task": "gather",
+ "gather_mode": "batched",
+ "num_launchers": 3,
+ "policy": {
+  "evidence_cutoff": "2026-05-21",
+  "no_cutoff": false,
+  "gated": true,
+  "web_search": false,
+  "shell_network": true,
+  "gate_tools": [
+   "research",
+   "fetch",
+   "rcsb",
+   "patent",
+   "paper"
+  ]
+ },
+ "unscored": false,
+ "target": "H1346_agCD",
+ "target_set": "casp17",
+ "case": "case_fed304",
+ "evidence_cutoff": "2026-05-21",
+ "target_release_date": "2026-05-21",
+ "retrieval_policy": "gated",
+ "input_structure": "structures/H1346_agCD.pdb",
+ "input_structure_sha256": null,
+ "briefing_source": null,
+ "briefing_sha256": null,
+ "antigen_chains": [
+  "C",
+  "D"
+ ],
+ "antibody_files": {
+  "antibody.pdb": [
+   "A",
+   "B"
+  ]
+ },
+ "antibody_chain_types": {
+  "antibody.pdb": {
+   "A": "heavy",
+   "B": "light"
+  }
+ },
+ "truth_file": "data/truth/casp17/H1346_agCD.epitope.json",
+ "stage": "gatherer",
+ "pocket": {
+  "id": "C2",
+  "judge_rank": 3,
+  "name": "The functional idiotope spanning the VH/VL combining-site apex of the...",
+  "confidence": 0.12,
+  "p_rests_on_holds": 0.22,
+  "why_this_rank": "Most exposed and geometrically coherent composite variable-apex alternative, conditional on the unresolved anti-idiotype role.",
+  "rests_on": "A/B is a REGN7301-like anti-BCMA-arm binder rather than the anti-kappa chaperone.",
+  "where_the_mass_goes_if_it_fails": "C1 and C4",
+  "what_it_is": "The functional idiotope spanning the VH/VL combining-site apex of the linvoseltamab anti-BCMA arm: the exposed, disulfide-stapled C:H3 ridge and adjacent C:H1/H2 and D:L3 shoulders.",
+  "why_one_candidate": "geometry pooled 2 patches (P10, P2): P10+P2 at 2.25 A, union radius 16.8 A. Every union fits inside this antibody's paratope reach of 16.9 A. No session judged these to be the same surface.",
+  "from_patches": [
+   "P10",
+   "P2"
+  ]
+ },
+ "note": "`confidence` on the pocket is over pockets and sums to about 1 across them. Inside an interface it is per residue in [0, 1] and sums to nothing. No residue is cut at a threshold: the whole vector is the answer.",
+ "mapping_basis": "side",
+ "checks": {
+  "unrecognised_sides": []
+ },
+ "chain_pairs": [
+  {
+   "antibody_chain": "A",
+   "antigen_chain": "C",
+   "n_residues": 8
+  },
+  {
+   "antibody_chain": "A",
+   "antigen_chain": "D",
+   "n_residues": 5
+  },
+  {
+   "antibody_chain": "B",
+   "antigen_chain": "C",
+   "n_residues": 14
+  }
+ ],
+ "antibodies": [
+  {
+   "antibody": "antibody.pdb",
+   "chains": {
+    "A": "heavy",
+    "B": "light"
+   },
+   "binding_mode": null,
+   "n_residues_scored": 21,
+   "interfaces": [
+    {
+     "antibody_chain": "A",
+     "antibody_chain_type": "heavy",
+     "antigen_chain": "C",
+     "n_residues": 8,
+     "residue_confidence": {
+      "100": 0.6,
+      "101": 0.88,
+      "103": 0.92,
+      "104": 0.92,
+      "105": 0.98,
+      "106": 0.97,
+      "107": 0.58,
+      "108": 0.82
+     },
+     "residue_side": {
+      "100": "heavy",
+      "101": "both",
+      "103": "both",
+      "104": "both",
+      "105": "both",
+      "106": "both",
+      "107": "heavy",
+      "108": "both"
+     },
+     "max_confidence": 0.98,
+     "mean_confidence": 0.8337,
+     "precision_vs_truth": 0.0,
+     "n_in_truth": 0
+    },
+    {
+     "antibody_chain": "A",
+     "antibody_chain_type": "heavy",
+     "antigen_chain": "D",
+     "n_residues": 5,
+     "residue_confidence": {
+      "30": 0.4,
+      "92": 0.83,
+      "93": 0.68,
+      "94": 0.78,
+      "95": 0.64
+     },
+     "residue_side": {
+      "30": "heavy",
+      "92": "heavy",
+      "93": "heavy",
+      "94": "heavy",
+      "95": "heavy"
+     },
+     "max_confidence": 0.83,
+     "mean_confidence": 0.666,
+     "precision_vs_truth": 0.0,
+     "n_in_truth": 0
+    },
+    {
+     "antibody_chain": "B",
+     "antibody_chain_type": "light",
+     "antigen_chain": "C",
+     "n_residues": 14,
+     "residue_confidence": {
+      "31": 0.48,
+      "32": 0.32,
+      "33": 0.25,
+      "53": 0.45,
+      "54": 0.72,
+      "56": 0.67,
+      "57": 0.55,
+      "58": 0.4,
+      "101": 0.88,
+      "103": 0.92,
+      "104": 0.92,
+      "105": 0.98,
+      "106": 0.97,
+      "108": 0.82
+     },
+     "residue_side": {
+      "31": "light",
+      "32": "light",
+      "33": "light",
+      "53": "light",
+      "54": "light",
+      "56": "light",
+      "57": "light",
+      "58": "light",
+      "101": "both",
+      "103": "both",
+      "104": "both",
+      "105": "both",
+      "106": "both",
+      "108": "both"
+     },
+     "max_confidence": 0.98,
+     "mean_confidence": 0.6664,
+     "precision_vs_truth": 0.0,
+     "n_in_truth": 0
+    }
+   ]
+  }
+ ],
+ "paratope": {
+  "dominant_cdrs": [
+   "A:H3",
+   "B:L1",
+   "B:L3",
+   "A:H2"
+  ],
+  "paratope_residues": [
+   "A:53",
+   "A:54",
+   "A:56",
+   "A:97",
+   "A:100",
+   "A:101",
+   "A:102",
+   "A:103",
+   "A:104",
+   "A:105",
+   "A:106",
+   "A:109",
+   "B:27",
+   "B:28",
+   "B:30",
+   "B:32",
+   "B:52",
+   "B:93",
+   "B:94"
+  ],
+  "heavy_light_split": "Heavy-dominant but genuinely straddling: A:H3/H2 anchor C:H3 and reach D:L3, while B:L1/L3 cover the C:H1/H2 rim; C:101 and C:103-C:108 lie at the both-chain center.",
+  "binding_mode_union": "straddling"
+ },
+ "residues": [
+  "C:100",
+  "C:101",
+  "C:103",
+  "C:104",
+  "C:105",
+  "C:106",
+  "C:107",
+  "C:108",
+  "C:31",
+  "C:32",
+  "C:33",
+  "C:53",
+  "C:54",
+  "C:56",
+  "C:57",
+  "C:58",
+  "D:30",
+  "D:92",
+  "D:93",
+  "D:94",
+  "D:95"
+ ],
+ "n_residues": 21,
+ "patches": [
+  {
+   "id": "P10",
+   "name": "straddling anti-idiotope across the linvoseltamab iBCMA combining-site apex",
+   "n_residues": 24,
+   "residues": [
+    "C:100",
+    "C:101",
+    "C:103",
+    "C:104",
+    "C:105",
+    "C:106",
+    "C:107",
+    "C:108",
+    "C:114",
+    "C:30",
+    "C:31",
+    "C:32",
+    "C:53",
+    "C:54",
+    "C:56",
+    "C:57",
+    "C:58",
+    "D:27",
+    "D:28",
+    "D:30",
+    "D:92",
+    "D:93",
+    "D:94",
+    "D:95"
+   ],
+   "n_kept_by_advocate": 20,
+   "n_dropped_by_advocate": 4
+  },
+  {
+   "id": "P2",
+   "name": "linvoseltamab variable-domain combining-site idiotope",
+   "n_residues": 13,
+   "residues": [
+    "C:101",
+    "C:103",
+    "C:104",
+    "C:105",
+    "C:106",
+    "C:108",
+    "C:31",
+    "C:33",
+    "C:53",
+    "D:30",
+    "D:52",
+    "D:92",
+    "D:94"
+   ],
+   "n_kept_by_advocate": 12,
+   "n_dropped_by_advocate": 1
+  }
+ ],
+ "pooling_provenance": {
+  "n_shared_at_pooling": 11,
+  "n_disputed_at_pooling": 15,
+  "note": "counts only, describing how the organizer grouped the phase-1 patches. The organizer's own candidate residue list is deliberately absent: the answer is the advocate's footprint, in `residues` and in `antibodies[].interfaces[]`."
+ },
+ "evidence": {
+  "advocate": {
+   "n_findings": 5,
+   "n_supports": 4,
+   "n_weakens": 1,
+   "weakest_point": "The most specific specimen-context finding says the linvoseltamab complex contained an anti-kappa Fab, which would move the epitope to D constant domain (C1 or C4). The alternative REGN7301 role match has no public sequence tying it to A/B.",
+   "note": "the advocate reports claim/source/date/bearing and is not asked whether a source is about this binder"
+  },
+  "judge": {
+   "tier_a_support": 0,
+   "n_support_lines": 4,
+   "verdict": "live",
+   "note": "Tier A -- a source about this binder itself -- is the judge's adjudication, in assessment[].support[]. It exists nowhere in the advocate's own answer."
+  }
+ },
+ "provenance": {
+  "unverified_source_policy_fields": [
+   "gated",
+   "web_search",
+   "shell_network",
+   "gate_tools"
+  ],
+  "assembled_case_dir": "gpt-5.6-high/gather_refine/post_refactor/released_structure_20261030/casp17/H1346_agCD/case_fed304_G_rep2",
+  "organize_case_dir": "gpt-5.6-high/gather_refine/post_refactor/released_structure_20261030/casp17/H1346_agCD/case_fed304_GR_rep1",
+  "organize_status": "ok",
+  "judge_case_dir": "gpt-5.6-high/gather_refine/post_refactor/released_structure_20261030/casp17/H1346_agCD/case_fed304_GJ_rep2",
+  "judge_status": "ok",
+  "packet": "gpt-5.6-high/gather/packets/case_fed304/packet",
+  "manifest": "gpt-5.6-high/gather/packets/case_fed304/manifest.json",
+  "advocate_case_dir": "gpt-5.6-high/gather_refine/post_refactor/released_structure_20261030/casp17/H1346_agCD/case_fed304_GR_rep1",
+  "advocate_status": "ok"
+ },
+ "score": {
+  "precision": 0.0,
+  "recall": 0.0,
+  "f1": 0.0,
+  "n_pred": 21,
+  "n_true": 17,
+  "n_hit": 0
+ }
+}

@@ -1,0 +1,341 @@
+{
+ "task": "gather",
+ "gather_mode": "batched",
+ "num_launchers": 3,
+ "policy": {
+  "evidence_cutoff": "2024-05-02",
+  "no_cutoff": false,
+  "gated": true,
+  "web_search": false,
+  "shell_network": true,
+  "gate_tools": [
+   "research",
+   "fetch",
+   "rcsb",
+   "patent",
+   "paper"
+  ]
+ },
+ "unscored": false,
+ "target": "H1204",
+ "target_set": "casp16",
+ "case": "case_2c69fc",
+ "evidence_cutoff": "2024-05-02",
+ "target_release_date": "2024-05-02",
+ "retrieval_policy": "gated",
+ "input_structure": "structures/H1204.pdb",
+ "input_structure_sha256": null,
+ "briefing_source": null,
+ "briefing_sha256": null,
+ "antigen_chains": [
+  "C",
+  "D",
+  "E",
+  "F"
+ ],
+ "antibody_files": {
+  "antibody.1.pdb": [
+   "A"
+  ],
+  "antibody.2.pdb": [
+   "B"
+  ]
+ },
+ "antibody_chain_types": {
+  "antibody.1.pdb": {
+   "A": "heavy"
+  },
+  "antibody.2.pdb": {
+   "B": "heavy"
+  }
+ },
+ "truth_file": "data/truth/casp16/H1204.epitope.json",
+ "stage": "gatherer",
+ "pocket": {
+  "id": "C4",
+  "judge_rank": 3,
+  "name": "The beta-subunit A/H outer face, where the N-terminal A helix lies...",
+  "confidence": 0.12,
+  "p_rests_on_holds": 0.22,
+  "why_this_rank": "Fully exposed beta face with C-terminal VHH precedent, discounted because the A-helix lobe is unmapped.",
+  "rests_on": "C-terminal peptide precedent extends to the A/H seam.",
+  "where_the_mass_goes_if_it_fails": "C9",
+  "what_it_is": "The beta-subunit A/H outer face, where the N-terminal A helix lies spatially beside the distal H-helix end.",
+  "why_one_candidate": "not pooled with anything: no other patch is both within 12 A (half centroid distance, half contact-graph hops) and coverable by one paratope of this antibody's reach, 12.1 A",
+  "from_patches": [
+   "P3"
+  ]
+ },
+ "note": "`confidence` on the pocket is over pockets and sums to about 1 across them. Inside an interface it is per residue in [0, 1] and sums to nothing. No residue is cut at a threshold: the whole vector is the answer.",
+ "mapping_basis": "per_antibody",
+ "checks": {
+  "unrecognised_sides": []
+ },
+ "chain_pairs": [
+  {
+   "antibody_chain": "A",
+   "antigen_chain": "C",
+   "n_residues": 13
+  },
+  {
+   "antibody_chain": "B",
+   "antigen_chain": "D",
+   "n_residues": 13
+  }
+ ],
+ "antibodies": [
+  {
+   "antibody": "antibody.1.pdb",
+   "chains": {
+    "A": "heavy"
+   },
+   "binding_mode": "single-chain",
+   "n_residues_scored": 13,
+   "interfaces": [
+    {
+     "antibody_chain": "A",
+     "antibody_chain_type": "heavy",
+     "antigen_chain": "C",
+     "n_residues": 13,
+     "residue_confidence": {
+      "10": 0.57,
+      "11": 0.49,
+      "13": 0.68,
+      "14": 0.83,
+      "17": 0.8,
+      "18": 0.94,
+      "20": 0.13,
+      "118": 0.41,
+      "119": 0.86,
+      "121": 0.32,
+      "122": 0.93,
+      "124": 0.59,
+      "126": 0.28
+     },
+     "residue_side": {
+      "10": "heavy",
+      "11": "heavy",
+      "13": "heavy",
+      "14": "heavy",
+      "17": "heavy",
+      "18": "heavy",
+      "20": "heavy",
+      "118": "heavy",
+      "119": "heavy",
+      "121": "heavy",
+      "122": "heavy",
+      "124": "heavy",
+      "126": "heavy"
+     },
+     "max_confidence": 0.94,
+     "mean_confidence": 0.6023,
+     "precision_vs_truth": 0.5385,
+     "n_in_truth": 7
+    }
+   ]
+  },
+  {
+   "antibody": "antibody.2.pdb",
+   "chains": {
+    "B": "heavy"
+   },
+   "binding_mode": "single-chain",
+   "n_residues_scored": 13,
+   "interfaces": [
+    {
+     "antibody_chain": "B",
+     "antibody_chain_type": "heavy",
+     "antigen_chain": "D",
+     "n_residues": 13,
+     "residue_confidence": {
+      "10": 0.57,
+      "11": 0.49,
+      "13": 0.68,
+      "14": 0.83,
+      "17": 0.8,
+      "18": 0.94,
+      "20": 0.13,
+      "118": 0.41,
+      "119": 0.86,
+      "121": 0.32,
+      "122": 0.93,
+      "124": 0.59,
+      "126": 0.28
+     },
+     "residue_side": {
+      "10": "heavy",
+      "11": "heavy",
+      "13": "heavy",
+      "14": "heavy",
+      "17": "heavy",
+      "18": "heavy",
+      "20": "heavy",
+      "118": "heavy",
+      "119": "heavy",
+      "121": "heavy",
+      "122": "heavy",
+      "124": "heavy",
+      "126": "heavy"
+     },
+     "max_confidence": 0.94,
+     "mean_confidence": 0.6023,
+     "precision_vs_truth": 0.5385,
+     "n_in_truth": 7
+    }
+   ]
+  }
+ ],
+ "paratope": {
+  "dominant_cdrs": [
+   "A:H3",
+   "B:H3",
+   "A:H1",
+   "B:H1",
+   "A:H2",
+   "B:H2"
+  ],
+  "paratope_residues": [
+   "A:30",
+   "A:31",
+   "A:32",
+   "A:35",
+   "A:56",
+   "A:103",
+   "A:104",
+   "A:105",
+   "A:106",
+   "A:107",
+   "A:109",
+   "A:110",
+   "A:115",
+   "A:116",
+   "A:117",
+   "B:30",
+   "B:31",
+   "B:32",
+   "B:35",
+   "B:56",
+   "B:103",
+   "B:104",
+   "B:105",
+   "B:106",
+   "B:107",
+   "B:109",
+   "B:110",
+   "B:115",
+   "B:116",
+   "B:117"
+  ],
+  "heavy_light_split": "Heavy-only VHHs; H3 centres on beta18/119/122 and H1/H2 cover the two helix rims.",
+  "binding_mode_union": null
+ },
+ "residues": [
+  "C:10",
+  "C:11",
+  "C:118",
+  "C:119",
+  "C:121",
+  "C:122",
+  "C:124",
+  "C:126",
+  "C:13",
+  "C:14",
+  "C:17",
+  "C:18",
+  "C:20",
+  "D:10",
+  "D:11",
+  "D:118",
+  "D:119",
+  "D:121",
+  "D:122",
+  "D:124",
+  "D:126",
+  "D:13",
+  "D:14",
+  "D:17",
+  "D:18",
+  "D:20"
+ ],
+ "n_residues": 26,
+ "patches": [
+  {
+   "id": "P3",
+   "name": "paired beta-subunit A/H outer faces",
+   "n_residues": 24,
+   "residues": [
+    "C:10",
+    "C:11",
+    "C:118",
+    "C:121",
+    "C:122",
+    "C:124",
+    "C:126",
+    "C:13",
+    "C:14",
+    "C:17",
+    "C:18",
+    "C:20",
+    "D:10",
+    "D:11",
+    "D:118",
+    "D:121",
+    "D:122",
+    "D:124",
+    "D:126",
+    "D:13",
+    "D:14",
+    "D:17",
+    "D:18",
+    "D:20"
+   ],
+   "n_kept_by_advocate": 24,
+   "n_dropped_by_advocate": 0
+  }
+ ],
+ "pooling_provenance": {
+  "n_shared_at_pooling": 24,
+  "n_disputed_at_pooling": 0,
+  "note": "counts only, describing how the organizer grouped the phase-1 patches. The organizer's own candidate residue list is deliberately absent: the answer is the advocate's footprint, in `residues` and in `antibodies[].interfaces[]`."
+ },
+ "evidence": {
+  "advocate": {
+   "n_findings": 4,
+   "n_supports": 4,
+   "n_weakens": 0,
+   "weakest_point": "The footprint is near the paratope width limit, and the patent supports the H-helix peptide without requiring the adjacent A helix.",
+   "note": "the advocate reports claim/source/date/bearing and is not asked whether a source is about this binder"
+  },
+  "judge": {
+   "tier_a_support": 1,
+   "n_support_lines": 3,
+   "verdict": "live",
+   "note": "Tier A -- a source about this binder itself -- is the judge's adjudication, in assessment[].support[]. It exists nowhere in the advocate's own answer."
+  }
+ },
+ "provenance": {
+  "unverified_source_policy_fields": [
+   "gated",
+   "web_search",
+   "shell_network",
+   "gate_tools"
+  ],
+  "assembled_case_dir": "gpt-5.6-high/gather_refine/post_refactor/released_structure_20261030/casp16/H1204/case_2c69fc_G_rep2",
+  "organize_case_dir": "gpt-5.6-high/gather_refine/post_refactor/released_structure_20261030/casp16/H1204/case_2c69fc_GR_rep1",
+  "organize_status": "ok",
+  "judge_case_dir": "gpt-5.6-high/gather_refine/post_refactor/released_structure_20261030/casp16/H1204/case_2c69fc_GJ_rep2",
+  "judge_status": "ok",
+  "packet": "gpt-5.6-high/gather/packets/case_2c69fc/packet",
+  "manifest": "gpt-5.6-high/gather/packets/case_2c69fc/manifest.json",
+  "advocate_case_dir": "gpt-5.6-high/gather_refine/post_refactor/released_structure_20261030/casp16/H1204/case_2c69fc_GR_rep1",
+  "advocate_status": "ok"
+ },
+ "score": {
+  "precision": 0.5385,
+  "recall": 0.3182,
+  "f1": 0.4,
+  "n_pred": 26,
+  "n_true": 44,
+  "n_hit": 14
+ }
+}

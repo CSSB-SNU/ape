@@ -1,0 +1,282 @@
+{
+ "task": "gather",
+ "gather_mode": "batched",
+ "num_launchers": 3,
+ "policy": {
+  "evidence_cutoff": null,
+  "no_cutoff": true,
+  "gated": false,
+  "web_search": true,
+  "shell_network": true,
+  "gate_tools": []
+ },
+ "unscored": true,
+ "target": "H2312",
+ "target_set": "casp17",
+ "case": "case_3a23b5",
+ "evidence_cutoff": null,
+ "target_release_date": "2026-05-13",
+ "retrieval_policy": "no-cutoff",
+ "input_structure": "data/staged_casp17_no_native/H2312.pdb",
+ "input_structure_sha256": "3ba79066f0aa7015920828a3678d94af5f532471fde42bb38b00795e45f94b8b",
+ "briefing_source": "data/briefing/casp17_nocutoff/H2312/search_results.json",
+ "briefing_sha256": "2b8c71697fd0cc7175a5631c137526c8209032f024f0df47a726889d5e5bdf88",
+ "antigen_chains": [
+  "A",
+  "B"
+ ],
+ "antibody_files": {
+  "antibody.pdb": [
+   "C"
+  ]
+ },
+ "antibody_chain_types": {
+  "antibody.pdb": {
+   "C": "heavy"
+  }
+ },
+ "stage": "gatherer",
+ "pocket": {
+  "id": "C5",
+  "judge_rank": 3,
+  "name": "The outer acceptor-facing rim of active EXT2 GT-A, running from the...",
+  "confidence": 0.15,
+  "p_rests_on_holds": 0.55,
+  "why_this_rank": "Excellent chemistry and exposure on the same favored EXT2 region, but broader and more curved than C1.",
+  "rests_on": "One VHH can simultaneously cover the 26.39 Å ridge and exit lip.",
+  "where_the_mass_goes_if_it_fails": "C1",
+  "what_it_is": "The outer acceptor-facing rim of active EXT2 GT-A, running from the W510/W517/W523 ridge to the B:599–B:612 exit lip.",
+  "why_one_candidate": "not pooled with anything: no other patch is both within 12 A (half centroid distance, half contact-graph hops) and coverable by one paratope of this antibody's reach, 13.6 A",
+  "from_patches": [
+   "P4"
+  ]
+ },
+ "note": "`confidence` on the pocket is over pockets and sums to about 1 across them. Inside an interface it is per residue in [0, 1] and sums to nothing. No residue is cut at a threshold: the whole vector is the answer.",
+ "mapping_basis": "side",
+ "checks": {
+  "unrecognised_sides": []
+ },
+ "chain_pairs": [
+  {
+   "antibody_chain": "C",
+   "antigen_chain": "B",
+   "n_residues": 27
+  }
+ ],
+ "antibodies": [
+  {
+   "antibody": "antibody.pdb",
+   "chains": {
+    "C": "heavy"
+   },
+   "binding_mode": null,
+   "n_residues_scored": 27,
+   "interfaces": [
+    {
+     "antibody_chain": "C",
+     "antibody_chain_type": "heavy",
+     "antigen_chain": "B",
+     "n_residues": 27,
+     "residue_confidence": {
+      "505": 0.35,
+      "506": 0.62,
+      "509": 0.48,
+      "510": 0.81,
+      "511": 0.65,
+      "516": 0.72,
+      "517": 0.87,
+      "518": 0.82,
+      "519": 0.39,
+      "520": 0.66,
+      "521": 0.78,
+      "522": 0.92,
+      "523": 0.91,
+      "524": 0.59,
+      "526": 0.47,
+      "599": 0.4,
+      "600": 0.62,
+      "601": 0.58,
+      "602": 0.83,
+      "603": 0.78,
+      "604": 0.85,
+      "605": 0.72,
+      "606": 0.79,
+      "607": 0.75,
+      "608": 0.6,
+      "609": 0.64,
+      "612": 0.33
+     },
+     "residue_side": {
+      "505": "heavy",
+      "506": "heavy",
+      "509": "heavy",
+      "510": "heavy",
+      "511": "heavy",
+      "516": "heavy",
+      "517": "heavy",
+      "518": "heavy",
+      "519": "heavy",
+      "520": "heavy",
+      "521": "heavy",
+      "522": "heavy",
+      "523": "heavy",
+      "524": "heavy",
+      "526": "heavy",
+      "599": "heavy",
+      "600": "heavy",
+      "601": "heavy",
+      "602": "heavy",
+      "603": "heavy",
+      "604": "heavy",
+      "605": "heavy",
+      "606": "heavy",
+      "607": "heavy",
+      "608": "heavy",
+      "609": "heavy",
+      "612": "heavy"
+     },
+     "max_confidence": 0.92,
+     "mean_confidence": 0.6641
+    }
+   ]
+  }
+ ],
+ "paratope": {
+  "dominant_cdrs": [
+   "H3H2H1select:H3",
+   "H2H1select:H2",
+   "H1select:H1"
+  ],
+  "paratope_residues": [
+   "C:28",
+   "C:30",
+   "C:31",
+   "C:32",
+   "C:53",
+   "C:54",
+   "C:56",
+   "C:57",
+   "C:100",
+   "C:101",
+   "C:102",
+   "C:103",
+   "C:105",
+   "C:107",
+   "C:108",
+   "C:109",
+   "C:110",
+   "C:113",
+   "C:114"
+  ],
+  "heavy_light_split": "Heavy 100%, light 0%. H3 follows W517–E522–W523; H1/H2 cover the two lips.",
+  "binding_mode_union": "single-chain"
+ },
+ "residues": [
+  "B:505",
+  "B:506",
+  "B:509",
+  "B:510",
+  "B:511",
+  "B:516",
+  "B:517",
+  "B:518",
+  "B:519",
+  "B:520",
+  "B:521",
+  "B:522",
+  "B:523",
+  "B:524",
+  "B:526",
+  "B:599",
+  "B:600",
+  "B:601",
+  "B:602",
+  "B:603",
+  "B:604",
+  "B:605",
+  "B:606",
+  "B:607",
+  "B:608",
+  "B:609",
+  "B:612"
+ ],
+ "n_residues": 27,
+ "patches": [
+  {
+   "id": "P4",
+   "name": "EXT2 active GT-A acceptor-channel rim",
+   "n_residues": 30,
+   "residues": [
+    "B:505",
+    "B:506",
+    "B:509",
+    "B:510",
+    "B:511",
+    "B:516",
+    "B:517",
+    "B:518",
+    "B:520",
+    "B:521",
+    "B:522",
+    "B:523",
+    "B:524",
+    "B:526",
+    "B:531",
+    "B:599",
+    "B:600",
+    "B:601",
+    "B:602",
+    "B:603",
+    "B:604",
+    "B:605",
+    "B:606",
+    "B:607",
+    "B:608",
+    "B:609",
+    "B:611",
+    "B:612",
+    "B:615",
+    "B:628"
+   ],
+   "n_kept_by_advocate": 26,
+   "n_dropped_by_advocate": 4
+  }
+ ],
+ "pooling_provenance": {
+  "n_shared_at_pooling": 30,
+  "n_disputed_at_pooling": 0,
+  "note": "counts only, describing how the organizer grouped the phase-1 patches. The organizer's own candidate residue list is deliberately absent: the answer is the advocate's footprint, in `residues` and in `antibodies[].interfaces[]`."
+ },
+ "evidence": {
+  "advocate": {
+   "n_findings": 4,
+   "n_supports": 3,
+   "n_weakens": 1,
+   "weakest_point": "The lateral ridge and exit lip may be too curved for simultaneous coverage despite their 26.39 Å span.",
+   "note": "the advocate reports claim/source/date/bearing and is not asked whether a source is about this binder"
+  },
+  "judge": {
+   "tier_a_support": 0,
+   "n_support_lines": 4,
+   "verdict": "live",
+   "note": "Tier A -- a source about this binder itself -- is the judge's adjudication, in assessment[].support[]. It exists nowhere in the advocate's own answer."
+  }
+ },
+ "provenance": {
+  "unverified_source_policy_fields": [
+   "gated",
+   "web_search",
+   "shell_network",
+   "gate_tools"
+  ],
+  "assembled_case_dir": "gpt-5.6-high/gather_refine/post_refactor/unreleased_20261029/nocut/casp17/H2312/case_3a23b5_G_rep1",
+  "organize_case_dir": "gpt-5.6-high/gather_refine/post_refactor/unreleased_20261029/nocut/casp17/H2312/case_3a23b5_GR_rep1",
+  "organize_status": "ok",
+  "judge_case_dir": "gpt-5.6-high/gather_refine/post_refactor/unreleased_20261029/nocut/casp17/H2312/case_3a23b5_GJ_rep1",
+  "judge_status": "ok",
+  "packet": "gpt-5.6-high/nocut/gather/packets/case_3a23b5/packet",
+  "manifest": "gpt-5.6-high/nocut/gather/packets/case_3a23b5/manifest.json",
+  "advocate_case_dir": "gpt-5.6-high/gather_refine/post_refactor/unreleased_20261029/nocut/casp17/H2312/case_3a23b5_GR_rep1",
+  "advocate_status": "ok"
+ }
+}

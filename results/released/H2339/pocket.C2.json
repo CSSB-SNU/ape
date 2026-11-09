@@ -1,0 +1,344 @@
+{
+ "task": "gather",
+ "gather_mode": "batched",
+ "num_launchers": 3,
+ "policy": {
+  "evidence_cutoff": "2026-05-15",
+  "no_cutoff": false,
+  "gated": true,
+  "web_search": false,
+  "shell_network": true,
+  "gate_tools": [
+   "research",
+   "fetch",
+   "rcsb",
+   "patent",
+   "paper"
+  ]
+ },
+ "unscored": false,
+ "target": "H2339",
+ "target_set": "casp17",
+ "case": "case_5886c7",
+ "evidence_cutoff": "2026-05-15",
+ "target_release_date": "2026-05-15",
+ "retrieval_policy": "gated",
+ "input_structure": "structures/H2339.pdb",
+ "input_structure_sha256": null,
+ "briefing_source": null,
+ "briefing_sha256": null,
+ "antigen_chains": [
+  "C",
+  "D"
+ ],
+ "antibody_files": {
+  "antibody.pdb": [
+   "A",
+   "B"
+  ]
+ },
+ "antibody_chain_types": {
+  "antibody.pdb": {
+   "A": "unknown",
+   "B": "unknown"
+  }
+ },
+ "truth_file": "data/truth/casp17/H2339.epitope.json",
+ "stage": "gatherer",
+ "pocket": {
+  "id": "C2",
+  "judge_rank": 5,
+  "name": "The solvent-exposed rim of the interface between Apple-2 and the...",
+  "confidence": 0.02,
+  "p_rests_on_holds": 0.03,
+  "why_this_rank": "The seam has a plausible conformational-clamp story, but the inherited footprint is wider than this paratope, partly buried, and requires Apple-2 despite exact binding to the isolated catalytic domain.",
+  "rests_on": "REGN7508 actually requires a composite seam even though the patent's domain experiment says otherwise.",
+  "where_the_mass_goes_if_it_fails": "C4, C7, and C5 in their current proportions.",
+  "what_it_is": "The solvent-exposed rim of the interface between Apple-2 and the catalytic domain, where the apple disc packs against the protease C-terminal and D:105 loops.",
+  "why_one_candidate": "not pooled with anything: no other patch is both within 12 A (half centroid distance, half contact-graph hops) and coverable by one paratope of this antibody's reach, 17.2 A",
+  "from_patches": [
+   "P2"
+  ]
+ },
+ "note": "`confidence` on the pocket is over pockets and sums to about 1 across them. Inside an interface it is per residue in [0, 1] and sums to nothing. No residue is cut at a threshold: the whole vector is the answer.",
+ "mapping_basis": "side",
+ "checks": {
+  "unrecognised_sides": []
+ },
+ "chain_pairs": [
+  {
+   "antibody_chain": "A",
+   "antigen_chain": "C",
+   "n_residues": 5
+  },
+  {
+   "antibody_chain": "A",
+   "antigen_chain": "D",
+   "n_residues": 6
+  },
+  {
+   "antibody_chain": "B",
+   "antigen_chain": "C",
+   "n_residues": 5
+  },
+  {
+   "antibody_chain": "B",
+   "antigen_chain": "D",
+   "n_residues": 6
+  }
+ ],
+ "antibodies": [
+  {
+   "antibody": "antibody.pdb",
+   "chains": {
+    "A": "unknown",
+    "B": "unknown"
+   },
+   "binding_mode": null,
+   "n_residues_scored": 11,
+   "interfaces": [
+    {
+     "antibody_chain": "A",
+     "antibody_chain_type": "unknown",
+     "antigen_chain": "C",
+     "n_residues": 5,
+     "residue_confidence": {
+      "88": 0.78,
+      "90": 0.74,
+      "92": 0.41,
+      "94": 0.42,
+      "95": 0.5
+     },
+     "residue_side": {
+      "88": "heavy",
+      "90": "both",
+      "92": "light",
+      "94": "both",
+      "95": "light"
+     },
+     "max_confidence": 0.78,
+     "mean_confidence": 0.57,
+     "precision_vs_truth": 0.0,
+     "n_in_truth": 0
+    },
+    {
+     "antibody_chain": "A",
+     "antibody_chain_type": "unknown",
+     "antigen_chain": "D",
+     "n_residues": 6,
+     "residue_confidence": {
+      "105": 0.68,
+      "229": 0.55,
+      "232": 0.16,
+      "233": 0.83,
+      "236": 0.47,
+      "238": 0.75
+     },
+     "residue_side": {
+      "105": "heavy",
+      "229": "light",
+      "232": "light",
+      "233": "light",
+      "236": "both",
+      "238": "heavy"
+     },
+     "max_confidence": 0.83,
+     "mean_confidence": 0.5733,
+     "precision_vs_truth": 0.0,
+     "n_in_truth": 0
+    },
+    {
+     "antibody_chain": "B",
+     "antibody_chain_type": "unknown",
+     "antigen_chain": "C",
+     "n_residues": 5,
+     "residue_confidence": {
+      "88": 0.78,
+      "90": 0.74,
+      "92": 0.41,
+      "94": 0.42,
+      "95": 0.5
+     },
+     "residue_side": {
+      "88": "heavy",
+      "90": "both",
+      "92": "light",
+      "94": "both",
+      "95": "light"
+     },
+     "max_confidence": 0.78,
+     "mean_confidence": 0.57,
+     "precision_vs_truth": 0.0,
+     "n_in_truth": 0
+    },
+    {
+     "antibody_chain": "B",
+     "antibody_chain_type": "unknown",
+     "antigen_chain": "D",
+     "n_residues": 6,
+     "residue_confidence": {
+      "105": 0.68,
+      "229": 0.55,
+      "232": 0.16,
+      "233": 0.83,
+      "236": 0.47,
+      "238": 0.75
+     },
+     "residue_side": {
+      "105": "heavy",
+      "229": "light",
+      "232": "light",
+      "233": "light",
+      "236": "both",
+      "238": "heavy"
+     },
+     "max_confidence": 0.83,
+     "mean_confidence": 0.5733,
+     "precision_vs_truth": 0.0,
+     "n_in_truth": 0
+    }
+   ]
+  }
+ ],
+ "paratope": {
+  "dominant_cdrs": [
+   "H3",
+   "H1",
+   "L1",
+   "L3"
+  ],
+  "paratope_residues": [
+   "A:27",
+   "A:28",
+   "A:30",
+   "A:31",
+   "A:32",
+   "A:53",
+   "A:54",
+   "A:56",
+   "A:57",
+   "A:58",
+   "A:99",
+   "A:100",
+   "A:101",
+   "A:102",
+   "A:103",
+   "A:106",
+   "A:107",
+   "B:27",
+   "B:28",
+   "B:30",
+   "B:31",
+   "B:32",
+   "B:50",
+   "B:52",
+   "B:91",
+   "B:92",
+   "B:93",
+   "B:94",
+   "B:95",
+   "B:96",
+   "B:97"
+  ],
+  "heavy_light_split": "Heavy contributes about 60%, anchoring C:88/C:94 and D:105/D:238. Light contributes about 40% on C:90-C:95 and D:229-D:236. Both chains meet over C:90/C:94 and D:236; buried D:232 is only a low-confidence floor contact.",
+  "binding_mode_union": "straddling"
+ },
+ "residues": [
+  "C:88",
+  "C:90",
+  "C:92",
+  "C:94",
+  "C:95",
+  "D:105",
+  "D:229",
+  "D:232",
+  "D:233",
+  "D:236",
+  "D:238"
+ ],
+ "n_residues": 11,
+ "patches": [
+  {
+   "id": "P2",
+   "name": "Apple-2-catalytic-chain seam",
+   "n_residues": 28,
+   "residues": [
+    "C:113",
+    "C:114",
+    "C:115",
+    "C:116",
+    "C:117",
+    "C:119",
+    "C:120",
+    "C:121",
+    "C:123",
+    "C:124",
+    "C:172",
+    "C:173",
+    "C:174",
+    "C:175",
+    "C:88",
+    "C:90",
+    "C:92",
+    "C:94",
+    "C:95",
+    "D:105",
+    "D:117",
+    "D:120",
+    "D:121",
+    "D:229",
+    "D:232",
+    "D:233",
+    "D:236",
+    "D:238"
+   ],
+   "n_kept_by_advocate": 11,
+   "n_dropped_by_advocate": 17
+  }
+ ],
+ "pooling_provenance": {
+  "n_shared_at_pooling": 28,
+  "n_disputed_at_pooling": 0,
+  "note": "counts only, describing how the organizer grouped the phase-1 patches. The organizer's own candidate residue list is deliberately absent: the answer is the advocate's footprint, in `residues` and in `antibodies[].interfaces[]`."
+ },
+ "evidence": {
+  "advocate": {
+   "n_findings": 4,
+   "n_supports": 2,
+   "n_weakens": 1,
+   "weakest_point": "The source neighborhood wraps 42.56 A around two seam lobes, so most of it cannot belong to one interface; more importantly, the exact antibody binds isolated catalytic domain and is reported not to bind Apple-2.",
+   "note": "the advocate reports claim/source/date/bearing and is not asked whether a source is about this binder"
+  },
+  "judge": {
+   "tier_a_support": 1,
+   "n_support_lines": 3,
+   "verdict": "excluded",
+   "note": "Tier A -- a source about this binder itself -- is the judge's adjudication, in assessment[].support[]. It exists nowhere in the advocate's own answer."
+  }
+ },
+ "provenance": {
+  "unverified_source_policy_fields": [
+   "gated",
+   "web_search",
+   "shell_network",
+   "gate_tools"
+  ],
+  "assembled_case_dir": "gpt-5.6-high/gather_refine/post_refactor/released_structure_20261030/casp17/H2339/case_5886c7_G_rep3",
+  "organize_case_dir": "gpt-5.6-high/gather_refine/post_refactor/released_structure_20261030/casp17/H2339/case_5886c7_GR_rep1",
+  "organize_status": "ok",
+  "judge_case_dir": "gpt-5.6-high/gather_refine/post_refactor/released_structure_20261030/casp17/H2339/case_5886c7_GJ_rep3",
+  "judge_status": "ok",
+  "packet": "gpt-5.6-high/gather/packets/case_5886c7/packet",
+  "manifest": "gpt-5.6-high/gather/packets/case_5886c7/manifest.json",
+  "advocate_case_dir": "gpt-5.6-high/gather_refine/post_refactor/released_structure_20261030/casp17/H2339/case_5886c7_GR_rep1",
+  "advocate_status": "ok"
+ },
+ "score": {
+  "precision": 0.0,
+  "recall": 0.0,
+  "f1": 0.0,
+  "n_pred": 11,
+  "n_true": 22,
+  "n_hit": 0
+ }
+}

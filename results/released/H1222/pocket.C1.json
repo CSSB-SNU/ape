@@ -1,0 +1,464 @@
+{
+ "task": "gather",
+ "gather_mode": "batched",
+ "num_launchers": 3,
+ "policy": {
+  "evidence_cutoff": "2024-06-04",
+  "no_cutoff": false,
+  "gated": true,
+  "web_search": false,
+  "shell_network": true,
+  "gate_tools": [
+   "research",
+   "fetch",
+   "rcsb",
+   "patent",
+   "paper"
+  ]
+ },
+ "unscored": false,
+ "target": "H1222",
+ "target_set": "casp16",
+ "case": "case_2e3a2a",
+ "evidence_cutoff": "2024-06-04",
+ "target_release_date": "2024-06-04",
+ "retrieval_policy": "gated",
+ "input_structure": "structures/H1222.pdb",
+ "input_structure_sha256": null,
+ "briefing_source": null,
+ "briefing_sha256": null,
+ "antigen_chains": [
+  "A"
+ ],
+ "antibody_files": {
+  "antibody.pdb": [
+   "B",
+   "C"
+  ]
+ },
+ "antibody_chain_types": {
+  "antibody.pdb": {
+   "B": "heavy",
+   "C": "light"
+  }
+ },
+ "truth_file": "data/truth/casp16/H1222.epitope.json",
+ "stage": "gatherer",
+ "pocket": {
+  "id": "C1",
+  "judge_rank": 1,
+  "name": "The disulfide-stabilized receptor-binding face of a viral attachment...",
+  "confidence": 0.44,
+  "p_rests_on_holds": 0.6,
+  "why_this_rank": "C1 is the most compact and directionally coherent footprint, directly overlaps the receptor-active face, and uniquely combines a hydrophobic patch with positive exposed charge complementary to this Fab's hydrophobic, mildly acidic heavy CDR ridge. These are Tier B advantages only, so the lead is modest.",
+  "rests_on": "Coarse separate-molecule charge/shape complementarity is informative about the actual, unknown approach of this Fab.",
+  "where_the_mass_goes_if_it_fails": "C3 first, then C2",
+  "what_it_is": "The disulfide-stabilized receptor-binding face of a viral attachment glycoprotein: the nested cystine noose, its exposed CWAIC/CX3C hydrophobic crest, and the immediately adjacent basic rim at the start of the downstream attachment region.",
+  "why_one_candidate": "geometry pooled 7 patches (P1, P3, P4, P5, P6, P7, P8): P7+P8 at 0 A, union radius 9.52 A; P5+P6 at 0.47 A, union radius 12.2 A; P3+P5+P6 at 0.48 A, union radius 13.95 A; P1+P7+P8 at 0.79 A, union radius 14.84 A; P3+P4+P5+P6 at 2.29 A, union radius 13.59 A; P1+P3+P4+P5+P6+P7+P8 at 7.11 A, union radius 16.89 A. Every union fits inside this antibody's paratope reach of 17.0 A. No session judged these to be the same surface.",
+  "from_patches": [
+   "P1",
+   "P3",
+   "P4",
+   "P5",
+   "P6",
+   "P7",
+   "P8"
+  ]
+ },
+ "note": "`confidence` on the pocket is over pockets and sums to about 1 across them. Inside an interface it is per residue in [0, 1] and sums to nothing. No residue is cut at a threshold: the whole vector is the answer.",
+ "mapping_basis": "side",
+ "checks": {
+  "unrecognised_sides": []
+ },
+ "chain_pairs": [
+  {
+   "antibody_chain": "B",
+   "antigen_chain": "A",
+   "n_residues": 14
+  },
+  {
+   "antibody_chain": "C",
+   "antigen_chain": "A",
+   "n_residues": 11
+  }
+ ],
+ "antibodies": [
+  {
+   "antibody": "antibody.pdb",
+   "chains": {
+    "B": "heavy",
+    "C": "light"
+   },
+   "binding_mode": null,
+   "n_residues_scored": 18,
+   "interfaces": [
+    {
+     "antibody_chain": "B",
+     "antibody_chain_type": "heavy",
+     "antigen_chain": "A",
+     "n_residues": 14,
+     "residue_confidence": {
+      "19": 0.76,
+      "22": 0.84,
+      "23": 0.62,
+      "24": 0.81,
+      "25": 0.78,
+      "26": 0.13,
+      "27": 0.94,
+      "28": 0.88,
+      "29": 0.91,
+      "30": 0.14,
+      "31": 0.8,
+      "32": 0.77,
+      "33": 0.31,
+      "34": 0.46
+     },
+     "residue_side": {
+      "19": "both",
+      "22": "both",
+      "23": "both",
+      "24": "both",
+      "25": "both",
+      "26": "both",
+      "27": "heavy",
+      "28": "both",
+      "29": "heavy",
+      "30": "heavy",
+      "31": "heavy",
+      "32": "heavy",
+      "33": "heavy",
+      "34": "heavy"
+     },
+     "max_confidence": 0.94,
+     "mean_confidence": 0.6536,
+     "precision_vs_truth": 0.6429,
+     "n_in_truth": 9
+    },
+    {
+     "antibody_chain": "C",
+     "antibody_chain_type": "light",
+     "antigen_chain": "A",
+     "n_residues": 11,
+     "residue_confidence": {
+      "17": 0.1,
+      "18": 0.68,
+      "19": 0.76,
+      "20": 0.07,
+      "21": 0.72,
+      "22": 0.84,
+      "23": 0.62,
+      "24": 0.81,
+      "25": 0.78,
+      "26": 0.13,
+      "28": 0.88
+     },
+     "residue_side": {
+      "17": "light",
+      "18": "light",
+      "19": "both",
+      "20": "light",
+      "21": "light",
+      "22": "both",
+      "23": "both",
+      "24": "both",
+      "25": "both",
+      "26": "both",
+      "28": "both"
+     },
+     "max_confidence": 0.88,
+     "mean_confidence": 0.5809,
+     "precision_vs_truth": 0.8182,
+     "n_in_truth": 9
+    }
+   ]
+  }
+ ],
+ "paratope": {
+  "dominant_cdrs": [
+   "H2S3:L3"
+  ],
+  "paratope_residues": [
+   "B:30",
+   "B:31",
+   "B:32",
+   "B:52",
+   "B:54",
+   "B:55",
+   "B:56",
+   "B:57",
+   "B:58",
+   "B:101",
+   "B:102",
+   "B:103",
+   "B:104",
+   "B:109",
+   "C:26",
+   "C:27",
+   "C:31",
+   "C:32",
+   "C:33",
+   "C:95",
+   "C:96",
+   "C:97",
+   "C:99"
+  ],
+  "heavy_light_split": "Heavy-biased, about 65:35 in contact contribution. H2/H3 cover A:27-A:29 and the A:31/A:32 rim; L1/L3 cover the polar A:18-A:23 shoulder, with both chains converging over A:22-A:28.",
+  "binding_mode_union": "single-chain"
+ },
+ "residues": [
+  "A:17",
+  "A:18",
+  "A:19",
+  "A:20",
+  "A:21",
+  "A:22",
+  "A:23",
+  "A:24",
+  "A:25",
+  "A:26",
+  "A:27",
+  "A:28",
+  "A:29",
+  "A:30",
+  "A:31",
+  "A:32",
+  "A:33",
+  "A:34"
+ ],
+ "n_residues": 18,
+ "patches": [
+  {
+   "id": "P1",
+   "name": "Cystine-noose/CX3C face (antigenic site gamma1/gamma2 region)",
+   "n_residues": 18,
+   "residues": [
+    "A:17",
+    "A:18",
+    "A:19",
+    "A:20",
+    "A:21",
+    "A:22",
+    "A:23",
+    "A:24",
+    "A:25",
+    "A:26",
+    "A:27",
+    "A:28",
+    "A:29",
+    "A:30",
+    "A:31",
+    "A:32",
+    "A:33",
+    "A:34"
+   ],
+   "n_kept_by_advocate": 18,
+   "n_dropped_by_advocate": 0
+  },
+  {
+   "id": "P3",
+   "name": "Folded N/C-flank face outside the noose (CB017.5-like alternative surface)",
+   "n_residues": 24,
+   "residues": [
+    "A:10",
+    "A:11",
+    "A:12",
+    "A:13",
+    "A:14",
+    "A:15",
+    "A:16",
+    "A:17",
+    "A:18",
+    "A:19",
+    "A:20",
+    "A:31",
+    "A:32",
+    "A:33",
+    "A:34",
+    "A:35",
+    "A:36",
+    "A:37",
+    "A:38",
+    "A:39",
+    "A:40",
+    "A:7",
+    "A:8",
+    "A:9"
+   ],
+   "n_kept_by_advocate": 8,
+   "n_dropped_by_advocate": 16
+  },
+  {
+   "id": "P4",
+   "name": "Compact HFEVFNFVP/N-noose junction",
+   "n_residues": 12,
+   "residues": [
+    "A:10",
+    "A:11",
+    "A:12",
+    "A:13",
+    "A:14",
+    "A:15",
+    "A:16",
+    "A:17",
+    "A:18",
+    "A:19",
+    "A:8",
+    "A:9"
+   ],
+   "n_kept_by_advocate": 3,
+   "n_dropped_by_advocate": 9
+  },
+  {
+   "id": "P5",
+   "name": "Discontinuous conserved N flank plus basic C-terminal flank",
+   "n_residues": 20,
+   "residues": [
+    "A:10",
+    "A:11",
+    "A:12",
+    "A:13",
+    "A:14",
+    "A:15",
+    "A:16",
+    "A:18",
+    "A:19",
+    "A:33",
+    "A:34",
+    "A:35",
+    "A:36",
+    "A:37",
+    "A:38",
+    "A:39",
+    "A:40",
+    "A:7",
+    "A:8",
+    "A:9"
+   ],
+   "n_kept_by_advocate": 4,
+   "n_dropped_by_advocate": 16
+  },
+  {
+   "id": "P6",
+   "name": "N/C flank bridge",
+   "n_residues": 20,
+   "residues": [
+    "A:10",
+    "A:11",
+    "A:12",
+    "A:13",
+    "A:14",
+    "A:15",
+    "A:31",
+    "A:32",
+    "A:33",
+    "A:34",
+    "A:35",
+    "A:36",
+    "A:37",
+    "A:38",
+    "A:39",
+    "A:40",
+    "A:41",
+    "A:7",
+    "A:8",
+    "A:9"
+   ],
+   "n_kept_by_advocate": 4,
+   "n_dropped_by_advocate": 16
+  },
+  {
+   "id": "P7",
+   "name": "γ2 cysteine-noose/CX3C face",
+   "n_residues": 15,
+   "residues": [
+    "A:18",
+    "A:19",
+    "A:20",
+    "A:21",
+    "A:22",
+    "A:23",
+    "A:24",
+    "A:25",
+    "A:26",
+    "A:27",
+    "A:28",
+    "A:29",
+    "A:30",
+    "A:31",
+    "A:32"
+   ],
+   "n_kept_by_advocate": 15,
+   "n_dropped_by_advocate": 0
+  },
+  {
+   "id": "P8",
+   "name": "Compact cystine-noose/CX3C face",
+   "n_residues": 16,
+   "residues": [
+    "A:17",
+    "A:18",
+    "A:19",
+    "A:20",
+    "A:21",
+    "A:22",
+    "A:23",
+    "A:24",
+    "A:25",
+    "A:26",
+    "A:27",
+    "A:28",
+    "A:29",
+    "A:30",
+    "A:31",
+    "A:32"
+   ],
+   "n_kept_by_advocate": 16,
+   "n_dropped_by_advocate": 0
+  }
+ ],
+ "pooling_provenance": {
+  "n_shared_at_pooling": 0,
+  "n_disputed_at_pooling": 35,
+  "note": "counts only, describing how the organizer grouped the phase-1 patches. The organizer's own candidate residue list is deliberately absent: the answer is the advocate's footprint, in `residues` and in `antibodies[].interfaces[]`."
+ },
+ "evidence": {
+  "advocate": {
+   "n_findings": 7,
+   "n_supports": 6,
+   "n_weakens": 1,
+   "weakest_point": "The supplied C1 neighborhood is too broad: it covers nearly the whole 41-mer and contains mutually different noose, N-flank, and N/C-flank approach surfaces. I narrowed it to A:17-A:34 because that is the coherent functional face, but no exact target-antibody mapping selects it. Moreover, this H3 lacks the disulfide hairpin used by one well-characterized noose-binding analogue, so the attractive receptor logic and exposed WAI crest do not prove that this Fab can realize the same mode.",
+   "note": "the advocate reports claim/source/date/bearing and is not asked whether a source is about this binder"
+  },
+  "judge": {
+   "tier_a_support": 0,
+   "n_support_lines": 7,
+   "verdict": "leading",
+   "note": "Tier A -- a source about this binder itself -- is the judge's adjudication, in assessment[].support[]. It exists nowhere in the advocate's own answer."
+  }
+ },
+ "provenance": {
+  "unverified_source_policy_fields": [
+   "gated",
+   "web_search",
+   "shell_network",
+   "gate_tools"
+  ],
+  "assembled_case_dir": "gpt-5.6-high/gather_refine/post_refactor/released_structure_20261030/casp16/H1222/case_2e3a2a_G_rep2",
+  "organize_case_dir": "gpt-5.6-high/gather_refine/post_refactor/released_structure_20261030/casp16/H1222/case_2e3a2a_GR_rep1",
+  "organize_status": "ok",
+  "judge_case_dir": "gpt-5.6-high/gather_refine/post_refactor/released_structure_20261030/casp16/H1222/case_2e3a2a_GJ_rep2",
+  "judge_status": "ok",
+  "packet": "gpt-5.6-high/gather/packets/case_2e3a2a/packet",
+  "manifest": "gpt-5.6-high/gather/packets/case_2e3a2a/manifest.json",
+  "advocate_case_dir": "gpt-5.6-high/gather_refine/post_refactor/released_structure_20261030/casp16/H1222/case_2e3a2a_GR_rep1",
+  "advocate_status": "ok"
+ },
+ "score": {
+  "precision": 0.6667,
+  "recall": 0.5455,
+  "f1": 0.6,
+  "n_pred": 18,
+  "n_true": 22,
+  "n_hit": 12
+ }
+}

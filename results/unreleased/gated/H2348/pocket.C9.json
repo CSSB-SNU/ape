@@ -1,0 +1,297 @@
+{
+ "task": "gather",
+ "gather_mode": "batched",
+ "num_launchers": 3,
+ "policy": {
+  "evidence_cutoff": "2026-06-05",
+  "no_cutoff": false,
+  "gated": true,
+  "web_search": false,
+  "shell_network": true,
+  "gate_tools": [
+   "research",
+   "fetch",
+   "rcsb",
+   "patent",
+   "paper"
+  ]
+ },
+ "unscored": true,
+ "target": "H2348",
+ "target_set": "casp17",
+ "case": "case_4ade9a",
+ "evidence_cutoff": "2026-06-05",
+ "target_release_date": "2026-06-05",
+ "retrieval_policy": "gated",
+ "input_structure": "data/staged_casp17_no_native/H2348.pdb",
+ "input_structure_sha256": "ce3adf48ca6a518ad9b1c0b7ee6fd0899f7d12f01d7aa968c11b92ad459c41e7",
+ "briefing_source": "data/briefing/casp17/H2348/search_results.json",
+ "briefing_sha256": "4d17b3e4689d4bdb8848154699de80e2748b0d365b2fba62f69b2f96cbbee826",
+ "antigen_chains": [
+  "A"
+ ],
+ "antibody_files": {
+  "antibody.pdb": [
+   "B",
+   "C"
+  ]
+ },
+ "antibody_chain_types": {
+  "antibody.pdb": {
+   "B": "heavy",
+   "C": "light"
+  }
+ },
+ "stage": "gatherer",
+ "pocket": {
+  "id": "C9",
+  "judge_rank": 7,
+  "name": "An elongated exposed D5 face centered on D414-N415-W418 and closed by...",
+  "confidence": 0.08,
+  "p_rests_on_holds": 0.16,
+  "why_this_rank": "C9 is exposed, glycan-clear and compositionally compatible, but its D5/D6-edge clamp mechanism and localization are unsupported at residue level.",
+  "rests_on": "The supplied clone targets this elongated D5 face and its occupation constrains productive receptor geometry.",
+  "where_the_mass_goes_if_it_fails": "C2 within D5, otherwise C6.",
+  "what_it_is": "An elongated exposed D5 face centered on D414-N415-W418 and closed by H456-R457-Y459 and the D5/D6-edge K493 region.",
+  "why_one_candidate": "not pooled with anything: no other patch is both within 12 A (half centroid distance, half contact-graph hops) and coverable by one paratope of this antibody's reach, 17.5 A",
+  "from_patches": [
+   "P8"
+  ]
+ },
+ "note": "`confidence` on the pocket is over pockets and sums to about 1 across them. Inside an interface it is per residue in [0, 1] and sums to nothing. No residue is cut at a threshold: the whole vector is the answer.",
+ "mapping_basis": "side",
+ "checks": {
+  "unrecognised_sides": []
+ },
+ "chain_pairs": [
+  {
+   "antibody_chain": "B",
+   "antigen_chain": "A",
+   "n_residues": 16
+  },
+  {
+   "antibody_chain": "C",
+   "antigen_chain": "A",
+   "n_residues": 14
+  }
+ ],
+ "antibodies": [
+  {
+   "antibody": "antibody.pdb",
+   "chains": {
+    "B": "heavy",
+    "C": "light"
+   },
+   "binding_mode": null,
+   "n_residues_scored": 20,
+   "interfaces": [
+    {
+     "antibody_chain": "B",
+     "antibody_chain_type": "heavy",
+     "antigen_chain": "A",
+     "n_residues": 16,
+     "residue_confidence": {
+      "406": 0.6,
+      "407": 0.7,
+      "409": 0.77,
+      "410": 0.43,
+      "411": 0.6,
+      "412": 0.68,
+      "413": 0.74,
+      "414": 0.92,
+      "415": 0.94,
+      "416": 0.66,
+      "418": 0.78,
+      "420": 0.7,
+      "456": 0.76,
+      "457": 0.78,
+      "459": 0.87,
+      "493": 0.6
+     },
+     "residue_side": {
+      "406": "heavy",
+      "407": "heavy",
+      "409": "heavy",
+      "410": "heavy",
+      "411": "both",
+      "412": "both",
+      "413": "both",
+      "414": "both",
+      "415": "both",
+      "416": "both",
+      "418": "both",
+      "420": "heavy",
+      "456": "both",
+      "457": "both",
+      "459": "both",
+      "493": "heavy"
+     },
+     "max_confidence": 0.94,
+     "mean_confidence": 0.7206
+    },
+    {
+     "antibody_chain": "C",
+     "antibody_chain_type": "light",
+     "antigen_chain": "A",
+     "n_residues": 14,
+     "residue_confidence": {
+      "411": 0.6,
+      "412": 0.68,
+      "413": 0.74,
+      "414": 0.92,
+      "415": 0.94,
+      "416": 0.66,
+      "418": 0.78,
+      "422": 0.54,
+      "423": 0.57,
+      "455": 0.43,
+      "456": 0.76,
+      "457": 0.78,
+      "459": 0.87,
+      "488": 0.36
+     },
+     "residue_side": {
+      "411": "both",
+      "412": "both",
+      "413": "both",
+      "414": "both",
+      "415": "both",
+      "416": "both",
+      "418": "both",
+      "422": "light",
+      "423": "light",
+      "455": "light",
+      "456": "both",
+      "457": "both",
+      "459": "both",
+      "488": "light"
+     },
+     "max_confidence": 0.94,
+     "mean_confidence": 0.6879
+    }
+   ]
+  }
+ ],
+ "paratope": {
+  "dominant_cdrs": [
+   "H3aa:H3",
+   "H1aa:H1",
+   "H2aa:H2",
+   "L3aa:L3"
+  ],
+  "paratope_residues": [
+   "B:31",
+   "B:33",
+   "B:54",
+   "B:56",
+   "B:57",
+   "B:58",
+   "B:99",
+   "B:101",
+   "B:102",
+   "B:105",
+   "C:27",
+   "C:28",
+   "C:30",
+   "C:31",
+   "C:32",
+   "C:52",
+   "C:92",
+   "C:93",
+   "C:94",
+   "C:95",
+   "C:96"
+  ],
+  "heavy_light_split": "Approximately 65:35 heavy:light; H3/H1/H2 cover F411–W418 and R457/Y459/K493, while L1/L3 cover the T422/T423 and H456/V455 flank.",
+  "binding_mode_union": "single-chain"
+ },
+ "residues": [
+  "A:406",
+  "A:407",
+  "A:409",
+  "A:410",
+  "A:411",
+  "A:412",
+  "A:413",
+  "A:414",
+  "A:415",
+  "A:416",
+  "A:418",
+  "A:420",
+  "A:422",
+  "A:423",
+  "A:455",
+  "A:456",
+  "A:457",
+  "A:459",
+  "A:488",
+  "A:493"
+ ],
+ "n_residues": 20,
+ "patches": [
+  {
+   "id": "P8",
+   "name": "D5 exposed FNIII face",
+   "n_residues": 18,
+   "residues": [
+    "A:406",
+    "A:407",
+    "A:409",
+    "A:411",
+    "A:412",
+    "A:413",
+    "A:414",
+    "A:415",
+    "A:416",
+    "A:418",
+    "A:420",
+    "A:422",
+    "A:423",
+    "A:456",
+    "A:457",
+    "A:459",
+    "A:488",
+    "A:493"
+   ],
+   "n_kept_by_advocate": 18,
+   "n_dropped_by_advocate": 0
+  }
+ ],
+ "pooling_provenance": {
+  "n_shared_at_pooling": 18,
+  "n_disputed_at_pooling": 0,
+  "note": "counts only, describing how the organizer grouped the phase-1 patches. The organizer's own candidate residue list is deliberately absent: the answer is the advocate's footprint, in `residues` and in `antibodies[].interfaces[]`."
+ },
+ "evidence": {
+  "advocate": {
+   "n_findings": 4,
+   "n_supports": 4,
+   "n_weakens": 0,
+   "weakest_point": "No residue-level evidence connects this antibody to D5, and the face reaches the D5/D6 boundary; it may be accessible but mechanically innocuous.",
+   "note": "the advocate reports claim/source/date/bearing and is not asked whether a source is about this binder"
+  },
+  "judge": {
+   "tier_a_support": 0,
+   "n_support_lines": 3,
+   "verdict": "live",
+   "note": "Tier A -- a source about this binder itself -- is the judge's adjudication, in assessment[].support[]. It exists nowhere in the advocate's own answer."
+  }
+ },
+ "provenance": {
+  "unverified_source_policy_fields": [
+   "gated",
+   "web_search",
+   "shell_network",
+   "gate_tools"
+  ],
+  "assembled_case_dir": "gpt-5.6-high/gather_refine/post_refactor/unreleased_20261029/gated/casp17/H2348/case_4ade9a_G_rep1",
+  "organize_case_dir": "gpt-5.6-high/gather_refine/post_refactor/unreleased_20261029/gated/casp17/H2348/case_4ade9a_GR_rep1",
+  "organize_status": "ok",
+  "judge_case_dir": "gpt-5.6-high/gather_refine/post_refactor/unreleased_20261029/gated/casp17/H2348/case_4ade9a_GJ_rep1",
+  "judge_status": "ok",
+  "packet": "gpt-5.6-high/gather/packets/case_4ade9a/packet",
+  "manifest": "gpt-5.6-high/gather/packets/case_4ade9a/manifest.json",
+  "advocate_case_dir": "gpt-5.6-high/gather_refine/post_refactor/unreleased_20261029/gated/casp17/H2348/case_4ade9a_GR_rep1",
+  "advocate_status": "ok"
+ }
+}

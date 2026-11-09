@@ -1,0 +1,284 @@
+{
+ "task": "gather",
+ "gather_mode": "batched",
+ "num_launchers": 3,
+ "policy": {
+  "evidence_cutoff": "2024-06-04",
+  "no_cutoff": false,
+  "gated": true,
+  "web_search": false,
+  "shell_network": true,
+  "gate_tools": [
+   "research",
+   "fetch",
+   "rcsb",
+   "patent",
+   "paper"
+  ]
+ },
+ "unscored": false,
+ "target": "H1222",
+ "target_set": "casp16",
+ "case": "case_2e3a2a",
+ "evidence_cutoff": "2024-06-04",
+ "target_release_date": "2024-06-04",
+ "retrieval_policy": "gated",
+ "input_structure": "structures/H1222.pdb",
+ "input_structure_sha256": null,
+ "briefing_source": null,
+ "briefing_sha256": null,
+ "antigen_chains": [
+  "A"
+ ],
+ "antibody_files": {
+  "antibody.pdb": [
+   "B",
+   "C"
+  ]
+ },
+ "antibody_chain_types": {
+  "antibody.pdb": {
+   "B": "heavy",
+   "C": "light"
+  }
+ },
+ "truth_file": "data/truth/casp16/H1222.epitope.json",
+ "stage": "gatherer",
+ "pocket": {
+  "id": "C3",
+  "judge_rank": 2,
+  "name": "The conserved hydrophobic-aromatic N face at the junction between a...",
+  "confidence": 0.31,
+  "p_rests_on_holds": 0.5,
+  "why_this_rank": "The compact N strip is coverable and its hydrophobic content suits the supplied heavy ridge, while avoiding C2's largest reach penalty. It remains mostly a nested version of C2 and has the weakest side-chain direction coherence.",
+  "rests_on": "The compact N strip is the complete epitope rather than merely the shared core of the broader C2 face.",
+  "where_the_mass_goes_if_it_fails": "C2",
+  "what_it_is": "The conserved hydrophobic-aromatic N face at the junction between a viral attachment-domain flank and the base of its disulfide loop: an H-F-E-V-F-N-F-V-P-rich strip that forms the gamma1-side approach to the conserved domain.",
+  "why_one_candidate": "not pooled with anything: no other patch is both within 12 A (half centroid distance, half contact-graph hops) and coverable by one paratope of this antibody's reach, 17.0 A",
+  "from_patches": [
+   "P9"
+  ]
+ },
+ "note": "`confidence` on the pocket is over pockets and sums to about 1 across them. Inside an interface it is per residue in [0, 1] and sums to nothing. No residue is cut at a threshold: the whole vector is the answer.",
+ "mapping_basis": "side",
+ "checks": {
+  "unrecognised_sides": []
+ },
+ "chain_pairs": [
+  {
+   "antibody_chain": "B",
+   "antigen_chain": "A",
+   "n_residues": 13
+  },
+  {
+   "antibody_chain": "C",
+   "antigen_chain": "A",
+   "n_residues": 4
+  }
+ ],
+ "antibodies": [
+  {
+   "antibody": "antibody.pdb",
+   "chains": {
+    "B": "heavy",
+    "C": "light"
+   },
+   "binding_mode": null,
+   "n_residues_scored": 15,
+   "interfaces": [
+    {
+     "antibody_chain": "B",
+     "antibody_chain_type": "heavy",
+     "antigen_chain": "A",
+     "n_residues": 13,
+     "residue_confidence": {
+      "9": 0.93,
+      "10": 0.76,
+      "11": 0.91,
+      "12": 0.86,
+      "13": 0.81,
+      "14": 0.62,
+      "15": 0.57,
+      "16": 0.42,
+      "17": 0.11,
+      "18": 0.72,
+      "19": 0.85,
+      "20": 0.07,
+      "21": 0.54
+     },
+     "residue_side": {
+      "9": "both",
+      "10": "both",
+      "11": "heavy",
+      "12": "heavy",
+      "13": "heavy",
+      "14": "heavy",
+      "15": "heavy",
+      "16": "heavy",
+      "17": "heavy",
+      "18": "heavy",
+      "19": "heavy",
+      "20": "heavy",
+      "21": "heavy"
+     },
+     "max_confidence": 0.93,
+     "mean_confidence": 0.6285,
+     "precision_vs_truth": 0.9231,
+     "n_in_truth": 12
+    },
+    {
+     "antibody_chain": "C",
+     "antibody_chain_type": "light",
+     "antigen_chain": "A",
+     "n_residues": 4,
+     "residue_confidence": {
+      "7": 0.77,
+      "8": 0.71,
+      "9": 0.93,
+      "10": 0.76
+     },
+     "residue_side": {
+      "7": "light",
+      "8": "light",
+      "9": "both",
+      "10": "both"
+     },
+     "max_confidence": 0.93,
+     "mean_confidence": 0.7925,
+     "precision_vs_truth": 1.0,
+     "n_in_truth": 4
+    }
+   ]
+  }
+ ],
+ "paratope": {
+  "dominant_cdrs": [
+   "H2S3:H1"
+  ],
+  "paratope_residues": [
+   "B:28",
+   "B:30",
+   "B:31",
+   "B:32",
+   "B:52",
+   "B:54",
+   "B:55",
+   "B:56",
+   "B:57",
+   "B:58",
+   "B:101",
+   "B:102",
+   "B:103",
+   "B:104",
+   "B:109",
+   "C:26",
+   "C:27",
+   "C:31",
+   "C:32",
+   "C:33",
+   "C:34",
+   "C:95",
+   "C:96",
+   "C:97",
+   "C:99"
+  ],
+  "heavy_light_split": "Heavy-dominant, about 72:28. L1/L3 cap A:7-A:10, both chains share A:9/A:10, and H1/H2/H3 run along A:11-A:21, placing the proline-rich H2/H3 ridge over the conserved hydrophobic strip.",
+  "binding_mode_union": "single-chain"
+ },
+ "residues": [
+  "A:10",
+  "A:11",
+  "A:12",
+  "A:13",
+  "A:14",
+  "A:15",
+  "A:16",
+  "A:17",
+  "A:18",
+  "A:19",
+  "A:20",
+  "A:21",
+  "A:7",
+  "A:8",
+  "A:9"
+ ],
+ "n_residues": 15,
+ "patches": [
+  {
+   "id": "P9",
+   "name": "γ1-like N-terminal hydrophobic face",
+   "n_residues": 22,
+   "residues": [
+    "A:10",
+    "A:11",
+    "A:12",
+    "A:13",
+    "A:14",
+    "A:15",
+    "A:16",
+    "A:17",
+    "A:18",
+    "A:19",
+    "A:20",
+    "A:21",
+    "A:22",
+    "A:23",
+    "A:26",
+    "A:33",
+    "A:4",
+    "A:5",
+    "A:6",
+    "A:7",
+    "A:8",
+    "A:9"
+   ],
+   "n_kept_by_advocate": 15,
+   "n_dropped_by_advocate": 7
+  }
+ ],
+ "pooling_provenance": {
+  "n_shared_at_pooling": 22,
+  "n_disputed_at_pooling": 0,
+  "note": "counts only, describing how the organizer grouped the phase-1 patches. The organizer's own candidate residue list is deliberately absent: the answer is the advocate's footprint, in `residues` and in `antibodies[].interfaces[]`."
+ },
+ "evidence": {
+  "advocate": {
+   "n_findings": 6,
+   "n_supports": 5,
+   "n_weakens": 1,
+   "weakest_point": "The refined footprint does not directly center the CX3C/WAI receptor motif, so its neutralization mechanism relies on steric adjacency and conformational clamping. Published gamma1-like recognition can extend farther into the noose than A:21, and A:14-A:17 are partly recessed or disulfide-buried. Thus a purely compact N-face interface may be too small or too indirect unless the actual approach angle places the Fab across the receptor path—something separate-structure analysis cannot establish.",
+   "note": "the advocate reports claim/source/date/bearing and is not asked whether a source is about this binder"
+  },
+  "judge": {
+   "tier_a_support": 0,
+   "n_support_lines": 8,
+   "verdict": "live",
+   "note": "Tier A -- a source about this binder itself -- is the judge's adjudication, in assessment[].support[]. It exists nowhere in the advocate's own answer."
+  }
+ },
+ "provenance": {
+  "unverified_source_policy_fields": [
+   "gated",
+   "web_search",
+   "shell_network",
+   "gate_tools"
+  ],
+  "assembled_case_dir": "gpt-5.6-high/gather_refine/post_refactor/released_structure_20261030/casp16/H1222/case_2e3a2a_G_rep2",
+  "organize_case_dir": "gpt-5.6-high/gather_refine/post_refactor/released_structure_20261030/casp16/H1222/case_2e3a2a_GR_rep1",
+  "organize_status": "ok",
+  "judge_case_dir": "gpt-5.6-high/gather_refine/post_refactor/released_structure_20261030/casp16/H1222/case_2e3a2a_GJ_rep2",
+  "judge_status": "ok",
+  "packet": "gpt-5.6-high/gather/packets/case_2e3a2a/packet",
+  "manifest": "gpt-5.6-high/gather/packets/case_2e3a2a/manifest.json",
+  "advocate_case_dir": "gpt-5.6-high/gather_refine/post_refactor/released_structure_20261030/casp16/H1222/case_2e3a2a_GR_rep1",
+  "advocate_status": "ok"
+ },
+ "score": {
+  "precision": 0.9333,
+  "recall": 0.6364,
+  "f1": 0.7568,
+  "n_pred": 15,
+  "n_true": 22,
+  "n_hit": 14
+ }
+}

@@ -1,0 +1,210 @@
+{
+ "target": "H2348",
+ "target_set": "casp17",
+ "case": "case_4ade9a",
+ "task": "gather",
+ "gather_mode": "batched",
+ "num_launchers": 3,
+ "policy": {
+  "evidence_cutoff": null,
+  "no_cutoff": true,
+  "gated": false,
+  "web_search": true,
+  "shell_network": true,
+  "gate_tools": []
+ },
+ "unscored": true,
+ "evidence_cutoff": null,
+ "target_release_date": "2026-06-05",
+ "retrieval_policy": "no-cutoff",
+ "antigen_chains": [
+  "A"
+ ],
+ "antibody_files": {
+  "antibody.pdb": [
+   "B",
+   "C"
+  ]
+ },
+ "antibody_chain_types": {
+  "antibody.pdb": {
+   "B": "unknown",
+   "C": "unknown"
+  }
+ },
+ "input_structure": "data/staged_casp17_no_native/H2348.pdb",
+ "input_structure_sha256": "ce3adf48ca6a518ad9b1c0b7ee6fd0899f7d12f01d7aa968c11b92ad459c41e7",
+ "briefing_source": "data/briefing/casp17_nocutoff/H2348/search_results.json",
+ "briefing_sha256": "764bf0cb501957b0a6bbb2036c672dc856ac4be1b5e0aed11fd8847f842bf759",
+ "recognized_complex": {
+  "organize": null,
+  "judge": true
+ },
+ "recognition_note": "The antigen is human gp130/IL6ST (IL6RB), and the supplied VH/VL exactly match the ANTI-IL6RB entry in WO 2023/021477 / AU 2022/330406, first public 2023-02-16. Confirmed from the local patent and exact-sequence searches on 2026-10-29. The patent gives no domain, epitope, competition bin, complex, or clone-specific phenotype, so recognition does not localize binding.",
+ "what_separated_them": "No candidate had a clone-localizing Tier A line; the binder-specific patent finding is equally true of all seven. The result is therefore a diffuse Tier-B prior. A uniform comparison of coverage, RSA, planarity, side-chain facing, and exposed-CDR chemistry separated a close leading group: C4's one-facing geometry, C5's different-Fab precedent, C6's paratope-specific bulk chemistry, and C2's functional plus nanobody precedent. None justified concentration.",
+ "not_pooled": [],
+ "provenance": {
+  "unverified_source_policy_fields": [
+   "gated",
+   "web_search",
+   "shell_network",
+   "gate_tools"
+  ],
+  "assembled_case_dir": "gpt-5.6-high/gather_refine/post_refactor/unreleased_20261029/nocut/casp17/H2348/case_4ade9a_G_rep1",
+  "organize_case_dir": "gpt-5.6-high/gather_refine/post_refactor/unreleased_20261029/nocut/casp17/H2348/case_4ade9a_GR_rep1",
+  "organize_status": "ok",
+  "judge_case_dir": "gpt-5.6-high/gather_refine/post_refactor/unreleased_20261029/nocut/casp17/H2348/case_4ade9a_GJ_rep1",
+  "judge_status": "ok",
+  "packet": "gpt-5.6-high/nocut/gather/packets/case_4ade9a/packet",
+  "manifest": "gpt-5.6-high/nocut/gather/packets/case_4ade9a/manifest.json"
+ },
+ "pockets": [
+  {
+   "id": "C4",
+   "judge_rank": 1,
+   "name": "The glycan-sparse lateral half of D1 site III: a flat Ig-domain...",
+   "confidence": 0.21,
+   "mapping_basis": "side",
+   "n_residues": 17,
+   "chain_pairs": [
+    {
+     "antibody_chain": "B",
+     "antigen_chain": "A",
+     "n_residues": 17
+    },
+    {
+     "antibody_chain": "C",
+     "antigen_chain": "A",
+     "n_residues": 17
+    }
+   ],
+   "file": "pocket.C4.json"
+  },
+  {
+   "id": "C5",
+   "judge_rank": 2,
+   "name": "The extreme distal ridge of the N-terminal Ig-like D1 domain: the...",
+   "confidence": 0.2,
+   "mapping_basis": "side",
+   "n_residues": 15,
+   "chain_pairs": [
+    {
+     "antibody_chain": "B",
+     "antigen_chain": "A",
+     "n_residues": 15
+    },
+    {
+     "antibody_chain": "C",
+     "antigen_chain": "A",
+     "n_residues": 15
+    }
+   ],
+   "file": "pocket.C5.json"
+  },
+  {
+   "id": "C6",
+   "judge_rank": 3,
+   "name": "The glycan-free outer ridge across the acute D4-D5 bend of the...",
+   "confidence": 0.18,
+   "mapping_basis": "side",
+   "n_residues": 20,
+   "chain_pairs": [
+    {
+     "antibody_chain": "B",
+     "antigen_chain": "A",
+     "n_residues": 20
+    },
+    {
+     "antibody_chain": "C",
+     "antigen_chain": "A",
+     "n_residues": 20
+    }
+   ],
+   "file": "pocket.C6.json"
+  },
+  {
+   "id": "C2",
+   "judge_rank": 4,
+   "name": "The cytokine-binding-homology-region site-II face across the D2-D3...",
+   "confidence": 0.17,
+   "mapping_basis": "side",
+   "n_residues": 19,
+   "chain_pairs": [
+    {
+     "antibody_chain": "B",
+     "antigen_chain": "A",
+     "n_residues": 19
+    },
+    {
+     "antibody_chain": "C",
+     "antigen_chain": "A",
+     "n_residues": 19
+    }
+   ],
+   "file": "pocket.C2.json"
+  },
+  {
+   "id": "C1",
+   "judge_rank": 5,
+   "name": "The glycan-clear outer face of the second membrane-proximal...",
+   "confidence": 0.1,
+   "mapping_basis": "side",
+   "n_residues": 15,
+   "chain_pairs": [
+    {
+     "antibody_chain": "B",
+     "antigen_chain": "A",
+     "n_residues": 15
+    },
+    {
+     "antibody_chain": "C",
+     "antigen_chain": "A",
+     "n_residues": 15
+    }
+   ],
+   "file": "pocket.C1.json"
+  },
+  {
+   "id": "C3",
+   "judge_rank": 6,
+   "name": "The broad distal cap of the N-terminal Ig-like D1 domain forming the...",
+   "confidence": 0.08,
+   "mapping_basis": "side",
+   "n_residues": 19,
+   "chain_pairs": [
+    {
+     "antibody_chain": "B",
+     "antigen_chain": "A",
+     "n_residues": 19
+    },
+    {
+     "antibody_chain": "C",
+     "antigen_chain": "A",
+     "n_residues": 19
+    }
+   ],
+   "file": "pocket.C3.json"
+  },
+  {
+   "id": "C7",
+   "judge_rank": 7,
+   "name": "The D3 receptor-receptor component of composite site II: the...",
+   "confidence": 0.06,
+   "mapping_basis": "side",
+   "n_residues": 15,
+   "chain_pairs": [
+    {
+     "antibody_chain": "B",
+     "antigen_chain": "A",
+     "n_residues": 15
+    },
+    {
+     "antibody_chain": "C",
+     "antigen_chain": "A",
+     "n_residues": 15
+    }
+   ],
+   "file": "pocket.C7.json"
+  }
+ ]
+}

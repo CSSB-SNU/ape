@@ -1,0 +1,258 @@
+{
+ "target": "H2348",
+ "target_set": "casp17",
+ "case": "case_4ade9a",
+ "task": "gather",
+ "gather_mode": "batched",
+ "num_launchers": 3,
+ "policy": {
+  "evidence_cutoff": "2026-06-05",
+  "no_cutoff": false,
+  "gated": true,
+  "web_search": false,
+  "shell_network": true,
+  "gate_tools": [
+   "research",
+   "fetch",
+   "rcsb",
+   "patent",
+   "paper"
+  ]
+ },
+ "unscored": true,
+ "evidence_cutoff": "2026-06-05",
+ "target_release_date": "2026-06-05",
+ "retrieval_policy": "gated",
+ "antigen_chains": [
+  "A"
+ ],
+ "antibody_files": {
+  "antibody.pdb": [
+   "B",
+   "C"
+  ]
+ },
+ "antibody_chain_types": {
+  "antibody.pdb": {
+   "B": "heavy",
+   "C": "light"
+  }
+ },
+ "input_structure": "data/staged_casp17_no_native/H2348.pdb",
+ "input_structure_sha256": "ce3adf48ca6a518ad9b1c0b7ee6fd0899f7d12f01d7aa968c11b92ad459c41e7",
+ "briefing_source": "data/briefing/casp17/H2348/search_results.json",
+ "briefing_sha256": "4d17b3e4689d4bdb8848154699de80e2748b0d365b2fba62f69b2f96cbbee826",
+ "recognized_complex": {
+  "organize": null,
+  "judge": true
+ },
+ "recognition_note": "The exact supplied VH/VL and all six CDRs occur in AU2022330406A1 (first public 2024-03-09), where Table 27 labels them ANTI-IL6RB; the patent defines IL6RB as gp130/CD130. This identifies the antibody target, not its epitope. No antibody-gp130 complex or pre-cutoff domain/residue map for this clone was recognized.",
+ "what_separated_them": "No pre-cutoff line localizes this binder; the exact-sequence patent identifies gp130 only and is equally true of all nine candidates. The result is therefore a shallow prior over viable surfaces, not a concentrated epitope call. C3 leads because three independent Tier B axes converge: recurrent site-2 function, other-antibody/domain precedent, and measured glycan-clear positive/aromatic complementarity to this paratope. C6 follows on D4 precedent plus compact complementarity. C4 and C1 share D1 mass rather than providing independent confirmation; C4 gets the stronger share because a different Fab has a residue-level map there. Glycan proximity lowers C7 and C8, and lack of a named face function lowers C2, C8, and C9.",
+ "not_pooled": [],
+ "provenance": {
+  "unverified_source_policy_fields": [
+   "gated",
+   "web_search",
+   "shell_network",
+   "gate_tools"
+  ],
+  "assembled_case_dir": "gpt-5.6-high/gather_refine/post_refactor/unreleased_20261029/gated/casp17/H2348/case_4ade9a_G_rep1",
+  "organize_case_dir": "gpt-5.6-high/gather_refine/post_refactor/unreleased_20261029/gated/casp17/H2348/case_4ade9a_GR_rep1",
+  "organize_status": "ok",
+  "judge_case_dir": "gpt-5.6-high/gather_refine/post_refactor/unreleased_20261029/gated/casp17/H2348/case_4ade9a_GJ_rep1",
+  "judge_status": "ok",
+  "packet": "gpt-5.6-high/gather/packets/case_4ade9a/packet",
+  "manifest": "gpt-5.6-high/gather/packets/case_4ade9a/manifest.json"
+ },
+ "pockets": [
+  {
+   "id": "C3",
+   "judge_rank": 1,
+   "name": "The cytokine site-2 face of the D2–D3 cytokine-binding homology...",
+   "confidence": 0.2,
+   "mapping_basis": "side",
+   "n_residues": 21,
+   "chain_pairs": [
+    {
+     "antibody_chain": "B",
+     "antigen_chain": "A",
+     "n_residues": 16
+    },
+    {
+     "antibody_chain": "C",
+     "antigen_chain": "A",
+     "n_residues": 11
+    }
+   ],
+   "file": "pocket.C3.json"
+  },
+  {
+   "id": "C6",
+   "judge_rank": 2,
+   "name": "A compact glycan-poor outward face of FNIII domain D4 joining...",
+   "confidence": 0.15,
+   "mapping_basis": "side",
+   "n_residues": 15,
+   "chain_pairs": [
+    {
+     "antibody_chain": "B",
+     "antigen_chain": "A",
+     "n_residues": 11
+    },
+    {
+     "antibody_chain": "C",
+     "antigen_chain": "A",
+     "n_residues": 8
+    }
+   ],
+   "file": "pocket.C6.json"
+  },
+  {
+   "id": "C4",
+   "judge_rank": 3,
+   "name": "The membrane-distal cap of D1: the exposed N terminus and convergent...",
+   "confidence": 0.14,
+   "mapping_basis": "side",
+   "n_residues": 15,
+   "chain_pairs": [
+    {
+     "antibody_chain": "B",
+     "antigen_chain": "A",
+     "n_residues": 10
+    },
+    {
+     "antibody_chain": "C",
+     "antigen_chain": "A",
+     "n_residues": 11
+    }
+   ],
+   "file": "pocket.C4.json"
+  },
+  {
+   "id": "C1",
+   "judge_rank": 4,
+   "name": "The broad site-3 face of gp130's membrane-distal D1...",
+   "confidence": 0.12,
+   "mapping_basis": "side",
+   "n_residues": 24,
+   "chain_pairs": [
+    {
+     "antibody_chain": "B",
+     "antigen_chain": "A",
+     "n_residues": 13
+    },
+    {
+     "antibody_chain": "C",
+     "antigen_chain": "A",
+     "n_residues": 18
+    }
+   ],
+   "file": "pocket.C1.json"
+  },
+  {
+   "id": "C5",
+   "judge_rank": 5,
+   "name": "A charged/polar D3 shoulder at the site-IIIb/co-receptor side of the...",
+   "confidence": 0.11,
+   "mapping_basis": "side",
+   "n_residues": 20,
+   "chain_pairs": [
+    {
+     "antibody_chain": "B",
+     "antigen_chain": "A",
+     "n_residues": 12
+    },
+    {
+     "antibody_chain": "C",
+     "antigen_chain": "A",
+     "n_residues": 15
+    }
+   ],
+   "file": "pocket.C5.json"
+  },
+  {
+   "id": "C2",
+   "judge_rank": 6,
+   "name": "A compact outward non-ligand face on membrane-proximal FNIII domain...",
+   "confidence": 0.09,
+   "mapping_basis": "side",
+   "n_residues": 20,
+   "chain_pairs": [
+    {
+     "antibody_chain": "B",
+     "antigen_chain": "A",
+     "n_residues": 9
+    },
+    {
+     "antibody_chain": "C",
+     "antigen_chain": "A",
+     "n_residues": 16
+    }
+   ],
+   "file": "pocket.C2.json"
+  },
+  {
+   "id": "C9",
+   "judge_rank": 7,
+   "name": "An elongated exposed D5 face centered on D414-N415-W418 and closed by...",
+   "confidence": 0.08,
+   "mapping_basis": "side",
+   "n_residues": 20,
+   "chain_pairs": [
+    {
+     "antibody_chain": "B",
+     "antigen_chain": "A",
+     "n_residues": 16
+    },
+    {
+     "antibody_chain": "C",
+     "antigen_chain": "A",
+     "n_residues": 14
+    }
+   ],
+   "file": "pocket.C9.json"
+  },
+  {
+   "id": "C7",
+   "judge_rank": 8,
+   "name": "The convex bend-proximal D4 face centered on the exposed...",
+   "confidence": 0.06,
+   "mapping_basis": "side",
+   "n_residues": 16,
+   "chain_pairs": [
+    {
+     "antibody_chain": "B",
+     "antigen_chain": "A",
+     "n_residues": 10
+    },
+    {
+     "antibody_chain": "C",
+     "antigen_chain": "A",
+     "n_residues": 11
+    }
+   ],
+   "file": "pocket.C7.json"
+  },
+  {
+   "id": "C8",
+   "judge_rank": 9,
+   "name": "A compact polar shoulder on the noncanonical D3 face, joining...",
+   "confidence": 0.05,
+   "mapping_basis": "side",
+   "n_residues": 17,
+   "chain_pairs": [
+    {
+     "antibody_chain": "B",
+     "antigen_chain": "A",
+     "n_residues": 9
+    },
+    {
+     "antibody_chain": "C",
+     "antigen_chain": "A",
+     "n_residues": 15
+    }
+   ],
+   "file": "pocket.C8.json"
+  }
+ ]
+}

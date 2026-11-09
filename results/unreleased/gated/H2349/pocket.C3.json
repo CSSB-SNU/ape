@@ -1,0 +1,370 @@
+{
+ "task": "gather",
+ "gather_mode": "batched",
+ "num_launchers": 3,
+ "policy": {
+  "evidence_cutoff": "2026-06-05",
+  "no_cutoff": false,
+  "gated": true,
+  "web_search": false,
+  "shell_network": true,
+  "gate_tools": [
+   "research",
+   "fetch",
+   "rcsb",
+   "patent",
+   "paper"
+  ]
+ },
+ "unscored": true,
+ "target": "H2349",
+ "target_set": "casp17",
+ "case": "case_e333d6",
+ "evidence_cutoff": "2026-06-05",
+ "target_release_date": "2026-06-05",
+ "retrieval_policy": "gated",
+ "input_structure": "data/staged_casp17_no_native/H2349.pdb",
+ "input_structure_sha256": "ed3bcb0b0799f7f8db3a7695ea1da3ddce30d9c2312cdd2e5d844f6e396bdd86",
+ "briefing_source": "data/briefing/casp17/H2349/search_results.json",
+ "briefing_sha256": "6aab33c7c98904b5652d2b15ee1575cd366219e364eafe5cb61256cd5814ad57",
+ "antigen_chains": [
+  "A"
+ ],
+ "antibody_files": {
+  "antibody.pdb": [
+   "B",
+   "C"
+  ]
+ },
+ "antibody_chain_types": {
+  "antibody.pdb": {
+   "B": "unknown",
+   "C": "unknown"
+  }
+ },
+ "stage": "gatherer",
+ "pocket": {
+  "id": "C3",
+  "judge_rank": 2,
+  "name": "The functional gp130 D2 cytokine-binding ridge spanning the...",
+  "confidence": 0.28,
+  "p_rests_on_holds": 0.35,
+  "why_this_rank": "C3 covers substantially the same D2 face as C1 and has strong ligand-interface relevance, but is broader and its edge residues are less justified.",
+  "rests_on": "The true footprint is the broader C3 drawing rather than compact C1.",
+  "where_the_mass_goes_if_it_fails": "C1, with a smaller transfer to C4.",
+  "what_it_is": "The functional gp130 D2 cytokine-binding ridge spanning the A:118-A:148 shoulder and A:163-A:173 belt, with an adjacent lower rim at the top of D3.",
+  "why_one_candidate": "geometry pooled 2 patches (P2, P6): P2+P6 at 2.78 A, union radius 16.23 A. Every union fits inside this antibody's paratope reach of 17.9 A. No session judged these to be the same surface.",
+  "from_patches": [
+   "P2",
+   "P6"
+  ]
+ },
+ "note": "`confidence` on the pocket is over pockets and sums to about 1 across them. Inside an interface it is per residue in [0, 1] and sums to nothing. No residue is cut at a threshold: the whole vector is the answer.",
+ "mapping_basis": "side",
+ "checks": {
+  "unrecognised_sides": []
+ },
+ "chain_pairs": [
+  {
+   "antibody_chain": "B",
+   "antigen_chain": "A",
+   "n_residues": 25
+  },
+  {
+   "antibody_chain": "C",
+   "antigen_chain": "A",
+   "n_residues": 25
+  }
+ ],
+ "antibodies": [
+  {
+   "antibody": "antibody.pdb",
+   "chains": {
+    "B": "unknown",
+    "C": "unknown"
+   },
+   "binding_mode": null,
+   "n_residues_scored": 25,
+   "interfaces": [
+    {
+     "antibody_chain": "B",
+     "antibody_chain_type": "unknown",
+     "antigen_chain": "A",
+     "n_residues": 25,
+     "residue_confidence": {
+      "117": 0.58,
+      "118": 0.7,
+      "119": 0.56,
+      "141": 0.69,
+      "142": 0.87,
+      "143": 0.82,
+      "144": 0.83,
+      "145": 0.77,
+      "146": 0.91,
+      "147": 0.6,
+      "148": 0.55,
+      "163": 0.63,
+      "164": 0.56,
+      "165": 0.79,
+      "166": 0.72,
+      "167": 0.84,
+      "168": 0.9,
+      "169": 0.95,
+      "170": 0.86,
+      "171": 0.84,
+      "173": 0.58,
+      "191": 0.43,
+      "196": 0.42,
+      "229": 0.46,
+      "230": 0.53
+     },
+     "residue_side": {
+      "117": "light",
+      "118": "light",
+      "119": "light",
+      "141": "heavy",
+      "142": "heavy",
+      "143": "both",
+      "144": "both",
+      "145": "heavy",
+      "146": "heavy",
+      "147": "heavy",
+      "148": "heavy",
+      "163": "light",
+      "164": "light",
+      "165": "both",
+      "166": "both",
+      "167": "both",
+      "168": "both",
+      "169": "heavy",
+      "170": "both",
+      "171": "both",
+      "173": "light",
+      "191": "light",
+      "196": "light",
+      "229": "light",
+      "230": "light"
+     },
+     "max_confidence": 0.95,
+     "mean_confidence": 0.6956
+    },
+    {
+     "antibody_chain": "C",
+     "antibody_chain_type": "unknown",
+     "antigen_chain": "A",
+     "n_residues": 25,
+     "residue_confidence": {
+      "117": 0.58,
+      "118": 0.7,
+      "119": 0.56,
+      "141": 0.69,
+      "142": 0.87,
+      "143": 0.82,
+      "144": 0.83,
+      "145": 0.77,
+      "146": 0.91,
+      "147": 0.6,
+      "148": 0.55,
+      "163": 0.63,
+      "164": 0.56,
+      "165": 0.79,
+      "166": 0.72,
+      "167": 0.84,
+      "168": 0.9,
+      "169": 0.95,
+      "170": 0.86,
+      "171": 0.84,
+      "173": 0.58,
+      "191": 0.43,
+      "196": 0.42,
+      "229": 0.46,
+      "230": 0.53
+     },
+     "residue_side": {
+      "117": "light",
+      "118": "light",
+      "119": "light",
+      "141": "heavy",
+      "142": "heavy",
+      "143": "both",
+      "144": "both",
+      "145": "heavy",
+      "146": "heavy",
+      "147": "heavy",
+      "148": "heavy",
+      "163": "light",
+      "164": "light",
+      "165": "both",
+      "166": "both",
+      "167": "both",
+      "168": "both",
+      "169": "heavy",
+      "170": "both",
+      "171": "both",
+      "173": "light",
+      "191": "light",
+      "196": "light",
+      "229": "light",
+      "230": "light"
+     },
+     "max_confidence": 0.95,
+     "mean_confidence": 0.6956
+    }
+   ]
+  }
+ ],
+ "paratope": {
+  "dominant_cdrs": [
+   "H3:H2",
+   "L3:H1"
+  ],
+  "paratope_residues": [
+   "B:26",
+   "B:28",
+   "B:31",
+   "B:32",
+   "B:33",
+   "B:52",
+   "B:54",
+   "B:55",
+   "B:56",
+   "B:57",
+   "B:58",
+   "B:100",
+   "B:101",
+   "B:102",
+   "B:103",
+   "B:106",
+   "B:107",
+   "C:27",
+   "C:28",
+   "C:30",
+   "C:31",
+   "C:52",
+   "C:92",
+   "C:93",
+   "C:94"
+  ],
+  "heavy_light_split": "Heavy covers W142-H145-K146 and F169; both chains share A:143-A:144 and A:165-A:171; light covers the Lys118/Lys119 shoulder and D3 rim.",
+  "binding_mode_union": "single-chain"
+ },
+ "residues": [
+  "A:117",
+  "A:118",
+  "A:119",
+  "A:141",
+  "A:142",
+  "A:143",
+  "A:144",
+  "A:145",
+  "A:146",
+  "A:147",
+  "A:148",
+  "A:163",
+  "A:164",
+  "A:165",
+  "A:166",
+  "A:167",
+  "A:168",
+  "A:169",
+  "A:170",
+  "A:171",
+  "A:173",
+  "A:191",
+  "A:196",
+  "A:229",
+  "A:230"
+ ],
+ "n_residues": 25,
+ "patches": [
+  {
+   "id": "P2",
+   "name": "D2 cytokine-binding-module EF-loop face",
+   "n_residues": 15,
+   "residues": [
+    "A:118",
+    "A:119",
+    "A:147",
+    "A:148",
+    "A:163",
+    "A:164",
+    "A:165",
+    "A:166",
+    "A:167",
+    "A:168",
+    "A:169",
+    "A:170",
+    "A:171",
+    "A:196",
+    "A:230"
+   ],
+   "n_kept_by_advocate": 15,
+   "n_dropped_by_advocate": 0
+  },
+  {
+   "id": "P6",
+   "name": "D2 cytokine-binding ridge with D3 rim",
+   "n_residues": 19,
+   "residues": [
+    "A:141",
+    "A:142",
+    "A:143",
+    "A:144",
+    "A:145",
+    "A:146",
+    "A:147",
+    "A:165",
+    "A:166",
+    "A:167",
+    "A:168",
+    "A:169",
+    "A:170",
+    "A:171",
+    "A:173",
+    "A:191",
+    "A:193",
+    "A:229",
+    "A:230"
+   ],
+   "n_kept_by_advocate": 18,
+   "n_dropped_by_advocate": 1
+  }
+ ],
+ "pooling_provenance": {
+  "n_shared_at_pooling": 9,
+  "n_disputed_at_pooling": 16,
+  "note": "counts only, describing how the organizer grouped the phase-1 patches. The organizer's own candidate residue list is deliberately absent: the answer is the advocate's footprint, in `residues` and in `antibodies[].interfaces[]`."
+ },
+ "evidence": {
+  "advocate": {
+   "n_findings": 4,
+   "n_supports": 4,
+   "n_weakens": 0,
+   "weakest_point": "The D2 core is well supported, but A:229-A:230 are near the paratope edge and may be ligand contacts outside the antibody footprint.",
+   "note": "the advocate reports claim/source/date/bearing and is not asked whether a source is about this binder"
+  },
+  "judge": {
+   "tier_a_support": 0,
+   "n_support_lines": 5,
+   "verdict": "live",
+   "note": "Tier A -- a source about this binder itself -- is the judge's adjudication, in assessment[].support[]. It exists nowhere in the advocate's own answer."
+  }
+ },
+ "provenance": {
+  "unverified_source_policy_fields": [
+   "gated",
+   "web_search",
+   "shell_network",
+   "gate_tools"
+  ],
+  "assembled_case_dir": "gpt-5.6-high/gather_refine/post_refactor/unreleased_20261029/gated/casp17/H2349/case_e333d6_G_rep1",
+  "organize_case_dir": "gpt-5.6-high/gather_refine/post_refactor/unreleased_20261029/gated/casp17/H2349/case_e333d6_GR_rep1",
+  "organize_status": "ok",
+  "judge_case_dir": "gpt-5.6-high/gather_refine/post_refactor/unreleased_20261029/gated/casp17/H2349/case_e333d6_GJ_rep1",
+  "judge_status": "ok",
+  "packet": "gpt-5.6-high/gather/packets/case_e333d6/packet",
+  "manifest": "gpt-5.6-high/gather/packets/case_e333d6/manifest.json",
+  "advocate_case_dir": "gpt-5.6-high/gather_refine/post_refactor/unreleased_20261029/gated/casp17/H2349/case_e333d6_GR_rep1",
+  "advocate_status": "ok"
+ }
+}

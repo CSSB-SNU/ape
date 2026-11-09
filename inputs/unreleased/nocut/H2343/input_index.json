@@ -1,0 +1,14 @@
+{
+  "case_id": "case_f1b810",
+  "cutoff": "2026-06-01",
+  "task": "gather",
+  "n_patches": 9,
+  "antibody_files": [
+    "antibody.pdb"
+  ],
+  "sessions": [
+    "a",
+    "b",
+    "c"
+  ]
+}

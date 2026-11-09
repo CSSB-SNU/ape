@@ -1,0 +1,288 @@
+{
+ "task": "gather",
+ "gather_mode": "batched",
+ "num_launchers": 3,
+ "policy": {
+  "evidence_cutoff": "2026-05-21",
+  "no_cutoff": false,
+  "gated": true,
+  "web_search": false,
+  "shell_network": true,
+  "gate_tools": [
+   "research",
+   "fetch",
+   "rcsb",
+   "patent",
+   "paper"
+  ]
+ },
+ "unscored": false,
+ "target": "H1347_agCD",
+ "target_set": "casp17",
+ "case": "case_0f54aa",
+ "evidence_cutoff": "2026-05-21",
+ "target_release_date": "2026-05-21",
+ "retrieval_policy": "gated",
+ "input_structure": "structures/H1347_agCD.pdb",
+ "input_structure_sha256": null,
+ "briefing_source": null,
+ "briefing_sha256": null,
+ "antigen_chains": [
+  "C",
+  "D"
+ ],
+ "antibody_files": {
+  "antibody.1.pdb": [
+   "A"
+  ],
+  "antibody.2.pdb": [
+   "B"
+  ]
+ },
+ "antibody_chain_types": {
+  "antibody.1.pdb": {
+   "A": "heavy"
+  },
+  "antibody.2.pdb": {
+   "B": "light"
+  }
+ },
+ "truth_file": "data/truth/casp17/H1347_agCD.epitope.json",
+ "stage": "gatherer",
+ "pocket": {
+  "id": "C6",
+  "judge_rank": 6,
+  "name": "The antigen antibody’s VL cap, centered on D-chain CDR-L3 W90–V97...",
+  "confidence": 0.08,
+  "p_rests_on_holds": 0.16,
+  "why_this_rank": "A VL-only idiotope is coverable and precedented, but native function is heavy-dominant and convergence of both binders on VL is unsupported.",
+  "rests_on": "Both binders converge on the VL L2/L3 cap despite the heavy-dominant native interface.",
+  "where_the_mass_goes_if_it_fails": "C7, C2, or C4",
+  "what_it_is": "The antigen antibody’s VL cap, centered on D-chain CDR-L3 W90–V97 with the nearest L1/L2 rim.",
+  "why_one_candidate": "not pooled with anything: no other patch is both within 12 A (half centroid distance, half contact-graph hops) and coverable by one paratope of this antibody's reach, 13.2 A",
+  "from_patches": [
+   "P6"
+  ]
+ },
+ "note": "`confidence` on the pocket is over pockets and sums to about 1 across them. Inside an interface it is per residue in [0, 1] and sums to nothing. No residue is cut at a threshold: the whole vector is the answer.",
+ "mapping_basis": "per_antibody",
+ "checks": {
+  "unrecognised_sides": []
+ },
+ "chain_pairs": [
+  {
+   "antibody_chain": "A",
+   "antigen_chain": "D",
+   "n_residues": 9
+  },
+  {
+   "antibody_chain": "B",
+   "antigen_chain": "D",
+   "n_residues": 9
+  }
+ ],
+ "antibodies": [
+  {
+   "antibody": "antibody.1.pdb",
+   "chains": {
+    "A": "heavy"
+   },
+   "binding_mode": "single-chain",
+   "n_residues_scored": 9,
+   "interfaces": [
+    {
+     "antibody_chain": "A",
+     "antibody_chain_type": "heavy",
+     "antigen_chain": "D",
+     "n_residues": 9,
+     "residue_confidence": {
+      "48": 0.72,
+      "49": 0.78,
+      "90": 0.88,
+      "92": 0.64,
+      "93": 0.76,
+      "95": 0.84,
+      "96": 0.88,
+      "97": 0.82,
+      "99": 0.74
+     },
+     "residue_side": {
+      "48": "heavy",
+      "49": "heavy",
+      "90": "heavy",
+      "92": "heavy",
+      "93": "heavy",
+      "95": "heavy",
+      "96": "heavy",
+      "97": "heavy",
+      "99": "heavy"
+     },
+     "max_confidence": 0.88,
+     "mean_confidence": 0.7844,
+     "precision_vs_truth": 0.0,
+     "n_in_truth": 0
+    }
+   ]
+  },
+  {
+   "antibody": "antibody.2.pdb",
+   "chains": {
+    "B": "light"
+   },
+   "binding_mode": "single-chain",
+   "n_residues_scored": 9,
+   "interfaces": [
+    {
+     "antibody_chain": "B",
+     "antibody_chain_type": "light",
+     "antigen_chain": "D",
+     "n_residues": 9,
+     "residue_confidence": {
+      "48": 0.82,
+      "49": 0.76,
+      "90": 0.92,
+      "92": 0.78,
+      "93": 0.82,
+      "95": 0.9,
+      "96": 0.84,
+      "97": 0.88,
+      "99": 0.76
+     },
+     "residue_side": {
+      "48": "light",
+      "49": "light",
+      "90": "light",
+      "92": "light",
+      "93": "light",
+      "95": "light",
+      "96": "light",
+      "97": "light",
+      "99": "light"
+     },
+     "max_confidence": 0.92,
+     "mean_confidence": 0.8311,
+     "precision_vs_truth": 0.0,
+     "n_in_truth": 0
+    }
+   ]
+  }
+ ],
+ "paratope": {
+  "dominant_cdrs": [
+   "A:H3",
+   "A:H1",
+   "B:L3",
+   "B:L2"
+  ],
+  "paratope_residues": [
+   "A:27",
+   "A:29",
+   "A:32",
+   "A:51",
+   "A:54",
+   "A:57",
+   "A:97",
+   "A:100",
+   "A:101",
+   "A:103",
+   "A:105",
+   "B:29",
+   "B:32",
+   "B:50",
+   "B:51",
+   "B:52",
+   "B:89",
+   "B:91",
+   "B:92",
+   "B:94",
+   "B:96"
+  ],
+  "heavy_light_split": "Both footprints occupy antigen chain D. A supplies heavy-side and B light-side contacts; their overlap is `both`. D:111 was dropped as a distant passenger.",
+  "binding_mode_union": null
+ },
+ "residues": [
+  "D:48",
+  "D:49",
+  "D:90",
+  "D:92",
+  "D:93",
+  "D:95",
+  "D:96",
+  "D:97",
+  "D:99"
+ ],
+ "n_residues": 9,
+ "patches": [
+  {
+   "id": "P6",
+   "name": "D-chain light-variable CDR-cap idiotope",
+   "n_residues": 17,
+   "residues": [
+    "D:111",
+    "D:26",
+    "D:29",
+    "D:31",
+    "D:35",
+    "D:48",
+    "D:49",
+    "D:50",
+    "D:51",
+    "D:90",
+    "D:92",
+    "D:93",
+    "D:94",
+    "D:95",
+    "D:96",
+    "D:97",
+    "D:99"
+   ],
+   "n_kept_by_advocate": 9,
+   "n_dropped_by_advocate": 8
+  }
+ ],
+ "pooling_provenance": {
+  "n_shared_at_pooling": 17,
+  "n_disputed_at_pooling": 0,
+  "note": "counts only, describing how the organizer grouped the phase-1 patches. The organizer's own candidate residue list is deliberately absent: the answer is the advocate's footprint, in `residues` and in `antibodies[].interfaces[]`."
+ },
+ "evidence": {
+  "advocate": {
+   "n_findings": 4,
+   "n_supports": 4,
+   "n_weakens": 0,
+   "weakest_point": "The native target interface is heavy-chain dominated, so a VL-only binder may compete incompletely. The original boundary was also badly inflated by distant D:111.",
+   "note": "the advocate reports claim/source/date/bearing and is not asked whether a source is about this binder"
+  },
+  "judge": {
+   "tier_a_support": 0,
+   "n_support_lines": 4,
+   "verdict": "live",
+   "note": "Tier A -- a source about this binder itself -- is the judge's adjudication, in assessment[].support[]. It exists nowhere in the advocate's own answer."
+  }
+ },
+ "provenance": {
+  "unverified_source_policy_fields": [
+   "gated",
+   "web_search",
+   "shell_network",
+   "gate_tools"
+  ],
+  "assembled_case_dir": "gpt-5.6-high/gather_refine/post_refactor/released_structure_20261030/casp17/H1347_agCD/case_0f54aa_G_rep2",
+  "organize_case_dir": "gpt-5.6-high/gather_refine/post_refactor/released_structure_20261030/casp17/H1347_agCD/case_0f54aa_GR_rep1",
+  "organize_status": "ok",
+  "judge_case_dir": "gpt-5.6-high/gather_refine/post_refactor/released_structure_20261030/casp17/H1347_agCD/case_0f54aa_GJ_rep2",
+  "judge_status": "ok",
+  "packet": "gpt-5.6-high/gather/packets/case_0f54aa/packet",
+  "manifest": "gpt-5.6-high/gather/packets/case_0f54aa/manifest.json",
+  "advocate_case_dir": "gpt-5.6-high/gather_refine/post_refactor/released_structure_20261030/casp17/H1347_agCD/case_0f54aa_GR_rep1",
+  "advocate_status": "ok"
+ },
+ "score": {
+  "precision": 0.0,
+  "recall": 0.0,
+  "f1": 0.0,
+  "n_pred": 9,
+  "n_true": 22,
+  "n_hit": 0
+ }
+}

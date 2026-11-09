@@ -1,0 +1,210 @@
+{
+ "target": "H2349",
+ "target_set": "casp17",
+ "case": "case_e333d6",
+ "task": "gather",
+ "gather_mode": "batched",
+ "num_launchers": 3,
+ "policy": {
+  "evidence_cutoff": null,
+  "no_cutoff": true,
+  "gated": false,
+  "web_search": true,
+  "shell_network": true,
+  "gate_tools": []
+ },
+ "unscored": true,
+ "evidence_cutoff": null,
+ "target_release_date": "2026-06-05",
+ "retrieval_policy": "no-cutoff",
+ "antigen_chains": [
+  "A"
+ ],
+ "antibody_files": {
+  "antibody.pdb": [
+   "B",
+   "C"
+  ]
+ },
+ "antibody_chain_types": {
+  "antibody.pdb": {
+   "B": "unknown",
+   "C": "unknown"
+  }
+ },
+ "input_structure": "data/staged_casp17_no_native/H2349.pdb",
+ "input_structure_sha256": "ed3bcb0b0799f7f8db3a7695ea1da3ddce30d9c2312cdd2e5d844f6e396bdd86",
+ "briefing_source": "data/briefing/casp17_nocutoff/H2349/search_results.json",
+ "briefing_sha256": "b7744ba9eed23f884929670e84213478fdfebc3fc94cf39cec30b7cf355ba753",
+ "recognized_complex": {
+  "organize": null,
+  "judge": false
+ },
+ "recognition_note": "Antigen A is the human IL6ST/gp130 ectodomain (100% sequence identity to UniProt P40189 in the supplied search results). Every advocacy identified the Fab as exact murine HyHEL-63, but I independently checked that assertion on 2026-10-29 against RCSB 1DQQ (released 2000-01-19) and found it false: a global alignment gives supplied heavy B only 59.4% identity (130/219) to 1DQQ heavy B and H3 ARNYYEDYFDY rather than 1DQQ H3 ASWGGDV; supplied light C is 90.7% identical (194/214). I therefore recognize gp130 but not the antibody clone, and I do not transfer HyHEL-63's lysozyme epitope or energetic preferences to this binder.",
+ "what_separated_them": "No candidate has a Tier A line about this binder. The unanimous HyHEL-63 identification was false and was removed rather than allowed to concentrate the distribution. What remains is a broad prior over surfaces, modestly separated by one uniform calculation and by other-binder precedent: C2's compact planar aromatic D2 face led; C1 paid for an under-supported D3 rim; C4/C3/C7 divided the probability of one overlapping D1 site-III surface; C5 stayed live because excellent accessibility can matter even without a named function or mapped antibody; C6 paid for glycan proximity and a speculative consequence. Functional-site detail was not allowed to substitute for localization.",
+ "not_pooled": [],
+ "provenance": {
+  "unverified_source_policy_fields": [
+   "gated",
+   "web_search",
+   "shell_network",
+   "gate_tools"
+  ],
+  "assembled_case_dir": "gpt-5.6-high/gather_refine/post_refactor/unreleased_20261029/nocut/casp17/H2349/case_e333d6_G_rep1",
+  "organize_case_dir": "gpt-5.6-high/gather_refine/post_refactor/unreleased_20261029/nocut/casp17/H2349/case_e333d6_GR_rep1",
+  "organize_status": "ok",
+  "judge_case_dir": "gpt-5.6-high/gather_refine/post_refactor/unreleased_20261029/nocut/casp17/H2349/case_e333d6_GJ_rep1",
+  "judge_status": "ok",
+  "packet": "gpt-5.6-high/nocut/gather/packets/case_e333d6/packet",
+  "manifest": "gpt-5.6-high/nocut/gather/packets/case_e333d6/manifest.json"
+ },
+ "pockets": [
+  {
+   "id": "C2",
+   "judge_rank": 1,
+   "name": "The compact aromatic hotspot on the D2 half of the cytokine-binding...",
+   "confidence": 0.22,
+   "mapping_basis": "side",
+   "n_residues": 20,
+   "chain_pairs": [
+    {
+     "antibody_chain": "B",
+     "antigen_chain": "A",
+     "n_residues": 20
+    },
+    {
+     "antibody_chain": "C",
+     "antigen_chain": "A",
+     "n_residues": 20
+    }
+   ],
+   "file": "pocket.C2.json"
+  },
+  {
+   "id": "C1",
+   "judge_rank": 2,
+   "name": "The ligand-facing elbow of the two-domain cytokine-binding homology...",
+   "confidence": 0.16,
+   "mapping_basis": "side",
+   "n_residues": 23,
+   "chain_pairs": [
+    {
+     "antibody_chain": "B",
+     "antigen_chain": "A",
+     "n_residues": 23
+    },
+    {
+     "antibody_chain": "C",
+     "antigen_chain": "A",
+     "n_residues": 23
+    }
+   ],
+   "file": "pocket.C1.json"
+  },
+  {
+   "id": "C4",
+   "judge_rank": 3,
+   "name": "The narrow apical site-III face of D1: an N-terminal edge opposed to...",
+   "confidence": 0.16,
+   "mapping_basis": "side",
+   "n_residues": 14,
+   "chain_pairs": [
+    {
+     "antibody_chain": "B",
+     "antigen_chain": "A",
+     "n_residues": 14
+    },
+    {
+     "antibody_chain": "C",
+     "antigen_chain": "A",
+     "n_residues": 14
+    }
+   ],
+   "file": "pocket.C4.json"
+  },
+  {
+   "id": "C3",
+   "judge_rank": 4,
+   "name": "The membrane-distal head of the N-terminal Ig-like D1 domain, where...",
+   "confidence": 0.14,
+   "mapping_basis": "side",
+   "n_residues": 23,
+   "chain_pairs": [
+    {
+     "antibody_chain": "B",
+     "antigen_chain": "A",
+     "n_residues": 23
+    },
+    {
+     "antibody_chain": "C",
+     "antigen_chain": "A",
+     "n_residues": 23
+    }
+   ],
+   "file": "pocket.C3.json"
+  },
+  {
+   "id": "C5",
+   "judge_rank": 5,
+   "name": "A glycan-free exposed sheet/loop face on membrane-proximal FNIII...",
+   "confidence": 0.11,
+   "mapping_basis": "side",
+   "n_residues": 17,
+   "chain_pairs": [
+    {
+     "antibody_chain": "B",
+     "antigen_chain": "A",
+     "n_residues": 17
+    },
+    {
+     "antibody_chain": "C",
+     "antigen_chain": "A",
+     "n_residues": 17
+    }
+   ],
+   "file": "pocket.C5.json"
+  },
+  {
+   "id": "C7",
+   "judge_rank": 6,
+   "name": "The broad aromatic crown of D1, extending from Y35/F36/H37 through...",
+   "confidence": 0.11,
+   "mapping_basis": "side",
+   "n_residues": 24,
+   "chain_pairs": [
+    {
+     "antibody_chain": "B",
+     "antigen_chain": "A",
+     "n_residues": 24
+    },
+    {
+     "antibody_chain": "C",
+     "antigen_chain": "A",
+     "n_residues": 24
+    }
+   ],
+   "file": "pocket.C7.json"
+  },
+  {
+   "id": "C6",
+   "judge_rank": 7,
+   "name": "A nonglycosylated lateral ridge spanning the C-terminal edge of D3...",
+   "confidence": 0.1,
+   "mapping_basis": "side",
+   "n_residues": 18,
+   "chain_pairs": [
+    {
+     "antibody_chain": "B",
+     "antigen_chain": "A",
+     "n_residues": 18
+    },
+    {
+     "antibody_chain": "C",
+     "antigen_chain": "A",
+     "n_residues": 18
+    }
+   ],
+   "file": "pocket.C6.json"
+  }
+ ]
+}

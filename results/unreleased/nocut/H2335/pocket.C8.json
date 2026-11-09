@@ -1,0 +1,305 @@
+{
+ "task": "gather",
+ "gather_mode": "batched",
+ "num_launchers": 3,
+ "policy": {
+  "evidence_cutoff": null,
+  "no_cutoff": true,
+  "gated": false,
+  "web_search": true,
+  "shell_network": true,
+  "gate_tools": []
+ },
+ "unscored": true,
+ "target": "H2335",
+ "target_set": "casp17",
+ "case": "case_d48c74",
+ "evidence_cutoff": null,
+ "target_release_date": "2026-05-27",
+ "retrieval_policy": "no-cutoff",
+ "input_structure": "data/staged_casp17_no_native/H2335.pdb",
+ "input_structure_sha256": "f216450f2774ea363d9dfeeb1e478d506d906f539f384bf370d4b65ff32c11bb",
+ "briefing_source": "data/briefing/casp17_nocutoff/H2335/search_results.json",
+ "briefing_sha256": "4c6eb598fb307223a9315af31439ba34c45b16345678bd0c3aeed39bcafa9e64",
+ "antigen_chains": [
+  "A",
+  "B",
+  "C"
+ ],
+ "antibody_files": {
+  "antibody.pdb": [
+   "D",
+   "E"
+  ]
+ },
+ "antibody_chain_types": {
+  "antibody.pdb": {
+   "D": "light",
+   "E": "heavy"
+  }
+ },
+ "stage": "gatherer",
+ "pocket": {
+  "id": "C8",
+  "judge_rank": 6,
+  "name": "The membrane-distal gH-gL composite seam: an exposed rim around gH...",
+  "confidence": 0.1,
+  "p_rests_on_holds": 0.16,
+  "why_this_rank": "Solved E3K/CS4 precedent validates the seam, but assembly burial, sequons, and near-limit geometry weaken transfer.",
+  "rests_on": "Native glycans permit an E3K-like query approach.",
+  "where_the_mass_goes_if_it_fails": "C1 and C3",
+  "what_it_is": "The membrane-distal gH-gL composite seam: an exposed rim around gH B:31-B:44 and gL C:22-C:31 surrounding the buried inter-subunit core.",
+  "why_one_candidate": "not pooled with anything: no other patch is both within 12 A (half centroid distance, half contact-graph hops) and coverable by one paratope of this antibody's reach, 17.4 A",
+  "from_patches": [
+   "P8"
+  ]
+ },
+ "note": "`confidence` on the pocket is over pockets and sums to about 1 across them. Inside an interface it is per residue in [0, 1] and sums to nothing. No residue is cut at a threshold: the whole vector is the answer.",
+ "mapping_basis": "side",
+ "checks": {
+  "unrecognised_sides": []
+ },
+ "chain_pairs": [
+  {
+   "antibody_chain": "D",
+   "antigen_chain": "B",
+   "n_residues": 7
+  },
+  {
+   "antibody_chain": "D",
+   "antigen_chain": "C",
+   "n_residues": 6
+  },
+  {
+   "antibody_chain": "E",
+   "antigen_chain": "B",
+   "n_residues": 3
+  },
+  {
+   "antibody_chain": "E",
+   "antigen_chain": "C",
+   "n_residues": 4
+  }
+ ],
+ "antibodies": [
+  {
+   "antibody": "antibody.pdb",
+   "chains": {
+    "D": "light",
+    "E": "heavy"
+   },
+   "binding_mode": null,
+   "n_residues_scored": 14,
+   "interfaces": [
+    {
+     "antibody_chain": "D",
+     "antibody_chain_type": "light",
+     "antigen_chain": "B",
+     "n_residues": 7,
+     "residue_confidence": {
+      "35": 0.38,
+      "38": 0.84,
+      "39": 0.2,
+      "41": 0.5,
+      "42": 0.86,
+      "43": 0.82,
+      "44": 0.18
+     },
+     "residue_side": {
+      "35": "both",
+      "38": "both",
+      "39": "light",
+      "41": "light",
+      "42": "light",
+      "43": "light",
+      "44": "light"
+     },
+     "max_confidence": 0.86,
+     "mean_confidence": 0.54
+    },
+    {
+     "antibody_chain": "D",
+     "antibody_chain_type": "light",
+     "antigen_chain": "C",
+     "n_residues": 6,
+     "residue_confidence": {
+      "22": 0.72,
+      "23": 0.4,
+      "26": 0.92,
+      "27": 0.82,
+      "28": 0.52,
+      "31": 0.68
+     },
+     "residue_side": {
+      "22": "light",
+      "23": "light",
+      "26": "both",
+      "27": "both",
+      "28": "both",
+      "31": "both"
+     },
+     "max_confidence": 0.92,
+     "mean_confidence": 0.6767
+    },
+    {
+     "antibody_chain": "E",
+     "antibody_chain_type": "heavy",
+     "antigen_chain": "B",
+     "n_residues": 3,
+     "residue_confidence": {
+      "31": 0.72,
+      "35": 0.38,
+      "38": 0.84
+     },
+     "residue_side": {
+      "31": "heavy",
+      "35": "both",
+      "38": "both"
+     },
+     "max_confidence": 0.84,
+     "mean_confidence": 0.6467
+    },
+    {
+     "antibody_chain": "E",
+     "antibody_chain_type": "heavy",
+     "antigen_chain": "C",
+     "n_residues": 4,
+     "residue_confidence": {
+      "26": 0.92,
+      "27": 0.82,
+      "28": 0.52,
+      "31": 0.68
+     },
+     "residue_side": {
+      "26": "both",
+      "27": "both",
+      "28": "both",
+      "31": "both"
+     },
+     "max_confidence": 0.92,
+     "mean_confidence": 0.735
+    }
+   ]
+  }
+ ],
+ "paratope": {
+  "dominant_cdrs": [
+   "E:H3",
+   "E:H2",
+   "D:L1",
+   "D:L3"
+  ],
+  "paratope_residues": [
+   "E:31",
+   "E:32",
+   "E:33",
+   "E:53",
+   "E:54",
+   "E:57",
+   "E:58",
+   "E:98",
+   "E:100",
+   "E:101",
+   "E:102",
+   "E:103",
+   "E:104",
+   "E:105",
+   "E:106",
+   "E:107",
+   "D:27",
+   "D:28",
+   "D:30",
+   "D:32",
+   "D:92",
+   "D:94"
+  ],
+  "heavy_light_split": "About 70:30 heavy:light. H3 occupies the inter-chain groove; L1/L3 cover the B:39-B:44/C:22-C:31 rim; both converge at B:38/C:26-C:31.",
+  "binding_mode_union": "straddling"
+ },
+ "residues": [
+  "B:31",
+  "B:35",
+  "B:38",
+  "B:39",
+  "B:41",
+  "B:42",
+  "B:43",
+  "B:44",
+  "C:22",
+  "C:23",
+  "C:26",
+  "C:27",
+  "C:28",
+  "C:31"
+ ],
+ "n_residues": 14,
+ "patches": [
+  {
+   "id": "P8",
+   "name": "distal gH-gL composite seam (CS4-like apex)",
+   "n_residues": 21,
+   "residues": [
+    "B:31",
+    "B:33",
+    "B:35",
+    "B:36",
+    "B:37",
+    "B:38",
+    "B:39",
+    "B:41",
+    "B:42",
+    "B:43",
+    "B:44",
+    "C:22",
+    "C:23",
+    "C:24",
+    "C:25",
+    "C:26",
+    "C:27",
+    "C:28",
+    "C:29",
+    "C:30",
+    "C:31"
+   ],
+   "n_kept_by_advocate": 14,
+   "n_dropped_by_advocate": 7
+  }
+ ],
+ "pooling_provenance": {
+  "n_shared_at_pooling": 21,
+  "n_disputed_at_pooling": 0,
+  "note": "counts only, describing how the organizer grouped the phase-1 patches. The organizer's own candidate residue list is deliberately absent: the answer is the advocate's footprint, in `residues` and in `antibodies[].interfaces[]`."
+ },
+ "evidence": {
+  "advocate": {
+   "n_findings": 4,
+   "n_supports": 3,
+   "n_weakens": 1,
+   "weakest_point": "Much of the original seam is buried, leaving a narrow exposed rim, and two gH sequons may occlude it. The homolog Fab does not prove the query can use the same approach.",
+   "note": "the advocate reports claim/source/date/bearing and is not asked whether a source is about this binder"
+  },
+  "judge": {
+   "tier_a_support": 0,
+   "n_support_lines": 3,
+   "verdict": "live",
+   "note": "Tier A -- a source about this binder itself -- is the judge's adjudication, in assessment[].support[]. It exists nowhere in the advocate's own answer."
+  }
+ },
+ "provenance": {
+  "unverified_source_policy_fields": [
+   "gated",
+   "web_search",
+   "shell_network",
+   "gate_tools"
+  ],
+  "assembled_case_dir": "gpt-5.6-high/gather_refine/post_refactor/unreleased_20261029/nocut/casp17/H2335/case_d48c74_G_rep1",
+  "organize_case_dir": "gpt-5.6-high/gather_refine/post_refactor/unreleased_20261029/nocut/casp17/H2335/case_d48c74_GR_rep1",
+  "organize_status": "ok",
+  "judge_case_dir": "gpt-5.6-high/gather_refine/post_refactor/unreleased_20261029/nocut/casp17/H2335/case_d48c74_GJ_rep1",
+  "judge_status": "ok",
+  "packet": "gpt-5.6-high/nocut/gather/packets/case_d48c74/packet",
+  "manifest": "gpt-5.6-high/nocut/gather/packets/case_d48c74/manifest.json",
+  "advocate_case_dir": "gpt-5.6-high/gather_refine/post_refactor/unreleased_20261029/nocut/casp17/H2335/case_d48c74_GR_rep1",
+  "advocate_status": "ok"
+ }
+}

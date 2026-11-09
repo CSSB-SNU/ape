@@ -1,0 +1,333 @@
+{
+ "target": "H2362",
+ "target_set": "casp17",
+ "case": "case_259152",
+ "task": "gather",
+ "gather_mode": "batched",
+ "num_launchers": 3,
+ "policy": {
+  "evidence_cutoff": "2026-06-12",
+  "no_cutoff": false,
+  "gated": true,
+  "web_search": false,
+  "shell_network": true,
+  "gate_tools": [
+   "research",
+   "fetch",
+   "rcsb",
+   "patent",
+   "paper"
+  ]
+ },
+ "unscored": true,
+ "evidence_cutoff": "2026-06-12",
+ "target_release_date": "2026-06-12",
+ "retrieval_policy": "gated",
+ "antigen_chains": [
+  "A",
+  "B",
+  "C",
+  "D",
+  "E"
+ ],
+ "antibody_files": {
+  "antibody.pdb": [
+   "F",
+   "G"
+  ]
+ },
+ "antibody_chain_types": {
+  "antibody.pdb": {
+   "F": "light",
+   "G": "heavy"
+  }
+ },
+ "input_structure": "data/staged_casp17_no_native/H2362.pdb",
+ "input_structure_sha256": "54e187b986e4696f87e1dd7dd4cd6cd943754471a337aa57a0577c6172827a73",
+ "briefing_source": "data/briefing/casp17/H2362/search_results.json",
+ "briefing_sha256": "b0140a751ca600dc0d1ce7f02d3095b3776329fd300b1010c950088508d8f896",
+ "recognized_complex": {
+  "organize": null,
+  "judge": false
+ },
+ "recognition_note": "The antigen was identified from cutoff-filtered records as the HCMV gH/gL/UL128/UL130/UL131A pentamer. The paired F/G Fab was not identified: exact heavy- and light-chain hits belonged to different unrelated antibodies, and pre-cutoff HCMV-pentamer Fab sequences did not match the pair. No published epitope for this binder was found.",
+ "what_separated_them": "No candidate had Tier A evidence about this binder, so the distribution remains broad. Weak separation came from calculations applied uniformly to all fixed footprints: coverability, assembly exposure and burial, glycan sequons, and exposed-SASA-weighted chemistry against this Fab. C5 led on compact positive/polar complementarity; C3 and C6 combined favorable chemistry with independent HCMV antibody and functional precedent. Over-wide C1/C8 footprints and membrane/charge concerns for C9 moved them down. Published maps of other antibodies were treated only as Tier B precedent.",
+ "not_pooled": [],
+ "provenance": {
+  "unverified_source_policy_fields": [
+   "gated",
+   "web_search",
+   "shell_network",
+   "gate_tools"
+  ],
+  "assembled_case_dir": "gpt-5.6-high/gather_refine/post_refactor/unreleased_20261029/gated/casp17/H2362/case_259152_G_rep1",
+  "organize_case_dir": "gpt-5.6-high/gather_refine/post_refactor/unreleased_20261029/gated/casp17/H2362/case_259152_GR_rep1",
+  "organize_status": "ok",
+  "judge_case_dir": "gpt-5.6-high/gather_refine/post_refactor/unreleased_20261029/gated/casp17/H2362/case_259152_GJ_rep1",
+  "judge_status": "ok",
+  "packet": "gpt-5.6-high/gather/packets/case_259152/packet",
+  "manifest": "gpt-5.6-high/gather/packets/case_259152/manifest.json"
+ },
+ "pockets": [
+  {
+   "id": "C5",
+   "judge_rank": 1,
+   "name": "A compact exposed apex jointly formed by UL130 and the C-terminal...",
+   "confidence": 0.17,
+   "mapping_basis": "side",
+   "n_residues": 19,
+   "chain_pairs": [
+    {
+     "antibody_chain": "F",
+     "antigen_chain": "C",
+     "n_residues": 3
+    },
+    {
+     "antibody_chain": "F",
+     "antigen_chain": "D",
+     "n_residues": 12
+    },
+    {
+     "antibody_chain": "G",
+     "antigen_chain": "C",
+     "n_residues": 7
+    },
+    {
+     "antibody_chain": "G",
+     "antigen_chain": "D",
+     "n_residues": 5
+    }
+   ],
+   "file": "pocket.C5.json"
+  },
+  {
+   "id": "C3",
+   "judge_rank": 2,
+   "name": "The broad membrane-distal UL128/UL131A ridge, including the...",
+   "confidence": 0.15,
+   "mapping_basis": "side",
+   "n_residues": 23,
+   "chain_pairs": [
+    {
+     "antibody_chain": "F",
+     "antigen_chain": "B",
+     "n_residues": 7
+    },
+    {
+     "antibody_chain": "F",
+     "antigen_chain": "D",
+     "n_residues": 12
+    },
+    {
+     "antibody_chain": "G",
+     "antigen_chain": "B",
+     "n_residues": 11
+    },
+    {
+     "antibody_chain": "G",
+     "antigen_chain": "D",
+     "n_residues": 2
+    }
+   ],
+   "file": "pocket.C3.json"
+  },
+  {
+   "id": "C6",
+   "judge_rank": 3,
+   "name": "The folded membrane-distal receptor/antigenic face of UL128, where...",
+   "confidence": 0.14,
+   "mapping_basis": "side",
+   "n_residues": 17,
+   "chain_pairs": [
+    {
+     "antibody_chain": "F",
+     "antigen_chain": "B",
+     "n_residues": 12
+    },
+    {
+     "antibody_chain": "G",
+     "antigen_chain": "B",
+     "n_residues": 12
+    }
+   ],
+   "file": "pocket.C6.json"
+  },
+  {
+   "id": "C2",
+   "judge_rank": 4,
+   "name": "The compact membrane-distal tip of the single UL128 chemokine-like...",
+   "confidence": 0.12,
+   "mapping_basis": "side",
+   "n_residues": 19,
+   "chain_pairs": [
+    {
+     "antibody_chain": "F",
+     "antigen_chain": "B",
+     "n_residues": 12
+    },
+    {
+     "antibody_chain": "G",
+     "antigen_chain": "B",
+     "n_residues": 13
+    }
+   ],
+   "file": "pocket.C2.json"
+  },
+  {
+   "id": "C10",
+   "judge_rank": 5,
+   "name": "An exposed sequence-discontinuous interdomain groove on gH, formed by...",
+   "confidence": 0.1,
+   "mapping_basis": "side",
+   "n_residues": 19,
+   "chain_pairs": [
+    {
+     "antibody_chain": "F",
+     "antigen_chain": "E",
+     "n_residues": 13
+    },
+    {
+     "antibody_chain": "G",
+     "antigen_chain": "E",
+     "n_residues": 12
+    }
+   ],
+   "file": "pocket.C10.json"
+  },
+  {
+   "id": "C4",
+   "judge_rank": 6,
+   "name": "The N-terminal outer face of the UL130 chemokine-like domain...",
+   "confidence": 0.08,
+   "mapping_basis": "side",
+   "n_residues": 18,
+   "chain_pairs": [
+    {
+     "antibody_chain": "F",
+     "antigen_chain": "C",
+     "n_residues": 13
+    },
+    {
+     "antibody_chain": "G",
+     "antigen_chain": "C",
+     "n_residues": 10
+    }
+   ],
+   "file": "pocket.C4.json"
+  },
+  {
+   "id": "C8",
+   "judge_rank": 7,
+   "name": "The broad concave lateral face jointly formed by the N- and...",
+   "confidence": 0.08,
+   "mapping_basis": "side",
+   "n_residues": 17,
+   "chain_pairs": [
+    {
+     "antibody_chain": "F",
+     "antigen_chain": "B",
+     "n_residues": 3
+    },
+    {
+     "antibody_chain": "F",
+     "antigen_chain": "C",
+     "n_residues": 8
+    },
+    {
+     "antibody_chain": "G",
+     "antigen_chain": "B",
+     "n_residues": 7
+    },
+    {
+     "antibody_chain": "G",
+     "antigen_chain": "C",
+     "n_residues": 4
+    }
+   ],
+   "file": "pocket.C8.json"
+  },
+  {
+   "id": "C7",
+   "judge_rank": 8,
+   "name": "The exposed base where the lateral/C-terminal face of UL128 rests...",
+   "confidence": 0.07,
+   "mapping_basis": "side",
+   "n_residues": 22,
+   "chain_pairs": [
+    {
+     "antibody_chain": "F",
+     "antigen_chain": "A",
+     "n_residues": 6
+    },
+    {
+     "antibody_chain": "F",
+     "antigen_chain": "B",
+     "n_residues": 3
+    },
+    {
+     "antibody_chain": "G",
+     "antigen_chain": "A",
+     "n_residues": 1
+    },
+    {
+     "antibody_chain": "G",
+     "antigen_chain": "B",
+     "n_residues": 16
+    }
+   ],
+   "file": "pocket.C7.json"
+  },
+  {
+   "id": "C1",
+   "judge_rank": 9,
+   "name": "The membrane-distal, receptor-proximal quaternary apex where UL128...",
+   "confidence": 0.06,
+   "mapping_basis": "side",
+   "n_residues": 17,
+   "chain_pairs": [
+    {
+     "antibody_chain": "F",
+     "antigen_chain": "B",
+     "n_residues": 4
+    },
+    {
+     "antibody_chain": "F",
+     "antigen_chain": "D",
+     "n_residues": 9
+    },
+    {
+     "antibody_chain": "G",
+     "antigen_chain": "B",
+     "n_residues": 7
+    },
+    {
+     "antibody_chain": "G",
+     "antigen_chain": "D",
+     "n_residues": 2
+    }
+   ],
+   "file": "pocket.C1.json"
+  },
+  {
+   "id": "C9",
+   "judge_rank": 10,
+   "name": "The membrane-proximal C-terminal heel of gH, including...",
+   "confidence": 0.03,
+   "mapping_basis": "side",
+   "n_residues": 19,
+   "chain_pairs": [
+    {
+     "antibody_chain": "F",
+     "antigen_chain": "E",
+     "n_residues": 14
+    },
+    {
+     "antibody_chain": "G",
+     "antigen_chain": "E",
+     "n_residues": 10
+    }
+   ],
+   "file": "pocket.C9.json"
+  }
+ ]
+}

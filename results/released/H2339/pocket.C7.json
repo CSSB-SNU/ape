@@ -1,0 +1,337 @@
+{
+ "task": "gather",
+ "gather_mode": "batched",
+ "num_launchers": 3,
+ "policy": {
+  "evidence_cutoff": "2026-05-15",
+  "no_cutoff": false,
+  "gated": true,
+  "web_search": false,
+  "shell_network": true,
+  "gate_tools": [
+   "research",
+   "fetch",
+   "rcsb",
+   "patent",
+   "paper"
+  ]
+ },
+ "unscored": false,
+ "target": "H2339",
+ "target_set": "casp17",
+ "case": "case_5886c7",
+ "evidence_cutoff": "2026-05-15",
+ "target_release_date": "2026-05-15",
+ "retrieval_policy": "gated",
+ "input_structure": "structures/H2339.pdb",
+ "input_structure_sha256": null,
+ "briefing_source": null,
+ "briefing_sha256": null,
+ "antigen_chains": [
+  "C",
+  "D"
+ ],
+ "antibody_files": {
+  "antibody.pdb": [
+   "A",
+   "B"
+  ]
+ },
+ "antibody_chain_types": {
+  "antibody.pdb": {
+   "A": "unknown",
+   "B": "unknown"
+  }
+ },
+ "truth_file": "data/truth/casp17/H2339.epitope.json",
+ "stage": "gatherer",
+ "pocket": {
+  "id": "C7",
+  "judge_rank": 2,
+  "name": "The allosteric 37/60/140-loop face of the trypsin-like catalytic...",
+  "confidence": 0.25,
+  "p_rests_on_holds": 0.32,
+  "why_this_rank": "A solved antibody complex proves this exact antigen face is bindable and the measured chemistry strongly fits REGN7508, but the precedent antibody is activation-specific and the entire claimed surface is conserved in nonbinding rabbit FXI.",
+  "rests_on": "REGN7508 can share the osocimab loop-network face despite different state specificity and the rabbit conservation clash.",
+  "where_the_mass_goes_if_it_fails": "C4 takes most of the weight, with some to C5.",
+  "what_it_is": "The allosteric 37/60/140-loop face of the trypsin-like catalytic domain, joining the Gln-centred 60-loop pocket to an exposed basic 140-loop ridge.",
+  "why_one_candidate": "not pooled with anything: no other patch is both within 12 A (half centroid distance, half contact-graph hops) and coverable by one paratope of this antibody's reach, 17.2 A",
+  "from_patches": [
+   "P7"
+  ]
+ },
+ "note": "`confidence` on the pocket is over pockets and sums to about 1 across them. Inside an interface it is per residue in [0, 1] and sums to nothing. No residue is cut at a threshold: the whole vector is the answer.",
+ "mapping_basis": "side",
+ "checks": {
+  "unrecognised_sides": []
+ },
+ "chain_pairs": [
+  {
+   "antibody_chain": "A",
+   "antigen_chain": "D",
+   "n_residues": 19
+  },
+  {
+   "antibody_chain": "B",
+   "antigen_chain": "D",
+   "n_residues": 19
+  }
+ ],
+ "antibodies": [
+  {
+   "antibody": "antibody.pdb",
+   "chains": {
+    "A": "unknown",
+    "B": "unknown"
+   },
+   "binding_mode": null,
+   "n_residues_scored": 19,
+   "interfaces": [
+    {
+     "antibody_chain": "A",
+     "antibody_chain_type": "unknown",
+     "antigen_chain": "D",
+     "n_residues": 19,
+     "residue_confidence": {
+      "23": 0.74,
+      "24": 0.82,
+      "25": 0.86,
+      "26": 0.82,
+      "27": 0.15,
+      "63": 0.38,
+      "64": 0.9,
+      "65": 0.94,
+      "67": 0.48,
+      "68": 0.86,
+      "135": 0.82,
+      "136": 0.85,
+      "137": 0.94,
+      "138": 0.95,
+      "139": 0.73,
+      "140": 0.9,
+      "141": 0.75,
+      "142": 0.42,
+      "143": 0.78
+     },
+     "residue_side": {
+      "23": "light",
+      "24": "light",
+      "25": "light",
+      "26": "both",
+      "27": "light",
+      "63": "heavy",
+      "64": "heavy",
+      "65": "both",
+      "67": "heavy",
+      "68": "both",
+      "135": "light",
+      "136": "light",
+      "137": "both",
+      "138": "both",
+      "139": "heavy",
+      "140": "heavy",
+      "141": "heavy",
+      "142": "both",
+      "143": "both"
+     },
+     "max_confidence": 0.95,
+     "mean_confidence": 0.7416,
+     "precision_vs_truth": 0.0,
+     "n_in_truth": 0
+    },
+    {
+     "antibody_chain": "B",
+     "antibody_chain_type": "unknown",
+     "antigen_chain": "D",
+     "n_residues": 19,
+     "residue_confidence": {
+      "23": 0.74,
+      "24": 0.82,
+      "25": 0.86,
+      "26": 0.82,
+      "27": 0.15,
+      "63": 0.38,
+      "64": 0.9,
+      "65": 0.94,
+      "67": 0.48,
+      "68": 0.86,
+      "135": 0.82,
+      "136": 0.85,
+      "137": 0.94,
+      "138": 0.95,
+      "139": 0.73,
+      "140": 0.9,
+      "141": 0.75,
+      "142": 0.42,
+      "143": 0.78
+     },
+     "residue_side": {
+      "23": "light",
+      "24": "light",
+      "25": "light",
+      "26": "both",
+      "27": "light",
+      "63": "heavy",
+      "64": "heavy",
+      "65": "both",
+      "67": "heavy",
+      "68": "both",
+      "135": "light",
+      "136": "light",
+      "137": "both",
+      "138": "both",
+      "139": "heavy",
+      "140": "heavy",
+      "141": "heavy",
+      "142": "both",
+      "143": "both"
+     },
+     "max_confidence": 0.95,
+     "mean_confidence": 0.7416,
+     "precision_vs_truth": 0.0,
+     "n_in_truth": 0
+    }
+   ]
+  }
+ ],
+ "paratope": {
+  "dominant_cdrs": [
+   "H3",
+   "H2",
+   "L3"
+  ],
+  "paratope_residues": [
+   "A:27",
+   "A:28",
+   "A:30",
+   "A:31",
+   "A:32",
+   "A:53",
+   "A:54",
+   "A:56",
+   "A:57",
+   "A:58",
+   "A:99",
+   "A:100",
+   "A:101",
+   "A:102",
+   "A:103",
+   "A:106",
+   "A:107",
+   "B:27",
+   "B:28",
+   "B:30",
+   "B:31",
+   "B:32",
+   "B:50",
+   "B:52",
+   "B:91",
+   "B:92",
+   "B:93",
+   "B:94",
+   "B:95",
+   "B:96",
+   "B:97"
+  ],
+  "heavy_light_split": "Heavy supplies about 65%, placing H3/H2 over D:63-D:68 and D:139-D:143. Light supplies about 35% over D:23-D:27 and D:135-D:136. Both chains converge at D:26/D:65/D:68 and D:137-D:138/D:142-D:143.",
+  "binding_mode_union": "single-chain"
+ },
+ "residues": [
+  "D:135",
+  "D:136",
+  "D:137",
+  "D:138",
+  "D:139",
+  "D:140",
+  "D:141",
+  "D:142",
+  "D:143",
+  "D:23",
+  "D:24",
+  "D:25",
+  "D:26",
+  "D:27",
+  "D:63",
+  "D:64",
+  "D:65",
+  "D:67",
+  "D:68"
+ ],
+ "n_residues": 19,
+ "patches": [
+  {
+   "id": "P7",
+   "name": "Allosteric 37/60/140-loop face (BAY1213790-like topology)",
+   "n_residues": 20,
+   "residues": [
+    "D:135",
+    "D:136",
+    "D:137",
+    "D:138",
+    "D:139",
+    "D:140",
+    "D:141",
+    "D:142",
+    "D:143",
+    "D:19",
+    "D:23",
+    "D:24",
+    "D:25",
+    "D:26",
+    "D:27",
+    "D:63",
+    "D:64",
+    "D:65",
+    "D:67",
+    "D:68"
+   ],
+   "n_kept_by_advocate": 19,
+   "n_dropped_by_advocate": 1
+  }
+ ],
+ "pooling_provenance": {
+  "n_shared_at_pooling": 20,
+  "n_disputed_at_pooling": 0,
+  "note": "counts only, describing how the organizer grouped the phase-1 patches. The organizer's own candidate residue list is deliberately absent: the answer is the advocate's footprint, in `residues` and in `antibodies[].interfaces[]`."
+ },
+ "evidence": {
+  "advocate": {
+   "n_findings": 4,
+   "n_supports": 3,
+   "n_weakens": 1,
+   "weakest_point": "The residue map belongs to a different, activation-specific antibody with a different CDR set; REGN7508 binds both zymogen and enzyme, so the same Gln-centred conformational epitope may not exist in both states.",
+   "note": "the advocate reports claim/source/date/bearing and is not asked whether a source is about this binder"
+  },
+  "judge": {
+   "tier_a_support": 2,
+   "n_support_lines": 5,
+   "verdict": "live",
+   "note": "Tier A -- a source about this binder itself -- is the judge's adjudication, in assessment[].support[]. It exists nowhere in the advocate's own answer."
+  }
+ },
+ "provenance": {
+  "unverified_source_policy_fields": [
+   "gated",
+   "web_search",
+   "shell_network",
+   "gate_tools"
+  ],
+  "assembled_case_dir": "gpt-5.6-high/gather_refine/post_refactor/released_structure_20261030/casp17/H2339/case_5886c7_G_rep3",
+  "organize_case_dir": "gpt-5.6-high/gather_refine/post_refactor/released_structure_20261030/casp17/H2339/case_5886c7_GR_rep1",
+  "organize_status": "ok",
+  "judge_case_dir": "gpt-5.6-high/gather_refine/post_refactor/released_structure_20261030/casp17/H2339/case_5886c7_GJ_rep3",
+  "judge_status": "ok",
+  "packet": "gpt-5.6-high/gather/packets/case_5886c7/packet",
+  "manifest": "gpt-5.6-high/gather/packets/case_5886c7/manifest.json",
+  "advocate_case_dir": "gpt-5.6-high/gather_refine/post_refactor/released_structure_20261030/casp17/H2339/case_5886c7_GR_rep1",
+  "advocate_status": "ok"
+ },
+ "score": {
+  "precision": 0.0,
+  "recall": 0.0,
+  "f1": 0.0,
+  "n_pred": 19,
+  "n_true": 22,
+  "n_hit": 0
+ }
+}

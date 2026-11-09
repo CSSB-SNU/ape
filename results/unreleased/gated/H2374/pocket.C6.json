@@ -1,0 +1,267 @@
+{
+ "task": "gather",
+ "gather_mode": "batched",
+ "num_launchers": 3,
+ "policy": {
+  "evidence_cutoff": "2026-06-22",
+  "no_cutoff": false,
+  "gated": true,
+  "web_search": false,
+  "shell_network": true,
+  "gate_tools": [
+   "research",
+   "fetch",
+   "rcsb",
+   "patent",
+   "paper"
+  ]
+ },
+ "unscored": true,
+ "target": "H2374",
+ "target_set": "casp17",
+ "case": "case_6a7664",
+ "evidence_cutoff": "2026-06-22",
+ "target_release_date": "2026-06-22",
+ "retrieval_policy": "gated",
+ "input_structure": "data/staged_casp17_no_native/H2374.pdb",
+ "input_structure_sha256": "cce06a976275bf0894b0dae47679691f93a74bbcd1b28cd9b17fe6bfe49200de",
+ "briefing_source": "data/briefing/casp17/H2374/search_results.json",
+ "briefing_sha256": "6da47e89d19b7042483ab1c9442ed32a899f59c40f45416b4c36e0ae0c6c84d7",
+ "antigen_chains": [
+  "C"
+ ],
+ "antibody_files": {
+  "antibody.pdb": [
+   "A",
+   "B"
+  ]
+ },
+ "antibody_chain_types": {
+  "antibody.pdb": {
+   "A": "heavy",
+   "B": "light"
+  }
+ },
+ "stage": "gatherer",
+ "pocket": {
+  "id": "C6",
+  "judge_rank": 2,
+  "name": "The compact hydrophobic/polar hotspot within the conserved...",
+  "confidence": 0.17,
+  "p_rests_on_holds": 0.34,
+  "why_this_rank": "It captures the same favored receptor hotspot in a compact boundary, but it has more buried positions and a connectivity defect; its evidence is not independent of C4.",
+  "rests_on": "The true HAB13 footprint is the compact hotspot rather than the better-connected C4 boundary.",
+  "where_the_mass_goes_if_it_fails": "C4, because C6 is nested within it.",
+  "what_it_is": "The compact hydrophobic/polar hotspot within the conserved receptor-binding face, centred on the Pro221-Arg222-Phe223-Ile224 ridge and its Y38/D139/D215 rim.",
+  "why_one_candidate": "not pooled with anything: no other patch is both within 12 A (half centroid distance, half contact-graph hops) and coverable by one paratope of this antibody's reach, 17.3 A",
+  "from_patches": [
+   "P7"
+  ]
+ },
+ "note": "`confidence` on the pocket is over pockets and sums to about 1 across them. Inside an interface it is per residue in [0, 1] and sums to nothing. No residue is cut at a threshold: the whole vector is the answer.",
+ "mapping_basis": "side",
+ "checks": {
+  "unrecognised_sides": []
+ },
+ "chain_pairs": [
+  {
+   "antibody_chain": "A",
+   "antigen_chain": "C",
+   "n_residues": 9
+  },
+  {
+   "antibody_chain": "B",
+   "antigen_chain": "C",
+   "n_residues": 9
+  }
+ ],
+ "antibodies": [
+  {
+   "antibody": "antibody.pdb",
+   "chains": {
+    "A": "heavy",
+    "B": "light"
+   },
+   "binding_mode": null,
+   "n_residues_scored": 13,
+   "interfaces": [
+    {
+     "antibody_chain": "A",
+     "antibody_chain_type": "heavy",
+     "antigen_chain": "C",
+     "n_residues": 9,
+     "residue_confidence": {
+      "38": 0.88,
+      "215": 0.89,
+      "220": 0.76,
+      "221": 0.9,
+      "222": 0.98,
+      "223": 0.97,
+      "226": 0.58,
+      "235": 0.5,
+      "238": 0.54
+     },
+     "residue_side": {
+      "38": "both",
+      "215": "both",
+      "220": "both",
+      "221": "heavy",
+      "222": "both",
+      "223": "both",
+      "226": "heavy",
+      "235": "heavy",
+      "238": "heavy"
+     },
+     "max_confidence": 0.98,
+     "mean_confidence": 0.7778
+    },
+    {
+     "antibody_chain": "B",
+     "antibody_chain_type": "light",
+     "antigen_chain": "C",
+     "n_residues": 9,
+     "residue_confidence": {
+      "27": 0.45,
+      "38": 0.88,
+      "39": 0.68,
+      "139": 0.68,
+      "140": 0.66,
+      "215": 0.89,
+      "220": 0.76,
+      "222": 0.98,
+      "223": 0.97
+     },
+     "residue_side": {
+      "27": "light",
+      "38": "both",
+      "39": "light",
+      "139": "light",
+      "140": "light",
+      "215": "both",
+      "220": "both",
+      "222": "both",
+      "223": "both"
+     },
+     "max_confidence": 0.98,
+     "mean_confidence": 0.7722
+    }
+   ]
+  }
+ ],
+ "paratope": {
+  "dominant_cdrs": [
+   "A:H3",
+   "A:H2",
+   "B:L1"
+  ],
+  "paratope_residues": [
+   "A:30",
+   "A:32",
+   "A:33",
+   "A:35",
+   "A:54",
+   "A:55",
+   "A:56",
+   "A:58",
+   "A:103",
+   "A:104",
+   "A:105",
+   "A:106",
+   "A:107",
+   "A:109",
+   "A:110",
+   "A:114",
+   "A:115",
+   "B:27",
+   "B:28",
+   "B:31",
+   "B:32",
+   "B:33",
+   "B:35",
+   "B:36",
+   "B:58",
+   "B:98",
+   "B:102"
+  ],
+  "heavy_light_split": "H3/H2 dominate C:220-C:238; L1 covers C:38/C:39/C:139/C:140. C:38/C:215/C:220/C:222/C:223 lie at the seam, producing a deliberately heavy-biased rather than even interface.",
+  "binding_mode_union": "single-chain"
+ },
+ "residues": [
+  "C:139",
+  "C:140",
+  "C:215",
+  "C:220",
+  "C:221",
+  "C:222",
+  "C:223",
+  "C:226",
+  "C:235",
+  "C:238",
+  "C:27",
+  "C:38",
+  "C:39"
+ ],
+ "n_residues": 13,
+ "patches": [
+  {
+   "id": "P7",
+   "name": "Receptor-overlap hydrophobic/polar hotspot",
+   "n_residues": 14,
+   "residues": [
+    "C:132",
+    "C:139",
+    "C:140",
+    "C:215",
+    "C:221",
+    "C:222",
+    "C:223",
+    "C:224",
+    "C:227",
+    "C:231",
+    "C:235",
+    "C:238",
+    "C:27",
+    "C:38"
+   ],
+   "n_kept_by_advocate": 10,
+   "n_dropped_by_advocate": 4
+  }
+ ],
+ "pooling_provenance": {
+  "n_shared_at_pooling": 14,
+  "n_disputed_at_pooling": 0,
+  "note": "counts only, describing how the organizer grouped the phase-1 patches. The organizer's own candidate residue list is deliberately absent: the answer is the advocate's footprint, in `residues` and in `antibodies[].interfaces[]`."
+ },
+ "evidence": {
+  "advocate": {
+   "n_findings": 5,
+   "n_supports": 3,
+   "n_weakens": 0,
+   "weakest_point": "Several historically named receptor-face residues are buried in the supplied conformation and the approach orientation is unconstrained; the compact hotspot is biologically compelling but not HAB13-specific evidence.",
+   "note": "the advocate reports claim/source/date/bearing and is not asked whether a source is about this binder"
+  },
+  "judge": {
+   "tier_a_support": 1,
+   "n_support_lines": 3,
+   "verdict": "live",
+   "note": "Tier A -- a source about this binder itself -- is the judge's adjudication, in assessment[].support[]. It exists nowhere in the advocate's own answer."
+  }
+ },
+ "provenance": {
+  "unverified_source_policy_fields": [
+   "gated",
+   "web_search",
+   "shell_network",
+   "gate_tools"
+  ],
+  "assembled_case_dir": "gpt-5.6-high/gather_refine/post_refactor/unreleased_20261029/gated/casp17/H2374/case_6a7664_G_rep5",
+  "organize_case_dir": "gpt-5.6-high/gather_refine/post_refactor/unreleased_20261029/gated/casp17/H2374/case_6a7664_GR_rep5",
+  "organize_status": "ok",
+  "judge_case_dir": "gpt-5.6-high/gather_refine/post_refactor/unreleased_20261029/gated/casp17/H2374/case_6a7664_GJ_rep5",
+  "judge_status": "ok",
+  "packet": "gpt-5.6-high/gather/packets/case_6a7664/packet",
+  "manifest": "gpt-5.6-high/gather/packets/case_6a7664/manifest.json",
+  "advocate_case_dir": "gpt-5.6-high/gather_refine/post_refactor/unreleased_20261029/gated/casp17/H2374/case_6a7664_GR_rep5",
+  "advocate_status": "ok"
+ }
+}

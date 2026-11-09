@@ -1,0 +1,269 @@
+{
+ "task": "gather",
+ "gather_mode": "batched",
+ "num_launchers": 3,
+ "policy": {
+  "evidence_cutoff": "2026-05-27",
+  "no_cutoff": false,
+  "gated": true,
+  "web_search": false,
+  "shell_network": true,
+  "gate_tools": [
+   "research",
+   "fetch",
+   "rcsb",
+   "patent",
+   "paper"
+  ]
+ },
+ "unscored": true,
+ "target": "H2335",
+ "target_set": "casp17",
+ "case": "case_d48c74",
+ "evidence_cutoff": "2026-05-27",
+ "target_release_date": "2026-05-27",
+ "retrieval_policy": "gated",
+ "input_structure": "data/staged_casp17_no_native/H2335.pdb",
+ "input_structure_sha256": "f216450f2774ea363d9dfeeb1e478d506d906f539f384bf370d4b65ff32c11bb",
+ "briefing_source": "data/briefing/casp17/H2335/search_results.json",
+ "briefing_sha256": "b0dea935f69c91b0e53c3c91d2fd212f5956d760276c3166d7c198ef62ac5bc6",
+ "antigen_chains": [
+  "A",
+  "B",
+  "C"
+ ],
+ "antibody_files": {
+  "antibody.pdb": [
+   "D",
+   "E"
+  ]
+ },
+ "antibody_chain_types": {
+  "antibody.pdb": {
+   "D": "light",
+   "E": "heavy"
+  }
+ },
+ "stage": "gatherer",
+ "pocket": {
+  "id": "C3",
+  "judge_rank": 4,
+  "name": "The compact hydrophobic-polar pocket on the outer gH heel, joining...",
+  "confidence": 0.12,
+  "p_rests_on_holds": 0.45,
+  "why_this_rank": "Same heel precedent as C2 and a compact anchor core, but a wider full footprint without the exposed TPN feature.",
+  "rests_on": "The smaller WMPP/D422 heel mode is correct.",
+  "where_the_mass_goes_if_it_fails": "C2.",
+  "what_it_is": "The compact hydrophobic-polar pocket on the outer gH heel, joining the WMPP loop to the Q/W/R/Q/D lobe at the DIII/DIV side of the boot-shaped fusion regulator.",
+  "why_one_candidate": "not pooled with anything: no other patch is both within 12 A (half centroid distance, half contact-graph hops) and coverable by one paratope of this antibody's reach, 17.4 A",
+  "from_patches": [
+   "P11"
+  ]
+ },
+ "note": "`confidence` on the pocket is over pockets and sums to about 1 across them. Inside an interface it is per residue in [0, 1] and sums to nothing. No residue is cut at a threshold: the whole vector is the answer.",
+ "mapping_basis": "side",
+ "checks": {
+  "unrecognised_sides": []
+ },
+ "chain_pairs": [
+  {
+   "antibody_chain": "D",
+   "antigen_chain": "B",
+   "n_residues": 10
+  },
+  {
+   "antibody_chain": "E",
+   "antigen_chain": "B",
+   "n_residues": 11
+  }
+ ],
+ "antibodies": [
+  {
+   "antibody": "antibody.pdb",
+   "chains": {
+    "D": "light",
+    "E": "heavy"
+   },
+   "binding_mode": null,
+   "n_residues_scored": 15,
+   "interfaces": [
+    {
+     "antibody_chain": "D",
+     "antibody_chain_type": "light",
+     "antigen_chain": "B",
+     "n_residues": 10,
+     "residue_confidence": {
+      "147": 0.94,
+      "148": 0.24,
+      "391": 0.4,
+      "414": 0.74,
+      "415": 0.38,
+      "418": 0.7,
+      "419": 0.3,
+      "422": 0.96,
+      "426": 0.42,
+      "429": 0.2
+     },
+     "residue_side": {
+      "147": "both",
+      "148": "both",
+      "391": "both",
+      "414": "both",
+      "415": "light",
+      "418": "both",
+      "419": "light",
+      "422": "both",
+      "426": "light",
+      "429": "light"
+     },
+     "max_confidence": 0.96,
+     "mean_confidence": 0.528
+    },
+    {
+     "antibody_chain": "E",
+     "antibody_chain_type": "heavy",
+     "antigen_chain": "B",
+     "n_residues": 11,
+     "residue_confidence": {
+      "142": 0.62,
+      "143": 0.18,
+      "144": 0.96,
+      "145": 0.58,
+      "146": 0.42,
+      "147": 0.94,
+      "148": 0.24,
+      "391": 0.4,
+      "414": 0.74,
+      "418": 0.7,
+      "422": 0.96
+     },
+     "residue_side": {
+      "142": "heavy",
+      "143": "heavy",
+      "144": "heavy",
+      "145": "heavy",
+      "146": "heavy",
+      "147": "both",
+      "148": "both",
+      "391": "both",
+      "414": "both",
+      "418": "both",
+      "422": "both"
+     },
+     "max_confidence": 0.96,
+     "mean_confidence": 0.6127
+    }
+   ]
+  }
+ ],
+ "paratope": {
+  "dominant_cdrs": [
+   "H3:H2",
+   "L3:H3"
+  ],
+  "paratope_residues": [
+   "E:29",
+   "E:32",
+   "E:53",
+   "E:54",
+   "E:57",
+   "E:58",
+   "E:98",
+   "E:100",
+   "E:103",
+   "E:105",
+   "E:106",
+   "E:107",
+   "E:110",
+   "E:111",
+   "D:28",
+   "D:32",
+   "D:89",
+   "D:91",
+   "D:94",
+   "D:96"
+  ],
+  "heavy_light_split": "Approximately 70:30 heavy:light. The WMPP/D422 anchors are heavy-centered; the Q414/R418/K426 lobe is the light flank.",
+  "binding_mode_union": "single-chain"
+ },
+ "residues": [
+  "B:142",
+  "B:143",
+  "B:144",
+  "B:145",
+  "B:146",
+  "B:147",
+  "B:148",
+  "B:391",
+  "B:414",
+  "B:415",
+  "B:418",
+  "B:419",
+  "B:422",
+  "B:426",
+  "B:429"
+ ],
+ "n_residues": 15,
+ "patches": [
+  {
+   "id": "P11",
+   "name": "Compact hydrophobic gH interdomain site (MSL-109-like surface)",
+   "n_residues": 14,
+   "residues": [
+    "B:142",
+    "B:143",
+    "B:144",
+    "B:145",
+    "B:146",
+    "B:147",
+    "B:414",
+    "B:415",
+    "B:418",
+    "B:419",
+    "B:422",
+    "B:425",
+    "B:426",
+    "B:429"
+   ],
+   "n_kept_by_advocate": 13,
+   "n_dropped_by_advocate": 1
+  }
+ ],
+ "pooling_provenance": {
+  "n_shared_at_pooling": 14,
+  "n_disputed_at_pooling": 0,
+  "note": "counts only, describing how the organizer grouped the phase-1 patches. The organizer's own candidate residue list is deliberately absent: the answer is the advocate's footprint, in `residues` and in `antibodies[].interfaces[]`."
+ },
+ "evidence": {
+  "advocate": {
+   "n_findings": 6,
+   "n_supports": 6,
+   "n_weakens": 0,
+   "weakest_point": "The supplied antibody is sequence-excluded as MSL-109. Several second-lobe residues are recessed, so a smaller WMPP/D422 pocket may not provide the broad light-chain engagement implied by this Fab.",
+   "note": "the advocate reports claim/source/date/bearing and is not asked whether a source is about this binder"
+  },
+  "judge": {
+   "tier_a_support": 0,
+   "n_support_lines": 3,
+   "verdict": "live",
+   "note": "Tier A -- a source about this binder itself -- is the judge's adjudication, in assessment[].support[]. It exists nowhere in the advocate's own answer."
+  }
+ },
+ "provenance": {
+  "unverified_source_policy_fields": [
+   "gated",
+   "web_search",
+   "shell_network",
+   "gate_tools"
+  ],
+  "assembled_case_dir": "gpt-5.6-high/gather_refine/post_refactor/unreleased_20261029/gated/casp17/H2335/case_d48c74_G_rep1",
+  "organize_case_dir": "gpt-5.6-high/gather_refine/post_refactor/unreleased_20261029/gated/casp17/H2335/case_d48c74_GR_rep1",
+  "organize_status": "ok",
+  "judge_case_dir": "gpt-5.6-high/gather_refine/post_refactor/unreleased_20261029/gated/casp17/H2335/case_d48c74_GJ_rep1",
+  "judge_status": "ok",
+  "packet": "gpt-5.6-high/gather/packets/case_d48c74/packet",
+  "manifest": "gpt-5.6-high/gather/packets/case_d48c74/manifest.json",
+  "advocate_case_dir": "gpt-5.6-high/gather_refine/post_refactor/unreleased_20261029/gated/casp17/H2335/case_d48c74_GR_rep1",
+  "advocate_status": "ok"
+ }
+}

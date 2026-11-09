@@ -1,0 +1,264 @@
+{
+ "task": "gather",
+ "gather_mode": "batched",
+ "num_launchers": 3,
+ "policy": {
+  "evidence_cutoff": null,
+  "no_cutoff": true,
+  "gated": false,
+  "web_search": true,
+  "shell_network": true,
+  "gate_tools": []
+ },
+ "unscored": true,
+ "target": "H2344",
+ "target_set": "casp17",
+ "case": "case_679778",
+ "evidence_cutoff": null,
+ "target_release_date": "2026-06-03",
+ "retrieval_policy": "no-cutoff",
+ "input_structure": "data/staged_casp17_no_native/H2344.pdb",
+ "input_structure_sha256": "18733617ed7c4b96b45ff3352f72763afcd6932570e14f1956abaeff946190b8",
+ "briefing_source": "data/briefing/casp17_nocutoff/H2344/search_results.json",
+ "briefing_sha256": "219c979403254eb778aaaf285ed1a338e86cc2322627ca12f3ab91aaa7876e87",
+ "antigen_chains": [
+  "C"
+ ],
+ "antibody_files": {
+  "antibody.pdb": [
+   "A",
+   "B"
+  ]
+ },
+ "antibody_chain_types": {
+  "antibody.pdb": {
+   "A": "unknown",
+   "B": "unknown"
+  }
+ },
+ "stage": "gatherer",
+ "pocket": {
+  "id": "C5",
+  "judge_rank": 7,
+  "name": "The flexible, glycan-adjacent beginning of the gD C-terminal...",
+  "confidence": 0.05,
+  "p_rests_on_holds": 0.1,
+  "why_this_rank": "C5 is exposed and chemically possible in the construct, but it begins at a glycosylation sequon, is artificially terminal, and the known continuous 262-272 antibody class is nonneutralizing, discordant with HAB72.",
+  "rests_on": "Native glycosylated gD exposes this linear segment and HAB72 neutralizes by locking rather than displacing the arm.",
+  "where_the_mass_goes_if_it_fails": "C4 or C7.",
+  "what_it_is": "The flexible, glycan-adjacent beginning of the gD C-terminal pro-fusion/autoinhibitory arm. In native full-length gD this arm continues toward the membrane and folds back over the receptor face; in the supplied C:1–275 construct, 262–275 is artificially terminal and partly disordered. The refined peptide footprint is C:264–274.",
+  "why_one_candidate": "not pooled with anything: no other patch is both within 12 A (half centroid distance, half contact-graph hops) and coverable by one paratope of this antibody's reach, 18.1 A",
+  "from_patches": [
+   "P3"
+  ]
+ },
+ "note": "`confidence` on the pocket is over pockets and sums to about 1 across them. Inside an interface it is per residue in [0, 1] and sums to nothing. No residue is cut at a threshold: the whole vector is the answer.",
+ "mapping_basis": "side",
+ "checks": {
+  "unrecognised_sides": []
+ },
+ "chain_pairs": [
+  {
+   "antibody_chain": "A",
+   "antigen_chain": "C",
+   "n_residues": 11
+  },
+  {
+   "antibody_chain": "B",
+   "antigen_chain": "C",
+   "n_residues": 11
+  }
+ ],
+ "antibodies": [
+  {
+   "antibody": "antibody.pdb",
+   "chains": {
+    "A": "unknown",
+    "B": "unknown"
+   },
+   "binding_mode": null,
+   "n_residues_scored": 11,
+   "interfaces": [
+    {
+     "antibody_chain": "A",
+     "antibody_chain_type": "unknown",
+     "antigen_chain": "C",
+     "n_residues": 11,
+     "residue_confidence": {
+      "264": 0.48,
+      "265": 0.68,
+      "266": 0.83,
+      "267": 0.88,
+      "268": 0.8,
+      "269": 0.88,
+      "270": 0.6,
+      "271": 0.91,
+      "272": 0.54,
+      "273": 0.74,
+      "274": 0.44
+     },
+     "residue_side": {
+      "264": "light",
+      "265": "light",
+      "266": "both",
+      "267": "heavy",
+      "268": "heavy",
+      "269": "heavy",
+      "270": "heavy",
+      "271": "heavy",
+      "272": "both",
+      "273": "light",
+      "274": "light"
+     },
+     "max_confidence": 0.91,
+     "mean_confidence": 0.7073
+    },
+    {
+     "antibody_chain": "B",
+     "antibody_chain_type": "unknown",
+     "antigen_chain": "C",
+     "n_residues": 11,
+     "residue_confidence": {
+      "264": 0.48,
+      "265": 0.68,
+      "266": 0.83,
+      "267": 0.88,
+      "268": 0.8,
+      "269": 0.88,
+      "270": 0.6,
+      "271": 0.91,
+      "272": 0.54,
+      "273": 0.74,
+      "274": 0.44
+     },
+     "residue_side": {
+      "264": "light",
+      "265": "light",
+      "266": "both",
+      "267": "heavy",
+      "268": "heavy",
+      "269": "heavy",
+      "270": "heavy",
+      "271": "heavy",
+      "272": "both",
+      "273": "light",
+      "274": "light"
+     },
+     "max_confidence": 0.91,
+     "mean_confidence": 0.7073
+    }
+   ]
+  }
+ ],
+ "paratope": {
+  "dominant_cdrs": [
+   "H3:H1",
+   "L1:L3"
+  ],
+  "paratope_residues": [
+   "A:30",
+   "A:31",
+   "A:32",
+   "A:54",
+   "A:55",
+   "A:57",
+   "A:103",
+   "A:104",
+   "A:105",
+   "A:106",
+   "A:108",
+   "A:109",
+   "A:113",
+   "B:27",
+   "B:28",
+   "B:30",
+   "B:31",
+   "B:33",
+   "B:90",
+   "B:91",
+   "B:92",
+   "B:94",
+   "B:95",
+   "B:96",
+   "B:98"
+  ],
+  "heavy_light_split": "Heavy-dominant but distributed (~65:35): H3/H1 cover E267–D272; L1/L3 contact the glycan-proximal 264–266 and distal P273/E274 ends.",
+  "binding_mode_union": "single-chain"
+ },
+ "residues": [
+  "C:264",
+  "C:265",
+  "C:266",
+  "C:267",
+  "C:268",
+  "C:269",
+  "C:270",
+  "C:271",
+  "C:272",
+  "C:273",
+  "C:274"
+ ],
+ "n_residues": 11,
+ "patches": [
+  {
+   "id": "P3",
+   "name": "Native C-terminal linear rim",
+   "n_residues": 14,
+   "residues": [
+    "C:262",
+    "C:263",
+    "C:264",
+    "C:265",
+    "C:266",
+    "C:267",
+    "C:268",
+    "C:269",
+    "C:270",
+    "C:271",
+    "C:272",
+    "C:273",
+    "C:274",
+    "C:275"
+   ],
+   "n_kept_by_advocate": 11,
+   "n_dropped_by_advocate": 3
+  }
+ ],
+ "pooling_provenance": {
+  "n_shared_at_pooling": 14,
+  "n_disputed_at_pooling": 0,
+  "note": "counts only, describing how the organizer grouped the phase-1 patches. The organizer's own candidate residue list is deliberately absent: the answer is the advocate's footprint, in `residues` and in `antibodies[].interfaces[]`."
+ },
+ "evidence": {
+  "advocate": {
+   "n_findings": 6,
+   "n_supports": 4,
+   "n_weakens": 2,
+   "weakest_point": "This is an artificially exposed truncation end next to the N262 glycan, and the best-characterized continuous 262–272 antibodies are nonneutralizing; moreover, pulling the arm away could activate rather than inhibit gD.",
+   "note": "the advocate reports claim/source/date/bearing and is not asked whether a source is about this binder"
+  },
+  "judge": {
+   "tier_a_support": 1,
+   "n_support_lines": 6,
+   "verdict": "unlikely",
+   "note": "Tier A -- a source about this binder itself -- is the judge's adjudication, in assessment[].support[]. It exists nowhere in the advocate's own answer."
+  }
+ },
+ "provenance": {
+  "unverified_source_policy_fields": [
+   "gated",
+   "web_search",
+   "shell_network",
+   "gate_tools"
+  ],
+  "assembled_case_dir": "gpt-5.6-high/gather_refine/post_refactor/unreleased_20261029/nocut/casp17/H2344/case_679778_G_rep1",
+  "organize_case_dir": "gpt-5.6-high/gather_refine/post_refactor/unreleased_20261029/nocut/casp17/H2344/case_679778_GR_rep1",
+  "organize_status": "ok",
+  "judge_case_dir": "gpt-5.6-high/gather_refine/post_refactor/unreleased_20261029/nocut/casp17/H2344/case_679778_GJ_rep1",
+  "judge_status": "ok",
+  "packet": "gpt-5.6-high/nocut/gather/packets/case_679778/packet",
+  "manifest": "gpt-5.6-high/nocut/gather/packets/case_679778/manifest.json",
+  "advocate_case_dir": "gpt-5.6-high/gather_refine/post_refactor/unreleased_20261029/nocut/casp17/H2344/case_679778_GR_rep1",
+  "advocate_status": "ok"
+ }
+}

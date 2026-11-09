@@ -1,0 +1,339 @@
+{
+ "task": "gather",
+ "gather_mode": "batched",
+ "num_launchers": 3,
+ "policy": {
+  "evidence_cutoff": "2026-06-12",
+  "no_cutoff": false,
+  "gated": true,
+  "web_search": false,
+  "shell_network": true,
+  "gate_tools": [
+   "research",
+   "fetch",
+   "rcsb",
+   "patent",
+   "paper"
+  ]
+ },
+ "unscored": true,
+ "target": "H2362",
+ "target_set": "casp17",
+ "case": "case_259152",
+ "evidence_cutoff": "2026-06-12",
+ "target_release_date": "2026-06-12",
+ "retrieval_policy": "gated",
+ "input_structure": "data/staged_casp17_no_native/H2362.pdb",
+ "input_structure_sha256": "54e187b986e4696f87e1dd7dd4cd6cd943754471a337aa57a0577c6172827a73",
+ "briefing_source": "data/briefing/casp17/H2362/search_results.json",
+ "briefing_sha256": "b0140a751ca600dc0d1ce7f02d3095b3776329fd300b1010c950088508d8f896",
+ "antigen_chains": [
+  "A",
+  "B",
+  "C",
+  "D",
+  "E"
+ ],
+ "antibody_files": {
+  "antibody.pdb": [
+   "F",
+   "G"
+  ]
+ },
+ "antibody_chain_types": {
+  "antibody.pdb": {
+   "F": "light",
+   "G": "heavy"
+  }
+ },
+ "stage": "gatherer",
+ "pocket": {
+  "id": "C5",
+  "judge_rank": 1,
+  "name": "A compact exposed apex jointly formed by UL130 and the C-terminal...",
+  "confidence": 0.17,
+  "p_rests_on_holds": 0.35,
+  "why_this_rank": "Best measured Tier B pairing: the most compact, strongly basic, polar quaternary patch complements the mildly acidic/polar Fab while remaining well exposed.",
+  "rests_on": "Bulk electrostatic and polar complementarity reflects a realizable local interface rather than coincidental composition.",
+  "where_the_mass_goes_if_it_fails": "C3 and C6",
+  "what_it_is": "A compact exposed apex jointly formed by UL130 and the C-terminal crown of UL131A.",
+  "why_one_candidate": "not pooled with anything: no other patch is both within 12 A (half centroid distance, half contact-graph hops) and coverable by one paratope of this antibody's reach, 17.6 A",
+  "from_patches": [
+   "P4"
+  ]
+ },
+ "note": "`confidence` on the pocket is over pockets and sums to about 1 across them. Inside an interface it is per residue in [0, 1] and sums to nothing. No residue is cut at a threshold: the whole vector is the answer.",
+ "mapping_basis": "side",
+ "checks": {
+  "unrecognised_sides": []
+ },
+ "chain_pairs": [
+  {
+   "antibody_chain": "F",
+   "antigen_chain": "C",
+   "n_residues": 3
+  },
+  {
+   "antibody_chain": "F",
+   "antigen_chain": "D",
+   "n_residues": 12
+  },
+  {
+   "antibody_chain": "G",
+   "antigen_chain": "C",
+   "n_residues": 7
+  },
+  {
+   "antibody_chain": "G",
+   "antigen_chain": "D",
+   "n_residues": 5
+  }
+ ],
+ "antibodies": [
+  {
+   "antibody": "antibody.pdb",
+   "chains": {
+    "F": "light",
+    "G": "heavy"
+   },
+   "binding_mode": null,
+   "n_residues_scored": 19,
+   "interfaces": [
+    {
+     "antibody_chain": "F",
+     "antibody_chain_type": "light",
+     "antigen_chain": "C",
+     "n_residues": 3,
+     "residue_confidence": {
+      "111": 0.75,
+      "112": 0.45,
+      "113": 0.55
+     },
+     "residue_side": {
+      "111": "both",
+      "112": "both",
+      "113": "both"
+     },
+     "max_confidence": 0.75,
+     "mean_confidence": 0.5833
+    },
+    {
+     "antibody_chain": "F",
+     "antibody_chain_type": "light",
+     "antigen_chain": "D",
+     "n_residues": 12,
+     "residue_confidence": {
+      "78": 0.55,
+      "80": 0.7,
+      "82": 0.35,
+      "83": 0.4,
+      "84": 0.94,
+      "85": 0.95,
+      "86": 0.55,
+      "87": 0.5,
+      "90": 0.48,
+      "103": 0.3,
+      "107": 0.22,
+      "111": 0.55
+     },
+     "residue_side": {
+      "78": "light",
+      "80": "both",
+      "82": "both",
+      "83": "both",
+      "84": "both",
+      "85": "both",
+      "86": "light",
+      "87": "light",
+      "90": "light",
+      "103": "light",
+      "107": "light",
+      "111": "light"
+     },
+     "max_confidence": 0.95,
+     "mean_confidence": 0.5408
+    },
+    {
+     "antibody_chain": "G",
+     "antibody_chain_type": "heavy",
+     "antigen_chain": "C",
+     "n_residues": 7,
+     "residue_confidence": {
+      "106": 0.45,
+      "107": 0.25,
+      "108": 0.78,
+      "109": 0.58,
+      "111": 0.75,
+      "112": 0.45,
+      "113": 0.55
+     },
+     "residue_side": {
+      "106": "heavy",
+      "107": "heavy",
+      "108": "heavy",
+      "109": "heavy",
+      "111": "both",
+      "112": "both",
+      "113": "both"
+     },
+     "max_confidence": 0.78,
+     "mean_confidence": 0.5443
+    },
+    {
+     "antibody_chain": "G",
+     "antibody_chain_type": "heavy",
+     "antigen_chain": "D",
+     "n_residues": 5,
+     "residue_confidence": {
+      "80": 0.7,
+      "82": 0.35,
+      "83": 0.4,
+      "84": 0.94,
+      "85": 0.95
+     },
+     "residue_side": {
+      "80": "both",
+      "82": "both",
+      "83": "both",
+      "84": "both",
+      "85": "both"
+     },
+     "max_confidence": 0.95,
+     "mean_confidence": 0.668
+    }
+   ]
+  }
+ ],
+ "paratope": {
+  "dominant_cdrs": [
+   "G:H3",
+   "F:L1",
+   "G:H2",
+   "F:L3"
+  ],
+  "paratope_residues": [
+   "G:26",
+   "G:27",
+   "G:28",
+   "G:30",
+   "G:31",
+   "G:32",
+   "G:33",
+   "G:34",
+   "G:35",
+   "G:54",
+   "G:55",
+   "G:56",
+   "G:57",
+   "G:58",
+   "G:59",
+   "G:99",
+   "G:101",
+   "G:102",
+   "G:103",
+   "G:104",
+   "G:105",
+   "G:106",
+   "G:107",
+   "G:108",
+   "G:110",
+   "G:111",
+   "F:27",
+   "F:28",
+   "F:30",
+   "F:31",
+   "F:32",
+   "F:50",
+   "F:52",
+   "F:92",
+   "F:93",
+   "F:94",
+   "F:97"
+  ],
+  "heavy_light_split": "Approximately 60:40 heavy:light. Heavy CDRs cover UL130; the acidic/polar light face covers the basic UL131A crown.",
+  "binding_mode_union": "straddling"
+ },
+ "residues": [
+  "C:106",
+  "C:107",
+  "C:108",
+  "C:109",
+  "C:111",
+  "C:112",
+  "C:113",
+  "D:103",
+  "D:107",
+  "D:111",
+  "D:78",
+  "D:80",
+  "D:82",
+  "D:83",
+  "D:84",
+  "D:85",
+  "D:86",
+  "D:87",
+  "D:90"
+ ],
+ "n_residues": 19,
+ "patches": [
+  {
+   "id": "P4",
+   "name": "UL130/UL131A exposed apex",
+   "n_residues": 13,
+   "residues": [
+    "C:107",
+    "C:108",
+    "C:109",
+    "C:111",
+    "D:107",
+    "D:80",
+    "D:82",
+    "D:83",
+    "D:84",
+    "D:85",
+    "D:86",
+    "D:87",
+    "D:90"
+   ],
+   "n_kept_by_advocate": 13,
+   "n_dropped_by_advocate": 0
+  }
+ ],
+ "pooling_provenance": {
+  "n_shared_at_pooling": 13,
+  "n_disputed_at_pooling": 0,
+  "note": "counts only, describing how the organizer grouped the phase-1 patches. The organizer's own candidate residue list is deliberately absent: the answer is the advocate's footprint, in `residues` and in `antibodies[].interfaces[]`."
+ },
+ "evidence": {
+  "advocate": {
+   "n_findings": 4,
+   "n_supports": 3,
+   "n_weakens": 1,
+   "weakest_point": "The strongest literature anchor is a low-resolution K103 cross-link whose associated antibodies were later mapped elsewhere; direct contact and mechanism remain unestablished.",
+   "note": "the advocate reports claim/source/date/bearing and is not asked whether a source is about this binder"
+  },
+  "judge": {
+   "tier_a_support": 0,
+   "n_support_lines": 4,
+   "verdict": "leading",
+   "note": "Tier A -- a source about this binder itself -- is the judge's adjudication, in assessment[].support[]. It exists nowhere in the advocate's own answer."
+  }
+ },
+ "provenance": {
+  "unverified_source_policy_fields": [
+   "gated",
+   "web_search",
+   "shell_network",
+   "gate_tools"
+  ],
+  "assembled_case_dir": "gpt-5.6-high/gather_refine/post_refactor/unreleased_20261029/gated/casp17/H2362/case_259152_G_rep1",
+  "organize_case_dir": "gpt-5.6-high/gather_refine/post_refactor/unreleased_20261029/gated/casp17/H2362/case_259152_GR_rep1",
+  "organize_status": "ok",
+  "judge_case_dir": "gpt-5.6-high/gather_refine/post_refactor/unreleased_20261029/gated/casp17/H2362/case_259152_GJ_rep1",
+  "judge_status": "ok",
+  "packet": "gpt-5.6-high/gather/packets/case_259152/packet",
+  "manifest": "gpt-5.6-high/gather/packets/case_259152/manifest.json",
+  "advocate_case_dir": "gpt-5.6-high/gather_refine/post_refactor/unreleased_20261029/gated/casp17/H2362/case_259152_GR_rep1",
+  "advocate_status": "ok"
+ }
+}

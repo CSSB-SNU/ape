@@ -1,0 +1,365 @@
+{
+ "task": "gather",
+ "gather_mode": "batched",
+ "num_launchers": 3,
+ "policy": {
+  "evidence_cutoff": "2024-05-02",
+  "no_cutoff": false,
+  "gated": true,
+  "web_search": false,
+  "shell_network": true,
+  "gate_tools": [
+   "research",
+   "fetch",
+   "rcsb",
+   "patent",
+   "paper"
+  ]
+ },
+ "unscored": false,
+ "target": "H1204",
+ "target_set": "casp16",
+ "case": "case_2c69fc",
+ "evidence_cutoff": "2024-05-02",
+ "target_release_date": "2024-05-02",
+ "retrieval_policy": "gated",
+ "input_structure": "structures/H1204.pdb",
+ "input_structure_sha256": null,
+ "briefing_source": null,
+ "briefing_sha256": null,
+ "antigen_chains": [
+  "C",
+  "D",
+  "E",
+  "F"
+ ],
+ "antibody_files": {
+  "antibody.1.pdb": [
+   "A"
+  ],
+  "antibody.2.pdb": [
+   "B"
+  ]
+ },
+ "antibody_chain_types": {
+  "antibody.1.pdb": {
+   "A": "heavy"
+  },
+  "antibody.2.pdb": {
+   "B": "heavy"
+  }
+ },
+ "truth_file": "data/truth/casp16/H1204.epitope.json",
+ "stage": "gatherer",
+ "pocket": {
+  "id": "C6",
+  "judge_rank": 4,
+  "name": "A broad exterior alpha-globin face formed by the A helix beside the...",
+  "confidence": 0.11,
+  "p_rests_on_holds": 0.2,
+  "why_this_rank": "Fully exposed alpha composite with regional precedent but no clone map.",
+  "rests_on": "Separately antigenic alpha lobes form one usable epitope.",
+  "where_the_mass_goes_if_it_fails": "C10",
+  "what_it_is": "A broad exterior alpha-globin face formed by the A helix beside the E/EF-helix region, duplicated on E and F.",
+  "why_one_candidate": "not pooled with anything: no other patch is both within 12 A (half centroid distance, half contact-graph hops) and coverable by one paratope of this antibody's reach, 12.1 A",
+  "from_patches": [
+   "P5"
+  ]
+ },
+ "note": "`confidence` on the pocket is over pockets and sums to about 1 across them. Inside an interface it is per residue in [0, 1] and sums to nothing. No residue is cut at a threshold: the whole vector is the answer.",
+ "mapping_basis": "per_antibody",
+ "checks": {
+  "unrecognised_sides": []
+ },
+ "chain_pairs": [
+  {
+   "antibody_chain": "A",
+   "antigen_chain": "E",
+   "n_residues": 16
+  },
+  {
+   "antibody_chain": "B",
+   "antigen_chain": "F",
+   "n_residues": 16
+  }
+ ],
+ "antibodies": [
+  {
+   "antibody": "antibody.1.pdb",
+   "chains": {
+    "A": "heavy"
+   },
+   "binding_mode": "single-chain",
+   "n_residues_scored": 16,
+   "interfaces": [
+    {
+     "antibody_chain": "A",
+     "antibody_chain_type": "heavy",
+     "antigen_chain": "E",
+     "n_residues": 16,
+     "residue_confidence": {
+      "12": 0.43,
+      "13": 0.63,
+      "15": 0.79,
+      "16": 0.66,
+      "17": 0.56,
+      "19": 0.7,
+      "20": 0.89,
+      "21": 0.83,
+      "23": 0.31,
+      "61": 0.53,
+      "65": 0.95,
+      "68": 0.92,
+      "69": 0.72,
+      "72": 0.82,
+      "73": 0.85,
+      "80": 0.36
+     },
+     "residue_side": {
+      "12": "heavy",
+      "13": "heavy",
+      "15": "heavy",
+      "16": "heavy",
+      "17": "heavy",
+      "19": "heavy",
+      "20": "heavy",
+      "21": "heavy",
+      "23": "heavy",
+      "61": "heavy",
+      "65": "heavy",
+      "68": "heavy",
+      "69": "heavy",
+      "72": "heavy",
+      "73": "heavy",
+      "80": "heavy"
+     },
+     "max_confidence": 0.95,
+     "mean_confidence": 0.6844,
+     "precision_vs_truth": 0.0,
+     "n_in_truth": 0
+    }
+   ]
+  },
+  {
+   "antibody": "antibody.2.pdb",
+   "chains": {
+    "B": "heavy"
+   },
+   "binding_mode": "single-chain",
+   "n_residues_scored": 16,
+   "interfaces": [
+    {
+     "antibody_chain": "B",
+     "antibody_chain_type": "heavy",
+     "antigen_chain": "F",
+     "n_residues": 16,
+     "residue_confidence": {
+      "12": 0.43,
+      "13": 0.63,
+      "15": 0.79,
+      "16": 0.66,
+      "17": 0.56,
+      "19": 0.7,
+      "20": 0.89,
+      "21": 0.83,
+      "23": 0.31,
+      "61": 0.53,
+      "65": 0.95,
+      "68": 0.92,
+      "69": 0.72,
+      "72": 0.82,
+      "73": 0.85,
+      "80": 0.36
+     },
+     "residue_side": {
+      "12": "heavy",
+      "13": "heavy",
+      "15": "heavy",
+      "16": "heavy",
+      "17": "heavy",
+      "19": "heavy",
+      "20": "heavy",
+      "21": "heavy",
+      "23": "heavy",
+      "61": "heavy",
+      "65": "heavy",
+      "68": "heavy",
+      "69": "heavy",
+      "72": "heavy",
+      "73": "heavy",
+      "80": "heavy"
+     },
+     "max_confidence": 0.95,
+     "mean_confidence": 0.6844,
+     "precision_vs_truth": 0.0,
+     "n_in_truth": 0
+    }
+   ]
+  }
+ ],
+ "paratope": {
+  "dominant_cdrs": [
+   "A:H3",
+   "B:H3",
+   "A:H1",
+   "B:H1",
+   "A:H2",
+   "B:H2"
+  ],
+  "paratope_residues": [
+   "A:30",
+   "A:31",
+   "A:32",
+   "A:35",
+   "A:56",
+   "A:103",
+   "A:104",
+   "A:105",
+   "A:106",
+   "A:107",
+   "A:109",
+   "A:110",
+   "A:115",
+   "A:116",
+   "A:117",
+   "B:30",
+   "B:31",
+   "B:32",
+   "B:35",
+   "B:56",
+   "B:103",
+   "B:104",
+   "B:105",
+   "B:106",
+   "B:107",
+   "B:109",
+   "B:110",
+   "B:115",
+   "B:116",
+   "B:117"
+  ],
+  "heavy_light_split": "Heavy-only VHHs; H3 centres on alpha65/68 and H1/H2 cover the A- and E-helix lobes.",
+  "binding_mode_union": null
+ },
+ "residues": [
+  "E:12",
+  "E:13",
+  "E:15",
+  "E:16",
+  "E:17",
+  "E:19",
+  "E:20",
+  "E:21",
+  "E:23",
+  "E:61",
+  "E:65",
+  "E:68",
+  "E:69",
+  "E:72",
+  "E:73",
+  "E:80",
+  "F:12",
+  "F:13",
+  "F:15",
+  "F:16",
+  "F:17",
+  "F:19",
+  "F:20",
+  "F:21",
+  "F:23",
+  "F:61",
+  "F:65",
+  "F:68",
+  "F:69",
+  "F:72",
+  "F:73",
+  "F:80"
+ ],
+ "n_residues": 32,
+ "patches": [
+  {
+   "id": "P5",
+   "name": "Two symmetry-related alpha A/E-helix exterior faces",
+   "n_residues": 30,
+   "residues": [
+    "E:12",
+    "E:13",
+    "E:16",
+    "E:17",
+    "E:19",
+    "E:20",
+    "E:21",
+    "E:23",
+    "E:61",
+    "E:65",
+    "E:68",
+    "E:69",
+    "E:72",
+    "E:73",
+    "E:80",
+    "F:12",
+    "F:13",
+    "F:16",
+    "F:17",
+    "F:19",
+    "F:20",
+    "F:21",
+    "F:23",
+    "F:61",
+    "F:65",
+    "F:68",
+    "F:69",
+    "F:72",
+    "F:73",
+    "F:80"
+   ],
+   "n_kept_by_advocate": 30,
+   "n_dropped_by_advocate": 0
+  }
+ ],
+ "pooling_provenance": {
+  "n_shared_at_pooling": 30,
+  "n_disputed_at_pooling": 0,
+  "note": "counts only, describing how the organizer grouped the phase-1 patches. The organizer's own candidate residue list is deliberately absent: the answer is the advocate's footprint, in `residues` and in `antibodies[].interfaces[]`."
+ },
+ "evidence": {
+  "advocate": {
+   "n_findings": 5,
+   "n_supports": 5,
+   "n_weakens": 0,
+   "weakest_point": "No direct VHH map or compelling blocked function distinguishes this exposed face; the 23.8 Å footprint also uses most of the CDR width.",
+   "note": "the advocate reports claim/source/date/bearing and is not asked whether a source is about this binder"
+  },
+  "judge": {
+   "tier_a_support": 1,
+   "n_support_lines": 3,
+   "verdict": "live",
+   "note": "Tier A -- a source about this binder itself -- is the judge's adjudication, in assessment[].support[]. It exists nowhere in the advocate's own answer."
+  }
+ },
+ "provenance": {
+  "unverified_source_policy_fields": [
+   "gated",
+   "web_search",
+   "shell_network",
+   "gate_tools"
+  ],
+  "assembled_case_dir": "gpt-5.6-high/gather_refine/post_refactor/released_structure_20261030/casp16/H1204/case_2c69fc_G_rep2",
+  "organize_case_dir": "gpt-5.6-high/gather_refine/post_refactor/released_structure_20261030/casp16/H1204/case_2c69fc_GR_rep1",
+  "organize_status": "ok",
+  "judge_case_dir": "gpt-5.6-high/gather_refine/post_refactor/released_structure_20261030/casp16/H1204/case_2c69fc_GJ_rep2",
+  "judge_status": "ok",
+  "packet": "gpt-5.6-high/gather/packets/case_2c69fc/packet",
+  "manifest": "gpt-5.6-high/gather/packets/case_2c69fc/manifest.json",
+  "advocate_case_dir": "gpt-5.6-high/gather_refine/post_refactor/released_structure_20261030/casp16/H1204/case_2c69fc_GR_rep1",
+  "advocate_status": "ok"
+ },
+ "score": {
+  "precision": 0.0,
+  "recall": 0.0,
+  "f1": 0.0,
+  "n_pred": 32,
+  "n_true": 44,
+  "n_hit": 0
+ }
+}

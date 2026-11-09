@@ -1,0 +1,270 @@
+{
+ "task": "gather",
+ "gather_mode": "batched",
+ "num_launchers": 3,
+ "policy": {
+  "evidence_cutoff": "2026-05-21",
+  "no_cutoff": false,
+  "gated": true,
+  "web_search": false,
+  "shell_network": true,
+  "gate_tools": [
+   "research",
+   "fetch",
+   "rcsb",
+   "patent",
+   "paper"
+  ]
+ },
+ "unscored": false,
+ "target": "H1346_agCD",
+ "target_set": "casp17",
+ "case": "case_fed304",
+ "evidence_cutoff": "2026-05-21",
+ "target_release_date": "2026-05-21",
+ "retrieval_policy": "gated",
+ "input_structure": "structures/H1346_agCD.pdb",
+ "input_structure_sha256": null,
+ "briefing_source": null,
+ "briefing_sha256": null,
+ "antigen_chains": [
+  "C",
+  "D"
+ ],
+ "antibody_files": {
+  "antibody.pdb": [
+   "A",
+   "B"
+  ]
+ },
+ "antibody_chain_types": {
+  "antibody.pdb": {
+   "A": "heavy",
+   "B": "light"
+  }
+ },
+ "truth_file": "data/truth/casp17/H1346_agCD.epitope.json",
+ "stage": "gatherer",
+ "pocket": {
+  "id": "C6",
+  "judge_rank": 6,
+  "name": "A compact single-chain V-kappa idiotope centered on the antigen...",
+  "confidence": 0.03,
+  "p_rests_on_holds": 0.08,
+  "why_this_rank": "Structurally clean and compact, but a common-light-only idiotope poorly explains anti-BCMA-arm specificity or anti-kappa chaperoning.",
+  "rests_on": "A/B is V-kappa-reactive and its role need not be arm-specific.",
+  "where_the_mass_goes_if_it_fails": "C2 or C1",
+  "what_it_is": "A compact single-chain V-kappa idiotope centered on the antigen light-chain L1/L3 crest, with the adjacent exposed D:67/D:69 framework shoulder and little or no VH contact.",
+  "why_one_candidate": "not pooled with anything: no other patch is both within 12 A (half centroid distance, half contact-graph hops) and coverable by one paratope of this antibody's reach, 16.9 A",
+  "from_patches": [
+   "P6"
+  ]
+ },
+ "note": "`confidence` on the pocket is over pockets and sums to about 1 across them. Inside an interface it is per residue in [0, 1] and sums to nothing. No residue is cut at a threshold: the whole vector is the answer.",
+ "mapping_basis": "side",
+ "checks": {
+  "unrecognised_sides": []
+ },
+ "chain_pairs": [
+  {
+   "antibody_chain": "A",
+   "antigen_chain": "D",
+   "n_residues": 9
+  },
+  {
+   "antibody_chain": "B",
+   "antigen_chain": "D",
+   "n_residues": 8
+  }
+ ],
+ "antibodies": [
+  {
+   "antibody": "antibody.pdb",
+   "chains": {
+    "A": "heavy",
+    "B": "light"
+   },
+   "binding_mode": null,
+   "n_residues_scored": 13,
+   "interfaces": [
+    {
+     "antibody_chain": "A",
+     "antibody_chain_type": "heavy",
+     "antigen_chain": "D",
+     "n_residues": 9,
+     "residue_confidence": {
+      "26": 0.4,
+      "27": 0.67,
+      "28": 0.76,
+      "30": 0.6,
+      "92": 0.9,
+      "93": 0.76,
+      "94": 0.84,
+      "95": 0.72,
+      "96": 0.24
+     },
+     "residue_side": {
+      "26": "heavy",
+      "27": "heavy",
+      "28": "both",
+      "30": "both",
+      "92": "both",
+      "93": "both",
+      "94": "heavy",
+      "95": "heavy",
+      "96": "heavy"
+     },
+     "max_confidence": 0.9,
+     "mean_confidence": 0.6544,
+     "precision_vs_truth": 0.0,
+     "n_in_truth": 0
+    },
+    {
+     "antibody_chain": "B",
+     "antibody_chain_type": "light",
+     "antigen_chain": "D",
+     "n_residues": 8,
+     "residue_confidence": {
+      "28": 0.76,
+      "30": 0.6,
+      "31": 0.32,
+      "52": 0.3,
+      "67": 0.58,
+      "69": 0.42,
+      "92": 0.9,
+      "93": 0.76
+     },
+     "residue_side": {
+      "28": "both",
+      "30": "both",
+      "31": "light",
+      "52": "light",
+      "67": "light",
+      "69": "light",
+      "92": "both",
+      "93": "both"
+     },
+     "max_confidence": 0.9,
+     "mean_confidence": 0.58,
+     "precision_vs_truth": 0.0,
+     "n_in_truth": 0
+    }
+   ]
+  }
+ ],
+ "paratope": {
+  "dominant_cdrs": [
+   "A:H3",
+   "B:L1",
+   "B:L3",
+   "A:H2"
+  ],
+  "paratope_residues": [
+   "A:53",
+   "A:54",
+   "A:56",
+   "A:100",
+   "A:101",
+   "A:102",
+   "A:103",
+   "A:104",
+   "A:105",
+   "A:106",
+   "A:109",
+   "B:27",
+   "B:28",
+   "B:30",
+   "B:32",
+   "B:52",
+   "B:93",
+   "B:94"
+  ],
+  "heavy_light_split": "Heavy-dominant: A:H3 covers the D:L1/L3 center, with B:L1/L3 on the D:67/D:69 and D:27-D:31 rim; D:28 and D:92-D:93 are both-chain center contacts.",
+  "binding_mode_union": "single-chain"
+ },
+ "residues": [
+  "D:26",
+  "D:27",
+  "D:28",
+  "D:30",
+  "D:31",
+  "D:52",
+  "D:67",
+  "D:69",
+  "D:92",
+  "D:93",
+  "D:94",
+  "D:95",
+  "D:96"
+ ],
+ "n_residues": 13,
+ "patches": [
+  {
+   "id": "P6",
+   "name": "light-variable idiotope around D:L1/L3",
+   "n_residues": 13,
+   "residues": [
+    "D:26",
+    "D:27",
+    "D:28",
+    "D:30",
+    "D:31",
+    "D:52",
+    "D:67",
+    "D:69",
+    "D:92",
+    "D:93",
+    "D:94",
+    "D:95",
+    "D:96"
+   ],
+   "n_kept_by_advocate": 13,
+   "n_dropped_by_advocate": 0
+  }
+ ],
+ "pooling_provenance": {
+  "n_shared_at_pooling": 13,
+  "n_disputed_at_pooling": 0,
+  "note": "counts only, describing how the organizer grouped the phase-1 patches. The organizer's own candidate residue list is deliberately absent: the answer is the advocate's footprint, in `residues` and in `antibodies[].interfaces[]`."
+ },
+ "evidence": {
+  "advocate": {
+   "n_findings": 4,
+   "n_supports": 2,
+   "n_weakens": 2,
+   "weakest_point": "The exact antigen biology makes D a common light chain, so this surface is poorly suited to explain an anti-BCMA-arm-specific reagent; the reported structural binder is anti-kappa but is more naturally directed at the constant domain.",
+   "note": "the advocate reports claim/source/date/bearing and is not asked whether a source is about this binder"
+  },
+  "judge": {
+   "tier_a_support": 0,
+   "n_support_lines": 3,
+   "verdict": "unlikely",
+   "note": "Tier A -- a source about this binder itself -- is the judge's adjudication, in assessment[].support[]. It exists nowhere in the advocate's own answer."
+  }
+ },
+ "provenance": {
+  "unverified_source_policy_fields": [
+   "gated",
+   "web_search",
+   "shell_network",
+   "gate_tools"
+  ],
+  "assembled_case_dir": "gpt-5.6-high/gather_refine/post_refactor/released_structure_20261030/casp17/H1346_agCD/case_fed304_G_rep2",
+  "organize_case_dir": "gpt-5.6-high/gather_refine/post_refactor/released_structure_20261030/casp17/H1346_agCD/case_fed304_GR_rep1",
+  "organize_status": "ok",
+  "judge_case_dir": "gpt-5.6-high/gather_refine/post_refactor/released_structure_20261030/casp17/H1346_agCD/case_fed304_GJ_rep2",
+  "judge_status": "ok",
+  "packet": "gpt-5.6-high/gather/packets/case_fed304/packet",
+  "manifest": "gpt-5.6-high/gather/packets/case_fed304/manifest.json",
+  "advocate_case_dir": "gpt-5.6-high/gather_refine/post_refactor/released_structure_20261030/casp17/H1346_agCD/case_fed304_GR_rep1",
+  "advocate_status": "ok"
+ },
+ "score": {
+  "precision": 0.0,
+  "recall": 0.0,
+  "f1": 0.0,
+  "n_pred": 13,
+  "n_true": 17,
+  "n_hit": 0
+ }
+}

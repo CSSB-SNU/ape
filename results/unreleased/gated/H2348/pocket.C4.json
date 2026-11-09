@@ -1,0 +1,267 @@
+{
+ "task": "gather",
+ "gather_mode": "batched",
+ "num_launchers": 3,
+ "policy": {
+  "evidence_cutoff": "2026-06-05",
+  "no_cutoff": false,
+  "gated": true,
+  "web_search": false,
+  "shell_network": true,
+  "gate_tools": [
+   "research",
+   "fetch",
+   "rcsb",
+   "patent",
+   "paper"
+  ]
+ },
+ "unscored": true,
+ "target": "H2348",
+ "target_set": "casp17",
+ "case": "case_4ade9a",
+ "evidence_cutoff": "2026-06-05",
+ "target_release_date": "2026-06-05",
+ "retrieval_policy": "gated",
+ "input_structure": "data/staged_casp17_no_native/H2348.pdb",
+ "input_structure_sha256": "ce3adf48ca6a518ad9b1c0b7ee6fd0899f7d12f01d7aa968c11b92ad459c41e7",
+ "briefing_source": "data/briefing/casp17/H2348/search_results.json",
+ "briefing_sha256": "4d17b3e4689d4bdb8848154699de80e2748b0d365b2fba62f69b2f96cbbee826",
+ "antigen_chains": [
+  "A"
+ ],
+ "antibody_files": {
+  "antibody.pdb": [
+   "B",
+   "C"
+  ]
+ },
+ "antibody_chain_types": {
+  "antibody.pdb": {
+   "B": "heavy",
+   "C": "light"
+  }
+ },
+ "stage": "gatherer",
+ "pocket": {
+  "id": "C4",
+  "judge_rank": 3,
+  "name": "The membrane-distal cap of D1: the exposed N terminus and convergent...",
+  "confidence": 0.14,
+  "p_rests_on_holds": 0.25,
+  "why_this_rank": "C4 has the strongest residue-level other-antibody precedent and the highest measured exposure, but Fab 3754 is sequence-distinct and the patch's net charge does not favor this paratope.",
+  "rests_on": "The supplied clone converges on the same compact D1-tip epitope used by Fab 3754.",
+  "where_the_mass_goes_if_it_fails": "C1 if D1 is still correct; otherwise C3.",
+  "what_it_is": "The membrane-distal cap of D1: the exposed N terminus and convergent 34–42 and 84–92 loops at the top of the receptor.",
+  "why_one_candidate": "not pooled with anything: no other patch is both within 12 A (half centroid distance, half contact-graph hops) and coverable by one paratope of this antibody's reach, 17.5 A",
+  "from_patches": [
+   "P12"
+  ]
+ },
+ "note": "`confidence` on the pocket is over pockets and sums to about 1 across them. Inside an interface it is per residue in [0, 1] and sums to nothing. No residue is cut at a threshold: the whole vector is the answer.",
+ "mapping_basis": "side",
+ "checks": {
+  "unrecognised_sides": []
+ },
+ "chain_pairs": [
+  {
+   "antibody_chain": "B",
+   "antigen_chain": "A",
+   "n_residues": 10
+  },
+  {
+   "antibody_chain": "C",
+   "antigen_chain": "A",
+   "n_residues": 11
+  }
+ ],
+ "antibodies": [
+  {
+   "antibody": "antibody.pdb",
+   "chains": {
+    "B": "heavy",
+    "C": "light"
+   },
+   "binding_mode": null,
+   "n_residues_scored": 15,
+   "interfaces": [
+    {
+     "antibody_chain": "B",
+     "antibody_chain_type": "heavy",
+     "antigen_chain": "A",
+     "n_residues": 10,
+     "residue_confidence": {
+      "34": 0.77,
+      "35": 0.96,
+      "36": 0.64,
+      "37": 0.91,
+      "42": 0.53,
+      "86": 0.92,
+      "87": 0.73,
+      "88": 0.95,
+      "89": 0.92,
+      "90": 0.66
+     },
+     "residue_side": {
+      "34": "heavy",
+      "35": "both",
+      "36": "heavy",
+      "37": "both",
+      "42": "heavy",
+      "86": "both",
+      "87": "both",
+      "88": "both",
+      "89": "both",
+      "90": "heavy"
+     },
+     "max_confidence": 0.96,
+     "mean_confidence": 0.799
+    },
+    {
+     "antibody_chain": "C",
+     "antibody_chain_type": "light",
+     "antigen_chain": "A",
+     "n_residues": 11,
+     "residue_confidence": {
+      "1": 0.56,
+      "2": 0.54,
+      "35": 0.96,
+      "37": 0.91,
+      "84": 0.49,
+      "86": 0.92,
+      "87": 0.73,
+      "88": 0.95,
+      "89": 0.92,
+      "91": 0.7,
+      "92": 0.64
+     },
+     "residue_side": {
+      "1": "light",
+      "2": "light",
+      "35": "both",
+      "37": "both",
+      "84": "light",
+      "86": "both",
+      "87": "both",
+      "88": "both",
+      "89": "both",
+      "91": "light",
+      "92": "light"
+     },
+     "max_confidence": 0.96,
+     "mean_confidence": 0.7564
+    }
+   ]
+  }
+ ],
+ "paratope": {
+  "dominant_cdrs": [
+   "H3aa:H3",
+   "H1aa:H1",
+   "L3aa:L3",
+   "L1aa:L1"
+  ],
+  "paratope_residues": [
+   "B:31",
+   "B:32",
+   "B:33",
+   "B:54",
+   "B:56",
+   "B:57",
+   "B:58",
+   "B:101",
+   "B:102",
+   "C:27",
+   "C:28",
+   "C:30",
+   "C:31",
+   "C:32",
+   "C:52",
+   "C:92",
+   "C:93",
+   "C:94",
+   "C:95",
+   "C:96"
+  ],
+  "heavy_light_split": "Approximately 65:35 heavy:light; heavy loops center on Y35/H37/F86/L89 and light loops occupy the N-terminal and Q/E/N edges.",
+  "binding_mode_union": "single-chain"
+ },
+ "residues": [
+  "A:1",
+  "A:2",
+  "A:34",
+  "A:35",
+  "A:36",
+  "A:37",
+  "A:42",
+  "A:84",
+  "A:86",
+  "A:87",
+  "A:88",
+  "A:89",
+  "A:90",
+  "A:91",
+  "A:92"
+ ],
+ "n_residues": 15,
+ "patches": [
+  {
+   "id": "P12",
+   "name": "Membrane-distal D1 tip",
+   "n_residues": 12,
+   "residues": [
+    "A:1",
+    "A:2",
+    "A:34",
+    "A:35",
+    "A:36",
+    "A:37",
+    "A:86",
+    "A:87",
+    "A:88",
+    "A:89",
+    "A:90",
+    "A:91"
+   ],
+   "n_kept_by_advocate": 12,
+   "n_dropped_by_advocate": 0
+  }
+ ],
+ "pooling_provenance": {
+  "n_shared_at_pooling": 12,
+  "n_disputed_at_pooling": 0,
+  "note": "counts only, describing how the organizer grouped the phase-1 patches. The organizer's own candidate residue list is deliberately absent: the answer is the advocate's footprint, in `residues` and in `antibodies[].interfaces[]`."
+ },
+ "evidence": {
+  "advocate": {
+   "n_findings": 4,
+   "n_supports": 3,
+   "n_weakens": 1,
+   "weakest_point": "The only direct residue-level precedent is a different Fab, and the cap uses nearly the full paratope span.",
+   "note": "the advocate reports claim/source/date/bearing and is not asked whether a source is about this binder"
+  },
+  "judge": {
+   "tier_a_support": 0,
+   "n_support_lines": 4,
+   "verdict": "live",
+   "note": "Tier A -- a source about this binder itself -- is the judge's adjudication, in assessment[].support[]. It exists nowhere in the advocate's own answer."
+  }
+ },
+ "provenance": {
+  "unverified_source_policy_fields": [
+   "gated",
+   "web_search",
+   "shell_network",
+   "gate_tools"
+  ],
+  "assembled_case_dir": "gpt-5.6-high/gather_refine/post_refactor/unreleased_20261029/gated/casp17/H2348/case_4ade9a_G_rep1",
+  "organize_case_dir": "gpt-5.6-high/gather_refine/post_refactor/unreleased_20261029/gated/casp17/H2348/case_4ade9a_GR_rep1",
+  "organize_status": "ok",
+  "judge_case_dir": "gpt-5.6-high/gather_refine/post_refactor/unreleased_20261029/gated/casp17/H2348/case_4ade9a_GJ_rep1",
+  "judge_status": "ok",
+  "packet": "gpt-5.6-high/gather/packets/case_4ade9a/packet",
+  "manifest": "gpt-5.6-high/gather/packets/case_4ade9a/manifest.json",
+  "advocate_case_dir": "gpt-5.6-high/gather_refine/post_refactor/unreleased_20261029/gated/casp17/H2348/case_4ade9a_GR_rep1",
+  "advocate_status": "ok"
+ }
+}

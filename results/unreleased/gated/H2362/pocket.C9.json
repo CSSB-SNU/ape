@@ -1,0 +1,309 @@
+{
+ "task": "gather",
+ "gather_mode": "batched",
+ "num_launchers": 3,
+ "policy": {
+  "evidence_cutoff": "2026-06-12",
+  "no_cutoff": false,
+  "gated": true,
+  "web_search": false,
+  "shell_network": true,
+  "gate_tools": [
+   "research",
+   "fetch",
+   "rcsb",
+   "patent",
+   "paper"
+  ]
+ },
+ "unscored": true,
+ "target": "H2362",
+ "target_set": "casp17",
+ "case": "case_259152",
+ "evidence_cutoff": "2026-06-12",
+ "target_release_date": "2026-06-12",
+ "retrieval_policy": "gated",
+ "input_structure": "data/staged_casp17_no_native/H2362.pdb",
+ "input_structure_sha256": "54e187b986e4696f87e1dd7dd4cd6cd943754471a337aa57a0577c6172827a73",
+ "briefing_source": "data/briefing/casp17/H2362/search_results.json",
+ "briefing_sha256": "b0140a751ca600dc0d1ce7f02d3095b3776329fd300b1010c950088508d8f896",
+ "antigen_chains": [
+  "A",
+  "B",
+  "C",
+  "D",
+  "E"
+ ],
+ "antibody_files": {
+  "antibody.pdb": [
+   "F",
+   "G"
+  ]
+ },
+ "antibody_chain_types": {
+  "antibody.pdb": {
+   "F": "light",
+   "G": "heavy"
+  }
+ },
+ "stage": "gatherer",
+ "pocket": {
+  "id": "C9",
+  "judge_rank": 10,
+  "name": "The membrane-proximal C-terminal heel of gH, including...",
+  "confidence": 0.03,
+  "p_rests_on_holds": 0.08,
+  "why_this_rank": "The heel is a real antibody surface, but membrane-proximal access is uncertain and its negative chemistry is least compatible with this mildly negative paratope.",
+  "rests_on": "Virion context leaves the heel accessible and local hydrophobic packing overcomes the bulk charge mismatch.",
+  "where_the_mass_goes_if_it_fails": "C10",
+  "what_it_is": "The membrane-proximal C-terminal heel of gH, including folded-together surfaces represented by full-length gH peptides 677-684 and 705-708.",
+  "why_one_candidate": "not pooled with anything: no other patch is both within 12 A (half centroid distance, half contact-graph hops) and coverable by one paratope of this antibody's reach, 17.6 A",
+  "from_patches": [
+   "P8"
+  ]
+ },
+ "note": "`confidence` on the pocket is over pockets and sums to about 1 across them. Inside an interface it is per residue in [0, 1] and sums to nothing. No residue is cut at a threshold: the whole vector is the answer.",
+ "mapping_basis": "side",
+ "checks": {
+  "unrecognised_sides": []
+ },
+ "chain_pairs": [
+  {
+   "antibody_chain": "F",
+   "antigen_chain": "E",
+   "n_residues": 14
+  },
+  {
+   "antibody_chain": "G",
+   "antigen_chain": "E",
+   "n_residues": 10
+  }
+ ],
+ "antibodies": [
+  {
+   "antibody": "antibody.pdb",
+   "chains": {
+    "F": "light",
+    "G": "heavy"
+   },
+   "binding_mode": null,
+   "n_residues_scored": 19,
+   "interfaces": [
+    {
+     "antibody_chain": "F",
+     "antibody_chain_type": "light",
+     "antigen_chain": "E",
+     "n_residues": 14,
+     "residue_confidence": {
+      "658": 0.55,
+      "659": 0.65,
+      "660": 0.9,
+      "661": 0.6,
+      "662": 0.82,
+      "665": 0.55,
+      "680": 0.42,
+      "682": 0.32,
+      "683": 0.38,
+      "686": 0.65,
+      "690": 0.55,
+      "691": 0.3,
+      "692": 0.25,
+      "693": 0.45
+     },
+     "residue_side": {
+      "658": "both",
+      "659": "both",
+      "660": "both",
+      "661": "both",
+      "662": "both",
+      "665": "light",
+      "680": "light",
+      "682": "light",
+      "683": "light",
+      "686": "light",
+      "690": "light",
+      "691": "light",
+      "692": "light",
+      "693": "light"
+     },
+     "max_confidence": 0.9,
+     "mean_confidence": 0.5279
+    },
+    {
+     "antibody_chain": "G",
+     "antibody_chain_type": "heavy",
+     "antigen_chain": "E",
+     "n_residues": 10,
+     "residue_confidence": {
+      "650": 0.35,
+      "651": 0.65,
+      "654": 0.8,
+      "655": 0.7,
+      "657": 0.35,
+      "658": 0.55,
+      "659": 0.65,
+      "660": 0.9,
+      "661": 0.6,
+      "662": 0.82
+     },
+     "residue_side": {
+      "650": "heavy",
+      "651": "heavy",
+      "654": "heavy",
+      "655": "heavy",
+      "657": "heavy",
+      "658": "both",
+      "659": "both",
+      "660": "both",
+      "661": "both",
+      "662": "both"
+     },
+     "max_confidence": 0.9,
+     "mean_confidence": 0.637
+    }
+   ]
+  }
+ ],
+ "paratope": {
+  "dominant_cdrs": [
+   "G:H3",
+   "G:H2",
+   "F:L1",
+   "F:L3"
+  ],
+  "paratope_residues": [
+   "G:26",
+   "G:27",
+   "G:28",
+   "G:30",
+   "G:31",
+   "G:32",
+   "G:33",
+   "G:34",
+   "G:35",
+   "G:54",
+   "G:55",
+   "G:56",
+   "G:57",
+   "G:58",
+   "G:59",
+   "G:99",
+   "G:101",
+   "G:102",
+   "G:103",
+   "G:104",
+   "G:105",
+   "G:106",
+   "G:107",
+   "G:108",
+   "G:110",
+   "G:111",
+   "F:27",
+   "F:28",
+   "F:30",
+   "F:31",
+   "F:32",
+   "F:50",
+   "F:52",
+   "F:92",
+   "F:93",
+   "F:94",
+   "F:97"
+  ],
+  "heavy_light_split": "Approximately 65:35 heavy:light. Heavy CDRs cover E:650-662; light CDRs cover E:665/E:680-693.",
+  "binding_mode_union": "single-chain"
+ },
+ "residues": [
+  "E:650",
+  "E:651",
+  "E:654",
+  "E:655",
+  "E:657",
+  "E:658",
+  "E:659",
+  "E:660",
+  "E:661",
+  "E:662",
+  "E:665",
+  "E:680",
+  "E:682",
+  "E:683",
+  "E:686",
+  "E:690",
+  "E:691",
+  "E:692",
+  "E:693"
+ ],
+ "n_residues": 19,
+ "patches": [
+  {
+   "id": "P8",
+   "name": "gH membrane-proximal C-terminal heel",
+   "n_residues": 23,
+   "residues": [
+    "E:614",
+    "E:615",
+    "E:616",
+    "E:618",
+    "E:650",
+    "E:651",
+    "E:654",
+    "E:655",
+    "E:657",
+    "E:658",
+    "E:659",
+    "E:660",
+    "E:661",
+    "E:662",
+    "E:665",
+    "E:680",
+    "E:682",
+    "E:683",
+    "E:686",
+    "E:687",
+    "E:689",
+    "E:691",
+    "E:692"
+   ],
+   "n_kept_by_advocate": 17,
+   "n_dropped_by_advocate": 6
+  }
+ ],
+ "pooling_provenance": {
+  "n_shared_at_pooling": 23,
+  "n_disputed_at_pooling": 0,
+  "note": "counts only, describing how the organizer grouped the phase-1 patches. The organizer's own candidate residue list is deliberately absent: the answer is the advocate's footprint, in `residues` and in `antibodies[].interfaces[]`."
+ },
+ "evidence": {
+  "advocate": {
+   "n_findings": 4,
+   "n_supports": 4,
+   "n_weakens": 0,
+   "weakest_point": "The heel is membrane-proximal and may be occluded on intact virions; HDX peptide protection also does not prove every side chain is contacted.",
+   "note": "the advocate reports claim/source/date/bearing and is not asked whether a source is about this binder"
+  },
+  "judge": {
+   "tier_a_support": 0,
+   "n_support_lines": 4,
+   "verdict": "unlikely",
+   "note": "Tier A -- a source about this binder itself -- is the judge's adjudication, in assessment[].support[]. It exists nowhere in the advocate's own answer."
+  }
+ },
+ "provenance": {
+  "unverified_source_policy_fields": [
+   "gated",
+   "web_search",
+   "shell_network",
+   "gate_tools"
+  ],
+  "assembled_case_dir": "gpt-5.6-high/gather_refine/post_refactor/unreleased_20261029/gated/casp17/H2362/case_259152_G_rep1",
+  "organize_case_dir": "gpt-5.6-high/gather_refine/post_refactor/unreleased_20261029/gated/casp17/H2362/case_259152_GR_rep1",
+  "organize_status": "ok",
+  "judge_case_dir": "gpt-5.6-high/gather_refine/post_refactor/unreleased_20261029/gated/casp17/H2362/case_259152_GJ_rep1",
+  "judge_status": "ok",
+  "packet": "gpt-5.6-high/gather/packets/case_259152/packet",
+  "manifest": "gpt-5.6-high/gather/packets/case_259152/manifest.json",
+  "advocate_case_dir": "gpt-5.6-high/gather_refine/post_refactor/unreleased_20261029/gated/casp17/H2362/case_259152_GR_rep1",
+  "advocate_status": "ok"
+ }
+}

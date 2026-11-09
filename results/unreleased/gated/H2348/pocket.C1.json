@@ -1,0 +1,341 @@
+{
+ "task": "gather",
+ "gather_mode": "batched",
+ "num_launchers": 3,
+ "policy": {
+  "evidence_cutoff": "2026-06-05",
+  "no_cutoff": false,
+  "gated": true,
+  "web_search": false,
+  "shell_network": true,
+  "gate_tools": [
+   "research",
+   "fetch",
+   "rcsb",
+   "patent",
+   "paper"
+  ]
+ },
+ "unscored": true,
+ "target": "H2348",
+ "target_set": "casp17",
+ "case": "case_4ade9a",
+ "evidence_cutoff": "2026-06-05",
+ "target_release_date": "2026-06-05",
+ "retrieval_policy": "gated",
+ "input_structure": "data/staged_casp17_no_native/H2348.pdb",
+ "input_structure_sha256": "ce3adf48ca6a518ad9b1c0b7ee6fd0899f7d12f01d7aa968c11b92ad459c41e7",
+ "briefing_source": "data/briefing/casp17/H2348/search_results.json",
+ "briefing_sha256": "4d17b3e4689d4bdb8848154699de80e2748b0d365b2fba62f69b2f96cbbee826",
+ "antigen_chains": [
+  "A"
+ ],
+ "antibody_files": {
+  "antibody.pdb": [
+   "B",
+   "C"
+  ]
+ },
+ "antibody_chain_types": {
+  "antibody.pdb": {
+   "B": "heavy",
+   "C": "light"
+  }
+ },
+ "stage": "gatherer",
+ "pocket": {
+  "id": "C1",
+  "judge_rank": 4,
+  "name": "The broad site-3 face of gp130's membrane-distal D1...",
+  "confidence": 0.12,
+  "p_rests_on_holds": 0.22,
+  "why_this_rank": "The broad D1 site-3 face is functional, antibody-bindable, contiguous and glycan-light, but it duplicates C4's surface and includes a buried rim without clone-specific support.",
+  "rests_on": "The supplied clone targets D1 but uses a broader footprint than the compact C4 precedent.",
+  "where_the_mass_goes_if_it_fails": "C4 if the D1 cap remains right; otherwise C3.",
+  "what_it_is": "The broad site-3 face of gp130's membrane-distal D1 immunoglobulin-like domain, formed by the N-terminal edge and exposed loops around the aromatic 34–37 and 84–95 ridges.",
+  "why_one_candidate": "geometry pooled 2 patches (P1, P9): P1+P9 at 2.71 A, union radius 16.75 A. Every union fits inside this antibody's paratope reach of 17.5 A. No session judged these to be the same surface.",
+  "from_patches": [
+   "P1",
+   "P9"
+  ]
+ },
+ "note": "`confidence` on the pocket is over pockets and sums to about 1 across them. Inside an interface it is per residue in [0, 1] and sums to nothing. No residue is cut at a threshold: the whole vector is the answer.",
+ "mapping_basis": "side",
+ "checks": {
+  "unrecognised_sides": []
+ },
+ "chain_pairs": [
+  {
+   "antibody_chain": "B",
+   "antigen_chain": "A",
+   "n_residues": 13
+  },
+  {
+   "antibody_chain": "C",
+   "antigen_chain": "A",
+   "n_residues": 18
+  }
+ ],
+ "antibodies": [
+  {
+   "antibody": "antibody.pdb",
+   "chains": {
+    "B": "heavy",
+    "C": "light"
+   },
+   "binding_mode": null,
+   "n_residues_scored": 24,
+   "interfaces": [
+    {
+     "antibody_chain": "B",
+     "antibody_chain_type": "heavy",
+     "antigen_chain": "A",
+     "n_residues": 13,
+     "residue_confidence": {
+      "31": 0.62,
+      "34": 0.76,
+      "35": 0.95,
+      "36": 0.63,
+      "37": 0.9,
+      "42": 0.55,
+      "49": 0.47,
+      "84": 0.48,
+      "86": 0.91,
+      "87": 0.72,
+      "88": 0.94,
+      "89": 0.91,
+      "90": 0.69
+     },
+     "residue_side": {
+      "31": "both",
+      "34": "heavy",
+      "35": "both",
+      "36": "heavy",
+      "37": "both",
+      "42": "heavy",
+      "49": "heavy",
+      "84": "heavy",
+      "86": "both",
+      "87": "both",
+      "88": "both",
+      "89": "both",
+      "90": "heavy"
+     },
+     "max_confidence": 0.95,
+     "mean_confidence": 0.7331
+    },
+    {
+     "antibody_chain": "C",
+     "antibody_chain_type": "light",
+     "antigen_chain": "A",
+     "n_residues": 18,
+     "residue_confidence": {
+      "2": 0.45,
+      "4": 0.46,
+      "8": 0.55,
+      "12": 0.42,
+      "30": 0.56,
+      "31": 0.62,
+      "35": 0.95,
+      "37": 0.9,
+      "78": 0.43,
+      "80": 0.38,
+      "86": 0.91,
+      "87": 0.72,
+      "88": 0.94,
+      "89": 0.91,
+      "91": 0.71,
+      "92": 0.68,
+      "94": 0.49,
+      "95": 0.44
+     },
+     "residue_side": {
+      "2": "light",
+      "4": "light",
+      "8": "light",
+      "12": "light",
+      "30": "light",
+      "31": "both",
+      "35": "both",
+      "37": "both",
+      "78": "light",
+      "80": "light",
+      "86": "both",
+      "87": "both",
+      "88": "both",
+      "89": "both",
+      "91": "light",
+      "92": "light",
+      "94": "light",
+      "95": "light"
+     },
+     "max_confidence": 0.95,
+     "mean_confidence": 0.64
+    }
+   ]
+  }
+ ],
+ "paratope": {
+  "dominant_cdrs": [
+   "H3aa:H3",
+   "H1aa:H1",
+   "L3aa:L3",
+   "L1aa:L1"
+  ],
+  "paratope_residues": [
+   "B:31",
+   "B:32",
+   "B:33",
+   "B:54",
+   "B:56",
+   "B:57",
+   "B:58",
+   "B:101",
+   "B:102",
+   "C:27",
+   "C:28",
+   "C:30",
+   "C:31",
+   "C:32",
+   "C:52",
+   "C:92",
+   "C:93",
+   "C:94",
+   "C:95",
+   "C:96"
+  ],
+  "heavy_light_split": "Approximately 65:35 heavy:light; H3/H1 cover the aromatic center, H2 reinforces its polar rim, and L1/L3 cover the N-terminal and Q/E/N flank.",
+  "binding_mode_union": "single-chain"
+ },
+ "residues": [
+  "A:12",
+  "A:2",
+  "A:30",
+  "A:31",
+  "A:34",
+  "A:35",
+  "A:36",
+  "A:37",
+  "A:4",
+  "A:42",
+  "A:49",
+  "A:78",
+  "A:8",
+  "A:80",
+  "A:84",
+  "A:86",
+  "A:87",
+  "A:88",
+  "A:89",
+  "A:90",
+  "A:91",
+  "A:92",
+  "A:94",
+  "A:95"
+ ],
+ "n_residues": 24,
+ "patches": [
+  {
+   "id": "P1",
+   "name": "D1 site-3 face",
+   "n_residues": 26,
+   "residues": [
+    "A:12",
+    "A:2",
+    "A:29",
+    "A:3",
+    "A:31",
+    "A:32",
+    "A:35",
+    "A:36",
+    "A:37",
+    "A:4",
+    "A:5",
+    "A:6",
+    "A:7",
+    "A:78",
+    "A:80",
+    "A:83",
+    "A:85",
+    "A:88",
+    "A:89",
+    "A:90",
+    "A:91",
+    "A:92",
+    "A:93",
+    "A:94",
+    "A:95",
+    "A:96"
+   ],
+   "n_kept_by_advocate": 16,
+   "n_dropped_by_advocate": 10
+  },
+  {
+   "id": "P9",
+   "name": "D1 site-III aromatic face around Tyr35 and Leu89",
+   "n_residues": 21,
+   "residues": [
+    "A:30",
+    "A:31",
+    "A:34",
+    "A:35",
+    "A:36",
+    "A:37",
+    "A:42",
+    "A:49",
+    "A:5",
+    "A:8",
+    "A:80",
+    "A:84",
+    "A:86",
+    "A:87",
+    "A:88",
+    "A:89",
+    "A:90",
+    "A:91",
+    "A:92",
+    "A:94",
+    "A:95"
+   ],
+   "n_kept_by_advocate": 20,
+   "n_dropped_by_advocate": 1
+  }
+ ],
+ "pooling_provenance": {
+  "n_shared_at_pooling": 13,
+  "n_disputed_at_pooling": 21,
+  "note": "counts only, describing how the organizer grouped the phase-1 patches. The organizer's own candidate residue list is deliberately absent: the answer is the advocate's footprint, in `residues` and in `antibodies[].interfaces[]`."
+ },
+ "evidence": {
+  "advocate": {
+   "n_findings": 5,
+   "n_supports": 4,
+   "n_weakens": 0,
+   "weakest_point": "The exact-antibody patent gives target identity but no D1 localization, and the 31.69 Å footprint uses nearly the full paratope long axis.",
+   "note": "the advocate reports claim/source/date/bearing and is not asked whether a source is about this binder"
+  },
+  "judge": {
+   "tier_a_support": 1,
+   "n_support_lines": 4,
+   "verdict": "live",
+   "note": "Tier A -- a source about this binder itself -- is the judge's adjudication, in assessment[].support[]. It exists nowhere in the advocate's own answer."
+  }
+ },
+ "provenance": {
+  "unverified_source_policy_fields": [
+   "gated",
+   "web_search",
+   "shell_network",
+   "gate_tools"
+  ],
+  "assembled_case_dir": "gpt-5.6-high/gather_refine/post_refactor/unreleased_20261029/gated/casp17/H2348/case_4ade9a_G_rep1",
+  "organize_case_dir": "gpt-5.6-high/gather_refine/post_refactor/unreleased_20261029/gated/casp17/H2348/case_4ade9a_GR_rep1",
+  "organize_status": "ok",
+  "judge_case_dir": "gpt-5.6-high/gather_refine/post_refactor/unreleased_20261029/gated/casp17/H2348/case_4ade9a_GJ_rep1",
+  "judge_status": "ok",
+  "packet": "gpt-5.6-high/gather/packets/case_4ade9a/packet",
+  "manifest": "gpt-5.6-high/gather/packets/case_4ade9a/manifest.json",
+  "advocate_case_dir": "gpt-5.6-high/gather_refine/post_refactor/unreleased_20261029/gated/casp17/H2348/case_4ade9a_GR_rep1",
+  "advocate_status": "ok"
+ }
+}

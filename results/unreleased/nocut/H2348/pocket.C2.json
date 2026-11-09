@@ -1,0 +1,368 @@
+{
+ "task": "gather",
+ "gather_mode": "batched",
+ "num_launchers": 3,
+ "policy": {
+  "evidence_cutoff": null,
+  "no_cutoff": true,
+  "gated": false,
+  "web_search": true,
+  "shell_network": true,
+  "gate_tools": []
+ },
+ "unscored": true,
+ "target": "H2348",
+ "target_set": "casp17",
+ "case": "case_4ade9a",
+ "evidence_cutoff": null,
+ "target_release_date": "2026-06-05",
+ "retrieval_policy": "no-cutoff",
+ "input_structure": "data/staged_casp17_no_native/H2348.pdb",
+ "input_structure_sha256": "ce3adf48ca6a518ad9b1c0b7ee6fd0899f7d12f01d7aa968c11b92ad459c41e7",
+ "briefing_source": "data/briefing/casp17_nocutoff/H2348/search_results.json",
+ "briefing_sha256": "764bf0cb501957b0a6bbb2036c672dc856ac4be1b5e0aed11fd8847f842bf759",
+ "antigen_chains": [
+  "A"
+ ],
+ "antibody_files": {
+  "antibody.pdb": [
+   "B",
+   "C"
+  ]
+ },
+ "antibody_chain_types": {
+  "antibody.pdb": {
+   "B": "unknown",
+   "C": "unknown"
+  }
+ },
+ "stage": "gatherer",
+ "pocket": {
+  "id": "C2",
+  "judge_rank": 4,
+  "name": "The cytokine-binding-homology-region site-II face across the D2-D3...",
+  "confidence": 0.17,
+  "p_rests_on_holds": 0.35,
+  "why_this_rank": "C2 has the best combined functional-site and other-binder precedent and strong aromatic chemistry, but chiefly nanobody/domain-level precedent and weak side-chain facing.",
+  "rests_on": "Selection for a shared site-II blocking epitope is relevant despite no inhibitory phenotype for this clone.",
+  "where_the_mass_goes_if_it_fails": "C6 and C5",
+  "what_it_is": "The cytokine-binding-homology-region site-II face across the D2-D3 elbow: an aromatic/hydrophobic D2 core and adjacent D3 buttress used by IL-6-family cytokine-alpha-receptor complexes (literature: 1P9M, 1PVH, 8D82; PMC7378365).",
+  "why_one_candidate": "geometry pooled 3 patches (P10, P5, P8): P10+P8 at 1.27 A, union radius 16.74 A; P10+P5+P8 at 0.94 A, union radius 17.43 A. Every union fits inside this antibody's paratope reach of 17.5 A. No session judged these to be the same surface.",
+  "from_patches": [
+   "P10",
+   "P5",
+   "P8"
+  ]
+ },
+ "note": "`confidence` on the pocket is over pockets and sums to about 1 across them. Inside an interface it is per residue in [0, 1] and sums to nothing. No residue is cut at a threshold: the whole vector is the answer.",
+ "mapping_basis": "side",
+ "checks": {
+  "unrecognised_sides": []
+ },
+ "chain_pairs": [
+  {
+   "antibody_chain": "B",
+   "antigen_chain": "A",
+   "n_residues": 19
+  },
+  {
+   "antibody_chain": "C",
+   "antigen_chain": "A",
+   "n_residues": 19
+  }
+ ],
+ "antibodies": [
+  {
+   "antibody": "antibody.pdb",
+   "chains": {
+    "B": "unknown",
+    "C": "unknown"
+   },
+   "binding_mode": null,
+   "n_residues_scored": 19,
+   "interfaces": [
+    {
+     "antibody_chain": "B",
+     "antibody_chain_type": "unknown",
+     "antigen_chain": "A",
+     "n_residues": 19,
+     "residue_confidence": {
+      "141": 0.5,
+      "142": 0.9,
+      "143": 0.82,
+      "144": 0.84,
+      "145": 0.86,
+      "146": 0.53,
+      "147": 0.39,
+      "163": 0.72,
+      "165": 0.9,
+      "166": 0.58,
+      "167": 0.77,
+      "168": 0.86,
+      "169": 0.96,
+      "170": 0.84,
+      "171": 0.8,
+      "173": 0.48,
+      "191": 0.49,
+      "196": 0.55,
+      "230": 0.61
+     },
+     "residue_side": {
+      "141": "light",
+      "142": "heavy",
+      "143": "both",
+      "144": "both",
+      "145": "heavy",
+      "146": "light",
+      "147": "heavy",
+      "163": "light",
+      "165": "both",
+      "166": "both",
+      "167": "both",
+      "168": "heavy",
+      "169": "both",
+      "170": "both",
+      "171": "both",
+      "173": "light",
+      "191": "light",
+      "196": "light",
+      "230": "light"
+     },
+     "max_confidence": 0.96,
+     "mean_confidence": 0.7053
+    },
+    {
+     "antibody_chain": "C",
+     "antibody_chain_type": "unknown",
+     "antigen_chain": "A",
+     "n_residues": 19,
+     "residue_confidence": {
+      "141": 0.5,
+      "142": 0.9,
+      "143": 0.82,
+      "144": 0.84,
+      "145": 0.86,
+      "146": 0.53,
+      "147": 0.39,
+      "163": 0.72,
+      "165": 0.9,
+      "166": 0.58,
+      "167": 0.77,
+      "168": 0.86,
+      "169": 0.96,
+      "170": 0.84,
+      "171": 0.8,
+      "173": 0.48,
+      "191": 0.49,
+      "196": 0.55,
+      "230": 0.61
+     },
+     "residue_side": {
+      "141": "light",
+      "142": "heavy",
+      "143": "both",
+      "144": "both",
+      "145": "heavy",
+      "146": "light",
+      "147": "heavy",
+      "163": "light",
+      "165": "both",
+      "166": "both",
+      "167": "both",
+      "168": "heavy",
+      "169": "both",
+      "170": "both",
+      "171": "both",
+      "173": "light",
+      "191": "light",
+      "196": "light",
+      "230": "light"
+     },
+     "max_confidence": 0.96,
+     "mean_confidence": 0.7053
+    }
+   ]
+  }
+ ],
+ "paratope": {
+  "dominant_cdrs": [
+   "H3:H1",
+   "H1:H3",
+   "H2:L3",
+   "L3:H2"
+  ],
+  "paratope_residues": [
+   "B:27",
+   "B:31",
+   "B:32",
+   "B:33",
+   "B:54",
+   "B:56",
+   "B:57",
+   "B:58",
+   "B:98",
+   "B:99",
+   "B:101",
+   "B:102",
+   "B:105",
+   "C:27",
+   "C:28",
+   "C:30",
+   "C:31",
+   "C:32",
+   "C:52",
+   "C:91",
+   "C:92",
+   "C:93",
+   "C:94",
+   "C:95"
+  ],
+  "heavy_light_split": "Heavy should contribute roughly two thirds of the energetic core over W142/H145/Y168/F169/V170. Light takes the acidic/polar D163/E173/N191/Y196/V230 rim; A:143-A:144 and A:165-A:171 form the broad both-chain seam.",
+  "binding_mode_union": "single-chain"
+ },
+ "residues": [
+  "A:141",
+  "A:142",
+  "A:143",
+  "A:144",
+  "A:145",
+  "A:146",
+  "A:147",
+  "A:163",
+  "A:165",
+  "A:166",
+  "A:167",
+  "A:168",
+  "A:169",
+  "A:170",
+  "A:171",
+  "A:173",
+  "A:191",
+  "A:196",
+  "A:230"
+ ],
+ "n_residues": 19,
+ "patches": [
+  {
+   "id": "P10",
+   "name": "Compact D2-D3 cytokine site-II face",
+   "n_residues": 19,
+   "residues": [
+    "A:141",
+    "A:142",
+    "A:143",
+    "A:144",
+    "A:145",
+    "A:146",
+    "A:163",
+    "A:165",
+    "A:166",
+    "A:167",
+    "A:168",
+    "A:169",
+    "A:170",
+    "A:171",
+    "A:173",
+    "A:191",
+    "A:196",
+    "A:229",
+    "A:230"
+   ],
+   "n_kept_by_advocate": 18,
+   "n_dropped_by_advocate": 1
+  },
+  {
+   "id": "P5",
+   "name": "D2-D3 conserved cytokine site-2 face",
+   "n_residues": 19,
+   "residues": [
+    "A:141",
+    "A:142",
+    "A:143",
+    "A:144",
+    "A:145",
+    "A:146",
+    "A:148",
+    "A:161",
+    "A:163",
+    "A:165",
+    "A:167",
+    "A:168",
+    "A:169",
+    "A:170",
+    "A:171",
+    "A:173",
+    "A:191",
+    "A:196",
+    "A:230"
+   ],
+   "n_kept_by_advocate": 17,
+   "n_dropped_by_advocate": 2
+  },
+  {
+   "id": "P8",
+   "name": "D2 cytokine site-3 face",
+   "n_residues": 19,
+   "residues": [
+    "A:117",
+    "A:118",
+    "A:119",
+    "A:142",
+    "A:143",
+    "A:144",
+    "A:145",
+    "A:147",
+    "A:163",
+    "A:164",
+    "A:165",
+    "A:166",
+    "A:167",
+    "A:168",
+    "A:169",
+    "A:170",
+    "A:171",
+    "A:193",
+    "A:196"
+   ],
+   "n_kept_by_advocate": 14,
+   "n_dropped_by_advocate": 5
+  }
+ ],
+ "pooling_provenance": {
+  "n_shared_at_pooling": 12,
+  "n_disputed_at_pooling": 15,
+  "note": "counts only, describing how the organizer grouped the phase-1 patches. The organizer's own candidate residue list is deliberately absent: the answer is the advocate's footprint, in `residues` and in `antibodies[].interfaces[]`."
+ },
+ "evidence": {
+  "advocate": {
+   "n_findings": 4,
+   "n_supports": 4,
+   "n_weakens": 0,
+   "weakest_point": "The strongest antibody precedents here are unrelated single-domain antibodies, and several functional hotspot side chains are only partly exposed in apo gp130. The sequence patent supplies no competition phenotype, so this compelling functional surface could still be wrong for the clone.",
+   "note": "the advocate reports claim/source/date/bearing and is not asked whether a source is about this binder"
+  },
+  "judge": {
+   "tier_a_support": 1,
+   "n_support_lines": 5,
+   "verdict": "live",
+   "note": "Tier A -- a source about this binder itself -- is the judge's adjudication, in assessment[].support[]. It exists nowhere in the advocate's own answer."
+  }
+ },
+ "provenance": {
+  "unverified_source_policy_fields": [
+   "gated",
+   "web_search",
+   "shell_network",
+   "gate_tools"
+  ],
+  "assembled_case_dir": "gpt-5.6-high/gather_refine/post_refactor/unreleased_20261029/nocut/casp17/H2348/case_4ade9a_G_rep1",
+  "organize_case_dir": "gpt-5.6-high/gather_refine/post_refactor/unreleased_20261029/nocut/casp17/H2348/case_4ade9a_GR_rep1",
+  "organize_status": "ok",
+  "judge_case_dir": "gpt-5.6-high/gather_refine/post_refactor/unreleased_20261029/nocut/casp17/H2348/case_4ade9a_GJ_rep1",
+  "judge_status": "ok",
+  "packet": "gpt-5.6-high/nocut/gather/packets/case_4ade9a/packet",
+  "manifest": "gpt-5.6-high/nocut/gather/packets/case_4ade9a/manifest.json",
+  "advocate_case_dir": "gpt-5.6-high/gather_refine/post_refactor/unreleased_20261029/nocut/casp17/H2348/case_4ade9a_GR_rep1",
+  "advocate_status": "ok"
+ }
+}

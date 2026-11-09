@@ -1,0 +1,237 @@
+{
+ "target": "H2312",
+ "target_set": "casp17",
+ "case": "case_3a23b5",
+ "task": "gather",
+ "gather_mode": "batched",
+ "num_launchers": 3,
+ "policy": {
+  "evidence_cutoff": null,
+  "no_cutoff": true,
+  "gated": false,
+  "web_search": true,
+  "shell_network": true,
+  "gate_tools": []
+ },
+ "unscored": true,
+ "evidence_cutoff": null,
+ "target_release_date": "2026-05-13",
+ "retrieval_policy": "no-cutoff",
+ "antigen_chains": [
+  "A",
+  "B"
+ ],
+ "antibody_files": {
+  "antibody.pdb": [
+   "C"
+  ]
+ },
+ "antibody_chain_types": {
+  "antibody.pdb": {
+   "C": "heavy"
+  }
+ },
+ "input_structure": "data/staged_casp17_no_native/H2312.pdb",
+ "input_structure_sha256": "3ba79066f0aa7015920828a3678d94af5f532471fde42bb38b00795e45f94b8b",
+ "briefing_source": "data/briefing/casp17_nocutoff/H2312/search_results.json",
+ "briefing_sha256": "2b8c71697fd0cc7175a5631c137526c8209032f024f0df47a726889d5e5bdf88",
+ "recognized_complex": {
+  "organize": null,
+  "judge": true
+ },
+ "recognition_note": "Exact-sequence searches identified CASP17 target H2312/H1312 as human EXT1–EXT2 bound to VHH clone 2BAV4 (public target entry dated 2026-04-29). The page gave identity, sequences, and EM method but no epitope. I did not open native-complex coordinates, an answer key, or CASP assessment material.",
+ "what_separated_them": "No candidate had Tier A evidence about 2BAV4, so this remains a broad prior over surfaces rather than a localized call. Uniform calculations compared every footprint with the separately measured 24.10 Å CDR Cα and 28.01 Å side-chain extent, assembly exposure, connectedness, PCA dimensions, exposed charge and aromatics, interchain context, and glycan proximity. C1 separated by the cleanest size, shape, and exposure balance; C4 and C5 by stronger chemistry; C9 by chemistry plus a real glycan constraint. C7/C8 lost on reach or recession, C6 on native-boundary uncertainty, and C10 on the observed glycan. Catalytic function was not allowed to dominate because no evidence says 2BAV4 was selected for inhibition. Overlapping C1/C5/C8 and C7/C9 share functional evidence, so that evidence was not treated as independent localization.",
+ "not_pooled": [],
+ "provenance": {
+  "unverified_source_policy_fields": [
+   "gated",
+   "web_search",
+   "shell_network",
+   "gate_tools"
+  ],
+  "assembled_case_dir": "gpt-5.6-high/gather_refine/post_refactor/unreleased_20261029/nocut/casp17/H2312/case_3a23b5_G_rep1",
+  "organize_case_dir": "gpt-5.6-high/gather_refine/post_refactor/unreleased_20261029/nocut/casp17/H2312/case_3a23b5_GR_rep1",
+  "organize_status": "ok",
+  "judge_case_dir": "gpt-5.6-high/gather_refine/post_refactor/unreleased_20261029/nocut/casp17/H2312/case_3a23b5_GJ_rep1",
+  "judge_status": "ok",
+  "packet": "gpt-5.6-high/nocut/gather/packets/case_3a23b5/packet",
+  "manifest": "gpt-5.6-high/nocut/gather/packets/case_3a23b5/manifest.json"
+ },
+ "pockets": [
+  {
+   "id": "C1",
+   "judge_rank": 1,
+   "name": "The solvent-open oligosaccharide-acceptor channel of the active...",
+   "confidence": 0.18,
+   "mapping_basis": "side",
+   "n_residues": 20,
+   "chain_pairs": [
+    {
+     "antibody_chain": "C",
+     "antigen_chain": "B",
+     "n_residues": 20
+    }
+   ],
+   "file": "pocket.C1.json"
+  },
+  {
+   "id": "C4",
+   "judge_rank": 2,
+   "name": "The exposed acidic cleft of EXT2's N-terminal pseudo-GT-B domain...",
+   "confidence": 0.16,
+   "mapping_basis": "side",
+   "n_residues": 21,
+   "chain_pairs": [
+    {
+     "antibody_chain": "C",
+     "antigen_chain": "B",
+     "n_residues": 21
+    }
+   ],
+   "file": "pocket.C4.json"
+  },
+  {
+   "id": "C5",
+   "judge_rank": 3,
+   "name": "The outer acceptor-facing rim of active EXT2 GT-A, running from the...",
+   "confidence": 0.15,
+   "mapping_basis": "side",
+   "n_residues": 27,
+   "chain_pairs": [
+    {
+     "antibody_chain": "C",
+     "antigen_chain": "B",
+     "n_residues": 27
+    }
+   ],
+   "file": "pocket.C5.json"
+  },
+  {
+   "id": "C9",
+   "judge_rank": 4,
+   "name": "The substrate-facing aromatic/acidic rim of active EXT1 GT-B...",
+   "confidence": 0.11,
+   "mapping_basis": "side",
+   "n_residues": 24,
+   "chain_pairs": [
+    {
+     "antibody_chain": "C",
+     "antigen_chain": "A",
+     "n_residues": 24
+    }
+   ],
+   "file": "pocket.C9.json"
+  },
+  {
+   "id": "C3",
+   "judge_rank": 5,
+   "name": "A quaternary rim at the junction of the EXT1 N-terminal pseudo-GT-A...",
+   "confidence": 0.09,
+   "mapping_basis": "side",
+   "n_residues": 20,
+   "chain_pairs": [
+    {
+     "antibody_chain": "C",
+     "antigen_chain": "A",
+     "n_residues": 9
+    },
+    {
+     "antibody_chain": "C",
+     "antigen_chain": "B",
+     "n_residues": 11
+    }
+   ],
+   "file": "pocket.C3.json"
+  },
+  {
+   "id": "C2",
+   "judge_rank": 6,
+   "name": "A mobile, solvent-exposed rim loop on the active EXT1 GT-B cleft...",
+   "confidence": 0.08,
+   "mapping_basis": "side",
+   "n_residues": 18,
+   "chain_pairs": [
+    {
+     "antibody_chain": "C",
+     "antigen_chain": "A",
+     "n_residues": 18
+    }
+   ],
+   "file": "pocket.C2.json"
+  },
+  {
+   "id": "C8",
+   "judge_rank": 7,
+   "name": "The central catalytic throat connecting donor and acceptor subsites...",
+   "confidence": 0.07,
+   "mapping_basis": "side",
+   "n_residues": 21,
+   "chain_pairs": [
+    {
+     "antibody_chain": "C",
+     "antigen_chain": "B",
+     "n_residues": 21
+    }
+   ],
+   "file": "pocket.C8.json"
+  },
+  {
+   "id": "C6",
+   "judge_rank": 8,
+   "name": "A compact membrane-proximal seam between the EXT1 construct N...",
+   "confidence": 0.06,
+   "mapping_basis": "side",
+   "n_residues": 18,
+   "chain_pairs": [
+    {
+     "antibody_chain": "C",
+     "antigen_chain": "A",
+     "n_residues": 7
+    },
+    {
+     "antibody_chain": "C",
+     "antigen_chain": "B",
+     "n_residues": 11
+    }
+   ],
+   "file": "pocket.C6.json"
+  },
+  {
+   "id": "C7",
+   "judge_rank": 9,
+   "name": "The broad catalytic cleft of active EXT1 GT-B, spanning the A:82/A:84...",
+   "confidence": 0.06,
+   "mapping_basis": "side",
+   "n_residues": 22,
+   "chain_pairs": [
+    {
+     "antibody_chain": "C",
+     "antigen_chain": "A",
+     "n_residues": 22
+    }
+   ],
+   "file": "pocket.C7.json"
+  },
+  {
+   "id": "C10",
+   "judge_rank": 10,
+   "name": "A glycan-bearing quaternary hinge seam where EXT1 A:390–A:397 meets...",
+   "confidence": 0.04,
+   "mapping_basis": "side",
+   "n_residues": 25,
+   "chain_pairs": [
+    {
+     "antibody_chain": "C",
+     "antigen_chain": "A",
+     "n_residues": 8
+    },
+    {
+     "antibody_chain": "C",
+     "antigen_chain": "B",
+     "n_residues": 17
+    }
+   ],
+   "file": "pocket.C10.json"
+  }
+ ]
+}

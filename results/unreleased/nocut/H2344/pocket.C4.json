@@ -1,0 +1,258 @@
+{
+ "task": "gather",
+ "gather_mode": "batched",
+ "num_launchers": 3,
+ "policy": {
+  "evidence_cutoff": null,
+  "no_cutoff": true,
+  "gated": false,
+  "web_search": true,
+  "shell_network": true,
+  "gate_tools": []
+ },
+ "unscored": true,
+ "target": "H2344",
+ "target_set": "casp17",
+ "case": "case_679778",
+ "evidence_cutoff": null,
+ "target_release_date": "2026-06-03",
+ "retrieval_policy": "no-cutoff",
+ "input_structure": "data/staged_casp17_no_native/H2344.pdb",
+ "input_structure_sha256": "18733617ed7c4b96b45ff3352f72763afcd6932570e14f1956abaeff946190b8",
+ "briefing_source": "data/briefing/casp17_nocutoff/H2344/search_results.json",
+ "briefing_sha256": "219c979403254eb778aaaf285ed1a338e86cc2322627ca12f3ab91aaa7876e87",
+ "antigen_chains": [
+  "C"
+ ],
+ "antibody_files": {
+  "antibody.pdb": [
+   "A",
+   "B"
+  ]
+ },
+ "antibody_chain_types": {
+  "antibody.pdb": {
+   "A": "unknown",
+   "B": "unknown"
+  }
+ },
+ "stage": "gatherer",
+ "pocket": {
+  "id": "C4",
+  "judge_rank": 4,
+  "name": "The compact proline-rich C-terminal-extension shelf immediately...",
+  "confidence": 0.15,
+  "p_rests_on_holds": 0.3,
+  "why_this_rank": "C4 is the most compact/coherent candidate and contains exposed gD2-specific P246 with MC2-region precedent, but the shelf is state-occluded and no HAB72 P246 swap or MC2 competition exists.",
+  "rests_on": "P246 is the HAB72 type-specific determinant and the local shelf is accessible in the relevant binding state.",
+  "where_the_mass_goes_if_it_fails": "C3 or C1.",
+  "what_it_is": "The compact proline-rich C-terminal-extension shelf immediately upstream of the pro-fusion arm, centred on the HSV-2-specific P246 turn. It is a receptor-distal local activation ridge within the mapped MC2 sequence requirement, specifically the 235–247 shelf presented around the P246 turn.",
+  "why_one_candidate": "not pooled with anything: no other patch is both within 12 A (half centroid distance, half contact-graph hops) and coverable by one paratope of this antibody's reach, 18.1 A",
+  "from_patches": [
+   "P2"
+  ]
+ },
+ "note": "`confidence` on the pocket is over pockets and sums to about 1 across them. Inside an interface it is per residue in [0, 1] and sums to nothing. No residue is cut at a threshold: the whole vector is the answer.",
+ "mapping_basis": "side",
+ "checks": {
+  "unrecognised_sides": []
+ },
+ "chain_pairs": [
+  {
+   "antibody_chain": "A",
+   "antigen_chain": "C",
+   "n_residues": 10
+  },
+  {
+   "antibody_chain": "B",
+   "antigen_chain": "C",
+   "n_residues": 10
+  }
+ ],
+ "antibodies": [
+  {
+   "antibody": "antibody.pdb",
+   "chains": {
+    "A": "unknown",
+    "B": "unknown"
+   },
+   "binding_mode": null,
+   "n_residues_scored": 10,
+   "interfaces": [
+    {
+     "antibody_chain": "A",
+     "antibody_chain_type": "unknown",
+     "antigen_chain": "C",
+     "n_residues": 10,
+     "residue_confidence": {
+      "235": 0.57,
+      "237": 0.37,
+      "238": 0.71,
+      "239": 0.65,
+      "240": 0.63,
+      "242": 0.75,
+      "244": 0.83,
+      "245": 0.79,
+      "246": 0.98,
+      "247": 0.74
+     },
+     "residue_side": {
+      "235": "heavy",
+      "237": "heavy",
+      "238": "heavy",
+      "239": "heavy",
+      "240": "heavy",
+      "242": "both",
+      "244": "both",
+      "245": "both",
+      "246": "light",
+      "247": "light"
+     },
+     "max_confidence": 0.98,
+     "mean_confidence": 0.702
+    },
+    {
+     "antibody_chain": "B",
+     "antibody_chain_type": "unknown",
+     "antigen_chain": "C",
+     "n_residues": 10,
+     "residue_confidence": {
+      "235": 0.57,
+      "237": 0.37,
+      "238": 0.71,
+      "239": 0.65,
+      "240": 0.63,
+      "242": 0.75,
+      "244": 0.83,
+      "245": 0.79,
+      "246": 0.98,
+      "247": 0.74
+     },
+     "residue_side": {
+      "235": "heavy",
+      "237": "heavy",
+      "238": "heavy",
+      "239": "heavy",
+      "240": "heavy",
+      "242": "both",
+      "244": "both",
+      "245": "both",
+      "246": "light",
+      "247": "light"
+     },
+     "max_confidence": 0.98,
+     "mean_confidence": 0.702
+    }
+   ]
+  }
+ ],
+ "paratope": {
+  "dominant_cdrs": [
+   "H3:H2",
+   "L1:L3"
+  ],
+  "paratope_residues": [
+   "A:31",
+   "A:32",
+   "A:54",
+   "A:55",
+   "A:57",
+   "A:100",
+   "A:101",
+   "A:102",
+   "A:103",
+   "A:104",
+   "A:105",
+   "A:106",
+   "A:107",
+   "A:109",
+   "A:112",
+   "A:113",
+   "B:27",
+   "B:28",
+   "B:32",
+   "B:33",
+   "B:92",
+   "B:94",
+   "B:95",
+   "B:96",
+   "B:98"
+  ],
+  "heavy_light_split": "Heavy-dominant (~75:25): H3/H2 lie along S235–P245; L1/L3 share H242/P244/K245 and read the subtype-specific P246/P247 rim.",
+  "binding_mode_union": "single-chain"
+ },
+ "residues": [
+  "C:235",
+  "C:237",
+  "C:238",
+  "C:239",
+  "C:240",
+  "C:242",
+  "C:244",
+  "C:245",
+  "C:246",
+  "C:247"
+ ],
+ "n_residues": 10,
+ "patches": [
+  {
+   "id": "P2",
+   "name": "HSV-2-specific MC2 activation face centered on P246",
+   "n_residues": 13,
+   "residues": [
+    "C:231",
+    "C:233",
+    "C:234",
+    "C:235",
+    "C:237",
+    "C:238",
+    "C:239",
+    "C:240",
+    "C:242",
+    "C:244",
+    "C:245",
+    "C:246",
+    "C:247"
+   ],
+   "n_kept_by_advocate": 10,
+   "n_dropped_by_advocate": 3
+  }
+ ],
+ "pooling_provenance": {
+  "n_shared_at_pooling": 13,
+  "n_disputed_at_pooling": 0,
+  "note": "counts only, describing how the organizer grouped the phase-1 patches. The organizer's own candidate residue list is deliberately absent: the answer is the advocate's footprint, in `residues` and in `antibodies[].interfaces[]`."
+ },
+ "evidence": {
+  "advocate": {
+   "n_findings": 5,
+   "n_supports": 4,
+   "n_weakens": 0,
+   "weakest_point": "P246 is a compelling subtype marker but not a demonstrated HAB72 contact, and this normally C-terminally occluded surface may be transiently accessible; the exact consequence of occupying only the local shelf is therefore unresolved.",
+   "note": "the advocate reports claim/source/date/bearing and is not asked whether a source is about this binder"
+  },
+  "judge": {
+   "tier_a_support": 1,
+   "n_support_lines": 5,
+   "verdict": "live",
+   "note": "Tier A -- a source about this binder itself -- is the judge's adjudication, in assessment[].support[]. It exists nowhere in the advocate's own answer."
+  }
+ },
+ "provenance": {
+  "unverified_source_policy_fields": [
+   "gated",
+   "web_search",
+   "shell_network",
+   "gate_tools"
+  ],
+  "assembled_case_dir": "gpt-5.6-high/gather_refine/post_refactor/unreleased_20261029/nocut/casp17/H2344/case_679778_G_rep1",
+  "organize_case_dir": "gpt-5.6-high/gather_refine/post_refactor/unreleased_20261029/nocut/casp17/H2344/case_679778_GR_rep1",
+  "organize_status": "ok",
+  "judge_case_dir": "gpt-5.6-high/gather_refine/post_refactor/unreleased_20261029/nocut/casp17/H2344/case_679778_GJ_rep1",
+  "judge_status": "ok",
+  "packet": "gpt-5.6-high/nocut/gather/packets/case_679778/packet",
+  "manifest": "gpt-5.6-high/nocut/gather/packets/case_679778/manifest.json",
+  "advocate_case_dir": "gpt-5.6-high/gather_refine/post_refactor/unreleased_20261029/nocut/casp17/H2344/case_679778_GR_rep1",
+  "advocate_status": "ok"
+ }
+}

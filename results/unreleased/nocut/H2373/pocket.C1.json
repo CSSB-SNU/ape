@@ -1,0 +1,374 @@
+{
+ "task": "gather",
+ "gather_mode": "batched",
+ "num_launchers": 3,
+ "policy": {
+  "evidence_cutoff": null,
+  "no_cutoff": true,
+  "gated": false,
+  "web_search": true,
+  "shell_network": true,
+  "gate_tools": []
+ },
+ "unscored": true,
+ "target": "H2373",
+ "target_set": "casp17",
+ "case": "case_0a097a",
+ "evidence_cutoff": null,
+ "target_release_date": "2026-06-22",
+ "retrieval_policy": "no-cutoff",
+ "input_structure": "data/staged_casp17_no_native/H2373.pdb",
+ "input_structure_sha256": "6de101bc89c71ca02e9619508c2a03a96a523de97b34239d24f30aae6c792209",
+ "briefing_source": "data/briefing/casp17_nocutoff/H2373/search_results.json",
+ "briefing_sha256": "17237e993183a0c45c34a649ddd0e77ee2b537117226e6ee1aee035399333a3c",
+ "antigen_chains": [
+  "C"
+ ],
+ "antibody_files": {
+  "antibody.pdb": [
+   "A",
+   "B"
+  ]
+ },
+ "antibody_chain_types": {
+  "antibody.pdb": {
+   "A": "unknown",
+   "B": "unknown"
+  }
+ },
+ "stage": "gatherer",
+ "pocket": {
+  "id": "C1",
+  "judge_rank": 1,
+  "name": "The broad host-receptor-binding face of the gD Ig-like entry domain...",
+  "confidence": 0.27,
+  "p_rests_on_holds": 0.5,
+  "why_this_rank": "C1 has two independent same-antigen antibody precedents, including a conventional Fab footprint closely matching the proposed surface, and the best orientation-independent hydrophobic/aromatic match to HAB194. Its lead is small because it has no HAB194-specific evidence and is at the paratope reach limit.",
+  "rests_on": "The broad receptor-face union is simultaneously coverable by HAB194 and its favorable global chemistry is informative despite the missing pose.",
+  "where_the_mass_goes_if_it_fails": "C2, then C3",
+  "what_it_is": "The broad host-receptor-binding face of the gD Ig-like entry domain: an upper Tyr38/Gln132/Asp215 lobe joins the Pro221–Phe223 receptor ridge and the solvent-facing alpha3 flank through residue 238.",
+  "why_one_candidate": "geometry pooled 3 patches (P1, P4, P5): P4+P5 at 0.7 A, union radius 15.64 A; P1+P4+P5 at 0.82 A, union radius 15.96 A. Every union fits inside this antibody's paratope reach of 17.7 A. No session judged these to be the same surface.",
+  "from_patches": [
+   "P1",
+   "P4",
+   "P5"
+  ]
+ },
+ "note": "`confidence` on the pocket is over pockets and sums to about 1 across them. Inside an interface it is per residue in [0, 1] and sums to nothing. No residue is cut at a threshold: the whole vector is the answer.",
+ "mapping_basis": "side",
+ "checks": {
+  "unrecognised_sides": []
+ },
+ "chain_pairs": [
+  {
+   "antibody_chain": "A",
+   "antigen_chain": "C",
+   "n_residues": 20
+  },
+  {
+   "antibody_chain": "B",
+   "antigen_chain": "C",
+   "n_residues": 20
+  }
+ ],
+ "antibodies": [
+  {
+   "antibody": "antibody.pdb",
+   "chains": {
+    "A": "unknown",
+    "B": "unknown"
+   },
+   "binding_mode": null,
+   "n_residues_scored": 20,
+   "interfaces": [
+    {
+     "antibody_chain": "A",
+     "antibody_chain_type": "unknown",
+     "antigen_chain": "C",
+     "n_residues": 20,
+     "residue_confidence": {
+      "27": 0.34,
+      "38": 0.78,
+      "132": 0.28,
+      "137": 0.38,
+      "139": 0.68,
+      "140": 0.66,
+      "215": 0.64,
+      "220": 0.52,
+      "221": 0.84,
+      "222": 0.94,
+      "223": 0.9,
+      "224": 0.3,
+      "226": 0.42,
+      "227": 0.3,
+      "229": 0.38,
+      "230": 0.34,
+      "231": 0.27,
+      "233": 0.31,
+      "235": 0.5,
+      "238": 0.4
+     },
+     "residue_side": {
+      "27": "heavy",
+      "38": "both",
+      "132": "heavy",
+      "137": "heavy",
+      "139": "heavy",
+      "140": "both",
+      "215": "light",
+      "220": "heavy",
+      "221": "both",
+      "222": "both",
+      "223": "both",
+      "224": "heavy",
+      "226": "heavy",
+      "227": "heavy",
+      "229": "heavy",
+      "230": "heavy",
+      "231": "heavy",
+      "233": "heavy",
+      "235": "heavy",
+      "238": "heavy"
+     },
+     "max_confidence": 0.94,
+     "mean_confidence": 0.509
+    },
+    {
+     "antibody_chain": "B",
+     "antibody_chain_type": "unknown",
+     "antigen_chain": "C",
+     "n_residues": 20,
+     "residue_confidence": {
+      "27": 0.34,
+      "38": 0.78,
+      "132": 0.28,
+      "137": 0.38,
+      "139": 0.68,
+      "140": 0.66,
+      "215": 0.64,
+      "220": 0.52,
+      "221": 0.84,
+      "222": 0.94,
+      "223": 0.9,
+      "224": 0.3,
+      "226": 0.42,
+      "227": 0.3,
+      "229": 0.38,
+      "230": 0.34,
+      "231": 0.27,
+      "233": 0.31,
+      "235": 0.5,
+      "238": 0.4
+     },
+     "residue_side": {
+      "27": "heavy",
+      "38": "both",
+      "132": "heavy",
+      "137": "heavy",
+      "139": "heavy",
+      "140": "both",
+      "215": "light",
+      "220": "heavy",
+      "221": "both",
+      "222": "both",
+      "223": "both",
+      "224": "heavy",
+      "226": "heavy",
+      "227": "heavy",
+      "229": "heavy",
+      "230": "heavy",
+      "231": "heavy",
+      "233": "heavy",
+      "235": "heavy",
+      "238": "heavy"
+     },
+     "max_confidence": 0.94,
+     "mean_confidence": 0.509
+    }
+   ]
+  }
+ ],
+ "paratope": {
+  "dominant_cdrs": [
+   "H3:H2",
+   "H1:L1"
+  ],
+  "paratope_residues": [
+   "A:27",
+   "A:28",
+   "A:30",
+   "A:31",
+   "A:32",
+   "A:53",
+   "A:54",
+   "A:56",
+   "A:57",
+   "A:58",
+   "A:100",
+   "A:101",
+   "A:102",
+   "A:103",
+   "A:104",
+   "A:105",
+   "A:106",
+   "A:107",
+   "A:109",
+   "A:110",
+   "B:26",
+   "B:30",
+   "B:31",
+   "B:32",
+   "B:33",
+   "B:34",
+   "B:53",
+   "B:54",
+   "B:93",
+   "B:95",
+   "B:96",
+   "B:97",
+   "B:98",
+   "B:100"
+  ],
+  "heavy_light_split": "Approximately 70:30 heavy:light. H3/H2/H1 cover the Pro221–Phe223 centre and alpha3 flank; L1/L3 occupy the Tyr38–Asp215 edge, with both chains converging on Tyr38 and residues 140/221–223.",
+  "binding_mode_union": "single-chain"
+ },
+ "residues": [
+  "C:132",
+  "C:137",
+  "C:139",
+  "C:140",
+  "C:215",
+  "C:220",
+  "C:221",
+  "C:222",
+  "C:223",
+  "C:224",
+  "C:226",
+  "C:227",
+  "C:229",
+  "C:230",
+  "C:231",
+  "C:233",
+  "C:235",
+  "C:238",
+  "C:27",
+  "C:38"
+ ],
+ "n_residues": 20,
+ "patches": [
+  {
+   "id": "P1",
+   "name": "Receptor-binding face spanning the 221-223 ridge",
+   "n_residues": 20,
+   "residues": [
+    "C:132",
+    "C:137",
+    "C:139",
+    "C:140",
+    "C:215",
+    "C:220",
+    "C:221",
+    "C:222",
+    "C:223",
+    "C:224",
+    "C:226",
+    "C:227",
+    "C:229",
+    "C:230",
+    "C:231",
+    "C:233",
+    "C:235",
+    "C:238",
+    "C:27",
+    "C:38"
+   ],
+   "n_kept_by_advocate": 20,
+   "n_dropped_by_advocate": 0
+  },
+  {
+   "id": "P4",
+   "name": "Receptor-overlap face centered on Pro221–Phe223 and Tyr38",
+   "n_residues": 14,
+   "residues": [
+    "C:132",
+    "C:139",
+    "C:140",
+    "C:215",
+    "C:221",
+    "C:222",
+    "C:223",
+    "C:224",
+    "C:227",
+    "C:231",
+    "C:235",
+    "C:238",
+    "C:27",
+    "C:38"
+   ],
+   "n_kept_by_advocate": 14,
+   "n_dropped_by_advocate": 0
+  },
+  {
+   "id": "P5",
+   "name": "Nectin/receptor-overlap alpha3 face",
+   "n_residues": 16,
+   "residues": [
+    "C:132",
+    "C:137",
+    "C:139",
+    "C:140",
+    "C:215",
+    "C:220",
+    "C:221",
+    "C:222",
+    "C:223",
+    "C:224",
+    "C:227",
+    "C:231",
+    "C:235",
+    "C:238",
+    "C:27",
+    "C:38"
+   ],
+   "n_kept_by_advocate": 16,
+   "n_dropped_by_advocate": 0
+  }
+ ],
+ "pooling_provenance": {
+  "n_shared_at_pooling": 14,
+  "n_disputed_at_pooling": 6,
+  "note": "counts only, describing how the organizer grouped the phase-1 patches. The organizer's own candidate residue list is deliberately absent: the answer is the advocate's footprint, in `residues` and in `antibodies[].interfaces[]`."
+ },
+ "evidence": {
+  "advocate": {
+   "n_findings": 5,
+   "n_supports": 4,
+   "n_weakens": 0,
+   "weakest_point": "Every atomic precedent on this face involves an antibody sequence different from HAB194, and the selected 29.58 Å footprint is already near the Fab's full span. Several literature-supported residues are cryptic in apo gD, so the case requires a favorable angle and local rearrangement that separate-molecule analysis cannot verify.",
+   "note": "the advocate reports claim/source/date/bearing and is not asked whether a source is about this binder"
+  },
+  "judge": {
+   "tier_a_support": 0,
+   "n_support_lines": 5,
+   "verdict": "leading",
+   "note": "Tier A -- a source about this binder itself -- is the judge's adjudication, in assessment[].support[]. It exists nowhere in the advocate's own answer."
+  }
+ },
+ "provenance": {
+  "unverified_source_policy_fields": [
+   "gated",
+   "web_search",
+   "shell_network",
+   "gate_tools"
+  ],
+  "assembled_case_dir": "gpt-5.6-high/gather_refine/post_refactor/unreleased_20261029/nocut/casp17/H2373/case_0a097a_G_rep5",
+  "organize_case_dir": "gpt-5.6-high/gather_refine/post_refactor/unreleased_20261029/nocut/casp17/H2373/case_0a097a_GR_rep4",
+  "organize_status": "ok",
+  "judge_case_dir": "gpt-5.6-high/gather_refine/post_refactor/unreleased_20261029/nocut/casp17/H2373/case_0a097a_GJ_rep5",
+  "judge_status": "ok",
+  "packet": "gpt-5.6-high/nocut/gather/packets/case_0a097a/packet",
+  "manifest": "gpt-5.6-high/nocut/gather/packets/case_0a097a/manifest.json",
+  "advocate_case_dir": "gpt-5.6-high/gather_refine/post_refactor/unreleased_20261029/nocut/casp17/H2373/case_0a097a_GR_rep4",
+  "advocate_status": "ok"
+ }
+}

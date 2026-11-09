@@ -1,0 +1,483 @@
+{
+ "target": "H1204",
+ "target_set": "casp16",
+ "case": "case_2c69fc",
+ "task": "gather",
+ "gather_mode": "batched",
+ "num_launchers": 3,
+ "policy": {
+  "evidence_cutoff": "2024-05-02",
+  "no_cutoff": false,
+  "gated": true,
+  "web_search": false,
+  "shell_network": true,
+  "gate_tools": [
+   "research",
+   "fetch",
+   "rcsb",
+   "patent",
+   "paper"
+  ]
+ },
+ "unscored": false,
+ "evidence_cutoff": "2024-05-02",
+ "target_release_date": "2024-05-02",
+ "retrieval_policy": "gated",
+ "antigen_chains": [
+  "C",
+  "D",
+  "E",
+  "F"
+ ],
+ "antibody_files": {
+  "antibody.1.pdb": [
+   "A"
+  ],
+  "antibody.2.pdb": [
+   "B"
+  ]
+ },
+ "antibody_chain_types": {
+  "antibody.1.pdb": {
+   "A": "heavy"
+  },
+  "antibody.2.pdb": {
+   "B": "heavy"
+  }
+ },
+ "input_structure": "structures/H1204.pdb",
+ "input_structure_sha256": null,
+ "briefing_source": null,
+ "briefing_sha256": null,
+ "recognized_complex": {
+  "organize": null,
+  "judge": false
+ },
+ "recognition_note": "The supplied files identify adult alpha2-beta2 hemoglobin and two sequence-identical heavy-only VHH copies. No exact VHH clone, native complex, or published epitope for this binder was identified before 2024-05-02.",
+ "what_separated_them": "No candidate had Tier A evidence about this binder, so the result remains a broad surface prior. Common measurements removed coverability as a discriminator because all ten fit the 26.42 A CDR field. Assembly burial penalized C8/C1/C2, gross charge penalized C5, and compact exposure plus independent exact-surface antibody precedent modestly favored C9.",
+ "not_pooled": [],
+ "provenance": {
+  "unverified_source_policy_fields": [
+   "gated",
+   "web_search",
+   "shell_network",
+   "gate_tools"
+  ],
+  "assembled_case_dir": "gpt-5.6-high/gather_refine/post_refactor/released_structure_20261030/casp16/H1204/case_2c69fc_G_rep2",
+  "organize_case_dir": "gpt-5.6-high/gather_refine/post_refactor/released_structure_20261030/casp16/H1204/case_2c69fc_GR_rep1",
+  "organize_status": "ok",
+  "judge_case_dir": "gpt-5.6-high/gather_refine/post_refactor/released_structure_20261030/casp16/H1204/case_2c69fc_GJ_rep2",
+  "judge_status": "ok",
+  "packet": "gpt-5.6-high/gather/packets/case_2c69fc/packet",
+  "manifest": "gpt-5.6-high/gather/packets/case_2c69fc/manifest.json"
+ },
+ "truth_file": "data/truth/casp16/H1204.epitope.json",
+ "truth": {
+  "n_residues": 44,
+  "usable": "yes",
+  "chains": {
+   "C": [
+    17,
+    18,
+    19,
+    20,
+    23,
+    24,
+    27,
+    62,
+    114,
+    116,
+    117,
+    118,
+    119,
+    120,
+    121,
+    122
+   ],
+   "D": [
+    17,
+    18,
+    19,
+    20,
+    23,
+    24,
+    27,
+    62,
+    114,
+    116,
+    117,
+    118,
+    119,
+    120,
+    121,
+    122
+   ],
+   "E": [
+    111,
+    112,
+    113,
+    115,
+    116,
+    119
+   ],
+   "F": [
+    111,
+    112,
+    113,
+    115,
+    116,
+    119
+   ]
+  },
+  "anchor_note": "the numbering frame only; the epitope is defined on the native and carried here by antigen sequence alignment, so which pooled model this is does not affect the label"
+ },
+ "oracle": {
+  "metric": "f1",
+  "epitope_definition": "whole_antibody",
+  "truth_file": "data/truth/casp16/H1204.epitope.json",
+  "rank1": {
+   "pocket": "C9",
+   "confidence": 0.2,
+   "precision": 0.0,
+   "recall": 0.0,
+   "f1": 0.0,
+   "n_pred": 22,
+   "n_true": 44,
+   "n_hit": 0
+  },
+  "best": {
+   "pocket": "C1",
+   "judge_rank": 9,
+   "confidence": 0.05,
+   "precision": 0.5714,
+   "recall": 0.3636,
+   "f1": 0.4444,
+   "n_pred": 28,
+   "n_true": 44,
+   "n_hit": 16
+  },
+  "note": "the best pocket the answer already contains. Rank 1 is the answer as delivered, so the gap is what the judge's ordering cost."
+ },
+ "pockets": [
+  {
+   "id": "C9",
+   "judge_rank": 1,
+   "name": "The exposed beta-globin N-terminal peptide face centred on the normal...",
+   "confidence": 0.2,
+   "mapping_basis": "per_antibody",
+   "n_residues": 22,
+   "score": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0,
+    "n_pred": 22,
+    "n_true": 44,
+    "n_hit": 0
+   },
+   "chain_pairs": [
+    {
+     "antibody_chain": "A",
+     "antigen_chain": "C",
+     "n_residues": 11
+    },
+    {
+     "antibody_chain": "B",
+     "antigen_chain": "D",
+     "n_residues": 11
+    }
+   ],
+   "file": "pocket.C9.json"
+  },
+  {
+   "id": "C3",
+   "judge_rank": 2,
+   "name": "A duplicated beta-globin exterior face joining the exposed...",
+   "confidence": 0.14,
+   "mapping_basis": "per_antibody",
+   "n_residues": 30,
+   "score": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0,
+    "n_pred": 30,
+    "n_true": 44,
+    "n_hit": 0
+   },
+   "chain_pairs": [
+    {
+     "antibody_chain": "A",
+     "antigen_chain": "C",
+     "n_residues": 15
+    },
+    {
+     "antibody_chain": "B",
+     "antigen_chain": "D",
+     "n_residues": 15
+    }
+   ],
+   "file": "pocket.C3.json"
+  },
+  {
+   "id": "C4",
+   "judge_rank": 3,
+   "name": "The beta-subunit A/H outer face, where the N-terminal A helix lies...",
+   "confidence": 0.12,
+   "mapping_basis": "per_antibody",
+   "n_residues": 26,
+   "score": {
+    "precision": 0.5385,
+    "recall": 0.3182,
+    "f1": 0.4,
+    "n_pred": 26,
+    "n_true": 44,
+    "n_hit": 14
+   },
+   "chain_pairs": [
+    {
+     "antibody_chain": "A",
+     "antigen_chain": "C",
+     "n_residues": 13
+    },
+    {
+     "antibody_chain": "B",
+     "antigen_chain": "D",
+     "n_residues": 13
+    }
+   ],
+   "file": "pocket.C4.json"
+  },
+  {
+   "id": "C6",
+   "judge_rank": 4,
+   "name": "A broad exterior alpha-globin face formed by the A helix beside the...",
+   "confidence": 0.11,
+   "mapping_basis": "per_antibody",
+   "n_residues": 32,
+   "score": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0,
+    "n_pred": 32,
+    "n_true": 44,
+    "n_hit": 0
+   },
+   "chain_pairs": [
+    {
+     "antibody_chain": "A",
+     "antigen_chain": "E",
+     "n_residues": 16
+    },
+    {
+     "antibody_chain": "B",
+     "antigen_chain": "F",
+     "n_residues": 16
+    }
+   ],
+   "file": "pocket.C6.json"
+  },
+  {
+   "id": "C10",
+   "judge_rank": 5,
+   "name": "The alpha-globin A/GH outer face, where the A helix lies beside the...",
+   "confidence": 0.1,
+   "mapping_basis": "per_antibody",
+   "n_residues": 24,
+   "score": {
+    "precision": 0.3333,
+    "recall": 0.1818,
+    "f1": 0.2353,
+    "n_pred": 24,
+    "n_true": 44,
+    "n_hit": 8
+   },
+   "chain_pairs": [
+    {
+     "antibody_chain": "A",
+     "antigen_chain": "E",
+     "n_residues": 12
+    },
+    {
+     "antibody_chain": "B",
+     "antigen_chain": "F",
+     "n_residues": 12
+    }
+   ],
+   "file": "pocket.C10.json"
+  },
+  {
+   "id": "C2",
+   "judge_rank": 6,
+   "name": "A pair of outer clefts at the alpha1-beta2 junctions, where the alpha...",
+   "confidence": 0.09,
+   "mapping_basis": "per_antibody",
+   "n_residues": 30,
+   "score": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0,
+    "n_pred": 30,
+    "n_true": 44,
+    "n_hit": 0
+   },
+   "chain_pairs": [
+    {
+     "antibody_chain": "A",
+     "antigen_chain": "C",
+     "n_residues": 3
+    },
+    {
+     "antibody_chain": "A",
+     "antigen_chain": "F",
+     "n_residues": 12
+    },
+    {
+     "antibody_chain": "B",
+     "antigen_chain": "D",
+     "n_residues": 3
+    },
+    {
+     "antibody_chain": "B",
+     "antigen_chain": "E",
+     "n_residues": 12
+    }
+   ],
+   "file": "pocket.C2.json"
+  },
+  {
+   "id": "C7",
+   "judge_rank": 7,
+   "name": "The solvent-facing alpha-globin CD corner and adjacent E-helix...",
+   "confidence": 0.08,
+   "mapping_basis": "per_antibody",
+   "n_residues": 30,
+   "score": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0,
+    "n_pred": 30,
+    "n_true": 44,
+    "n_hit": 0
+   },
+   "chain_pairs": [
+    {
+     "antibody_chain": "A",
+     "antigen_chain": "E",
+     "n_residues": 15
+    },
+    {
+     "antibody_chain": "B",
+     "antigen_chain": "F",
+     "n_residues": 15
+    }
+   ],
+   "file": "pocket.C7.json"
+  },
+  {
+   "id": "C5",
+   "judge_rank": 8,
+   "name": "A compact Lys/His-rich outer face of the beta D/E turn and E helix...",
+   "confidence": 0.07,
+   "mapping_basis": "per_antibody",
+   "n_residues": 18,
+   "score": {
+    "precision": 0.1111,
+    "recall": 0.0455,
+    "f1": 0.0645,
+    "n_pred": 18,
+    "n_true": 44,
+    "n_hit": 2
+   },
+   "chain_pairs": [
+    {
+     "antibody_chain": "A",
+     "antigen_chain": "C",
+     "n_residues": 9
+    },
+    {
+     "antibody_chain": "B",
+     "antigen_chain": "D",
+     "n_residues": 9
+    }
+   ],
+   "file": "pocket.C5.json"
+  },
+  {
+   "id": "C1",
+   "judge_rank": 9,
+   "name": "The solvent-facing rim of the alpha1-beta1 dimer interface: a shallow...",
+   "confidence": 0.05,
+   "mapping_basis": "per_antibody",
+   "n_residues": 28,
+   "score": {
+    "precision": 0.5714,
+    "recall": 0.3636,
+    "f1": 0.4444,
+    "n_pred": 28,
+    "n_true": 44,
+    "n_hit": 16
+   },
+   "chain_pairs": [
+    {
+     "antibody_chain": "A",
+     "antigen_chain": "C",
+     "n_residues": 5
+    },
+    {
+     "antibody_chain": "A",
+     "antigen_chain": "E",
+     "n_residues": 9
+    },
+    {
+     "antibody_chain": "B",
+     "antigen_chain": "D",
+     "n_residues": 5
+    },
+    {
+     "antibody_chain": "B",
+     "antigen_chain": "F",
+     "n_residues": 9
+    }
+   ],
+   "file": "pocket.C1.json"
+  },
+  {
+   "id": "C8",
+   "judge_rank": 10,
+   "name": "The exposed rim of each alpha1-beta2 allosteric switch interface...",
+   "confidence": 0.04,
+   "mapping_basis": "per_antibody",
+   "n_residues": 32,
+   "score": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0,
+    "n_pred": 32,
+    "n_true": 44,
+    "n_hit": 0
+   },
+   "chain_pairs": [
+    {
+     "antibody_chain": "A",
+     "antigen_chain": "C",
+     "n_residues": 11
+    },
+    {
+     "antibody_chain": "A",
+     "antigen_chain": "F",
+     "n_residues": 5
+    },
+    {
+     "antibody_chain": "B",
+     "antigen_chain": "D",
+     "n_residues": 11
+    },
+    {
+     "antibody_chain": "B",
+     "antigen_chain": "E",
+     "n_residues": 5
+    }
+   ],
+   "file": "pocket.C8.json"
+  }
+ ]
+}

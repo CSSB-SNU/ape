@@ -1,0 +1,382 @@
+{
+ "task": "gather",
+ "gather_mode": "batched",
+ "num_launchers": 3,
+ "policy": {
+  "evidence_cutoff": "2026-05-14",
+  "no_cutoff": false,
+  "gated": true,
+  "web_search": false,
+  "shell_network": true,
+  "gate_tools": [
+   "research",
+   "fetch",
+   "rcsb",
+   "patent",
+   "paper"
+  ]
+ },
+ "unscored": false,
+ "target": "H2338",
+ "target_set": "casp17",
+ "case": "case_718c80",
+ "evidence_cutoff": "2026-05-14",
+ "target_release_date": "2026-05-14",
+ "retrieval_policy": "gated",
+ "input_structure": "structures/H2338.pdb",
+ "input_structure_sha256": null,
+ "briefing_source": null,
+ "briefing_sha256": null,
+ "antigen_chains": [
+  "C",
+  "D"
+ ],
+ "antibody_files": {
+  "antibody.pdb": [
+   "A",
+   "B"
+  ]
+ },
+ "antibody_chain_types": {
+  "antibody.pdb": {
+   "A": "unknown",
+   "B": "unknown"
+  }
+ },
+ "truth_file": "data/truth/casp17/H2338.epitope.json",
+ "stage": "gatherer",
+ "pocket": {
+  "id": "C2",
+  "judge_rank": 1,
+  "name": "The exposed loop-and-ridge face at an Apple-domain peptide-groove...",
+  "confidence": 0.52,
+  "p_rests_on_holds": 0.62,
+  "why_this_rank": "Exact-antigen other-antibody precedent closely covers C2 and independently agrees with the best compactness, connectivity, and chemistry.",
+  "rests_on": "REGN9933 recognizes the same antibody-accessible 133-163 ridge class as the HDX-mapped antibodies.",
+  "where_the_mass_goes_if_it_fails": "C3 takes most of the weight.",
+  "what_it_is": "The exposed loop-and-ridge face at an Apple-domain peptide-groove mouth: the 136-148 ridge paired with the C-terminal A2 loop 161-165. It is the antibody-accessible side of the beta-sheet region and mixed-chemistry mouth beside, rather than at the bottom of, the DFP pocket.",
+  "why_one_candidate": "geometry pooled 3 patches (P2, P5, P8): P2+P5 at 1.06 A, union radius 12.62 A; P2+P5+P8 at 1.79 A, union radius 16.53 A. Every union fits inside this antibody's paratope reach of 16.9 A. No session judged these to be the same surface.",
+  "from_patches": [
+   "P2",
+   "P5",
+   "P8"
+  ]
+ },
+ "note": "`confidence` on the pocket is over pockets and sums to about 1 across them. Inside an interface it is per residue in [0, 1] and sums to nothing. No residue is cut at a threshold: the whole vector is the answer.",
+ "mapping_basis": "side",
+ "checks": {
+  "unrecognised_sides": []
+ },
+ "chain_pairs": [
+  {
+   "antibody_chain": "A",
+   "antigen_chain": "C",
+   "n_residues": 17
+  },
+  {
+   "antibody_chain": "B",
+   "antigen_chain": "C",
+   "n_residues": 17
+  }
+ ],
+ "antibodies": [
+  {
+   "antibody": "antibody.pdb",
+   "chains": {
+    "A": "unknown",
+    "B": "unknown"
+   },
+   "binding_mode": null,
+   "n_residues_scored": 17,
+   "interfaces": [
+    {
+     "antibody_chain": "A",
+     "antibody_chain_type": "unknown",
+     "antigen_chain": "C",
+     "n_residues": 17,
+     "residue_confidence": {
+      "136": 0.78,
+      "137": 0.72,
+      "138": 0.34,
+      "139": 0.84,
+      "140": 0.62,
+      "141": 0.89,
+      "142": 0.93,
+      "143": 0.94,
+      "144": 0.91,
+      "145": 0.61,
+      "146": 0.38,
+      "148": 0.5,
+      "161": 0.55,
+      "162": 0.92,
+      "163": 0.88,
+      "164": 0.93,
+      "165": 0.91
+     },
+     "residue_side": {
+      "136": "light",
+      "137": "light",
+      "138": "light",
+      "139": "both",
+      "140": "light",
+      "141": "heavy",
+      "142": "both",
+      "143": "both",
+      "144": "heavy",
+      "145": "both",
+      "146": "light",
+      "148": "light",
+      "161": "light",
+      "162": "heavy",
+      "163": "both",
+      "164": "heavy",
+      "165": "heavy"
+     },
+     "max_confidence": 0.94,
+     "mean_confidence": 0.7441,
+     "precision_vs_truth": 0.6471,
+     "n_in_truth": 11
+    },
+    {
+     "antibody_chain": "B",
+     "antibody_chain_type": "unknown",
+     "antigen_chain": "C",
+     "n_residues": 17,
+     "residue_confidence": {
+      "136": 0.78,
+      "137": 0.72,
+      "138": 0.34,
+      "139": 0.84,
+      "140": 0.62,
+      "141": 0.89,
+      "142": 0.93,
+      "143": 0.94,
+      "144": 0.91,
+      "145": 0.61,
+      "146": 0.38,
+      "148": 0.5,
+      "161": 0.55,
+      "162": 0.92,
+      "163": 0.88,
+      "164": 0.93,
+      "165": 0.91
+     },
+     "residue_side": {
+      "136": "light",
+      "137": "light",
+      "138": "light",
+      "139": "both",
+      "140": "light",
+      "141": "heavy",
+      "142": "both",
+      "143": "both",
+      "144": "heavy",
+      "145": "both",
+      "146": "light",
+      "148": "light",
+      "161": "light",
+      "162": "heavy",
+      "163": "both",
+      "164": "heavy",
+      "165": "heavy"
+     },
+     "max_confidence": 0.94,
+     "mean_confidence": 0.7441,
+     "precision_vs_truth": 0.6471,
+     "n_in_truth": 11
+    }
+   ]
+  }
+ ],
+ "paratope": {
+  "dominant_cdrs": [
+   "H3rde3xrde3xrdexH2rde2xrde2xrdexL3rde1xrde1xrdexL1rde1xrde1xrde1xrdexwouldconfirm:H3",
+   "H2rde2xrde2xrdexL3rde1xrde1xrdexL1rde1xrde1xrde1xrdexwouldconfirm:H2",
+   "L3rde1xrde1xrdexL1rde1xrde1xrdexwouldconfirm:L3",
+   "L1rde1xrde1xrde1xrdexwouldconfirm:L1"
+  ],
+  "paratope_residues": [
+   "A:28",
+   "A:31",
+   "A:32",
+   "A:52",
+   "A:56",
+   "A:57",
+   "A:102",
+   "A:103",
+   "A:104",
+   "A:105",
+   "A:106",
+   "A:108",
+   "A:111",
+   "A:112",
+   "B:27",
+   "B:28",
+   "B:30",
+   "B:31",
+   "B:32",
+   "B:52",
+   "B:92",
+   "B:93",
+   "B:94",
+   "B:95",
+   "B:96"
+  ],
+  "heavy_light_split": "Strongly heavy-dominant: H3/H2 cover C:141-C:144 and C:162-C:165; both chains converge on C:139/C:142/C:143/C:145/C:163; light loops cover the outer rim.",
+  "binding_mode_union": "single-chain"
+ },
+ "residues": [
+  "C:136",
+  "C:137",
+  "C:138",
+  "C:139",
+  "C:140",
+  "C:141",
+  "C:142",
+  "C:143",
+  "C:144",
+  "C:145",
+  "C:146",
+  "C:148",
+  "C:161",
+  "C:162",
+  "C:163",
+  "C:164",
+  "C:165"
+ ],
+ "n_residues": 17,
+ "patches": [
+  {
+   "id": "P2",
+   "name": "A2 antibody-hotspot face around residues 133-148 and 161-165",
+   "n_residues": 21,
+   "residues": [
+    "C:133",
+    "C:134",
+    "C:135",
+    "C:136",
+    "C:137",
+    "C:138",
+    "C:139",
+    "C:140",
+    "C:141",
+    "C:142",
+    "C:143",
+    "C:144",
+    "C:145",
+    "C:146",
+    "C:147",
+    "C:148",
+    "C:161",
+    "C:162",
+    "C:163",
+    "C:164",
+    "C:165"
+   ],
+   "n_kept_by_advocate": 17,
+   "n_dropped_by_advocate": 4
+  },
+  {
+   "id": "P5",
+   "name": "A2 C-terminal loop face",
+   "n_residues": 12,
+   "residues": [
+    "C:139",
+    "C:140",
+    "C:141",
+    "C:142",
+    "C:143",
+    "C:144",
+    "C:145",
+    "C:161",
+    "C:162",
+    "C:163",
+    "C:164",
+    "C:165"
+   ],
+   "n_kept_by_advocate": 12,
+   "n_dropped_by_advocate": 0
+  },
+  {
+   "id": "P8",
+   "name": "A2 DFP-ligand groove and basic mouth",
+   "n_residues": 27,
+   "residues": [
+    "C:101",
+    "C:103",
+    "C:105",
+    "C:106",
+    "C:107",
+    "C:108",
+    "C:109",
+    "C:111",
+    "C:113",
+    "C:132",
+    "C:134",
+    "C:136",
+    "C:137",
+    "C:138",
+    "C:139",
+    "C:140",
+    "C:141",
+    "C:142",
+    "C:143",
+    "C:144",
+    "C:146",
+    "C:148",
+    "C:162",
+    "C:163",
+    "C:164",
+    "C:165",
+    "C:166"
+   ],
+   "n_kept_by_advocate": 15,
+   "n_dropped_by_advocate": 12
+  }
+ ],
+ "pooling_provenance": {
+  "n_shared_at_pooling": 10,
+  "n_disputed_at_pooling": 22,
+  "note": "counts only, describing how the organizer grouped the phase-1 patches. The organizer's own candidate residue list is deliberately absent: the answer is the advocate's footprint, in `residues` and in `antibodies[].interfaces[]`."
+ },
+ "evidence": {
+  "advocate": {
+   "n_findings": 8,
+   "n_supports": 7,
+   "n_weakens": 0,
+   "weakest_point": "The residue-level HDX and mechanism evidence belongs to other A2 antibodies. REGN9933's competition bin is too coarse to transfer their epitope.",
+   "note": "the advocate reports claim/source/date/bearing and is not asked whether a source is about this binder"
+  },
+  "judge": {
+   "tier_a_support": 1,
+   "n_support_lines": 6,
+   "verdict": "leading",
+   "note": "Tier A -- a source about this binder itself -- is the judge's adjudication, in assessment[].support[]. It exists nowhere in the advocate's own answer."
+  }
+ },
+ "provenance": {
+  "unverified_source_policy_fields": [
+   "gated",
+   "web_search",
+   "shell_network",
+   "gate_tools"
+  ],
+  "assembled_case_dir": "gpt-5.6-high/gather_refine/post_refactor/released_structure_20261030/casp17/H2338/case_718c80_G_rep2",
+  "organize_case_dir": "gpt-5.6-high/gather_refine/post_refactor/released_structure_20261030/casp17/H2338/case_718c80_GR_rep1",
+  "organize_status": "ok",
+  "judge_case_dir": "gpt-5.6-high/gather_refine/post_refactor/released_structure_20261030/casp17/H2338/case_718c80_GJ_rep2",
+  "judge_status": "ok",
+  "packet": "gpt-5.6-high/gather/packets/case_718c80/packet",
+  "manifest": "gpt-5.6-high/gather/packets/case_718c80/manifest.json",
+  "advocate_case_dir": "gpt-5.6-high/gather_refine/post_refactor/released_structure_20261030/casp17/H2338/case_718c80_GR_rep1",
+  "advocate_status": "ok"
+ },
+ "score": {
+  "precision": 0.6471,
+  "recall": 0.6471,
+  "f1": 0.6471,
+  "n_pred": 17,
+  "n_true": 17,
+  "n_hit": 11
+ }
+}

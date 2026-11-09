@@ -1,0 +1,290 @@
+{
+ "task": "gather",
+ "gather_mode": "batched",
+ "num_launchers": 3,
+ "policy": {
+  "evidence_cutoff": null,
+  "no_cutoff": true,
+  "gated": false,
+  "web_search": true,
+  "shell_network": true,
+  "gate_tools": []
+ },
+ "unscored": true,
+ "target": "H2312",
+ "target_set": "casp17",
+ "case": "case_3a23b5",
+ "evidence_cutoff": null,
+ "target_release_date": "2026-05-13",
+ "retrieval_policy": "no-cutoff",
+ "input_structure": "data/staged_casp17_no_native/H2312.pdb",
+ "input_structure_sha256": "3ba79066f0aa7015920828a3678d94af5f532471fde42bb38b00795e45f94b8b",
+ "briefing_source": "data/briefing/casp17_nocutoff/H2312/search_results.json",
+ "briefing_sha256": "2b8c71697fd0cc7175a5631c137526c8209032f024f0df47a726889d5e5bdf88",
+ "antigen_chains": [
+  "A",
+  "B"
+ ],
+ "antibody_files": {
+  "antibody.pdb": [
+   "C"
+  ]
+ },
+ "antibody_chain_types": {
+  "antibody.pdb": {
+   "C": "heavy"
+  }
+ },
+ "stage": "gatherer",
+ "pocket": {
+  "id": "C10",
+  "judge_rank": 10,
+  "name": "A glycan-bearing quaternary hinge seam where EXT1 A:390–A:397 meets...",
+  "confidence": 0.04,
+  "p_rests_on_holds": 0.18,
+  "why_this_rank": "Protein-only fit is attractive, but a known glycan occupies the proposed approach and chemistry is weak.",
+  "rests_on": "2BAV4 recognizes or accommodates the B:574 glycan while spanning the hinge seam.",
+  "where_the_mass_goes_if_it_fails": "C3",
+  "what_it_is": "A glycan-bearing quaternary hinge seam where EXT1 A:390–A:397 meets EXT2 B:368–B:380 and the B:574 N-glycosylation loop.",
+  "why_one_candidate": "not pooled with anything: no other patch is both within 12 A (half centroid distance, half contact-graph hops) and coverable by one paratope of this antibody's reach, 13.6 A",
+  "from_patches": [
+   "P9"
+  ]
+ },
+ "note": "`confidence` on the pocket is over pockets and sums to about 1 across them. Inside an interface it is per residue in [0, 1] and sums to nothing. No residue is cut at a threshold: the whole vector is the answer.",
+ "mapping_basis": "side",
+ "checks": {
+  "unrecognised_sides": []
+ },
+ "chain_pairs": [
+  {
+   "antibody_chain": "C",
+   "antigen_chain": "A",
+   "n_residues": 8
+  },
+  {
+   "antibody_chain": "C",
+   "antigen_chain": "B",
+   "n_residues": 17
+  }
+ ],
+ "antibodies": [
+  {
+   "antibody": "antibody.pdb",
+   "chains": {
+    "C": "heavy"
+   },
+   "binding_mode": null,
+   "n_residues_scored": 25,
+   "interfaces": [
+    {
+     "antibody_chain": "C",
+     "antibody_chain_type": "heavy",
+     "antigen_chain": "A",
+     "n_residues": 8,
+     "residue_confidence": {
+      "390": 0.77,
+      "391": 0.82,
+      "392": 0.7,
+      "393": 0.86,
+      "394": 0.73,
+      "395": 0.88,
+      "396": 0.54,
+      "397": 0.38
+     },
+     "residue_side": {
+      "390": "heavy",
+      "391": "heavy",
+      "392": "heavy",
+      "393": "heavy",
+      "394": "heavy",
+      "395": "heavy",
+      "396": "heavy",
+      "397": "heavy"
+     },
+     "max_confidence": 0.88,
+     "mean_confidence": 0.71
+    },
+    {
+     "antibody_chain": "C",
+     "antibody_chain_type": "heavy",
+     "antigen_chain": "B",
+     "n_residues": 17,
+     "residue_confidence": {
+      "368": 0.35,
+      "369": 0.31,
+      "370": 0.56,
+      "371": 0.69,
+      "372": 0.72,
+      "373": 0.78,
+      "374": 0.91,
+      "375": 0.82,
+      "376": 0.8,
+      "377": 0.72,
+      "378": 0.68,
+      "379": 0.42,
+      "380": 0.4,
+      "574": 0.62,
+      "575": 0.53,
+      "577": 0.58,
+      "578": 0.51
+     },
+     "residue_side": {
+      "368": "heavy",
+      "369": "heavy",
+      "370": "heavy",
+      "371": "heavy",
+      "372": "heavy",
+      "373": "heavy",
+      "374": "heavy",
+      "375": "heavy",
+      "376": "heavy",
+      "377": "heavy",
+      "378": "heavy",
+      "379": "heavy",
+      "380": "heavy",
+      "574": "heavy",
+      "575": "heavy",
+      "577": "heavy",
+      "578": "heavy"
+     },
+     "max_confidence": 0.91,
+     "mean_confidence": 0.6118
+    }
+   ]
+  }
+ ],
+ "paratope": {
+  "dominant_cdrs": [
+   "H3H2H1select:H3",
+   "H2H1select:H2",
+   "H1select:H1"
+  ],
+  "paratope_residues": [
+   "C:28",
+   "C:30",
+   "C:31",
+   "C:32",
+   "C:53",
+   "C:54",
+   "C:56",
+   "C:57",
+   "C:58",
+   "C:100",
+   "C:101",
+   "C:102",
+   "C:103",
+   "C:105",
+   "C:107",
+   "C:108",
+   "C:109",
+   "C:110",
+   "C:113",
+   "C:114"
+  ],
+  "heavy_light_split": "Heavy 100%, light 0%. H3 dominates the B:374/glycan-base center and crosses toward A:391–A:395; H1/H2 cover the outer ridges.",
+  "binding_mode_union": "straddling"
+ },
+ "residues": [
+  "A:390",
+  "A:391",
+  "A:392",
+  "A:393",
+  "A:394",
+  "A:395",
+  "A:396",
+  "A:397",
+  "B:368",
+  "B:369",
+  "B:370",
+  "B:371",
+  "B:372",
+  "B:373",
+  "B:374",
+  "B:375",
+  "B:376",
+  "B:377",
+  "B:378",
+  "B:379",
+  "B:380",
+  "B:574",
+  "B:575",
+  "B:577",
+  "B:578"
+ ],
+ "n_residues": 25,
+ "patches": [
+  {
+   "id": "P9",
+   "name": "Glycan-occluded EXT1–EXT2 hinge seam",
+   "n_residues": 26,
+   "residues": [
+    "A:387",
+    "A:390",
+    "A:391",
+    "A:392",
+    "A:393",
+    "A:394",
+    "A:395",
+    "A:396",
+    "A:397",
+    "B:368",
+    "B:369",
+    "B:370",
+    "B:371",
+    "B:372",
+    "B:373",
+    "B:374",
+    "B:375",
+    "B:376",
+    "B:377",
+    "B:378",
+    "B:379",
+    "B:380",
+    "B:574",
+    "B:575",
+    "B:577",
+    "B:578"
+   ],
+   "n_kept_by_advocate": 25,
+   "n_dropped_by_advocate": 1
+  }
+ ],
+ "pooling_provenance": {
+  "n_shared_at_pooling": 26,
+  "n_disputed_at_pooling": 0,
+  "note": "counts only, describing how the organizer grouped the phase-1 patches. The organizer's own candidate residue list is deliberately absent: the answer is the advocate's footprint, in `residues` and in `antibodies[].interfaces[]`."
+ },
+ "evidence": {
+  "advocate": {
+   "n_findings": 4,
+   "n_supports": 2,
+   "n_weakens": 1,
+   "weakest_point": "The observed B:574 glycan occupies the naked-protein approach; unless this VHH recognizes or accommodates it, the candidate is inaccessible.",
+   "note": "the advocate reports claim/source/date/bearing and is not asked whether a source is about this binder"
+  },
+  "judge": {
+   "tier_a_support": 0,
+   "n_support_lines": 5,
+   "verdict": "unlikely",
+   "note": "Tier A -- a source about this binder itself -- is the judge's adjudication, in assessment[].support[]. It exists nowhere in the advocate's own answer."
+  }
+ },
+ "provenance": {
+  "unverified_source_policy_fields": [
+   "gated",
+   "web_search",
+   "shell_network",
+   "gate_tools"
+  ],
+  "assembled_case_dir": "gpt-5.6-high/gather_refine/post_refactor/unreleased_20261029/nocut/casp17/H2312/case_3a23b5_G_rep1",
+  "organize_case_dir": "gpt-5.6-high/gather_refine/post_refactor/unreleased_20261029/nocut/casp17/H2312/case_3a23b5_GR_rep1",
+  "organize_status": "ok",
+  "judge_case_dir": "gpt-5.6-high/gather_refine/post_refactor/unreleased_20261029/nocut/casp17/H2312/case_3a23b5_GJ_rep1",
+  "judge_status": "ok",
+  "packet": "gpt-5.6-high/nocut/gather/packets/case_3a23b5/packet",
+  "manifest": "gpt-5.6-high/nocut/gather/packets/case_3a23b5/manifest.json",
+  "advocate_case_dir": "gpt-5.6-high/gather_refine/post_refactor/unreleased_20261029/nocut/casp17/H2312/case_3a23b5_GR_rep1",
+  "advocate_status": "ok"
+ }
+}

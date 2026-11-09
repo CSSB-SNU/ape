@@ -1,0 +1,205 @@
+{
+ "target": "H2441",
+ "target_set": "casp17",
+ "case": "case_253bc2",
+ "task": "gather",
+ "gather_mode": "batched",
+ "num_launchers": 3,
+ "policy": {
+  "evidence_cutoff": null,
+  "no_cutoff": true,
+  "gated": false,
+  "web_search": true,
+  "shell_network": true,
+  "gate_tools": []
+ },
+ "unscored": true,
+ "evidence_cutoff": null,
+ "target_release_date": "2026-07-31",
+ "retrieval_policy": "no-cutoff",
+ "antigen_chains": [
+  "A"
+ ],
+ "antibody_files": {
+  "antibody.pdb": [
+   "B"
+  ]
+ },
+ "antibody_chain_types": {
+  "antibody.pdb": {
+   "B": "unknown"
+  }
+ },
+ "input_structure": "data/staged_casp17_no_native/H2441.pdb",
+ "input_structure_sha256": "37e38c82b5192825be5d1ed9d412076bf5a8fb5ddade49d20c5ae532bead12ae",
+ "briefing_source": "data/briefing/casp17_nocutoff/H2441/search_results.json",
+ "briefing_sha256": "e71284ba0254f948a2858cd5ce7a2bef005f866757a5fc232612ccdafa9f26ca",
+ "recognized_complex": {
+  "organize": null,
+  "judge": true
+ },
+ "recognition_note": "The antigen sequence identifies mature NDM-1, and the antibody variable-domain sequence exactly identifies Nb17-NDM-1 from Ben Abderrazek et al. (first public 2024-03-22). A current exact-sequence RCSB query on 2026-10-29 found no released matching structure. The 2024 report gives uncompetitive inhibition but no complex or residue-level epitope, so recognition does not localize the binder.",
+ "what_separated_them": "No candidate has Tier A localization. C8 gained a modest lead from the only surface-specific homologous antibody precedent, discounted to 52.9% full-segment and 66.7% determinant identity. C5/C6/C9 collectively retained comparable mass because they best match Nb17's hydrophobic H3, but their mass was split because they are overlapping drawings and they conflict to varying degrees with uncompetitive kinetics. L10 function kept C4/C7 live; exposure alone could not elevate C1/C2/C3.",
+ "not_pooled": [],
+ "provenance": {
+  "unverified_source_policy_fields": [
+   "gated",
+   "web_search",
+   "shell_network",
+   "gate_tools"
+  ],
+  "assembled_case_dir": "gpt-5.6-high/gather_refine/post_refactor/unreleased_20261029/nocut/casp17/H2441/case_253bc2_G_rep1",
+  "organize_case_dir": "gpt-5.6-high/gather_refine/post_refactor/unreleased_20261029/nocut/casp17/H2441/case_253bc2_GR_rep1",
+  "organize_status": "ok",
+  "judge_case_dir": "gpt-5.6-high/gather_refine/post_refactor/unreleased_20261029/nocut/casp17/H2441/case_253bc2_GJ_rep1",
+  "judge_status": "ok",
+  "packet": "gpt-5.6-high/nocut/gather/packets/case_253bc2/packet",
+  "manifest": "gpt-5.6-high/nocut/gather/packets/case_253bc2/manifest.json"
+ },
+ "pockets": [
+  {
+   "id": "C8",
+   "judge_rank": 1,
+   "name": "The L6/end-alpha2-equivalent allosteric cleft, formed by two exposed...",
+   "confidence": 0.31,
+   "mapping_basis": "side",
+   "n_residues": 16,
+   "chain_pairs": [
+    {
+     "antibody_chain": "B",
+     "antigen_chain": "A",
+     "n_residues": 16
+    }
+   ],
+   "file": "pocket.C8.json"
+  },
+  {
+   "id": "C5",
+   "judge_rank": 2,
+   "name": "The exposed L3/L10 substrate-groove rim and accessible zinc-site edge",
+   "confidence": 0.15,
+   "mapping_basis": "side",
+   "n_residues": 19,
+   "chain_pairs": [
+    {
+     "antibody_chain": "B",
+     "antigen_chain": "A",
+     "n_residues": 19
+    }
+   ],
+   "file": "pocket.C5.json"
+  },
+  {
+   "id": "C9",
+   "judge_rank": 3,
+   "name": "The mouth of the catalytic groove, spanning exposed hydrophobic L3 to...",
+   "confidence": 0.11,
+   "mapping_basis": "side",
+   "n_residues": 21,
+   "chain_pairs": [
+    {
+     "antibody_chain": "B",
+     "antigen_chain": "A",
+     "n_residues": 21
+    }
+   ],
+   "file": "pocket.C9.json"
+  },
+  {
+   "id": "C4",
+   "judge_rank": 4,
+   "name": "The outer face of mobile L10 and its L9-side buttress",
+   "confidence": 0.1,
+   "mapping_basis": "side",
+   "n_residues": 16,
+   "chain_pairs": [
+    {
+     "antibody_chain": "B",
+     "antigen_chain": "A",
+     "n_residues": 16
+    }
+   ],
+   "file": "pocket.C4.json"
+  },
+  {
+   "id": "C6",
+   "judge_rank": 5,
+   "name": "The L3-ceiling-to-L10 catalytic cleft, including the fold-back...",
+   "confidence": 0.07,
+   "mapping_basis": "side",
+   "n_residues": 22,
+   "chain_pairs": [
+    {
+     "antibody_chain": "B",
+     "antigen_chain": "A",
+     "n_residues": 22
+    }
+   ],
+   "file": "pocket.C6.json"
+  },
+  {
+   "id": "C7",
+   "judge_rank": 6,
+   "name": "The outer L10/C-terminal buttress face outside the metal groove",
+   "confidence": 0.07,
+   "mapping_basis": "side",
+   "n_residues": 16,
+   "chain_pairs": [
+    {
+     "antibody_chain": "B",
+     "antigen_chain": "A",
+     "n_residues": 16
+    }
+   ],
+   "file": "pocket.C7.json"
+  },
+  {
+   "id": "C2",
+   "judge_rank": 7,
+   "name": "A distal helix/loop face centered on the exposed A:120-A:135 scaffold...",
+   "confidence": 0.07,
+   "mapping_basis": "side",
+   "n_residues": 16,
+   "chain_pairs": [
+    {
+     "antibody_chain": "B",
+     "antigen_chain": "A",
+     "n_residues": 16
+    }
+   ],
+   "file": "pocket.C2.json"
+  },
+  {
+   "id": "C1",
+   "judge_rank": 8,
+   "name": "The solvent-exposed C-terminal scaffold seam on the back of the B1...",
+   "confidence": 0.06,
+   "mapping_basis": "side",
+   "n_residues": 19,
+   "chain_pairs": [
+    {
+     "antibody_chain": "B",
+     "antigen_chain": "A",
+     "n_residues": 19
+    }
+   ],
+   "file": "pocket.C1.json"
+  },
+  {
+   "id": "C3",
+   "judge_rank": 9,
+   "name": "The exposed N-terminal cap of the soluble construct on the native...",
+   "confidence": 0.06,
+   "mapping_basis": "side",
+   "n_residues": 15,
+   "chain_pairs": [
+    {
+     "antibody_chain": "B",
+     "antigen_chain": "A",
+     "n_residues": 15
+    }
+   ],
+   "file": "pocket.C3.json"
+  }
+ ]
+}

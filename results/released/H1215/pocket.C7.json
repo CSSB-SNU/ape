@@ -1,0 +1,270 @@
+{
+ "task": "gather",
+ "gather_mode": "batched",
+ "num_launchers": 3,
+ "policy": {
+  "evidence_cutoff": "2024-05-21",
+  "no_cutoff": false,
+  "gated": true,
+  "web_search": false,
+  "shell_network": true,
+  "gate_tools": [
+   "research",
+   "fetch",
+   "rcsb",
+   "patent",
+   "paper"
+  ]
+ },
+ "unscored": false,
+ "target": "H1215",
+ "target_set": "casp16",
+ "case": "case_f91454",
+ "evidence_cutoff": "2024-05-21",
+ "target_release_date": "2024-05-21",
+ "retrieval_policy": "gated",
+ "input_structure": "structures/H1215.pdb",
+ "input_structure_sha256": null,
+ "briefing_source": null,
+ "briefing_sha256": null,
+ "antigen_chains": [
+  "B"
+ ],
+ "antibody_files": {
+  "antibody.pdb": [
+   "A"
+  ]
+ },
+ "antibody_chain_types": {
+  "antibody.pdb": {
+   "A": "heavy"
+  }
+ },
+ "truth_file": "data/truth/casp16/H1215.epitope.json",
+ "stage": "gatherer",
+ "pocket": {
+  "id": "C7",
+  "judge_rank": 7,
+  "name": "The barrel edge homologous to the published GFP-enhancer-nanobody...",
+  "confidence": 0.09,
+  "p_rests_on_holds": 0.2,
+  "why_this_rank": "It has the only solved-complex face precedent, but the complex uses another VHH and GFP; only 15.0% of mapped epitope side chains are identical, and the shipped footprint is the largest with three poorly exposed residues.",
+  "rests_on": "Face-level GFP enhancer precedent remains predictive despite low epitope side-chain identity and an unrelated short CDR3.",
+  "where_the_mass_goes_if_it_fails": "C4 and C1, which overlap the same broad face",
+  "what_it_is": "The barrel edge homologous to the published GFP-enhancer-nanobody epitope, joining the 146-150, 174-180 and 208-223 segments.",
+  "why_one_candidate": "not pooled with anything: no other patch is both within 12 A (half centroid distance, half contact-graph hops) and coverable by one paratope of this antibody's reach, 16.5 A",
+  "from_patches": [
+   "P7"
+  ]
+ },
+ "note": "`confidence` on the pocket is over pockets and sums to about 1 across them. Inside an interface it is per residue in [0, 1] and sums to nothing. No residue is cut at a threshold: the whole vector is the answer.",
+ "mapping_basis": "side",
+ "checks": {
+  "unrecognised_sides": []
+ },
+ "chain_pairs": [
+  {
+   "antibody_chain": "A",
+   "antigen_chain": "B",
+   "n_residues": 20
+  }
+ ],
+ "antibodies": [
+  {
+   "antibody": "antibody.pdb",
+   "chains": {
+    "A": "heavy"
+   },
+   "binding_mode": null,
+   "n_residues_scored": 20,
+   "interfaces": [
+    {
+     "antibody_chain": "A",
+     "antibody_chain_type": "heavy",
+     "antigen_chain": "B",
+     "n_residues": 20,
+     "residue_confidence": {
+      "146": 0.45,
+      "147": 0.25,
+      "148": 0.1,
+      "149": 0.28,
+      "150": 0.82,
+      "168": 0.55,
+      "170": 0.15,
+      "172": 0.3,
+      "174": 0.65,
+      "175": 0.88,
+      "176": 0.82,
+      "177": 0.92,
+      "178": 0.9,
+      "180": 0.75,
+      "208": 0.4,
+      "209": 0.12,
+      "210": 0.58,
+      "219": 0.38,
+      "221": 0.55,
+      "223": 0.8
+     },
+     "residue_side": {
+      "146": "heavy",
+      "147": "heavy",
+      "148": "heavy",
+      "149": "heavy",
+      "150": "heavy",
+      "168": "heavy",
+      "170": "heavy",
+      "172": "heavy",
+      "174": "heavy",
+      "175": "heavy",
+      "176": "heavy",
+      "177": "heavy",
+      "178": "heavy",
+      "180": "heavy",
+      "208": "heavy",
+      "209": "heavy",
+      "210": "heavy",
+      "219": "heavy",
+      "221": "heavy",
+      "223": "heavy"
+     },
+     "max_confidence": 0.92,
+     "mean_confidence": 0.5325,
+     "precision_vs_truth": 0.0,
+     "n_in_truth": 0
+    }
+   ]
+  }
+ ],
+ "paratope": {
+  "dominant_cdrs": [
+   "H3:H2",
+   "H3:H1"
+  ],
+  "paratope_residues": [
+   "A:29",
+   "A:30",
+   "A:32",
+   "A:33",
+   "A:55",
+   "A:56",
+   "A:58",
+   "A:59",
+   "A:60",
+   "A:102",
+   "A:104",
+   "A:107",
+   "A:108",
+   "A:110",
+   "A:111",
+   "A:112",
+   "A:113",
+   "A:116",
+   "A:117",
+   "A:119",
+   "A:120"
+  ],
+  "heavy_light_split": "VHH-only: H3 centers on 174-180; H2 supports 146-168; H1/H2 cover 208-223. The footprint necessarily uses more than H3.",
+  "binding_mode_union": "single-chain"
+ },
+ "residues": [
+  "B:146",
+  "B:147",
+  "B:148",
+  "B:149",
+  "B:150",
+  "B:168",
+  "B:170",
+  "B:172",
+  "B:174",
+  "B:175",
+  "B:176",
+  "B:177",
+  "B:178",
+  "B:180",
+  "B:208",
+  "B:209",
+  "B:210",
+  "B:219",
+  "B:221",
+  "B:223"
+ ],
+ "n_residues": 20,
+ "patches": [
+  {
+   "id": "P7",
+   "name": "GFP-nanobody-homologous barrel edge around 146-223",
+   "n_residues": 22,
+   "residues": [
+    "B:146",
+    "B:147",
+    "B:148",
+    "B:149",
+    "B:150",
+    "B:168",
+    "B:170",
+    "B:172",
+    "B:174",
+    "B:175",
+    "B:176",
+    "B:177",
+    "B:178",
+    "B:180",
+    "B:208",
+    "B:209",
+    "B:210",
+    "B:219",
+    "B:221",
+    "B:223",
+    "B:46",
+    "B:48"
+   ],
+   "n_kept_by_advocate": 20,
+   "n_dropped_by_advocate": 2
+  }
+ ],
+ "pooling_provenance": {
+  "n_shared_at_pooling": 22,
+  "n_disputed_at_pooling": 0,
+  "note": "counts only, describing how the organizer grouped the phase-1 patches. The organizer's own candidate residue list is deliberately absent: the answer is the advocate's footprint, in `residues` and in `antibodies[].interfaces[]`."
+ },
+ "evidence": {
+  "advocate": {
+   "n_findings": 5,
+   "n_supports": 4,
+   "n_weakens": 1,
+   "weakest_point": "The direct evidence is for a different antigen homolog and a VHH with a different short H3. The 28.92-Å footprint requires the whole paratope and has an uncertain boundary.",
+   "note": "the advocate reports claim/source/date/bearing and is not asked whether a source is about this binder"
+  },
+  "judge": {
+   "tier_a_support": 0,
+   "n_support_lines": 3,
+   "verdict": "unlikely",
+   "note": "Tier A -- a source about this binder itself -- is the judge's adjudication, in assessment[].support[]. It exists nowhere in the advocate's own answer."
+  }
+ },
+ "provenance": {
+  "unverified_source_policy_fields": [
+   "gated",
+   "web_search",
+   "shell_network",
+   "gate_tools"
+  ],
+  "assembled_case_dir": "gpt-5.6-high/gather_refine/post_refactor/released_structure_20261030/casp16/H1215/case_f91454_G_rep2",
+  "organize_case_dir": "gpt-5.6-high/gather_refine/post_refactor/released_structure_20261030/casp16/H1215/case_f91454_GR_rep1",
+  "organize_status": "ok",
+  "judge_case_dir": "gpt-5.6-high/gather_refine/post_refactor/released_structure_20261030/casp16/H1215/case_f91454_GJ_rep2",
+  "judge_status": "ok",
+  "packet": "gpt-5.6-high/gather/packets/case_f91454/packet",
+  "manifest": "gpt-5.6-high/gather/packets/case_f91454/manifest.json",
+  "advocate_case_dir": "gpt-5.6-high/gather_refine/post_refactor/released_structure_20261030/casp16/H1215/case_f91454_GR_rep1",
+  "advocate_status": "ok"
+ },
+ "score": {
+  "precision": 0.0,
+  "recall": 0.0,
+  "f1": 0.0,
+  "n_pred": 20,
+  "n_true": 22,
+  "n_hit": 0
+ }
+}

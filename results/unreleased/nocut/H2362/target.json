@@ -1,0 +1,352 @@
+{
+ "target": "H2362",
+ "target_set": "casp17",
+ "case": "case_259152",
+ "task": "gather",
+ "gather_mode": "batched",
+ "num_launchers": 3,
+ "policy": {
+  "evidence_cutoff": null,
+  "no_cutoff": true,
+  "gated": false,
+  "web_search": true,
+  "shell_network": true,
+  "gate_tools": []
+ },
+ "unscored": true,
+ "evidence_cutoff": null,
+ "target_release_date": "2026-06-12",
+ "retrieval_policy": "no-cutoff",
+ "antigen_chains": [
+  "A",
+  "B",
+  "C",
+  "D",
+  "E"
+ ],
+ "antibody_files": {
+  "antibody.pdb": [
+   "F",
+   "G"
+  ]
+ },
+ "antibody_chain_types": {
+  "antibody.pdb": {
+   "F": "light",
+   "G": "heavy"
+  }
+ },
+ "input_structure": "data/staged_casp17_no_native/H2362.pdb",
+ "input_structure_sha256": "54e187b986e4696f87e1dd7dd4cd6cd943754471a337aa57a0577c6172827a73",
+ "briefing_source": "data/briefing/casp17_nocutoff/H2362/search_results.json",
+ "briefing_sha256": "51b08b3d656ebb7b7f7f0d284f291dc2a93f171a10cc488b650ef2ac8d2249c3",
+ "recognized_complex": {
+  "organize": null,
+  "judge": false
+ },
+ "recognition_note": "The antigen is recognized as the HCMV pentamer (gL/UL128/UL130/UL131A/gH), but the supplied antibody and antigen-antibody pair are not recognized. Exact-CDR, RCSB-entity, patent, PC-series and paired-antibody searches did not identify it. Published complexes contain sequence-distinct antibodies and provide only Tier B precedent.",
+ "what_separated_them": "No candidate had Tier A evidence about this binder. The distribution is therefore a broad prior over surfaces conditioned on this paratope. A uniform calculation on the unedited footprints compared CDR and patch diameter/PCA extents, charge, hydrophobic/aromatic composition, assembly versus isolated-chain SASA and sequons. Evidential duplication was discounted: C2/C4/C6 overlap on UL128-UL131A, and C3/C8 overlap on UL128-UL130. C8 led on the joint Tier B profile; C3 and C10 fell because their advocates relied on narrower redraws than the inherited candidates.",
+ "not_pooled": [],
+ "provenance": {
+  "unverified_source_policy_fields": [
+   "gated",
+   "web_search",
+   "shell_network",
+   "gate_tools"
+  ],
+  "assembled_case_dir": "gpt-5.6-high/gather_refine/post_refactor/unreleased_20261029/nocut/casp17/H2362/case_259152_G_rep1",
+  "organize_case_dir": "gpt-5.6-high/gather_refine/post_refactor/unreleased_20261029/nocut/casp17/H2362/case_259152_GR_rep1",
+  "organize_status": "ok",
+  "judge_case_dir": "gpt-5.6-high/gather_refine/post_refactor/unreleased_20261029/nocut/casp17/H2362/case_259152_GJ_rep1",
+  "judge_status": "ok",
+  "packet": "gpt-5.6-high/nocut/gather/packets/case_259152/packet",
+  "manifest": "gpt-5.6-high/nocut/gather/packets/case_259152/manifest.json"
+ },
+ "pockets": [
+  {
+   "id": "C8",
+   "judge_rank": 1,
+   "name": "The compact central core of the UL128/UL130 receptor saddle, centered...",
+   "confidence": 0.18,
+   "mapping_basis": "side",
+   "n_residues": 16,
+   "chain_pairs": [
+    {
+     "antibody_chain": "F",
+     "antigen_chain": "B",
+     "n_residues": 2
+    },
+    {
+     "antibody_chain": "F",
+     "antigen_chain": "C",
+     "n_residues": 6
+    },
+    {
+     "antibody_chain": "G",
+     "antigen_chain": "B",
+     "n_residues": 6
+    },
+    {
+     "antibody_chain": "G",
+     "antigen_chain": "C",
+     "n_residues": 6
+    }
+   ],
+   "file": "pocket.C8.json"
+  },
+  {
+   "id": "C2",
+   "judge_rank": 2,
+   "name": "A discontinuous-but-contiguous receptor-facing ridge across the...",
+   "confidence": 0.16,
+   "mapping_basis": "side",
+   "n_residues": 22,
+   "chain_pairs": [
+    {
+     "antibody_chain": "F",
+     "antigen_chain": "B",
+     "n_residues": 4
+    },
+    {
+     "antibody_chain": "F",
+     "antigen_chain": "D",
+     "n_residues": 6
+    },
+    {
+     "antibody_chain": "G",
+     "antigen_chain": "B",
+     "n_residues": 11
+    },
+    {
+     "antibody_chain": "G",
+     "antigen_chain": "D",
+     "n_residues": 7
+    }
+   ],
+   "file": "pocket.C2.json"
+  },
+  {
+   "id": "C6",
+   "judge_rank": 3,
+   "name": "The central site-5 receptor footprint spanning the basic UL128 lobe...",
+   "confidence": 0.14,
+   "mapping_basis": "side",
+   "n_residues": 25,
+   "chain_pairs": [
+    {
+     "antibody_chain": "F",
+     "antigen_chain": "B",
+     "n_residues": 5
+    },
+    {
+     "antibody_chain": "F",
+     "antigen_chain": "D",
+     "n_residues": 10
+    },
+    {
+     "antibody_chain": "G",
+     "antigen_chain": "B",
+     "n_residues": 11
+    },
+    {
+     "antibody_chain": "G",
+     "antigen_chain": "D",
+     "n_residues": 4
+    }
+   ],
+   "file": "pocket.C6.json"
+  },
+  {
+   "id": "C1",
+   "judge_rank": 4,
+   "name": "The membrane-distal cap of the UL128 accessory subunit, including the...",
+   "confidence": 0.12,
+   "mapping_basis": "side",
+   "n_residues": 24,
+   "chain_pairs": [
+    {
+     "antibody_chain": "F",
+     "antigen_chain": "B",
+     "n_residues": 15
+    },
+    {
+     "antibody_chain": "G",
+     "antigen_chain": "B",
+     "n_residues": 17
+    }
+   ],
+   "file": "pocket.C1.json"
+  },
+  {
+   "id": "C4",
+   "judge_rank": 5,
+   "name": "A narrow exposed crest at the UL128-UL131A junction, centered on the...",
+   "confidence": 0.11,
+   "mapping_basis": "side",
+   "n_residues": 16,
+   "chain_pairs": [
+    {
+     "antibody_chain": "F",
+     "antigen_chain": "B",
+     "n_residues": 8
+    },
+    {
+     "antibody_chain": "F",
+     "antigen_chain": "D",
+     "n_residues": 3
+    },
+    {
+     "antibody_chain": "G",
+     "antigen_chain": "B",
+     "n_residues": 4
+    },
+    {
+     "antibody_chain": "G",
+     "antigen_chain": "D",
+     "n_residues": 7
+    }
+   ],
+   "file": "pocket.C4.json"
+  },
+  {
+   "id": "C5",
+   "judge_rank": 6,
+   "name": "A folded, discontinuous conformational surface on the central...",
+   "confidence": 0.09,
+   "mapping_basis": "side",
+   "n_residues": 18,
+   "chain_pairs": [
+    {
+     "antibody_chain": "F",
+     "antigen_chain": "E",
+     "n_residues": 13
+    },
+    {
+     "antibody_chain": "G",
+     "antigen_chain": "E",
+     "n_residues": 10
+    }
+   ],
+   "file": "pocket.C5.json"
+  },
+  {
+   "id": "C9",
+   "judge_rank": 7,
+   "name": "The exposed distal gL-gH scaffold junction immediately below the...",
+   "confidence": 0.07,
+   "mapping_basis": "side",
+   "n_residues": 13,
+   "chain_pairs": [
+    {
+     "antibody_chain": "F",
+     "antigen_chain": "A",
+     "n_residues": 5
+    },
+    {
+     "antibody_chain": "F",
+     "antigen_chain": "E",
+     "n_residues": 4
+    },
+    {
+     "antibody_chain": "G",
+     "antigen_chain": "A",
+     "n_residues": 5
+    },
+    {
+     "antibody_chain": "G",
+     "antigen_chain": "E",
+     "n_residues": 2
+    }
+   ],
+   "file": "pocket.C9.json"
+  },
+  {
+   "id": "C7",
+   "judge_rank": 8,
+   "name": "A charged-aromatic crest along the exposed UL130/UL131A seam on the...",
+   "confidence": 0.05,
+   "mapping_basis": "side",
+   "n_residues": 20,
+   "chain_pairs": [
+    {
+     "antibody_chain": "F",
+     "antigen_chain": "C",
+     "n_residues": 11
+    },
+    {
+     "antibody_chain": "F",
+     "antigen_chain": "D",
+     "n_residues": 4
+    },
+    {
+     "antibody_chain": "G",
+     "antigen_chain": "C",
+     "n_residues": 11
+    },
+    {
+     "antibody_chain": "G",
+     "antigen_chain": "D",
+     "n_residues": 1
+    }
+   ],
+   "file": "pocket.C7.json"
+  },
+  {
+   "id": "C3",
+   "judge_rank": 9,
+   "name": "The broad receptor-facing saddle where the distal UL128 flank meets...",
+   "confidence": 0.04,
+   "mapping_basis": "side",
+   "n_residues": 15,
+   "chain_pairs": [
+    {
+     "antibody_chain": "F",
+     "antigen_chain": "B",
+     "n_residues": 2
+    },
+    {
+     "antibody_chain": "F",
+     "antigen_chain": "C",
+     "n_residues": 6
+    },
+    {
+     "antibody_chain": "G",
+     "antigen_chain": "B",
+     "n_residues": 5
+    },
+    {
+     "antibody_chain": "G",
+     "antigen_chain": "C",
+     "n_residues": 6
+    }
+   ],
+   "file": "pocket.C3.json"
+  },
+  {
+   "id": "C10",
+   "judge_rank": 10,
+   "name": "The central lobe of the gL-UL130 junction on the lateral pentamer...",
+   "confidence": 0.04,
+   "mapping_basis": "side",
+   "n_residues": 14,
+   "chain_pairs": [
+    {
+     "antibody_chain": "F",
+     "antigen_chain": "C",
+     "n_residues": 9
+    },
+    {
+     "antibody_chain": "G",
+     "antigen_chain": "A",
+     "n_residues": 2
+    },
+    {
+     "antibody_chain": "G",
+     "antigen_chain": "C",
+     "n_residues": 9
+    }
+   ],
+   "file": "pocket.C10.json"
+  }
+ ]
+}

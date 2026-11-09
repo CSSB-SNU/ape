@@ -1,0 +1,309 @@
+{
+ "task": "gather",
+ "gather_mode": "batched",
+ "num_launchers": 3,
+ "policy": {
+  "evidence_cutoff": "2026-05-15",
+  "no_cutoff": false,
+  "gated": true,
+  "web_search": false,
+  "shell_network": true,
+  "gate_tools": [
+   "research",
+   "fetch",
+   "rcsb",
+   "patent",
+   "paper"
+  ]
+ },
+ "unscored": false,
+ "target": "H2339",
+ "target_set": "casp17",
+ "case": "case_5886c7",
+ "evidence_cutoff": "2026-05-15",
+ "target_release_date": "2026-05-15",
+ "retrieval_policy": "gated",
+ "input_structure": "structures/H2339.pdb",
+ "input_structure_sha256": null,
+ "briefing_source": null,
+ "briefing_sha256": null,
+ "antigen_chains": [
+  "C",
+  "D"
+ ],
+ "antibody_files": {
+  "antibody.pdb": [
+   "A",
+   "B"
+  ]
+ },
+ "antibody_chain_types": {
+  "antibody.pdb": {
+   "A": "unknown",
+   "B": "unknown"
+  }
+ },
+ "truth_file": "data/truth/casp17/H2339.epitope.json",
+ "stage": "gatherer",
+ "pocket": {
+  "id": "C5",
+  "judge_rank": 3,
+  "name": "The glycan-bearing 60-loop/99-loop side of the trypsin-like protease...",
+  "confidence": 0.22,
+  "p_rests_on_holds": 0.3,
+  "why_this_rank": "Its compact exposed location and indirect allosteric mechanism fit the weak effect on preactivated factor XIa, but its strongest antibody precedent is from another protease, its overall charge is not complementary, and a central native glycan is unresolved.",
+  "rests_on": "The native glycan permits access and REGN7508 uses an indirect loop-wall mechanism rather than one of the two experimentally established factor-XI antibody faces.",
+  "where_the_mass_goes_if_it_fails": "C4 and C7.",
+  "what_it_is": "The glycan-bearing 60-loop/99-loop side of the trypsin-like protease substrate-binding cleft, adjacent to but not centred on the catalytic triad.",
+  "why_one_candidate": "not pooled with anything: no other patch is both within 12 A (half centroid distance, half contact-graph hops) and coverable by one paratope of this antibody's reach, 17.2 A",
+  "from_patches": [
+   "P5"
+  ]
+ },
+ "note": "`confidence` on the pocket is over pockets and sums to about 1 across them. Inside an interface it is per residue in [0, 1] and sums to nothing. No residue is cut at a threshold: the whole vector is the answer.",
+ "mapping_basis": "side",
+ "checks": {
+  "unrecognised_sides": []
+ },
+ "chain_pairs": [
+  {
+   "antibody_chain": "A",
+   "antigen_chain": "D",
+   "n_residues": 14
+  },
+  {
+   "antibody_chain": "B",
+   "antigen_chain": "D",
+   "n_residues": 14
+  }
+ ],
+ "antibodies": [
+  {
+   "antibody": "antibody.pdb",
+   "chains": {
+    "A": "unknown",
+    "B": "unknown"
+   },
+   "binding_mode": null,
+   "n_residues_scored": 14,
+   "interfaces": [
+    {
+     "antibody_chain": "A",
+     "antibody_chain_type": "unknown",
+     "antigen_chain": "D",
+     "n_residues": 14,
+     "residue_confidence": {
+      "53": 0.86,
+      "54": 0.46,
+      "56": 0.71,
+      "63": 0.32,
+      "64": 0.78,
+      "65": 0.89,
+      "66": 0.58,
+      "68": 0.87,
+      "69": 0.8,
+      "70": 0.72,
+      "72": 0.77,
+      "73": 0.88,
+      "74": 0.48,
+      "100": 0.63
+     },
+     "residue_side": {
+      "53": "heavy",
+      "54": "heavy",
+      "56": "both",
+      "63": "light",
+      "64": "both",
+      "65": "both",
+      "66": "light",
+      "68": "heavy",
+      "69": "light",
+      "70": "light",
+      "72": "light",
+      "73": "heavy",
+      "74": "heavy",
+      "100": "both"
+     },
+     "max_confidence": 0.89,
+     "mean_confidence": 0.6964,
+     "precision_vs_truth": 0.0,
+     "n_in_truth": 0
+    },
+    {
+     "antibody_chain": "B",
+     "antibody_chain_type": "unknown",
+     "antigen_chain": "D",
+     "n_residues": 14,
+     "residue_confidence": {
+      "53": 0.86,
+      "54": 0.46,
+      "56": 0.71,
+      "63": 0.32,
+      "64": 0.78,
+      "65": 0.89,
+      "66": 0.58,
+      "68": 0.87,
+      "69": 0.8,
+      "70": 0.72,
+      "72": 0.77,
+      "73": 0.88,
+      "74": 0.48,
+      "100": 0.63
+     },
+     "residue_side": {
+      "53": "heavy",
+      "54": "heavy",
+      "56": "both",
+      "63": "light",
+      "64": "both",
+      "65": "both",
+      "66": "light",
+      "68": "heavy",
+      "69": "light",
+      "70": "light",
+      "72": "light",
+      "73": "heavy",
+      "74": "heavy",
+      "100": "both"
+     },
+     "max_confidence": 0.89,
+     "mean_confidence": 0.6964,
+     "precision_vs_truth": 0.0,
+     "n_in_truth": 0
+    }
+   ]
+  }
+ ],
+ "paratope": {
+  "dominant_cdrs": [
+   "H3",
+   "H2",
+   "L3"
+  ],
+  "paratope_residues": [
+   "A:27",
+   "A:28",
+   "A:30",
+   "A:31",
+   "A:32",
+   "A:53",
+   "A:54",
+   "A:56",
+   "A:57",
+   "A:58",
+   "A:99",
+   "A:100",
+   "A:101",
+   "A:102",
+   "A:103",
+   "A:106",
+   "A:107",
+   "B:27",
+   "B:28",
+   "B:30",
+   "B:31",
+   "B:32",
+   "B:50",
+   "B:52",
+   "B:91",
+   "B:92",
+   "B:93",
+   "B:94",
+   "B:95",
+   "B:96",
+   "B:97"
+  ],
+  "heavy_light_split": "Heavy supplies about 60-65% over D:53-D:68 and D:73-D:74, with H3 central on D:64-D:65. Light supplies about 35-40% on D:63/D:66/D:69-D:72/D:100. Both chains converge at D:56 and D:64-D:65/D:100.",
+  "binding_mode_union": "single-chain"
+ },
+ "residues": [
+  "D:100",
+  "D:53",
+  "D:54",
+  "D:56",
+  "D:63",
+  "D:64",
+  "D:65",
+  "D:66",
+  "D:68",
+  "D:69",
+  "D:70",
+  "D:72",
+  "D:73",
+  "D:74"
+ ],
+ "n_residues": 14,
+ "patches": [
+  {
+   "id": "P5",
+   "name": "Protease-domain allosteric loop adjacent to the active-site face",
+   "n_residues": 17,
+   "residues": [
+    "D:100",
+    "D:51",
+    "D:52",
+    "D:53",
+    "D:54",
+    "D:56",
+    "D:59",
+    "D:63",
+    "D:64",
+    "D:65",
+    "D:66",
+    "D:68",
+    "D:69",
+    "D:70",
+    "D:72",
+    "D:73",
+    "D:74"
+   ],
+   "n_kept_by_advocate": 14,
+   "n_dropped_by_advocate": 3
+  }
+ ],
+ "pooling_provenance": {
+  "n_shared_at_pooling": 17,
+  "n_disputed_at_pooling": 0,
+  "note": "counts only, describing how the organizer grouped the phase-1 patches. The organizer's own candidate residue list is deliberately absent: the answer is the advocate's footprint, in `residues` and in `antibodies[].interfaces[]`."
+ },
+ "evidence": {
+  "advocate": {
+   "n_findings": 4,
+   "n_supports": 2,
+   "n_weakens": 1,
+   "weakest_point": "The NQS glycan lies in the middle of the proposed approach, and the best direct antibody precedent is FXIa-selective osocimab whereas REGN7508 binds both zymogen and activated forms at picomolar affinity.",
+   "note": "the advocate reports claim/source/date/bearing and is not asked whether a source is about this binder"
+  },
+  "judge": {
+   "tier_a_support": 1,
+   "n_support_lines": 5,
+   "verdict": "live",
+   "note": "Tier A -- a source about this binder itself -- is the judge's adjudication, in assessment[].support[]. It exists nowhere in the advocate's own answer."
+  }
+ },
+ "provenance": {
+  "unverified_source_policy_fields": [
+   "gated",
+   "web_search",
+   "shell_network",
+   "gate_tools"
+  ],
+  "assembled_case_dir": "gpt-5.6-high/gather_refine/post_refactor/released_structure_20261030/casp17/H2339/case_5886c7_G_rep3",
+  "organize_case_dir": "gpt-5.6-high/gather_refine/post_refactor/released_structure_20261030/casp17/H2339/case_5886c7_GR_rep1",
+  "organize_status": "ok",
+  "judge_case_dir": "gpt-5.6-high/gather_refine/post_refactor/released_structure_20261030/casp17/H2339/case_5886c7_GJ_rep3",
+  "judge_status": "ok",
+  "packet": "gpt-5.6-high/gather/packets/case_5886c7/packet",
+  "manifest": "gpt-5.6-high/gather/packets/case_5886c7/manifest.json",
+  "advocate_case_dir": "gpt-5.6-high/gather_refine/post_refactor/released_structure_20261030/casp17/H2339/case_5886c7_GR_rep1",
+  "advocate_status": "ok"
+ },
+ "score": {
+  "precision": 0.0,
+  "recall": 0.0,
+  "f1": 0.0,
+  "n_pred": 14,
+  "n_true": 22,
+  "n_hit": 0
+ }
+}

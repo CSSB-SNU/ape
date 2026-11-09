@@ -1,0 +1,329 @@
+{
+ "task": "gather",
+ "gather_mode": "batched",
+ "num_launchers": 3,
+ "policy": {
+  "evidence_cutoff": "2024-06-05",
+  "no_cutoff": false,
+  "gated": true,
+  "web_search": false,
+  "shell_network": true,
+  "gate_tools": [
+   "research",
+   "fetch",
+   "rcsb",
+   "patent",
+   "paper"
+  ]
+ },
+ "unscored": false,
+ "target": "H1223",
+ "target_set": "casp16",
+ "case": "case_c794c2",
+ "evidence_cutoff": "2024-06-05",
+ "target_release_date": "2024-06-05",
+ "retrieval_policy": "gated",
+ "input_structure": "structures/H1223.pdb",
+ "input_structure_sha256": null,
+ "briefing_source": null,
+ "briefing_sha256": null,
+ "antigen_chains": [
+  "A"
+ ],
+ "antibody_files": {
+  "antibody.pdb": [
+   "B",
+   "C"
+  ]
+ },
+ "antibody_chain_types": {
+  "antibody.pdb": {
+   "B": "heavy",
+   "C": "light"
+  }
+ },
+ "truth_file": "data/truth/casp16/H1223.epitope.json",
+ "stage": "gatherer",
+ "pocket": {
+  "id": "C3",
+  "judge_rank": 1,
+  "name": "The compact aromatic N-terminal flank of the unglycosylated conserved...",
+  "confidence": 0.75,
+  "p_rests_on_holds": 0.92,
+  "why_this_rank": "It is centered on the only binder-specific localization, contains the complete A:5–A:14 1G8 map, and makes the most compact extension around that core.",
+  "rests_on": "The five exact distinctive CDR motifs identify the supplied antibody as 1G8 and its overlapping-peptide map identifies the native epitope center.",
+  "where_the_mass_goes_if_it_fails": "C2",
+  "what_it_is": "The compact aromatic N-terminal flank of the unglycosylated conserved attachment domain immediately upstream of the cystine noose: a Phe-rich linear energetic strip on the flexible flank of a disulfide-stabilized receptor-binding domain.",
+  "why_one_candidate": "geometry pooled 3 patches (P3, P7, P9): P7+P9 at 0.49 A, union radius 12.73 A; P3+P7+P9 at 1.01 A, union radius 15.98 A. Every union fits inside this antibody's paratope reach of 18.2 A. No session judged these to be the same surface.",
+  "from_patches": [
+   "P3",
+   "P7",
+   "P9"
+  ]
+ },
+ "note": "`confidence` on the pocket is over pockets and sums to about 1 across them. Inside an interface it is per residue in [0, 1] and sums to nothing. No residue is cut at a threshold: the whole vector is the answer.",
+ "mapping_basis": "side",
+ "checks": {
+  "unrecognised_sides": []
+ },
+ "chain_pairs": [
+  {
+   "antibody_chain": "B",
+   "antigen_chain": "A",
+   "n_residues": 10
+  },
+  {
+   "antibody_chain": "C",
+   "antigen_chain": "A",
+   "n_residues": 7
+  }
+ ],
+ "antibodies": [
+  {
+   "antibody": "antibody.pdb",
+   "chains": {
+    "B": "heavy",
+    "C": "light"
+   },
+   "binding_mode": null,
+   "n_residues_scored": 13,
+   "interfaces": [
+    {
+     "antibody_chain": "B",
+     "antibody_chain_type": "heavy",
+     "antigen_chain": "A",
+     "n_residues": 10,
+     "residue_confidence": {
+      "7": 0.97,
+      "8": 0.91,
+      "9": 0.96,
+      "10": 0.95,
+      "11": 0.93,
+      "12": 0.98,
+      "13": 0.92,
+      "14": 0.96,
+      "15": 0.46,
+      "16": 0.26
+     },
+     "residue_side": {
+      "7": "both",
+      "8": "both",
+      "9": "both",
+      "10": "both",
+      "11": "heavy",
+      "12": "heavy",
+      "13": "heavy",
+      "14": "heavy",
+      "15": "heavy",
+      "16": "heavy"
+     },
+     "max_confidence": 0.98,
+     "mean_confidence": 0.83,
+     "precision_vs_truth": 0.9,
+     "n_in_truth": 9
+    },
+    {
+     "antibody_chain": "C",
+     "antibody_chain_type": "light",
+     "antigen_chain": "A",
+     "n_residues": 7,
+     "residue_confidence": {
+      "4": 0.36,
+      "5": 0.84,
+      "6": 0.9,
+      "7": 0.97,
+      "8": 0.91,
+      "9": 0.96,
+      "10": 0.95
+     },
+     "residue_side": {
+      "4": "light",
+      "5": "light",
+      "6": "light",
+      "7": "both",
+      "8": "both",
+      "9": "both",
+      "10": "both"
+     },
+     "max_confidence": 0.97,
+     "mean_confidence": 0.8414,
+     "precision_vs_truth": 0.5714,
+     "n_in_truth": 4
+    }
+   ]
+  }
+ ],
+ "paratope": {
+  "dominant_cdrs": [
+   "H3StopLeakH3:H3",
+   "H2:H2",
+   "L3:L3",
+   "H1:H1"
+  ],
+  "paratope_residues": [
+   "B:27",
+   "B:30",
+   "B:31",
+   "B:33",
+   "B:34",
+   "B:35",
+   "B:54",
+   "B:55",
+   "B:56",
+   "B:58",
+   "B:59",
+   "B:101",
+   "B:102",
+   "B:103",
+   "B:104",
+   "B:105",
+   "B:106",
+   "B:107",
+   "B:108",
+   "B:112",
+   "C:27",
+   "C:28",
+   "C:31",
+   "C:32",
+   "C:52",
+   "C:92",
+   "C:93",
+   "C:94",
+   "C:95",
+   "C:96"
+  ],
+  "heavy_light_split": "Heavy-dominant with a substantial light shoulder: A:4–A:6 are light, A:7–A:10 both, and A:11–A:16 heavy. The heavy side owns the later hydrophobic half and central H3, while L1/L3 provide the charged/aromatic N-terminal edge.",
+  "binding_mode_union": "single-chain"
+ },
+ "residues": [
+  "A:10",
+  "A:11",
+  "A:12",
+  "A:13",
+  "A:14",
+  "A:15",
+  "A:16",
+  "A:4",
+  "A:5",
+  "A:6",
+  "A:7",
+  "A:8",
+  "A:9"
+ ],
+ "n_residues": 13,
+ "patches": [
+  {
+   "id": "P3",
+   "name": "Broader conformational N-flank footprint around the mapped peptide",
+   "n_residues": 18,
+   "residues": [
+    "A:10",
+    "A:11",
+    "A:12",
+    "A:13",
+    "A:14",
+    "A:15",
+    "A:16",
+    "A:17",
+    "A:18",
+    "A:19",
+    "A:20",
+    "A:3",
+    "A:4",
+    "A:5",
+    "A:6",
+    "A:7",
+    "A:8",
+    "A:9"
+   ],
+   "n_kept_by_advocate": 13,
+   "n_dropped_by_advocate": 5
+  },
+  {
+   "id": "P7",
+   "name": "Published 1G8 linear gamma1 epitope and immediate structural rim",
+   "n_residues": 13,
+   "residues": [
+    "A:10",
+    "A:11",
+    "A:12",
+    "A:13",
+    "A:14",
+    "A:15",
+    "A:16",
+    "A:4",
+    "A:5",
+    "A:6",
+    "A:7",
+    "A:8",
+    "A:9"
+   ],
+   "n_kept_by_advocate": 13,
+   "n_dropped_by_advocate": 0
+  },
+  {
+   "id": "P9",
+   "name": "Patent-mapped 1G8 aromatic N-flank epitope",
+   "n_residues": 10,
+   "residues": [
+    "A:10",
+    "A:11",
+    "A:12",
+    "A:13",
+    "A:14",
+    "A:5",
+    "A:6",
+    "A:7",
+    "A:8",
+    "A:9"
+   ],
+   "n_kept_by_advocate": 10,
+   "n_dropped_by_advocate": 0
+  }
+ ],
+ "pooling_provenance": {
+  "n_shared_at_pooling": 10,
+  "n_disputed_at_pooling": 8,
+  "note": "counts only, describing how the organizer grouped the phase-1 patches. The organizer's own candidate residue list is deliberately absent: the answer is the advocate's footprint, in `residues` and in `antibodies[].interfaces[]`."
+ },
+ "evidence": {
+  "advocate": {
+   "n_findings": 7,
+   "n_supports": 6,
+   "n_weakens": 1,
+   "weakest_point": "The direct evidence is peptide-level: it locates an energetic core but does not reveal the native 3D rim, heavy/light polarity or individual energetic hot spots. A:4/A:15/A:16 and chain assignments remain structural inference.",
+   "note": "the advocate reports claim/source/date/bearing and is not asked whether a source is about this binder"
+  },
+  "judge": {
+   "tier_a_support": 3,
+   "n_support_lines": 7,
+   "verdict": "leading",
+   "note": "Tier A -- a source about this binder itself -- is the judge's adjudication, in assessment[].support[]. It exists nowhere in the advocate's own answer."
+  }
+ },
+ "provenance": {
+  "unverified_source_policy_fields": [
+   "gated",
+   "web_search",
+   "shell_network",
+   "gate_tools"
+  ],
+  "assembled_case_dir": "gpt-5.6-high/gather_refine/post_refactor/released_structure_20261030/casp16/H1223/case_c794c2_G_rep2",
+  "organize_case_dir": "gpt-5.6-high/gather_refine/post_refactor/released_structure_20261030/casp16/H1223/case_c794c2_GR_rep1",
+  "organize_status": "ok",
+  "judge_case_dir": "gpt-5.6-high/gather_refine/post_refactor/released_structure_20261030/casp16/H1223/case_c794c2_GJ_rep2",
+  "judge_status": "ok",
+  "packet": "gpt-5.6-high/gather/packets/case_c794c2/packet",
+  "manifest": "gpt-5.6-high/gather/packets/case_c794c2/manifest.json",
+  "advocate_case_dir": "gpt-5.6-high/gather_refine/post_refactor/released_structure_20261030/casp16/H1223/case_c794c2_GR_rep1",
+  "advocate_status": "ok"
+ },
+ "score": {
+  "precision": 0.7692,
+  "recall": 0.5556,
+  "f1": 0.6452,
+  "n_pred": 13,
+  "n_true": 18,
+  "n_hit": 10
+ }
+}

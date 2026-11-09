@@ -1,0 +1,488 @@
+{
+ "target": "H1244",
+ "target_set": "casp16",
+ "case": "case_4a7bba",
+ "task": "gather",
+ "gather_mode": "batched",
+ "num_launchers": 3,
+ "policy": {
+  "evidence_cutoff": "2024-06-23",
+  "no_cutoff": false,
+  "gated": true,
+  "web_search": false,
+  "shell_network": true,
+  "gate_tools": [
+   "research",
+   "fetch",
+   "rcsb",
+   "patent",
+   "paper"
+  ]
+ },
+ "unscored": false,
+ "evidence_cutoff": "2024-06-23",
+ "target_release_date": "2024-06-23",
+ "retrieval_policy": "gated",
+ "antigen_chains": [
+  "A",
+  "B",
+  "C",
+  "D"
+ ],
+ "antibody_files": {
+  "antibody.1.pdb": [
+   "E"
+  ],
+  "antibody.2.pdb": [
+   "F"
+  ]
+ },
+ "antibody_chain_types": {
+  "antibody.1.pdb": {
+   "E": "heavy"
+  },
+  "antibody.2.pdb": {
+   "F": "heavy"
+  }
+ },
+ "input_structure": "structures/H1244.pdb",
+ "input_structure_sha256": null,
+ "briefing_source": null,
+ "briefing_sha256": null,
+ "recognized_complex": {
+  "organize": null,
+  "judge": true
+ },
+ "recognition_note": "The antigen maps to C-terminal TbBILBO1 and the VHH architecture identifies the published anti-BILBO1 nanobody system (2021-10-27). Exact Nb48-versus-Nb9 identity remains unresolved, so no literature line is Tier A.",
+ "what_separated_them": "No candidate had Tier A evidence about this exact VHH. All passed assembly-exposure and reach filters. The broad order was separated by denaturing-blot continuity, coarse paratope-patch chemistry, required chain count, and C8's missing-segment gap.",
+ "not_pooled": [],
+ "provenance": {
+  "unverified_source_policy_fields": [
+   "gated",
+   "web_search",
+   "shell_network",
+   "gate_tools"
+  ],
+  "assembled_case_dir": "gpt-5.6-high/gather_refine/post_refactor/released_structure_20261030/casp16/H1244/case_4a7bba_G_rep2",
+  "organize_case_dir": "gpt-5.6-high/gather_refine/post_refactor/released_structure_20261030/casp16/H1244/case_4a7bba_GR_rep1",
+  "organize_status": "ok",
+  "judge_case_dir": "gpt-5.6-high/gather_refine/post_refactor/released_structure_20261030/casp16/H1244/case_4a7bba_GJ_rep2",
+  "judge_status": "ok",
+  "packet": "gpt-5.6-high/gather/packets/case_4a7bba/packet",
+  "manifest": "gpt-5.6-high/gather/packets/case_4a7bba/manifest.json"
+ },
+ "truth_file": "data/truth/casp16/H1244.epitope.json",
+ "truth": {
+  "n_residues": 38,
+  "usable": "yes",
+  "chains": {
+   "A": [
+    91,
+    94,
+    95,
+    98,
+    99,
+    101,
+    102,
+    105,
+    106,
+    109
+   ],
+   "B": [
+    91,
+    94,
+    95,
+    98,
+    99,
+    101,
+    102,
+    105,
+    106,
+    109
+   ],
+   "C": [
+    48,
+    51,
+    52,
+    55,
+    56,
+    58,
+    59,
+    62,
+    63
+   ],
+   "D": [
+    48,
+    51,
+    52,
+    55,
+    56,
+    58,
+    59,
+    62,
+    63
+   ]
+  },
+  "anchor_note": "the numbering frame only; the epitope is defined on the native and carried here by antigen sequence alignment, so which pooled model this is does not affect the label"
+ },
+ "oracle": {
+  "metric": "f1",
+  "epitope_definition": "whole_antibody",
+  "truth_file": "data/truth/casp16/H1244.epitope.json",
+  "rank1": {
+   "pocket": "C7",
+   "confidence": 0.27,
+   "precision": 0.3636,
+   "recall": 0.2105,
+   "f1": 0.2667,
+   "n_pred": 22,
+   "n_true": 38,
+   "n_hit": 8
+  },
+  "best": {
+   "pocket": "C2",
+   "judge_rank": 6,
+   "confidence": 0.07,
+   "precision": 0.4615,
+   "recall": 0.3158,
+   "f1": 0.375,
+   "n_pred": 26,
+   "n_true": 38,
+   "n_hit": 12
+  },
+  "note": "the best pocket the answer already contains. Rank 1 is the answer as delivered, so the gap is what the judge's ordering cost."
+ },
+ "pockets": [
+  {
+   "id": "C7",
+   "judge_rank": 1,
+   "name": "A continuous single-chain aromatic/basic stripe at the A/B...",
+   "confidence": 0.27,
+   "mapping_basis": "per_antibody",
+   "n_residues": 22,
+   "score": {
+    "precision": 0.3636,
+    "recall": 0.2105,
+    "f1": 0.2667,
+    "n_pred": 22,
+    "n_true": 38,
+    "n_hit": 8
+   },
+   "chain_pairs": [
+    {
+     "antibody_chain": "E",
+     "antigen_chain": "A",
+     "n_residues": 11
+    },
+    {
+     "antibody_chain": "F",
+     "antigen_chain": "B",
+     "n_residues": 11
+    }
+   ],
+   "file": "pocket.C7.json"
+  },
+  {
+   "id": "C1",
+   "judge_rank": 2,
+   "name": "The exposed exit and terminal tail of the BILBO1 C-terminal...",
+   "confidence": 0.19,
+   "mapping_basis": "per_antibody",
+   "n_residues": 22,
+   "score": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0,
+    "n_pred": 22,
+    "n_true": 38,
+    "n_hit": 0
+   },
+   "chain_pairs": [
+    {
+     "antibody_chain": "E",
+     "antigen_chain": "C",
+     "n_residues": 11
+    },
+    {
+     "antibody_chain": "F",
+     "antigen_chain": "D",
+     "n_residues": 11
+    }
+   ],
+   "file": "pocket.C1.json"
+  },
+  {
+   "id": "C4",
+   "judge_rank": 3,
+   "name": "The assembly-exposed aromatic/basic cleft between the A/B coiled-coil...",
+   "confidence": 0.13,
+   "mapping_basis": "per_antibody",
+   "n_residues": 24,
+   "score": {
+    "precision": 0.25,
+    "recall": 0.1579,
+    "f1": 0.1935,
+    "n_pred": 24,
+    "n_true": 38,
+    "n_hit": 6
+   },
+   "chain_pairs": [
+    {
+     "antibody_chain": "E",
+     "antigen_chain": "A",
+     "n_residues": 7
+    },
+    {
+     "antibody_chain": "E",
+     "antigen_chain": "D",
+     "n_residues": 5
+    },
+    {
+     "antibody_chain": "F",
+     "antigen_chain": "B",
+     "n_residues": 7
+    },
+    {
+     "antibody_chain": "F",
+     "antigen_chain": "C",
+     "n_residues": 5
+    }
+   ],
+   "file": "pocket.C4.json"
+  },
+  {
+   "id": "C3",
+   "judge_rank": 4,
+   "name": "The exposed charged C/D helical face across the...",
+   "confidence": 0.11,
+   "mapping_basis": "per_antibody",
+   "n_residues": 26,
+   "score": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0,
+    "n_pred": 26,
+    "n_true": 38,
+    "n_hit": 0
+   },
+   "chain_pairs": [
+    {
+     "antibody_chain": "E",
+     "antigen_chain": "C",
+     "n_residues": 13
+    },
+    {
+     "antibody_chain": "F",
+     "antigen_chain": "D",
+     "n_residues": 13
+    }
+   ],
+   "file": "pocket.C3.json"
+  },
+  {
+   "id": "C9",
+   "judge_rank": 5,
+   "name": "A three-chain W87 junction: the A/B coiled-coil start forms the...",
+   "confidence": 0.1,
+   "mapping_basis": "per_antibody",
+   "n_residues": 24,
+   "score": {
+    "precision": 0.25,
+    "recall": 0.1579,
+    "f1": 0.1935,
+    "n_pred": 24,
+    "n_true": 38,
+    "n_hit": 6
+   },
+   "chain_pairs": [
+    {
+     "antibody_chain": "E",
+     "antigen_chain": "A",
+     "n_residues": 8
+    },
+    {
+     "antibody_chain": "E",
+     "antigen_chain": "C",
+     "n_residues": 2
+    },
+    {
+     "antibody_chain": "E",
+     "antigen_chain": "D",
+     "n_residues": 2
+    },
+    {
+     "antibody_chain": "F",
+     "antigen_chain": "B",
+     "n_residues": 8
+    },
+    {
+     "antibody_chain": "F",
+     "antigen_chain": "C",
+     "n_residues": 2
+    },
+    {
+     "antibody_chain": "F",
+     "antigen_chain": "D",
+     "n_residues": 2
+    }
+   ],
+   "file": "pocket.C9.json"
+  },
+  {
+   "id": "C2",
+   "judge_rank": 6,
+   "name": "A compact two-chain flank on the antiparallel coiled-coil shaft...",
+   "confidence": 0.07,
+   "mapping_basis": "per_antibody",
+   "n_residues": 26,
+   "score": {
+    "precision": 0.4615,
+    "recall": 0.3158,
+    "f1": 0.375,
+    "n_pred": 26,
+    "n_true": 38,
+    "n_hit": 12
+   },
+   "chain_pairs": [
+    {
+     "antibody_chain": "E",
+     "antigen_chain": "A",
+     "n_residues": 9
+    },
+    {
+     "antibody_chain": "E",
+     "antigen_chain": "C",
+     "n_residues": 4
+    },
+    {
+     "antibody_chain": "F",
+     "antigen_chain": "B",
+     "n_residues": 9
+    },
+    {
+     "antibody_chain": "F",
+     "antigen_chain": "D",
+     "n_residues": 4
+    }
+   ],
+   "file": "pocket.C2.json"
+  },
+  {
+   "id": "C6",
+   "judge_rank": 7,
+   "name": "The mid-shaft A/C or B/D groove centered on A/B 109–123 against C/D...",
+   "confidence": 0.055,
+   "mapping_basis": "per_antibody",
+   "n_residues": 32,
+   "score": {
+    "precision": 0.0625,
+    "recall": 0.0526,
+    "f1": 0.0571,
+    "n_pred": 32,
+    "n_true": 38,
+    "n_hit": 2
+   },
+   "chain_pairs": [
+    {
+     "antibody_chain": "E",
+     "antigen_chain": "A",
+     "n_residues": 8
+    },
+    {
+     "antibody_chain": "E",
+     "antigen_chain": "C",
+     "n_residues": 8
+    },
+    {
+     "antibody_chain": "F",
+     "antigen_chain": "B",
+     "n_residues": 8
+    },
+    {
+     "antibody_chain": "F",
+     "antigen_chain": "D",
+     "n_residues": 8
+    }
+   ],
+   "file": "pocket.C6.json"
+  },
+  {
+   "id": "C5",
+   "judge_rank": 8,
+   "name": "A distal two-chain charged groove on the antiparallel coiled-coil...",
+   "confidence": 0.045,
+   "mapping_basis": "per_antibody",
+   "n_residues": 28,
+   "score": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0,
+    "n_pred": 28,
+    "n_true": 38,
+    "n_hit": 0
+   },
+   "chain_pairs": [
+    {
+     "antibody_chain": "E",
+     "antigen_chain": "A",
+     "n_residues": 7
+    },
+    {
+     "antibody_chain": "E",
+     "antigen_chain": "C",
+     "n_residues": 7
+    },
+    {
+     "antibody_chain": "F",
+     "antigen_chain": "B",
+     "n_residues": 7
+    },
+    {
+     "antibody_chain": "F",
+     "antigen_chain": "D",
+     "n_residues": 7
+    }
+   ],
+   "file": "pocket.C5.json"
+  },
+  {
+   "id": "C8",
+   "judge_rank": 9,
+   "name": "The charged cap where the resolved A/B end approaches the resolved...",
+   "confidence": 0.03,
+   "mapping_basis": "per_antibody",
+   "n_residues": 24,
+   "score": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0,
+    "n_pred": 24,
+    "n_true": 38,
+    "n_hit": 0
+   },
+   "chain_pairs": [
+    {
+     "antibody_chain": "E",
+     "antigen_chain": "A",
+     "n_residues": 7
+    },
+    {
+     "antibody_chain": "E",
+     "antigen_chain": "C",
+     "n_residues": 5
+    },
+    {
+     "antibody_chain": "F",
+     "antigen_chain": "B",
+     "n_residues": 7
+    },
+    {
+     "antibody_chain": "F",
+     "antigen_chain": "D",
+     "n_residues": 5
+    }
+   ],
+   "file": "pocket.C8.json"
+  }
+ ]
+}

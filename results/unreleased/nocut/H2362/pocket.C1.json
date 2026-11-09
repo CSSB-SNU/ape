@@ -1,0 +1,350 @@
+{
+ "task": "gather",
+ "gather_mode": "batched",
+ "num_launchers": 3,
+ "policy": {
+  "evidence_cutoff": null,
+  "no_cutoff": true,
+  "gated": false,
+  "web_search": true,
+  "shell_network": true,
+  "gate_tools": []
+ },
+ "unscored": true,
+ "target": "H2362",
+ "target_set": "casp17",
+ "case": "case_259152",
+ "evidence_cutoff": null,
+ "target_release_date": "2026-06-12",
+ "retrieval_policy": "no-cutoff",
+ "input_structure": "data/staged_casp17_no_native/H2362.pdb",
+ "input_structure_sha256": "54e187b986e4696f87e1dd7dd4cd6cd943754471a337aa57a0577c6172827a73",
+ "briefing_source": "data/briefing/casp17_nocutoff/H2362/search_results.json",
+ "briefing_sha256": "51b08b3d656ebb7b7f7f0d284f291dc2a93f171a10cc488b650ef2ac8d2249c3",
+ "antigen_chains": [
+  "A",
+  "B",
+  "C",
+  "D",
+  "E"
+ ],
+ "antibody_files": {
+  "antibody.pdb": [
+   "F",
+   "G"
+  ]
+ },
+ "antibody_chain_types": {
+  "antibody.pdb": {
+   "F": "light",
+   "G": "heavy"
+  }
+ },
+ "stage": "gatherer",
+ "pocket": {
+  "id": "C1",
+  "judge_rank": 4,
+  "name": "The membrane-distal cap of the UL128 accessory subunit, including the...",
+  "confidence": 0.12,
+  "p_rests_on_holds": 0.55,
+  "why_this_rank": "The footprint is exposed, glycan-free and coverable, and 1-103 proves the exact tip class; same-sign coarse charge and absent binder-specific evidence limit it.",
+  "rests_on": "Local basic/hydrophobic contacts outweigh the unfavorable whole-patch charge count.",
+  "where_the_mass_goes_if_it_fails": "C2",
+  "what_it_is": "The membrane-distal cap of the UL128 accessory subunit, including the NRP2-a2 calcium-loop contact tip.",
+  "why_one_candidate": "geometry pooled 2 patches (P1, P5): P1+P5 at 4.45 A, union radius 16.81 A. Every union fits inside this antibody's paratope reach of 17.6 A. No session judged these to be the same surface.",
+  "from_patches": [
+   "P1",
+   "P5"
+  ]
+ },
+ "note": "`confidence` on the pocket is over pockets and sums to about 1 across them. Inside an interface it is per residue in [0, 1] and sums to nothing. No residue is cut at a threshold: the whole vector is the answer.",
+ "mapping_basis": "side",
+ "checks": {
+  "unrecognised_sides": []
+ },
+ "chain_pairs": [
+  {
+   "antibody_chain": "F",
+   "antigen_chain": "B",
+   "n_residues": 15
+  },
+  {
+   "antibody_chain": "G",
+   "antigen_chain": "B",
+   "n_residues": 17
+  }
+ ],
+ "antibodies": [
+  {
+   "antibody": "antibody.pdb",
+   "chains": {
+    "F": "light",
+    "G": "heavy"
+   },
+   "binding_mode": null,
+   "n_residues_scored": 24,
+   "interfaces": [
+    {
+     "antibody_chain": "F",
+     "antibody_chain_type": "light",
+     "antigen_chain": "B",
+     "n_residues": 15,
+     "residue_confidence": {
+      "2": 0.65,
+      "3": 0.84,
+      "4": 0.62,
+      "5": 0.92,
+      "6": 0.96,
+      "7": 0.96,
+      "8": 0.92,
+      "20": 0.88,
+      "22": 0.75,
+      "23": 0.84,
+      "24": 0.9,
+      "25": 0.76,
+      "35": 0.82,
+      "39": 0.43,
+      "41": 0.52
+     },
+     "residue_side": {
+      "2": "light",
+      "3": "both",
+      "4": "light",
+      "5": "both",
+      "6": "both",
+      "7": "both",
+      "8": "both",
+      "20": "both",
+      "22": "light",
+      "23": "light",
+      "24": "both",
+      "25": "light",
+      "35": "both",
+      "39": "light",
+      "41": "light"
+     },
+     "max_confidence": 0.96,
+     "mean_confidence": 0.7847
+    },
+    {
+     "antibody_chain": "G",
+     "antibody_chain_type": "heavy",
+     "antigen_chain": "B",
+     "n_residues": 17,
+     "residue_confidence": {
+      "3": 0.84,
+      "5": 0.92,
+      "6": 0.96,
+      "7": 0.96,
+      "8": 0.92,
+      "9": 0.75,
+      "10": 0.86,
+      "11": 0.7,
+      "17": 0.54,
+      "20": 0.88,
+      "21": 0.72,
+      "24": 0.9,
+      "30": 0.87,
+      "32": 0.78,
+      "33": 0.91,
+      "34": 0.66,
+      "35": 0.82
+     },
+     "residue_side": {
+      "3": "both",
+      "5": "both",
+      "6": "both",
+      "7": "both",
+      "8": "both",
+      "9": "heavy",
+      "10": "heavy",
+      "11": "heavy",
+      "17": "heavy",
+      "20": "both",
+      "21": "heavy",
+      "24": "both",
+      "30": "heavy",
+      "32": "heavy",
+      "33": "heavy",
+      "34": "heavy",
+      "35": "both"
+     },
+     "max_confidence": 0.96,
+     "mean_confidence": 0.8229
+    }
+   ]
+  }
+ ],
+ "paratope": {
+  "dominant_cdrs": [
+   "G:H3",
+   "G:H1",
+   "G:H2",
+   "F:L1",
+   "F:L3"
+  ],
+  "paratope_residues": [
+   "G:28",
+   "G:30",
+   "G:31",
+   "G:32",
+   "G:33",
+   "G:34",
+   "G:35",
+   "G:54",
+   "G:55",
+   "G:56",
+   "G:57",
+   "G:58",
+   "G:59",
+   "G:99",
+   "G:101",
+   "G:102",
+   "G:103",
+   "G:104",
+   "G:105",
+   "G:106",
+   "G:107",
+   "G:108",
+   "G:110",
+   "G:111",
+   "F:27",
+   "F:28",
+   "F:30",
+   "F:31",
+   "F:32",
+   "F:50",
+   "F:52",
+   "F:91",
+   "F:92",
+   "F:93",
+   "F:94",
+   "F:97"
+  ],
+  "heavy_light_split": "Heavy supplies about 65% of the contact area on B:9-21 and B:30-35; light covers B:2-4, B:22-25 and B:39-41. Both chains meet over the B:3/B:5-8/B:20/B:24/B:35 cap center.",
+  "binding_mode_union": "single-chain"
+ },
+ "residues": [
+  "B:10",
+  "B:11",
+  "B:17",
+  "B:2",
+  "B:20",
+  "B:21",
+  "B:22",
+  "B:23",
+  "B:24",
+  "B:25",
+  "B:3",
+  "B:30",
+  "B:32",
+  "B:33",
+  "B:34",
+  "B:35",
+  "B:39",
+  "B:4",
+  "B:41",
+  "B:5",
+  "B:6",
+  "B:7",
+  "B:8",
+  "B:9"
+ ],
+ "n_residues": 24,
+ "patches": [
+  {
+   "id": "P1",
+   "name": "UL128 NRP2-a2-binding tip",
+   "n_residues": 16,
+   "residues": [
+    "B:1",
+    "B:17",
+    "B:18",
+    "B:20",
+    "B:21",
+    "B:22",
+    "B:23",
+    "B:3",
+    "B:30",
+    "B:32",
+    "B:33",
+    "B:34",
+    "B:35",
+    "B:61",
+    "B:64",
+    "B:65"
+   ],
+   "n_kept_by_advocate": 11,
+   "n_dropped_by_advocate": 5
+  },
+  {
+   "id": "P5",
+   "name": "Membrane-distal UL128 tip (site 1)",
+   "n_residues": 23,
+   "residues": [
+    "B:10",
+    "B:11",
+    "B:13",
+    "B:15",
+    "B:2",
+    "B:22",
+    "B:23",
+    "B:25",
+    "B:26",
+    "B:3",
+    "B:32",
+    "B:33",
+    "B:34",
+    "B:35",
+    "B:36",
+    "B:39",
+    "B:4",
+    "B:41",
+    "B:5",
+    "B:6",
+    "B:7",
+    "B:8",
+    "B:9"
+   ],
+   "n_kept_by_advocate": 19,
+   "n_dropped_by_advocate": 4
+  }
+ ],
+ "pooling_provenance": {
+  "n_shared_at_pooling": 7,
+  "n_disputed_at_pooling": 25,
+  "note": "counts only, describing how the organizer grouped the phase-1 patches. The organizer's own candidate residue list is deliberately absent: the answer is the advocate's footprint, in `residues` and in `antibodies[].interfaces[]`."
+ },
+ "evidence": {
+  "advocate": {
+   "n_findings": 3,
+   "n_supports": 2,
+   "n_weakens": 0,
+   "weakest_point": "The footprint is inferred from a different antibody class, and several central cysteines constrain rather than donate side-chain chemistry; without query-antibody identification, a similarly exposed but functionally distinct face remains possible.",
+   "note": "the advocate reports claim/source/date/bearing and is not asked whether a source is about this binder"
+  },
+  "judge": {
+   "tier_a_support": 0,
+   "n_support_lines": 3,
+   "verdict": "live",
+   "note": "Tier A -- a source about this binder itself -- is the judge's adjudication, in assessment[].support[]. It exists nowhere in the advocate's own answer."
+  }
+ },
+ "provenance": {
+  "unverified_source_policy_fields": [
+   "gated",
+   "web_search",
+   "shell_network",
+   "gate_tools"
+  ],
+  "assembled_case_dir": "gpt-5.6-high/gather_refine/post_refactor/unreleased_20261029/nocut/casp17/H2362/case_259152_G_rep1",
+  "organize_case_dir": "gpt-5.6-high/gather_refine/post_refactor/unreleased_20261029/nocut/casp17/H2362/case_259152_GR_rep1",
+  "organize_status": "ok",
+  "judge_case_dir": "gpt-5.6-high/gather_refine/post_refactor/unreleased_20261029/nocut/casp17/H2362/case_259152_GJ_rep1",
+  "judge_status": "ok",
+  "packet": "gpt-5.6-high/nocut/gather/packets/case_259152/packet",
+  "manifest": "gpt-5.6-high/nocut/gather/packets/case_259152/manifest.json",
+  "advocate_case_dir": "gpt-5.6-high/gather_refine/post_refactor/unreleased_20261029/nocut/casp17/H2362/case_259152_GR_rep1",
+  "advocate_status": "ok"
+ }
+}

@@ -1,0 +1,339 @@
+{
+ "task": "gather",
+ "gather_mode": "batched",
+ "num_launchers": 3,
+ "policy": {
+  "evidence_cutoff": "2026-05-21",
+  "no_cutoff": false,
+  "gated": true,
+  "web_search": false,
+  "shell_network": true,
+  "gate_tools": [
+   "research",
+   "fetch",
+   "rcsb",
+   "patent",
+   "paper"
+  ]
+ },
+ "unscored": false,
+ "target": "H1346_agCD",
+ "target_set": "casp17",
+ "case": "case_fed304",
+ "evidence_cutoff": "2026-05-21",
+ "target_release_date": "2026-05-21",
+ "retrieval_policy": "gated",
+ "input_structure": "structures/H1346_agCD.pdb",
+ "input_structure_sha256": null,
+ "briefing_source": null,
+ "briefing_sha256": null,
+ "antigen_chains": [
+  "C",
+  "D"
+ ],
+ "antibody_files": {
+  "antibody.pdb": [
+   "A",
+   "B"
+  ]
+ },
+ "antibody_chain_types": {
+  "antibody.pdb": {
+   "A": "heavy",
+   "B": "light"
+  }
+ },
+ "truth_file": "data/truth/casp17/H1346_agCD.epitope.json",
+ "stage": "gatherer",
+ "pocket": {
+  "id": "C1",
+  "judge_rank": 1,
+  "name": "The broad solvent-exposed outer plateau of the folded human C-kappa...",
+  "confidence": 0.42,
+  "p_rests_on_holds": 0.48,
+  "why_this_rank": "Best broad-face interpretation of the strongest contextual evidence that the partner is an anti-kappa chaperone; it is also the most uniformly exposed inherited footprint.",
+  "rests_on": "A/B is the reported anti-kappa chaperone and a conventional Fab favors the outer C-kappa plateau.",
+  "where_the_mass_goes_if_it_fails": "C4 first; C2 if A/B is instead anti-idiotypic.",
+  "what_it_is": "The broad solvent-exposed outer plateau of the folded human C-kappa immunoglobulin domain, on the distal/mid constant-light face rather than at the antigen-combining site or the CH1-packed edge.",
+  "why_one_candidate": "geometry pooled 2 patches (P1, P8): P1+P8 at 5.75 A, union radius 16.11 A. Every union fits inside this antibody's paratope reach of 16.9 A. No session judged these to be the same surface.",
+  "from_patches": [
+   "P1",
+   "P8"
+  ]
+ },
+ "note": "`confidence` on the pocket is over pockets and sums to about 1 across them. Inside an interface it is per residue in [0, 1] and sums to nothing. No residue is cut at a threshold: the whole vector is the answer.",
+ "mapping_basis": "side",
+ "checks": {
+  "unrecognised_sides": []
+ },
+ "chain_pairs": [
+  {
+   "antibody_chain": "A",
+   "antigen_chain": "D",
+   "n_residues": 15
+  },
+  {
+   "antibody_chain": "B",
+   "antigen_chain": "D",
+   "n_residues": 15
+  }
+ ],
+ "antibodies": [
+  {
+   "antibody": "antibody.pdb",
+   "chains": {
+    "A": "heavy",
+    "B": "light"
+   },
+   "binding_mode": null,
+   "n_residues_scored": 23,
+   "interfaces": [
+    {
+     "antibody_chain": "A",
+     "antibody_chain_type": "heavy",
+     "antigen_chain": "D",
+     "n_residues": 15,
+     "residue_confidence": {
+      "152": 0.45,
+      "153": 0.72,
+      "154": 0.62,
+      "155": 0.78,
+      "156": 0.42,
+      "157": 0.9,
+      "158": 0.92,
+      "160": 0.43,
+      "185": 0.76,
+      "186": 0.67,
+      "188": 0.73,
+      "189": 0.95,
+      "190": 0.84,
+      "191": 0.88,
+      "192": 0.7
+     },
+     "residue_side": {
+      "152": "heavy",
+      "153": "heavy",
+      "154": "heavy",
+      "155": "heavy",
+      "156": "heavy",
+      "157": "both",
+      "158": "both",
+      "160": "heavy",
+      "185": "both",
+      "186": "both",
+      "188": "both",
+      "189": "both",
+      "190": "both",
+      "191": "heavy",
+      "192": "heavy"
+     },
+     "max_confidence": 0.95,
+     "mean_confidence": 0.718,
+     "precision_vs_truth": 0.9333,
+     "n_in_truth": 14
+    },
+    {
+     "antibody_chain": "B",
+     "antibody_chain_type": "light",
+     "antigen_chain": "D",
+     "n_residues": 15,
+     "residue_confidence": {
+      "157": 0.9,
+      "158": 0.92,
+      "181": 0.34,
+      "183": 0.55,
+      "184": 0.62,
+      "185": 0.76,
+      "186": 0.67,
+      "188": 0.73,
+      "189": 0.95,
+      "190": 0.84,
+      "209": 0.6,
+      "211": 0.4,
+      "212": 0.53,
+      "213": 0.8,
+      "214": 0.66
+     },
+     "residue_side": {
+      "157": "both",
+      "158": "both",
+      "181": "light",
+      "183": "light",
+      "184": "light",
+      "185": "both",
+      "186": "both",
+      "188": "both",
+      "189": "both",
+      "190": "both",
+      "209": "light",
+      "211": "light",
+      "212": "light",
+      "213": "light",
+      "214": "light"
+     },
+     "max_confidence": 0.95,
+     "mean_confidence": 0.6847,
+     "precision_vs_truth": 0.6,
+     "n_in_truth": 9
+    }
+   ]
+  }
+ ],
+ "paratope": {
+  "dominant_cdrs": [
+   "A:H3",
+   "A:H2",
+   "B:L1",
+   "B:L3"
+  ],
+  "paratope_residues": [
+   "A:30",
+   "A:31",
+   "A:53",
+   "A:54",
+   "A:56",
+   "A:100",
+   "A:101",
+   "A:102",
+   "A:103",
+   "A:104",
+   "A:105",
+   "A:106",
+   "A:109",
+   "B:27",
+   "B:28",
+   "B:30",
+   "B:32",
+   "B:52",
+   "B:93",
+   "B:94"
+  ],
+  "heavy_light_split": "Heavy-dominant, approximately two-thirds heavy-chain contact: A:H3/H2 anchor D:153-D:160 and D:188-D:192, while B:L1/L3 close the D:181-D:186 and D:209-D:214 rim.",
+  "binding_mode_union": "single-chain"
+ },
+ "residues": [
+  "D:152",
+  "D:153",
+  "D:154",
+  "D:155",
+  "D:156",
+  "D:157",
+  "D:158",
+  "D:160",
+  "D:181",
+  "D:183",
+  "D:184",
+  "D:185",
+  "D:186",
+  "D:188",
+  "D:189",
+  "D:190",
+  "D:191",
+  "D:192",
+  "D:209",
+  "D:211",
+  "D:212",
+  "D:213",
+  "D:214"
+ ],
+ "n_residues": 23,
+ "patches": [
+  {
+   "id": "P1",
+   "name": "distal kappa-constant face around D:189-D:192 and D:212-D:214",
+   "n_residues": 17,
+   "residues": [
+    "D:152",
+    "D:153",
+    "D:183",
+    "D:184",
+    "D:185",
+    "D:186",
+    "D:188",
+    "D:189",
+    "D:190",
+    "D:191",
+    "D:192",
+    "D:209",
+    "D:211",
+    "D:212",
+    "D:213",
+    "D:214",
+    "D:215"
+   ],
+   "n_kept_by_advocate": 16,
+   "n_dropped_by_advocate": 1
+  },
+  {
+   "id": "P8",
+   "name": "mid-CL outer face centered on D:157-D:158",
+   "n_residues": 17,
+   "residues": [
+    "D:148",
+    "D:150",
+    "D:154",
+    "D:155",
+    "D:156",
+    "D:157",
+    "D:158",
+    "D:159",
+    "D:160",
+    "D:161",
+    "D:162",
+    "D:179",
+    "D:181",
+    "D:183",
+    "D:186",
+    "D:189",
+    "D:190"
+   ],
+   "n_kept_by_advocate": 11,
+   "n_dropped_by_advocate": 6
+  }
+ ],
+ "pooling_provenance": {
+  "n_shared_at_pooling": 4,
+  "n_disputed_at_pooling": 26,
+  "note": "counts only, describing how the organizer grouped the phase-1 patches. The organizer's own candidate residue list is deliberately absent: the answer is the advocate's footprint, in `residues` and in `antibodies[].interfaces[]`."
+ },
+ "evidence": {
+  "advocate": {
+   "n_findings": 4,
+   "n_supports": 3,
+   "n_weakens": 0,
+   "weakest_point": "The anti-kappa specimen context identifies the domain but not the face. C4 is another accessible, coverable C-kappa surface with an equally coherent chaperone consequence, and no exact A/B clone map distinguishes them.",
+   "note": "the advocate reports claim/source/date/bearing and is not asked whether a source is about this binder"
+  },
+  "judge": {
+   "tier_a_support": 0,
+   "n_support_lines": 3,
+   "verdict": "leading",
+   "note": "Tier A -- a source about this binder itself -- is the judge's adjudication, in assessment[].support[]. It exists nowhere in the advocate's own answer."
+  }
+ },
+ "provenance": {
+  "unverified_source_policy_fields": [
+   "gated",
+   "web_search",
+   "shell_network",
+   "gate_tools"
+  ],
+  "assembled_case_dir": "gpt-5.6-high/gather_refine/post_refactor/released_structure_20261030/casp17/H1346_agCD/case_fed304_G_rep2",
+  "organize_case_dir": "gpt-5.6-high/gather_refine/post_refactor/released_structure_20261030/casp17/H1346_agCD/case_fed304_GR_rep1",
+  "organize_status": "ok",
+  "judge_case_dir": "gpt-5.6-high/gather_refine/post_refactor/released_structure_20261030/casp17/H1346_agCD/case_fed304_GJ_rep2",
+  "judge_status": "ok",
+  "packet": "gpt-5.6-high/gather/packets/case_fed304/packet",
+  "manifest": "gpt-5.6-high/gather/packets/case_fed304/manifest.json",
+  "advocate_case_dir": "gpt-5.6-high/gather_refine/post_refactor/released_structure_20261030/casp17/H1346_agCD/case_fed304_GR_rep1",
+  "advocate_status": "ok"
+ },
+ "score": {
+  "precision": 0.6957,
+  "recall": 0.9412,
+  "f1": 0.8,
+  "n_pred": 23,
+  "n_true": 17,
+  "n_hit": 16
+ }
+}

@@ -1,0 +1,305 @@
+{
+ "task": "gather",
+ "gather_mode": "batched",
+ "num_launchers": 3,
+ "policy": {
+  "evidence_cutoff": "2026-06-03",
+  "no_cutoff": false,
+  "gated": true,
+  "web_search": false,
+  "shell_network": true,
+  "gate_tools": [
+   "research",
+   "fetch",
+   "rcsb",
+   "patent",
+   "paper"
+  ]
+ },
+ "unscored": true,
+ "target": "H2344",
+ "target_set": "casp17",
+ "case": "case_679778",
+ "evidence_cutoff": "2026-06-03",
+ "target_release_date": "2026-06-03",
+ "retrieval_policy": "gated",
+ "input_structure": "data/staged_casp17_no_native/H2344.pdb",
+ "input_structure_sha256": "18733617ed7c4b96b45ff3352f72763afcd6932570e14f1956abaeff946190b8",
+ "briefing_source": "data/briefing/casp17/H2344/search_results.json",
+ "briefing_sha256": "e01658771c612bd446896a8f683ccea6f403b94ecf685db0566f7e4ef7b38f51",
+ "antigen_chains": [
+  "C"
+ ],
+ "antibody_files": {
+  "antibody.pdb": [
+   "A",
+   "B"
+  ]
+ },
+ "antibody_chain_types": {
+  "antibody.pdb": {
+   "A": "unknown",
+   "B": "unknown"
+  }
+ },
+ "stage": "gatherer",
+ "pocket": {
+  "id": "C7",
+  "judge_rank": 6,
+  "name": "The exposed distal ectodomain extension or profusion latch of gD...",
+  "confidence": 0.1,
+  "p_rests_on_holds": 0.3,
+  "why_this_rank": "It is the most exposed and electrostatically plausible patch in the soluble model, and a human antibody recognizes the broad extension. Native glycosylation and membrane context make that advantage conditional.",
+  "rests_on": "The N262 glycan and membrane-tethered ensemble leave C:250-C:269 accessible in the relevant native state.",
+  "where_the_mass_goes_if_it_fails": "C1 if the terminal region is engaged through the core-tail seam, otherwise C3.",
+  "what_it_is": "The exposed distal ectodomain extension or profusion latch of gD, centered on a proline-rich acidic turn C:254-C:269 just before the membrane-proximal remainder of the native ectodomain.",
+  "why_one_candidate": "not pooled with anything: no other patch is both within 12 A (half centroid distance, half contact-graph hops) and coverable by one paratope of this antibody's reach, 18.1 A",
+  "from_patches": [
+   "P8"
+  ]
+ },
+ "note": "`confidence` on the pocket is over pockets and sums to about 1 across them. Inside an interface it is per residue in [0, 1] and sums to nothing. No residue is cut at a threshold: the whole vector is the answer.",
+ "mapping_basis": "side",
+ "checks": {
+  "unrecognised_sides": []
+ },
+ "chain_pairs": [
+  {
+   "antibody_chain": "A",
+   "antigen_chain": "C",
+   "n_residues": 18
+  },
+  {
+   "antibody_chain": "B",
+   "antigen_chain": "C",
+   "n_residues": 18
+  }
+ ],
+ "antibodies": [
+  {
+   "antibody": "antibody.pdb",
+   "chains": {
+    "A": "unknown",
+    "B": "unknown"
+   },
+   "binding_mode": null,
+   "n_residues_scored": 18,
+   "interfaces": [
+    {
+     "antibody_chain": "A",
+     "antibody_chain_type": "unknown",
+     "antigen_chain": "C",
+     "n_residues": 18,
+     "residue_confidence": {
+      "251": 0.35,
+      "252": 0.55,
+      "254": 0.7,
+      "255": 0.85,
+      "256": 0.92,
+      "257": 0.64,
+      "258": 0.68,
+      "259": 0.93,
+      "260": 0.75,
+      "261": 0.76,
+      "262": 0.42,
+      "263": 0.55,
+      "264": 0.72,
+      "265": 0.58,
+      "266": 0.74,
+      "267": 0.82,
+      "268": 0.68,
+      "269": 0.55
+     },
+     "residue_side": {
+      "251": "heavy",
+      "252": "heavy",
+      "254": "heavy",
+      "255": "heavy",
+      "256": "heavy",
+      "257": "heavy",
+      "258": "both",
+      "259": "both",
+      "260": "both",
+      "261": "both",
+      "262": "light",
+      "263": "light",
+      "264": "light",
+      "265": "light",
+      "266": "light",
+      "267": "light",
+      "268": "light",
+      "269": "light"
+     },
+     "max_confidence": 0.93,
+     "mean_confidence": 0.6772
+    },
+    {
+     "antibody_chain": "B",
+     "antibody_chain_type": "unknown",
+     "antigen_chain": "C",
+     "n_residues": 18,
+     "residue_confidence": {
+      "251": 0.35,
+      "252": 0.55,
+      "254": 0.7,
+      "255": 0.85,
+      "256": 0.92,
+      "257": 0.64,
+      "258": 0.68,
+      "259": 0.93,
+      "260": 0.75,
+      "261": 0.76,
+      "262": 0.42,
+      "263": 0.55,
+      "264": 0.72,
+      "265": 0.58,
+      "266": 0.74,
+      "267": 0.82,
+      "268": 0.68,
+      "269": 0.55
+     },
+     "residue_side": {
+      "251": "heavy",
+      "252": "heavy",
+      "254": "heavy",
+      "255": "heavy",
+      "256": "heavy",
+      "257": "heavy",
+      "258": "both",
+      "259": "both",
+      "260": "both",
+      "261": "both",
+      "262": "light",
+      "263": "light",
+      "264": "light",
+      "265": "light",
+      "266": "light",
+      "267": "light",
+      "268": "light",
+      "269": "light"
+     },
+     "max_confidence": 0.93,
+     "mean_confidence": 0.6772
+    }
+   ]
+  }
+ ],
+ "paratope": {
+  "dominant_cdrs": [
+   "H3peripheryheavy3to1lightmanycontactsinvolvingbothchainsWouldbeabout753A25heavy3AlightwithH3andH2atcenterC4:H1",
+   "H2andH3heavyL1andL2lightH3dominantparatoperesiduesincludeH3loopresiduesheavyLightloopscontributetolateraledgeHeavyfractionabout70to30H:L1"
+  ],
+  "paratope_residues": [
+   "A:30",
+   "A:31",
+   "A:54",
+   "A:55",
+   "A:57",
+   "A:101",
+   "A:103",
+   "A:105",
+   "A:106",
+   "A:108",
+   "B:27",
+   "B:28",
+   "B:30",
+   "B:31",
+   "B:33",
+   "B:53",
+   "B:94",
+   "B:95",
+   "B:96"
+  ],
+  "heavy_light_split": "About 60:40 heavy:light. H3/H1/H2 center on C:254-C:261; L1/L3 follow C:262-C:269. Both chains share C:258-C:261.",
+  "binding_mode_union": "single-chain"
+ },
+ "residues": [
+  "C:251",
+  "C:252",
+  "C:254",
+  "C:255",
+  "C:256",
+  "C:257",
+  "C:258",
+  "C:259",
+  "C:260",
+  "C:261",
+  "C:262",
+  "C:263",
+  "C:264",
+  "C:265",
+  "C:266",
+  "C:267",
+  "C:268",
+  "C:269"
+ ],
+ "n_residues": 18,
+ "patches": [
+  {
+   "id": "P8",
+   "name": "C-terminal extension turn (HSV8-like region)",
+   "n_residues": 20,
+   "residues": [
+    "C:250",
+    "C:251",
+    "C:252",
+    "C:253",
+    "C:254",
+    "C:255",
+    "C:256",
+    "C:257",
+    "C:258",
+    "C:259",
+    "C:260",
+    "C:261",
+    "C:262",
+    "C:263",
+    "C:264",
+    "C:265",
+    "C:266",
+    "C:267",
+    "C:268",
+    "C:269"
+   ],
+   "n_kept_by_advocate": 18,
+   "n_dropped_by_advocate": 2
+  }
+ ],
+ "pooling_provenance": {
+  "n_shared_at_pooling": 20,
+  "n_disputed_at_pooling": 0,
+  "note": "counts only, describing how the organizer grouped the phase-1 patches. The organizer's own candidate residue list is deliberately absent: the answer is the advocate's footprint, in `residues` and in `antibodies[].interfaces[]`."
+ },
+ "evidence": {
+  "advocate": {
+   "n_findings": 5,
+   "n_supports": 3,
+   "n_weakens": 1,
+   "weakest_point": "The native glycan and membrane-tethered conformational ensemble are missing from the supplied structure, and the only human-antibody map is much broader than this footprint. High apo exposure alone cannot show that engagement has a neutralizing consequence.",
+   "note": "the advocate reports claim/source/date/bearing and is not asked whether a source is about this binder"
+  },
+  "judge": {
+   "tier_a_support": 0,
+   "n_support_lines": 4,
+   "verdict": "live",
+   "note": "Tier A -- a source about this binder itself -- is the judge's adjudication, in assessment[].support[]. It exists nowhere in the advocate's own answer."
+  }
+ },
+ "provenance": {
+  "unverified_source_policy_fields": [
+   "gated",
+   "web_search",
+   "shell_network",
+   "gate_tools"
+  ],
+  "assembled_case_dir": "gpt-5.6-high/gather_refine/post_refactor/unreleased_20261029/gated/casp17/H2344/case_679778_G_rep3",
+  "organize_case_dir": "gpt-5.6-high/gather_refine/post_refactor/unreleased_20261029/gated/casp17/H2344/case_679778_GR_rep3",
+  "organize_status": "ok",
+  "judge_case_dir": "gpt-5.6-high/gather_refine/post_refactor/unreleased_20261029/gated/casp17/H2344/case_679778_GJ_rep3",
+  "judge_status": "ok",
+  "packet": "gpt-5.6-high/gather/packets/case_679778/packet",
+  "manifest": "gpt-5.6-high/gather/packets/case_679778/manifest.json",
+  "advocate_case_dir": "gpt-5.6-high/gather_refine/post_refactor/unreleased_20261029/gated/casp17/H2344/case_679778_GR_rep3",
+  "advocate_status": "ok"
+ }
+}

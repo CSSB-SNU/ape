@@ -1,0 +1,261 @@
+{
+ "task": "gather",
+ "gather_mode": "batched",
+ "num_launchers": 3,
+ "policy": {
+  "evidence_cutoff": null,
+  "no_cutoff": true,
+  "gated": false,
+  "web_search": true,
+  "shell_network": true,
+  "gate_tools": []
+ },
+ "unscored": true,
+ "target": "H2312",
+ "target_set": "casp17",
+ "case": "case_3a23b5",
+ "evidence_cutoff": null,
+ "target_release_date": "2026-05-13",
+ "retrieval_policy": "no-cutoff",
+ "input_structure": "data/staged_casp17_no_native/H2312.pdb",
+ "input_structure_sha256": "3ba79066f0aa7015920828a3678d94af5f532471fde42bb38b00795e45f94b8b",
+ "briefing_source": "data/briefing/casp17_nocutoff/H2312/search_results.json",
+ "briefing_sha256": "2b8c71697fd0cc7175a5631c137526c8209032f024f0df47a726889d5e5bdf88",
+ "antigen_chains": [
+  "A",
+  "B"
+ ],
+ "antibody_files": {
+  "antibody.pdb": [
+   "C"
+  ]
+ },
+ "antibody_chain_types": {
+  "antibody.pdb": {
+   "C": "heavy"
+  }
+ },
+ "stage": "gatherer",
+ "pocket": {
+  "id": "C7",
+  "judge_rank": 9,
+  "name": "The broad catalytic cleft of active EXT1 GT-B, spanning the A:82/A:84...",
+  "confidence": 0.06,
+  "p_rests_on_holds": 0.23,
+  "why_this_rank": "Real ligand-facing cleft, but the 29.77 Å footprint exceeds the measured exposed paratope span.",
+  "rests_on": "The full donor-to-acceptor footprint can be contacted simultaneously despite exceeding measured reach.",
+  "where_the_mass_goes_if_it_fails": "C9",
+  "what_it_is": "The broad catalytic cleft of active EXT1 GT-B, spanning the A:82/A:84 and A:119–A:124 donor region, A:187–A:200 wall, and A:239/A:244/A:258–A:269 acceptor rim.",
+  "why_one_candidate": "not pooled with anything: no other patch is both within 12 A (half centroid distance, half contact-graph hops) and coverable by one paratope of this antibody's reach, 13.6 A",
+  "from_patches": [
+   "P6"
+  ]
+ },
+ "note": "`confidence` on the pocket is over pockets and sums to about 1 across them. Inside an interface it is per residue in [0, 1] and sums to nothing. No residue is cut at a threshold: the whole vector is the answer.",
+ "mapping_basis": "side",
+ "checks": {
+  "unrecognised_sides": []
+ },
+ "chain_pairs": [
+  {
+   "antibody_chain": "C",
+   "antigen_chain": "A",
+   "n_residues": 22
+  }
+ ],
+ "antibodies": [
+  {
+   "antibody": "antibody.pdb",
+   "chains": {
+    "C": "heavy"
+   },
+   "binding_mode": null,
+   "n_residues_scored": 22,
+   "interfaces": [
+    {
+     "antibody_chain": "C",
+     "antibody_chain_type": "heavy",
+     "antigen_chain": "A",
+     "n_residues": 22,
+     "residue_confidence": {
+      "82": 0.37,
+      "84": 0.51,
+      "116": 0.56,
+      "119": 0.46,
+      "120": 0.88,
+      "121": 0.72,
+      "122": 0.82,
+      "123": 0.68,
+      "124": 0.48,
+      "187": 0.58,
+      "189": 0.85,
+      "191": 0.76,
+      "198": 0.91,
+      "200": 0.61,
+      "239": 0.64,
+      "244": 0.63,
+      "258": 0.69,
+      "260": 0.66,
+      "261": 0.62,
+      "265": 0.8,
+      "266": 0.77,
+      "269": 0.68
+     },
+     "residue_side": {
+      "82": "heavy",
+      "84": "heavy",
+      "116": "heavy",
+      "119": "heavy",
+      "120": "heavy",
+      "121": "heavy",
+      "122": "heavy",
+      "123": "heavy",
+      "124": "heavy",
+      "187": "heavy",
+      "189": "heavy",
+      "191": "heavy",
+      "198": "heavy",
+      "200": "heavy",
+      "239": "heavy",
+      "244": "heavy",
+      "258": "heavy",
+      "260": "heavy",
+      "261": "heavy",
+      "265": "heavy",
+      "266": "heavy",
+      "269": "heavy"
+     },
+     "max_confidence": 0.91,
+     "mean_confidence": 0.6673
+    }
+   ]
+  }
+ ],
+ "paratope": {
+  "dominant_cdrs": [
+   "H3H2H1select:H3",
+   "H2H1select:H2",
+   "H1select:H1"
+  ],
+  "paratope_residues": [
+   "C:28",
+   "C:30",
+   "C:31",
+   "C:32",
+   "C:53",
+   "C:54",
+   "C:56",
+   "C:57",
+   "C:100",
+   "C:101",
+   "C:102",
+   "C:103",
+   "C:105",
+   "C:107",
+   "C:108",
+   "C:109",
+   "C:110",
+   "C:113",
+   "C:114"
+  ],
+  "heavy_light_split": "Heavy 100%, light 0%. H3 occupies the ligand-contact core; H1/H2 reach opposite rims. The span is near the full-paratope limit.",
+  "binding_mode_union": "single-chain"
+ },
+ "residues": [
+  "A:116",
+  "A:119",
+  "A:120",
+  "A:121",
+  "A:122",
+  "A:123",
+  "A:124",
+  "A:187",
+  "A:189",
+  "A:191",
+  "A:198",
+  "A:200",
+  "A:239",
+  "A:244",
+  "A:258",
+  "A:260",
+  "A:261",
+  "A:265",
+  "A:266",
+  "A:269",
+  "A:82",
+  "A:84"
+ ],
+ "n_residues": 22,
+ "patches": [
+  {
+   "id": "P6",
+   "name": "EXT1 GT-B GlcA-transferase cleft",
+   "n_residues": 24,
+   "residues": [
+    "A:116",
+    "A:119",
+    "A:120",
+    "A:121",
+    "A:122",
+    "A:123",
+    "A:124",
+    "A:187",
+    "A:189",
+    "A:191",
+    "A:198",
+    "A:200",
+    "A:239",
+    "A:244",
+    "A:258",
+    "A:260",
+    "A:261",
+    "A:265",
+    "A:266",
+    "A:269",
+    "A:281",
+    "A:284",
+    "A:82",
+    "A:84"
+   ],
+   "n_kept_by_advocate": 22,
+   "n_dropped_by_advocate": 2
+  }
+ ],
+ "pooling_provenance": {
+  "n_shared_at_pooling": 24,
+  "n_disputed_at_pooling": 0,
+  "note": "counts only, describing how the organizer grouped the phase-1 patches. The organizer's own candidate residue list is deliberately absent: the answer is the advocate's footprint, in `residues` and in `antibodies[].interfaces[]`."
+ },
+ "evidence": {
+  "advocate": {
+   "n_findings": 4,
+   "n_supports": 4,
+   "n_weakens": 0,
+   "weakest_point": "At 29.77 Å this is near the paratope limit and several catalytic-floor residues have low exposure; one VHH may cover only one lobe.",
+   "note": "the advocate reports claim/source/date/bearing and is not asked whether a source is about this binder"
+  },
+  "judge": {
+   "tier_a_support": 0,
+   "n_support_lines": 4,
+   "verdict": "unlikely",
+   "note": "Tier A -- a source about this binder itself -- is the judge's adjudication, in assessment[].support[]. It exists nowhere in the advocate's own answer."
+  }
+ },
+ "provenance": {
+  "unverified_source_policy_fields": [
+   "gated",
+   "web_search",
+   "shell_network",
+   "gate_tools"
+  ],
+  "assembled_case_dir": "gpt-5.6-high/gather_refine/post_refactor/unreleased_20261029/nocut/casp17/H2312/case_3a23b5_G_rep1",
+  "organize_case_dir": "gpt-5.6-high/gather_refine/post_refactor/unreleased_20261029/nocut/casp17/H2312/case_3a23b5_GR_rep1",
+  "organize_status": "ok",
+  "judge_case_dir": "gpt-5.6-high/gather_refine/post_refactor/unreleased_20261029/nocut/casp17/H2312/case_3a23b5_GJ_rep1",
+  "judge_status": "ok",
+  "packet": "gpt-5.6-high/nocut/gather/packets/case_3a23b5/packet",
+  "manifest": "gpt-5.6-high/nocut/gather/packets/case_3a23b5/manifest.json",
+  "advocate_case_dir": "gpt-5.6-high/gather_refine/post_refactor/unreleased_20261029/nocut/casp17/H2312/case_3a23b5_GR_rep1",
+  "advocate_status": "ok"
+ }
+}

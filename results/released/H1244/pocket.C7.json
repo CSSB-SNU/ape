@@ -1,0 +1,321 @@
+{
+ "task": "gather",
+ "gather_mode": "batched",
+ "num_launchers": 3,
+ "policy": {
+  "evidence_cutoff": "2024-06-23",
+  "no_cutoff": false,
+  "gated": true,
+  "web_search": false,
+  "shell_network": true,
+  "gate_tools": [
+   "research",
+   "fetch",
+   "rcsb",
+   "patent",
+   "paper"
+  ]
+ },
+ "unscored": false,
+ "target": "H1244",
+ "target_set": "casp16",
+ "case": "case_4a7bba",
+ "evidence_cutoff": "2024-06-23",
+ "target_release_date": "2024-06-23",
+ "retrieval_policy": "gated",
+ "input_structure": "structures/H1244.pdb",
+ "input_structure_sha256": null,
+ "briefing_source": null,
+ "briefing_sha256": null,
+ "antigen_chains": [
+  "A",
+  "B",
+  "C",
+  "D"
+ ],
+ "antibody_files": {
+  "antibody.1.pdb": [
+   "E"
+  ],
+  "antibody.2.pdb": [
+   "F"
+  ]
+ },
+ "antibody_chain_types": {
+  "antibody.1.pdb": {
+   "E": "heavy"
+  },
+  "antibody.2.pdb": {
+   "F": "heavy"
+  }
+ },
+ "truth_file": "data/truth/casp16/H1244.epitope.json",
+ "stage": "gatherer",
+ "pocket": {
+  "id": "C7",
+  "judge_rank": 1,
+  "name": "A continuous single-chain aromatic/basic stripe at the A/B...",
+  "confidence": 0.27,
+  "p_rests_on_holds": 0.45,
+  "why_this_rank": "Best joint fit to blot continuity and this VHH's aromatic, net-acidic CDR chemistry.",
+  "rests_on": "Continuity and pose-free chemistry genuinely favor this single-chain stripe.",
+  "where_the_mass_goes_if_it_fails": "C1, then C4",
+  "what_it_is": "A continuous single-chain aromatic/basic stripe at the A/B coiled-coil start, local 84–100.",
+  "why_one_candidate": "not pooled with anything: no other patch is both within 12 A (half centroid distance, half contact-graph hops) and coverable by one paratope of this antibody's reach, 14.4 A",
+  "from_patches": [
+   "P7"
+  ]
+ },
+ "note": "`confidence` on the pocket is over pockets and sums to about 1 across them. Inside an interface it is per residue in [0, 1] and sums to nothing. No residue is cut at a threshold: the whole vector is the answer.",
+ "mapping_basis": "per_antibody",
+ "checks": {
+  "unrecognised_sides": []
+ },
+ "chain_pairs": [
+  {
+   "antibody_chain": "E",
+   "antigen_chain": "A",
+   "n_residues": 11
+  },
+  {
+   "antibody_chain": "F",
+   "antigen_chain": "B",
+   "n_residues": 11
+  }
+ ],
+ "antibodies": [
+  {
+   "antibody": "antibody.1.pdb",
+   "chains": {
+    "E": "heavy"
+   },
+   "binding_mode": "single-chain",
+   "n_residues_scored": 11,
+   "interfaces": [
+    {
+     "antibody_chain": "E",
+     "antibody_chain_type": "heavy",
+     "antigen_chain": "A",
+     "n_residues": 11,
+     "residue_confidence": {
+      "84": 0.34,
+      "86": 0.76,
+      "87": 0.96,
+      "90": 0.48,
+      "91": 0.74,
+      "93": 0.85,
+      "94": 0.93,
+      "95": 0.46,
+      "97": 0.68,
+      "98": 0.6,
+      "100": 0.76
+     },
+     "residue_side": {
+      "84": "heavy",
+      "86": "heavy",
+      "87": "heavy",
+      "90": "heavy",
+      "91": "heavy",
+      "93": "heavy",
+      "94": "heavy",
+      "95": "heavy",
+      "97": "heavy",
+      "98": "heavy",
+      "100": "heavy"
+     },
+     "max_confidence": 0.96,
+     "mean_confidence": 0.6873,
+     "precision_vs_truth": 0.3636,
+     "n_in_truth": 4
+    }
+   ]
+  },
+  {
+   "antibody": "antibody.2.pdb",
+   "chains": {
+    "F": "heavy"
+   },
+   "binding_mode": "single-chain",
+   "n_residues_scored": 11,
+   "interfaces": [
+    {
+     "antibody_chain": "F",
+     "antibody_chain_type": "heavy",
+     "antigen_chain": "B",
+     "n_residues": 11,
+     "residue_confidence": {
+      "84": 0.34,
+      "86": 0.76,
+      "87": 0.96,
+      "90": 0.48,
+      "91": 0.74,
+      "93": 0.85,
+      "94": 0.93,
+      "95": 0.46,
+      "97": 0.68,
+      "98": 0.6,
+      "100": 0.76
+     },
+     "residue_side": {
+      "84": "heavy",
+      "86": "heavy",
+      "87": "heavy",
+      "90": "heavy",
+      "91": "heavy",
+      "93": "heavy",
+      "94": "heavy",
+      "95": "heavy",
+      "97": "heavy",
+      "98": "heavy",
+      "100": "heavy"
+     },
+     "max_confidence": 0.96,
+     "mean_confidence": 0.6873,
+     "precision_vs_truth": 0.3636,
+     "n_in_truth": 4
+    }
+   ]
+  }
+ ],
+ "paratope": {
+  "dominant_cdrs": [
+   "H3:H1",
+   "H3:H2"
+  ],
+  "paratope_residues": [
+   "E:27",
+   "E:53",
+   "E:102",
+   "E:103",
+   "E:105",
+   "E:108",
+   "E:111",
+   "E:112",
+   "F:27",
+   "F:53",
+   "F:102",
+   "F:103",
+   "F:105",
+   "F:108",
+   "F:111",
+   "F:112"
+  ],
+  "heavy_light_split": "Heavy-only VHH: H3 center and H1/H2 rims; no light chain.",
+  "binding_mode_union": null
+ },
+ "residues": [
+  "A:100",
+  "A:84",
+  "A:86",
+  "A:87",
+  "A:90",
+  "A:91",
+  "A:93",
+  "A:94",
+  "A:95",
+  "A:97",
+  "A:98",
+  "B:100",
+  "B:84",
+  "B:86",
+  "B:87",
+  "B:90",
+  "B:91",
+  "B:93",
+  "B:94",
+  "B:95",
+  "B:97",
+  "B:98"
+ ],
+ "n_residues": 22,
+ "patches": [
+  {
+   "id": "P7",
+   "name": "Coiled-coil N-terminal aromatic/basic stripe (local 84–100)",
+   "n_residues": 34,
+   "residues": [
+    "A:100",
+    "A:84",
+    "A:85",
+    "A:86",
+    "A:87",
+    "A:88",
+    "A:89",
+    "A:90",
+    "A:91",
+    "A:92",
+    "A:93",
+    "A:94",
+    "A:95",
+    "A:96",
+    "A:97",
+    "A:98",
+    "A:99",
+    "B:100",
+    "B:84",
+    "B:85",
+    "B:86",
+    "B:87",
+    "B:88",
+    "B:89",
+    "B:90",
+    "B:91",
+    "B:92",
+    "B:93",
+    "B:94",
+    "B:95",
+    "B:96",
+    "B:97",
+    "B:98",
+    "B:99"
+   ],
+   "n_kept_by_advocate": 22,
+   "n_dropped_by_advocate": 12
+  }
+ ],
+ "pooling_provenance": {
+  "n_shared_at_pooling": 34,
+  "n_disputed_at_pooling": 0,
+  "note": "counts only, describing how the organizer grouped the phase-1 patches. The organizer's own candidate residue list is deliberately absent: the answer is the advocate's footprint, in `residues` and in `antibodies[].interfaces[]`."
+ },
+ "evidence": {
+  "advocate": {
+   "n_findings": 2,
+   "n_supports": 2,
+   "n_weakens": 0,
+   "weakest_point": "The stripe is outside the terminal zipper, so its effect on filament assembly must be indirect.",
+   "note": "the advocate reports claim/source/date/bearing and is not asked whether a source is about this binder"
+  },
+  "judge": {
+   "tier_a_support": 0,
+   "n_support_lines": 3,
+   "verdict": "leading",
+   "note": "Tier A -- a source about this binder itself -- is the judge's adjudication, in assessment[].support[]. It exists nowhere in the advocate's own answer."
+  }
+ },
+ "provenance": {
+  "unverified_source_policy_fields": [
+   "gated",
+   "web_search",
+   "shell_network",
+   "gate_tools"
+  ],
+  "assembled_case_dir": "gpt-5.6-high/gather_refine/post_refactor/released_structure_20261030/casp16/H1244/case_4a7bba_G_rep2",
+  "organize_case_dir": "gpt-5.6-high/gather_refine/post_refactor/released_structure_20261030/casp16/H1244/case_4a7bba_GR_rep1",
+  "organize_status": "ok",
+  "judge_case_dir": "gpt-5.6-high/gather_refine/post_refactor/released_structure_20261030/casp16/H1244/case_4a7bba_GJ_rep2",
+  "judge_status": "ok",
+  "packet": "gpt-5.6-high/gather/packets/case_4a7bba/packet",
+  "manifest": "gpt-5.6-high/gather/packets/case_4a7bba/manifest.json",
+  "advocate_case_dir": "gpt-5.6-high/gather_refine/post_refactor/released_structure_20261030/casp16/H1244/case_4a7bba_GR_rep1",
+  "advocate_status": "ok"
+ },
+ "score": {
+  "precision": 0.3636,
+  "recall": 0.2105,
+  "f1": 0.2667,
+  "n_pred": 22,
+  "n_true": 38,
+  "n_hit": 8
+ }
+}

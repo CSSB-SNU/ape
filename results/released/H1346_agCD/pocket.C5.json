@@ -1,0 +1,354 @@
+{
+ "task": "gather",
+ "gather_mode": "batched",
+ "num_launchers": 3,
+ "policy": {
+  "evidence_cutoff": "2026-05-21",
+  "no_cutoff": false,
+  "gated": true,
+  "web_search": false,
+  "shell_network": true,
+  "gate_tools": [
+   "research",
+   "fetch",
+   "rcsb",
+   "patent",
+   "paper"
+  ]
+ },
+ "unscored": false,
+ "target": "H1346_agCD",
+ "target_set": "casp17",
+ "case": "case_fed304",
+ "evidence_cutoff": "2026-05-21",
+ "target_release_date": "2026-05-21",
+ "retrieval_policy": "gated",
+ "input_structure": "structures/H1346_agCD.pdb",
+ "input_structure_sha256": null,
+ "briefing_source": null,
+ "briefing_sha256": null,
+ "antigen_chains": [
+  "C",
+  "D"
+ ],
+ "antibody_files": {
+  "antibody.pdb": [
+   "A",
+   "B"
+  ]
+ },
+ "antibody_chain_types": {
+  "antibody.pdb": {
+   "A": "heavy",
+   "B": "light"
+  }
+ },
+ "truth_file": "data/truth/casp17/H1346_agCD.epitope.json",
+ "stage": "gatherer",
+ "pocket": {
+  "id": "C5",
+  "judge_rank": 5,
+  "name": "The complete anti-BCMA paratope idiotope spanning both antigen...",
+  "confidence": 0.04,
+  "p_rests_on_holds": 0.1,
+  "why_this_rank": "A composite functional idiotope is plausible, but this inherited footprint is the broadest and includes poorly exposed rim residues.",
+  "rests_on": "One A/B interface covers the full 33.85 A composite rim.",
+  "where_the_mass_goes_if_it_fails": "C2",
+  "what_it_is": "The complete anti-BCMA paratope idiotope spanning both antigen variable domains, with the rigid C:H3 crest at its center and D:L1/L3 plus C:H1/H2 forming the surrounding rim.",
+  "why_one_candidate": "not pooled with anything: no other patch is both within 12 A (half centroid distance, half contact-graph hops) and coverable by one paratope of this antibody's reach, 16.9 A",
+  "from_patches": [
+   "P5"
+  ]
+ },
+ "note": "`confidence` on the pocket is over pockets and sums to about 1 across them. Inside an interface it is per residue in [0, 1] and sums to nothing. No residue is cut at a threshold: the whole vector is the answer.",
+ "mapping_basis": "side",
+ "checks": {
+  "unrecognised_sides": []
+ },
+ "chain_pairs": [
+  {
+   "antibody_chain": "A",
+   "antigen_chain": "C",
+   "n_residues": 8
+  },
+  {
+   "antibody_chain": "A",
+   "antigen_chain": "D",
+   "n_residues": 8
+  },
+  {
+   "antibody_chain": "B",
+   "antigen_chain": "C",
+   "n_residues": 16
+  }
+ ],
+ "antibodies": [
+  {
+   "antibody": "antibody.pdb",
+   "chains": {
+    "A": "heavy",
+    "B": "light"
+   },
+   "binding_mode": null,
+   "n_residues_scored": 26,
+   "interfaces": [
+    {
+     "antibody_chain": "A",
+     "antibody_chain_type": "heavy",
+     "antigen_chain": "C",
+     "n_residues": 8,
+     "residue_confidence": {
+      "100": 0.62,
+      "101": 0.9,
+      "103": 0.93,
+      "104": 0.93,
+      "105": 0.99,
+      "106": 0.98,
+      "107": 0.58,
+      "108": 0.83
+     },
+     "residue_side": {
+      "100": "heavy",
+      "101": "both",
+      "103": "both",
+      "104": "both",
+      "105": "both",
+      "106": "both",
+      "107": "heavy",
+      "108": "both"
+     },
+     "max_confidence": 0.99,
+     "mean_confidence": 0.845,
+     "precision_vs_truth": 0.0,
+     "n_in_truth": 0
+    },
+    {
+     "antibody_chain": "A",
+     "antibody_chain_type": "heavy",
+     "antigen_chain": "D",
+     "n_residues": 8,
+     "residue_confidence": {
+      "28": 0.42,
+      "30": 0.45,
+      "31": 0.25,
+      "52": 0.28,
+      "92": 0.84,
+      "93": 0.69,
+      "94": 0.79,
+      "95": 0.66
+     },
+     "residue_side": {
+      "28": "heavy",
+      "30": "heavy",
+      "31": "heavy",
+      "52": "heavy",
+      "92": "heavy",
+      "93": "heavy",
+      "94": "heavy",
+      "95": "heavy"
+     },
+     "max_confidence": 0.84,
+     "mean_confidence": 0.5475,
+     "precision_vs_truth": 0.0,
+     "n_in_truth": 0
+    },
+    {
+     "antibody_chain": "B",
+     "antibody_chain_type": "light",
+     "antigen_chain": "C",
+     "n_residues": 16,
+     "residue_confidence": {
+      "28": 0.24,
+      "30": 0.38,
+      "31": 0.55,
+      "32": 0.32,
+      "33": 0.25,
+      "53": 0.46,
+      "54": 0.72,
+      "56": 0.66,
+      "57": 0.54,
+      "58": 0.4,
+      "101": 0.9,
+      "103": 0.93,
+      "104": 0.93,
+      "105": 0.99,
+      "106": 0.98,
+      "108": 0.83
+     },
+     "residue_side": {
+      "28": "light",
+      "30": "light",
+      "31": "light",
+      "32": "light",
+      "33": "light",
+      "53": "light",
+      "54": "light",
+      "56": "light",
+      "57": "light",
+      "58": "light",
+      "101": "both",
+      "103": "both",
+      "104": "both",
+      "105": "both",
+      "106": "both",
+      "108": "both"
+     },
+     "max_confidence": 0.99,
+     "mean_confidence": 0.63,
+     "precision_vs_truth": 0.0,
+     "n_in_truth": 0
+    }
+   ]
+  }
+ ],
+ "paratope": {
+  "dominant_cdrs": [
+   "A:H3",
+   "B:L1",
+   "B:L3",
+   "A:H2",
+   "A:H1"
+  ],
+  "paratope_residues": [
+   "A:30",
+   "A:31",
+   "A:53",
+   "A:54",
+   "A:56",
+   "A:97",
+   "A:100",
+   "A:101",
+   "A:102",
+   "A:103",
+   "A:104",
+   "A:105",
+   "A:106",
+   "A:109",
+   "B:27",
+   "B:28",
+   "B:30",
+   "B:32",
+   "B:52",
+   "B:93",
+   "B:94"
+  ],
+  "heavy_light_split": "Heavy-dominant despite the two-chain antigen footprint: A:H3/H2 anchor C:H3 and D:L1/L3, while B:L1/L3/H1 cover C:H1/H2. The C:H3 crest is reached by both paratope chains.",
+  "binding_mode_union": "straddling"
+ },
+ "residues": [
+  "C:100",
+  "C:101",
+  "C:103",
+  "C:104",
+  "C:105",
+  "C:106",
+  "C:107",
+  "C:108",
+  "C:28",
+  "C:30",
+  "C:31",
+  "C:32",
+  "C:33",
+  "C:53",
+  "C:54",
+  "C:56",
+  "C:57",
+  "C:58",
+  "D:28",
+  "D:30",
+  "D:31",
+  "D:52",
+  "D:92",
+  "D:93",
+  "D:94",
+  "D:95"
+ ],
+ "n_residues": 26,
+ "patches": [
+  {
+   "id": "P5",
+   "name": "Composite VH/VL anti-BCMA paratope idiotope",
+   "n_residues": 31,
+   "residues": [
+    "C:100",
+    "C:101",
+    "C:102",
+    "C:103",
+    "C:104",
+    "C:105",
+    "C:106",
+    "C:107",
+    "C:108",
+    "C:109",
+    "C:110",
+    "C:28",
+    "C:30",
+    "C:31",
+    "C:32",
+    "C:33",
+    "C:53",
+    "C:54",
+    "C:55",
+    "C:56",
+    "C:57",
+    "C:58",
+    "D:28",
+    "D:30",
+    "D:31",
+    "D:32",
+    "D:52",
+    "D:92",
+    "D:93",
+    "D:94",
+    "D:95"
+   ],
+   "n_kept_by_advocate": 26,
+   "n_dropped_by_advocate": 5
+  }
+ ],
+ "pooling_provenance": {
+  "n_shared_at_pooling": 31,
+  "n_disputed_at_pooling": 0,
+  "note": "counts only, describing how the organizer grouped the phase-1 patches. The organizer's own candidate residue list is deliberately absent: the answer is the advocate's footprint, in `residues` and in `antibodies[].interfaces[]`."
+ },
+ "evidence": {
+  "advocate": {
+   "n_findings": 5,
+   "n_supports": 4,
+   "n_weakens": 1,
+   "weakest_point": "The strongest pair-context evidence supports an anti-kappa chaperone, not an anti-idiotype. Within the variable-apex premise, C5's broad rim approaches the paratope's full span and some far-edge residues are unlikely to be buried in one interface.",
+   "note": "the advocate reports claim/source/date/bearing and is not asked whether a source is about this binder"
+  },
+  "judge": {
+   "tier_a_support": 0,
+   "n_support_lines": 4,
+   "verdict": "live",
+   "note": "Tier A -- a source about this binder itself -- is the judge's adjudication, in assessment[].support[]. It exists nowhere in the advocate's own answer."
+  }
+ },
+ "provenance": {
+  "unverified_source_policy_fields": [
+   "gated",
+   "web_search",
+   "shell_network",
+   "gate_tools"
+  ],
+  "assembled_case_dir": "gpt-5.6-high/gather_refine/post_refactor/released_structure_20261030/casp17/H1346_agCD/case_fed304_G_rep2",
+  "organize_case_dir": "gpt-5.6-high/gather_refine/post_refactor/released_structure_20261030/casp17/H1346_agCD/case_fed304_GR_rep1",
+  "organize_status": "ok",
+  "judge_case_dir": "gpt-5.6-high/gather_refine/post_refactor/released_structure_20261030/casp17/H1346_agCD/case_fed304_GJ_rep2",
+  "judge_status": "ok",
+  "packet": "gpt-5.6-high/gather/packets/case_fed304/packet",
+  "manifest": "gpt-5.6-high/gather/packets/case_fed304/manifest.json",
+  "advocate_case_dir": "gpt-5.6-high/gather_refine/post_refactor/released_structure_20261030/casp17/H1346_agCD/case_fed304_GR_rep1",
+  "advocate_status": "ok"
+ },
+ "score": {
+  "precision": 0.0,
+  "recall": 0.0,
+  "f1": 0.0,
+  "n_pred": 26,
+  "n_true": 17,
+  "n_hit": 0
+ }
+}

@@ -1,0 +1,252 @@
+{
+ "task": "gather",
+ "gather_mode": "batched",
+ "num_launchers": 3,
+ "policy": {
+  "evidence_cutoff": "2024-05-21",
+  "no_cutoff": false,
+  "gated": true,
+  "web_search": false,
+  "shell_network": true,
+  "gate_tools": [
+   "research",
+   "fetch",
+   "rcsb",
+   "patent",
+   "paper"
+  ]
+ },
+ "unscored": false,
+ "target": "H1215",
+ "target_set": "casp16",
+ "case": "case_f91454",
+ "evidence_cutoff": "2024-05-21",
+ "target_release_date": "2024-05-21",
+ "retrieval_policy": "gated",
+ "input_structure": "structures/H1215.pdb",
+ "input_structure_sha256": null,
+ "briefing_source": null,
+ "briefing_sha256": null,
+ "antigen_chains": [
+  "B"
+ ],
+ "antibody_files": {
+  "antibody.pdb": [
+   "A"
+  ]
+ },
+ "antibody_chain_types": {
+  "antibody.pdb": {
+   "A": "heavy"
+  }
+ },
+ "truth_file": "data/truth/casp16/H1215.epitope.json",
+ "stage": "gatherer",
+ "pocket": {
+  "id": "C6",
+  "judge_rank": 5,
+  "name": "A flat aromatic-acidic lateral barrel patch centered on the 52-57...",
+  "confidence": 0.11,
+  "p_rests_on_holds": 0.28,
+  "why_this_rank": "It is exposed and offers acidic and aromatic capacity, but is flat, wider than H3, depends on coordinated three-loop engagement, and has no candidate-specific precedent.",
+  "rests_on": "Broad electrostatic complementarity is specific enough to overcome the absence of a distinctive orientation anchor.",
+  "where_the_mass_goes_if_it_fails": "C1 and C8",
+  "what_it_is": "A flat aromatic-acidic lateral barrel patch centered on the 52-57 segment, with 22-37 and 214-217 forming opposite edges.",
+  "why_one_candidate": "not pooled with anything: no other patch is both within 12 A (half centroid distance, half contact-graph hops) and coverable by one paratope of this antibody's reach, 16.5 A",
+  "from_patches": [
+   "P6"
+  ]
+ },
+ "note": "`confidence` on the pocket is over pockets and sums to about 1 across them. Inside an interface it is per residue in [0, 1] and sums to nothing. No residue is cut at a threshold: the whole vector is the answer.",
+ "mapping_basis": "side",
+ "checks": {
+  "unrecognised_sides": []
+ },
+ "chain_pairs": [
+  {
+   "antibody_chain": "A",
+   "antigen_chain": "B",
+   "n_residues": 16
+  }
+ ],
+ "antibodies": [
+  {
+   "antibody": "antibody.pdb",
+   "chains": {
+    "A": "heavy"
+   },
+   "binding_mode": null,
+   "n_residues_scored": 16,
+   "interfaces": [
+    {
+     "antibody_chain": "A",
+     "antibody_chain_type": "heavy",
+     "antigen_chain": "B",
+     "n_residues": 16,
+     "residue_confidence": {
+      "22": 0.55,
+      "24": 0.7,
+      "30": 0.35,
+      "31": 0.65,
+      "35": 0.5,
+      "37": 0.32,
+      "52": 0.58,
+      "54": 0.82,
+      "55": 0.8,
+      "56": 0.72,
+      "57": 0.78,
+      "59": 0.45,
+      "126": 0.35,
+      "214": 0.38,
+      "216": 0.55,
+      "217": 0.6
+     },
+     "residue_side": {
+      "22": "heavy",
+      "24": "heavy",
+      "30": "heavy",
+      "31": "heavy",
+      "35": "heavy",
+      "37": "heavy",
+      "52": "heavy",
+      "54": "heavy",
+      "55": "heavy",
+      "56": "heavy",
+      "57": "heavy",
+      "59": "heavy",
+      "126": "heavy",
+      "214": "heavy",
+      "216": "heavy",
+      "217": "heavy"
+     },
+     "max_confidence": 0.82,
+     "mean_confidence": 0.5687,
+     "precision_vs_truth": 0.4375,
+     "n_in_truth": 7
+    }
+   ]
+  }
+ ],
+ "paratope": {
+  "dominant_cdrs": [
+   "H3:H2",
+   "H3:H1"
+  ],
+  "paratope_residues": [
+   "A:29",
+   "A:30",
+   "A:32",
+   "A:33",
+   "A:55",
+   "A:56",
+   "A:58",
+   "A:59",
+   "A:60",
+   "A:102",
+   "A:104",
+   "A:107",
+   "A:108",
+   "A:110",
+   "A:111",
+   "A:112",
+   "A:113",
+   "A:116",
+   "A:117",
+   "A:119",
+   "A:120"
+  ],
+  "heavy_light_split": "VHH-only: H3 spans the 52-57 center; H1/H2 reach the 22-37 and 214-217 rims.",
+  "binding_mode_union": "single-chain"
+ },
+ "residues": [
+  "B:126",
+  "B:214",
+  "B:216",
+  "B:217",
+  "B:22",
+  "B:24",
+  "B:30",
+  "B:31",
+  "B:35",
+  "B:37",
+  "B:52",
+  "B:54",
+  "B:55",
+  "B:56",
+  "B:57",
+  "B:59"
+ ],
+ "n_residues": 16,
+ "patches": [
+  {
+   "id": "P6",
+   "name": "aromatic acidic side patch around 22-59",
+   "n_residues": 16,
+   "residues": [
+    "B:126",
+    "B:214",
+    "B:216",
+    "B:217",
+    "B:22",
+    "B:24",
+    "B:30",
+    "B:31",
+    "B:35",
+    "B:37",
+    "B:52",
+    "B:54",
+    "B:55",
+    "B:56",
+    "B:57",
+    "B:59"
+   ],
+   "n_kept_by_advocate": 16,
+   "n_dropped_by_advocate": 0
+  }
+ ],
+ "pooling_provenance": {
+  "n_shared_at_pooling": 16,
+  "n_disputed_at_pooling": 0,
+  "note": "counts only, describing how the organizer grouped the phase-1 patches. The organizer's own candidate residue list is deliberately absent: the answer is the advocate's footprint, in `residues` and in `antibodies[].interfaces[]`."
+ },
+ "evidence": {
+  "advocate": {
+   "n_findings": 4,
+   "n_supports": 3,
+   "n_weakens": 0,
+   "weakest_point": "The patch is flat, requires the full three-loop paratope and has only one strong aromatic anchor; electrostatic complementarity may be too nonspecific.",
+   "note": "the advocate reports claim/source/date/bearing and is not asked whether a source is about this binder"
+  },
+  "judge": {
+   "tier_a_support": 0,
+   "n_support_lines": 2,
+   "verdict": "live",
+   "note": "Tier A -- a source about this binder itself -- is the judge's adjudication, in assessment[].support[]. It exists nowhere in the advocate's own answer."
+  }
+ },
+ "provenance": {
+  "unverified_source_policy_fields": [
+   "gated",
+   "web_search",
+   "shell_network",
+   "gate_tools"
+  ],
+  "assembled_case_dir": "gpt-5.6-high/gather_refine/post_refactor/released_structure_20261030/casp16/H1215/case_f91454_G_rep2",
+  "organize_case_dir": "gpt-5.6-high/gather_refine/post_refactor/released_structure_20261030/casp16/H1215/case_f91454_GR_rep1",
+  "organize_status": "ok",
+  "judge_case_dir": "gpt-5.6-high/gather_refine/post_refactor/released_structure_20261030/casp16/H1215/case_f91454_GJ_rep2",
+  "judge_status": "ok",
+  "packet": "gpt-5.6-high/gather/packets/case_f91454/packet",
+  "manifest": "gpt-5.6-high/gather/packets/case_f91454/manifest.json",
+  "advocate_case_dir": "gpt-5.6-high/gather_refine/post_refactor/released_structure_20261030/casp16/H1215/case_f91454_GR_rep1",
+  "advocate_status": "ok"
+ },
+ "score": {
+  "precision": 0.4375,
+  "recall": 0.3182,
+  "f1": 0.3684,
+  "n_pred": 16,
+  "n_true": 22,
+  "n_hit": 7
+ }
+}

@@ -1,0 +1,309 @@
+{
+ "task": "gather",
+ "gather_mode": "batched",
+ "num_launchers": 3,
+ "policy": {
+  "evidence_cutoff": null,
+  "no_cutoff": true,
+  "gated": false,
+  "web_search": true,
+  "shell_network": true,
+  "gate_tools": []
+ },
+ "unscored": true,
+ "target": "H2362",
+ "target_set": "casp17",
+ "case": "case_259152",
+ "evidence_cutoff": null,
+ "target_release_date": "2026-06-12",
+ "retrieval_policy": "no-cutoff",
+ "input_structure": "data/staged_casp17_no_native/H2362.pdb",
+ "input_structure_sha256": "54e187b986e4696f87e1dd7dd4cd6cd943754471a337aa57a0577c6172827a73",
+ "briefing_source": "data/briefing/casp17_nocutoff/H2362/search_results.json",
+ "briefing_sha256": "51b08b3d656ebb7b7f7f0d284f291dc2a93f171a10cc488b650ef2ac8d2249c3",
+ "antigen_chains": [
+  "A",
+  "B",
+  "C",
+  "D",
+  "E"
+ ],
+ "antibody_files": {
+  "antibody.pdb": [
+   "F",
+   "G"
+  ]
+ },
+ "antibody_chain_types": {
+  "antibody.pdb": {
+   "F": "light",
+   "G": "heavy"
+  }
+ },
+ "stage": "gatherer",
+ "pocket": {
+  "id": "C10",
+  "judge_rank": 10,
+  "name": "The central lobe of the gL-UL130 junction on the lateral pentamer...",
+  "confidence": 0.04,
+  "p_rests_on_holds": 0.15,
+  "why_this_rank": "8I21 proves the face is bindable, but the fixed union is 41.35 A wide, has the largest low-RSA fraction and includes the C:93 sequon.",
+  "rests_on": "Only a central subset of the fixed union needs contact for C10 to count as correct.",
+  "where_the_mass_goes_if_it_fails": "C7",
+  "what_it_is": "The central lobe of the gL-UL130 junction on the lateral pentamer head, corresponding to antigenic site 7 and separated from the principal NRP2/THBD footprints.",
+  "why_one_candidate": "not pooled with anything: no other patch is both within 12 A (half centroid distance, half contact-graph hops) and coverable by one paratope of this antibody's reach, 17.6 A",
+  "from_patches": [
+   "P9"
+  ]
+ },
+ "note": "`confidence` on the pocket is over pockets and sums to about 1 across them. Inside an interface it is per residue in [0, 1] and sums to nothing. No residue is cut at a threshold: the whole vector is the answer.",
+ "mapping_basis": "side",
+ "checks": {
+  "unrecognised_sides": []
+ },
+ "chain_pairs": [
+  {
+   "antibody_chain": "F",
+   "antigen_chain": "C",
+   "n_residues": 9
+  },
+  {
+   "antibody_chain": "G",
+   "antigen_chain": "A",
+   "n_residues": 2
+  },
+  {
+   "antibody_chain": "G",
+   "antigen_chain": "C",
+   "n_residues": 9
+  }
+ ],
+ "antibodies": [
+  {
+   "antibody": "antibody.pdb",
+   "chains": {
+    "F": "light",
+    "G": "heavy"
+   },
+   "binding_mode": null,
+   "n_residues_scored": 14,
+   "interfaces": [
+    {
+     "antibody_chain": "F",
+     "antibody_chain_type": "light",
+     "antigen_chain": "C",
+     "n_residues": 9,
+     "residue_confidence": {
+      "21": 0.92,
+      "22": 0.95,
+      "23": 0.91,
+      "24": 0.85,
+      "49": 0.94,
+      "50": 0.97,
+      "51": 0.88,
+      "53": 0.7,
+      "90": 0.5
+     },
+     "residue_side": {
+      "21": "both",
+      "22": "both",
+      "23": "both",
+      "24": "both",
+      "49": "both",
+      "50": "both",
+      "51": "light",
+      "53": "light",
+      "90": "light"
+     },
+     "max_confidence": 0.97,
+     "mean_confidence": 0.8467
+    },
+    {
+     "antibody_chain": "G",
+     "antibody_chain_type": "heavy",
+     "antigen_chain": "A",
+     "n_residues": 2,
+     "residue_confidence": {
+      "126": 0.62,
+      "127": 0.6
+     },
+     "residue_side": {
+      "126": "heavy",
+      "127": "heavy"
+     },
+     "max_confidence": 0.62,
+     "mean_confidence": 0.61
+    },
+    {
+     "antibody_chain": "G",
+     "antibody_chain_type": "heavy",
+     "antigen_chain": "C",
+     "n_residues": 9,
+     "residue_confidence": {
+      "20": 0.72,
+      "21": 0.92,
+      "22": 0.95,
+      "23": 0.91,
+      "24": 0.85,
+      "47": 0.78,
+      "49": 0.94,
+      "50": 0.97,
+      "67": 0.72
+     },
+     "residue_side": {
+      "20": "heavy",
+      "21": "both",
+      "22": "both",
+      "23": "both",
+      "24": "both",
+      "47": "heavy",
+      "49": "both",
+      "50": "both",
+      "67": "heavy"
+     },
+     "max_confidence": 0.97,
+     "mean_confidence": 0.8622
+    }
+   ]
+  }
+ ],
+ "paratope": {
+  "dominant_cdrs": [
+   "G:H3",
+   "G:H2",
+   "F:L1",
+   "F:L3"
+  ],
+  "paratope_residues": [
+   "G:28",
+   "G:30",
+   "G:31",
+   "G:32",
+   "G:33",
+   "G:34",
+   "G:35",
+   "G:54",
+   "G:55",
+   "G:56",
+   "G:57",
+   "G:58",
+   "G:59",
+   "G:99",
+   "G:101",
+   "G:102",
+   "G:103",
+   "G:104",
+   "G:105",
+   "G:106",
+   "G:107",
+   "G:108",
+   "G:110",
+   "G:111",
+   "F:27",
+   "F:28",
+   "F:30",
+   "F:31",
+   "F:32",
+   "F:50",
+   "F:52",
+   "F:91",
+   "F:92",
+   "F:93",
+   "F:94",
+   "F:97"
+  ],
+  "heavy_light_split": "Heavy contributes about 65% on A:126-127 and C:20-49/C:67; light covers C:51/C:53/C:90. Both chains share the C:Y21/S22/K23/P24/F49/Q50 center.",
+  "binding_mode_union": "straddling"
+ },
+ "residues": [
+  "A:126",
+  "A:127",
+  "C:20",
+  "C:21",
+  "C:22",
+  "C:23",
+  "C:24",
+  "C:47",
+  "C:49",
+  "C:50",
+  "C:51",
+  "C:53",
+  "C:67",
+  "C:90"
+ ],
+ "n_residues": 14,
+ "patches": [
+  {
+   "id": "P9",
+   "name": "gL-UL130 site-7 face",
+   "n_residues": 26,
+   "residues": [
+    "A:126",
+    "A:127",
+    "A:128",
+    "C:20",
+    "C:21",
+    "C:22",
+    "C:23",
+    "C:24",
+    "C:27",
+    "C:47",
+    "C:48",
+    "C:49",
+    "C:50",
+    "C:51",
+    "C:53",
+    "C:65",
+    "C:67",
+    "C:68",
+    "C:73",
+    "C:89",
+    "C:90",
+    "C:93",
+    "C:94",
+    "C:95",
+    "C:98",
+    "C:99"
+   ],
+   "n_kept_by_advocate": 14,
+   "n_dropped_by_advocate": 12
+  }
+ ],
+ "pooling_provenance": {
+  "n_shared_at_pooling": 26,
+  "n_disputed_at_pooling": 0,
+  "note": "counts only, describing how the organizer grouped the phase-1 patches. The organizer's own candidate residue list is deliberately absent: the answer is the advocate's footprint, in `residues` and in `antibodies[].interfaces[]`."
+ },
+ "evidence": {
+  "advocate": {
+   "n_findings": 3,
+   "n_supports": 2,
+   "n_weakens": 0,
+   "weakest_point": "This is an empirically occupied but non-receptor-overlapping face, and its reported antibodies do not block NRP2 or THBD. The proposed fusion-lock/secondary-partner mechanism is therefore plausible but unproven.",
+   "note": "the advocate reports claim/source/date/bearing and is not asked whether a source is about this binder"
+  },
+  "judge": {
+   "tier_a_support": 0,
+   "n_support_lines": 3,
+   "verdict": "unlikely",
+   "note": "Tier A -- a source about this binder itself -- is the judge's adjudication, in assessment[].support[]. It exists nowhere in the advocate's own answer."
+  }
+ },
+ "provenance": {
+  "unverified_source_policy_fields": [
+   "gated",
+   "web_search",
+   "shell_network",
+   "gate_tools"
+  ],
+  "assembled_case_dir": "gpt-5.6-high/gather_refine/post_refactor/unreleased_20261029/nocut/casp17/H2362/case_259152_G_rep1",
+  "organize_case_dir": "gpt-5.6-high/gather_refine/post_refactor/unreleased_20261029/nocut/casp17/H2362/case_259152_GR_rep1",
+  "organize_status": "ok",
+  "judge_case_dir": "gpt-5.6-high/gather_refine/post_refactor/unreleased_20261029/nocut/casp17/H2362/case_259152_GJ_rep1",
+  "judge_status": "ok",
+  "packet": "gpt-5.6-high/nocut/gather/packets/case_259152/packet",
+  "manifest": "gpt-5.6-high/nocut/gather/packets/case_259152/manifest.json",
+  "advocate_case_dir": "gpt-5.6-high/gather_refine/post_refactor/unreleased_20261029/nocut/casp17/H2362/case_259152_GR_rep1",
+  "advocate_status": "ok"
+ }
+}

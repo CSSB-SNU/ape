@@ -1,0 +1,210 @@
+{
+ "target": "H1225",
+ "target_set": "casp16",
+ "case": "case_db141c",
+ "task": "gather",
+ "gather_mode": "batched",
+ "num_launchers": 3,
+ "policy": {
+  "evidence_cutoff": "2024-06-06",
+  "no_cutoff": false,
+  "gated": true,
+  "web_search": false,
+  "shell_network": true,
+  "gate_tools": [
+   "research",
+   "fetch",
+   "rcsb",
+   "patent",
+   "paper"
+  ]
+ },
+ "unscored": false,
+ "evidence_cutoff": "2024-06-06",
+ "target_release_date": "2024-06-06",
+ "retrieval_policy": "gated",
+ "antigen_chains": [
+  "A"
+ ],
+ "antibody_files": {
+  "antibody.pdb": [
+   "B",
+   "C"
+  ]
+ },
+ "antibody_chain_types": {
+  "antibody.pdb": {
+   "B": "unknown",
+   "C": "unknown"
+  }
+ },
+ "input_structure": "structures/H1225.pdb",
+ "input_structure_sha256": null,
+ "briefing_source": null,
+ "briefing_sha256": null,
+ "recognized_complex": {
+  "organize": null,
+  "judge": true
+ },
+ "recognition_note": "The supplied VH and VL exactly match human anti-RSV-G monoclonal antibody 1G1 in Figure 5A/5B of WO2009055711A2, first public 2009-04-30. I verified both sequence rows in the locally stored patent scan. The same disclosure calls 1G1 conformational because it failed overlapping-peptide mapping, and claims 1/5 place named 1G1 within RSV-G A2 residues 160-176 (local A:4-A:20). No pre-cutoff atomic 1G1 complex was found.",
+ "what_separated_them": "Tier A evidence exists here: the exact binder is 1G1. No single patent statement uniquely selects C3, because the interval also reaches C1 and conformational binding also fits C2. Their conjunction does: C3 contains the interval and supplies a discontinuous folded shoulder, whereas C1 explains only the interval and C2 only the conformational character. All three pass geometry and have other-antibody precedent, so those Tier B lines mainly establish feasibility and do not drive the order.",
+ "not_pooled": [],
+ "provenance": {
+  "unverified_source_policy_fields": [
+   "gated",
+   "web_search",
+   "shell_network",
+   "gate_tools"
+  ],
+  "assembled_case_dir": "gpt-5.6-high/gather_refine/post_refactor/released_structure_20261030/casp16/H1225/case_db141c_G_rep2",
+  "organize_case_dir": "gpt-5.6-high/gather_refine/post_refactor/released_structure_20261030/casp16/H1225/case_db141c_GR_rep1",
+  "organize_status": "ok",
+  "judge_case_dir": "gpt-5.6-high/gather_refine/post_refactor/released_structure_20261030/casp16/H1225/case_db141c_GJ_rep2",
+  "judge_status": "ok",
+  "packet": "gpt-5.6-high/gather/packets/case_db141c/packet",
+  "manifest": "gpt-5.6-high/gather/packets/case_db141c/manifest.json"
+ },
+ "truth_file": "data/truth/casp16/H1225.epitope.json",
+ "truth": {
+  "n_residues": 17,
+  "usable": "yes",
+  "chains": {
+   "A": [
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    19,
+    23,
+    25,
+    26,
+    29
+   ]
+  },
+  "anchor_note": "the numbering frame only; the epitope is defined on the native and carried here by antigen sequence alignment, so which pooled model this is does not affect the label"
+ },
+ "oracle": {
+  "metric": "f1",
+  "epitope_definition": "whole_antibody",
+  "truth_file": "data/truth/casp16/H1225.epitope.json",
+  "rank1": {
+   "pocket": "C3",
+   "confidence": 0.76,
+   "precision": 0.75,
+   "recall": 0.7059,
+   "f1": 0.7273,
+   "n_pred": 16,
+   "n_true": 17,
+   "n_hit": 12
+  },
+  "best": {
+   "pocket": "C1",
+   "judge_rank": 2,
+   "confidence": 0.18,
+   "precision": 1.0,
+   "recall": 0.6471,
+   "f1": 0.7857,
+   "n_pred": 11,
+   "n_true": 17,
+   "n_hit": 11
+  },
+  "note": "the best pocket the answer already contains. Rank 1 is the answer as delivered, so the gap is what the judge's ordering cost."
+ },
+ "pockets": [
+  {
+   "id": "C3",
+   "judge_rank": 1,
+   "name": "The broad N-terminal conserved face of the RSV-G central domain...",
+   "confidence": 0.76,
+   "mapping_basis": "side",
+   "n_residues": 16,
+   "score": {
+    "precision": 0.75,
+    "recall": 0.7059,
+    "f1": 0.7273,
+    "n_pred": 16,
+    "n_true": 17,
+    "n_hit": 12
+   },
+   "chain_pairs": [
+    {
+     "antibody_chain": "B",
+     "antigen_chain": "A",
+     "n_residues": 16
+    },
+    {
+     "antibody_chain": "C",
+     "antigen_chain": "A",
+     "n_residues": 16
+    }
+   ],
+   "file": "pocket.C3.json"
+  },
+  {
+   "id": "C1",
+   "judge_rank": 2,
+   "name": "The exposed N-terminal hydrophobic ridge of the unglycosylated...",
+   "confidence": 0.18,
+   "mapping_basis": "side",
+   "n_residues": 11,
+   "score": {
+    "precision": 1.0,
+    "recall": 0.6471,
+    "f1": 0.7857,
+    "n_pred": 11,
+    "n_true": 17,
+    "n_hit": 11
+   },
+   "chain_pairs": [
+    {
+     "antibody_chain": "B",
+     "antigen_chain": "A",
+     "n_residues": 11
+    },
+    {
+     "antibody_chain": "C",
+     "antigen_chain": "A",
+     "n_residues": 11
+    }
+   ],
+   "file": "pocket.C1.json"
+  },
+  {
+   "id": "C2",
+   "judge_rank": 3,
+   "name": "The receptor-facing cystine-noose/CX3C surface of the RSV-G central...",
+   "confidence": 0.06,
+   "mapping_basis": "side",
+   "n_residues": 12,
+   "score": {
+    "precision": 0.25,
+    "recall": 0.1765,
+    "f1": 0.2069,
+    "n_pred": 12,
+    "n_true": 17,
+    "n_hit": 3
+   },
+   "chain_pairs": [
+    {
+     "antibody_chain": "B",
+     "antigen_chain": "A",
+     "n_residues": 12
+    },
+    {
+     "antibody_chain": "C",
+     "antigen_chain": "A",
+     "n_residues": 12
+    }
+   ],
+   "file": "pocket.C2.json"
+  }
+ ]
+}

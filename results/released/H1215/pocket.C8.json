@@ -1,0 +1,258 @@
+{
+ "task": "gather",
+ "gather_mode": "batched",
+ "num_launchers": 3,
+ "policy": {
+  "evidence_cutoff": "2024-05-21",
+  "no_cutoff": false,
+  "gated": true,
+  "web_search": false,
+  "shell_network": true,
+  "gate_tools": [
+   "research",
+   "fetch",
+   "rcsb",
+   "patent",
+   "paper"
+  ]
+ },
+ "unscored": false,
+ "target": "H1215",
+ "target_set": "casp16",
+ "case": "case_f91454",
+ "evidence_cutoff": "2024-05-21",
+ "target_release_date": "2024-05-21",
+ "retrieval_policy": "gated",
+ "input_structure": "structures/H1215.pdb",
+ "input_structure_sha256": null,
+ "briefing_source": null,
+ "briefing_sha256": null,
+ "antigen_chains": [
+  "B"
+ ],
+ "antibody_files": {
+  "antibody.pdb": [
+   "A"
+  ]
+ },
+ "antibody_chain_types": {
+  "antibody.pdb": {
+   "A": "heavy"
+  }
+ },
+ "truth_file": "data/truth/casp16/H1215.epitope.json",
+ "stage": "gatherer",
+ "pocket": {
+  "id": "C8",
+  "judge_rank": 2,
+  "name": "The curved C-terminal barrel seam: the exposed 223-237 strand/loop...",
+  "confidence": 0.16,
+  "p_rests_on_holds": 0.38,
+  "why_this_rank": "Fully exposed, chemically diverse, and rich in aromatic/hydrophobic anchors, with no gross reach contradiction. It is slightly larger than H3 and has no surface-specific precedent.",
+  "rests_on": "The curved terminal seam can be engaged by coordinated H3/H2 contacts without fusion-context obstruction.",
+  "where_the_mass_goes_if_it_fails": "C1",
+  "what_it_is": "The curved C-terminal barrel seam: the exposed 223-237 strand/loop region spatially joined to W150/R152 and the 80-82/41-44 barrel edges.",
+  "why_one_candidate": "not pooled with anything: no other patch is both within 12 A (half centroid distance, half contact-graph hops) and coverable by one paratope of this antibody's reach, 16.5 A",
+  "from_patches": [
+   "P9"
+  ]
+ },
+ "note": "`confidence` on the pocket is over pockets and sums to about 1 across them. Inside an interface it is per residue in [0, 1] and sums to nothing. No residue is cut at a threshold: the whole vector is the answer.",
+ "mapping_basis": "side",
+ "checks": {
+  "unrecognised_sides": []
+ },
+ "chain_pairs": [
+  {
+   "antibody_chain": "A",
+   "antigen_chain": "B",
+   "n_residues": 18
+  }
+ ],
+ "antibodies": [
+  {
+   "antibody": "antibody.pdb",
+   "chains": {
+    "A": "heavy"
+   },
+   "binding_mode": null,
+   "n_residues_scored": 18,
+   "interfaces": [
+    {
+     "antibody_chain": "A",
+     "antibody_chain_type": "heavy",
+     "antigen_chain": "B",
+     "n_residues": 18,
+     "residue_confidence": {
+      "41": 0.25,
+      "43": 0.3,
+      "44": 0.4,
+      "80": 0.5,
+      "81": 0.42,
+      "82": 0.25,
+      "150": 0.7,
+      "152": 0.55,
+      "208": 0.35,
+      "223": 0.86,
+      "225": 0.95,
+      "228": 0.78,
+      "229": 0.8,
+      "230": 0.55,
+      "232": 0.4,
+      "235": 0.9,
+      "236": 0.72,
+      "237": 0.82
+     },
+     "residue_side": {
+      "41": "heavy",
+      "43": "heavy",
+      "44": "heavy",
+      "80": "heavy",
+      "81": "heavy",
+      "82": "heavy",
+      "150": "heavy",
+      "152": "heavy",
+      "208": "heavy",
+      "223": "heavy",
+      "225": "heavy",
+      "228": "heavy",
+      "229": "heavy",
+      "230": "heavy",
+      "232": "heavy",
+      "235": "heavy",
+      "236": "heavy",
+      "237": "heavy"
+     },
+     "max_confidence": 0.95,
+     "mean_confidence": 0.5833,
+     "precision_vs_truth": 0.0,
+     "n_in_truth": 0
+    }
+   ]
+  }
+ ],
+ "paratope": {
+  "dominant_cdrs": [
+   "H3:H2"
+  ],
+  "paratope_residues": [
+   "A:29",
+   "A:30",
+   "A:32",
+   "A:55",
+   "A:56",
+   "A:58",
+   "A:59",
+   "A:60",
+   "A:102",
+   "A:104",
+   "A:107",
+   "A:108",
+   "A:110",
+   "A:111",
+   "A:112",
+   "A:113",
+   "A:116",
+   "A:117",
+   "A:119",
+   "A:120"
+  ],
+  "heavy_light_split": "VHH-only: H3 covers W223/K225/D229/E235/L236/Y237; H2/H1 support W150/R152 and the 41-44/80-82 edges.",
+  "binding_mode_union": "single-chain"
+ },
+ "residues": [
+  "B:150",
+  "B:152",
+  "B:208",
+  "B:223",
+  "B:225",
+  "B:228",
+  "B:229",
+  "B:230",
+  "B:232",
+  "B:235",
+  "B:236",
+  "B:237",
+  "B:41",
+  "B:43",
+  "B:44",
+  "B:80",
+  "B:81",
+  "B:82"
+ ],
+ "n_residues": 18,
+ "patches": [
+  {
+   "id": "P9",
+   "name": "C-terminal barrel seam around 223-237",
+   "n_residues": 18,
+   "residues": [
+    "B:150",
+    "B:152",
+    "B:208",
+    "B:223",
+    "B:225",
+    "B:228",
+    "B:229",
+    "B:230",
+    "B:232",
+    "B:235",
+    "B:236",
+    "B:237",
+    "B:41",
+    "B:43",
+    "B:44",
+    "B:80",
+    "B:81",
+    "B:82"
+   ],
+   "n_kept_by_advocate": 18,
+   "n_dropped_by_advocate": 0
+  }
+ ],
+ "pooling_provenance": {
+  "n_shared_at_pooling": 18,
+  "n_disputed_at_pooling": 0,
+  "note": "counts only, describing how the organizer grouped the phase-1 patches. The organizer's own candidate residue list is deliberately absent: the answer is the advocate's footprint, in `residues` and in `antibodies[].interfaces[]`."
+ },
+ "evidence": {
+  "advocate": {
+   "n_findings": 4,
+   "n_supports": 2,
+   "n_weakens": 0,
+   "weakest_point": "The surface depends partly on a C-terminal region that may be sensitive to fusions or local mobility; its curved footprint requires coordinated H3/H2 engagement and lacks direct mapping.",
+   "note": "the advocate reports claim/source/date/bearing and is not asked whether a source is about this binder"
+  },
+  "judge": {
+   "tier_a_support": 0,
+   "n_support_lines": 3,
+   "verdict": "leading",
+   "note": "Tier A -- a source about this binder itself -- is the judge's adjudication, in assessment[].support[]. It exists nowhere in the advocate's own answer."
+  }
+ },
+ "provenance": {
+  "unverified_source_policy_fields": [
+   "gated",
+   "web_search",
+   "shell_network",
+   "gate_tools"
+  ],
+  "assembled_case_dir": "gpt-5.6-high/gather_refine/post_refactor/released_structure_20261030/casp16/H1215/case_f91454_G_rep2",
+  "organize_case_dir": "gpt-5.6-high/gather_refine/post_refactor/released_structure_20261030/casp16/H1215/case_f91454_GR_rep1",
+  "organize_status": "ok",
+  "judge_case_dir": "gpt-5.6-high/gather_refine/post_refactor/released_structure_20261030/casp16/H1215/case_f91454_GJ_rep2",
+  "judge_status": "ok",
+  "packet": "gpt-5.6-high/gather/packets/case_f91454/packet",
+  "manifest": "gpt-5.6-high/gather/packets/case_f91454/manifest.json",
+  "advocate_case_dir": "gpt-5.6-high/gather_refine/post_refactor/released_structure_20261030/casp16/H1215/case_f91454_GR_rep1",
+  "advocate_status": "ok"
+ },
+ "score": {
+  "precision": 0.0,
+  "recall": 0.0,
+  "f1": 0.0,
+  "n_pred": 18,
+  "n_true": 22,
+  "n_hit": 0
+ }
+}

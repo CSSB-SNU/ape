@@ -1,0 +1,270 @@
+{
+ "task": "gather",
+ "gather_mode": "batched",
+ "num_launchers": 3,
+ "policy": {
+  "evidence_cutoff": null,
+  "no_cutoff": true,
+  "gated": false,
+  "web_search": true,
+  "shell_network": true,
+  "gate_tools": []
+ },
+ "unscored": true,
+ "target": "H2312",
+ "target_set": "casp17",
+ "case": "case_3a23b5",
+ "evidence_cutoff": null,
+ "target_release_date": "2026-05-13",
+ "retrieval_policy": "no-cutoff",
+ "input_structure": "data/staged_casp17_no_native/H2312.pdb",
+ "input_structure_sha256": "3ba79066f0aa7015920828a3678d94af5f532471fde42bb38b00795e45f94b8b",
+ "briefing_source": "data/briefing/casp17_nocutoff/H2312/search_results.json",
+ "briefing_sha256": "2b8c71697fd0cc7175a5631c137526c8209032f024f0df47a726889d5e5bdf88",
+ "antigen_chains": [
+  "A",
+  "B"
+ ],
+ "antibody_files": {
+  "antibody.pdb": [
+   "C"
+  ]
+ },
+ "antibody_chain_types": {
+  "antibody.pdb": {
+   "C": "heavy"
+  }
+ },
+ "stage": "gatherer",
+ "pocket": {
+  "id": "C9",
+  "judge_rank": 4,
+  "name": "The substrate-facing aromatic/acidic rim of active EXT1 GT-B...",
+  "confidence": 0.11,
+  "p_rests_on_holds": 0.52,
+  "why_this_rank": "Good aromatic and charge match plus ligand-facing precedent, tempered by near-limit span and A:250 glycan adjacency.",
+  "rests_on": "2BAV4 can approach beside the A:250 glycan and use nearly its full measured reach.",
+  "where_the_mass_goes_if_it_fails": "C2, then C7",
+  "what_it_is": "The substrate-facing aromatic/acidic rim of active EXT1 GT-B, centered on A:209–A:211, A:235–A:250, and A:265–A:269.",
+  "why_one_candidate": "not pooled with anything: no other patch is both within 12 A (half centroid distance, half contact-graph hops) and coverable by one paratope of this antibody's reach, 13.6 A",
+  "from_patches": [
+   "P8"
+  ]
+ },
+ "note": "`confidence` on the pocket is over pockets and sums to about 1 across them. Inside an interface it is per residue in [0, 1] and sums to nothing. No residue is cut at a threshold: the whole vector is the answer.",
+ "mapping_basis": "side",
+ "checks": {
+  "unrecognised_sides": []
+ },
+ "chain_pairs": [
+  {
+   "antibody_chain": "C",
+   "antigen_chain": "A",
+   "n_residues": 24
+  }
+ ],
+ "antibodies": [
+  {
+   "antibody": "antibody.pdb",
+   "chains": {
+    "C": "heavy"
+   },
+   "binding_mode": null,
+   "n_residues_scored": 24,
+   "interfaces": [
+    {
+     "antibody_chain": "C",
+     "antibody_chain_type": "heavy",
+     "antigen_chain": "A",
+     "n_residues": 24,
+     "residue_confidence": {
+      "189": 0.68,
+      "191": 0.61,
+      "200": 0.48,
+      "209": 0.51,
+      "210": 0.93,
+      "211": 0.78,
+      "235": 0.49,
+      "237": 0.65,
+      "238": 0.77,
+      "239": 0.9,
+      "240": 0.91,
+      "241": 0.84,
+      "242": 0.82,
+      "243": 0.89,
+      "244": 0.88,
+      "245": 0.88,
+      "246": 0.59,
+      "249": 0.38,
+      "250": 0.22,
+      "258": 0.54,
+      "260": 0.55,
+      "265": 0.78,
+      "266": 0.76,
+      "269": 0.57
+     },
+     "residue_side": {
+      "189": "heavy",
+      "191": "heavy",
+      "200": "heavy",
+      "209": "heavy",
+      "210": "heavy",
+      "211": "heavy",
+      "235": "heavy",
+      "237": "heavy",
+      "238": "heavy",
+      "239": "heavy",
+      "240": "heavy",
+      "241": "heavy",
+      "242": "heavy",
+      "243": "heavy",
+      "244": "heavy",
+      "245": "heavy",
+      "246": "heavy",
+      "249": "heavy",
+      "250": "heavy",
+      "258": "heavy",
+      "260": "heavy",
+      "265": "heavy",
+      "266": "heavy",
+      "269": "heavy"
+     },
+     "max_confidence": 0.93,
+     "mean_confidence": 0.6838
+    }
+   ]
+  }
+ ],
+ "paratope": {
+  "dominant_cdrs": [
+   "H3H2H1select:H3",
+   "H2H1select:H2",
+   "H1select:H1"
+  ],
+  "paratope_residues": [
+   "C:28",
+   "C:30",
+   "C:31",
+   "C:32",
+   "C:53",
+   "C:54",
+   "C:56",
+   "C:57",
+   "C:100",
+   "C:101",
+   "C:102",
+   "C:103",
+   "C:105",
+   "C:107",
+   "C:108",
+   "C:109",
+   "C:110",
+   "C:113",
+   "C:114"
+  ],
+  "heavy_light_split": "Heavy 100%, light 0%. H3 covers E210/D211 and A:239–A:245; H1/H2 extend to the two rims. A:249/A:250 are low-confidence glycan-proximal edges.",
+  "binding_mode_union": "single-chain"
+ },
+ "residues": [
+  "A:189",
+  "A:191",
+  "A:200",
+  "A:209",
+  "A:210",
+  "A:211",
+  "A:235",
+  "A:237",
+  "A:238",
+  "A:239",
+  "A:240",
+  "A:241",
+  "A:242",
+  "A:243",
+  "A:244",
+  "A:245",
+  "A:246",
+  "A:249",
+  "A:250",
+  "A:258",
+  "A:260",
+  "A:265",
+  "A:266",
+  "A:269"
+ ],
+ "n_residues": 24,
+ "patches": [
+  {
+   "id": "P8",
+   "name": "EXT1 active GT-B donor/acceptor pocket rim",
+   "n_residues": 27,
+   "residues": [
+    "A:189",
+    "A:191",
+    "A:200",
+    "A:209",
+    "A:210",
+    "A:211",
+    "A:219",
+    "A:220",
+    "A:235",
+    "A:237",
+    "A:238",
+    "A:239",
+    "A:240",
+    "A:241",
+    "A:242",
+    "A:243",
+    "A:244",
+    "A:245",
+    "A:246",
+    "A:249",
+    "A:250",
+    "A:258",
+    "A:260",
+    "A:264",
+    "A:265",
+    "A:266",
+    "A:269"
+   ],
+   "n_kept_by_advocate": 24,
+   "n_dropped_by_advocate": 3
+  }
+ ],
+ "pooling_provenance": {
+  "n_shared_at_pooling": 27,
+  "n_disputed_at_pooling": 0,
+  "note": "counts only, describing how the organizer grouped the phase-1 patches. The organizer's own candidate residue list is deliberately absent: the answer is the advocate's footprint, in `residues` and in `antibodies[].interfaces[]`."
+ },
+ "evidence": {
+  "advocate": {
+   "n_findings": 4,
+   "n_supports": 3,
+   "n_weakens": 1,
+   "weakest_point": "The A:250 glycan can prevent the approach needed to cover the central and lower rims together; protein-only geometry overstates accessibility.",
+   "note": "the advocate reports claim/source/date/bearing and is not asked whether a source is about this binder"
+  },
+  "judge": {
+   "tier_a_support": 0,
+   "n_support_lines": 4,
+   "verdict": "live",
+   "note": "Tier A -- a source about this binder itself -- is the judge's adjudication, in assessment[].support[]. It exists nowhere in the advocate's own answer."
+  }
+ },
+ "provenance": {
+  "unverified_source_policy_fields": [
+   "gated",
+   "web_search",
+   "shell_network",
+   "gate_tools"
+  ],
+  "assembled_case_dir": "gpt-5.6-high/gather_refine/post_refactor/unreleased_20261029/nocut/casp17/H2312/case_3a23b5_G_rep1",
+  "organize_case_dir": "gpt-5.6-high/gather_refine/post_refactor/unreleased_20261029/nocut/casp17/H2312/case_3a23b5_GR_rep1",
+  "organize_status": "ok",
+  "judge_case_dir": "gpt-5.6-high/gather_refine/post_refactor/unreleased_20261029/nocut/casp17/H2312/case_3a23b5_GJ_rep1",
+  "judge_status": "ok",
+  "packet": "gpt-5.6-high/nocut/gather/packets/case_3a23b5/packet",
+  "manifest": "gpt-5.6-high/nocut/gather/packets/case_3a23b5/manifest.json",
+  "advocate_case_dir": "gpt-5.6-high/gather_refine/post_refactor/unreleased_20261029/nocut/casp17/H2312/case_3a23b5_GR_rep1",
+  "advocate_status": "ok"
+ }
+}

@@ -1,0 +1,210 @@
+{
+ "target": "H2344",
+ "target_set": "casp17",
+ "case": "case_679778",
+ "task": "gather",
+ "gather_mode": "batched",
+ "num_launchers": 3,
+ "policy": {
+  "evidence_cutoff": null,
+  "no_cutoff": true,
+  "gated": false,
+  "web_search": true,
+  "shell_network": true,
+  "gate_tools": []
+ },
+ "unscored": true,
+ "evidence_cutoff": null,
+ "target_release_date": "2026-06-03",
+ "retrieval_policy": "no-cutoff",
+ "antigen_chains": [
+  "C"
+ ],
+ "antibody_files": {
+  "antibody.pdb": [
+   "A",
+   "B"
+  ]
+ },
+ "antibody_chain_types": {
+  "antibody.pdb": {
+   "A": "unknown",
+   "B": "unknown"
+  }
+ },
+ "input_structure": "data/staged_casp17_no_native/H2344.pdb",
+ "input_structure_sha256": "18733617ed7c4b96b45ff3352f72763afcd6932570e14f1956abaeff946190b8",
+ "briefing_source": "data/briefing/casp17_nocutoff/H2344/search_results.json",
+ "briefing_sha256": "219c979403254eb778aaaf285ed1a338e86cc2322627ca12f3ab91aaa7876e87",
+ "recognized_complex": {
+  "organize": null,
+  "judge": true
+ },
+ "recognition_note": "Exact six-CDR matching identifies the supplied antibody as human mAb HAB72: WO2026122589A1 (published 2026-06-11) lists HAB72 H1 GGTIRTY, H2 IPVFGT, H3 ARVGYCIGSNCQFGAFDV, L1 QSVSSIY, L2 GAS and L3 QQYATSPPLT under its convention, and CASP17 H1344/H2344 metadata dated 2026-05-20/2026-06-03 names HSV gD-HAB72. The patent identifies HAB72 as gD2-binding, strongly neutralizing and inhibitory to cell-to-cell spread, but gives no residue-level epitope. A targeted search on 2026-10-29 found no independent HAB72 escape, competition or residue map. No native-complex coordinates or answer key were opened.",
+ "what_separated_them": "No candidate has a binder-specific localization line: HAB72 identity and phenotype are Tier A in subject but nonlocalizing. The remaining broad distribution is a Tier B prior over surfaces, separated by one uniform calculation on every exact inherited footprint rather than by advocacy detail. C3/C1 best combine exposure, coverability, type-variable anchors and independent neutralizing precedent; C2/C4 remain serious receptor/activation-site alternatives; C7/C6 are weakened by buried, charge-challenged or disconnected exact footprints; C5 is weakened by native glycan/construct-terminal context and a nonneutralizing linear-epitope precedent.",
+ "not_pooled": [],
+ "provenance": {
+  "unverified_source_policy_fields": [
+   "gated",
+   "web_search",
+   "shell_network",
+   "gate_tools"
+  ],
+  "assembled_case_dir": "gpt-5.6-high/gather_refine/post_refactor/unreleased_20261029/nocut/casp17/H2344/case_679778_G_rep1",
+  "organize_case_dir": "gpt-5.6-high/gather_refine/post_refactor/unreleased_20261029/nocut/casp17/H2344/case_679778_GR_rep1",
+  "organize_status": "ok",
+  "judge_case_dir": "gpt-5.6-high/gather_refine/post_refactor/unreleased_20261029/nocut/casp17/H2344/case_679778_GJ_rep1",
+  "judge_status": "ok",
+  "packet": "gpt-5.6-high/nocut/gather/packets/case_679778/packet",
+  "manifest": "gpt-5.6-high/nocut/gather/packets/case_679778/manifest.json"
+ },
+ "pockets": [
+  {
+   "id": "C3",
+   "judge_rank": 1,
+   "name": "The receptor-opposite MC5-like fusion-activation face of the gD IgV...",
+   "confidence": 0.24,
+   "mapping_basis": "side",
+   "n_residues": 19,
+   "chain_pairs": [
+    {
+     "antibody_chain": "A",
+     "antigen_chain": "C",
+     "n_residues": 19
+    },
+    {
+     "antibody_chain": "B",
+     "antigen_chain": "C",
+     "n_residues": 19
+    }
+   ],
+   "file": "pocket.C3.json"
+  },
+  {
+   "id": "C1",
+   "judge_rank": 2,
+   "name": "The receptor-distal N–A′ interloop cleft of alphaherpesvirus gD: a...",
+   "confidence": 0.22,
+   "mapping_basis": "side",
+   "n_residues": 18,
+   "chain_pairs": [
+    {
+     "antibody_chain": "A",
+     "antigen_chain": "C",
+     "n_residues": 18
+    },
+    {
+     "antibody_chain": "B",
+     "antigen_chain": "C",
+     "n_residues": 18
+    }
+   ],
+   "file": "pocket.C1.json"
+  },
+  {
+   "id": "C2",
+   "judge_rank": 3,
+   "name": "The nectin-1-facing rim of the major gD receptor surface: the...",
+   "confidence": 0.17,
+   "mapping_basis": "side",
+   "n_residues": 20,
+   "chain_pairs": [
+    {
+     "antibody_chain": "A",
+     "antigen_chain": "C",
+     "n_residues": 20
+    },
+    {
+     "antibody_chain": "B",
+     "antigen_chain": "C",
+     "n_residues": 20
+    }
+   ],
+   "file": "pocket.C2.json"
+  },
+  {
+   "id": "C4",
+   "judge_rank": 4,
+   "name": "The compact proline-rich C-terminal-extension shelf immediately...",
+   "confidence": 0.15,
+   "mapping_basis": "side",
+   "n_residues": 10,
+   "chain_pairs": [
+    {
+     "antibody_chain": "A",
+     "antigen_chain": "C",
+     "n_residues": 10
+    },
+    {
+     "antibody_chain": "B",
+     "antigen_chain": "C",
+     "n_residues": 10
+    }
+   ],
+   "file": "pocket.C4.json"
+  },
+  {
+   "id": "C7",
+   "judge_rank": 5,
+   "name": "The discontinuous MC2-like fusion-activation face on the...",
+   "confidence": 0.09,
+   "mapping_basis": "side",
+   "n_residues": 14,
+   "chain_pairs": [
+    {
+     "antibody_chain": "A",
+     "antigen_chain": "C",
+     "n_residues": 14
+    },
+    {
+     "antibody_chain": "B",
+     "antigen_chain": "C",
+     "n_residues": 14
+    }
+   ],
+   "file": "pocket.C7.json"
+  },
+  {
+   "id": "C6",
+   "judge_rank": 6,
+   "name": "The full receptor-overlap/α3-groove face of gD: a broad discontinuous...",
+   "confidence": 0.08,
+   "mapping_basis": "side",
+   "n_residues": 14,
+   "chain_pairs": [
+    {
+     "antibody_chain": "A",
+     "antigen_chain": "C",
+     "n_residues": 14
+    },
+    {
+     "antibody_chain": "B",
+     "antigen_chain": "C",
+     "n_residues": 14
+    }
+   ],
+   "file": "pocket.C6.json"
+  },
+  {
+   "id": "C5",
+   "judge_rank": 7,
+   "name": "The flexible, glycan-adjacent beginning of the gD C-terminal...",
+   "confidence": 0.05,
+   "mapping_basis": "side",
+   "n_residues": 11,
+   "chain_pairs": [
+    {
+     "antibody_chain": "A",
+     "antigen_chain": "C",
+     "n_residues": 11
+    },
+    {
+     "antibody_chain": "B",
+     "antigen_chain": "C",
+     "n_residues": 11
+    }
+   ],
+   "file": "pocket.C5.json"
+  }
+ ]
+}

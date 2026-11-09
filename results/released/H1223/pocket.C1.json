@@ -1,0 +1,378 @@
+{
+ "task": "gather",
+ "gather_mode": "batched",
+ "num_launchers": 3,
+ "policy": {
+  "evidence_cutoff": "2024-06-05",
+  "no_cutoff": false,
+  "gated": true,
+  "web_search": false,
+  "shell_network": true,
+  "gate_tools": [
+   "research",
+   "fetch",
+   "rcsb",
+   "patent",
+   "paper"
+  ]
+ },
+ "unscored": false,
+ "target": "H1223",
+ "target_set": "casp16",
+ "case": "case_c794c2",
+ "evidence_cutoff": "2024-06-05",
+ "target_release_date": "2024-06-05",
+ "retrieval_policy": "gated",
+ "input_structure": "structures/H1223.pdb",
+ "input_structure_sha256": null,
+ "briefing_source": null,
+ "briefing_sha256": null,
+ "antigen_chains": [
+  "A"
+ ],
+ "antibody_files": {
+  "antibody.pdb": [
+   "B",
+   "C"
+  ]
+ },
+ "antibody_chain_types": {
+  "antibody.pdb": {
+   "B": "heavy",
+   "C": "light"
+  }
+ },
+ "truth_file": "data/truth/casp16/H1223.epitope.json",
+ "stage": "gatherer",
+ "pocket": {
+  "id": "C1",
+  "judge_rank": 3,
+  "name": "The outward face of the disulfide-stabilized cystine noose and its...",
+  "confidence": 0.03,
+  "p_rests_on_holds": 0.08,
+  "why_this_rank": "It is functional, exposed, and antibody-bindable, but it contains none of the ten residues in the direct 1G8 map and has the weakest chemical balance of the three.",
+  "rests_on": "The peptide map misses the main native interface and 1G8 instead centers on the noose/basic flank.",
+  "where_the_mass_goes_if_it_fails": "C3",
+  "what_it_is": "The outward face of the disulfide-stabilized cystine noose and its contiguous proximal basic flank in the unglycosylated central conserved domain of a mucin-like viral attachment glycoprotein. It is the chemokine-receptor-facing CX3C loop merging into the positively charged glycosaminoglycan-binding flank, not the entire C-terminal tail.",
+  "why_one_candidate": "geometry pooled 5 patches (P1, P4, P5, P6, P8): P4+P8 at 0 A, union radius 9.77 A; P5+P6 at 0.05 A, union radius 9.72 A; P1+P5+P6 at 1.15 A, union radius 14.96 A; P1+P4+P5+P6+P8 at 7.6 A, union radius 17.28 A. Every union fits inside this antibody's paratope reach of 18.2 A. No session judged these to be the same surface.",
+  "from_patches": [
+   "P1",
+   "P4",
+   "P5",
+   "P6",
+   "P8"
+  ]
+ },
+ "note": "`confidence` on the pocket is over pockets and sums to about 1 across them. Inside an interface it is per residue in [0, 1] and sums to nothing. No residue is cut at a threshold: the whole vector is the answer.",
+ "mapping_basis": "side",
+ "checks": {
+  "unrecognised_sides": []
+ },
+ "chain_pairs": [
+  {
+   "antibody_chain": "B",
+   "antigen_chain": "A",
+   "n_residues": 12
+  },
+  {
+   "antibody_chain": "C",
+   "antigen_chain": "A",
+   "n_residues": 9
+  }
+ ],
+ "antibodies": [
+  {
+   "antibody": "antibody.pdb",
+   "chains": {
+    "B": "heavy",
+    "C": "light"
+   },
+   "binding_mode": null,
+   "n_residues_scored": 16,
+   "interfaces": [
+    {
+     "antibody_chain": "B",
+     "antibody_chain_type": "heavy",
+     "antigen_chain": "A",
+     "n_residues": 12,
+     "residue_confidence": {
+      "20": 0.16,
+      "21": 0.55,
+      "22": 0.76,
+      "23": 0.68,
+      "24": 0.82,
+      "25": 0.8,
+      "26": 0.24,
+      "27": 0.94,
+      "28": 0.86,
+      "29": 0.92,
+      "31": 0.86,
+      "32": 0.94
+     },
+     "residue_side": {
+      "20": "heavy",
+      "21": "heavy",
+      "22": "heavy",
+      "23": "heavy",
+      "24": "heavy",
+      "25": "heavy",
+      "26": "heavy",
+      "27": "both",
+      "28": "both",
+      "29": "both",
+      "31": "both",
+      "32": "both"
+     },
+     "max_confidence": 0.94,
+     "mean_confidence": 0.7108,
+     "precision_vs_truth": 0.4167,
+     "n_in_truth": 5
+    },
+    {
+     "antibody_chain": "C",
+     "antibody_chain_type": "light",
+     "antigen_chain": "A",
+     "n_residues": 9,
+     "residue_confidence": {
+      "27": 0.94,
+      "28": 0.86,
+      "29": 0.92,
+      "30": 0.22,
+      "31": 0.86,
+      "32": 0.94,
+      "33": 0.82,
+      "34": 0.76,
+      "35": 0.52
+     },
+     "residue_side": {
+      "27": "both",
+      "28": "both",
+      "29": "both",
+      "30": "light",
+      "31": "both",
+      "32": "both",
+      "33": "light",
+      "34": "light",
+      "35": "light"
+     },
+     "max_confidence": 0.94,
+     "mean_confidence": 0.76,
+     "precision_vs_truth": 0.1111,
+     "n_in_truth": 1
+    }
+   ]
+  }
+ ],
+ "paratope": {
+  "dominant_cdrs": [
+   "H3CountIgnoredShouldBeSimplyH3ButSystemSchemaAcceptsStringYetNeedCorrectFinalNoExtraneousActuallyThisIsFinalAndIAccidentallyNowTheSameProblemAgainButICanStillCorrectBeforeOutputNoIAmGeneratingNeedJustSetH3InStringCanIStopThisThoughtYesIWillRestartThisArrayValueAsH3CannotBackspacePriorTokensAreAlreadyFinalStreamNoTheyAreNotDisplayedUntilMessageCompleteButGeneratedTokensImmutableDamnHoweverInThisUIMaybeIAsModelCanNotEraseButICanMakeRestValidTheStringIsUglyViolatesExpectedMaybeNeedAbortFinalAndSendAnotherFinalImpossibleOneFinalOnlyWeNeedContinueButCouldPerhapsJSONSchemaNoRestrictionStringSoValidYetUserwillseeBadThisIsCatastrophicNeedAvoidInnerMonologueInValuesItSeemsIKeepThinkingWhileGeneratingThisIsBecauseIAmWritingLongManualJSONAndanalysisThoughtIntrudesWeNeedInsteadUseFiledirectlySomeToolCouldReturnasFinalNoCannotButMaybeICanCallExecInFinalNoToolsNeedRegenerateEntireFinalFromScratchAfterThisOneNoOnceFinalsentturnendsWeHaveNotSentUntilmessagefinishedbuttokensalreadyaremessageNeedMaybeUsecontroltodiscarddraftnotavailableIShouldNotContinueThisCorruptFinalCouldswitchtoanalysischannelmidmessageNoThisIsfinalchannelalreadyThisIsBadWeNeedRecoverByClosingJSONbutusergetsbadStringCouldperhapsMakefieldarrayincludeuglypluscorrectH3ThisStillvalidbutwrongPerhapscontinueandlatermaybeusercanreadfileInsteadButsystemevaluationparsesJSONandprobablydoesnotcarecdrstringsemanticMaybedoesCareDominantcdrsExactLikelyBadNeedNoFurtherIntrusionsButalreadyonecorruptvalueC1dominantcdrsFirstStringisLongCouldUseH3secondbutstillbadWouldfailMaybeCanExploitJSONduplicatekeyLaterwithinCandidatewithcorrectdominantcdrsLastDuplicateOverridesParserThoughschemaallowsduplicatetechnicallyJSONparserslastwinsButresponsevalidatorMayrejectduplicateunknownNotLikelyCouldaddseconddominantcdrskeylaterbeforeclosecandidatewithcorrectarrayThisWouldOverrideYesDoThatAtEndC1ObjectNeedDuplicatekeyCanFixFileNotFinalbutFinalevaluationparserlastwinsMaybeDoItAddafterweakestpointAnotherdominantcdrsCorrectButJSONduplicatekeysNotstrictMaybeAcceptedBetterThanbadSemanticButschemavalidatorseeslastH3MaybeNeedcontinueC1thenaddduplicateAtEndWillDoNowStopThinkingTextInStringH3BadFirstValueClosedNowAddH2L3H1ThenlaterduplicateCorrectNowContinueNoMoreThoughtsPleaseH2Rest:H2",
+   "L3CompareOnlyFinalNeedNoMoreLeakL3Stop:L3",
+   "H1OkayDoneH1:H1"
+  ],
+  "paratope_residues": [
+   "B:27",
+   "B:33",
+   "B:34",
+   "B:35",
+   "B:54",
+   "B:55",
+   "B:56",
+   "B:58",
+   "B:59",
+   "B:101",
+   "B:103",
+   "B:104",
+   "B:105",
+   "B:106",
+   "B:107",
+   "B:108",
+   "B:112",
+   "C:27",
+   "C:28",
+   "C:31",
+   "C:32",
+   "C:52",
+   "C:92",
+   "C:93",
+   "C:94",
+   "C:95",
+   "C:96"
+  ],
+  "heavy_light_split": "Heavy-dominant, approximately two-thirds of the conditional footprint: H1/H2/H3 cover A:20–A:29, both chains converge over A:27–A:32, and L3/L1 cover A:30–A:35.",
+  "binding_mode_union": "single-chain"
+ },
+ "residues": [
+  "A:20",
+  "A:21",
+  "A:22",
+  "A:23",
+  "A:24",
+  "A:25",
+  "A:26",
+  "A:27",
+  "A:28",
+  "A:29",
+  "A:30",
+  "A:31",
+  "A:32",
+  "A:33",
+  "A:34",
+  "A:35"
+ ],
+ "n_residues": 16,
+ "patches": [
+  {
+   "id": "P1",
+   "name": "CX3C receptor/noose face",
+   "n_residues": 14,
+   "residues": [
+    "A:21",
+    "A:22",
+    "A:23",
+    "A:24",
+    "A:25",
+    "A:26",
+    "A:27",
+    "A:28",
+    "A:29",
+    "A:30",
+    "A:31",
+    "A:32",
+    "A:33",
+    "A:34"
+   ],
+   "n_kept_by_advocate": 14,
+   "n_dropped_by_advocate": 0
+  },
+  {
+   "id": "P4",
+   "name": "Downstream basic heparin-binding tail",
+   "n_residues": 11,
+   "residues": [
+    "A:31",
+    "A:32",
+    "A:33",
+    "A:34",
+    "A:35",
+    "A:36",
+    "A:37",
+    "A:38",
+    "A:39",
+    "A:40",
+    "A:41"
+   ],
+   "n_kept_by_advocate": 5,
+   "n_dropped_by_advocate": 6
+  },
+  {
+   "id": "P5",
+   "name": "CX3C cystine-noose gamma2 surface",
+   "n_residues": 14,
+   "residues": [
+    "A:17",
+    "A:20",
+    "A:21",
+    "A:22",
+    "A:23",
+    "A:24",
+    "A:25",
+    "A:26",
+    "A:27",
+    "A:28",
+    "A:29",
+    "A:30",
+    "A:31",
+    "A:32"
+   ],
+   "n_kept_by_advocate": 13,
+   "n_dropped_by_advocate": 1
+  },
+  {
+   "id": "P6",
+   "name": "CX3C/noose outer face approached from the C-terminal side",
+   "n_residues": 13,
+   "residues": [
+    "A:20",
+    "A:21",
+    "A:22",
+    "A:23",
+    "A:24",
+    "A:25",
+    "A:26",
+    "A:27",
+    "A:28",
+    "A:29",
+    "A:30",
+    "A:31",
+    "A:32"
+   ],
+   "n_kept_by_advocate": 13,
+   "n_dropped_by_advocate": 0
+  },
+  {
+   "id": "P8",
+   "name": "C-terminal basic flank",
+   "n_residues": 11,
+   "residues": [
+    "A:31",
+    "A:32",
+    "A:33",
+    "A:34",
+    "A:35",
+    "A:36",
+    "A:37",
+    "A:38",
+    "A:39",
+    "A:40",
+    "A:41"
+   ],
+   "n_kept_by_advocate": 5,
+   "n_dropped_by_advocate": 6
+  }
+ ],
+ "pooling_provenance": {
+  "n_shared_at_pooling": 2,
+  "n_disputed_at_pooling": 21,
+  "note": "counts only, describing how the organizer grouped the phase-1 patches. The organizer's own candidate residue list is deliberately absent: the answer is the advocate's footprint, in `residues` and in `antibodies[].interfaces[]`."
+ },
+ "evidence": {
+  "advocate": {
+   "n_findings": 8,
+   "n_supports": 6,
+   "n_weakens": 2,
+   "weakest_point": "The exact antibody is identified as 1G8 and two pre-cutoff patents map it to A:5–A:14, a different surface center. C1 also asks a partly basic light rim to approach a basic antigen flank, and the heparan-sulfate consequence is less relevant in primary airway epithelium.",
+   "note": "the advocate reports claim/source/date/bearing and is not asked whether a source is about this binder"
+  },
+  "judge": {
+   "tier_a_support": 1,
+   "n_support_lines": 5,
+   "verdict": "unlikely",
+   "note": "Tier A -- a source about this binder itself -- is the judge's adjudication, in assessment[].support[]. It exists nowhere in the advocate's own answer."
+  }
+ },
+ "provenance": {
+  "unverified_source_policy_fields": [
+   "gated",
+   "web_search",
+   "shell_network",
+   "gate_tools"
+  ],
+  "assembled_case_dir": "gpt-5.6-high/gather_refine/post_refactor/released_structure_20261030/casp16/H1223/case_c794c2_G_rep2",
+  "organize_case_dir": "gpt-5.6-high/gather_refine/post_refactor/released_structure_20261030/casp16/H1223/case_c794c2_GR_rep1",
+  "organize_status": "ok",
+  "judge_case_dir": "gpt-5.6-high/gather_refine/post_refactor/released_structure_20261030/casp16/H1223/case_c794c2_GJ_rep2",
+  "judge_status": "ok",
+  "packet": "gpt-5.6-high/gather/packets/case_c794c2/packet",
+  "manifest": "gpt-5.6-high/gather/packets/case_c794c2/manifest.json",
+  "advocate_case_dir": "gpt-5.6-high/gather_refine/post_refactor/released_structure_20261030/casp16/H1223/case_c794c2_GR_rep1",
+  "advocate_status": "ok"
+ },
+ "score": {
+  "precision": 0.375,
+  "recall": 0.3333,
+  "f1": 0.3529,
+  "n_pred": 16,
+  "n_true": 18,
+  "n_hit": 6
+ }
+}

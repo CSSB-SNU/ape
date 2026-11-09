@@ -1,0 +1,485 @@
+{
+ "task": "gather",
+ "gather_mode": "batched",
+ "num_launchers": 3,
+ "policy": {
+  "evidence_cutoff": "2026-05-20",
+  "no_cutoff": false,
+  "gated": true,
+  "web_search": false,
+  "shell_network": true,
+  "gate_tools": [
+   "research",
+   "fetch",
+   "rcsb",
+   "patent",
+   "paper"
+  ]
+ },
+ "unscored": false,
+ "target": "H2321",
+ "target_set": "casp17",
+ "case": "case_6e4153",
+ "evidence_cutoff": "2026-05-20",
+ "target_release_date": "2026-05-20",
+ "retrieval_policy": "gated",
+ "input_structure": "structures/H2321.pdb",
+ "input_structure_sha256": null,
+ "briefing_source": null,
+ "briefing_sha256": null,
+ "antigen_chains": [
+  "A",
+  "D"
+ ],
+ "antibody_files": {
+  "antibody.1.pdb": [
+   "B",
+   "F"
+  ],
+  "antibody.2.pdb": [
+   "C",
+   "E"
+  ]
+ },
+ "antibody_chain_types": {
+  "antibody.1.pdb": {
+   "B": "unknown",
+   "F": "unknown"
+  },
+  "antibody.2.pdb": {
+   "C": "unknown",
+   "E": "unknown"
+  }
+ },
+ "truth_file": "data/truth/casp17/H2321.epitope.json",
+ "stage": "gatherer",
+ "pocket": {
+  "id": "C8",
+  "judge_rank": 8,
+  "name": "One of two symmetry-related quaternary flanks of the apical...",
+  "confidence": 0.006,
+  "p_rests_on_holds": 0.02,
+  "why_this_rank": "The crown is exposed and quaternary but lacks 2A2 localization, misses both anchors and is the broadest/nonplanar candidate.",
+  "rests_on": "Both 2A2 changes are distant allosteric effects and apex immunodominance dominates clone-specific evidence.",
+  "where_the_mass_goes_if_it_fails": "C3",
+  "what_it_is": "One of two symmetry-related quaternary flanks of the apical interlocked 'yin-yang' crown: one protomer's exposed 172–181 loop plus the partner's 192–199 glycine-rich turn [literature: PMID 38416796, 2024-02-28; computed refined diameter 28.15 Å].",
+  "why_one_candidate": "not pooled with anything: no other patch is both within 12 A (half centroid distance, half contact-graph hops) and coverable by one paratope of this antibody's reach, 18.1 A",
+  "from_patches": [
+   "P8"
+  ]
+ },
+ "note": "`confidence` on the pocket is over pockets and sums to about 1 across them. Inside an interface it is per residue in [0, 1] and sums to nothing. No residue is cut at a threshold: the whole vector is the answer.",
+ "mapping_basis": "per_antibody",
+ "checks": {
+  "unrecognised_sides": []
+ },
+ "chain_pairs": [
+  {
+   "antibody_chain": "B",
+   "antigen_chain": "A",
+   "n_residues": 8
+  },
+  {
+   "antibody_chain": "B",
+   "antigen_chain": "D",
+   "n_residues": 2
+  },
+  {
+   "antibody_chain": "F",
+   "antigen_chain": "A",
+   "n_residues": 8
+  },
+  {
+   "antibody_chain": "F",
+   "antigen_chain": "D",
+   "n_residues": 2
+  },
+  {
+   "antibody_chain": "C",
+   "antigen_chain": "A",
+   "n_residues": 2
+  },
+  {
+   "antibody_chain": "C",
+   "antigen_chain": "D",
+   "n_residues": 8
+  },
+  {
+   "antibody_chain": "E",
+   "antigen_chain": "A",
+   "n_residues": 2
+  },
+  {
+   "antibody_chain": "E",
+   "antigen_chain": "D",
+   "n_residues": 8
+  }
+ ],
+ "antibodies": [
+  {
+   "antibody": "antibody.1.pdb",
+   "chains": {
+    "B": "unknown",
+    "F": "unknown"
+   },
+   "binding_mode": "straddling",
+   "n_residues_scored": 10,
+   "interfaces": [
+    {
+     "antibody_chain": "B",
+     "antibody_chain_type": "unknown",
+     "antigen_chain": "A",
+     "n_residues": 8,
+     "residue_confidence": {
+      "173": 0.72,
+      "174": 0.78,
+      "175": 0.84,
+      "176": 0.82,
+      "177": 0.92,
+      "178": 0.94,
+      "179": 0.88,
+      "180": 0.9
+     },
+     "residue_side": {
+      "173": "heavy",
+      "174": "heavy",
+      "175": "heavy",
+      "176": "heavy",
+      "177": "both",
+      "178": "both",
+      "179": "both",
+      "180": "heavy"
+     },
+     "max_confidence": 0.94,
+     "mean_confidence": 0.85,
+     "precision_vs_truth": 0.0,
+     "n_in_truth": 0
+    },
+    {
+     "antibody_chain": "B",
+     "antibody_chain_type": "unknown",
+     "antigen_chain": "D",
+     "n_residues": 2,
+     "residue_confidence": {
+      "195": 0.72,
+      "197": 0.64
+     },
+     "residue_side": {
+      "195": "both",
+      "197": "light"
+     },
+     "max_confidence": 0.72,
+     "mean_confidence": 0.68,
+     "precision_vs_truth": 0.0,
+     "n_in_truth": 0
+    },
+    {
+     "antibody_chain": "F",
+     "antibody_chain_type": "unknown",
+     "antigen_chain": "A",
+     "n_residues": 8,
+     "residue_confidence": {
+      "173": 0.72,
+      "174": 0.78,
+      "175": 0.84,
+      "176": 0.82,
+      "177": 0.92,
+      "178": 0.94,
+      "179": 0.88,
+      "180": 0.9
+     },
+     "residue_side": {
+      "173": "heavy",
+      "174": "heavy",
+      "175": "heavy",
+      "176": "heavy",
+      "177": "both",
+      "178": "both",
+      "179": "both",
+      "180": "heavy"
+     },
+     "max_confidence": 0.94,
+     "mean_confidence": 0.85,
+     "precision_vs_truth": 0.0,
+     "n_in_truth": 0
+    },
+    {
+     "antibody_chain": "F",
+     "antibody_chain_type": "unknown",
+     "antigen_chain": "D",
+     "n_residues": 2,
+     "residue_confidence": {
+      "195": 0.72,
+      "197": 0.64
+     },
+     "residue_side": {
+      "195": "both",
+      "197": "light"
+     },
+     "max_confidence": 0.72,
+     "mean_confidence": 0.68,
+     "precision_vs_truth": 0.0,
+     "n_in_truth": 0
+    }
+   ]
+  },
+  {
+   "antibody": "antibody.2.pdb",
+   "chains": {
+    "C": "unknown",
+    "E": "unknown"
+   },
+   "binding_mode": "straddling",
+   "n_residues_scored": 10,
+   "interfaces": [
+    {
+     "antibody_chain": "C",
+     "antibody_chain_type": "unknown",
+     "antigen_chain": "A",
+     "n_residues": 2,
+     "residue_confidence": {
+      "195": 0.72,
+      "197": 0.64
+     },
+     "residue_side": {
+      "195": "both",
+      "197": "light"
+     },
+     "max_confidence": 0.72,
+     "mean_confidence": 0.68,
+     "precision_vs_truth": 0.0,
+     "n_in_truth": 0
+    },
+    {
+     "antibody_chain": "C",
+     "antibody_chain_type": "unknown",
+     "antigen_chain": "D",
+     "n_residues": 8,
+     "residue_confidence": {
+      "173": 0.72,
+      "174": 0.78,
+      "175": 0.84,
+      "176": 0.82,
+      "177": 0.92,
+      "178": 0.94,
+      "179": 0.88,
+      "180": 0.9
+     },
+     "residue_side": {
+      "173": "heavy",
+      "174": "heavy",
+      "175": "heavy",
+      "176": "heavy",
+      "177": "both",
+      "178": "both",
+      "179": "both",
+      "180": "heavy"
+     },
+     "max_confidence": 0.94,
+     "mean_confidence": 0.85,
+     "precision_vs_truth": 0.0,
+     "n_in_truth": 0
+    },
+    {
+     "antibody_chain": "E",
+     "antibody_chain_type": "unknown",
+     "antigen_chain": "A",
+     "n_residues": 2,
+     "residue_confidence": {
+      "195": 0.72,
+      "197": 0.64
+     },
+     "residue_side": {
+      "195": "both",
+      "197": "light"
+     },
+     "max_confidence": 0.72,
+     "mean_confidence": 0.68,
+     "precision_vs_truth": 0.0,
+     "n_in_truth": 0
+    },
+    {
+     "antibody_chain": "E",
+     "antibody_chain_type": "unknown",
+     "antigen_chain": "D",
+     "n_residues": 8,
+     "residue_confidence": {
+      "173": 0.72,
+      "174": 0.78,
+      "175": 0.84,
+      "176": 0.82,
+      "177": 0.92,
+      "178": 0.94,
+      "179": 0.88,
+      "180": 0.9
+     },
+     "residue_side": {
+      "173": "heavy",
+      "174": "heavy",
+      "175": "heavy",
+      "176": "heavy",
+      "177": "both",
+      "178": "both",
+      "179": "both",
+      "180": "heavy"
+     },
+     "max_confidence": 0.94,
+     "mean_confidence": 0.85,
+     "precision_vs_truth": 0.0,
+     "n_in_truth": 0
+    }
+   ]
+  }
+ ],
+ "paratope": {
+  "dominant_cdrs": [
+   "H3:H1",
+   "L3:L1"
+  ],
+  "paratope_residues": [
+   "B:101",
+   "B:104",
+   "F:92",
+   "F:93",
+   "E:101",
+   "E:104",
+   "C:92",
+   "C:93"
+  ],
+  "heavy_light_split": "Heavy chain dominates the 172–181 major loop; light chain covers the partner 192–199 turn, with convergence at 177–181/195.",
+  "binding_mode_union": null
+ },
+ "residues": [
+  "A:173",
+  "A:174",
+  "A:175",
+  "A:176",
+  "A:177",
+  "A:178",
+  "A:179",
+  "A:180",
+  "A:195",
+  "A:197",
+  "D:173",
+  "D:174",
+  "D:175",
+  "D:176",
+  "D:177",
+  "D:178",
+  "D:179",
+  "D:180",
+  "D:195",
+  "D:197"
+ ],
+ "n_residues": 20,
+ "patches": [
+  {
+   "id": "P8",
+   "name": "Twofold-related quaternary epitopes on the apical yin-yang crown",
+   "n_residues": 54,
+   "residues": [
+    "A:133",
+    "A:161",
+    "A:170",
+    "A:172",
+    "A:173",
+    "A:174",
+    "A:175",
+    "A:176",
+    "A:177",
+    "A:178",
+    "A:179",
+    "A:180",
+    "A:181",
+    "A:183",
+    "A:192",
+    "A:194",
+    "A:195",
+    "A:196",
+    "A:197",
+    "A:198",
+    "A:199",
+    "A:201",
+    "A:239",
+    "A:28",
+    "A:29",
+    "A:30",
+    "A:31",
+    "D:133",
+    "D:161",
+    "D:170",
+    "D:172",
+    "D:173",
+    "D:174",
+    "D:175",
+    "D:176",
+    "D:177",
+    "D:178",
+    "D:179",
+    "D:180",
+    "D:181",
+    "D:183",
+    "D:192",
+    "D:194",
+    "D:195",
+    "D:196",
+    "D:197",
+    "D:198",
+    "D:199",
+    "D:201",
+    "D:239",
+    "D:28",
+    "D:29",
+    "D:30",
+    "D:31"
+   ],
+   "n_kept_by_advocate": 20,
+   "n_dropped_by_advocate": 34
+  }
+ ],
+ "pooling_provenance": {
+  "n_shared_at_pooling": 54,
+  "n_disputed_at_pooling": 0,
+  "note": "counts only, describing how the organizer grouped the phase-1 patches. The organizer's own candidate residue list is deliberately absent: the answer is the advocate's footprint, in `residues` and in `antibodies[].interfaces[]`."
+ },
+ "evidence": {
+  "advocate": {
+   "n_findings": 1,
+   "n_supports": 0,
+   "n_weakens": 1,
+   "weakest_point": "Direct 2A2 escape mapping points to S205/R209 on another face; crown immunodominance is strong family evidence but not antibody-specific evidence.",
+   "note": "the advocate reports claim/source/date/bearing and is not asked whether a source is about this binder"
+  },
+  "judge": {
+   "tier_a_support": 0,
+   "n_support_lines": 5,
+   "verdict": "unlikely",
+   "note": "Tier A -- a source about this binder itself -- is the judge's adjudication, in assessment[].support[]. It exists nowhere in the advocate's own answer."
+  }
+ },
+ "provenance": {
+  "unverified_source_policy_fields": [
+   "gated",
+   "web_search",
+   "shell_network",
+   "gate_tools"
+  ],
+  "assembled_case_dir": "gpt-5.6-high/gather_refine/post_refactor/released_structure_20261030/casp17/H2321/case_6e4153_G_rep2",
+  "organize_case_dir": "gpt-5.6-high/gather_refine/post_refactor/released_structure_20261030/casp17/H2321/case_6e4153_GR_rep1",
+  "organize_status": "ok",
+  "judge_case_dir": "gpt-5.6-high/gather_refine/post_refactor/released_structure_20261030/casp17/H2321/case_6e4153_GJ_rep2",
+  "judge_status": "ok",
+  "packet": "gpt-5.6-high/gather/packets/case_6e4153/packet",
+  "manifest": "gpt-5.6-high/gather/packets/case_6e4153/manifest.json",
+  "advocate_case_dir": "gpt-5.6-high/gather_refine/post_refactor/released_structure_20261030/casp17/H2321/case_6e4153_GR_rep1",
+  "advocate_status": "ok"
+ },
+ "score": {
+  "precision": 0.0,
+  "recall": 0.0,
+  "f1": 0.0,
+  "n_pred": 20,
+  "n_true": 70,
+  "n_hit": 0
+ }
+}

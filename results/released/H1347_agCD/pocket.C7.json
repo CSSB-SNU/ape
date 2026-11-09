@@ -1,0 +1,309 @@
+{
+ "task": "gather",
+ "gather_mode": "batched",
+ "num_launchers": 3,
+ "policy": {
+  "evidence_cutoff": "2026-05-21",
+  "no_cutoff": false,
+  "gated": true,
+  "web_search": false,
+  "shell_network": true,
+  "gate_tools": [
+   "research",
+   "fetch",
+   "rcsb",
+   "patent",
+   "paper"
+  ]
+ },
+ "unscored": false,
+ "target": "H1347_agCD",
+ "target_set": "casp17",
+ "case": "case_0f54aa",
+ "evidence_cutoff": "2026-05-21",
+ "target_release_date": "2026-05-21",
+ "retrieval_policy": "gated",
+ "input_structure": "structures/H1347_agCD.pdb",
+ "input_structure_sha256": null,
+ "briefing_source": null,
+ "briefing_sha256": null,
+ "antigen_chains": [
+  "C",
+  "D"
+ ],
+ "antibody_files": {
+  "antibody.1.pdb": [
+   "A"
+  ],
+  "antibody.2.pdb": [
+   "B"
+  ]
+ },
+ "antibody_chain_types": {
+  "antibody.1.pdb": {
+   "A": "heavy"
+  },
+  "antibody.2.pdb": {
+   "B": "light"
+  }
+ },
+ "truth_file": "data/truth/casp17/H1347_agCD.epitope.json",
+ "stage": "gatherer",
+ "pocket": {
+  "id": "C7",
+  "judge_rank": 5,
+  "name": "Two chain-restricted portions of one functional Fv idiotope: A on the...",
+  "confidence": 0.12,
+  "p_rests_on_holds": 0.2,
+  "why_this_rank": "It best accommodates two distinct binders in the supplied geometry with two compact functional patches, but its exact A-to-VH/B-to-VL direction has no support.",
+  "rests_on": "The binders split across antigen chains in the stated, rather than reciprocal, direction.",
+  "where_the_mass_goes_if_it_fails": "C2, C4, C3, or C6",
+  "what_it_is": "Two chain-restricted portions of one functional Fv idiotope: A on the dominant C-chain VH/H3 panel and B on the D-chain VL/L3 panel.",
+  "why_one_candidate": "not pooled with anything: no other patch is both within 12 A (half centroid distance, half contact-graph hops) and coverable by one paratope of this antibody's reach, 13.2 A",
+  "from_patches": [
+   "P7"
+  ]
+ },
+ "note": "`confidence` on the pocket is over pockets and sums to about 1 across them. Inside an interface it is per residue in [0, 1] and sums to nothing. No residue is cut at a threshold: the whole vector is the answer.",
+ "mapping_basis": "per_antibody",
+ "checks": {
+  "unrecognised_sides": []
+ },
+ "chain_pairs": [
+  {
+   "antibody_chain": "A",
+   "antigen_chain": "C",
+   "n_residues": 10
+  },
+  {
+   "antibody_chain": "B",
+   "antigen_chain": "D",
+   "n_residues": 10
+  }
+ ],
+ "antibodies": [
+  {
+   "antibody": "antibody.1.pdb",
+   "chains": {
+    "A": "heavy"
+   },
+   "binding_mode": "single-chain",
+   "n_residues_scored": 10,
+   "interfaces": [
+    {
+     "antibody_chain": "A",
+     "antibody_chain_type": "heavy",
+     "antigen_chain": "C",
+     "n_residues": 10,
+     "residue_confidence": {
+      "32": 0.55,
+      "34": 0.7,
+      "55": 0.52,
+      "101": 0.8,
+      "103": 0.9,
+      "104": 0.92,
+      "107": 0.94,
+      "108": 0.86,
+      "109": 0.84,
+      "110": 0.95
+     },
+     "residue_side": {
+      "32": "heavy",
+      "34": "heavy",
+      "55": "heavy",
+      "101": "heavy",
+      "103": "heavy",
+      "104": "heavy",
+      "107": "heavy",
+      "108": "heavy",
+      "109": "heavy",
+      "110": "heavy"
+     },
+     "max_confidence": 0.95,
+     "mean_confidence": 0.798,
+     "precision_vs_truth": 0.0,
+     "n_in_truth": 0
+    }
+   ]
+  },
+  {
+   "antibody": "antibody.2.pdb",
+   "chains": {
+    "B": "light"
+   },
+   "binding_mode": "single-chain",
+   "n_residues_scored": 10,
+   "interfaces": [
+    {
+     "antibody_chain": "B",
+     "antibody_chain_type": "light",
+     "antigen_chain": "D",
+     "n_residues": 10,
+     "residue_confidence": {
+      "29": 0.48,
+      "31": 0.6,
+      "48": 0.85,
+      "49": 0.75,
+      "90": 0.92,
+      "92": 0.78,
+      "93": 0.8,
+      "95": 0.91,
+      "96": 0.86,
+      "97": 0.84
+     },
+     "residue_side": {
+      "29": "light",
+      "31": "light",
+      "48": "light",
+      "49": "light",
+      "90": "light",
+      "92": "light",
+      "93": "light",
+      "95": "light",
+      "96": "light",
+      "97": "light"
+     },
+     "max_confidence": 0.92,
+     "mean_confidence": 0.779,
+     "precision_vs_truth": 0.0,
+     "n_in_truth": 0
+    }
+   ]
+  }
+ ],
+ "paratope": {
+  "dominant_cdrs": [
+   "A:H3",
+   "A:H1",
+   "B:L3",
+   "B:L2"
+  ],
+  "paratope_residues": [
+   "A:27",
+   "A:29",
+   "A:32",
+   "A:51",
+   "A:54",
+   "A:57",
+   "A:97",
+   "A:100",
+   "A:101",
+   "A:103",
+   "A:105",
+   "B:29",
+   "B:32",
+   "B:50",
+   "B:51",
+   "B:52",
+   "B:89",
+   "B:91",
+   "B:92",
+   "B:94",
+   "B:96"
+  ],
+  "heavy_light_split": "A contributes only heavy-side contacts on antigen C; B contributes only light-side contacts on antigen D. No union residue is `both`, and neither footprint bridges the anomalous C/D separation.",
+  "binding_mode_union": null
+ },
+ "residues": [
+  "C:101",
+  "C:103",
+  "C:104",
+  "C:107",
+  "C:108",
+  "C:109",
+  "C:110",
+  "C:32",
+  "C:34",
+  "C:55",
+  "D:29",
+  "D:31",
+  "D:48",
+  "D:49",
+  "D:90",
+  "D:92",
+  "D:93",
+  "D:95",
+  "D:96",
+  "D:97"
+ ],
+ "n_residues": 20,
+ "patches": [
+  {
+   "id": "P7",
+   "name": "Split functional idiotopes: antibody.1 on VH, antibody.2 on VL",
+   "n_residues": 23,
+   "residues": [
+    "C:100",
+    "C:101",
+    "C:103",
+    "C:104",
+    "C:110",
+    "C:26",
+    "C:30",
+    "C:32",
+    "C:34",
+    "C:35",
+    "C:54",
+    "C:55",
+    "D:26",
+    "D:29",
+    "D:31",
+    "D:48",
+    "D:49",
+    "D:52",
+    "D:55",
+    "D:90",
+    "D:92",
+    "D:95",
+    "D:96"
+   ],
+   "n_kept_by_advocate": 15,
+   "n_dropped_by_advocate": 8
+  }
+ ],
+ "pooling_provenance": {
+  "n_shared_at_pooling": 23,
+  "n_disputed_at_pooling": 0,
+  "note": "counts only, describing how the organizer grouped the phase-1 patches. The organizer's own candidate residue list is deliberately absent: the answer is the advocate's footprint, in `residues` and in `antibodies[].interfaces[]`."
+ },
+ "evidence": {
+  "advocate": {
+   "n_findings": 4,
+   "n_supports": 4,
+   "n_weakens": 0,
+   "weakest_point": "The geometry is clean after splitting, but the direction of assignment is unsupported by clone identity or experiment.",
+   "note": "the advocate reports claim/source/date/bearing and is not asked whether a source is about this binder"
+  },
+  "judge": {
+   "tier_a_support": 0,
+   "n_support_lines": 4,
+   "verdict": "live",
+   "note": "Tier A -- a source about this binder itself -- is the judge's adjudication, in assessment[].support[]. It exists nowhere in the advocate's own answer."
+  }
+ },
+ "provenance": {
+  "unverified_source_policy_fields": [
+   "gated",
+   "web_search",
+   "shell_network",
+   "gate_tools"
+  ],
+  "assembled_case_dir": "gpt-5.6-high/gather_refine/post_refactor/released_structure_20261030/casp17/H1347_agCD/case_0f54aa_G_rep2",
+  "organize_case_dir": "gpt-5.6-high/gather_refine/post_refactor/released_structure_20261030/casp17/H1347_agCD/case_0f54aa_GR_rep1",
+  "organize_status": "ok",
+  "judge_case_dir": "gpt-5.6-high/gather_refine/post_refactor/released_structure_20261030/casp17/H1347_agCD/case_0f54aa_GJ_rep2",
+  "judge_status": "ok",
+  "packet": "gpt-5.6-high/gather/packets/case_0f54aa/packet",
+  "manifest": "gpt-5.6-high/gather/packets/case_0f54aa/manifest.json",
+  "advocate_case_dir": "gpt-5.6-high/gather_refine/post_refactor/released_structure_20261030/casp17/H1347_agCD/case_0f54aa_GR_rep1",
+  "advocate_status": "ok"
+ },
+ "score": {
+  "precision": 0.0,
+  "recall": 0.0,
+  "f1": 0.0,
+  "n_pred": 20,
+  "n_true": 22,
+  "n_hit": 0
+ }
+}

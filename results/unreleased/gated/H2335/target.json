@@ -1,0 +1,270 @@
+{
+ "target": "H2335",
+ "target_set": "casp17",
+ "case": "case_d48c74",
+ "task": "gather",
+ "gather_mode": "batched",
+ "num_launchers": 3,
+ "policy": {
+  "evidence_cutoff": "2026-05-27",
+  "no_cutoff": false,
+  "gated": true,
+  "web_search": false,
+  "shell_network": true,
+  "gate_tools": [
+   "research",
+   "fetch",
+   "rcsb",
+   "patent",
+   "paper"
+  ]
+ },
+ "unscored": true,
+ "evidence_cutoff": "2026-05-27",
+ "target_release_date": "2026-05-27",
+ "retrieval_policy": "gated",
+ "antigen_chains": [
+  "A",
+  "B",
+  "C"
+ ],
+ "antibody_files": {
+  "antibody.pdb": [
+   "D",
+   "E"
+  ]
+ },
+ "antibody_chain_types": {
+  "antibody.pdb": {
+   "D": "light",
+   "E": "heavy"
+  }
+ },
+ "input_structure": "data/staged_casp17_no_native/H2335.pdb",
+ "input_structure_sha256": "f216450f2774ea363d9dfeeb1e478d506d906f539f384bf370d4b65ff32c11bb",
+ "briefing_source": "data/briefing/casp17/H2335/search_results.json",
+ "briefing_sha256": "b0dea935f69c91b0e53c3c91d2fd212f5956d760276c3166d7c198ef62ac5bc6",
+ "recognized_complex": {
+  "organize": null,
+  "judge": false
+ },
+ "recognition_note": "The antigen was identified as HCMV Merlin gH/gL/gO from dated pre-cutoff records. The supplied heavy variable sequence exactly matches anti-PfCSP antibody 1210 (2018-06-07), but the supplied light is not 1210's required light chain; a separate exact light-chain hit is unrelated entry 9Z3J (released 2026-05-13). Thus neither the paired antibody nor a published epitope for it was identified.",
+ "what_separated_them": "No candidate had a Tier A line about this binder. I retained a broad prior over four surface classes, then split overlapping variants using exact shipped-footprint exposure, assembly burial, glycan constraints, connectivity, extent, and a deliberately weak pose-free chemistry comparison.",
+ "not_pooled": [],
+ "provenance": {
+  "unverified_source_policy_fields": [
+   "gated",
+   "web_search",
+   "shell_network",
+   "gate_tools"
+  ],
+  "assembled_case_dir": "gpt-5.6-high/gather_refine/post_refactor/unreleased_20261029/gated/casp17/H2335/case_d48c74_G_rep1",
+  "organize_case_dir": "gpt-5.6-high/gather_refine/post_refactor/unreleased_20261029/gated/casp17/H2335/case_d48c74_GR_rep1",
+  "organize_status": "ok",
+  "judge_case_dir": "gpt-5.6-high/gather_refine/post_refactor/unreleased_20261029/gated/casp17/H2335/case_d48c74_GJ_rep1",
+  "judge_status": "ok",
+  "packet": "gpt-5.6-high/gather/packets/case_d48c74/packet",
+  "manifest": "gpt-5.6-high/gather/packets/case_d48c74/manifest.json"
+ },
+ "pockets": [
+  {
+   "id": "C2",
+   "judge_rank": 1,
+   "name": "The external heel of gH, where a hydrophobic WMPP ridge, a nearby...",
+   "confidence": 0.2,
+   "mapping_basis": "side",
+   "n_residues": 17,
+   "chain_pairs": [
+    {
+     "antibody_chain": "D",
+     "antigen_chain": "B",
+     "n_residues": 11
+    },
+    {
+     "antibody_chain": "E",
+     "antigen_chain": "B",
+     "n_residues": 12
+    }
+   ],
+   "file": "pocket.C2.json"
+  },
+  {
+   "id": "C7",
+   "judge_rank": 2,
+   "name": "A compact two-lobe conformational epitope on gH domain IV near the...",
+   "confidence": 0.18,
+   "mapping_basis": "side",
+   "n_residues": 13,
+   "chain_pairs": [
+    {
+     "antibody_chain": "D",
+     "antigen_chain": "B",
+     "n_residues": 8
+    },
+    {
+     "antibody_chain": "E",
+     "antigen_chain": "B",
+     "n_residues": 9
+    }
+   ],
+   "file": "pocket.C7.json"
+  },
+  {
+   "id": "C1",
+   "judge_rank": 3,
+   "name": "The distal, solvent-facing lobe of the gO receptor-binding face: a...",
+   "confidence": 0.14,
+   "mapping_basis": "side",
+   "n_residues": 14,
+   "chain_pairs": [
+    {
+     "antibody_chain": "D",
+     "antigen_chain": "A",
+     "n_residues": 9
+    },
+    {
+     "antibody_chain": "E",
+     "antigen_chain": "A",
+     "n_residues": 10
+    }
+   ],
+   "file": "pocket.C1.json"
+  },
+  {
+   "id": "C3",
+   "judge_rank": 4,
+   "name": "The compact hydrophobic-polar pocket on the outer gH heel, joining...",
+   "confidence": 0.12,
+   "mapping_basis": "side",
+   "n_residues": 15,
+   "chain_pairs": [
+    {
+     "antibody_chain": "D",
+     "antigen_chain": "B",
+     "n_residues": 10
+    },
+    {
+     "antibody_chain": "E",
+     "antigen_chain": "B",
+     "n_residues": 11
+    }
+   ],
+   "file": "pocket.C3.json"
+  },
+  {
+   "id": "C5",
+   "judge_rank": 5,
+   "name": "A compact diagonal core on the inner gH DII-DIII kink, extending from...",
+   "confidence": 0.1,
+   "mapping_basis": "side",
+   "n_residues": 19,
+   "chain_pairs": [
+    {
+     "antibody_chain": "D",
+     "antigen_chain": "B",
+     "n_residues": 10
+    },
+    {
+     "antibody_chain": "E",
+     "antigen_chain": "B",
+     "n_residues": 12
+    }
+   ],
+   "file": "pocket.C5.json"
+  },
+  {
+   "id": "C9",
+   "judge_rank": 6,
+   "name": "The polar core of the gH DII-DIII kink: an exposed charged network...",
+   "confidence": 0.09,
+   "mapping_basis": "side",
+   "n_residues": 22,
+   "chain_pairs": [
+    {
+     "antibody_chain": "D",
+     "antigen_chain": "B",
+     "n_residues": 11
+    },
+    {
+     "antibody_chain": "E",
+     "antigen_chain": "B",
+     "n_residues": 16
+    }
+   ],
+   "file": "pocket.C9.json"
+  },
+  {
+   "id": "C8",
+   "judge_rank": 7,
+   "name": "The broader antigenic face of gH domain IV at the C-terminal...",
+   "confidence": 0.07,
+   "mapping_basis": "side",
+   "n_residues": 16,
+   "chain_pairs": [
+    {
+     "antibody_chain": "D",
+     "antigen_chain": "B",
+     "n_residues": 11
+    },
+    {
+     "antibody_chain": "E",
+     "antigen_chain": "B",
+     "n_residues": 11
+    }
+   ],
+   "file": "pocket.C8.json"
+  },
+  {
+   "id": "C6",
+   "judge_rank": 8,
+   "name": "The broad gH DII-DIII kink face, specifically the reachable diagonal...",
+   "confidence": 0.06,
+   "mapping_basis": "side",
+   "n_residues": 18,
+   "chain_pairs": [
+    {
+     "antibody_chain": "D",
+     "antigen_chain": "B",
+     "n_residues": 15
+    },
+    {
+     "antibody_chain": "E",
+     "antigen_chain": "B",
+     "n_residues": 7
+    }
+   ],
+   "file": "pocket.C6.json"
+  },
+  {
+   "id": "C4",
+   "judge_rank": 9,
+   "name": "A receptor-facing composite seam where a basic gO ridge approaches...",
+   "confidence": 0.04,
+   "mapping_basis": "side",
+   "n_residues": 13,
+   "chain_pairs": [
+    {
+     "antibody_chain": "D",
+     "antigen_chain": "A",
+     "n_residues": 3
+    },
+    {
+     "antibody_chain": "D",
+     "antigen_chain": "C",
+     "n_residues": 5
+    },
+    {
+     "antibody_chain": "E",
+     "antigen_chain": "A",
+     "n_residues": 8
+    },
+    {
+     "antibody_chain": "E",
+     "antigen_chain": "C",
+     "n_residues": 2
+    }
+   ],
+   "file": "pocket.C4.json"
+  }
+ ]
+}

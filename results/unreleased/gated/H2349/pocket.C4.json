@@ -1,0 +1,313 @@
+{
+ "task": "gather",
+ "gather_mode": "batched",
+ "num_launchers": 3,
+ "policy": {
+  "evidence_cutoff": "2026-06-05",
+  "no_cutoff": false,
+  "gated": true,
+  "web_search": false,
+  "shell_network": true,
+  "gate_tools": [
+   "research",
+   "fetch",
+   "rcsb",
+   "patent",
+   "paper"
+  ]
+ },
+ "unscored": true,
+ "target": "H2349",
+ "target_set": "casp17",
+ "case": "case_e333d6",
+ "evidence_cutoff": "2026-06-05",
+ "target_release_date": "2026-06-05",
+ "retrieval_policy": "gated",
+ "input_structure": "data/staged_casp17_no_native/H2349.pdb",
+ "input_structure_sha256": "ed3bcb0b0799f7f8db3a7695ea1da3ddce30d9c2312cdd2e5d844f6e396bdd86",
+ "briefing_source": "data/briefing/casp17/H2349/search_results.json",
+ "briefing_sha256": "6aab33c7c98904b5652d2b15ee1575cd366219e364eafe5cb61256cd5814ad57",
+ "antigen_chains": [
+  "A"
+ ],
+ "antibody_files": {
+  "antibody.pdb": [
+   "B",
+   "C"
+  ]
+ },
+ "antibody_chain_types": {
+  "antibody.pdb": {
+   "B": "unknown",
+   "C": "unknown"
+  }
+ },
+ "stage": "gatherer",
+ "pocket": {
+  "id": "C4",
+  "judge_rank": 3,
+  "name": "The lower D2-D3 junction joining the aromatic end of the D2 ligand...",
+  "confidence": 0.19,
+  "p_rests_on_holds": 0.28,
+  "why_this_rank": "C4 is regionally compatible, contains the literal WSDWS motif implicated by historical language, and has better coarse charge complementarity, but the evidence is not residue-level and the 2024 density appears more distal.",
+  "rests_on": "The WSXWS-region statement reflects lower D2-D3/motif-side binding rather than only a broad domain label.",
+  "where_the_mass_goes_if_it_fails": "C1 and C3.",
+  "what_it_is": "The lower D2-D3 junction joining the aromatic end of the D2 ligand loop to the top and lateral shoulder of D3.",
+  "why_one_candidate": "not pooled with anything: no other patch is both within 12 A (half centroid distance, half contact-graph hops) and coverable by one paratope of this antibody's reach, 17.9 A",
+  "from_patches": [
+   "P3"
+  ]
+ },
+ "note": "`confidence` on the pocket is over pockets and sums to about 1 across them. Inside an interface it is per residue in [0, 1] and sums to nothing. No residue is cut at a threshold: the whole vector is the answer.",
+ "mapping_basis": "side",
+ "checks": {
+  "unrecognised_sides": []
+ },
+ "chain_pairs": [
+  {
+   "antibody_chain": "B",
+   "antigen_chain": "A",
+   "n_residues": 18
+  },
+  {
+   "antibody_chain": "C",
+   "antigen_chain": "A",
+   "n_residues": 18
+  }
+ ],
+ "antibodies": [
+  {
+   "antibody": "antibody.pdb",
+   "chains": {
+    "B": "unknown",
+    "C": "unknown"
+   },
+   "binding_mode": null,
+   "n_residues_scored": 18,
+   "interfaces": [
+    {
+     "antibody_chain": "B",
+     "antibody_chain_type": "unknown",
+     "antigen_chain": "A",
+     "n_residues": 18,
+     "residue_confidence": {
+      "168": 0.48,
+      "169": 0.62,
+      "196": 0.83,
+      "197": 0.87,
+      "199": 0.82,
+      "201": 0.72,
+      "202": 0.61,
+      "226": 0.64,
+      "228": 0.9,
+      "229": 0.88,
+      "230": 0.82,
+      "232": 0.66,
+      "282": 0.56,
+      "283": 0.57,
+      "285": 0.8,
+      "286": 0.67,
+      "287": 0.76,
+      "288": 0.68
+     },
+     "residue_side": {
+      "168": "heavy",
+      "169": "heavy",
+      "196": "heavy",
+      "197": "heavy",
+      "199": "heavy",
+      "201": "heavy",
+      "202": "heavy",
+      "226": "heavy",
+      "228": "both",
+      "229": "both",
+      "230": "both",
+      "232": "light",
+      "282": "light",
+      "283": "light",
+      "285": "both",
+      "286": "light",
+      "287": "both",
+      "288": "light"
+     },
+     "max_confidence": 0.9,
+     "mean_confidence": 0.7161
+    },
+    {
+     "antibody_chain": "C",
+     "antibody_chain_type": "unknown",
+     "antigen_chain": "A",
+     "n_residues": 18,
+     "residue_confidence": {
+      "168": 0.48,
+      "169": 0.62,
+      "196": 0.83,
+      "197": 0.87,
+      "199": 0.82,
+      "201": 0.72,
+      "202": 0.61,
+      "226": 0.64,
+      "228": 0.9,
+      "229": 0.88,
+      "230": 0.82,
+      "232": 0.66,
+      "282": 0.56,
+      "283": 0.57,
+      "285": 0.8,
+      "286": 0.67,
+      "287": 0.76,
+      "288": 0.68
+     },
+     "residue_side": {
+      "168": "heavy",
+      "169": "heavy",
+      "196": "heavy",
+      "197": "heavy",
+      "199": "heavy",
+      "201": "heavy",
+      "202": "heavy",
+      "226": "heavy",
+      "228": "both",
+      "229": "both",
+      "230": "both",
+      "232": "light",
+      "282": "light",
+      "283": "light",
+      "285": "both",
+      "286": "light",
+      "287": "both",
+      "288": "light"
+     },
+     "max_confidence": 0.9,
+     "mean_confidence": 0.7161
+    }
+   ]
+  }
+ ],
+ "paratope": {
+  "dominant_cdrs": [
+   "H3:H2",
+   "L3:H1"
+  ],
+  "paratope_residues": [
+   "B:26",
+   "B:28",
+   "B:31",
+   "B:32",
+   "B:33",
+   "B:52",
+   "B:54",
+   "B:55",
+   "B:56",
+   "B:57",
+   "B:58",
+   "B:100",
+   "B:101",
+   "B:102",
+   "B:103",
+   "B:106",
+   "B:107",
+   "C:27",
+   "C:28",
+   "C:30",
+   "C:31",
+   "C:52",
+   "C:92",
+   "C:93",
+   "C:94"
+  ],
+  "heavy_light_split": "H3/H2 take the D2 lip and A:196-A:228 junction; both chains meet over A:228-A:230 and A:285/A:287; L3/L1 cover A:232/A:282-A:288.",
+  "binding_mode_union": "single-chain"
+ },
+ "residues": [
+  "A:168",
+  "A:169",
+  "A:196",
+  "A:197",
+  "A:199",
+  "A:201",
+  "A:202",
+  "A:226",
+  "A:228",
+  "A:229",
+  "A:230",
+  "A:232",
+  "A:282",
+  "A:283",
+  "A:285",
+  "A:286",
+  "A:287",
+  "A:288"
+ ],
+ "n_residues": 18,
+ "patches": [
+  {
+   "id": "P3",
+   "name": "Lower D2-D3 cytokine-binding-module seam",
+   "n_residues": 22,
+   "residues": [
+    "A:165",
+    "A:167",
+    "A:168",
+    "A:169",
+    "A:170",
+    "A:171",
+    "A:196",
+    "A:197",
+    "A:199",
+    "A:201",
+    "A:202",
+    "A:226",
+    "A:228",
+    "A:229",
+    "A:230",
+    "A:232",
+    "A:282",
+    "A:283",
+    "A:285",
+    "A:286",
+    "A:287",
+    "A:288"
+   ],
+   "n_kept_by_advocate": 18,
+   "n_dropped_by_advocate": 4
+  }
+ ],
+ "pooling_provenance": {
+  "n_shared_at_pooling": 22,
+  "n_disputed_at_pooling": 0,
+  "note": "counts only, describing how the organizer grouped the phase-1 patches. The organizer's own candidate residue list is deliberately absent: the answer is the advocate's footprint, in `residues` and in `antibodies[].interfaces[]`."
+ },
+ "evidence": {
+  "advocate": {
+   "n_findings": 4,
+   "n_supports": 3,
+   "n_weakens": 1,
+   "weakest_point": "Regional D2-D3 mapping does not establish a junctional footprint, while WSXWS and ligand-contact evidence favor upper D2.",
+   "note": "the advocate reports claim/source/date/bearing and is not asked whether a source is about this binder"
+  },
+  "judge": {
+   "tier_a_support": 0,
+   "n_support_lines": 4,
+   "verdict": "live",
+   "note": "Tier A -- a source about this binder itself -- is the judge's adjudication, in assessment[].support[]. It exists nowhere in the advocate's own answer."
+  }
+ },
+ "provenance": {
+  "unverified_source_policy_fields": [
+   "gated",
+   "web_search",
+   "shell_network",
+   "gate_tools"
+  ],
+  "assembled_case_dir": "gpt-5.6-high/gather_refine/post_refactor/unreleased_20261029/gated/casp17/H2349/case_e333d6_G_rep1",
+  "organize_case_dir": "gpt-5.6-high/gather_refine/post_refactor/unreleased_20261029/gated/casp17/H2349/case_e333d6_GR_rep1",
+  "organize_status": "ok",
+  "judge_case_dir": "gpt-5.6-high/gather_refine/post_refactor/unreleased_20261029/gated/casp17/H2349/case_e333d6_GJ_rep1",
+  "judge_status": "ok",
+  "packet": "gpt-5.6-high/gather/packets/case_e333d6/packet",
+  "manifest": "gpt-5.6-high/gather/packets/case_e333d6/manifest.json",
+  "advocate_case_dir": "gpt-5.6-high/gather_refine/post_refactor/unreleased_20261029/gated/casp17/H2349/case_e333d6_GR_rep1",
+  "advocate_status": "ok"
+ }
+}

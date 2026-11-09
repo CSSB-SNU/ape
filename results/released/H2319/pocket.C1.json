@@ -1,0 +1,497 @@
+{
+ "task": "gather",
+ "gather_mode": "batched",
+ "num_launchers": 3,
+ "policy": {
+  "evidence_cutoff": "2026-05-19",
+  "no_cutoff": false,
+  "gated": true,
+  "web_search": false,
+  "shell_network": true,
+  "gate_tools": [
+   "research",
+   "fetch",
+   "rcsb",
+   "patent",
+   "paper"
+  ]
+ },
+ "unscored": false,
+ "target": "H2319",
+ "target_set": "casp17",
+ "case": "case_5816d5",
+ "evidence_cutoff": "2026-05-19",
+ "target_release_date": "2026-05-19",
+ "retrieval_policy": "gated",
+ "input_structure": "structures/H2319.pdb",
+ "input_structure_sha256": null,
+ "briefing_source": null,
+ "briefing_sha256": null,
+ "antigen_chains": [
+  "A",
+  "D"
+ ],
+ "antibody_files": {
+  "antibody.1.pdb": [
+   "B",
+   "F"
+  ],
+  "antibody.2.pdb": [
+   "C",
+   "E"
+  ]
+ },
+ "antibody_chain_types": {
+  "antibody.1.pdb": {
+   "B": "heavy",
+   "F": "light"
+  },
+  "antibody.2.pdb": {
+   "C": "light",
+   "E": "heavy"
+  }
+ },
+ "truth_file": "data/truth/casp17/H2319.epitope.json",
+ "stage": "gatherer",
+ "pocket": {
+  "id": "C1",
+  "judge_rank": 8,
+  "name": "The distal shoulder of the intertwined beta12-beta14 loops at the...",
+  "confidence": 0.008,
+  "p_rests_on_holds": 0.02,
+  "why_this_rank": "The quaternary apex has antibody precedent and plausible geometry, but direct 7C8 evidence lies elsewhere.",
+  "rests_on": "The P137 escape effect is remote and 7C8 instead recognizes the broader apical shoulder.",
+  "where_the_mass_goes_if_it_fails": "C5 and C7",
+  "what_it_is": "The distal shoulder of the intertwined beta12-beta14 loops at the homodimer apex, combining one protomer's loop crest with the partner's 193-196 turn.",
+  "why_one_candidate": "not pooled with anything: no other patch is both within 12 A (half centroid distance, half contact-graph hops) and coverable by one paratope of this antibody's reach, 17.5 A",
+  "from_patches": [
+   "P1"
+  ]
+ },
+ "note": "`confidence` on the pocket is over pockets and sums to about 1 across them. Inside an interface it is per residue in [0, 1] and sums to nothing. No residue is cut at a threshold: the whole vector is the answer.",
+ "mapping_basis": "per_antibody",
+ "checks": {
+  "unrecognised_sides": []
+ },
+ "chain_pairs": [
+  {
+   "antibody_chain": "B",
+   "antigen_chain": "A",
+   "n_residues": 9
+  },
+  {
+   "antibody_chain": "B",
+   "antigen_chain": "D",
+   "n_residues": 1
+  },
+  {
+   "antibody_chain": "F",
+   "antigen_chain": "A",
+   "n_residues": 3
+  },
+  {
+   "antibody_chain": "F",
+   "antigen_chain": "D",
+   "n_residues": 4
+  },
+  {
+   "antibody_chain": "C",
+   "antigen_chain": "A",
+   "n_residues": 4
+  },
+  {
+   "antibody_chain": "C",
+   "antigen_chain": "D",
+   "n_residues": 3
+  },
+  {
+   "antibody_chain": "E",
+   "antigen_chain": "A",
+   "n_residues": 1
+  },
+  {
+   "antibody_chain": "E",
+   "antigen_chain": "D",
+   "n_residues": 9
+  }
+ ],
+ "antibodies": [
+  {
+   "antibody": "antibody.1.pdb",
+   "chains": {
+    "B": "heavy",
+    "F": "light"
+   },
+   "binding_mode": "straddling",
+   "n_residues_scored": 14,
+   "interfaces": [
+    {
+     "antibody_chain": "B",
+     "antibody_chain_type": "heavy",
+     "antigen_chain": "A",
+     "n_residues": 9,
+     "residue_confidence": {
+      "172": 0.25,
+      "173": 0.68,
+      "174": 0.88,
+      "175": 0.86,
+      "176": 0.64,
+      "177": 0.89,
+      "178": 0.93,
+      "179": 0.7,
+      "180": 0.82
+     },
+     "residue_side": {
+      "172": "heavy",
+      "173": "both",
+      "174": "heavy",
+      "175": "heavy",
+      "176": "heavy",
+      "177": "heavy",
+      "178": "heavy",
+      "179": "heavy",
+      "180": "both"
+     },
+     "max_confidence": 0.93,
+     "mean_confidence": 0.7389,
+     "precision_vs_truth": 0.0,
+     "n_in_truth": 0
+    },
+    {
+     "antibody_chain": "B",
+     "antibody_chain_type": "heavy",
+     "antigen_chain": "D",
+     "n_residues": 1,
+     "residue_confidence": {
+      "195": 0.74
+     },
+     "residue_side": {
+      "195": "both"
+     },
+     "max_confidence": 0.74,
+     "mean_confidence": 0.74,
+     "precision_vs_truth": 0.0,
+     "n_in_truth": 0
+    },
+    {
+     "antibody_chain": "F",
+     "antibody_chain_type": "light",
+     "antigen_chain": "A",
+     "n_residues": 3,
+     "residue_confidence": {
+      "173": 0.68,
+      "180": 0.82,
+      "181": 0.29
+     },
+     "residue_side": {
+      "173": "both",
+      "180": "both",
+      "181": "light"
+     },
+     "max_confidence": 0.82,
+     "mean_confidence": 0.5967,
+     "precision_vs_truth": 0.0,
+     "n_in_truth": 0
+    },
+    {
+     "antibody_chain": "F",
+     "antibody_chain_type": "light",
+     "antigen_chain": "D",
+     "n_residues": 4,
+     "residue_confidence": {
+      "193": 0.12,
+      "194": 0.32,
+      "195": 0.74,
+      "196": 0.4
+     },
+     "residue_side": {
+      "193": "light",
+      "194": "light",
+      "195": "both",
+      "196": "light"
+     },
+     "max_confidence": 0.74,
+     "mean_confidence": 0.395,
+     "precision_vs_truth": 0.0,
+     "n_in_truth": 0
+    }
+   ]
+  },
+  {
+   "antibody": "antibody.2.pdb",
+   "chains": {
+    "C": "light",
+    "E": "heavy"
+   },
+   "binding_mode": "straddling",
+   "n_residues_scored": 14,
+   "interfaces": [
+    {
+     "antibody_chain": "C",
+     "antibody_chain_type": "light",
+     "antigen_chain": "A",
+     "n_residues": 4,
+     "residue_confidence": {
+      "193": 0.12,
+      "194": 0.32,
+      "195": 0.74,
+      "196": 0.4
+     },
+     "residue_side": {
+      "193": "light",
+      "194": "light",
+      "195": "both",
+      "196": "light"
+     },
+     "max_confidence": 0.74,
+     "mean_confidence": 0.395,
+     "precision_vs_truth": 0.0,
+     "n_in_truth": 0
+    },
+    {
+     "antibody_chain": "C",
+     "antibody_chain_type": "light",
+     "antigen_chain": "D",
+     "n_residues": 3,
+     "residue_confidence": {
+      "173": 0.68,
+      "180": 0.82,
+      "181": 0.29
+     },
+     "residue_side": {
+      "173": "both",
+      "180": "both",
+      "181": "light"
+     },
+     "max_confidence": 0.82,
+     "mean_confidence": 0.5967,
+     "precision_vs_truth": 0.0,
+     "n_in_truth": 0
+    },
+    {
+     "antibody_chain": "E",
+     "antibody_chain_type": "heavy",
+     "antigen_chain": "A",
+     "n_residues": 1,
+     "residue_confidence": {
+      "195": 0.74
+     },
+     "residue_side": {
+      "195": "both"
+     },
+     "max_confidence": 0.74,
+     "mean_confidence": 0.74,
+     "precision_vs_truth": 0.0,
+     "n_in_truth": 0
+    },
+    {
+     "antibody_chain": "E",
+     "antibody_chain_type": "heavy",
+     "antigen_chain": "D",
+     "n_residues": 9,
+     "residue_confidence": {
+      "172": 0.25,
+      "173": 0.68,
+      "174": 0.88,
+      "175": 0.86,
+      "176": 0.64,
+      "177": 0.89,
+      "178": 0.93,
+      "179": 0.7,
+      "180": 0.82
+     },
+     "residue_side": {
+      "172": "heavy",
+      "173": "both",
+      "174": "heavy",
+      "175": "heavy",
+      "176": "heavy",
+      "177": "heavy",
+      "178": "heavy",
+      "179": "heavy",
+      "180": "both"
+     },
+     "max_confidence": 0.93,
+     "mean_confidence": 0.7389,
+     "precision_vs_truth": 0.0,
+     "n_in_truth": 0
+    }
+   ]
+  }
+ ],
+ "paratope": {
+  "dominant_cdrs": [
+   "B:H3",
+   "B:H1",
+   "B:H2",
+   "F:L3",
+   "E:H3",
+   "E:H1",
+   "E:H2",
+   "C:L3"
+  ],
+  "paratope_residues": [
+   "B:28",
+   "B:31",
+   "B:32",
+   "B:33",
+   "B:53",
+   "B:56",
+   "B:58",
+   "B:98",
+   "B:99",
+   "B:102",
+   "B:103",
+   "B:105",
+   "F:28",
+   "F:30",
+   "F:31",
+   "F:51",
+   "F:90",
+   "F:91",
+   "F:92",
+   "F:93",
+   "F:94",
+   "F:95",
+   "E:28",
+   "E:31",
+   "E:32",
+   "E:33",
+   "E:53",
+   "E:56",
+   "E:58",
+   "E:98",
+   "E:99",
+   "E:102",
+   "E:103",
+   "E:105",
+   "C:28",
+   "C:30",
+   "C:31",
+   "C:51",
+   "C:90",
+   "C:91",
+   "C:92",
+   "C:93",
+   "C:94",
+   "C:95"
+  ],
+  "heavy_light_split": "For antibody.1, B heavy covers A:172-180 and F light closes on D:193-196; antibody.2 uses E heavy on D and C light on A. Residues 173, 180 and 195 can be shared by both paratope chains.",
+  "binding_mode_union": null
+ },
+ "residues": [
+  "A:172",
+  "A:173",
+  "A:174",
+  "A:175",
+  "A:176",
+  "A:177",
+  "A:178",
+  "A:179",
+  "A:180",
+  "A:181",
+  "A:193",
+  "A:194",
+  "A:195",
+  "A:196",
+  "D:172",
+  "D:173",
+  "D:174",
+  "D:175",
+  "D:176",
+  "D:177",
+  "D:178",
+  "D:179",
+  "D:180",
+  "D:181",
+  "D:193",
+  "D:194",
+  "D:195",
+  "D:196"
+ ],
+ "n_residues": 28,
+ "patches": [
+  {
+   "id": "P1",
+   "name": "Distal intertwined-loop shoulders",
+   "n_residues": 28,
+   "residues": [
+    "A:172",
+    "A:173",
+    "A:174",
+    "A:175",
+    "A:176",
+    "A:177",
+    "A:178",
+    "A:179",
+    "A:180",
+    "A:181",
+    "A:193",
+    "A:194",
+    "A:195",
+    "A:196",
+    "D:172",
+    "D:173",
+    "D:174",
+    "D:175",
+    "D:176",
+    "D:177",
+    "D:178",
+    "D:179",
+    "D:180",
+    "D:181",
+    "D:193",
+    "D:194",
+    "D:195",
+    "D:196"
+   ],
+   "n_kept_by_advocate": 28,
+   "n_dropped_by_advocate": 0
+  }
+ ],
+ "pooling_provenance": {
+  "n_shared_at_pooling": 28,
+  "n_disputed_at_pooling": 0,
+  "note": "counts only, describing how the organizer grouped the phase-1 patches. The organizer's own candidate residue list is deliberately absent: the answer is the advocate's footprint, in `residues` and in `antibodies[].interfaces[]`."
+ },
+ "evidence": {
+  "advocate": {
+   "n_findings": 4,
+   "n_supports": 3,
+   "n_weakens": 1,
+   "weakest_point": "The exact antibody's escape anchor is P137 on another surface, and residue 193 is poorly exposed, making the quaternary rim less secure than the exposed crest.",
+   "note": "the advocate reports claim/source/date/bearing and is not asked whether a source is about this binder"
+  },
+  "judge": {
+   "tier_a_support": 1,
+   "n_support_lines": 3,
+   "verdict": "unlikely",
+   "note": "Tier A -- a source about this binder itself -- is the judge's adjudication, in assessment[].support[]. It exists nowhere in the advocate's own answer."
+  }
+ },
+ "provenance": {
+  "unverified_source_policy_fields": [
+   "gated",
+   "web_search",
+   "shell_network",
+   "gate_tools"
+  ],
+  "assembled_case_dir": "gpt-5.6-high/gather_refine/post_refactor/released_structure_20261030/casp17/H2319/case_5816d5_G_rep2",
+  "organize_case_dir": "gpt-5.6-high/gather_refine/post_refactor/released_structure_20261030/casp17/H2319/case_5816d5_GR_rep1",
+  "organize_status": "ok",
+  "judge_case_dir": "gpt-5.6-high/gather_refine/post_refactor/released_structure_20261030/casp17/H2319/case_5816d5_GJ_rep2",
+  "judge_status": "ok",
+  "packet": "gpt-5.6-high/gather/packets/case_5816d5/packet",
+  "manifest": "gpt-5.6-high/gather/packets/case_5816d5/manifest.json",
+  "advocate_case_dir": "gpt-5.6-high/gather_refine/post_refactor/released_structure_20261030/casp17/H2319/case_5816d5_GR_rep1",
+  "advocate_status": "ok"
+ },
+ "score": {
+  "precision": 0.0,
+  "recall": 0.0,
+  "f1": 0.0,
+  "n_pred": 28,
+  "n_true": 26,
+  "n_hit": 0
+ }
+}
