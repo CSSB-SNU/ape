@@ -1,6 +1,6 @@
 cohort	round	target	case	arm	no_cutoff	rep	status	started	finished	session_id	evidence_cutoff	model	searcher_model	path	third_party_removed
 casp16	r1	H1204	case_2c69fc	E1	False	1	ok	2026-10-04T21:04:06+09:00	2026-10-04T21:24:43+09:00	01a106cc-cbcb-7662-af9a-3c24b5a4a658	2024-05-02	gpt-5.6-sol	gpt-5.6-terra	hypothesis/casp16/r1/H1204__case_2c69fc_E1_rep1	0
-casp16	r1	H1222	case_2e3a2a	E1	False	1	ok	2026-10-04T21:04:12+09:00	2026-10-04T21:48:30+09:00	01a106cc-e005-77f2-a279-130cc5151eda	2024-06-04	gpt-5.6-sol	gpt-5.6-terra	hypothesis/casp16/r1/H1222__case_2e3a2a_E1_rep1	9
+casp16	r1	H1222	case_2e3a2a	E1	False	1	ok	2026-10-04T21:04:12+09:00	2026-10-04T21:48:30+09:00	01a106cc-e005-77f2-a279-130cc5151eda	2024-06-04	gpt-5.6-sol	gpt-5.6-terra	hypothesis/casp16/r1/H1222__case_2e3a2a_E1_rep1	10
 casp16	r1	H1244	case_4a7bba	E1	False	1	ok	2026-10-04T21:04:26+09:00	2026-10-04T21:33:23+09:00	01a106cd-17e9-78c0-b4eb-6c96395de17b	2024-06-23	gpt-5.6-sol	gpt-5.6-terra	hypothesis/casp16/r1/H1244__case_4a7bba_E1_rep1	3
 casp16	r1	H1233	case_a49017	E1	False	1	ok	2026-10-04T21:04:23+09:00	2026-10-04T21:51:49+09:00	01a106cd-0b1a-7202-bdba-215ff8351c51	2024-06-16	gpt-5.6-sol	gpt-5.6-terra	hypothesis/casp16/r1/H1233__case_a49017_E1_rep1	8
 casp16	r1	H1223	case_c794c2	E1	False	1	ok	2026-10-04T21:04:15+09:00	2026-10-04T21:30:52+09:00	01a106cc-ece2-7470-8181-686d364a14bf	2024-06-05	gpt-5.6-sol	gpt-5.6-terra	hypothesis/casp16/r1/H1223__case_c794c2_E1_rep1	6
@@ -57,7 +57,7 @@ casp17	r2	H2343	case_f1b810	E1	False	2	ok	2026-10-23T17:31:28+09:00	2026-10-23T1
 casp17	r2	H1346_agCD	case_fed304	E1	False	2	ok	2026-10-04T21:33:40+09:00	2026-10-04T21:56:05+09:00	01a106e7-da81-7cd1-8d88-a7f657bfc940	2026-05-21	gpt-5.6-sol	gpt-5.6-terra	hypothesis/casp17/r2/H1346_agCD__case_fed304_E1_rep2	6
 casp17	r3	H2373	case_0a097a	E1	False	3	ok	2026-10-22T23:48:26+09:00	2026-10-23T00:14:03+09:00	01a16415-b577-79c1-8484-767e65c19334	2026-06-22	gpt-5.6-sol	gpt-5.6-terra	hypothesis/casp17/r3/H2373__case_0a097a_E1_rep3	6
 casp17	r3	H1347_agCD	case_0f54aa	E1	False	3	ok	2026-10-04T22:03:38+09:00	2026-10-04T22:24:52+09:00	01a10703-4d2d-76a3-8826-d395260df489	2026-05-21	gpt-5.6-sol	gpt-5.6-terra	hypothesis/casp17/r3/H1347_agCD__case_0f54aa_E1_rep3	2
-casp17	r3	H2441	case_253bc2	E1	False	3	ok	2026-10-22T20:08:10+09:00	2026-10-22T20:33:16+09:00	01a1634c-0b2c-7453-9071-5160115df136	2026-07-31	gpt-5.6-sol	gpt-5.6-terra	hypothesis/casp17/r3/H2441__case_253bc2_E1_rep3	3
+casp17	r3	H2441	case_253bc2	E1	False	3	ok	2026-10-22T20:08:10+09:00	2026-10-22T20:33:16+09:00	01a1634c-0b2c-7453-9071-5160115df136	2026-07-31	gpt-5.6-sol	gpt-5.6-terra	hypothesis/casp17/r3/H2441__case_253bc2_E1_rep3	4
 casp17	r3	H2362	case_259152	E1	False	3	ok	2026-10-22T23:43:49+09:00	2026-10-23T00:21:49+09:00	01a16411-7b7c-7f81-a5da-f193500354c2	2026-06-12	gpt-5.6-sol	gpt-5.6-terra	hypothesis/casp17/r3/H2362__case_259152_E1_rep3	16
 casp17	r3	H2312	case_3a23b5	E1	False	3	ok	2026-10-22T18:53:57+09:00	2026-10-22T19:16:16+09:00	01a16308-19a2-7063-a651-8bdf02bedc59	2026-05-13	gpt-5.6-sol	gpt-5.6-terra	hypothesis/casp17/r3/H2312__case_3a23b5_E1_rep3	2
 casp17	r3	H2348	case_4ade9a	E1	False	3	ok	2026-10-22T19:05:18+09:00	2026-10-22T19:35:40+09:00	01a16312-7e0e-7dc1-a826-c65bcac49b06	2026-06-05	gpt-5.6-sol	gpt-5.6-terra	hypothesis/casp17/r3/H2348__case_4ade9a_E1_rep3	7

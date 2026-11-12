@@ -3,7 +3,7 @@
 The complete, redacted Codex sessions that produced every epitope prediction
 in `results/released/` and `results/unreleased/` (hypothesis, refine, judge
 and assembly stages, plus the no-cutoff arm and the SteerABLE steering
-inputs / DockQ summaries). 6,762 files, 958 MB unpacked.
+inputs / DockQ summaries). 6,760 files, 913 MB unpacked.
 
 ## Getting the archive
 
@@ -14,8 +14,8 @@ GitHub Release and mirrored on Zenodo:
 |---|---|
 | GitHub Release | https://github.com/CSSB-SNU/ape/releases/download/reasoning-logs-v1/apar_epitope_reasoning_logs_v1.tar.gz |
 | Zenodo | (DOI to be added) |
-| size | 197,187,828 bytes |
-| sha256 | `8e5f6fa878b7b30f0ec2fff24fd10be4072b333b705748a6a8198956b7b3fde6` (`apar_epitope_reasoning_logs_v1.tar.gz.sha256`) |
+| size | 187,088,522 bytes |
+| sha256 | `e73bd1ba1b9fc1920be95bad35964e75d9d8d7ab99285bbb76edbcd182d9f926` (`apar_epitope_reasoning_logs_v1.tar.gz.sha256`) |
 
 ```sh
 curl -LO https://github.com/CSSB-SNU/ape/releases/download/reasoning-logs-v1/apar_epitope_reasoning_logs_v1.tar.gz
@@ -35,7 +35,6 @@ tar xzf apar_epitope_reasoning_logs_v1.tar.gz
 | `build_reasoning_release.py` | the script that produced the archive from the raw run directories |
 
 ## Archive contents
-
 
 This archive contains the complete, redacted agent sessions behind the epitope
 predictions in `results/` and `inputs/` of this repository. It is meant for
@@ -61,6 +60,18 @@ Model configuration for every session: agent `gpt-5.6` (reasoning effort
   field is kept as `null` with `encrypted_content_removed_chars` so the record
   structure is unchanged. `reasoning.md` in each session lists the readable
   summaries in order.
+* **Masked**: the text of third-party documents. The agent read papers,
+  patents and other downloaded documents, in excerpts or in full, through
+  the helper CLIs (`paper`, `patent`, `fetch`). To avoid redistributing
+  that material, the downloaded files are not in the archive and every
+  tool output longer than 3,000 characters that came from a command reading
+  one of them was replaced by a placeholder giving the number of characters
+  removed and the files the command read. The command itself is kept, so a
+  reader can see which document, and which part of it, the agent looked at,
+  and can obtain the document from the identifiers in
+  `lineage/third_party_removed.tsv`. Excerpts of up to 3,000 characters per
+  command were kept as quotation, as were the search-engine snippets in
+  `gate.searcher.log`.
 
 ## Layout
 
@@ -114,6 +125,13 @@ published answer, as recorded in `CANONICAL_LINEAGE.md`) is included.
 | `out/last_message.json` | the agent's final structured answer |
 | `workdir/` | the agent's working directory: inputs (`antigen.pdb`, `antibody*.pdb`, `chains.tsv`, `sequences.fasta`, `search_results.json`), the helper CLIs it was given (`research`, `paper`, `patent`, `fetch`, `rcsb`), its notes (`analysis_log.md`), scripts and result JSONs. Downloaded third-party documents were removed; see `workdir/THIRD_PARTY_REMOVED.tsv`. |
 | `advocacies/`, `grouping*.json`, `staged.json`, `schema/` | refine-stage artefacts (candidate grouping, per-candidate advocacy, answer schema) |
+
+A masked tool output looks like `[release build: 23891 chars of command
+output removed because the command read third-party document files
+(papers/PMC5856423.txt); ...]` and the record carries
+`third_party_output_removed_chars`. In `rollout.jsonl` it replaces the
+`custom_tool_call_output` text; in `run.jsonl` it replaces
+`aggregated_output`.
 
 Paths inside the logs were rewritten (see `REDACTION.md`): the original run
 root appears as `/data/release/...`, so a path like

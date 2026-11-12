@@ -53,6 +53,9 @@ STR_REPLACEMENTS = [
     (EMAIL, "[email-redacted]"),
     ("<login-hostname>", "login-host"),
 ]
+# bare mount name (after the specific project paths above)
+STR_REPLACEMENTS.append(("/<lab-storage>", "/lab-storage"))
+
 REGEX_REPLACEMENTS = [
     (re.compile(rf"\b{USER}\b"), "USER"),
     (re.compile(r"/home/(?!USER\b|COLLABORATOR\b|software\b|OTHERUSER\b)[a-z][a-z0-9_.-]*"), "/home/OTHERUSER"),
@@ -69,6 +72,8 @@ DYNAMIC_SECRETS: set[str] = set()
 
 TEXT_EXT = {".json", ".jsonl", ".md", ".txt", ".log", ".py", ".out", ".err", ".sh", ".sbatch",
             ".tsv", ".csv", ".fasta", ".yaml", ".yml", ".stdout", ".cfg", ".toml", ""}
+STRUCTURE_EXT = {".pdb", ".cif"}
+EMAIL_RX = re.compile(r"[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}")
 BINARY_OK_EXT = {".pdb", ".cif", ".pdf", ".pyc", ".npz", ".npy", ".gz", ".png", ".jpg", ".jpeg"}
 
 # per-session exclusions
@@ -90,6 +95,66 @@ def is_third_party_file(fn: str) -> bool:
     return False
 
 
+# --- third-party text that escaped the name/extension rules ---------------------------
+# a) workdir text files that are dumps of third-party documents (pdftotext output, grep output
+#    over papers/ patents/ fetched/), detected by content;
+# b) tool outputs in the transcripts (rollout.jsonl / run.jsonl) produced by commands that read
+#    files under papers/ patents/ fetched/: outputs longer than TOOL_OUTPUT_THIRD_PARTY_MAX_CHARS
+#    are replaced by a placeholder (None = keep everything, 0 = remove every such output).
+TOOL_OUTPUT_THIRD_PARTY_MAX_CHARS: int | None = 3000
+TP_PATH_RX = re.compile(r"\b(?:runs/[abc]/)?(?:papers|patents|fetched)/[^\s'\"\\]+\.(?:txt|pdf|html?|xml)")
+GREP_DUMP_RX = re.compile(r"^(?:runs/[abc]/)?(?:papers|patents|fetched)/[^:\n]+:\d+:", re.M)
+PAPER_MARKERS = [re.compile(x, re.I | re.M) for x in (
+    r"^\s*abstract\b", r"^\s*references\s*$", r"^\s*(received|accepted):", r"copyright|\u00a9",
+    r"creative commons|\bCC BY\b", r"^\s*keywords?:", r"^\s*\*?\s*correspondence:", r"^\s*(citation|cite this)")]
+AGENT_TEXT_OK = {"TASK.md", "analysis_log.md", "THIRD_PARTY_REMOVED.tsv"}
+
+
+def looks_third_party_text(fp: Path) -> str:
+    """Content check for workdir .txt/.md/.log files; returns a reason or ''."""
+    if fp.name in AGENT_TEXT_OK or fp.suffix.lower() not in (".txt", ".md", ".log"):
+        return ""
+    try:
+        s = fp.read_text(encoding="utf-8", errors="replace")[:300000]
+    except OSError:
+        return ""
+    if len(GREP_DUMP_RX.findall(s)) >= 3:
+        return "content:grep-dump"
+    if sum(1 for rx in PAPER_MARKERS if rx.search(s)) >= 3:
+        return "content:document-text"
+    return ""
+
+
+def tp_output_placeholder(n: int, cmd: str) -> str:
+    paths = sorted(set(TP_PATH_RX.findall(cmd)))[:5]
+    return (f"[release build: {n} chars of command output removed because the command read third-party "
+            f"document files ({', '.join(paths)}); the files themselves are listed in workdir/THIRD_PARTY_REMOVED.tsv]")
+
+
+def redact_run_line(line: str) -> tuple[str, Counter]:
+    """JSON-aware pass for codex exec run.jsonl records (command_execution items)."""
+    hits: Counter = Counter()
+    try:
+        d = json.loads(line)
+    except json.JSONDecodeError:
+        return redact_text(line)
+    p = d.get("payload") if isinstance(d.get("payload"), dict) else d
+    it = p.get("item") if isinstance(p, dict) else None
+    mx = TOOL_OUTPUT_THIRD_PARTY_MAX_CHARS
+    if mx is not None and isinstance(it, dict) and isinstance(it.get("command"), str) and TP_PATH_RX.search(it["command"]):
+        n = len(it.get("aggregated_output") or "")
+        if n > mx:
+            ph = tp_output_placeholder(n, it["command"])
+            for k in ("aggregated_output", "formatted_output", "stdout"):
+                if isinstance(it.get(k), str):
+                    it[k] = ph
+            it["third_party_output_removed_chars"] = n
+            hits["third_party_tool_output"] += 1
+    d, h2 = redact_obj(d)
+    hits.update(h2)
+    return json.dumps(d, ensure_ascii=False) + "\n", hits
+
+
 def redact_text(s: str) -> tuple[str, Counter]:
     hits: Counter = Counter()
     for old, new in STR_REPLACEMENTS:
@@ -107,7 +172,25 @@ def redact_text(s: str) -> tuple[str, Counter]:
     return s, hits
 
 
-def redact_rollout_line(line: str) -> tuple[str, Counter]:
+def redact_obj(o):
+    """Apply redact_text to every string value of a parsed JSON object (never to the serialised
+    form: a regex running over JSON text can eat the 'n' of a '\\n' escape and leave invalid JSON)."""
+    hits: Counter = Counter()
+
+    def rec(x):
+        if isinstance(x, str):
+            y, h = redact_text(x)
+            hits.update(h)
+            return y
+        if isinstance(x, list):
+            return [rec(v) for v in x]
+        if isinstance(x, dict):
+            return {(rec(k) if isinstance(k, str) else k): rec(v) for k, v in x.items()}
+        return x
+    return rec(o), hits
+
+
+def redact_rollout_line(line: str, ctx: dict | None = None) -> tuple[str, Counter]:
     """JSON-aware pass for codex rollout.jsonl records."""
     hits: Counter = Counter()
     try:
@@ -115,6 +198,23 @@ def redact_rollout_line(line: str) -> tuple[str, Counter]:
     except json.JSONDecodeError:
         return redact_text(line)
     p = d.get("payload")
+    if ctx is not None and isinstance(p, dict) and TOOL_OUTPUT_THIRD_PARTY_MAX_CHARS is not None:
+        if p.get("type") == "custom_tool_call" and isinstance(p.get("input"), str) and TP_PATH_RX.search(p["input"]):
+            ctx[p.get("call_id")] = p["input"]
+        elif p.get("type") == "custom_tool_call_output" and p.get("call_id") in ctx:
+            cmd = ctx.pop(p["call_id"])
+            o = p.get("output")
+            text = "".join(c.get("text", "") for c in o if isinstance(c, dict)) if isinstance(o, list) else (o if isinstance(o, str) else "")
+            n = len(text)
+            if n > TOOL_OUTPUT_THIRD_PARTY_MAX_CHARS:
+                ph = tp_output_placeholder(n, cmd)
+                if isinstance(o, list):
+                    first = next((c for c in o if isinstance(c, dict) and "text" in c), None)
+                    p["output"] = [dict(first, text=ph)] if first else [{"type": "input_text", "text": ph}]
+                else:
+                    p["output"] = ph
+                p["third_party_output_removed_chars"] = n
+                hits["third_party_tool_output"] += 1
     if d.get("type") == "session_meta" and isinstance(p, dict):
         for k in ("creator_user_id", "creator_account_id"):
             v = p.get(k)
@@ -134,10 +234,9 @@ def redact_rollout_line(line: str) -> tuple[str, Counter]:
             for v in o:
                 strip_enc(v)
     strip_enc(d)
-    out = json.dumps(d, ensure_ascii=False)
-    out, h2 = redact_text(out)
+    d, h2 = redact_obj(d)
     hits.update(h2)
-    return out + "\n", hits
+    return json.dumps(d, ensure_ascii=False) + "\n", hits
 
 
 def sha256(path: Path) -> str:
@@ -189,9 +288,16 @@ class Builder:
             raise RuntimeError(f"refusing to copy symlink {src}")
         ext = src.suffix.lower()
         if mode == "rollout":
+            ctx: dict = {}
             with open(src, encoding="utf-8", errors="surrogateescape") as f, open(dst, "w", encoding="utf-8") as g:
                 for line in f:
-                    o, h = redact_rollout_line(line)
+                    o, h = redact_rollout_line(line, ctx)
+                    self.hits.update(h)
+                    g.write(o)
+        elif mode == "run":
+            with open(src, encoding="utf-8", errors="surrogateescape") as f, open(dst, "w", encoding="utf-8") as g:
+                for line in f:
+                    o, h = redact_run_line(line)
                     self.hits.update(h)
                     g.write(o)
         elif ext in TEXT_EXT and ext not in BINARY_OK_EXT:
@@ -203,6 +309,18 @@ class Builder:
                 o, h = redact_text(s)
                 self.hits.update(h)
                 dst.write_text(o, encoding="utf-8")
+        elif ext in STRUCTURE_EXT:
+            # structure files are copied verbatim except that e-mail addresses (mmCIF depositor
+            # contact fields) are masked; nothing else in them is touched
+            raw = src.read_bytes()
+            if b"@" in raw:
+                s = raw.decode("utf-8", errors="surrogateescape")
+                s, n = EMAIL_RX.subn("[email-redacted]", s)
+                if n:
+                    self.hits["email-in-structure-file"] += n
+                dst.write_bytes(s.encode("utf-8", errors="surrogateescape"))
+            else:
+                shutil.copyfile(src, dst)
         else:
             shutil.copyfile(src, dst)
         self.n_files += 1
@@ -254,11 +372,15 @@ class Builder:
                     continue
                 if fn.endswith(".pyc") or fn.endswith(".corrupt"):
                     continue
-                if parts and parts[0] == "workdir" and is_third_party_file(fn):
-                    third.append({"session": info["dst"], "path": str(rel / fn), "bytes": fp.stat().st_size,
-                                  "sha256": sha256(fp), "id_guess": guess_id(fn)})
-                    continue
-                mode = "rollout" if fn == "rollout.jsonl" else "text"
+                if parts and parts[0] == "workdir":
+                    why = "" if is_third_party_file(fn) else looks_third_party_text(fp)
+                    if why or is_third_party_file(fn):
+                        third.append({"session": info["dst"], "path": str(rel / fn), "bytes": fp.stat().st_size,
+                                      "sha256": sha256(fp), "id_guess": guess_id(fn) or why})
+                        if why:
+                            self.hits["third_party_by_content"] += 1
+                        continue
+                mode = "rollout" if fn == "rollout.jsonl" else "run" if fn == "run.jsonl" else "text"
                 self.copy_file(fp, dst / rel / fn, mode)
         if third:
             info["third_party_removed"] = len(third)
@@ -426,7 +548,7 @@ SCAN_PATTERNS = {
     "openai-user": re.compile(r"\buser-[A-Za-z0-9]{20,}"),
     "username": re.compile(rf"\b{USER}\b"),
     "home": re.compile(r"/home/(?!USER\b|COLLABORATOR\b|OTHERUSER\b|software\b)[A-Za-z0-9_.-]+"),
-    "public_data02": re.compile(r"/<lab-storage>/[A-Za-z0-9_.-]+"),
+    "public_data02": re.compile(r"/<lab-storage>\b"),
     "hostname": re.compile(r"\b(<login-hostname>|node0[0-9])\b"),
     "encrypted": re.compile(r"\"encrypted_content\":\s*\"[A-Za-z0-9]"),
     "uuid-account": re.compile(r"\"(creator_user_id|creator_account_id)\":\s*\"(?!REDACTED)"),
